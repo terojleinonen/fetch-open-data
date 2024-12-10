@@ -1,3 +1,5 @@
+import Filterfield from "./filterfield";  
+
 export default async function Page() {
   console.log("application started...");
   const source = 'http://rajapinnat.ymparisto.fi/api/Hakemistorajapinta/1.0/odata/Tutkl';
@@ -16,9 +18,9 @@ export default async function Page() {
   
   return (
     <>
-      <div className="bg-slate-200 py-4">
-        <h1 className="text-4xl font-extrabold text-center">{source}</h1>
-        <input type="text" placeholder="Search..." autoComplete="off" className="text-3xl"/>
+      <div className="py-4 bg-slate-200 dark:bg-slate-500 ">
+        <h1 className="text-4xl font-extrabold text-center dark:text-black">{source}</h1>
+        <Filterfield/>
       </div>
       <div className="">
         <ul className="my-4 text-lg text-gray-500">
