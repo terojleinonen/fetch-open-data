@@ -1,4 +1,5 @@
 
+import Link from "next/link";
 export default async function Page() {
     const url = 'https://stephen-king-api.onrender.com/api/books';
     const headers = new Headers({
@@ -20,23 +21,34 @@ export default async function Page() {
     } catch (err) {
       console.log(err);
     }
+    
     //console.log(data)
     return (
       <>
-        <div className="mb-8 py-4 bg-slate-200 dark:bg-slate-500 ">
-          <h1 className="text-xl font-extrabold text-center dark:text-black">{url}</h1>
+        <div className="mb-8 py-4">
+          <h1 className="text-xl font-extrabold text-center">STEPHEN KINGS BOOKS</h1>
+        </div>
+        <div className="flex justify-between p-8">
+          <div className="flex space-x-4 text-xl font-extrabold">
+            <Link href="/">HOME</Link>
+            <Link href="/shorts">SHORTS</Link>
+            <Link href="/villains">VILLAINS</Link>
+          </div>
+          <div>
+            <input type="text" placeholder="Search..." autoComplete="off" className="ronded-lg border-2 border-black"/>
+          </div>
         </div>
         <div className="">
-          <ul className="flex flex-row flex-wrap justify-evenly text-lg text-gray-500">
+          <ul className="text-2xl text-gray-500">
             {data.data.map((data) => (
-              <li key={data.id} className="p-4 mb-8 shadow-2xl">
-                id: {data.id}<br/>
-                Year: {data.Year}<br/>
-                Title: {data.Title}<br/>
-                Publisher: {data.Publisher}<br/>
-                ISBN: {data.ISBN}<br/>
-                Pages: {data.Pages}<br/>
-                created_at: {data.created_at}<br/>
+              <li key={data.id} className="p-4 m-8 rounded-lg border-2 border-black">
+                <b>ID:</b>         {data.id}<br/>
+                <b>Year:</b>       {data.Year}<br/>
+                <b>Title:</b>      {data.Title}<br/>
+                <b>Publisher:</b>  {data.Publisher}<br/>
+                <b>ISBN:</b>       {data.ISBN}<br/>
+                <b>Pages:</b>      {data.Pages}<br/>
+                <b>Notes:</b>      {data.Notes.map((notes)=> notes)}
               </li>
             ))}
           </ul>

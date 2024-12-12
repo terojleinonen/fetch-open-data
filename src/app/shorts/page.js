@@ -1,4 +1,4 @@
-
+import Link from "next/link";
 export default async function Page() {
     const url = 'https://stephen-king-api.onrender.com/api/shorts';
     const headers = new Headers({
@@ -23,20 +23,25 @@ export default async function Page() {
     console.log(data)
     return (
       <>
-        <div className="mb-8 py-4 bg-slate-200 dark:bg-slate-500 ">
-          <h1 className="text-xl font-extrabold text-center dark:text-black">{url}</h1>
+        <div className="mb-8 py-4">
+          <h1 className="text-xl font-extrabold text-center">STEPHEN KINGS SHORT STORIES</h1>
+        </div>
+        <div className="flex space-x-4 p-8 text-xl font-extrabold">
+          <Link href="/">HOME</Link>
+          <Link href="/books">BOOOKS</Link>
+          <Link href="/villains">VILLAINS</Link>
         </div>
         <div className="">
-          <ul className="flex flex-row flex-wrap justify-evenly text-lg text-gray-500">
-            *{data.data.map((data) => (
-              <li key={data.id} className="p-4 mb-8 shadow-2xl">
-                id: {data.id}<br/>
-                title: {data.title}<br/>
-                type: {data.type}<br/>
-                originallyPublishedIn: {data.originallyPublishedIn}<br/>
-                collectedIn: {data.collectedIn}<br/>     
-                year: {data.year}<br/>
-                created_at: {data.created_at}<br/>
+          <ul className="text-2xl text-gray-500">
+            {data.data.map((data) => (
+              <li key={data.id} className="p-4 m-8 rounded-lg border-2 border-black">
+                <b>ID:</b>                      {data.id}<br/>
+                <b>title:</b>                  {data.title}<br/>
+                <b>type:</b>                   {data.type}<br/>
+                <b>originallyPublishedIn:</b>  {data.originallyPublishedIn}<br/>
+                <b>collectedIn:</b>            {data.collectedIn}<br/>     
+                <b>year:</b>                   {data.year}<br/>
+                <b>Notes:</b>                  {data.notes.map((notes)=> notes)}
               </li>
             ))}
           </ul>

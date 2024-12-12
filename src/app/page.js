@@ -3,19 +3,21 @@ export default async function Page() {
 console.log("app started...")
   
   return (
-    <>
-    <ul>
-      <li>
-        <Link href="/">Home</Link>
-      </li>
-      <li>
-        <Link href="/books">Books</Link>
-      </li>
-      <li>
-        <Link href="/shorts">Shorts</Link>
-      </li>
-    </ul>
-      
-    </>
+    <div className="flex justify-center items-center h-screen">
+      <div className="text-4xl">        
+        <div className="text-6xl">
+          <h1>Stephen King</h1>
+        </div>
+        <div>
+          <Link href="/books">BOOKS</Link>
+        </div>
+        <div>
+          <Link href="/shorts">SHORTS</Link>
+        </div>
+        <div>
+          <Link href="/villains">VILLAINS</Link>
+        </div>
+      </div>
+    </div>
   )
 }
