@@ -2,7 +2,7 @@ import Link from "next/link"
 export default function Header({title}){
 
     return(
-    <div>
+    <div className="p-8">
         <div className="mb-8 py-4">
             <h1 className="text-xl font-extrabold text-center">{title}</h1>
         </div>
