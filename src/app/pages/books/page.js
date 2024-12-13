@@ -4,8 +4,6 @@ import Header from "@/app/components/header";
 
 export default async function Page() {
     const data = await Request('https://stephen-king-api.onrender.com/api/books');
-    let entries = Object.entries(data.data)
-    console.log(data)
 
     return (
       <div className="bg-amber-400">
