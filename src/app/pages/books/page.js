@@ -4,7 +4,9 @@ import Header from "@/app/components/header";
 
 export default async function Page() {
     const data = await Request('https://stephen-king-api.onrender.com/api/books');
-    
+    let entries = Object.entries(data.data)
+    console.log(data)
+
     return (
       <div className="bg-amber-400">
         <Header title="STEPHEN KING BOOKS"/>
@@ -18,7 +20,9 @@ export default async function Page() {
                 <b>Publisher:</b>  {data.Publisher}<br/>
                 <b>ISBN:</b>       {data.ISBN}<br/>
                 <b>Pages:</b>      {data.Pages}<br/>
-                <b>Notes:</b>      {data.Notes.map((notes)=> notes)}
+                <b>Notes:</b>      {data.Notes.map((notes)=> notes)}<br/>
+                <b>villains:</b>   {data.villains.map((villains)=> villains.name).join(', ')}
+
               </li>
             ))}
           </ul>
