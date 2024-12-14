@@ -3,7 +3,7 @@ import Request from "@/app/components/request";
 import Header from "@/app/components/header";
 
 export default async function Page() {
-    const data = await Request('https://stephen-king-api.onrender.com/api/villains')
+    const data = await Request('villains')
 
     return (
       <div className="bg-amber-400">
