@@ -1,15 +1,15 @@
 
 import Request from "@/app/components/request";
 import Header from "@/app/components/header";
+import Filter from "@/app/components/filter";
+import Search from "@/app/components/search";
 
 export default async function Page() {
     const data = await Request('books');
 
-    return (
-      <div className="bg-amber-400">
-        <Header title="STEPHEN KING BOOKS"/>
-        <div className="">
-          <ul className="text-2xl">
+    const results = () => {
+      return(
+        <ul className="text-2xl">
             {data.data.map((data) => (
               <li key={data.id} className="p-4 m-8 rounded-lg border-2 border-black">
                 <b>ID:</b>         {data.id}<br/>
@@ -24,7 +24,14 @@ export default async function Page() {
               </li>
             ))}
           </ul>
-        </div>
+      )
+    }
+
+    return (
+      <div className="bg-amber-400">
+        <Header title="STEPHEN KING BOOKS"/>
+        <Search/>
+        <Filter results={results} filter="" data={data}/>
       </div>
     )
   }
