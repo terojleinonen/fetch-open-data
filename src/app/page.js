@@ -1,5 +1,5 @@
 import Link from 'next/link'
-export default async function Page() {
+export default function Page() {
 console.log("app started...")
   
   return (
