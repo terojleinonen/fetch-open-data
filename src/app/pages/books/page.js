@@ -1,7 +1,6 @@
 
 import Request from "@/app/components/request";
 import Header from "@/app/components/header";
-import Filter from "@/app/components/filter";
 import Search from "@/app/components/search";
 
 export default async function Page() {
@@ -29,9 +28,8 @@ export default async function Page() {
 
     return (
       <div className="bg-amber-400">
-        <Header title="STEPHEN KING BOOKS"/>
-        <Search/>
-        <Filter results={results} filter="" data={data}/>
+        <Header title="STEPHEN KING BOOKS"/>
+        <Search data={data}/>
       </div>
     )
   }
