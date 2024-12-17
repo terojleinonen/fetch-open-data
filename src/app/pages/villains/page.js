@@ -16,9 +16,9 @@ export default async function Page() {
                 <b>Name:</b> {data.name}<br/>
                 <b>Gender:</b> {data.gender}<br/>
                 <b>Status:</b> {data.status}<br/>
-                <b>Notes:</b> {data.notes.map((notes)=> notes).join('/ ')}<br/>
-                <b>Books:</b> {data.books.map((books)=> books.title).join('/ ')}<br/>
-                <b>Shorts:</b> {data.shorts.map((shorts)=> shorts.title).join('/ ')}
+                <b>Notes:</b> {data.notes.map((notes)=> notes).join(' | ')}<br/>
+                <b>Books:</b> {data.books.map((books)=> books.title).join(' | ')}<br/>
+                <b>Shorts:</b> {data.shorts.map((shorts)=> shorts.title).join(' | ')}
               </li>
             ))}
           </ul>

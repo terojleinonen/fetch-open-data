@@ -29,7 +29,7 @@ export default async function Page() {
     return (
       <div className="bg-amber-400">
         <Header title="STEPHEN KING BOOKS"/>
-        <Search data={data}/>
+        <Search data={data} />
       </div>
     )
   }
