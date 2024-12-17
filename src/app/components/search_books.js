@@ -2,7 +2,7 @@
 import { useState } from "react"
 import Filter from "./filter"
 
-export default function Search({data}){
+export default function Search_Books({data}){
     const [value, setValue] = useState("")
 
     const handleChange = (e) =>{
