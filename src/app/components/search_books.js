@@ -5,15 +5,26 @@ import Filter from "./filter"
 export default function Search_Books({data}){
     const [value, setValue] = useState("")
 
+    const sortAlphabeticallyByTitle = (results) =>
+    {
+      results = results.sort((a, b)=>{
+        if(a.Title < b.Title)
+          return -1
+      })
+      return results
+    }
+
     const handleChange = (e) =>{
         setValue(e.target.value)
     }
     let results = Filter(value, data)
-    console.log(results)
+    console.log(results)   
+    
 
     return(
         <>
             <input  onChange={(e)=> handleChange(e)} className="m-8" type="text" placeholder="Search..."></input>
+            <button onClick={()=> {console.log("CLICK!")}}>Sort by Title</button>
             <ul className="text-2xl">
             {results.map((data) => (
               <li key={data.id} className="p-4 m-8 rounded-lg border-2 border-black">
