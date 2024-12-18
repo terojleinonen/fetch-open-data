@@ -9,7 +9,7 @@ export default function Search_Books({data}){
         setValue(e.target.value)
     }
     let results = Filter(value, data)
-    //console.log(results)
+    console.log(results)
 
     return(
         <>
@@ -23,8 +23,8 @@ export default function Search_Books({data}){
                 <b>Publisher:</b>  {data.Publisher}<br/>
                 <b>ISBN:</b>       {data.ISBN}<br/>
                 <b>Pages:</b>      {data.Pages}<br/>
-                <b>Notes:</b>      {data.Notes.map((notes)=> notes)}<br/>
-                <b>villains:</b>   {data.villains.map((villains)=> villains.name).join(' | ')}
+                <b>Notes:</b>      {data.Notes.map((notes)=> (notes==="")? "n/a":notes)}<br/>
+                <b>villains:</b>   {data.villains.map((villains)=> (villains.name==="")?"n/a":villains.name).join(' | ')}
               </li>
             ))}
           </ul>

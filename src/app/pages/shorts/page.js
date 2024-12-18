@@ -15,7 +15,7 @@ export default async function Page() {
                 <b>ID:</b>                      {data.id}<br/>
                 <b>title:</b>                  {data.title}<br/>
                 <b>type:</b>                   {data.type}<br/>
-                <b>originallyPublishedIn:</b>  {data.originallyPublishedIn}<br/>
+                <b>originallyPublishedIn:</b>  {(data.originallyPublishedIn === "")? "n/a" : data.originallyPublishedIn}<br/>
                 <b>collectedIn:</b>            {data.collectedIn}<br/>     
                 <b>year:</b>                   {data.year}<br/>
                 <b>Notes:</b>                  {data.notes.map((notes)=> notes)}
