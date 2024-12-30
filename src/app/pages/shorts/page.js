@@ -6,7 +6,7 @@ export default async function Page() {
   const data = await Request('shorts');
     
     return (
-      <div className="bg-amber-400">
+      <div>
         <Header title="STEPHEN KINGS SHORTS"/>
         <div className="">
           <ul className="text-2xl">

@@ -6,7 +6,7 @@ export default async function Page() {
     const data = await Request('villains')
   console.log(data)
     return (
-      <div className="bg-amber-400">
+      <div>
         <Header title="STEPHEN KING VILLAINS"/>
         <div className="">
           <ul className="text-2xl">

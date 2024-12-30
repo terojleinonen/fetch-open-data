@@ -7,7 +7,7 @@ export default async function Page() {
     const data = await Request('books');
 
     return (
-      <div className="bg-amber-400">
+      <div>
         <Header title="STEPHEN KING BOOKS"/>
         <Search data={data} />
       </div>
