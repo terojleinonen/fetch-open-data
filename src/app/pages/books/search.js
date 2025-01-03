@@ -1,14 +1,14 @@
 "use client"
-import { useState } from "react"
-import Filter from "./filter"
+import { useState, useEffect, useRef } from "react"
+import Filter from "../../components/filter"
 
-export default function Search_Books({data}){
+export default function Search({data}){
     const [value, setValue] = useState("")
     const [sorted, setSorted] = useState(false)
     var results = Filter(value, data)
 
-    const sortAlphabetically = () => {
-        results = results.sort((a, b)=> a.Title.localeCompare(b.Title))     
+    const sortAlphabetically = () => {   
+        results.sort((a, b)=> a.Title.localeCompare(b.Title))        
     }   
 
     const handleChange = (e) => {
@@ -17,7 +17,7 @@ export default function Search_Books({data}){
 
     const Wiev = (data) => {
         return(
-          <ul className="text-2xl">
+          <ul className="text-2xl py-4">
             {results.map((data) => (
               <li key={data.Title} className="p-4 m-8 rounded-lg border-2 border-black">
                 <b>ID:</b>         {data.id}<br/>
@@ -32,15 +32,13 @@ export default function Search_Books({data}){
             ))}
           </ul>
         )
-      }
-          
-    
+      }   
 
     return(
-        <>
-            <input  onChange={(e) => handleChange(e)} className="p-2 m-8 rounded-lg border-2 border-black" type="search" placeholder="Search..."></input>
-            <button className="p-2 rounded-lg border-2 border-black" onClick={() => setSorted(true)}>Sort by Title</button>
+        <div className="">
+            <input  onChange={(e) => handleChange(e)} className="m-8 p-2 rounded-lg w-96"  type="search" placeholder="Search..."></input>
+            <button className="p-2 rounded-lg hover:bg-black hover:text-white border-2 border-black w-96" onClick={() => sorted? setSorted(false):setSorted(true)}>Sort by Title</button>
               {sorted? <Wiev data={sortAlphabetically(results)}/> : <Wiev data={results}/>}
-        </>
+        </div>
     )
 }
