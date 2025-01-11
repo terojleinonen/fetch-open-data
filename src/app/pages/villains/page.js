@@ -4,7 +4,7 @@ import Header from "@/app/components/header";
 
 export default async function Page() {
     const data = await Request('villains')
-  console.log(data)
+  
     return (
       <div>
         <Header title="STEPHEN KING VILLAINS"/>
