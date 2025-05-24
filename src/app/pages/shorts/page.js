@@ -4,6 +4,7 @@ import Header from "@/app/components/header";
 
 export default async function Page() {
   const data = await Request('shorts');
+  console.log(data);
     
     return (
       <div>
@@ -18,7 +19,12 @@ export default async function Page() {
                 <b>originallyPublishedIn:</b>  {(data.originallyPublishedIn === "")? "n/a" : data.originallyPublishedIn}<br/>
                 <b>collectedIn:</b>            {data.collectedIn}<br/>     
                 <b>year:</b>                   {data.year}<br/>
-                <b>Notes:</b>                  {data.notes.map((notes)=> notes)}
+                <div>
+                {
+                  (data.notes.length === 0 | data.notes === undefined)? "" : <div><b>Notes: </b>{data.notes.map((notes)=> notes)}</div>
+
+                }
+                </div>
               </li>
             ))}
           </ul>
