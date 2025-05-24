@@ -26,8 +26,18 @@ export default function Search({data}){
                 <b>Publisher:</b>  {data.Publisher}<br/>
                 <b>ISBN:</b>       {data.ISBN}<br/>
                 <b>Pages:</b>      {data.Pages}<br/>
-                <b>Notes:</b>      {data.Notes.map((notes)=> (notes==="")? "n/a":notes)}<br/>
-                <b>villains:</b>   {data.villains.map((villains)=> (villains.name==="")?"n/a":villains.name).join(' | ')}
+                <div>
+                {(data.notes === "" | data.notes === undefined)? "" :
+                  <div>
+                    <b>Notes:</b> {data.Notes.map((notes)=> notes)}<br/>
+                  </div>}
+                </div>
+                <div>
+                {(data.villains.length === 0)?"" :
+                  <div>
+                  <b>Villains:</b> {data.villains.map((villains)=> villains.name).join(' | ')}
+                  </div>}
+                </div>
               </li>
             ))}
           </ul>
