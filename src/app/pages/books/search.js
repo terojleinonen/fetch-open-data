@@ -1,11 +1,10 @@
 "use client"
-import { useState, useEffect, useRef } from "react"
-import Filter from "../../components/filter"
+import { useState } from "react"
 
 export default function Search({data}){
     const [value, setValue] = useState("")
     const [sorted, setSorted] = useState(false)
-    var results = Filter(value, data)
+    var results = data.data.filter( el => el.title.match(new RegExp(value,'gi')))
 
     const sortAlphabetically = () => {   
         results.sort((a, b)=> a.Title.localeCompare(b.Title))        
@@ -27,7 +26,7 @@ export default function Search({data}){
                 <b>ISBN:</b>       {data.ISBN}<br/>
                 <b>Pages:</b>      {data.Pages}<br/>
                 <div>
-                {(data.notes === "" | data.notes === undefined)? "" :
+                {(data.notes === "" | data.notes === undefined)? "" :
                   <div>
                     <b>Notes:</b> {data.Notes.map((notes)=> notes)}<br/>
                   </div>}

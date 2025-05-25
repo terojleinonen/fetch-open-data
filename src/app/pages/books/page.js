@@ -5,6 +5,7 @@ import Search from "@/app/pages/books/search";
 
 export default async function Page() {
     const data = await Request('books');
+    console.log(data);
 
     return (
       <div>
