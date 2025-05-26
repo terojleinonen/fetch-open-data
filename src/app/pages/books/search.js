@@ -4,7 +4,7 @@ import { useState } from "react"
 export default function Search({data}){
     const [value, setValue] = useState("")
     const [sorted, setSorted] = useState(false)
-    var results = data.data.filter( el => el.title.match(new RegExp(value,'gi')))
+    var results = data.data.filter( el => el.Title.match(new RegExp(value,'gi')))
 
     const sortAlphabetically = () => {   
         results.sort((a, b)=> a.Title.localeCompare(b.Title))        
