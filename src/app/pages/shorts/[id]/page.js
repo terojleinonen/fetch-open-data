@@ -1,0 +1,81 @@
+import React from 'react';
+import Link from 'next/link';
+import Request from '@/app/components/request';
+
+export default async function ShortStoryDetailPage({ params }) {
+  const shortData = await Request(`short/${params.id}`);
+
+  if (!shortData || !shortData.data) {
+    return (
+      <div>
+        <h1>Short Story Not Found</h1>
+        <Link href="/pages/shorts">Back to Shorts List</Link>
+      </div>
+    );
+  }
+
+  const story = shortData.data;
+  const filteredNotes = story.notes ? story.notes.filter(note => note && note.trim() !== '') : [];
+
+
+  return (
+    <div className="container mx-auto p-4">
+      <h1 className="text-3xl font-bold mb-4">{story.title}</h1>
+      <p className="mb-2"><strong>Year:</strong> {story.year}</p>
+      <p className="mb-2"><strong>Type:</strong> {story.type}</p>
+      <p className="mb-2"><strong>Originally Published In:</strong> {story.originallyPublishedIn || 'N/A'}</p>
+      <p className="mb-2"><strong>Collected In:</strong> {story.collectedIn || 'N/A'}</p>
+      {filteredNotes.length > 0 && (
+        <div className="mt-4">
+          <strong className="text-lg">Notes:</strong>
+          <ul className="list-disc pl-5 space-y-1 mt-1">
+            {filteredNotes.map((note, index) => (
+              <li key={index}>{note}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Villains in this Short Story Section */}
+      {story.villains && story.villains.length > 0 && (
+        <div className="mt-6">
+          <h2 className="text-2xl font-semibold mb-3">Villains in this Short Story</h2>
+          <ul className="list-disc pl-5 space-y-1">
+            {story.villains.map(villain => {
+              if (!villain.url || !villain.name) {
+                console.warn("Skipping villain with missing URL or name:", villain);
+                return null;
+              }
+              const urlParts = villain.url.split('/');
+              const villainId = urlParts[urlParts.length - 1];
+
+              if (isNaN(Number(villainId))) {
+                  console.warn("Skipping villain with invalid ID from URL:", villain.url);
+                  return null;
+              }
+
+              return (
+                <li key={villain.url}> {/* Using URL as key */}
+                  <Link href={`/pages/villains/${villainId}`} className="text-blue-600 hover:underline">
+                    {villain.name}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
+      {(!story.villains || story.villains.length === 0) && (
+        <div className="mt-6">
+          <h2 className="text-2xl font-semibold mb-3">Villains in this Short Story</h2>
+          <p>No villains listed for this short story.</p>
+        </div>
+      )}
+
+      <br />
+      <Link href="/pages/shorts" className="mt-6 inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded shadow">
+        Back to Shorts List
+      </Link>
+    </div>
+  );
+}
