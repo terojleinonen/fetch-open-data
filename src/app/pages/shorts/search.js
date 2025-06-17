@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link"; // Added Link import
 
 export default function Search({data }) {
 const [value, setValue] = useState("")
@@ -21,7 +22,7 @@ const Wiev = (data) => {
         {results.map((data) => (
           <li key={data.id} className="p-4 m-8 rounded-lg border-2 border-black">
             <b>ID:</b>                      {data.id}<br/>
-            <b>Title:</b>                  {data.title}<br/>
+            <b>Title:</b>                  <Link href={`/pages/shorts/${data.id}`}>{data.title}</Link><br/> {/* Modified line */}
             <b>Type:</b>                   {data.type}<br/>
             <div>
               {
