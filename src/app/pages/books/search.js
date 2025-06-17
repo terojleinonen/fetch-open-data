@@ -1,5 +1,6 @@
 "use client"
 import { useState } from "react"
+import Link from "next/link" // Added Link import
 
 export default function Search({data}){
     const [value, setValue] = useState("")
@@ -21,7 +22,7 @@ export default function Search({data}){
               <li key={data.Title} className="p-4 m-8 rounded-lg border-2 border-black">
                 <b>ID:</b>         {data.id}<br/>
                 <b>Year:</b>       {data.Year}<br/>
-                <b>Title:</b>      {data.Title}<br/>
+                <b>Title:</b>      <Link href={`/pages/books/${data.id}`}>{data.Title}</Link><br/> {/* Modified line */}
                 <b>Publisher:</b>  {data.Publisher}<br/>
                 <b>ISBN:</b>       {data.ISBN}<br/>
                 <b>Pages:</b>      {data.Pages}<br/>
