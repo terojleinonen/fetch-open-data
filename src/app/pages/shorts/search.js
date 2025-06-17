@@ -21,22 +21,8 @@ const Wiev = (data) => {
       <ul className="text-2xl py-4">
         {results.map((data) => (
           <li key={data.id} className="p-4 m-8 rounded-lg border-2 border-black">
-            <b>ID:</b>                      {data.id}<br/>
+        
             <b>Title:</b>                  <Link href={`/pages/shorts/${data.id}`}>{data.title}</Link><br/> {/* Modified line */}
-            <b>Type:</b>                   {data.type}<br/>
-            <div>
-              {
-                (data.originallyPublishedIn === "")? "": <div><b>Originally Published In:</b> {data.originallyPublishedIn}<br/></div>
-              }
-            </div>
-            <b>Collected In:</b>            {data.collectedIn}<br/>     
-            <b>Year:</b>                   {data.year}<br/>
-            <div>
-            {
-              (data.notes.length === 0 | data.notes === undefined)? "" : <div><b>Notes: </b>{data.notes.map((notes)=> notes)}</div>
-
-            }
-            </div>
           </li>
         ))}
       </ul>

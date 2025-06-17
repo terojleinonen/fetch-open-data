@@ -17,27 +17,12 @@ export default function Search({data}){
 
     const Wiev = (data) => {
         return(
-          <ul className="text-2xl py-4">
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {results.map((data) => (
-              <li key={data.Title} className="p-4 m-8 rounded-lg border-2 border-black">
-                <b>ID:</b>         {data.id}<br/>
-                <b>Year:</b>       {data.Year}<br/>
-                <b>Title:</b>      <Link href={`/pages/books/${data.id}`}>{data.Title}</Link><br/> {/* Modified line */}
-                <b>Publisher:</b>  {data.Publisher}<br/>
-                <b>ISBN:</b>       {data.ISBN}<br/>
-                <b>Pages:</b>      {data.Pages}<br/>
-                <div>
-                {(data.notes === "" | data.notes === undefined)? "" :
-                  <div>
-                    <b>Notes:</b> {data.Notes.map((notes)=> notes)}<br/>
-                  </div>}
-                </div>
-                <div>
-                {(data.villains.length === 0)?"" :
-                  <div>
-                  <b>Villains:</b> {data.villains.map((villains)=> villains.name).join(' | ')}
-                  </div>}
-                </div>
+              <li key={data.Title} className="p-4 bg-gray-800 rounded-lg shadow hover:bg-gray-700 transition-colors">
+                <h2 className="text-xl font-semibold text-purple-400">
+                <Link href={`/pages/books/${data.id}`}>{data.Title}</Link><br/> {/* Modified line */}
+                </h2>
               </li>
             ))}
           </ul>
@@ -45,9 +30,11 @@ export default function Search({data}){
       }   
 
     return(
-        <div className="">
-            <input  onChange={(e) => handleChange(e)} className="m-8 p-2 rounded-lg w-96"  type="search" placeholder="Search..."></input>
-            <button className="p-2 rounded-lg hover:bg-black hover:text-white border-2 border-black w-96" onClick={() => sorted? setSorted(false):setSorted(true)}>Sort by Title</button>
+      <div>
+          <button className="p-2 rounded-lg hover:bg-black hover:text-white border-2 border-black" onClick={() => sorted? setSorted(false):setSorted(true)}>Sort by Title</button>
+          <div className="mb-4 p-4 bg-gray-800 rounded-lg shadow w-full">
+            <input  onChange={(e) => handleChange(e)} className=" p-2 rounded bg-gray-700 text-white w-full"  type="search books" placeholder="Search..."></input>
+          </div>
               {sorted? <Wiev data={sortAlphabetically(results)}/> : <Wiev data={results}/>}
         </div>
     )
