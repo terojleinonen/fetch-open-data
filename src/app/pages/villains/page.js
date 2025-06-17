@@ -1,6 +1,7 @@
 
 import Request from "@/app/components/request";
 import Header from "@/app/components/header";
+import Link from "next/link"; // Added Link import
 import { UNDERSCORE_NOT_FOUND_ROUTE } from "next/dist/shared/lib/constants";
 
 export default async function Page() {
@@ -14,7 +15,7 @@ export default async function Page() {
             {data.data.map((data) => (
               <li key={data.id} className="p-4 m-8 rounded-lg border-2 border-black">
                 <b>ID:</b> {data.id}<br/>
-                <b>Name:</b> {data.name}<br/>
+                <b>Name:</b> <Link href={`/pages/villains/${data.id}`}>{data.name}</Link><br/> {/* Modified to include Link */}
                 <b>Gender:</b> {(data.gender ===null)? "n/a":data.gender}<br/>
                 <b>Status:</b> {data.status}<br/>
                 <b>Notes:</b> {data.notes.map((notes)=> (notes ==="")? "n/a" : notes ).join(' | ')}<br/>
