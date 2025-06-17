@@ -10,6 +10,17 @@ export default async function Page() {
     return (
       <div>
         <Header title="STEPHEN KING VILLAINS"/>
+
+        {/* Add button here */}
+        <div className="flex justify-center my-4">
+          <button
+            className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
+            // onClick will be added in the next step
+          >
+            Get Random Villain
+          </button>
+        </div>
+
         <div className="">
           <ul className="text-2xl">
             {data.data.map((data) => (
