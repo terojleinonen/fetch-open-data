@@ -4,10 +4,18 @@ import React, { useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
+/**
+ * VillainListClient component for displaying and filtering a list of villains.
+ * @param {object} props - Component props.
+ * @param {object} props.initialVillains - Initial list of villains to display.
+ * @returns {JSX.Element} The VillainListClient component.
+ */
 export default function VillainListClient({ initialVillains }) {
+  // State variable for the search term
   const [searchTerm, setSearchTerm] = useState('');
   const router = useRouter();
 
+  // Memoized variable for filtered villains based on the search term
   const filteredVillains = useMemo(() => {
     if (!initialVillains || !initialVillains.data) return [];
     return initialVillains.data.filter(villain =>
@@ -15,11 +23,17 @@ export default function VillainListClient({ initialVillains }) {
     );
   }, [initialVillains, searchTerm]);
 
+  // Function to handle selecting and navigating to a random villain
   const handleRandomVillain = () => {
+    // Check if there are villains available
     if (initialVillains && initialVillains.data && initialVillains.data.length > 0) {
+      // Generate a random index
       const randomIndex = Math.floor(Math.random() * initialVillains.data.length);
+      // Get the random villain
       const randomVillain = initialVillains.data[randomIndex];
+      // Check if the villain and its ID are valid
       if (randomVillain && randomVillain.id) {
+        // Navigate to the villain's page
         router.push(`/pages/villains/${randomVillain.id}`);
       } else {
         console.error("Failed to get random villain or villain ID is missing", randomVillain);
@@ -31,6 +45,7 @@ export default function VillainListClient({ initialVillains }) {
 
   return (
     <div>
+      {/* Button to get a random villain */}
       <div className="flex justify-center my-4">
         <button
           className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
@@ -40,6 +55,7 @@ export default function VillainListClient({ initialVillains }) {
         </button>
       </div>
 
+      {/* Search input */}
       <div className="mb-4 p-4 bg-gray-800 rounded-lg shadow">
          <input
              type="text"
@@ -51,6 +67,7 @@ export default function VillainListClient({ initialVillains }) {
      </div>
 
       {/* Villains List Display */}
+      {/* Renders the list of filtered villains */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
          {filteredVillains.map(villain => (
              <div key={villain.id} className="p-4 bg-gray-800 rounded-lg shadow hover:bg-gray-700 transition-colors">
@@ -64,6 +81,7 @@ export default function VillainListClient({ initialVillains }) {
              </div>
          ))}
      </div>
+     {/* Display a message if no villains match the search term */}
      {filteredVillains.length === 0 && searchTerm && (
          <p className="text-center text-gray-400 mt-4">No villains found matching your search.</p>
      )}
