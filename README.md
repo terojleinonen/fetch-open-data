@@ -39,6 +39,23 @@ To get a local copy up and running, follow these simple steps:
     ```
     Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Deployment
+
+Details about how this project is deployed will be added here. (e.g., Vercel, Netlify, Docker, etc.)
+
+## Contributing
+
+We welcome contributions to the Stephen King Universe Explorer! If you'd like to contribute, please follow these general guidelines:
+
+1.  **Fork the Repository:** Start by forking the project to your own GitHub account.
+2.  **Create a New Branch:** For any new feature or bug fix, create a new branch from `main` (or the primary development branch). A good branch name would be descriptive, like `feat/add-character-search` or `fix/book-sorting-issue`.
+3.  **Make Your Changes:** Implement your feature or bug fix. Ensure your code follows the existing style and conventions.
+4.  **Test Your Changes:** If applicable, add or update tests for your changes.
+5.  **Commit Your Changes:** Write clear and concise commit messages.
+6.  **Submit a Pull Request:** Push your branch to your fork and then open a pull request against the original repository's `main` branch. Provide a clear description of the changes in your pull request.
+
+We'll review your contribution and provide feedback or merge it as soon as possible.
+
 ## Project Structure
 
 The project follows a standard Next.js application structure:
@@ -71,3 +88,6 @@ Key directories and files:
     *   `books/`: Logic and UI for displaying and searching books.
     *   `shorts/`: Logic and UI for displaying and searching short stories.
     *   `villains/`: Logic and UI for displaying and searching villains.
+
+## License
+This project is licensed under the MIT License. See the [LICENSE.md](LICENSE.md) file for details (though we'll need to create this file in a future step if it doesn't exist, for now, just include the text).
