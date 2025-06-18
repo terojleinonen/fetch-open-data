@@ -13,15 +13,27 @@ import Link from 'next/link';
 export default function ShortListClient({ initialShorts }) {
   // State variable for the search term
   const [searchTerm, setSearchTerm] = useState('');
+  // State variable for the sort order
+  const [sortOrder, setSortOrder] = useState('alphabetical');
   const router = useRouter();
 
-  // Memoized variable for filtered short stories based on the search term
+  // Memoized variable for filtered short stories based on the search term and sort order
   const filteredShorts = useMemo(() => {
       if (!initialShorts || !initialShorts.data) return [];
-      return initialShorts.data.filter(shorts =>
-        shorts.title.toLowerCase().includes(searchTerm.toLowerCase())
+      let shortsArray = initialShorts.data.filter(short =>
+        short.title.toLowerCase().includes(searchTerm.toLowerCase())
       );
-    }, [initialShorts, searchTerm]);
+
+      if (sortOrder === 'alphabetical') {
+        shortsArray.sort((a, b) => a.title.localeCompare(b.title));
+      } else if (sortOrder === 'year_newest_to_oldest') {
+        shortsArray.sort((a, b) => b.year - a.year);
+      } else if (sortOrder === 'year_oldest_to_newest') {
+        shortsArray.sort((a, b) => a.year - b.year);
+      }
+
+      return shortsArray;
+    }, [initialShorts, searchTerm, sortOrder]);
 
   // Function to handle selecting and navigating to a random short story
   const handleRandomShort = () => {
@@ -55,8 +67,8 @@ export default function ShortListClient({ initialShorts }) {
         </button>
       </div>
 
-      {/* Search input */}
-      <div className="mb-4 p-4 bg-gray-800 rounded-lg shadow">
+      {/* Search and Sort Controls */}
+      <div className="mb-4 p-4 bg-gray-800 rounded-lg shadow flex gap-4">
          <input
              type="text"
              placeholder="Search shorts..."
@@ -64,20 +76,30 @@ export default function ShortListClient({ initialShorts }) {
              value={searchTerm}
              onChange={(e) => setSearchTerm(e.target.value)}
          />
+         <select
+          className="p-2 rounded bg-gray-700 text-white"
+          value={sortOrder}
+          onChange={(e) => setSortOrder(e.target.value)}
+        >
+          <option value="alphabetical">Alphabetical (A-Z)</option>
+          <option value="year_newest_to_oldest">Year (Newest to Oldest)</option>
+          <option value="year_oldest_to_newest">Year (Oldest to Newest)</option>
+        </select>
      </div>
 
       {/* Shorts List Display */}
       {/* Renders the list of filtered short stories */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-         {filteredShorts.map(shorts => (
-             <div key={shorts.id} className="p-4 bg-gray-800 rounded-lg shadow hover:bg-gray-700 transition-colors">
+         {filteredShorts.map(short => (
+             <div key={short.id} className="p-4 bg-gray-800 rounded-lg shadow hover:bg-gray-700 transition-colors">
                  <h2 className="text-xl font-semibold text-purple-400">
-                     <Link href={`/pages/shorts/${shorts.id}`}>
-                         {shorts.title}
+                     <Link href={`/pages/shorts/${short.id}`}>
+                         {short.title}
                      </Link>
                  </h2>
-                 {/* Add any other brief details if desired, e.g., villain.status */}
-                 {shorts.status && <p className="text-sm text-gray-400">Status: {shorts.status}</p>}
+                 {/* Add any other brief details if desired, e.g., short.status */}
+                 {short.year && <p className="text-sm text-gray-400">Year: {short.year}</p>}
+                 {short.status && <p className="text-sm text-gray-400">Status: {short.status}</p>}
              </div>
          ))}
      </div>
