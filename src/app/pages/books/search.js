@@ -22,8 +22,8 @@ export default function Search({data}){
               <li key={data.Title} className="p-4 bg-gray-800 rounded-lg shadow hover:bg-gray-700 transition-colors">
                 <h2 className="text-xl font-semibold text-purple-400">
                 <Link href={`/pages/books/${data.id}`}>{data.Title}</Link><br/> {/* Modified line */}
-                <p className="text-sm text-gray-400"><b>ISBN: </b>{data.ISBN}</p>
                 </h2>
+                <p className="text-sm text-gray-400"><b>ISBN: </b>{data.ISBN}</p>
               </li>
             ))}
           </ul>
