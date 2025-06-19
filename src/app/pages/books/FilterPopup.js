@@ -30,8 +30,6 @@ export default function FilterPopup({
     return Array.from(publishers).sort(); // Ascending order
   }, [initialBooks]);
 
-  if (!isOpen) return null;
-
   // Handler for resetting filters
   const handleResetFilters = () => {
     setSelectedYear('');
@@ -51,10 +49,22 @@ export default function FilterPopup({
   };
 
   return (
-    // Modal backdrop
-    <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center p-4 z-50 transition-opacity duration-300 ease-in-out">
-      {/* Modal content */}
-      <div className="bg-gray-800 p-6 rounded-xl shadow-2xl max-w-lg w-full max-h-[90vh] flex flex-col">
+    <>
+      {/* Backdrop Div */}
+      <div
+        onClick={onClose}
+        className={`fixed inset-0 bg-black transition-opacity duration-300 ease-in-out z-40 ${
+          isOpen ? 'bg-opacity-50' : 'bg-opacity-0 pointer-events-none'
+        }`}
+      />
+
+      {/* Sliding Menu Panel Div */}
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className={`fixed top-0 right-0 h-full w-96 bg-gray-800 shadow-xl p-6 transform transition-transform duration-300 ease-in-out z-50 flex flex-col ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-semibold text-white">Filter Books</h2>
@@ -125,7 +135,7 @@ export default function FilterPopup({
           </div>
         </div>
 
-        {/* Action Buttons */}
+        {/* Action Buttons Footer */}
         <div className="flex justify-end gap-4 mt-6 pt-4 border-t border-gray-700">
           <button
             onClick={handleResetFilters}
@@ -141,6 +151,6 @@ export default function FilterPopup({
           </button>
         </div>
       </div>
-    </div>
+    </>
   );
 }
