@@ -17,19 +17,20 @@ export default function FilterPopup({
   onResetFilters,
   onClose
 }) {
-  // Memoized lists for dropdowns
+  // Memoized lists for dropdowns (ensure Array.isArray checks are present as per previous fixes)
   const uniqueYears = useMemo(() => {
-    if (!initialBooks?.data) return [];
+    if (!initialBooks?.data || !Array.isArray(initialBooks.data)) return [];
     const years = new Set(initialBooks.data.map(book => book.Year).filter(Boolean));
     return Array.from(years).sort((a, b) => b - a); // Descending order
   }, [initialBooks]);
 
   const uniquePublishers = useMemo(() => {
-    if (!initialBooks?.data) return [];
+    if (!initialBooks?.data || !Array.isArray(initialBooks.data)) return [];
     const publishers = new Set(initialBooks.data.map(book => book.Publisher).filter(Boolean));
     return Array.from(publishers).sort(); // Ascending order
   }, [initialBooks]);
 
+  // Add the conditional return for when the modal is closed
   if (!isOpen) return null;
 
   // Handler for resetting filters
@@ -39,27 +40,27 @@ export default function FilterPopup({
     setMinPages('');
     setMaxPages('');
     if (onResetFilters) {
-      onResetFilters(); // Call the prop function if provided
+      onResetFilters();
     }
   };
 
-  // Handler for applying filters (currently just calls prop)
+  // Handler for applying filters
   const handleApplyFilters = () => {
     if (onApplyFilters) {
-      onApplyFilters(); // Call the prop function
+      onApplyFilters();
     }
   };
 
   return (
-    // Modal backdrop
+    // Modal backdrop and container
     <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center p-4 z-50 transition-opacity duration-300 ease-in-out">
-      {/* Modal content */}
+      {/* Modal content box */}
       <div className="bg-gray-800 p-6 rounded-xl shadow-2xl max-w-lg w-full max-h-[90vh] flex flex-col">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-semibold text-white">Filter Books</h2>
           <button
-            onClick={onClose}
+            onClick={onClose} // onClick should call the onClose prop
             className="text-gray-400 hover:text-red-500 text-3xl font-bold leading-none"
             aria-label="Close"
           >

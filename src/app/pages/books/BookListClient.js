@@ -25,7 +25,7 @@ export default function BookListClient({ initialBooks }) {
 
   // Memoized variable for filtered books based on the search term and sort order
   const filteredBooks = useMemo(() => {
-    if (!initialBooks || !initialBooks.data) return [];
+    if (!initialBooks || !initialBooks.data || !Array.isArray(initialBooks.data)) return [];
 
     const minPagesNumeric = minPages !== '' ? parseInt(minPages, 10) : null;
     const maxPagesNumeric = maxPages !== '' ? parseInt(maxPages, 10) : null;
@@ -70,10 +70,19 @@ export default function BookListClient({ initialBooks }) {
     return booksArray;
   }, [initialBooks, searchTerm, sortOrder, selectedYear, selectedPublisher, minPages, maxPages]);
 
+  if (!initialBooks || !initialBooks.data || !Array.isArray(initialBooks.data)) {
+    return (
+      <div>
+        <h1>সমস্যা</h1>
+        <p>Book data is currently unavailable or malformed. Please try again later. The filter menu has been temporarily disabled.</p>
+      </div>
+    );
+  }
+
   // Function to handle selecting and navigating to a random book
   const handleRandomBook = () => {
     // Check if there are books available
-    if (initialBooks && initialBooks.data && initialBooks.data.length > 0) {
+    if (initialBooks && initialBooks.data && Array.isArray(initialBooks.data) && initialBooks.data.length > 0) {
       // Generate a random index
       const randomIndex = Math.floor(Math.random() * initialBooks.data.length);
       // Get the random book
