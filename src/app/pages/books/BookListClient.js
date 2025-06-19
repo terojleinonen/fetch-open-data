@@ -3,6 +3,7 @@
 import React, { useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import FilterPopup from './FilterPopup';
 
 /**
  * BookListClient component for displaying and filtering a list of books.
@@ -15,25 +16,59 @@ export default function BookListClient({ initialBooks }) {
    const [searchTerm, setSearchTerm] = useState('');
    // State variable for the sort order
    const [sortOrder, setSortOrder] = useState('alphabetical');
+  const [selectedYear, setSelectedYear] = useState('');
+  const [selectedPublisher, setSelectedPublisher] = useState('');
+  const [minPages, setMinPages] = useState('');
+  const [maxPages, setMaxPages] = useState('');
+  const [isFilterPopupOpen, setIsFilterPopupOpen] = useState(false);
   const router = useRouter();
 
   // Memoized variable for filtered books based on the search term and sort order
   const filteredBooks = useMemo(() => {
-      if (!initialBooks || !initialBooks.data) return [];
-      let booksArray = initialBooks.data.filter(book =>
-        book.Title.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+    if (!initialBooks || !initialBooks.data) return [];
 
-      if (sortOrder === 'alphabetical') {
-        booksArray.sort((a, b) => a.Title.toLowerCase().localeCompare(b.Title.toLowerCase()));
-      } else if (sortOrder === 'year_newest_to_oldest') {
-        booksArray.sort((a, b) => b.Year - a.Year);
-      } else if (sortOrder === 'year_oldest_to_newest') {
-        booksArray.sort((a, b) => a.Year - b.Year);
+    const minPagesNumeric = minPages !== '' ? parseInt(minPages, 10) : null;
+    const maxPagesNumeric = maxPages !== '' ? parseInt(maxPages, 10) : null;
+    const yearNumeric = selectedYear !== '' ? parseInt(selectedYear, 10) : null;
+
+    let booksArray = initialBooks.data.filter(book => {
+      // Search term filter (existing)
+      const searchTermMatch = book.Title.toLowerCase().includes(searchTerm.toLowerCase());
+      if (!searchTermMatch) return false;
+
+      // Year filter
+      if (yearNumeric !== null && book.Year !== yearNumeric) {
+        return false;
       }
 
-      return booksArray;
-    }, [initialBooks, searchTerm, sortOrder]);
+      // Publisher filter
+      if (selectedPublisher && book.Publisher && book.Publisher.toLowerCase() !== selectedPublisher.toLowerCase()) {
+        return false;
+      }
+
+      // Min pages filter
+      if (minPagesNumeric !== null && (!book.Pages || book.Pages < minPagesNumeric)) {
+        return false;
+      }
+
+      // Max pages filter
+      if (maxPagesNumeric !== null && (!book.Pages || book.Pages > maxPagesNumeric)) {
+        return false;
+      }
+
+      return true;
+    });
+
+    if (sortOrder === 'alphabetical') {
+      booksArray.sort((a, b) => a.Title.toLowerCase().localeCompare(b.Title.toLowerCase()));
+    } else if (sortOrder === 'year_newest_to_oldest') {
+      booksArray.sort((a, b) => b.Year - a.Year);
+    } else if (sortOrder === 'year_oldest_to_newest') {
+      booksArray.sort((a, b) => a.Year - b.Year);
+    }
+
+    return booksArray;
+  }, [initialBooks, searchTerm, sortOrder, selectedYear, selectedPublisher, minPages, maxPages]);
 
   // Function to handle selecting and navigating to a random book
   const handleRandomBook = () => {
@@ -85,7 +120,40 @@ export default function BookListClient({ initialBooks }) {
           <option value="year_newest_to_oldest">Year (Newest to Oldest)</option>
           <option value="year_oldest_to_newest">Year (Oldest to Newest)</option>
         </select>
+        <button
+          onClick={() => setIsFilterPopupOpen(true)}
+          className="p-2 rounded bg-purple-600 hover:bg-purple-500 text-white font-medium"
+        >
+          Filters
+        </button>
      </div>
+
+      <FilterPopup
+        isOpen={isFilterPopupOpen}
+        initialBooks={initialBooks}
+        selectedYear={selectedYear}
+        setSelectedYear={setSelectedYear}
+        selectedPublisher={selectedPublisher}
+        setSelectedPublisher={setSelectedPublisher}
+        minPages={minPages}
+        setMinPages={setMinPages}
+        maxPages={maxPages}
+        setMaxPages={setMaxPages}
+        onApplyFilters={() => {
+          console.log('Apply filters clicked');
+          // Implement actual filter logic here in a future step
+          setIsFilterPopupOpen(false);
+        }}
+        onResetFilters={() => {
+          setSelectedYear('');
+          setSelectedPublisher('');
+          setMinPages('');
+          setMaxPages('');
+          console.log('Reset filters clicked');
+          // Optionally, re-apply filters or close popup
+        }}
+        onClose={() => setIsFilterPopupOpen(false)}
+      />
 
       {/* Books List Display */}
       {/* Renders the list of filtered books */}
