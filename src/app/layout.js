@@ -1,5 +1,8 @@
+"use client";
+
 import localFont from "next/font/local";
 import ConditionalNavigationBar from "./components/ConditionalNavigationBar"; // Import ConditionalNavigationBar
+
 import "./globals.css";
 
 // Defines the Geist Sans font, loads it from a local file, and sets it up as a CSS variable.
@@ -24,11 +27,11 @@ export const metadata = {
 // RootLayout component - The main layout component for the application.
 // It sets up the HTML structure, loads fonts, and renders child components.
 export default function RootLayout({ children }) {
+  const pathname = usePathname(); // Get current pathname
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
         <ConditionalNavigationBar /> {/* Use ConditionalNavigationBar */}
         {children}
       </body>

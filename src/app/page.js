@@ -24,6 +24,12 @@ console.log("app started...")
           {/* Link to the villains page */}
           <Link href="/pages/villains" className="home-link text-2xl mx-4">VILLAINS</Link> {/* Added text-2xl and mx-4 */}
         </div>
+        <div className="mt-4"> {/* Added margin-top for spacing between links */}
+          {/* Link to the Dark Territories page */}
+          <Link href="/pages/dark-territories" className="home-link text-2xl mx-4">
+            DARK TERRITORIES
+          </Link>
+        </div>
       </div>
     </div>
   )
