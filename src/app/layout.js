@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import NavigationBar from "@/app/components/NavigationBar"; // Import NavigationBar
 import "./globals.css";
 
 // Defines the Geist Sans font, loads it from a local file, and sets it up as a CSS variable.
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <NavigationBar />
         {children}
       </body>
     </html>
