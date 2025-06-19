@@ -6,11 +6,11 @@ export default async function Request(parameter) {
     let data; 
   
     try {
-      const responce = await fetch(url + parameter,headers);
-      if (!responce.ok){
+      const response = await fetch(url + parameter,headers);
+      if (!response.ok){
         throw new Error(`HTTP error: Status ${response.status}`);
       }
-      data = await responce.json();
+      data = await response.json();
   
     } catch (err) {
       console.log(err);
