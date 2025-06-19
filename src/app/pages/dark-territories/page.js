@@ -1,3 +1,4 @@
+"use client"
 // src/app/pages/dark-territories/page.js
 import Link from 'next/link';
 import { useEffect } from 'react'; // Add useEffect
@@ -58,7 +59,7 @@ export default function DarkTerritoriesPage() {
           const markerRect = targetElement.getBoundingClientRect();
           // Get the map container's bounding rect. The panel's parentElement is the map container.
           const mapContainerRect = infoPanel.parentElement.getBoundingClientRect();
-
+          
           let top = markerRect.top - mapContainerRect.top + markerRect.height / 2;
           let left = markerRect.left - mapContainerRect.left + markerRect.width + 15;
 
@@ -117,13 +118,25 @@ export default function DarkTerritoriesPage() {
     };
   }, []); // Empty dependency array: runs once on mount, cleans up on unmount
 
-
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen text-[var(--text-color)] px-4">
+      <header className="text-center mb-12">
+        <h1 className="text-5xl md:text-6xl mb-4" style={{ fontFamily: 'Georgia, serif' }}>
+          Dark Territories
+        </h1>
+        <p className="text-lg md:text-xl" style={{ fontFamily: 'Georgia, serif' }}>
+          An interactive exploration of the Stephen King universe.
+        </p>
+        <p className="text-md md:text-lg mt-2 italic" style={{ fontFamily: 'Georgia, serif', color: 'var(--accent-color)' }}>
+          (Coming Soon)
+        </p>
+      </header>
 
       {/* Container for the map */}
       <div className="relative w-full max-w-4xl mx-auto my-8 p-4 rounded" style={{ backgroundColor: 'var(--background-color)' }}> {/* Added 'relative' for positioning context */}
-        <svg
-          width="100%"
-          viewBox="0 0 1000 750"
+        <svg 
+          width="100%" 
+          viewBox="0 0 1000 750" 
           className="block" // block is good, mx-auto is handled by parent
           aria-label="Interactive Map of Stephen King's Universe"
           style={{ border: '1px solid var(--accent-color)' }} // Temporary border to visualize
@@ -150,10 +163,10 @@ export default function DarkTerritoriesPage() {
         </svg>
 
         {/* Pop-up/Info Panel Structure */}
-        <div
-          id="info-panel"
-          className="absolute p-6 rounded shadow-lg"
-          style={{
+        <div 
+          id="info-panel" 
+          className="absolute p-6 rounded shadow-lg" 
+          style={{ 
             display: 'none', // Hidden by default
             fontFamily: 'Georgia, serif',
             backgroundColor: '#181818', // Very dark gray, slightly lighter than map
@@ -163,7 +176,7 @@ export default function DarkTerritoriesPage() {
             // Positioning will be handled by JavaScript, or set initial top/left if needed
             // For now, let's assume JS will position it.
             // Add a high z-index to ensure it's above the SVG, though sibling order might handle this too.
-            zIndex: 10,
+            zIndex: 10, 
           }}
         >
           <h2 id="info-panel-title" className="text-2xl mb-2" style={{ color: 'var(--accent-color)' }}>
@@ -173,7 +186,7 @@ export default function DarkTerritoriesPage() {
             {/* Thematic Description */}
           </p>
           <div>
-            <h3 className="text-md mb-1" style={{ color: 'var(--text-color)', opacity: 0.7 }}>
+            <h3 className="text-md mb-1" style={{ color: 'var(--text-color)', opacity: 0.7 }}> 
               {/* "Echoes From:" or similar subtitle */}
               Echoes From:
             </h3>
@@ -181,12 +194,20 @@ export default function DarkTerritoriesPage() {
               {/* Associated Works will be list items <li> */}
             </ul>
           </div>
-          <button
-            id="info-panel-close"
-            className="absolute top-2 right-3 text-xl"
+          <button 
+            id="info-panel-close" 
+            className="absolute top-2 right-3 text-xl" 
             style={{ color: 'var(--text-color)', background: 'none', border: 'none', cursor: 'pointer' }}
             aria-label="Close panel"
           >
             &times; {/* Simple 'x' for close */}
           </button>
         </div>
+      </div>
+
+      <Link href="/" className="home-link text-xl mt-12">
+        Return to Home
+      </Link>
+    </div>
+  );
+}
