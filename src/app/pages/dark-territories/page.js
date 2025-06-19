@@ -117,19 +117,7 @@ export default function DarkTerritoriesPage() {
     };
   }, []); // Empty dependency array: runs once on mount, cleans up on unmount
 
-  return (
-    <div className="flex flex-col items-center justify-center min-h-screen text-[var(--text-color)] px-4">
-      <header className="text-center mb-12">
-        <h1 className="text-5xl md:text-6xl mb-4" style={{ fontFamily: 'Georgia, serif' }}>
-          Dark Territories
-        </h1>
-        <p className="text-lg md:text-xl" style={{ fontFamily: 'Georgia, serif' }}>
-          An interactive exploration of the Stephen King universe.
-        </p>
-        <p className="text-md md:text-lg mt-2 italic" style={{ fontFamily: 'Georgia, serif', color: 'var(--accent-color)' }}>
-          (Coming Soon)
-        </p>
-      </header>
+
 
       {/* Container for the map */}
       <div className="relative w-full max-w-4xl mx-auto my-8 p-4 rounded" style={{ backgroundColor: 'var(--background-color)' }}> {/* Added 'relative' for positioning context */}
@@ -202,11 +190,3 @@ export default function DarkTerritoriesPage() {
             &times; {/* Simple 'x' for close */}
           </button>
         </div>
-      </div>
-
-      <Link href="/" className="home-link text-xl mt-12">
-        Return to Home
-      </Link>
-    </div>
-  );
-}

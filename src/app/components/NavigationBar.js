@@ -11,7 +11,7 @@ const NavigationBar = () => {
   return (
     <nav className="p-4 md:p-8 flex flex-col md:flex-row md:items-center md:space-x-4">
       <div className="flex items-center justify-between">
-        <div className="text-2xl font-bold">My Awesome App</div>
+        <div className="text-2xl font-bold">Stephen King Universe</div>
         <button
           className="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
