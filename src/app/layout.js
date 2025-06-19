@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { usePathname } from "next/navigation"; // Import usePathname
 import NavigationBar from "@/app/components/NavigationBar"; // Import NavigationBar
 import "./globals.css";
 
@@ -24,12 +25,13 @@ export const metadata = {
 // RootLayout component - The main layout component for the application.
 // It sets up the HTML structure, loads fonts, and renders child components.
 export default function RootLayout({ children }) {
+  const pathname = usePathname(); // Get current pathname
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <NavigationBar />
+        {pathname !== "/" && <NavigationBar />} {/* Conditionally render NavigationBar */}
         {children}
       </body>
     </html>

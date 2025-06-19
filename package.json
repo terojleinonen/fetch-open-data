@@ -23,6 +23,7 @@
     "babel-jest": "^30.0.2",
     "eslint": "^9.29.0",
     "eslint-config-next": "^15.3.4",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^30.0.2",
     "jest-environment-jsdom": "^30.0.2",
     "postcss": "^8.5.6",
