@@ -25,7 +25,7 @@ export default function BookListClient({ initialBooks }) {
 
   // Memoized variable for filtered books based on the search term and sort order
   const filteredBooks = useMemo(() => {
-    if (!initialBooks || !initialBooks.data) return [];
+    if (!initialBooks || !initialBooks.data || !Array.isArray(initialBooks.data)) return [];
 
     const minPagesNumeric = minPages !== '' ? parseInt(minPages, 10) : null;
     const maxPagesNumeric = maxPages !== '' ? parseInt(maxPages, 10) : null;
