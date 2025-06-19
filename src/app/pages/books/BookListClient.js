@@ -23,15 +23,6 @@ export default function BookListClient({ initialBooks }) {
   const [isFilterPopupOpen, setIsFilterPopupOpen] = useState(false);
   const router = useRouter();
 
-  if (!initialBooks || !initialBooks.data || !Array.isArray(initialBooks.data)) {
-    return (
-      <div>
-        <h1>সমস্যা</h1>
-        <p>Book data is currently unavailable or malformed. Please try again later. The filter menu has been temporarily disabled.</p>
-      </div>
-    );
-  }
-
   // Memoized variable for filtered books based on the search term and sort order
   const filteredBooks = useMemo(() => {
     if (!initialBooks || !initialBooks.data || !Array.isArray(initialBooks.data)) return [];
