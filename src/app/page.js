@@ -5,22 +5,30 @@ export default function Page() {
 console.log("app started...")
   
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="text-4xl">        
-        <div className="text-6xl">
-          <h1>Stephen King Universe</h1>
+    <div className="flex justify-center items-center h-screen bg-transparent">
+      <div className="text-center"> {/* Changed text-4xl to text-center for better alignment of title and links */}
+        <div> {/* Removed text-6xl from here */}
+          <h1 className="text-6xl text-[var(--text-color)]" style={{ fontFamily: "Georgia, serif" }}>
+            Stephen King Universe
+          </h1>
         </div>
-        <div>
+        <div className="mt-8"> {/* Added margin-top for spacing between title and links */}
           {/* Link to the books page */}
-          <Link href="/pages/books">BOOKS</Link>
+          <Link href="/pages/books" className="home-link text-2xl mx-4">BOOKS</Link> {/* Added text-2xl and mx-4 for better appearance */}
         </div>
-        <div>
+        <div className="mt-4"> {/* Added margin-top for spacing between links */}
           {/* Link to the shorts page */}
-          <Link href="/pages/shorts">SHORTS</Link>
+          <Link href="/pages/shorts" className="home-link text-2xl mx-4">SHORTS</Link> {/* Added text-2xl and mx-4 */}
         </div>
-        <div>
+        <div className="mt-4"> {/* Added margin-top for spacing between links */}
           {/* Link to the villains page */}
-          <Link href="/pages/villains">VILLAINS</Link>
+          <Link href="/pages/villains" className="home-link text-2xl mx-4">VILLAINS</Link> {/* Added text-2xl and mx-4 */}
+        </div>
+        <div className="mt-4"> {/* Added margin-top for spacing between links */}
+          {/* Link to the Dark Territories page */}
+          <Link href="/pages/dark-territories" className="home-link text-2xl mx-4">
+            DARK TERRITORIES
+          </Link>
         </div>
       </div>
     </div>

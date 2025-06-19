@@ -3,19 +3,82 @@
 
 
 :root {
-  --background: rgb(251 191 36);
-  --foreground: #171717;
+  --background-color: #1a1a1a;
+  --text-color: #f0f0f0;
+  --accent-color: #990000; /* Deep Red */
+  --hover-accent-color: #cc0000; /* Brighter Red for hover */
+
+  /* Update existing variables to use the new scheme or remove if redundant */
+  /* For now, let's align them with the new primary dark theme */
+  --background: var(--background-color);
+  --foreground: var(--text-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: black;
-    --foreground: #ededed;
-  }
-}
+/* The requested theme is dark by default, so the prefers-color-scheme: dark can be removed or adjusted.
+   For now, removing it to simplify and enforce the new dark theme. */
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--text-color);
+  background: var(--background-color);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Link styles for the home page */
+.home-link {
+  color: var(--accent-color);
+  font-family: Georgia, serif;
+  text-decoration: none;
+  /* Assuming default browser/Tailwind link font size is acceptable for now.
+     Adjust font-size or margins here if needed later. */
+}
+
+.home-link:hover {
+  color: var(--hover-accent-color);
+  text-decoration: underline;
+}
+
+/* Keyframes for subtle pulsing background animation */
+@keyframes subtlePulse {
+  0% { opacity: 0.05; }
+  50% { opacity: 0.15; }
+  100% { opacity: 0.05; }
+}
+
+/* Apply the animation to the body's pseudo-element */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place it behind the content */
+  background-color: #0d0d0d; /* Changed from accent-color to very dark gray for a subtler shadow effect */
+  animation: subtlePulse 15s infinite ease-in-out;
+  pointer-events: none; /* Ensure it doesn't interfere with interactions */
+}
+
+/* Styles for SVG map markers */
+.map-marker {
+  fill: #4d0000; /* Dark, desaturated red */
+  stroke: rgba(240, 240, 240, 0.2); /* Faint inner glow - text-color at low opacity */
+  stroke-width: 1px;
+  cursor: pointer;
+  transition: fill 0.3s ease, stroke 0.3s ease; /* For smooth hover, removed transform transition */
+}
+
+.map-marker:hover {
+  fill: #800000; /* Brighter red on hover */
+  stroke: rgba(240, 240, 240, 0.5);
+}
+
+/* Info Panel Styles */
+#info-panel-close {
+  /* Base styles are a mix of inline and Tailwind classes */
+  /* Adding transition here for the hover effect */
+  transition: color 0.2s ease;
+}
+
+#info-panel-close:hover {
+  color: var(--accent-color); /* Use accent-color for hover, overriding inline text-color */
 }
