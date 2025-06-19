@@ -59,6 +59,9 @@ const NavigationBar = () => {
         <Link href="/pages/villains" className={`text-xl font-extrabold py-2 px-4 rounded-md hover:bg-gray-700 ${pathname === '/pages/villains' ? 'underline' : ''}`} onClick={handleLinkClick}>
           VILLAINS
         </Link>
+        <Link href="/pages/dark-territories" className={`text-xl font-extrabold py-2 px-4 rounded-md hover:bg-gray-700 ${pathname === '/pages/dark-territories' ? 'underline' : ''}`} onClick={handleLinkClick}>
+          DARK TERRITORIES
+        </Link>
       </div>
     </nav>
   );
