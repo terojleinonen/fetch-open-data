@@ -1,5 +1,4 @@
 import Request from "@/app/components/request";
-import Header from "@/app/components/header";
 import BookListClient from "./BookListClient"; // Import the new client component
 
 export default async function Page() {
@@ -7,7 +6,6 @@ export default async function Page() {
 
     return (
       <div>
-        <Header title="STEPHEN KING BOOKS"/>
         <BookListClient initialBooks={booksData} /> {/* Pass data to client component */}
       </div>
     )
