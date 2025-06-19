@@ -79,6 +79,15 @@ export default function BookListClient({ initialBooks }) {
     return booksArray;
   }, [initialBooks, searchTerm, sortOrder, selectedYear, selectedPublisher, minPages, maxPages]);
 
+  if (!initialBooks || !initialBooks.data || !Array.isArray(initialBooks.data)) {
+    return (
+      <div>
+        <h1>সমস্যা</h1>
+        <p>Book data is currently unavailable or malformed. Please try again later. The filter menu has been temporarily disabled.</p>
+      </div>
+    );
+  }
+
   // Function to handle selecting and navigating to a random book
   const handleRandomBook = () => {
     // Check if there are books available
