@@ -9,9 +9,9 @@ jest.mock('next/navigation', () => ({
 }));
 
 describe('NavigationBar', () => {
-  it('renders the title "My Awesome App"', () => {
+  it('renders the title "Stephen King Universe"', () => {
     render(<NavigationBar />);
-    expect(screen.getByText('My Awesome App')).toBeInTheDocument();
+    expect(screen.getByText('Stephen King Universe')).toBeInTheDocument();
   });
 
   describe('Hamburger Menu', () => {

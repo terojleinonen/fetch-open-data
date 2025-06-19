@@ -17,8 +17,6 @@ export default function FilterPopup({
   onResetFilters,
   onClose
 }) {
-  if (!isOpen) return null;
-
   // Memoized lists for dropdowns
   const uniqueYears = useMemo(() => {
     if (!initialBooks?.data) return [];
@@ -31,6 +29,8 @@ export default function FilterPopup({
     const publishers = new Set(initialBooks.data.map(book => book.Publisher).filter(Boolean));
     return Array.from(publishers).sort(); // Ascending order
   }, [initialBooks]);
+
+  if (!isOpen) return null;
 
   // Handler for resetting filters
   const handleResetFilters = () => {
