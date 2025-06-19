@@ -8,7 +8,7 @@ console.log("app started...")
     <div className="flex justify-center items-center h-screen">
       <div className="text-4xl">        
         <div className="text-6xl">
-          <h1>Stephen King</h1>
+          <h1>Stephen King Universe</h1>
         </div>
         <div>
           {/* Link to the books page */}
