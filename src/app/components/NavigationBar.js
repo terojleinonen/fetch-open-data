@@ -8,6 +8,10 @@ const NavigationBar = () => {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const handleLinkClick = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <nav className="p-4 md:p-8 flex flex-col md:flex-row md:items-center md:space-x-4">
       <div className="flex items-center justify-between">
@@ -41,18 +45,18 @@ const NavigationBar = () => {
         data-testid="nav-links-container"
         className={`${
           isMobileMenuOpen ? 'flex' : 'hidden'
-        } flex-col items-stretch space-y-2 mt-4 p-4 bg-gray-100 rounded-md shadow-lg md:bg-transparent md:shadow-none md:mt-0 md:flex md:flex-row md:items-center md:space-y-0 md:space-x-4 md:ml-auto w-full md:w-auto`}
+        } flex-col items-stretch space-y-2 mt-4 p-4 bg-gray-800 rounded-md shadow-lg md:bg-transparent md:shadow-none md:mt-0 md:flex md:flex-row md:items-center md:space-y-0 md:space-x-4 md:ml-auto w-full md:w-auto`}
       >
-        <Link href="/" className={`text-xl font-extrabold py-2 px-4 rounded-md hover:bg-gray-200 ${pathname === '/' ? 'underline' : ''}`}>
+        <Link href="/" className={`text-xl font-extrabold py-2 px-4 rounded-md hover:bg-gray-700 ${pathname === '/' ? 'underline' : ''}`} onClick={handleLinkClick}>
           HOME
         </Link>
-        <Link href="/pages/books" className={`text-xl font-extrabold py-2 px-4 rounded-md hover:bg-gray-200 ${pathname === '/pages/books' ? 'underline' : ''}`}>
+        <Link href="/pages/books" className={`text-xl font-extrabold py-2 px-4 rounded-md hover:bg-gray-700 ${pathname === '/pages/books' ? 'underline' : ''}`} onClick={handleLinkClick}>
           BOOKS
         </Link>
-        <Link href="/pages/shorts" className={`text-xl font-extrabold py-2 px-4 rounded-md hover:bg-gray-200 ${pathname === '/pages/shorts' ? 'underline' : ''}`}>
+        <Link href="/pages/shorts" className={`text-xl font-extrabold py-2 px-4 rounded-md hover:bg-gray-700 ${pathname === '/pages/shorts' ? 'underline' : ''}`} onClick={handleLinkClick}>
           SHORTS
         </Link>
-        <Link href="/pages/villains" className={`text-xl font-extrabold py-2 px-4 rounded-md hover:bg-gray-200 ${pathname === '/pages/villains' ? 'underline' : ''}`}>
+        <Link href="/pages/villains" className={`text-xl font-extrabold py-2 px-4 rounded-md hover:bg-gray-700 ${pathname === '/pages/villains' ? 'underline' : ''}`} onClick={handleLinkClick}>
           VILLAINS
         </Link>
       </div>
