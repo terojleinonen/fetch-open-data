@@ -19,18 +19,16 @@ export default function FilterPopup({
 }) {
   // Memoized lists for dropdowns
   const uniqueYears = useMemo(() => {
-    if (!initialBooks?.data) return [];
+    if (!initialBooks?.data || !Array.isArray(initialBooks.data)) return [];
     const years = new Set(initialBooks.data.map(book => book.Year).filter(Boolean));
     return Array.from(years).sort((a, b) => b - a); // Descending order
   }, [initialBooks]);
 
   const uniquePublishers = useMemo(() => {
-    if (!initialBooks?.data) return [];
+    if (!initialBooks?.data || !Array.isArray(initialBooks.data)) return [];
     const publishers = new Set(initialBooks.data.map(book => book.Publisher).filter(Boolean));
     return Array.from(publishers).sort(); // Ascending order
   }, [initialBooks]);
-
-  if (!isOpen) return null;
 
   // Handler for resetting filters
   const handleResetFilters = () => {
