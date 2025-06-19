@@ -1,3 +1,5 @@
+"use client";
+
 import localFont from "next/font/local";
 import { usePathname } from "next/navigation"; // Import usePathname
 import NavigationBar from "@/app/components/NavigationBar"; // Import NavigationBar
