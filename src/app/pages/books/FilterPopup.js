@@ -49,12 +49,9 @@ export default function FilterPopup({
   };
 
   return (
-    <div
-      className={`absolute z-50 mt-2 w-72 rounded-md shadow-lg bg-gray-800 ring-1 ring-black ring-opacity-5 focus:outline-none transform transition-all ease-out duration-200 origin-top ${
-        isOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-95 pointer-events-none'
-      }`}
-    >
-      <div className="p-4 flex flex-col max-h-96">
+    <div className={`fixed inset-0 z-50 bg-gray-800 transform transition-transform duration-300 ease-in-out md:left-auto md:top-0 md:right-0 md:bottom-auto md:h-full md:w-80 md:shadow-xl ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+      {/* Inner content wrapper */}
+      <div className="p-4 md:p-6 flex flex-col h-full">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-semibold text-white">Filter Books</h2>
