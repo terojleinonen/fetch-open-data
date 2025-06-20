@@ -129,40 +129,42 @@ export default function BookListClient({ initialBooks }) {
           <option value="year_newest_to_oldest">Year (Newest to Oldest)</option>
           <option value="year_oldest_to_newest">Year (Oldest to Newest)</option>
         </select>
-        <button
-          onClick={() => setIsFilterPopupOpen(true)}
-          className="p-2 rounded bg-purple-600 hover:bg-purple-500 text-white font-medium"
-        >
-          Filters
-        </button>
+        <div className="relative"> {/* New wrapper */}
+          <button
+            id="filters-button" // Added an ID for potential aria-labelledby
+            onClick={() => setIsFilterPopupOpen(!isFilterPopupOpen)} // Toggle behavior
+            className="p-2 rounded bg-purple-600 hover:bg-purple-500 text-white font-medium"
+          >
+            Filters
+          </button>
+          <FilterPopup
+            isOpen={isFilterPopupOpen}
+            initialBooks={initialBooks}
+            selectedYear={selectedYear}
+            setSelectedYear={setSelectedYear}
+            selectedPublisher={selectedPublisher}
+            setSelectedPublisher={setSelectedPublisher}
+            minPages={minPages}
+            setMinPages={setMinPages}
+            maxPages={maxPages}
+            setMaxPages={setMaxPages}
+            onApplyFilters={() => {
+              console.log('Apply filters clicked');
+              // Implement actual filter logic here in a future step
+              setIsFilterPopupOpen(false);
+            }}
+            onResetFilters={() => {
+              setSelectedYear('');
+              setSelectedPublisher('');
+              setMinPages('');
+              setMaxPages('');
+              console.log('Reset filters clicked');
+              // Optionally, re-apply filters or close popup
+            }}
+            onClose={() => setIsFilterPopupOpen(false)}
+          />
+        </div>
      </div>
-
-      <FilterPopup
-        isOpen={isFilterPopupOpen}
-        initialBooks={initialBooks}
-        selectedYear={selectedYear}
-        setSelectedYear={setSelectedYear}
-        selectedPublisher={selectedPublisher}
-        setSelectedPublisher={setSelectedPublisher}
-        minPages={minPages}
-        setMinPages={setMinPages}
-        maxPages={maxPages}
-        setMaxPages={setMaxPages}
-        onApplyFilters={() => {
-          console.log('Apply filters clicked');
-          // Implement actual filter logic here in a future step
-          setIsFilterPopupOpen(false);
-        }}
-        onResetFilters={() => {
-          setSelectedYear('');
-          setSelectedPublisher('');
-          setMinPages('');
-          setMaxPages('');
-          console.log('Reset filters clicked');
-          // Optionally, re-apply filters or close popup
-        }}
-        onClose={() => setIsFilterPopupOpen(false)}
-      />
 
       {/* Books List Display */}
       {/* Renders the list of filtered books */}
