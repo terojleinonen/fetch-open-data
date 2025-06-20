@@ -49,15 +49,15 @@ export default function FilterPopup({
   };
 
   return (
-    <div className={`fixed inset-0 z-50 bg-gray-800 transform transition-transform duration-300 ease-in-out md:left-auto md:top-0 md:right-0 md:bottom-auto md:h-full md:w-80 md:shadow-xl ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+    <div className={`fixed inset-0 z-50 bg-[var(--background-color)] border border-[var(--accent-color)] transform transition-transform duration-300 ease-in-out md:left-auto md:top-0 md:right-0 md:bottom-auto md:h-full md:w-80 md:shadow-xl ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
       {/* Inner content wrapper */}
-      <div className="p-4 md:p-6 flex flex-col h-full">
+      <div className="p-6 flex flex-col h-full">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-semibold text-white">Filter Books</h2>
+          <h2 className="text-2xl font-semibold text-[var(--text-color)]">Filter Books</h2>
           <button
             onClick={onClose} // onClick should call the onClose prop
-            className="text-gray-400 hover:text-red-500 text-3xl font-bold leading-none"
+            className="text-[var(--accent-color)] hover:text-[var(--hover-accent-color)] text-3xl font-bold leading-none"
             aria-label="Close"
           >
             &times;
@@ -65,15 +65,15 @@ export default function FilterPopup({
         </div>
 
         {/* Scrollable filter options */}
-        <div className="overflow-y-auto pr-2 flex-grow">
+        <div className="overflow-y-auto pr-2 flex-grow space-y-4">
           {/* Year Filter */}
-          <div className="mb-5">
-            <label htmlFor="filter-year" className="block text-sm font-medium text-gray-300 mb-1">Year</label>
+          <div>
+            <label htmlFor="filter-year" className="block text-sm font-medium text-[var(--text-color)] mb-1">Year</label>
             <select
               id="filter-year"
               value={selectedYear}
               onChange={(e) => setSelectedYear(e.target.value)}
-              className="w-full p-3 rounded-md bg-gray-700 text-white border border-gray-600 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none"
+              className="w-full p-2 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] outline-none"
             >
               <option value="">All Years</option>
               {uniqueYears.map(year => (
@@ -83,13 +83,13 @@ export default function FilterPopup({
           </div>
 
           {/* Publisher Filter */}
-          <div className="mb-5">
-            <label htmlFor="filter-publisher" className="block text-sm font-medium text-gray-300 mb-1">Publisher</label>
+          <div>
+            <label htmlFor="filter-publisher" className="block text-sm font-medium text-[var(--text-color)] mb-1">Publisher</label>
             <select
               id="filter-publisher"
               value={selectedPublisher}
               onChange={(e) => setSelectedPublisher(e.target.value)}
-              className="w-full p-3 rounded-md bg-gray-700 text-white border border-gray-600 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none"
+              className="w-full p-2 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] outline-none"
             >
               <option value="">All Publishers</option>
               {uniquePublishers.map(publisher => (
@@ -99,15 +99,15 @@ export default function FilterPopup({
           </div>
 
           {/* Page Count Filter */}
-          <div className="mb-5">
-            <label className="block text-sm font-medium text-gray-300 mb-1">Page Count</label>
-            <div className="flex gap-3">
+          <div>
+            <label className="block text-sm font-medium text-[var(--text-color)] mb-1">Page Count</label>
+            <div className="flex gap-4">
               <input
                 type="number"
                 placeholder="Min Pages"
                 value={minPages}
                 onChange={(e) => setMinPages(e.target.value)}
-                className="w-full p-3 rounded-md bg-gray-700 text-white border border-gray-600 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none"
+                className="w-full p-2 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] outline-none"
                 min="0"
               />
               <input
@@ -115,7 +115,7 @@ export default function FilterPopup({
                 placeholder="Max Pages"
                 value={maxPages}
                 onChange={(e) => setMaxPages(e.target.value)}
-                className="w-full p-3 rounded-md bg-gray-700 text-white border border-gray-600 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none"
+                className="w-full p-2 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] outline-none"
                 min="0"
               />
             </div>
@@ -123,16 +123,16 @@ export default function FilterPopup({
         </div>
 
         {/* Action Buttons */}
-        <div className="flex justify-end gap-4 mt-6 pt-4 border-t border-gray-700">
+        <div className="flex justify-end gap-4 mt-6 pt-4 border-t border-[var(--accent-color)]">
           <button
             onClick={handleResetFilters}
-            className="px-5 py-2.5 rounded-md bg-gray-600 hover:bg-gray-500 text-white font-medium transition-colors duration-150 ease-in-out"
+            className="bg-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] text-[var(--text-color)] font-bold py-2 px-4 rounded"
           >
             Reset Filters
           </button>
           <button
             onClick={handleApplyFilters}
-            className="px-5 py-2.5 rounded-md bg-purple-600 hover:bg-purple-500 text-white font-medium transition-colors duration-150 ease-in-out"
+            className="bg-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] text-[var(--text-color)] font-bold py-2 px-4 rounded"
           >
             Apply Filters
           </button>

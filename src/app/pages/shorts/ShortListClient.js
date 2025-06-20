@@ -56,11 +56,12 @@ export default function ShortListClient({ initialShorts }) {
   };
 
   return (
-    <div>
+    <div className="px-8 py-12">
+      <h1 className="text-5xl md:text-6xl mb-4 text-center text-[var(--text-color)]" style={{ fontFamily: 'Georgia, serif' }}>Short Stories</h1>
       {/* Button to get a random short story */}
       <div className="flex justify-center my-4">
         <button
-          className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+          className="bg-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] text-[var(--text-color)] font-bold py-2 px-4 rounded"
           onClick={handleRandomShort}
         >
           Get Random Short Story
@@ -68,16 +69,16 @@ export default function ShortListClient({ initialShorts }) {
       </div>
 
       {/* Search and Sort Controls */}
-      <div className="mb-4 p-4 bg-gray-800 rounded-lg shadow flex gap-4">
+      <div className="mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow flex flex-wrap gap-4 items-center">
          <input
              type="text"
              placeholder="Search shorts..."
-             className="w-full p-2 rounded bg-gray-700 text-white"
+             className="w-full md:w-auto flex-grow p-2 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
              value={searchTerm}
              onChange={(e) => setSearchTerm(e.target.value)}
          />
          <select
-          className="p-2 rounded bg-gray-700 text-white"
+          className="p-2 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
           value={sortOrder}
           onChange={(e) => setSortOrder(e.target.value)}
         >
@@ -91,22 +92,23 @@ export default function ShortListClient({ initialShorts }) {
       {/* Renders the list of filtered short stories */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
          {filteredShorts.map(short => (
-             <div key={short.id} className="p-4 bg-gray-800 rounded-lg shadow hover:bg-gray-700 transition-colors">
-                 <h2 className="text-xl font-semibold text-purple-400">
+             <div key={short.id} className="p-4 bg-[var(--background-color)] rounded-lg shadow border border-[var(--accent-color)] hover:border-[var(--hover-accent-color)] transition-colors">
+                 <h2 className="text-xl font-semibold text-[var(--accent-color)] hover:text-[var(--hover-accent-color)]">
                      <Link href={`/pages/shorts/${short.id}`}>
                          {short.title}
                      </Link>
                  </h2>
                  {/* Add any other brief details if desired, e.g., short.status */}
-                 {short.year && <p className="text-sm text-gray-400">Year: {short.year}</p>}
-                 {short.status && <p className="text-sm text-gray-400">Status: {short.status}</p>}
+                 {short.year && <p className="text-sm text-[var(--text-color)] opacity-75">Year: {short.year}</p>}
+                 {short.status && <p className="text-sm text-[var(--text-color)] opacity-75">Status: {short.status}</p>}
              </div>
          ))}
      </div>
      {/* Display a message if no short stories match the search term */}
      {filteredShorts.length === 0 && searchTerm && (
-         <p className="text-center text-gray-400 mt-4">No shorts found matching your search.</p>
+         <p className="text-center text-[var(--text-color)] mt-4">No shorts found matching your search.</p>
      )}
+      <div className="text-center mt-12"><Link href="/" className="home-link text-xl">Return to Home</Link></div>
     </div>
   );
 }

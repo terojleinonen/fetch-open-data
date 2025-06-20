@@ -44,11 +44,12 @@ export default function VillainListClient({ initialVillains }) {
   };
 
   return (
-    <div>
+    <div className="px-8 py-12">
+      <h1 className="text-5xl md:text-6xl mb-4 text-center text-[var(--text-color)]" style={{ fontFamily: 'Georgia, serif' }}>Villains</h1>
       {/* Button to get a random villain */}
       <div className="flex justify-center my-4">
         <button
-          className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
+          className="bg-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] text-[var(--text-color)] font-bold py-2 px-4 rounded"
           onClick={handleRandomVillain}
         >
           Get Random Villain
@@ -56,11 +57,11 @@ export default function VillainListClient({ initialVillains }) {
       </div>
 
       {/* Search input */}
-      <div className="mb-4 p-4 bg-gray-800 rounded-lg shadow">
+      <div className="mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow">
          <input
              type="text"
              placeholder="Search villains..."
-             className="w-full p-2 rounded bg-gray-700 text-white"
+             className="w-full p-2 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
              value={searchTerm}
              onChange={(e) => setSearchTerm(e.target.value)}
          />
@@ -70,22 +71,23 @@ export default function VillainListClient({ initialVillains }) {
       {/* Renders the list of filtered villains */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
          {filteredVillains.map(villain => (
-             <div key={villain.id} className="p-4 bg-gray-800 rounded-lg shadow hover:bg-gray-700 transition-colors">
-                 <h2 className="text-xl font-semibold text-purple-400">
+             <div key={villain.id} className="p-4 bg-[var(--background-color)] rounded-lg shadow border border-[var(--accent-color)] hover:border-[var(--hover-accent-color)] transition-colors">
+                 <h2 className="text-xl font-semibold text-[var(--accent-color)] hover:text-[var(--hover-accent-color)]">
                      <Link href={`/pages/villains/${villain.id}`}>
                          {villain.name}
                      </Link>
                  </h2>
                  {/* Add any other brief details if desired, e.g., villain.status */}
-                 {villain.status && <p className="text-sm text-gray-400">Status: {villain.status}</p>}
+                 {villain.status && <p className="text-sm text-[var(--text-color)] opacity-75">Status: {villain.status}</p>}
              </div>
          ))}
      </div>
      {/* Display a message if no villains match the search term */}
      {filteredVillains.length === 0 && searchTerm && (
-         <p className="text-center text-gray-400 mt-4">No villains found matching your search.</p>
+         <p className="text-center text-[var(--text-color)] mt-4">No villains found matching your search.</p>
      )}
 
+      <div className="text-center mt-12"><Link href="/" className="home-link text-xl">Return to Home</Link></div>
     </div>
   );
 }
