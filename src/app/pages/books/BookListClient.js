@@ -72,9 +72,9 @@ export default function BookListClient({ initialBooks }) {
 
   if (!initialBooks || !initialBooks.data || !Array.isArray(initialBooks.data)) {
     return (
-      <div>
-        <h1>সমস্যা</h1>
-        <p>Book data is currently unavailable or malformed. Please try again later. The filter menu has been temporarily disabled.</p>
+      <div className="px-8 py-12">
+        <h1 className="text-2xl font-bold text-[var(--accent-color)] mb-4">সমস্যা</h1>
+        <p className="text-[var(--text-color)]">Book data is currently unavailable or malformed. Please try again later. The filter menu has been temporarily disabled.</p>
       </div>
     );
   }
@@ -100,11 +100,12 @@ export default function BookListClient({ initialBooks }) {
   };
 
   return (
-    <div className={`transition-[margin-right] duration-300 ease-in-out ${isFilterPopupOpen ? 'md:mr-80' : 'md:mr-0'}`}>
+    <div className={`px-8 py-12 transition-[margin-right] duration-300 ease-in-out ${isFilterPopupOpen ? 'md:mr-80' : 'md:mr-0'}`}>
+      <h1 className="text-5xl md:text-6xl mb-4 text-center text-[var(--text-color)]" style={{ fontFamily: 'Georgia, serif' }}>Books</h1>
       {/* Button to get a random book */}
       <div className="flex justify-center my-4">
         <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          className="bg-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] text-[var(--text-color)] font-bold py-2 px-4 rounded"
           onClick={handleRandomBook}
         >
           Get Random Book
@@ -112,16 +113,16 @@ export default function BookListClient({ initialBooks }) {
       </div>
       
       {/* Search and Sort Controls */}
-      <div className="mb-4 p-4 bg-gray-800 rounded-lg shadow flex gap-4">
+      <div className="mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow flex flex-wrap gap-4 items-center">
          <input
              type="text"
              placeholder="Search books..."
-             className="w-full p-2 rounded bg-gray-700 text-white"
+             className="w-full md:w-auto flex-grow p-2 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
              value={searchTerm}
              onChange={(e) => setSearchTerm(e.target.value)}
          />
          <select
-          className="p-2 rounded bg-gray-700 text-white"
+          className="p-2 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
           value={sortOrder}
           onChange={(e) => setSortOrder(e.target.value)}
         >
@@ -131,7 +132,7 @@ export default function BookListClient({ initialBooks }) {
         </select>
         <button
           onClick={() => setIsFilterPopupOpen(!isFilterPopupOpen)} // Toggle behavior
-          className="p-2 rounded bg-purple-600 hover:bg-purple-500 text-white font-medium"
+          className="bg-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] text-[var(--text-color)] font-bold py-2 px-4 rounded"
         >
           Filters
         </button>
@@ -168,22 +169,23 @@ export default function BookListClient({ initialBooks }) {
       {/* Renders the list of filtered books */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
          {filteredBooks.map(book => (
-             <div key={book.id} className="p-4 bg-gray-800 rounded-lg shadow hover:bg-gray-700 transition-colors">
-                 <h2 className="text-xl font-semibold text-purple-400">
+             <div key={book.id} className="p-4 bg-[var(--background-color)] rounded-lg shadow border border-[var(--accent-color)] hover:border-[var(--hover-accent-color)] transition-colors">
+                 <h2 className="text-xl font-semibold text-[var(--accent-color)] hover:text-[var(--hover-accent-color)]">
                      <Link href={`/pages/books/${book.id}`}>
                          {book.Title}
                      </Link>
                  </h2>
                  {/* Add any other brief details if desired, e.g., book.status */}
-                 {book.Year && <p className="text-sm text-gray-400">Year: {book.Year}</p>}
-                 {book.status && <p className="text-sm text-gray-400">Status: {book.status}</p>}
+                 {book.Year && <p className="text-sm text-[var(--text-color)]">Year: {book.Year}</p>}
+                 {book.status && <p className="text-sm text-[var(--text-color)]">Status: {book.status}</p>}
              </div>
          ))}
      </div>
      {/* Display a message if no books match the search term */}
      {filteredBooks.length === 0 && searchTerm && (
-         <p className="text-center text-gray-400 mt-4">No books found matching your search.</p>
+         <p className="text-center text-[var(--text-color)] mt-4">No books found matching your search.</p>
      )}
+      <div className="text-center mt-12"><Link href="/" className="home-link text-xl">Return to Home</Link></div>
     </div>
   );
 }
