@@ -100,7 +100,7 @@ export default function BookListClient({ initialBooks }) {
   };
 
   return (
-    <div>
+    <div className={`transition-[margin-right] duration-300 ease-in-out ${isFilterPopupOpen ? 'md:mr-80' : 'md:mr-0'}`}>
       {/* Button to get a random book */}
       <div className="flex justify-center my-4">
         <button
@@ -130,7 +130,7 @@ export default function BookListClient({ initialBooks }) {
           <option value="year_oldest_to_newest">Year (Oldest to Newest)</option>
         </select>
         <button
-          onClick={() => setIsFilterPopupOpen(true)}
+          onClick={() => setIsFilterPopupOpen(!isFilterPopupOpen)} // Toggle behavior
           className="p-2 rounded bg-purple-600 hover:bg-purple-500 text-white font-medium"
         >
           Filters
