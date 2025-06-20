@@ -30,9 +30,6 @@ export default function FilterPopup({
     return Array.from(publishers).sort(); // Ascending order
   }, [initialBooks]);
 
-  // Add the conditional return for when the modal is closed
-  if (!isOpen) return null;
-
   // Handler for resetting filters
   const handleResetFilters = () => {
     setSelectedYear('');
@@ -52,10 +49,12 @@ export default function FilterPopup({
   };
 
   return (
-    // Modal backdrop and container
-    <div className={`fixed top-0 right-0 h-full bg-gray-800 shadow-xl z-50 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-      {/* Modal content box */}
-      <div className="p-6 w-80 max-w-sm flex flex-col h-full">
+    <div
+      className={`absolute z-50 mt-2 w-72 rounded-md shadow-lg bg-gray-800 ring-1 ring-black ring-opacity-5 focus:outline-none transform transition-all ease-out duration-200 origin-top ${
+        isOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-95 pointer-events-none'
+      }`}
+    >
+      <div className="p-4 flex flex-col max-h-96">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-semibold text-white">Filter Books</h2>
