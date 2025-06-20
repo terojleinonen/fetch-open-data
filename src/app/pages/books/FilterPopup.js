@@ -53,9 +53,9 @@ export default function FilterPopup({
 
   return (
     // Modal backdrop and container
-    <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center p-4 z-50 transition-opacity duration-300 ease-in-out">
+    <div className={`fixed top-0 right-0 h-full bg-gray-800 shadow-xl z-50 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
       {/* Modal content box */}
-      <div className="bg-gray-800 p-6 rounded-xl shadow-2xl max-w-lg w-full max-h-[90vh] flex flex-col">
+      <div className="p-6 w-80 max-w-sm flex flex-col h-full">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-semibold text-white">Filter Books</h2>
