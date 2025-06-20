@@ -100,7 +100,7 @@ export default function BookListClient({ initialBooks }) {
   };
 
   return (
-    <div>
+    <div className={`transition-all duration-300 ease-in-out ${isFilterPopupOpen ? 'mr-80' : 'mr-0'}`}>
       {/* Button to get a random book */}
       <div className="flex justify-center my-4">
         <button
