@@ -55,21 +55,31 @@ export default function ShortListClient({ initialShorts }) {
     }
   };
 
+  // Function to handle selecting and navigating to a random short story
+  // const handleRandomShort = () => {
+  //   // Check if there are short stories available
+  //   if (initialShorts && initialShorts.data && initialShorts.data.length > 0) {
+  //     // Generate a random index
+  //     const randomIndex = Math.floor(Math.random() * initialShorts.data.length);
+  //     // Get the random short story
+  //     const randomShort = initialShorts.data[randomIndex];
+  //     // Check if the short story and its ID are valid
+  //     if (randomShort && randomShort.id) {
+  //       // Navigate to the short story's page
+  //       router.push(`/pages/shorts/${randomShort.id}`);
+  //     } else {
+  //       console.error("Failed to get random short story or ID is missing", randomShort);
+  //     }
+  //   } else {
+  //     console.error("No short stories available to select a random one from.");
+  //   }
+  // };
+
   return (
     <div className="px-8 py-12">
-      <h1 className="text-5xl md:text-6xl mb-4 text-center text-[var(--text-color)]" style={{ fontFamily: 'Georgia, serif' }}>Short Stories</h1>
-      {/* Button to get a random short story */}
-      <div className="flex justify-center my-4">
-        <button
-          className="bg-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] text-[var(--text-color)] font-bold py-2 px-4 rounded"
-          onClick={handleRandomShort}
-        >
-          Get Random Short Story
-        </button>
-      </div>
 
       {/* Search and Sort Controls */}
-      <div className="mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow flex flex-wrap gap-4 items-center justify-between">
+      <div className="controls-container mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow flex flex-wrap gap-4 items-center justify-between">
          <input
              type="text"
              placeholder="Search shorts..."

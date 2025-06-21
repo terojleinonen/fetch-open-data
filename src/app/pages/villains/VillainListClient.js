@@ -43,21 +43,31 @@ export default function VillainListClient({ initialVillains }) {
     }
   };
 
+  // Function to handle selecting and navigating to a random villain
+  // const handleRandomVillain = () => {
+  //   // Check if there are villains available
+  //   if (initialVillains && initialVillains.data && initialVillains.data.length > 0) {
+  //     // Generate a random index
+  //     const randomIndex = Math.floor(Math.random() * initialVillains.data.length);
+  //     // Get the random villain
+  //     const randomVillain = initialVillains.data[randomIndex];
+  //     // Check if the villain and its ID are valid
+  //     if (randomVillain && randomVillain.id) {
+  //       // Navigate to the villain's page
+  //       router.push(`/pages/villains/${randomVillain.id}`);
+  //     } else {
+  //       console.error("Failed to get random villain or villain ID is missing", randomVillain);
+  //     }
+  //   } else {
+  //     console.error("No villains available to select a random one from.");
+  //   }
+  // };
+
   return (
     <div className="px-8 py-12">
-      <h1 className="text-5xl md:text-6xl mb-4 text-center text-[var(--text-color)]" style={{ fontFamily: 'Georgia, serif' }}>Villains</h1>
-      {/* Button to get a random villain */}
-      <div className="flex justify-center my-4">
-        <button
-          className="bg-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] text-[var(--text-color)] font-bold py-2 px-4 rounded"
-          onClick={handleRandomVillain}
-        >
-          Get Random Villain
-        </button>
-      </div>
 
       {/* Search input */}
-      <div className="mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow">
+      <div className="controls-container mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow">
          <input
              type="text"
              placeholder="Search villains..."
