@@ -1,27 +1,70 @@
 
 @import "tailwindcss";
 
-
 :root {
-  --background-color: #1a1a1a;
-  --text-color: #f0f0f0;
-  --accent-color: #990000; /* Deep Red */
-  --hover-accent-color: #cc0000; /* Brighter Red for hover */
+  --background-color-dark: #1a1a1a;
+  --text-color-dark: #f0f0f0;
+  --accent-color-dark: #990000; /* Deep Red */
+  --hover-accent-color-dark: #cc0000; /* Brighter Red for hover */
+  --shadow-color-dark: #0d0d0d;
+  --map-marker-fill-dark: #4d0000;
+  --map-marker-stroke-dark: rgba(240, 240, 240, 0.2);
+  --map-marker-hover-fill-dark: #800000;
+  --map-marker-hover-stroke-dark: rgba(240, 240, 240, 0.5);
 
-  /* Update existing variables to use the new scheme or remove if redundant */
-  /* For now, let's align them with the new primary dark theme */
-  --background: var(--background-color);
-  --foreground: var(--text-color);
+  --background-color-light: #f8f8f8;
+  --text-color-light: #333333;
+  --accent-color-light: #a0a0a0; /* Muted Gray */
+  --hover-accent-color-light: #8c8c8c; /* Darker Muted Gray */
+  --shadow-color-light: #e0e0e0;
+  --map-marker-fill-light: #cccccc;
+  --map-marker-stroke-light: rgba(51, 51, 51, 0.2);
+  --map-marker-hover-fill-light: #b3b3b3;
+  --map-marker-hover-stroke-light: rgba(51, 51, 51, 0.5);
 }
 
-/* The requested theme is dark by default, so the prefers-color-scheme: dark can be removed or adjusted.
-   For now, removing it to simplify and enforce the new dark theme. */
-
+/* Default to dark theme */
 body {
+  --background-color: var(--background-color-dark);
+  --text-color: var(--text-color-dark);
+  --accent-color: var(--accent-color-dark);
+  --hover-accent-color: var(--hover-accent-color-dark);
+  --shadow-color: var(--shadow-color-dark);
+  --map-marker-fill: var(--map-marker-fill-dark);
+  --map-marker-stroke: var(--map-marker-stroke-dark);
+  --map-marker-hover-fill: var(--map-marker-hover-fill-dark);
+  --map-marker-hover-stroke: var(--map-marker-hover-stroke-dark);
+
   color: var(--text-color);
   background: var(--background-color);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Light theme using prefers-color-scheme */
+@media (prefers-color-scheme: light) {
+  body {
+    --background-color: var(--background-color-light);
+    --text-color: var(--text-color-light);
+    --accent-color: var(--accent-color-light);
+    --hover-accent-color: var(--hover-accent-color-light);
+    --shadow-color: var(--shadow-color-light);
+    --map-marker-fill: var(--map-marker-fill-light);
+    --map-marker-stroke: var(--map-marker-stroke-light);
+    --map-marker-hover-fill: var(--map-marker-hover-fill-light);
+    --map-marker-hover-stroke: var(--map-marker-hover-stroke-light);
+
+    color: var(--text-color);
+    background: var(--background-color);
+  }
+}
+
+/* Update existing variables to use the new scheme or remove if redundant */
+/* For now, let's align them with the new primary dark theme */
+:root {
+  --background: var(--background-color); /* Updated to use the theme-aware variable */
+  --foreground: var(--text-color); /* Updated to use the theme-aware variable */
+}
+
 
 /* Link styles for the home page */
 .home-link {
@@ -53,23 +96,23 @@ body::before {
   width: 100%;
   height: 100%;
   z-index: -1; /* Place it behind the content */
-  background-color: #0d0d0d; /* Changed from accent-color to very dark gray for a subtler shadow effect */
+  background-color: var(--shadow-color); /* Use theme-aware shadow color */
   animation: subtlePulse 15s infinite ease-in-out;
   pointer-events: none; /* Ensure it doesn't interfere with interactions */
 }
 
 /* Styles for SVG map markers */
 .map-marker {
-  fill: #4d0000; /* Dark, desaturated red */
-  stroke: rgba(240, 240, 240, 0.2); /* Faint inner glow - text-color at low opacity */
+  fill: var(--map-marker-fill); /* Use theme-aware fill color */
+  stroke: var(--map-marker-stroke); /* Use theme-aware stroke color */
   stroke-width: 1px;
   cursor: pointer;
   transition: fill 0.3s ease, stroke 0.3s ease; /* For smooth hover, removed transform transition */
 }
 
 .map-marker:hover {
-  fill: #800000; /* Brighter red on hover */
-  stroke: rgba(240, 240, 240, 0.5);
+  fill: var(--map-marker-hover-fill); /* Use theme-aware hover fill color */
+  stroke: var(--map-marker-hover-stroke); /* Use theme-aware hover stroke color */
 }
 
 /* Info Panel Styles */
