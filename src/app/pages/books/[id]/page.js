@@ -56,6 +56,13 @@ export default async function BookDetailPage({ params }) {
       <p className="mb-2"><strong>Publisher:</strong> {book.Publisher}</p>
       <p className="mb-2"><strong>ISBN:</strong> {book.ISBN}</p>
       <p className="mb-2"><strong>Pages:</strong> {book.Pages}</p>
+      {/* Book Summary Display */}
+      {book.summary && (
+        <div className="mt-4">
+          <strong className="text-lg">Summary:</strong>
+          <p className="text-[var(--text-color)] mt-1">{book.summary}</p>
+        </div>
+      )}
       {filteredNotes.length > 0 && (
         <div className="mt-4">
           <strong className="text-lg">Notes:</strong>

@@ -167,47 +167,37 @@ export default function BookListClient({ initialBooks }) {
 
       {/* Books List Display */}
       {/* Renders the list of filtered books */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 gap-4"> {/* Changed to single column grid */}
          {filteredBooks.map(book => (
-             <div key={book.id} className="p-4 bg-[var(--background-color)] rounded-lg shadow border border-[var(--accent-color)] hover:border-[var(--hover-accent-color)] transition-colors flex flex-col">
-                 {book.coverImageUrl && book.coverImageUrl !== "NO_COVER_AVAILABLE" ? (
-                   <img
-                     src={book.coverImageUrl}
-                     alt={`Cover of ${book.Title}`}
-                     style={{
-                       width: "100%",
-                       height: "200px", // Fixed height
-                       objectFit: "contain",
-                       marginBottom: "0.5rem",
-                       borderRadius: "0.25rem" // Optional: adds rounded corners
-                     }}
-                   />
-                 ) : (
-                   <div
-                     style={{
-                       width: "100%",
-                       height: "200px", // Fixed height
-                       maxHeight: "200px",
-                       display: "flex",
-                       alignItems: "center",
-                       justifyContent: "center",
-                       backgroundColor: "#e0e0e0", // A light gray background
-                       color: "#555", // Darker text color for contrast
-                       marginBottom: "0.5rem",
-                       borderRadius: "0.25rem" // Optional: adds rounded corners
-                     }}
-                   >
-                     No Cover Available
-                   </div>
-                 )}
-                 <h2 className="text-xl font-semibold text-[var(--accent-color)] hover:text-[var(--hover-accent-color)]">
-                     <Link href={`/pages/books/${book.id}`}>
-                         {book.Title}
-                     </Link>
-                 </h2>
-                 {/* Add any other brief details if desired, e.g., book.status */}
-                 {book.Year && <p className="text-sm text-[var(--text-color)]">Year: {book.Year}</p>}
-                 {book.status && <p className="text-sm text-[var(--text-color)]">Status: {book.status}</p>}
+             <div key={book.id} className="p-4 bg-[var(--background-color)] rounded-lg shadow border border-[var(--accent-color)] hover:border-[var(--hover-accent-color)] transition-colors flex flex-row items-start"> {/* Changed to flex-row and items-start */}
+                 {/* Book Cover Image */}
+                 <div className="flex-none w-1/4 mr-4"> {/* Adjusted width and added margin */}
+                     {book.coverImageUrl && book.coverImageUrl !== "NO_COVER_AVAILABLE" ? (
+                       <img
+                         src={book.coverImageUrl}
+                         alt={`Cover of ${book.Title}`}
+                         className="w-full h-auto object-contain rounded" // Adjusted styling
+                       />
+                     ) : (
+                       <div
+                         className="w-full h-48 flex items-center justify-center bg-gray-200 text-gray-500 rounded" // Adjusted styling
+                       >
+                         No Cover Available
+                       </div>
+                     )}
+                 </div>
+                 {/* Book Details */}
+                 <div className="flex-grow"> {/* Takes remaining space */}
+                     <h2 className="text-xl font-semibold text-[var(--accent-color)] hover:text-[var(--hover-accent-color)]">
+                         <Link href={`/pages/books/${book.id}`}>
+                             {book.Title}
+                         </Link>
+                     </h2>
+                     {book.Year && <p className="text-sm text-[var(--text-color)]">Year: {book.Year}</p>}
+                     {book.Publisher && <p className="text-sm text-[var(--text-color)]">Publisher: {book.Publisher}</p>}
+                     {book.Pages && <p className="text-sm text-[var(--text-color)]">Pages: {book.Pages}</p>}
+                     {book.status && <p className="text-sm text-[var(--text-color)]">Status: {book.status}</p>}
+                 </div>
              </div>
          ))}
      </div>
