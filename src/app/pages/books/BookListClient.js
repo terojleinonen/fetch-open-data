@@ -177,7 +177,7 @@ export default function BookListClient({ initialBooks }) {
                      style={{
                        width: "100%",
                        height: "200px", // Fixed height
-                       objectFit: "cover",
+                       objectFit: "contain",
                        marginBottom: "0.5rem",
                        borderRadius: "0.25rem" // Optional: adds rounded corners
                      }}
