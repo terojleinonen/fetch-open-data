@@ -176,7 +176,7 @@ export default function BookListClient({ initialBooks }) {
                        <img
                          src={book.coverImageUrl}
                          alt={`Cover of ${book.Title}`}
-                         className="w-full h-auto object-contain rounded" // Adjusted styling
+                         className="h-auto object-contain rounded" // Adjusted styling (removed w-full)
                        />
                      ) : (
                        <div
