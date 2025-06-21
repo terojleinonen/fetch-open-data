@@ -23,22 +23,22 @@ export default async function Request(parameter) {
             googleBooksApiUrl = `https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.Title)}`;
           } else {
             book.coverImageUrl = "NO_COVER_AVAILABLE";
-            book.largeCoverImageUrl = "NO_COVER_AVAILABLE";
+            book.largeCoverImageUrl = "NO_COVER_AVAILABLE"; 
             continue; // Skip if no ISBN or Title
           }
-
+  
           try {
             const googleBooksResponse = await fetch(googleBooksApiUrl);
             if (!googleBooksResponse.ok) {
               throw new Error(`Google Books API error: Status ${googleBooksResponse.status}`);
             }
             const googleBooksData = await googleBooksResponse.json();
-
+  
             const imageLinks = googleBooksData?.items?.[0]?.volumeInfo?.imageLinks;
             if (imageLinks) {
               // Thumbnail image
               book.coverImageUrl = imageLinks.thumbnail || imageLinks.smallThumbnail || "NO_COVER_AVAILABLE";
-
+              
               // Larger image: medium, then large, then small
               if (imageLinks.medium) {
                 book.largeCoverImageUrl = imageLinks.medium;
