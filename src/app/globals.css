@@ -82,3 +82,22 @@ body::before {
 #info-panel-close:hover {
   color: var(--accent-color); /* Use accent-color for hover, overriding inline text-color */
 }
+
+/* Styles for search, sort, and filter controls */
+.controls-container > * {
+  width: 100%; /* Default to full width for mobile (column layout) */
+}
+
+@media (min-width: 768px) { /* md breakpoint or your specific breakpoint for row layout */
+  .controls-container {
+    display: flex;
+    justify-content: space-between; /* Or your desired alignment */
+  }
+  .controls-container > * {
+    width: auto; /* Reset width for row layout */
+    flex-grow: 1; /* Allow elements to grow if needed */
+  }
+  .controls-container > input[type="text"] {
+    flex-grow: 2; /* Make search input wider if desired */
+  }
+}

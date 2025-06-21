@@ -99,21 +99,31 @@ export default function BookListClient({ initialBooks }) {
     }
   };
 
+  // Function to handle selecting and navigating to a random book
+  // const handleRandomBook = () => {
+  //   // Check if there are books available
+  //   if (initialBooks && initialBooks.data && Array.isArray(initialBooks.data) && initialBooks.data.length > 0) {
+  //     // Generate a random index
+  //     const randomIndex = Math.floor(Math.random() * initialBooks.data.length);
+  //     // Get the random book
+  //     const randomBook = initialBooks.data[randomIndex];
+  //     // Check if the book and its ID are valid
+  //     if (randomBook && randomBook.id) {
+  //       // Navigate to the book's page
+  //       router.push(`/pages/books/${randomBook.id}`);
+  //     } else {
+  //       console.error("Failed to get random book or book ID is missing", randomBook);
+  //     }
+  //   } else {
+  //     console.error("No books available to select a random one from.");
+  //   }
+  // };
+
   return (
     <div className={`px-8 py-12 transition-[margin-right] duration-300 ease-in-out ${isFilterPopupOpen ? 'md:mr-80' : 'md:mr-0'}`}>
-      <h1 className="text-5xl md:text-6xl mb-4 text-center text-[var(--text-color)]" style={{ fontFamily: 'Georgia, serif' }}>Books</h1>
-      {/* Button to get a random book */}
-      <div className="flex justify-center my-4">
-        <button
-          className="bg-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] text-[var(--text-color)] font-bold py-2 px-4 rounded"
-          onClick={handleRandomBook}
-        >
-          Get Random Book
-        </button>
-      </div>
       
       {/* Search and Sort Controls */}
-      <div className="mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow flex flex-wrap gap-4 items-center justify-between">
+      <div className="controls-container mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow flex flex-wrap gap-4 items-center justify-between">
          <input
              type="text"
              placeholder="Search books..."
