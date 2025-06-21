@@ -26,10 +26,10 @@ export default async function BookDetailPage({ params }) {
           alt={`Cover of ${book.Title}`}
           style={{
             display: "block",
-            maxWidth: "400px",
-            width: "100%",
-            height: "auto",
-            margin: "0 auto 1.5rem auto",
+            maxWidth: "400px", // Ensures image is not wider than 400px
+            // width: "100%", // Removed to prevent upscaling of images smaller than maxWidth
+            height: "auto",   // Maintains aspect ratio
+            margin: "0 auto 1.5rem auto", // Centers the image
             borderRadius: "0.5rem",
           }}
         />
@@ -56,13 +56,38 @@ export default async function BookDetailPage({ params }) {
       <p className="mb-2"><strong>Publisher:</strong> {book.Publisher}</p>
       <p className="mb-2"><strong>ISBN:</strong> {book.ISBN}</p>
       <p className="mb-2"><strong>Pages:</strong> {book.Pages}</p>
-      {/* Book Summary Display */}
-      {book.summary && (
+
+      {/* Additional Google Books API Fields */}
+      {book.subtitle && <p className="mb-2"><strong>Subtitle:</strong> {book.subtitle}</p>}
+      {book.authors && book.authors.length > 0 && (
+        <p className="mb-2"><strong>Authors:</strong> {book.authors.join(', ')}</p>
+      )}
+      {book.publishedDate && <p className="mb-2"><strong>Published Date:</strong> {book.publishedDate}</p>}
+      {book.description && (
         <div className="mt-4">
-          <strong className="text-lg">Summary:</strong>
-          <p className="text-[var(--text-color)] mt-1">{book.summary}</p>
+          <strong className="text-lg">Description:</strong>
+          <p className="text-[var(--text-color)] mt-1 whitespace-pre-line">{book.description}</p>
         </div>
       )}
+      {book.categories && book.categories.length > 0 && (
+        <p className="mt-2 mb-2"><strong>Categories:</strong> {book.categories.join(', ')}</p>
+      )}
+      {typeof book.averageRating === 'number' && (
+        <p className="mb-2"><strong>Average Rating:</strong> {book.averageRating} (based on {book.ratingsCount || 'N/A'} ratings)</p>
+      )}
+      {book.language && <p className="mb-2"><strong>Language:</strong> {book.language.toUpperCase()}</p>}
+
+      {/* Book Summary Display (keeping existing summary if description is different or not present) */}
+      {book.summary && (!book.description || book.description !== book.summary) && (
+        <div className="mt-4">
+          <strong className="text-lg">Summary:</strong>
+          <p className="text-[var(--text-color)] mt-1 whitespace-pre-line">{book.summary}</p>
+        </div>
+      )}
+
+      {book.infoLink && <p className="mb-2"><a href={book.infoLink} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">More Info on Google Books</a></p>}
+      {book.previewLink && <p className="mb-2"><a href={book.previewLink} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Preview on Google Books</a></p>}
+
       {filteredNotes.length > 0 && (
         <div className="mt-4">
           <strong className="text-lg">Notes:</strong>
