@@ -12,6 +12,38 @@ export default async function Request(parameter) {
       }
       data = await response.json();
   
+      // Fetch cover images
+      if (data && data.data) { // Assuming the book list is in data.data
+        for (const book of data.data) {
+          let googleBooksApiUrl;
+          if (book.ISBN) {
+            googleBooksApiUrl = `https://www.googleapis.com/books/v1/volumes?q=isbn:${book.ISBN}`;
+          } else if (book.Title) {
+            googleBooksApiUrl = `https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.Title)}`;
+          } else {
+            book.coverImageUrl = "NO_COVER_AVAILABLE";
+            continue; // Skip if no ISBN or Title
+          }
+
+          try {
+            const googleBooksResponse = await fetch(googleBooksApiUrl);
+            if (!googleBooksResponse.ok) {
+              throw new Error(`Google Books API error: Status ${googleBooksResponse.status}`);
+            }
+            const googleBooksData = await googleBooksResponse.json();
+
+            const imageLinks = googleBooksData?.items?.[0]?.volumeInfo?.imageLinks;
+            if (imageLinks) {
+              book.coverImageUrl = imageLinks.thumbnail || imageLinks.smallThumbnail || "NO_COVER_AVAILABLE";
+            } else {
+              book.coverImageUrl = "NO_COVER_AVAILABLE";
+            }
+          } catch (err) {
+            console.log(`Error fetching cover for ${book.Title}: ${err}`);
+            book.coverImageUrl = "NO_COVER_AVAILABLE";
+          }
+        }
+      }
     } catch (err) {
       console.log(err);
     }
