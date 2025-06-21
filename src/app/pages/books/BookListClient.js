@@ -169,7 +169,37 @@ export default function BookListClient({ initialBooks }) {
       {/* Renders the list of filtered books */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
          {filteredBooks.map(book => (
-             <div key={book.id} className="p-4 bg-[var(--background-color)] rounded-lg shadow border border-[var(--accent-color)] hover:border-[var(--hover-accent-color)] transition-colors">
+             <div key={book.id} className="p-4 bg-[var(--background-color)] rounded-lg shadow border border-[var(--accent-color)] hover:border-[var(--hover-accent-color)] transition-colors flex flex-col">
+                 {book.coverImageUrl && book.coverImageUrl !== "NO_COVER_AVAILABLE" ? (
+                   <img
+                     src={book.coverImageUrl}
+                     alt={`Cover of ${book.Title}`}
+                     style={{
+                       width: "100%",
+                       height: "200px", // Fixed height
+                       objectFit: "cover",
+                       marginBottom: "0.5rem",
+                       borderRadius: "0.25rem" // Optional: adds rounded corners
+                     }}
+                   />
+                 ) : (
+                   <div
+                     style={{
+                       width: "100%",
+                       height: "200px", // Fixed height
+                       maxHeight: "200px",
+                       display: "flex",
+                       alignItems: "center",
+                       justifyContent: "center",
+                       backgroundColor: "#e0e0e0", // A light gray background
+                       color: "#555", // Darker text color for contrast
+                       marginBottom: "0.5rem",
+                       borderRadius: "0.25rem" // Optional: adds rounded corners
+                     }}
+                   >
+                     No Cover Available
+                   </div>
+                 )}
                  <h2 className="text-xl font-semibold text-[var(--accent-color)] hover:text-[var(--hover-accent-color)]">
                      <Link href={`/pages/books/${book.id}`}>
                          {book.Title}

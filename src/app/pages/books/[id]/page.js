@@ -19,6 +19,38 @@ export default async function BookDetailPage({ params }) {
 
   return (
     <div className="container mx-auto p-4">
+      {/* Book Cover Image or Placeholder */}
+      {book.largeCoverImageUrl && book.largeCoverImageUrl !== "NO_COVER_AVAILABLE" ? (
+        <img
+          src={book.largeCoverImageUrl}
+          alt={`Cover of ${book.Title}`}
+          style={{
+            display: "block",
+            maxWidth: "400px",
+            width: "100%",
+            height: "auto",
+            margin: "0 auto 1.5rem auto",
+            borderRadius: "0.5rem",
+          }}
+        />
+      ) : (
+        <div
+          style={{
+            width: "100%",
+            maxWidth: "400px",
+            height: "300px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "#e0e0e0",
+            color: "#555",
+            margin: "0 auto 1.5rem auto",
+            borderRadius: "0.5rem",
+          }}
+        >
+          No Cover Available
+        </div>
+      )}
       <h1 className="text-3xl font-bold mb-4">{book.Title}</h1>
       <p className="mb-2"><strong>Year:</strong> {book.Year}</p>
       <p className="mb-2"><strong>Publisher:</strong> {book.Publisher}</p>
