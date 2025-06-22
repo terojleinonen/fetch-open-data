@@ -13,15 +13,31 @@ import Link from 'next/link';
 export default function VillainListClient({ initialVillains }) {
   // State variable for the search term
   const [searchTerm, setSearchTerm] = useState('');
+  // State variable for the sort order
+  const [sortOrder, setSortOrder] = useState('none'); // 'none', 'asc', 'desc'
   const router = useRouter();
 
-  // Memoized variable for filtered villains based on the search term
+  // Memoized variable for filtered villains based on the search term and sort order
   const filteredVillains = useMemo(() => {
     if (!initialVillains || !initialVillains.data) return [];
-    return initialVillains.data.filter(villain =>
+    let villains = [...initialVillains.data];
+
+    // Sort villains
+    if (sortOrder !== 'none') {
+      villains.sort((a, b) => {
+        const nameA = a.name.toLowerCase();
+        const nameB = b.name.toLowerCase();
+        if (nameA < nameB) return sortOrder === 'asc' ? -1 : 1;
+        if (nameA > nameB) return sortOrder === 'asc' ? 1 : -1;
+        return 0;
+      });
+    }
+
+    // Filter villains
+    return villains.filter(villain =>
       villain.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
-  }, [initialVillains, searchTerm]);
+  }, [initialVillains, searchTerm, sortOrder]);
 
   // Function to handle selecting and navigating to a random villain
   const handleRandomVillain = () => {
@@ -75,6 +91,12 @@ export default function VillainListClient({ initialVillains }) {
              value={searchTerm}
              onChange={(e) => setSearchTerm(e.target.value)}
          />
+        <button
+          onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
+          className="mt-2 w-full p-2 rounded bg-[var(--accent-color)] text-[var(--background-color)] hover:bg-[var(--hover-accent-color)] transition-colors"
+        >
+          Sort by Name ({sortOrder === 'asc' ? 'A-Z' : 'Z-A'})
+        </button>
      </div>
 
       {/* Villains List Display */}
