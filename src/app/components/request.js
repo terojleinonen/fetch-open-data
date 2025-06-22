@@ -16,7 +16,9 @@ export default async function Request(parameter) {
       // Fetch cover images
       if (data && data.data) {
         const booksToProcess = Array.isArray(data.data) ? data.data : [data.data]; // Handle single book or array
-        for (const book of booksToProcess) {
+
+        // Helper function to fetch cover for a single book
+        const fetchCoverForBook = async (book) => {
           let googleBooksApiUrl;
           if (book.ISBN) {
             googleBooksApiUrl = `https://www.googleapis.com/books/v1/volumes?q=isbn:${book.ISBN}`;
@@ -24,34 +26,31 @@ export default async function Request(parameter) {
             googleBooksApiUrl = `https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.Title)}`;
           } else {
             book.coverImageUrl = "NO_COVER_AVAILABLE";
-            book.largeCoverImageUrl = "NO_COVER_AVAILABLE"; 
-            continue; // Skip if no ISBN or Title
+            book.largeCoverImageUrl = "NO_COVER_AVAILABLE";
+            return; // Skip if no ISBN or Title
           }
-  
+
           // Append API key if available
           if (googleBooksApiUrl && apiKey) {
             googleBooksApiUrl += `&key=${apiKey}`;
           } else if (googleBooksApiUrl && !apiKey) {
-            // Only log warning once to avoid flooding console if many books are processed
             if (!global.apiKeyWarningLogged) {
               console.warn("Google Books API key (NEXT_PUBLIC_GOOGLE_BOOKS_API_KEY) is missing. Requests may fail or be rate-limited.");
-              global.apiKeyWarningLogged = true; // Set flag to prevent further warnings in this session
+              global.apiKeyWarningLogged = true;
             }
           }
 
           try {
-            const googleBooksResponse = await fetch(googleBooksApiUrl);
+            // Use Next.js fetch with caching options
+            const googleBooksResponse = await fetch(googleBooksApiUrl, { next: { revalidate: 3600 } }); // Revalidate cache every hour
             if (!googleBooksResponse.ok) {
               throw new Error(`Google Books API error: Status ${googleBooksResponse.status}`);
             }
             const googleBooksData = await googleBooksResponse.json();
-  
+
             const imageLinks = googleBooksData?.items?.[0]?.volumeInfo?.imageLinks;
             if (imageLinks) {
-              // Thumbnail image
               book.coverImageUrl = imageLinks.thumbnail || imageLinks.smallThumbnail || "NO_COVER_AVAILABLE";
-              
-              // Larger image: medium, then large, then small
               if (imageLinks.medium) {
                 book.largeCoverImageUrl = imageLinks.medium;
               } else if (imageLinks.large) {
@@ -66,11 +65,17 @@ export default async function Request(parameter) {
               book.largeCoverImageUrl = "NO_COVER_AVAILABLE";
             }
           } catch (err) {
-            console.log(`Error fetching cover for ${book.Title}: ${err.message}`); // Log only err.message for brevity
+            console.log(`Error fetching cover for ${book.Title}: ${err.message}`);
             book.coverImageUrl = "NO_COVER_AVAILABLE";
             book.largeCoverImageUrl = "NO_COVER_AVAILABLE";
           }
-        }
+        };
+
+        // Create an array of promises for fetching all book covers
+        const coverPromises = booksToProcess.map(book => fetchCoverForBook(book));
+
+        // Wait for all cover fetch promises to resolve
+        await Promise.all(coverPromises);
       }
     } catch (err) {
       console.log(err);
