@@ -1,9 +1,14 @@
 "use client";
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, Suspense } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import FilterPopup from './FilterPopup';
+import Image from 'next/image'; // Import Next.js Image component
+import dynamic from 'next/dynamic';
+
+const FilterPopup = dynamic(() => import('./FilterPopup'), {
+  suspense: true,
+});
 
 /**
  * BookListClient component for displaying and filtering a list of books.
@@ -148,45 +153,52 @@ export default function BookListClient({ initialBooks }) {
         </button>
      </div>
 
-      <FilterPopup
-        isOpen={isFilterPopupOpen}
-        initialBooks={initialBooks}
-        selectedYear={selectedYear}
-        setSelectedYear={setSelectedYear}
-        selectedPublisher={selectedPublisher}
-        setSelectedPublisher={setSelectedPublisher}
-        minPages={minPages}
-        setMinPages={setMinPages}
-        maxPages={maxPages}
-        setMaxPages={setMaxPages}
-        onApplyFilters={() => {
-          console.log('Apply filters clicked');
-          // Implement actual filter logic here in a future step
-          setIsFilterPopupOpen(false);
-        }}
-        onResetFilters={() => {
-          setSelectedYear('');
-          setSelectedPublisher('');
-          setMinPages('');
-          setMaxPages('');
-          console.log('Reset filters clicked');
-          // Optionally, re-apply filters or close popup
-        }}
-        onClose={() => setIsFilterPopupOpen(false)}
-      />
+      {isFilterPopupOpen && (
+        <Suspense fallback={<div>Loading filters...</div>}>
+          <FilterPopup
+            isOpen={isFilterPopupOpen}
+            initialBooks={initialBooks}
+            selectedYear={selectedYear}
+            setSelectedYear={setSelectedYear}
+            selectedPublisher={selectedPublisher}
+            setSelectedPublisher={setSelectedPublisher}
+            minPages={minPages}
+            setMinPages={setMinPages}
+            maxPages={maxPages}
+            setMaxPages={setMaxPages}
+            onApplyFilters={() => {
+              console.log('Apply filters clicked');
+              // Implement actual filter logic here in a future step
+              setIsFilterPopupOpen(false);
+            }}
+            onResetFilters={() => {
+              setSelectedYear('');
+              setSelectedPublisher('');
+              setMinPages('');
+              setMaxPages('');
+              console.log('Reset filters clicked');
+              // Optionally, re-apply filters or close popup
+            }}
+            onClose={() => setIsFilterPopupOpen(false)}
+          />
+        </Suspense>
+      )}
 
       {/* Books List Display */}
       {/* Renders the list of filtered books */}
       <div className="grid grid-cols-1 gap-4"> {/* Changed to single column grid */}
-         {filteredBooks.map(book => (
+         {filteredBooks.map((book, index) => (
              <div key={book.id} className="p-4 bg-[var(--background-color)] rounded-lg shadow border border-[var(--accent-color)] hover:border-[var(--hover-accent-color)] transition-colors flex flex-row items-start"> {/* Changed to flex-row and items-start */}
                  {/* Book Cover Image */}
                  <div className="flex-none w-1/4 mr-4"> {/* Adjusted width and added margin */}
                      {book.coverImageUrl && book.coverImageUrl !== "NO_COVER_AVAILABLE" ? (
-                       <img
+                       <Image
                          src={book.coverImageUrl}
                          alt={`Cover of ${book.Title}`}
                          className="h-auto object-contain rounded" // Adjusted styling (removed w-full)
+                         width={150} // Provide appropriate width
+                         height={225} // Provide appropriate height
+                         priority={index < 5} // Prioritize loading for the first few images
                        />
                      ) : (
                        <div
