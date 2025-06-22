@@ -14,7 +14,8 @@ export default function GoogleBooksPage() {
   const [displayedBooks, setDisplayedBooks] = useState([]); 
 
   // Search, Sort, Filter States
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchInputText, setSearchInputText] = useState(''); // For direct input binding
+  const [searchQuery, setSearchQuery] = useState(''); // Debounced value for API
   const [sortConfig, setSortConfig] = useState({ key: 'relevance', direction: 'desc' }); // API default is relevance
   const [filters, setFilters] = useState({
     publishYear: '',
@@ -31,8 +32,13 @@ export default function GoogleBooksPage() {
 
   // State Initialization from sessionStorage (runs once on mount)
   useEffect(() => {
+    // Load debounced search query for API, and also set the input text to match
     const savedSearchQuery = sessionStorage.getItem('googleBooks_searchQuery');
-    if (savedSearchQuery) setSearchQuery(JSON.parse(savedSearchQuery));
+    if (savedSearchQuery) {
+      const parsedQuery = JSON.parse(savedSearchQuery);
+      setSearchQuery(parsedQuery);
+      setSearchInputText(parsedQuery); 
+    }
 
     const savedSortConfig = sessionStorage.getItem('googleBooks_sortConfig');
     if (savedSortConfig) setSortConfig(JSON.parse(savedSortConfig));
@@ -42,15 +48,24 @@ export default function GoogleBooksPage() {
 
     const savedCurrentPage = sessionStorage.getItem('googleBooks_currentPage');
     if (savedCurrentPage) setCurrentPage(JSON.parse(savedCurrentPage));
-    
-    // We set loading to false *after* attempting to load state and *before* the first API fetch useEffect runs,
-    // or let the API fetch useEffect handle its own loading state.
-    // For simplicity, the API fetch will set loading true then false.
-    // If all values are loaded from sessionStorage, the API fetch will use them.
   }, []);
 
 
+  // Debounce search input
+  useEffect(() => {
+    const timerId = setTimeout(() => {
+      setSearchQuery(searchInputText);
+      setCurrentPage(0); // Reset page when debounced search query changes
+    }, 500); // 500ms delay
+
+    return () => {
+      clearTimeout(timerId);
+    };
+  }, [searchInputText]);
+
+
   // Save state to sessionStorage whenever they change
+  // Note: We save the debounced `searchQuery` to session, not `searchInputText`
   useEffect(() => {
     sessionStorage.setItem('googleBooks_searchQuery', JSON.stringify(searchQuery));
   }, [searchQuery]);
@@ -200,48 +215,38 @@ export default function GoogleBooksPage() {
     setCurrentPage(prevPage => Math.max(0, prevPage - 1)); // Prevent going below page 0
   };
 
+  // Loading and error states styled to match dark theme
   if (loading) {
-    return <div className="container mx-auto p-4">Loading books...</div>;
+    return <div className="min-h-screen bg-background text-foreground flex items-center justify-center p-4"><p className="text-xl">Loading books...</p></div>;
   }
 
   if (error) {
-    return <div className="container mx-auto p-4 text-center text-red-500">Error fetching books: {error}</div>;
+    return <div className="min-h-screen bg-background text-foreground flex flex-col items-center justify-center p-4">
+      <p className="text-xl text-red-500">Error fetching books:</p>
+      <p className="text-md text-red-400 mt-2">{error}</p>
+    </div>;
   }
 
-  // Calculate total pages based on totalItemsFromAPI (for API pagination)
-  // Or, if we were doing purely client-side pagination after one large fetch, it would be based on displayedBooks.length.
-  // For now, pagination is still tied to API responses.
   const totalPages = Math.ceil(totalItemsFromAPI / booksPerPage);
 
   const handleSearchInputChange = (event) => {
-    setSearchQuery(event.target.value);
-    // Optional: Trigger search on type, perhaps with debounce. For now, explicit trigger or useEffect handles it.
-    // To ensure search resets pagination:
-    setCurrentPage(0); 
+    setSearchInputText(event.target.value);
   };
-
-  // Placeholder for a more formal search submission if needed, though useEffect handles it.
-  // const handleSearchSubmit = (event) => {
-  //   event.preventDefault();
-  //   setCurrentPage(0); // Reset to first page on new search
-  //   // The useEffect for fetchBooksFromAPI will pick up the searchQuery change
-  // };
 
   const handleSortChange = (key, direction) => {
     setSortConfig({ key, direction });
-    setCurrentPage(0); // Reset to first page when sort changes, especially if API sort key changes
+    setCurrentPage(0); 
   };
 
   const sortOptions = [
-    { key: 'relevance', direction: 'desc', label: 'Relevance' }, // API handled
-    { key: 'newest', direction: 'desc', label: 'Newest First' }, // API handled
-    { key: 'title', direction: 'asc', label: 'Title (A-Z)' }, // Client-side
-    { key: 'title', direction: 'desc', label: 'Title (Z-A)' }, // Client-side
-    { key: 'publishedDate', direction: 'asc', label: 'Year (Oldest First)' }, // Client-side
-    { key: 'publishedDate', direction: 'desc', label: 'Year (Newest First)' }, // Client-side (distinct from API 'newest' if we want to sort current page only)
+    { key: 'relevance', direction: 'desc', label: 'Relevance' },
+    { key: 'newest', direction: 'desc', label: 'Newest First' },
+    { key: 'title', direction: 'asc', label: 'Title (A-Z)' },
+    { key: 'title', direction: 'desc', label: 'Title (Z-A)' },
+    { key: 'publishedDate', direction: 'asc', label: 'Year (Oldest)' },
+    { key: 'publishedDate', direction: 'desc', label: 'Year (Newest)' },
   ];
   
-  // Helper to determine if a sort button is active
   const isSortActive = (key, direction) => {
     return sortConfig.key === key && sortConfig.direction === direction;
   };
@@ -251,11 +256,12 @@ export default function GoogleBooksPage() {
       ...prevFilters,
       [filterName]: value,
     }));
-    setCurrentPage(0); // Reset to first page when filters change, as results will differ
+    setCurrentPage(0); 
   };
 
   const handleClearAll = () => {
-    setSearchQuery('');
+    setSearchInputText(''); 
+    setSearchQuery('');     
     setFilters({
       publishYear: '',
       pageCountMin: '',
@@ -263,7 +269,7 @@ export default function GoogleBooksPage() {
       publisher: '',
       language: '',
     });
-    setSortConfig({ key: 'relevance', direction: 'desc' }); // Reset to default sort
+    setSortConfig({ key: 'relevance', direction: 'desc' }); 
     setCurrentPage(0);
   };
 
@@ -276,207 +282,159 @@ export default function GoogleBooksPage() {
     if (filters.publisher) active.push(`Publisher: "${filters.publisher}"`);
     if (filters.language) active.push(`Lang: ${filters.language}`);
     
-    // Display for sort
     const currentSortOption = sortOptions.find(opt => opt.key === sortConfig.key && opt.direction === sortConfig.direction);
-    if (currentSortOption && (currentSortOption.key !== 'relevance' || searchQuery)) { // Show sort if not default relevance or if search is active
+    if (currentSortOption && (currentSortOption.key !== 'relevance' || searchQuery)) {
         active.push(`Sort: ${currentSortOption.label}`);
-    } else if (currentSortOption && currentSortOption.key === 'relevance' && !searchQuery) {
-        // Don't show "Sort: Relevance" if it's the default and no search query is active
     }
-
-
     return active;
   };
 
   const activeFiltersForDisplay = getActiveFiltersForDisplay();
 
+  const inputBaseClasses = "w-full p-2 bg-[var(--background-color-dark)] text-[var(--text-color-dark)] border border-[var(--shadow-color-dark)] rounded-md shadow-sm text-sm focus:ring-[var(--accent-color-dark)] focus:border-[var(--accent-color-dark)] placeholder-gray-500";
+  const labelBaseClasses = "block text-sm font-medium text-[var(--text-color-dark)] opacity-80 mb-1";
 
   return (
-    <div className="container mx-auto p-4">
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold mb-6 text-center text-gray-800">Stephen King Books Explorer</h1>
+    <div className="min-h-screen bg-background text-foreground p-4 md:p-8">
+      <header className="mb-10">
+        <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent-color-dark)] via-[var(--hover-accent-color-dark)] to-[var(--accent-color-dark)] py-2">
+          Google Books Explorer
+        </h1>
         
-        {/* Search Bar */}
-        <div className="mb-6">
+        <div className="mb-8 max-w-2xl mx-auto">
           <input
             type="text"
-            value={searchQuery}
+            value={searchInputText} 
             onChange={handleSearchInputChange}
-            placeholder="Search by title (e.g., The Shining)"
-            className="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-shadow"
+            placeholder="Search by title (e.g., The Shining)..."
+            className={`${inputBaseClasses} p-3 text-base focus:ring-2`}
           />
         </div>
 
-        {/* Sort and Filter controls area */}
-        <div className="mb-6 p-4 bg-gray-50 rounded-lg shadow-md">
-          {/* Sort Options */}
-          <div className="mb-6">
-            <h2 className="text-xl font-semibold mb-3 text-gray-700">Sort Options</h2>
-            <div className="flex flex-wrap gap-2">
-              {sortOptions.map(opt => (
-                <button
-                  key={`${opt.key}-${opt.direction}`}
-                  onClick={() => handleSortChange(opt.key, opt.direction)}
-                  className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors
-                    ${isSortActive(opt.key, opt.direction) 
-                      ? 'bg-blue-600 text-white ring-2 ring-blue-300' 
-                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                    }`}
-                >
-                  {opt.label}
-                </button>
-              ))}
+        <div className="mb-8 p-4 md:p-6 bg-[var(--shadow-color-dark)] bg-opacity-50 rounded-lg shadow-xl border border-neutral-700">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Sort Options Section */}
+            <div className="mb-6 md:mb-0">
+              <h2 className="text-xl font-semibold mb-3 text-foreground opacity-90">Sort Options</h2>
+              <div className="flex flex-wrap gap-2">
+                {sortOptions.map(opt => (
+                  <button
+                    key={`${opt.key}-${opt.direction}`}
+                    onClick={() => handleSortChange(opt.key, opt.direction)}
+                    className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-150 ease-in-out
+                      ${isSortActive(opt.key, opt.direction) 
+                        ? 'bg-[var(--accent-color-dark)] text-white shadow-md ring-2 ring-offset-2 ring-offset-[var(--shadow-color-dark)] ring-[var(--hover-accent-color-dark)]' 
+                        : 'bg-neutral-700 text-neutral-300 hover:bg-neutral-600 hover:text-white'
+                      }`}
+                  >
+                    {opt.label}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Filter Options */}
-          <div className="mb-6">
-            <h2 className="text-xl font-semibold mb-4 text-gray-700">Filter Options</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-4">
-              {/* Publish Year */}
-              <div>
-                <label htmlFor="filterPublishYear" className="block text-sm font-medium text-gray-600 mb-1">Publish Year</label>
-                <input
-                  type="number"
-                  id="filterPublishYear"
-                  name="publishYear"
-                  value={filters.publishYear}
-                  onChange={(e) => handleFilterChange('publishYear', e.target.value)}
-                  placeholder="e.g., 1984"
-                  className="w-full p-2 border border-gray-300 rounded-md shadow-sm text-sm focus:ring-blue-500 focus:border-blue-500"
-                />
-              </div>
-              {/* Page Count Min */}
-              <div>
-                <label htmlFor="filterPageCountMin" className="block text-sm font-medium text-gray-600 mb-1">Min Pages</label>
-                <input
-                  type="number"
-                  id="filterPageCountMin"
-                  name="pageCountMin"
-                  value={filters.pageCountMin}
-                  onChange={(e) => handleFilterChange('pageCountMin', e.target.value)}
-                  placeholder="e.g., 100"
-                  className="w-full p-2 border border-gray-300 rounded-md shadow-sm text-sm focus:ring-blue-500 focus:border-blue-500"
-                />
-              </div>
-              {/* Page Count Max */}
-              <div>
-                <label htmlFor="filterPageCountMax" className="block text-sm font-medium text-gray-600 mb-1">Max Pages</label>
-                <input
-                  type="number"
-                  id="filterPageCountMax"
-                  name="pageCountMax"
-                  value={filters.pageCountMax}
-                  onChange={(e) => handleFilterChange('pageCountMax', e.target.value)}
-                  placeholder="e.g., 500"
-                  className="w-full p-2 border border-gray-300 rounded-md shadow-sm text-sm focus:ring-blue-500 focus:border-blue-500"
-                />
-              </div>
-              {/* Publisher */}
-              <div>
-                <label htmlFor="filterPublisher" className="block text-sm font-medium text-gray-600 mb-1">Publisher</label>
-                <input
-                  type="text"
-                  id="filterPublisher"
-                  name="publisher"
-                  value={filters.publisher}
-                  onChange={(e) => handleFilterChange('publisher', e.target.value)}
-                  placeholder="e.g., Viking"
-                  className="w-full p-2 border border-gray-300 rounded-md shadow-sm text-sm focus:ring-blue-500 focus:border-blue-500"
-                />
-              </div>
-              {/* Language */}
-              <div>
-                <label htmlFor="filterLanguage" className="block text-sm font-medium text-gray-600 mb-1">Language (code)</label>
-                <input
-                  type="text"
-                  id="filterLanguage"
-                  name="language"
-                  value={filters.language}
-                  onChange={(e) => handleFilterChange('language', e.target.value)}
-                  placeholder="e.g., en, es"
-                  className="w-full p-2 border border-gray-300 rounded-md shadow-sm text-sm focus:ring-blue-500 focus:border-blue-500"
-                />
+            {/* Filter Options Section */}
+            <div>
+              <h2 className="text-xl font-semibold mb-3 text-foreground opacity-90">Filter Options</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3">
+                <div>
+                  <label htmlFor="filterPublishYear" className={labelBaseClasses}>Publish Year</label>
+                  <input type="number" id="filterPublishYear" name="publishYear" value={filters.publishYear} onChange={(e) => handleFilterChange('publishYear', e.target.value)} placeholder="e.g., 1984" className={inputBaseClasses}/>
+                </div>
+                <div>
+                  <label htmlFor="filterPageCountMin" className={labelBaseClasses}>Min Pages</label>
+                  <input type="number" id="filterPageCountMin" name="pageCountMin" value={filters.pageCountMin} onChange={(e) => handleFilterChange('pageCountMin', e.target.value)} placeholder="e.g., 100" className={inputBaseClasses}/>
+                </div>
+                <div>
+                  <label htmlFor="filterPageCountMax" className={labelBaseClasses}>Max Pages</label>
+                  <input type="number" id="filterPageCountMax" name="pageCountMax" value={filters.pageCountMax} onChange={(e) => handleFilterChange('pageCountMax', e.target.value)} placeholder="e.g., 500" className={inputBaseClasses}/>
+                </div>
+                <div>
+                  <label htmlFor="filterPublisher" className={labelBaseClasses}>Publisher</label>
+                  <input type="text" id="filterPublisher" name="publisher" value={filters.publisher} onChange={(e) => handleFilterChange('publisher', e.target.value)} placeholder="e.g., Viking" className={inputBaseClasses}/>
+                </div>
+                <div>
+                  <label htmlFor="filterLanguage" className={labelBaseClasses}>Language (code)</label>
+                  <input type="text" id="filterLanguage" name="language" value={filters.language} onChange={(e) => handleFilterChange('language', e.target.value)} placeholder="e.g., en" className={inputBaseClasses}/>
+                </div>
               </div>
             </div>
           </div>
           
-          {/* Clear All Button */}
-          <div>
+          <div className="mt-6 pt-6 border-t border-neutral-700 flex justify-end">
             <button
               onClick={handleClearAll}
-              className="px-4 py-2 text-sm font-medium text-white bg-red-500 rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75 transition-colors"
+              className="px-4 py-2 text-sm font-medium text-white bg-[var(--accent-color-dark)] rounded-md hover:bg-[var(--hover-accent-color-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--hover-accent-color-dark)] focus:ring-opacity-75 transition-colors shadow-md"
             >
-              Clear All Search, Filters & Sort
+              Clear All
             </button>
           </div>
-
         </div>
       </header>
 
-      {/* Display Active Filters and Sort */}
       {activeFiltersForDisplay.length > 0 && (
-        <div className="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg text-sm text-blue-700">
+        <div className="mb-6 p-3 bg-[var(--shadow-color-dark)] bg-opacity-40 border border-neutral-700 rounded-lg text-sm text-neutral-300">
           <strong>Active:</strong> {activeFiltersForDisplay.join('; ')}
         </div>
       )}
       
       {displayedBooks.length === 0 && !loading && (
-        <p className="text-center text-gray-600 py-8">
-          No books found matching your criteria for Stephen King. Try adjusting your search or filters.
+        <p className="text-center text-neutral-400 py-10 text-lg">
+          No books found matching your criteria.
         </p>
       )}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
         {displayedBooks.map((book) => (
-          <div key={book.id} className="border rounded-lg p-4 shadow-lg hover:shadow-xl transition-shadow flex flex-col bg-white">
+          <div key={book.id} className="bg-neutral-800 bg-opacity-50 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out flex flex-col overflow-hidden border border-neutral-700 hover:border-[var(--accent-color-dark)]">
             <Link href={`/pages/google-books/${book.id}`} className="flex flex-col flex-grow">
-              <div className="flex-grow flex flex-col justify-center mb-3">
+              <div className="relative w-full h-72 flex items-center justify-center bg-neutral-700 overflow-hidden">
                 {book.volumeInfo.imageLinks?.thumbnail ? (
                   <img 
                     src={book.volumeInfo.imageLinks.thumbnail} 
                     alt={book.volumeInfo.title} 
-                    className="w-full h-64 object-contain rounded"
+                    className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105" // group-hover might need parent with 'group'
                   />
                 ) : (
-                  <div className="w-full h-64 bg-gray-200 rounded flex items-center justify-center text-gray-500">
-                    No Image Available
+                  <div className="w-full h-full flex items-center justify-center text-neutral-500 text-sm">
+                    No Image
                   </div>
                 )}
               </div>
-              <h2 className="text-lg font-semibold mb-1 text-gray-800 truncate" title={book.volumeInfo.title}>
-                {book.volumeInfo.title}
-              </h2>
-              <p className="text-sm text-gray-600 mb-1 truncate">
-                {book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown Author'}
-              </p>
-              {book.volumeInfo.publishedDate && (
-                <p className="text-xs text-gray-500">
-                  Published: {book.volumeInfo.publishedDate}
+              <div className="p-4 flex flex-col flex-grow">
+                <h2 className="text-md font-semibold text-foreground mb-1 truncate" title={book.volumeInfo.title}>
+                  {book.volumeInfo.title}
+                </h2>
+                <p className="text-xs text-neutral-400 mb-2 truncate">
+                  {book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown Author'}
                 </p>
-              )}
+                {book.volumeInfo.publishedDate && (
+                  <p className="text-xs text-neutral-500 mt-auto">
+                    {book.volumeInfo.publishedDate.substring(0,4)} {/* Show only year for brevity */}
+                  </p>
+                )}
+              </div>
             </Link>
           </div>
         ))}
       </div>
 
-      {/* Pagination Controls - ensure this uses totalItemsFromAPI and current page for API based pagination */}
-      {totalItemsFromAPI > 0 && displayedBooks.length > 0 && ( // Show pagination if there are items and results displayed
-        <div className="mt-10 flex justify-center items-center space-x-4">
+      {totalItemsFromAPI > 0 && displayedBooks.length > 0 && (
+        <div className="mt-12 flex justify-center items-center space-x-4">
           <button 
             onClick={handlePreviousPage} 
             disabled={currentPage === 0 || loading}
-            className="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow hover:bg-blue-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors"
+            className="px-5 py-2 bg-[var(--accent-color-dark)] text-white font-semibold rounded-md shadow-md hover:bg-[var(--hover-accent-color-dark)] disabled:bg-neutral-600 disabled:text-neutral-400 disabled:cursor-not-allowed transition-colors"
           >
             Previous
           </button>
-          <span className="text-lg text-gray-700">
+          <span className="text-lg text-foreground">
             Page {currentPage + 1} {totalPages > 0 ? `of ${totalPages}` : ''}
           </span>
           <button 
             onClick={handleNextPage} 
             disabled={loading || (currentPage + 1) >= totalPages}
-            className="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow hover:bg-blue-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors"
+            className="px-5 py-2 bg-[var(--accent-color-dark)] text-white font-semibold rounded-md shadow-md hover:bg-[var(--hover-accent-color-dark)] disabled:bg-neutral-600 disabled:text-neutral-400 disabled:cursor-not-allowed transition-colors"
           >
             Next
           </button>
