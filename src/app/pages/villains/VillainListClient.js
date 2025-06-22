@@ -82,18 +82,18 @@ export default function VillainListClient({ initialVillains }) {
   return (
     <div className="px-8 py-12">
 
-      {/* Search input */}
-      <div className="controls-container mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow">
+      {/* Search input and Sort button */}
+      <div className="controls-container mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow flex flex-wrap gap-4 items-center justify-between">
          <input
              type="text"
              placeholder="Search villains..."
-             className="w-full p-2 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
+             className="w-full md:w-auto flex-grow p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
              value={searchTerm}
              onChange={(e) => setSearchTerm(e.target.value)}
          />
         <button
           onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
-          className="mt-2 w-full p-2 rounded bg-[var(--accent-color)] text-[var(--background-color)] hover:bg-[var(--hover-accent-color)] transition-colors"
+          className="p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] hover:text-[var(--background-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] transition-colors md:w-auto w-full"
         >
           Sort by Name ({sortOrder === 'asc' ? 'A-Z' : 'Z-A'})
         </button>
