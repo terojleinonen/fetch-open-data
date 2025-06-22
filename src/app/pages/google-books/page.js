@@ -7,11 +7,11 @@ export default function GoogleBooksPage() {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+  
   // Base data from API
-  const [allFetchedBooks, setAllFetchedBooks] = useState([]);
+  const [allFetchedBooks, setAllFetchedBooks] = useState([]); 
   // Data to display after filtering and sorting
-  const [displayedBooks, setDisplayedBooks] = useState([]);
+  const [displayedBooks, setDisplayedBooks] = useState([]); 
 
   // Search, Sort, Filter States
   const [searchInputText, setSearchInputText] = useState(''); // For direct input binding
@@ -37,12 +37,12 @@ export default function GoogleBooksPage() {
     if (savedSearchQuery) {
       const parsedQuery = JSON.parse(savedSearchQuery);
       setSearchQuery(parsedQuery);
-      setSearchInputText(parsedQuery);
+      setSearchInputText(parsedQuery); 
     }
 
     const savedSortConfig = sessionStorage.getItem('googleBooks_sortConfig');
     if (savedSortConfig) setSortConfig(JSON.parse(savedSortConfig));
-
+    
     const savedFilters = sessionStorage.getItem('googleBooks_filters');
     if (savedFilters) setFilters(JSON.parse(savedFilters));
 
@@ -94,14 +94,14 @@ export default function GoogleBooksPage() {
     const fetchBooksFromAPI = async () => {
       setLoading(true);
       setError(null);
-
+      
       let apiQueryParts = ['inauthor:stephen king'];
       // Ensure searchQuery is a string before calling trim, especially if loaded from session as null
       const currentSearchQuery = typeof searchQuery === 'string' ? searchQuery : '';
       if (currentSearchQuery.trim() !== '') {
         apiQueryParts.push(`intitle:${currentSearchQuery.trim()}`);
       }
-
+      
       const queryString = apiQueryParts.join('+');
       const startIndex = currentPage * booksPerPage;
       let apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(queryString)}&startIndex=${startIndex}&maxResults=${booksPerPage}`;
@@ -138,14 +138,14 @@ export default function GoogleBooksPage() {
 
     // Apply Filters
     if (filters.publishYear) {
-      booksToProcess = booksToProcess.filter(book =>
+      booksToProcess = booksToProcess.filter(book => 
         book.volumeInfo.publishedDate && book.volumeInfo.publishedDate.startsWith(filters.publishYear)
       );
     }
     if (filters.pageCountMin) {
       const minPages = parseInt(filters.pageCountMin, 10);
       if (!isNaN(minPages)) {
-        booksToProcess = booksToProcess.filter(book =>
+        booksToProcess = booksToProcess.filter(book => 
           book.volumeInfo.pageCount && book.volumeInfo.pageCount >= minPages
         );
       }
@@ -153,7 +153,7 @@ export default function GoogleBooksPage() {
     if (filters.pageCountMax) {
       const maxPages = parseInt(filters.pageCountMax, 10);
       if (!isNaN(maxPages)) {
-        booksToProcess = booksToProcess.filter(book =>
+        booksToProcess = booksToProcess.filter(book => 
           book.volumeInfo.pageCount && book.volumeInfo.pageCount <= maxPages
         );
       }
@@ -235,7 +235,7 @@ export default function GoogleBooksPage() {
 
   const handleSortChange = (key, direction) => {
     setSortConfig({ key, direction });
-    setCurrentPage(0);
+    setCurrentPage(0); 
   };
 
   const sortOptions = [
@@ -246,7 +246,7 @@ export default function GoogleBooksPage() {
     { key: 'publishedDate', direction: 'asc', label: 'Year (Oldest)' },
     { key: 'publishedDate', direction: 'desc', label: 'Year (Newest)' },
   ];
-
+  
   const isSortActive = (key, direction) => {
     return sortConfig.key === key && sortConfig.direction === direction;
   };
@@ -256,12 +256,12 @@ export default function GoogleBooksPage() {
       ...prevFilters,
       [filterName]: value,
     }));
-    setCurrentPage(0);
+    setCurrentPage(0); 
   };
 
   const handleClearAll = () => {
-    setSearchInputText('');
-    setSearchQuery('');
+    setSearchInputText(''); 
+    setSearchQuery('');     
     setFilters({
       publishYear: '',
       pageCountMin: '',
@@ -269,7 +269,7 @@ export default function GoogleBooksPage() {
       publisher: '',
       language: '',
     });
-    setSortConfig({ key: 'relevance', direction: 'desc' });
+    setSortConfig({ key: 'relevance', direction: 'desc' }); 
     setCurrentPage(0);
   };
 
@@ -281,7 +281,7 @@ export default function GoogleBooksPage() {
     if (filters.pageCountMax) active.push(`Max Pages: ${filters.pageCountMax}`);
     if (filters.publisher) active.push(`Publisher: "${filters.publisher}"`);
     if (filters.language) active.push(`Lang: ${filters.language}`);
-
+    
     const currentSortOption = sortOptions.find(opt => opt.key === sortConfig.key && opt.direction === sortConfig.direction);
     if (currentSortOption && (currentSortOption.key !== 'relevance' || searchQuery)) {
         active.push(`Sort: ${currentSortOption.label}`);
@@ -300,11 +300,11 @@ export default function GoogleBooksPage() {
         <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent-color-dark)] via-[var(--hover-accent-color-dark)] to-[var(--accent-color-dark)] py-2">
           Google Books Explorer
         </h1>
-
+        
         <div className="mb-8 max-w-2xl mx-auto">
           <input
             type="text"
-            value={searchInputText}
+            value={searchInputText} 
             onChange={handleSearchInputChange}
             placeholder="Search by title (e.g., The Shining)..."
             className={`${inputBaseClasses} p-3 text-base focus:ring-2`}
@@ -322,8 +322,8 @@ export default function GoogleBooksPage() {
                     key={`${opt.key}-${opt.direction}`}
                     onClick={() => handleSortChange(opt.key, opt.direction)}
                     className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-150 ease-in-out
-                      ${isSortActive(opt.key, opt.direction)
-                        ? 'bg-[var(--accent-color-dark)] text-white shadow-md ring-2 ring-offset-2 ring-offset-[var(--shadow-color-dark)] ring-[var(--hover-accent-color-dark)]'
+                      ${isSortActive(opt.key, opt.direction) 
+                        ? 'bg-[var(--accent-color-dark)] text-white shadow-md ring-2 ring-offset-2 ring-offset-[var(--shadow-color-dark)] ring-[var(--hover-accent-color-dark)]' 
                         : 'bg-neutral-700 text-neutral-300 hover:bg-neutral-600 hover:text-white'
                       }`}
                   >
@@ -360,7 +360,7 @@ export default function GoogleBooksPage() {
               </div>
             </div>
           </div>
-
+          
           <div className="mt-6 pt-6 border-t border-neutral-700 flex justify-end">
             <button
               onClick={handleClearAll}
@@ -377,7 +377,7 @@ export default function GoogleBooksPage() {
           <strong>Active:</strong> {activeFiltersForDisplay.join('; ')}
         </div>
       )}
-
+      
       {displayedBooks.length === 0 && !loading && (
         <p className="text-center text-neutral-400 py-10 text-lg">
           No books found matching your criteria.
@@ -390,9 +390,9 @@ export default function GoogleBooksPage() {
             <Link href={`/pages/google-books/${book.id}`} className="flex flex-col flex-grow">
               <div className="relative w-full h-72 flex items-center justify-center bg-neutral-700 overflow-hidden">
                 {book.volumeInfo.imageLinks?.thumbnail ? (
-                  <img
-                    src={book.volumeInfo.imageLinks.thumbnail}
-                    alt={book.volumeInfo.title}
+                  <img 
+                    src={book.volumeInfo.imageLinks.thumbnail} 
+                    alt={book.volumeInfo.title} 
                     className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105" // group-hover might need parent with 'group'
                   />
                 ) : (
@@ -421,8 +421,8 @@ export default function GoogleBooksPage() {
 
       {totalItemsFromAPI > 0 && displayedBooks.length > 0 && (
         <div className="mt-12 flex justify-center items-center space-x-4">
-          <button
-            onClick={handlePreviousPage}
+          <button 
+            onClick={handlePreviousPage} 
             disabled={currentPage === 0 || loading}
             className="px-5 py-2 bg-[var(--accent-color-dark)] text-white font-semibold rounded-md shadow-md hover:bg-[var(--hover-accent-color-dark)] disabled:bg-neutral-600 disabled:text-neutral-400 disabled:cursor-not-allowed transition-colors"
           >
@@ -431,8 +431,8 @@ export default function GoogleBooksPage() {
           <span className="text-lg text-foreground">
             Page {currentPage + 1} {totalPages > 0 ? `of ${totalPages}` : ''}
           </span>
-          <button
-            onClick={handleNextPage}
+          <button 
+            onClick={handleNextPage} 
             disabled={loading || (currentPage + 1) >= totalPages}
             className="px-5 py-2 bg-[var(--accent-color-dark)] text-white font-semibold rounded-md shadow-md hover:bg-[var(--hover-accent-color-dark)] disabled:bg-neutral-600 disabled:text-neutral-400 disabled:cursor-not-allowed transition-colors"
           >
