@@ -192,14 +192,13 @@ export default function BookListClient({ initialBooks }) {
                  {/* Book Cover Image */}
                  <div className="flex-none w-1/4 mr-4"> {/* Adjusted width and added margin */}
                      {book.coverImageUrl && book.coverImageUrl !== "NO_COVER_AVAILABLE" ? (
--                      <img
-+                      <Image
+                       <Image
                          src={book.coverImageUrl}
                          alt={`Cover of ${book.Title}`}
                          className="h-auto object-contain rounded" // Adjusted styling (removed w-full)
-+                        width={150} // Provide appropriate width
-+                        height={225} // Provide appropriate height
-+                        priority={index < 5} // Prioritize loading for the first few images
+                         width={150} // Provide appropriate width
+                         height={225} // Provide appropriate height
+                         priority={index < 5} // Prioritize loading for the first few images
                        />
                      ) : (
                        <div
