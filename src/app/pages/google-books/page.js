@@ -7,11 +7,11 @@ export default function GoogleBooksPage() {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
+  
   // Base data from API
-  const [allFetchedBooks, setAllFetchedBooks] = useState([]);
+  const [allFetchedBooks, setAllFetchedBooks] = useState([]); 
   // Data to display after filtering and sorting
-  const [displayedBooks, setDisplayedBooks] = useState([]);
+  const [displayedBooks, setDisplayedBooks] = useState([]); 
 
   // Search, Sort, Filter States
   const [searchQuery, setSearchQuery] = useState('');
@@ -36,13 +36,13 @@ export default function GoogleBooksPage() {
 
     const savedSortConfig = sessionStorage.getItem('googleBooks_sortConfig');
     if (savedSortConfig) setSortConfig(JSON.parse(savedSortConfig));
-
+    
     const savedFilters = sessionStorage.getItem('googleBooks_filters');
     if (savedFilters) setFilters(JSON.parse(savedFilters));
 
     const savedCurrentPage = sessionStorage.getItem('googleBooks_currentPage');
     if (savedCurrentPage) setCurrentPage(JSON.parse(savedCurrentPage));
-
+    
     // We set loading to false *after* attempting to load state and *before* the first API fetch useEffect runs,
     // or let the API fetch useEffect handle its own loading state.
     // For simplicity, the API fetch will set loading true then false.
@@ -79,14 +79,14 @@ export default function GoogleBooksPage() {
     const fetchBooksFromAPI = async () => {
       setLoading(true);
       setError(null);
-
+      
       let apiQueryParts = ['inauthor:stephen king'];
       // Ensure searchQuery is a string before calling trim, especially if loaded from session as null
       const currentSearchQuery = typeof searchQuery === 'string' ? searchQuery : '';
       if (currentSearchQuery.trim() !== '') {
         apiQueryParts.push(`intitle:${currentSearchQuery.trim()}`);
       }
-
+      
       const queryString = apiQueryParts.join('+');
       const startIndex = currentPage * booksPerPage;
       let apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(queryString)}&startIndex=${startIndex}&maxResults=${booksPerPage}`;
@@ -123,14 +123,14 @@ export default function GoogleBooksPage() {
 
     // Apply Filters
     if (filters.publishYear) {
-      booksToProcess = booksToProcess.filter(book =>
+      booksToProcess = booksToProcess.filter(book => 
         book.volumeInfo.publishedDate && book.volumeInfo.publishedDate.startsWith(filters.publishYear)
       );
     }
     if (filters.pageCountMin) {
       const minPages = parseInt(filters.pageCountMin, 10);
       if (!isNaN(minPages)) {
-        booksToProcess = booksToProcess.filter(book =>
+        booksToProcess = booksToProcess.filter(book => 
           book.volumeInfo.pageCount && book.volumeInfo.pageCount >= minPages
         );
       }
@@ -138,7 +138,7 @@ export default function GoogleBooksPage() {
     if (filters.pageCountMax) {
       const maxPages = parseInt(filters.pageCountMax, 10);
       if (!isNaN(maxPages)) {
-        booksToProcess = booksToProcess.filter(book =>
+        booksToProcess = booksToProcess.filter(book => 
           book.volumeInfo.pageCount && book.volumeInfo.pageCount <= maxPages
         );
       }
@@ -217,7 +217,7 @@ export default function GoogleBooksPage() {
     setSearchQuery(event.target.value);
     // Optional: Trigger search on type, perhaps with debounce. For now, explicit trigger or useEffect handles it.
     // To ensure search resets pagination:
-    setCurrentPage(0);
+    setCurrentPage(0); 
   };
 
   // Placeholder for a more formal search submission if needed, though useEffect handles it.
@@ -240,7 +240,7 @@ export default function GoogleBooksPage() {
     { key: 'publishedDate', direction: 'asc', label: 'Year (Oldest First)' }, // Client-side
     { key: 'publishedDate', direction: 'desc', label: 'Year (Newest First)' }, // Client-side (distinct from API 'newest' if we want to sort current page only)
   ];
-
+  
   // Helper to determine if a sort button is active
   const isSortActive = (key, direction) => {
     return sortConfig.key === key && sortConfig.direction === direction;
@@ -275,7 +275,7 @@ export default function GoogleBooksPage() {
     if (filters.pageCountMax) active.push(`Max Pages: ${filters.pageCountMax}`);
     if (filters.publisher) active.push(`Publisher: "${filters.publisher}"`);
     if (filters.language) active.push(`Lang: ${filters.language}`);
-
+    
     // Display for sort
     const currentSortOption = sortOptions.find(opt => opt.key === sortConfig.key && opt.direction === sortConfig.direction);
     if (currentSortOption && (currentSortOption.key !== 'relevance' || searchQuery)) { // Show sort if not default relevance or if search is active
@@ -295,7 +295,7 @@ export default function GoogleBooksPage() {
     <div className="container mx-auto p-4">
       <header className="mb-8">
         <h1 className="text-4xl font-bold mb-6 text-center text-gray-800">Stephen King Books Explorer</h1>
-
+        
         {/* Search Bar */}
         <div className="mb-6">
           <input
@@ -318,8 +318,8 @@ export default function GoogleBooksPage() {
                   key={`${opt.key}-${opt.direction}`}
                   onClick={() => handleSortChange(opt.key, opt.direction)}
                   className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors
-                    ${isSortActive(opt.key, opt.direction)
-                      ? 'bg-blue-600 text-white ring-2 ring-blue-300'
+                    ${isSortActive(opt.key, opt.direction) 
+                      ? 'bg-blue-600 text-white ring-2 ring-blue-300' 
                       : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
                     }`}
                 >
@@ -400,7 +400,7 @@ export default function GoogleBooksPage() {
               </div>
             </div>
           </div>
-
+          
           {/* Clear All Button */}
           <div>
             <button
@@ -420,7 +420,7 @@ export default function GoogleBooksPage() {
           <strong>Active:</strong> {activeFiltersForDisplay.join('; ')}
         </div>
       )}
-
+      
       {displayedBooks.length === 0 && !loading && (
         <p className="text-center text-gray-600 py-8">
           No books found matching your criteria for Stephen King. Try adjusting your search or filters.
@@ -433,9 +433,9 @@ export default function GoogleBooksPage() {
             <Link href={`/pages/google-books/${book.id}`} className="flex flex-col flex-grow">
               <div className="flex-grow flex flex-col justify-center mb-3">
                 {book.volumeInfo.imageLinks?.thumbnail ? (
-                  <img
-                    src={book.volumeInfo.imageLinks.thumbnail}
-                    alt={book.volumeInfo.title}
+                  <img 
+                    src={book.volumeInfo.imageLinks.thumbnail} 
+                    alt={book.volumeInfo.title} 
                     className="w-full h-64 object-contain rounded"
                   />
                 ) : (
@@ -463,8 +463,8 @@ export default function GoogleBooksPage() {
       {/* Pagination Controls - ensure this uses totalItemsFromAPI and current page for API based pagination */}
       {totalItemsFromAPI > 0 && displayedBooks.length > 0 && ( // Show pagination if there are items and results displayed
         <div className="mt-10 flex justify-center items-center space-x-4">
-          <button
-            onClick={handlePreviousPage}
+          <button 
+            onClick={handlePreviousPage} 
             disabled={currentPage === 0 || loading}
             className="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow hover:bg-blue-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors"
           >
@@ -473,8 +473,8 @@ export default function GoogleBooksPage() {
           <span className="text-lg text-gray-700">
             Page {currentPage + 1} {totalPages > 0 ? `of ${totalPages}` : ''}
           </span>
-          <button
-            onClick={handleNextPage}
+          <button 
+            onClick={handleNextPage} 
             disabled={loading || (currentPage + 1) >= totalPages}
             className="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow hover:bg-blue-600 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors"
           >
