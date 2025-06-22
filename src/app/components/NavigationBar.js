@@ -59,6 +59,9 @@ const NavigationBar = () => {
         <Link href="/pages/villains" className={`text-xl font-extrabold py-2 px-4 rounded-md hover:bg-gray-700 ${pathname === '/pages/villains' ? 'underline' : ''}`} onClick={handleLinkClick}>
           VILLAINS
         </Link>
+        <Link href="/pages/google-books" className={`text-xl font-extrabold py-2 px-4 rounded-md hover:bg-gray-700 ${pathname === '/pages/google-books' ? 'underline' : ''}`} onClick={handleLinkClick}>
+          GOOGLE BOOKS
+        </Link>
         <a href="https://stephenking.com" target="_blank" rel="noopener noreferrer" className="text-xl font-extrabold py-2 px-4 rounded-md hover:bg-gray-700" onClick={handleLinkClick}>
           STEPHENKING.COM <span className="text-sm opacity-75">(Official Site)</span>
         </a>
