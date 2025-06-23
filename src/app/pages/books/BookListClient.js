@@ -186,51 +186,55 @@ export default function BookListClient({ initialBooks }) {
 
       {/* Books List Display */}
       {/* Renders the list of filtered books */}
-      <div className="grid grid-cols-1 gap-4"> {/* Changed to single column grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {/* Responsive grid */}
          {filteredBooks.map((book, index) => (
-             <div key={book.id} className="p-4 bg-[var(--background-color)] rounded-lg shadow border border-[var(--accent-color)] hover:border-[var(--hover-accent-color)] transition-colors flex flex-row items-start"> {/* Changed to flex-row and items-start */}
+             <div key={book.id} className="bg-[var(--background-color)] rounded-lg shadow border border-[var(--accent-color)] hover:border-[var(--hover-accent-color)] transition-all duration-300 ease-in-out flex flex-col overflow-hidden h-full hover:shadow-lg"> {/* Added h-full for consistent height and hover effect */}
                  {/* Book Cover Image */}
-                 <div className="flex-none w-1/4 mr-4"> {/* Adjusted width and added margin */}
+                 <div className="relative w-full h-64 sm:h-72 md:h-80"> {/* Fixed height container for image */}
                      {book.coverImageUrl && book.coverImageUrl !== "NO_COVER_AVAILABLE" ? (
                        <Image
                          src={book.coverImageUrl}
                          alt={`Cover of ${book.Title}`}
-                         className="h-auto object-contain rounded" // Adjusted styling (removed w-full)
-                         width={150} // Provide appropriate width
-                         height={225} // Provide appropriate height
-                         priority={index < 5} // Prioritize loading for the first few images
+                         fill // Changed to fill to cover the container
+                         style={{objectFit: "cover"}} // Ensures image covers the area, might crop
+                         className="rounded-t-lg"
+                         priority={index < 8} // Prioritize loading for the first few images in the grid
                        />
                      ) : (
                        <div
-                         className="w-full h-48 flex items-center justify-center bg-gray-200 text-gray-500 rounded" // Adjusted styling
+                         className="w-full h-full flex items-center justify-center bg-gray-200 text-gray-500 rounded-t-lg"
                        >
                          No Cover Available
                        </div>
                      )}
                  </div>
                  {/* Book Details */}
-                 <div className="flex-grow"> {/* Takes remaining space */}
-                     <h2 className="text-xl font-semibold text-[var(--accent-color)] hover:text-[var(--hover-accent-color)]">
+                 <div className="p-4 flex flex-col flex-grow"> {/* Added flex-grow to push content to bottom if needed */}
+                     <h2 className="text-lg font-semibold text-[var(--accent-color)] hover:text-[var(--hover-accent-color)] mb-1 truncate" title={book.Title}> {/* Truncate title */}
                          <Link href={`/pages/books/${book.id}`}>
                              {book.Title}
                          </Link>
                      </h2>
-                     {book.authors && Array.isArray(book.authors) && <p className="text-sm text-[var(--text-color)]">Authors: {book.authors.join(', ')}</p>}
-                     {/* Display publishedDate if available (from Google Books), otherwise fallback to Year */}
-                     {book.publishedDate && <p className="text-sm text-[var(--text-color)]">Published: {book.publishedDate}</p>}
-                     {!book.publishedDate && book.Year && <p className="text-sm text-[var(--text-color)]">Year: {book.Year}</p>}
-
-                     {book.Publisher && <p className="text-sm text-[var(--text-color)]">Publisher: {book.Publisher}</p>}
-                     {/* Display pageCount if available (from Google Books), otherwise fallback to Pages */}
-                     {book.pageCount && <p className="text-sm text-[var(--text-color)]">Pages: {book.pageCount}</p>}
-                     {!book.pageCount && book.Pages && <p className="text-sm text-[var(--text-color)]">Pages: {book.Pages}</p>}
-
-                     {book.description && (
-                        <p className="text-sm text-[var(--text-color)] mt-1">
-                            {book.description.substring(0, 150)}{book.description.length > 150 ? '...' : ''}
+                     {book.authors && Array.isArray(book.authors) && book.authors.length > 0 && (
+                        <p className="text-xs text-gray-600 dark:text-gray-400 mb-1 truncate" title={book.authors.join(', ')}> {/* Truncate authors */}
+                            By: {book.authors.join(', ')}
                         </p>
                      )}
-                     {book.status && <p className="text-sm text-[var(--text-color)]">Status: {book.status}</p>}
+                     {/* Display publishedDate if available (from Google Books), otherwise fallback to Year */}
+                     {book.publishedDate && <p className="text-xs text-gray-500 dark:text-gray-300 mb-1">Published: {book.publishedDate}</p>}
+                     {!book.publishedDate && book.Year && <p className="text-xs text-gray-500 dark:text-gray-300 mb-1">Year: {book.Year}</p>}
+
+                     {/* Short description - hidden for now to keep cards cleaner, can be added back if desired */}
+                     {/* {book.description && (
+                        <p className="text-sm text-[var(--text-color)] mt-1 text-ellipsis overflow-hidden" style={{ display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' }}>
+                            {book.description}
+                        </p>
+                     )} */}
+                     <div className="mt-auto pt-2"> {/* Pushes the link to the bottom */}
+                        <Link href={`/pages/books/${book.id}`} className="text-sm text-[var(--accent-color)] hover:text-[var(--hover-accent-color)] font-medium">
+                            View Details
+                        </Link>
+                     </div>
                  </div>
              </div>
          ))}
