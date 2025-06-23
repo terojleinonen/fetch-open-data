@@ -215,9 +215,21 @@ export default function BookListClient({ initialBooks }) {
                              {book.Title}
                          </Link>
                      </h2>
-                     {book.Year && <p className="text-sm text-[var(--text-color)]">Year: {book.Year}</p>}
+                     {book.authors && Array.isArray(book.authors) && <p className="text-sm text-[var(--text-color)]">Authors: {book.authors.join(', ')}</p>}
+                     {/* Display publishedDate if available (from Google Books), otherwise fallback to Year */}
+                     {book.publishedDate && <p className="text-sm text-[var(--text-color)]">Published: {book.publishedDate}</p>}
+                     {!book.publishedDate && book.Year && <p className="text-sm text-[var(--text-color)]">Year: {book.Year}</p>}
+
                      {book.Publisher && <p className="text-sm text-[var(--text-color)]">Publisher: {book.Publisher}</p>}
-                     {book.Pages && <p className="text-sm text-[var(--text-color)]">Pages: {book.Pages}</p>}
+                     {/* Display pageCount if available (from Google Books), otherwise fallback to Pages */}
+                     {book.pageCount && <p className="text-sm text-[var(--text-color)]">Pages: {book.pageCount}</p>}
+                     {!book.pageCount && book.Pages && <p className="text-sm text-[var(--text-color)]">Pages: {book.Pages}</p>}
+
+                     {book.description && (
+                        <p className="text-sm text-[var(--text-color)] mt-1">
+                            {book.description.substring(0, 150)}{book.description.length > 150 ? '...' : ''}
+                        </p>
+                     )}
                      {book.status && <p className="text-sm text-[var(--text-color)]">Status: {book.status}</p>}
                  </div>
              </div>
