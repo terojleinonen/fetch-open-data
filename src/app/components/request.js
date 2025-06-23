@@ -15,9 +15,8 @@ export default async function Request(parameter) {
   
       // Fetch cover images
       if (data && data.data) {
-        const booksToProcess = Array.isArray(data.data) ? data.data : [data.data]; // Handle single book or array
+        const booksToProcess = Array.isArray(data.data) ? data.data : [data.data];
 
-        // Helper function to fetch cover for a single book
         const fetchCoverForBook = async (book) => {
           let googleBooksApiUrl;
           if (book.ISBN) {
@@ -27,10 +26,9 @@ export default async function Request(parameter) {
           } else {
             book.coverImageUrl = "NO_COVER_AVAILABLE";
             book.largeCoverImageUrl = "NO_COVER_AVAILABLE";
-            return; // Skip if no ISBN or Title
+            return;
           }
 
-          // Append API key if available
           if (googleBooksApiUrl && apiKey) {
             googleBooksApiUrl += `&key=${apiKey}`;
           } else if (googleBooksApiUrl && !apiKey) {
@@ -41,9 +39,11 @@ export default async function Request(parameter) {
           }
 
           try {
-            // Use Next.js fetch with caching options
-            const googleBooksResponse = await fetch(googleBooksApiUrl, { next: { revalidate: 3600 } }); // Revalidate cache every hour
+            // Actual API call logic
+            const googleBooksResponse = await fetch(googleBooksApiUrl, { next: { revalidate: 3600 } });
             if (!googleBooksResponse.ok) {
+              // It's good to log the URL that failed, especially for server-side errors.
+              console.error(`Google Books API error: Status ${googleBooksResponse.status} for URL: ${googleBooksApiUrl}`);
               throw new Error(`Google Books API error: Status ${googleBooksResponse.status}`);
             }
             const googleBooksData = await googleBooksResponse.json();
@@ -65,16 +65,14 @@ export default async function Request(parameter) {
               book.largeCoverImageUrl = "NO_COVER_AVAILABLE";
             }
           } catch (err) {
-            console.log(`Error fetching cover for ${book.Title}: ${err.message}`);
+            // Keep this error log as it's useful for production issues.
+            console.error(`Error processing cover for '${book.Title}' (URL: ${googleBooksApiUrl}): ${err.message}`);
             book.coverImageUrl = "NO_COVER_AVAILABLE";
             book.largeCoverImageUrl = "NO_COVER_AVAILABLE";
           }
         };
 
-        // Create an array of promises for fetching all book covers
         const coverPromises = booksToProcess.map(book => fetchCoverForBook(book));
-
-        // Wait for all cover fetch promises to resolve
         await Promise.all(coverPromises);
       }
     } catch (err) {
