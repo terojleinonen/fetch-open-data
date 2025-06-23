@@ -187,9 +187,33 @@ export default function BookListClient({ initialBooks }) {
       {/* Books List Display */}
       {/* Renders the list of filtered books */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {/* Responsive grid */}
-         {filteredBooks.map((book, index) => (
-             <div key={book.id} className="bg-[var(--background-color)] rounded-lg shadow border border-[var(--accent-color)] hover:border-[var(--hover-accent-color)] transition-all duration-300 ease-in-out flex flex-col overflow-hidden h-full hover:shadow-lg"> {/* Added h-full for consistent height and hover effect */}
-                 {/* Book Cover Image */}
+        {/* Hardcoded image */}
+        <div className="bg-[var(--background-color)] rounded-lg shadow border border-[var(--accent-color)] hover:border-[var(--hover-accent-color)] transition-all duration-300 ease-in-out flex flex-col overflow-hidden h-full hover:shadow-lg">
+          <div className="relative w-full h-64 sm:h-72 md:h-80">
+            <Image
+              src="https://books.google.com/books?id=zyTCAlFPjgYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+              alt="Hardcoded Google Book Image"
+              fill
+              style={{objectFit: "cover"}}
+              className="rounded-t-lg"
+              priority // Prioritize loading for this image
+            />
+          </div>
+          <div className="p-4 flex flex-col flex-grow">
+            <h2 className="text-lg font-semibold text-[var(--accent-color)] hover:text-[var(--hover-accent-color)] mb-1 truncate" title="Hardcoded Book">
+              Hardcoded Book
+            </h2>
+            <div className="mt-auto pt-2">
+              <span className="text-sm text-[var(--accent-color)] font-medium">
+                This is a hardcoded image
+              </span>
+            </div>
+          </div>
+        </div>
+        {/* End of hardcoded image */}
+        {filteredBooks.map((book, index) => (
+            <div key={book.id} className="bg-[var(--background-color)] rounded-lg shadow border border-[var(--accent-color)] hover:border-[var(--hover-accent-color)] transition-all duration-300 ease-in-out flex flex-col overflow-hidden h-full hover:shadow-lg"> {/* Added h-full for consistent height and hover effect */}
+                {/* Book Cover Image */}
                  <div className="relative w-full h-64 sm:h-72 md:h-80"> {/* Fixed height container for image */}
                      {book.coverImageUrl && book.coverImageUrl !== "NO_COVER_AVAILABLE" ? (
                        <Image
