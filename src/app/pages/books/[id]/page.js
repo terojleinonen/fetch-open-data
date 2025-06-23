@@ -10,7 +10,7 @@ export default async function BookDetailPage({ params }) {
     return (
       <div className="container mx-auto p-4 py-8 text-center">
         <h1 className="text-3xl font-bold text-[var(--accent-color)] mb-4">Book Not Found</h1>
-        <p className="text-[var(--text-color)] mb-6">Sorry, we couldn't find the book you were looking for.</p>
+        <p className="text-[var(--text-color)] mb-6">Sorry, we couldn&apos;t find the book you were looking for.</p>
         <Link href="/pages/books" className="inline-block bg-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] text-white font-semibold py-2 px-4 rounded shadow transition-colors">
           Back to Books List
         </Link>
