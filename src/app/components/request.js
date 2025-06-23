@@ -56,12 +56,27 @@ export default async function Request(parameter) {
 
               // Cover Images
               const imageLinks = volumeInfo.imageLinks;
+              let rawCoverImageUrl = "NO_COVER_AVAILABLE";
+              let rawLargeCoverImageUrl = "NO_COVER_AVAILABLE";
+
               if (imageLinks) {
-                book.coverImageUrl = imageLinks.thumbnail || imageLinks.smallThumbnail || "NO_COVER_AVAILABLE";
-                book.largeCoverImageUrl = imageLinks.medium || imageLinks.large || imageLinks.small || book.coverImageUrl;
+                rawCoverImageUrl = imageLinks.thumbnail || imageLinks.smallThumbnail || "NO_COVER_AVAILABLE";
+                // For large cover, try more specific ones first, then fall back to the chosen coverImageUrl
+                rawLargeCoverImageUrl = imageLinks.medium || imageLinks.large || imageLinks.small || rawCoverImageUrl;
+              }
+
+              // Ensure HTTPS for coverImageUrl
+              if (rawCoverImageUrl && typeof rawCoverImageUrl === 'string' && rawCoverImageUrl.startsWith('http://')) {
+                book.coverImageUrl = rawCoverImageUrl.replace(/^http:\/\//i, 'https://');
               } else {
-                book.coverImageUrl = "NO_COVER_AVAILABLE";
-                book.largeCoverImageUrl = "NO_COVER_AVAILABLE";
+                book.coverImageUrl = rawCoverImageUrl;
+              }
+
+              // Ensure HTTPS for largeCoverImageUrl
+              if (rawLargeCoverImageUrl && typeof rawLargeCoverImageUrl === 'string' && rawLargeCoverImageUrl.startsWith('http://')) {
+                book.largeCoverImageUrl = rawLargeCoverImageUrl.replace(/^http:\/\//i, 'https://');
+              } else {
+                book.largeCoverImageUrl = rawLargeCoverImageUrl;
               }
 
               // Textual Information from Google Books - prioritize these if available
