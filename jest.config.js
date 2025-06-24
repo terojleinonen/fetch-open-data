@@ -3,7 +3,7 @@ module.exports = {
   testEnvironment: 'jest-environment-jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'], // if you create this file
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel', '@babel/preset-react'] }],
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel', ['@babel/preset-react', { runtime: 'automatic' }]] }],
   },
   moduleNameMapper: {
     // Handle CSS imports (if any)

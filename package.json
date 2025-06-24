@@ -29,5 +29,8 @@
     "jest-environment-jsdom": "^30.0.2",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.10"
+  },
+  "overrides": {
+    "glob": "^10.4.5"
   }
 }
