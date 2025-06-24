@@ -2,25 +2,27 @@
 @import "tailwindcss";
 
 :root {
-  --background-color-dark: #1a1a1a;
-  --text-color-dark: #f0f0f0;
-  --accent-color-dark: #990000; /* Deep Red */
-  --hover-accent-color-dark: #cc0000; /* Brighter Red for hover */
-  --shadow-color-dark: #0d0d0d;
-  --map-marker-fill-dark: #4d0000;
-  --map-marker-stroke-dark: rgba(240, 240, 240, 0.2);
-  --map-marker-hover-fill-dark: #800000;
-  --map-marker-hover-stroke-dark: rgba(240, 240, 240, 0.5);
+  /* Eery & Minimalistic Dark Theme */
+  --background-color-dark: #0a0a0a; /* Very dark grey, almost black */
+  --text-color-dark: #c0c0c0; /* Light grey */
+  --accent-color-dark: #5a5a8c; /* Desaturated blue/purple */
+  --hover-accent-color-dark: #6a6aa2; /* Slightly lighter desaturated blue/purple */
+  --shadow-color-dark: #050505; /* Darker shade for depth */
+  --map-marker-fill-dark: #3a3a5c; /* Desaturated blue/purple for map markers */
+  --map-marker-stroke-dark: rgba(192, 192, 192, 0.2); /* Light grey with transparency */
+  --map-marker-hover-fill-dark: #4a4a7c; /* Lighter desaturated blue/purple for hover */
+  --map-marker-hover-stroke-dark: rgba(192, 192, 192, 0.5); /* Light grey with more opacity */
 
-  --background-color-light: #f8f8f8;
-  --text-color-light: #333333;
-  --accent-color-light: #a0a0a0; /* Muted Gray */
-  --hover-accent-color-light: #8c8c8c; /* Darker Muted Gray */
-  --shadow-color-light: #e0e0e0;
-  --map-marker-fill-light: #cccccc;
-  --map-marker-stroke-light: rgba(51, 51, 51, 0.2);
-  --map-marker-hover-fill-light: #b3b3b3;
-  --map-marker-hover-stroke-light: rgba(51, 51, 51, 0.5);
+  /* Eery & Minimalistic Light Theme */
+  --background-color-light: #f5f5f5; /* Off-white */
+  --text-color-light: #333333; /* Dark grey */
+  --accent-color-light: #4a7c7c; /* Desaturated cyan/teal */
+  --hover-accent-color-light: #3a6c6c; /* Slightly darker desaturated cyan/teal */
+  --shadow-color-light: #e0e0e0; /* Light grey for depth */
+  --map-marker-fill-light: #7aa2a2; /* Desaturated cyan/teal for map markers */
+  --map-marker-stroke-light: rgba(51, 51, 51, 0.2); /* Dark grey with transparency */
+  --map-marker-hover-fill-light: #6a9292; /* Lighter desaturated cyan/teal for hover */
+  --map-marker-hover-stroke-light: rgba(51, 51, 51, 0.5); /* Dark grey with more opacity */
 }
 
 /* Default to dark theme */
@@ -37,7 +39,7 @@ body {
 
   color: var(--text-color);
   background: var(--background-color);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'GeistMonoVF', 'GeistVF', Arial, Helvetica, sans-serif; /* Prioritize Geist fonts */
 }
 
 /* Light theme using prefers-color-scheme */
@@ -59,10 +61,10 @@ body {
 }
 
 /* Update existing variables to use the new scheme or remove if redundant */
-/* For now, let's align them with the new primary dark theme */
+/* These are used by Tailwind config */
 :root {
-  --background: var(--background-color); /* Updated to use the theme-aware variable */
-  --foreground: var(--text-color); /* Updated to use the theme-aware variable */
+  --background: var(--background-color);
+  --foreground: var(--text-color);
 }
 
 
