@@ -14,14 +14,6 @@ export default function GoogleBooksPage() {
   // Search States
   const [searchInputText, setSearchInputText] = useState(''); // For direct input binding
   const [searchQuery, setSearchQuery] = useState(''); // Value for API query, set on search execution
-  // const [sortConfig, setSortConfig] = useState({ key: 'relevance', direction: 'desc' }); // API default is relevance
-  // const [filters, setFilters] = useState({
-  //   publishYear: '',
-  //   pageCountMin: '',
-  //   pageCountMax: '',
-  //   publisher: '',
-  //   language: '',
-  // });
 
   // Pagination States
   const [currentPage, setCurrentPage] = useState(0); // 0-indexed for startIndex for API
@@ -35,10 +27,9 @@ export default function GoogleBooksPage() {
     if (savedSearchQuery) {
       const parsedQuery = JSON.parse(savedSearchQuery);
       setSearchQuery(parsedQuery);
-      setSearchInputText(parsedQuery); 
+      setSearchInputText(parsedQuery);
     }
 
-    // Removed loading of sortConfig and filters from session storage
     const savedCurrentPage = sessionStorage.getItem('googleBooks_currentPage');
     if (savedCurrentPage) setCurrentPage(JSON.parse(savedCurrentPage));
   }, []);
@@ -53,7 +44,6 @@ export default function GoogleBooksPage() {
     sessionStorage.setItem('googleBooks_searchQuery', JSON.stringify(searchQuery));
   }, [searchQuery]);
 
-  // Removed saving of sortConfig and filters to session storage
   useEffect(() => {
     sessionStorage.setItem('googleBooks_currentPage', JSON.stringify(currentPage));
   }, [currentPage]);
@@ -84,12 +74,6 @@ export default function GoogleBooksPage() {
       // The `orderBy=relevance` is often the default if no specific `orderBy` is given for general queries.
       let apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(queryString)}&startIndex=${startIndex}&maxResults=${booksPerPage}&orderBy=relevance`;
 
-      // if (sortConfig.key === 'newest') { // Removed sort logic
-      //   apiUrl += `&orderBy=newest`;
-      // } else {
-      //   apiUrl += `&orderBy=relevance`;
-      // }
-
       try {
         const response = await fetch(apiUrl);
         if (!response.ok) {
@@ -108,34 +92,7 @@ export default function GoogleBooksPage() {
     };
 
     fetchBooksFromAPI();
-  }, [searchQuery, currentPage]); // sortConfig.key removed
-
-  // This useEffect will handle client-side filtering and sorting - REMOVED
-  // useEffect(() => {
-  //   let booksToProcess = [...allFetchedBooks];
-
-  //   // Apply Filters - REMOVED
-  //   // if (filters.publishYear) {
-  //   //   booksToProcess = booksToProcess.filter(book =>
-  //   //     book.volumeInfo.publishedDate && book.volumeInfo.publishedDate.startsWith(filters.publishYear)
-  //   //   );
-  //   // }
-  //   // ... other filters removed ...
-
-  //   // Apply Client-Side Sorting (if not handled by API) - REMOVED
-  //   // if (sortConfig.key !== 'relevance' && sortConfig.key !== 'newest') {
-  //   //   booksToProcess.sort((a, b) => {
-  //   //     // ... sort logic removed ...
-  //   //   });
-  //   // }
-  //
-  //   setDisplayedBooks(booksToProcess);
-  // }, [allFetchedBooks, filters, sortConfig]);
-
-  // Directly use allFetchedBooks as displayedBooks since no client-side filtering/sorting
-  // useEffect(() => { // This effect is no longer needed as API directly sets displayedBooks
-  //   setDisplayedBooks(allFetchedBooks);
-  // }, [allFetchedBooks]);
+  }, [searchQuery, currentPage]);
 
 
   const handleNextPage = () => {
@@ -171,57 +128,7 @@ export default function GoogleBooksPage() {
     }
   };
 
-  // const handleSortChange = (key, direction) => {
-  //   setSortConfig({ key, direction });
-  //   setCurrentPage(0);
-  // };
-
-  // const sortOptions = [
-  //   { key: 'relevance', direction: 'desc', label: 'Relevance' },
-  //   { key: 'newest', direction: 'desc', label: 'Newest First' },
-  //   { key: 'title', direction: 'asc', label: 'Title (A-Z)' },
-  //   { key: 'title', direction: 'desc', label: 'Title (Z-A)' },
-  //   { key: 'publishedDate', direction: 'asc', label: 'Year (Oldest)' },
-  //   { key: 'publishedDate', direction: 'desc', label: 'Year (Newest)' },
-  // ];
-
-  // const isSortActive = (key, direction) => {
-  //   return sortConfig.key === key && sortConfig.direction === direction;
-  // };
-
-  // const handleFilterChange = (filterName, value) => {
-  //   setFilters(prevFilters => ({
-  //     ...prevFilters,
-  //     [filterName]: value,
-  //   }));
-  //   setCurrentPage(0);
-  // };
-
-  // const handleClearAll = () => {
-  //   setSearchInputText('');
-  //   setSearchQuery('');
-  //   // setFilters({
-  //   //   publishYear: '',
-  //   //   pageCountMin: '',
-  //   //   pageCountMax: '',
-  //   //   publisher: '',
-  //   //   language: '',
-  //   // });
-  //   // setSortConfig({ key: 'relevance', direction: 'desc' });
-  //   setCurrentPage(0);
-  // };
-
-  // const getActiveFiltersForDisplay = () => {
-  //   const active = [];
-  //   if (searchQuery) active.push(`Search: "${searchQuery}"`);
-  //   // ... other filter display logic removed ...
-  //   return active;
-  // };
-
-  // const activeFiltersForDisplay = getActiveFiltersForDisplay();
-
   const inputBaseClasses = "w-full p-2 bg-[var(--background-color-dark)] text-[var(--text-color-dark)] border border-[var(--shadow-color-dark)] rounded-md shadow-sm text-sm focus:ring-[var(--accent-color-dark)] focus:border-[var(--accent-color-dark)] placeholder-gray-500";
-  // const labelBaseClasses variable has been removed.
 
   return (
     <div className="min-h-screen bg-background text-foreground p-4 md:p-8">
@@ -250,12 +157,8 @@ export default function GoogleBooksPage() {
           </button>
         </div>
 
-        {/* Sort Options, Filter Options, Clear All, and Active Filters Display Removed */}
-        {/* <div className="mb-8 p-4 md:p-6 bg-[var(--shadow-color-dark)] bg-opacity-50 rounded-lg shadow-xl border border-neutral-700"> ... </div> */}
       </header>
 
-      {/* {activeFiltersForDisplay.length > 0 && ( ... )} REMOVED */ }
-      
       {displayedBooks.length === 0 && !loading && (
         <p className="text-center text-neutral-400 py-10 text-lg">
           No books found matching your criteria.

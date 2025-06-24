@@ -59,26 +59,6 @@ export default function VillainListClient({ initialVillains }) {
     }
   };
 
-  // Function to handle selecting and navigating to a random villain
-  // const handleRandomVillain = () => {
-  //   // Check if there are villains available
-  //   if (initialVillains && initialVillains.data && initialVillains.data.length > 0) {
-  //     // Generate a random index
-  //     const randomIndex = Math.floor(Math.random() * initialVillains.data.length);
-  //     // Get the random villain
-  //     const randomVillain = initialVillains.data[randomIndex];
-  //     // Check if the villain and its ID are valid
-  //     if (randomVillain && randomVillain.id) {
-  //       // Navigate to the villain's page
-  //       router.push(`/pages/villains/${randomVillain.id}`);
-  //     } else {
-  //       console.error("Failed to get random villain or villain ID is missing", randomVillain);
-  //     }
-  //   } else {
-  //     console.error("No villains available to select a random one from.");
-  //   }
-  // };
-
   return (
     <div className="px-8 py-12">
 

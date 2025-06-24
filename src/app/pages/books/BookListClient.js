@@ -104,26 +104,6 @@ export default function BookListClient({ initialBooks }) {
     }
   };
 
-  // Function to handle selecting and navigating to a random book
-  // const handleRandomBook = () => {
-  //   // Check if there are books available
-  //   if (initialBooks && initialBooks.data && Array.isArray(initialBooks.data) && initialBooks.data.length > 0) {
-  //     // Generate a random index
-  //     const randomIndex = Math.floor(Math.random() * initialBooks.data.length);
-  //     // Get the random book
-  //     const randomBook = initialBooks.data[randomIndex];
-  //     // Check if the book and its ID are valid
-  //     if (randomBook && randomBook.id) {
-  //       // Navigate to the book's page
-  //       router.push(`/pages/books/${randomBook.id}`);
-  //     } else {
-  //       console.error("Failed to get random book or book ID is missing", randomBook);
-  //     }
-  //   } else {
-  //     console.error("No books available to select a random one from.");
-  //   }
-  // };
-
   return (
     <div className={`px-8 py-12 transition-[margin-right] duration-300 ease-in-out ${isFilterPopupOpen ? 'md:mr-80' : 'md:mr-0'}`}>
       
@@ -224,12 +204,6 @@ export default function BookListClient({ initialBooks }) {
                      {book.publishedDate && <p className="text-xs text-gray-500 dark:text-gray-300 mb-1">Published: {book.publishedDate}</p>}
                      {!book.publishedDate && book.Year && <p className="text-xs text-gray-500 dark:text-gray-300 mb-1">Year: {book.Year}</p>}
 
-                     {/* Short description - hidden for now to keep cards cleaner, can be added back if desired */}
-                     {/* {book.description && (
-                        <p className="text-sm text-[var(--text-color)] mt-1 text-ellipsis overflow-hidden" style={{ display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical' }}>
-                            {book.description}
-                        </p>
-                     )} */}
                      <div className="mt-auto pt-2"> {/* Pushes the link to the bottom */}
                         <Link href={`/pages/books/${book.id}`} className="text-sm text-[var(--accent-color)] hover:text-[var(--hover-accent-color)] font-medium">
                             View Details

@@ -22,7 +22,6 @@ export default async function Request(parameter, options = {}) {
         const fetchGoogleBookDetails = async (book) => {
           // Ensure book is an object and has a Title or ISBN to proceed
           if (typeof book !== 'object' || book === null || (!book.ISBN && !book.Title)) {
-            // console.warn("Skipping Google Books fetch for item without ISBN or Title:", book);
             if (book && typeof book === 'object') {
                 book.googleBooksDataAvailable = false;
                 book.coverImageUrl = book.coverImageUrl || "NO_COVER_AVAILABLE";
