@@ -168,23 +168,22 @@ export default function BookListClient({ initialBooks }) {
       {/* Renders the list of filtered books */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {/* Responsive grid */}
         {filteredBooks.map((book, index) => (
-            <div key={book.id} className="bg-[var(--background-color)] rounded-lg shadow border border-[var(--accent-color)] hover:border-[var(--hover-accent-color)] transition-all duration-300 ease-in-out flex flex-col overflow-hidden h-full hover:shadow-lg"> {/* Added h-full for consistent height and hover effect */}
+            <div key={book.id} className="group bg-[var(--background-color)] rounded-lg shadow border border-[var(--accent-color)] hover:border-[var(--hover-accent-color)] transition-all duration-300 ease-in-out flex flex-col overflow-hidden h-full hover:shadow-lg"> {/* Added h-full for consistent height and hover effect, ADDED group CLASS */}
                 {/* Book Cover Image */}
-                <div className="flex justify-center items-center h-[300px] bg-gray-200 rounded-t-lg"> {/* Container for consistent height and centering */}
+                <div className="relative w-full h-72 flex items-center justify-center bg-neutral-700 overflow-hidden rounded-t-lg"> {/* UPDATED CLASS */}
                   {book.coverImageUrl && book.coverImageUrl !== "NO_COVER_AVAILABLE" ? (
                     <Image
                       src={book.coverImageUrl}
                       alt={`Cover of ${book.Title}`}
-                      width={200} // Standard width
-                      height={300} // Standard height
-                      className="rounded-t-lg object-contain" // Use object-contain to fit image within dimensions
+                      fill={true} // UPDATED: Use fill instead of width/height
+                      className="object-contain transition-transform duration-300 group-hover:scale-105 rounded-t-lg" // UPDATED CLASS
                       priority={index < 8} // Prioritize loading for the first few images in the grid
                     />
                   ) : (
                     <div
-                      className="flex items-center justify-center w-full h-full text-gray-500" // Ensure placeholder takes full container space
+                      className="w-full h-full flex items-center justify-center text-neutral-500 text-sm" // UPDATED CLASS and text
                     >
-                      No Cover Available
+                      No Image
                     </div>
                   )}
                 </div>
