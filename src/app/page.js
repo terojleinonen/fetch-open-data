@@ -2,8 +2,6 @@ import Link from 'next/link'
 
 // Page component - Renders the main page with links to other sections.
 export default function Page() {
-console.log("app started...")
-  
   return (
     <div className="flex justify-center items-center h-screen bg-transparent">
       <div className="text-center"> {/* Changed text-4xl to text-center for better alignment of title and links */}

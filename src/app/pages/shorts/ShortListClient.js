@@ -55,26 +55,6 @@ export default function ShortListClient({ initialShorts }) {
     }
   };
 
-  // Function to handle selecting and navigating to a random short story
-  // const handleRandomShort = () => {
-  //   // Check if there are short stories available
-  //   if (initialShorts && initialShorts.data && initialShorts.data.length > 0) {
-  //     // Generate a random index
-  //     const randomIndex = Math.floor(Math.random() * initialShorts.data.length);
-  //     // Get the random short story
-  //     const randomShort = initialShorts.data[randomIndex];
-  //     // Check if the short story and its ID are valid
-  //     if (randomShort && randomShort.id) {
-  //       // Navigate to the short story's page
-  //       router.push(`/pages/shorts/${randomShort.id}`);
-  //     } else {
-  //       console.error("Failed to get random short story or ID is missing", randomShort);
-  //     }
-  //   } else {
-  //     console.error("No short stories available to select a random one from.");
-  //   }
-  // };
-
   return (
     <div className="px-8 py-12">
 
