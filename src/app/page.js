@@ -6,7 +6,7 @@ export default function Page() {
     <div className="flex justify-center items-center h-screen bg-transparent">
       <div className="text-center"> {/* Changed text-4xl to text-center for better alignment of title and links */}
         <div> {/* Removed text-6xl from here */}
-          <h1 className="text-6xl text-[var(--text-color)]" style={{ fontFamily: "Georgia, serif" }}>
+          <h1 className="text-6xl text-[var(--text-color)]">
             Stephen King Universe
           </h1>
         </div>

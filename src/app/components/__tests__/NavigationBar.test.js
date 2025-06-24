@@ -61,10 +61,11 @@ describe('NavigationBar', () => {
         expect(navContainer).toHaveClass('md:flex');
 
         // For completeness, check that individual links are in the document.
-        expect(screen.getByRole('link', { name: /home/i })).toBeInTheDocument();
-        expect(screen.getByRole('link', { name: /books/i })).toBeInTheDocument();
-        expect(screen.getByRole('link', { name: /shorts/i })).toBeInTheDocument();
-        expect(screen.getByRole('link', { name: /villains/i })).toBeInTheDocument();
+        expect(screen.getByRole('link', { name: /^home$/i })).toBeInTheDocument();
+        expect(screen.getByRole('link', { name: /^books$/i })).toBeInTheDocument(); // Exact match for BOOKS
+        expect(screen.getByRole('link', { name: /^shorts$/i })).toBeInTheDocument();
+        expect(screen.getByRole('link', { name: /^villains$/i })).toBeInTheDocument();
+        expect(screen.getByRole('link', { name: /google books/i })).toBeInTheDocument(); // Check for GOOGLE BOOKS
     });
   });
 });
