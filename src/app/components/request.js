@@ -55,7 +55,7 @@ export default async function Request(parameter, options = {}) {
           }
 
           try {
-            const googleBooksResponse = await fetch(googleBooksApiUrl, { next: { revalidate: 3600 } }); // Revalidate data every hour
+            const googleBooksResponse = await fetch(googleBooksApiUrl); // Removed revalidate option
             if (!googleBooksResponse.ok) {
               console.error(`Google Books API error: Status ${googleBooksResponse.status} for URL: ${googleBooksApiUrl}`);
               // Do not throw error here to allow partial data processing, mark book as unavailable
@@ -72,24 +72,41 @@ export default async function Request(parameter, options = {}) {
 
               // Cover Images
               const imageLinks = volumeInfo.imageLinks;
-              let rawCoverImageUrl = "NO_COVER_AVAILABLE";
-              let rawLargeCoverImageUrl = "NO_COVER_AVAILABLE";
+              let finalCoverImageUrl = "NO_COVER_AVAILABLE";
+              let finalLargeCoverImageUrl = "NO_COVER_AVAILABLE";
 
               if (imageLinks) {
-                rawCoverImageUrl = imageLinks.thumbnail || imageLinks.smallThumbnail || "NO_COVER_AVAILABLE";
-                rawLargeCoverImageUrl = imageLinks.medium || imageLinks.large || imageLinks.small || rawCoverImageUrl;
+                // Prioritize thumbnail, then smallThumbnail for standard cover
+                if (imageLinks.thumbnail) {
+                  finalCoverImageUrl = imageLinks.thumbnail;
+                } else if (imageLinks.smallThumbnail) {
+                  finalCoverImageUrl = imageLinks.smallThumbnail;
+                }
+
+                // Prioritize medium, then large, then small for large cover
+                // Fall back to standard cover if specific large ones aren't available
+                if (imageLinks.medium) {
+                  finalLargeCoverImageUrl = imageLinks.medium;
+                } else if (imageLinks.large) {
+                  finalLargeCoverImageUrl = imageLinks.large;
+                } else if (imageLinks.small) {
+                  finalLargeCoverImageUrl = imageLinks.small;
+                } else {
+                  finalLargeCoverImageUrl = finalCoverImageUrl; // Fallback to the chosen standard cover
+                }
               }
 
-              if (rawCoverImageUrl && typeof rawCoverImageUrl === 'string' && rawCoverImageUrl.startsWith('http://')) {
-                book.coverImageUrl = rawCoverImageUrl.replace(/^http:\/\//i, 'https://');
+              // Ensure HTTPS
+              if (finalCoverImageUrl && typeof finalCoverImageUrl === 'string' && finalCoverImageUrl.startsWith('http://')) {
+                book.coverImageUrl = finalCoverImageUrl.replace(/^http:\/\//i, 'https://');
               } else {
-                book.coverImageUrl = rawCoverImageUrl;
+                book.coverImageUrl = finalCoverImageUrl;
               }
 
-              if (rawLargeCoverImageUrl && typeof rawLargeCoverImageUrl === 'string' && rawLargeCoverImageUrl.startsWith('http://')) {
-                book.largeCoverImageUrl = rawLargeCoverImageUrl.replace(/^http:\/\//i, 'https://');
+              if (finalLargeCoverImageUrl && typeof finalLargeCoverImageUrl === 'string' && finalLargeCoverImageUrl.startsWith('http://')) {
+                book.largeCoverImageUrl = finalLargeCoverImageUrl.replace(/^http:\/\//i, 'https://');
               } else {
-                book.largeCoverImageUrl = rawLargeCoverImageUrl;
+                book.largeCoverImageUrl = finalLargeCoverImageUrl;
               }
 
               // Textual Information

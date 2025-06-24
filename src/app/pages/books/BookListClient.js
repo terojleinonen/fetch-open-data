@@ -3,7 +3,7 @@
 import React, { useState, useMemo, Suspense } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import Image from 'next/image'; // Import Next.js Image component
+// import Image from 'next/image'; // Import Next.js Image component - REMOVED
 import dynamic from 'next/dynamic';
 
 const FilterPopup = dynamic(() => import('./FilterPopup'), {
@@ -170,18 +170,17 @@ export default function BookListClient({ initialBooks }) {
         {filteredBooks.map((book, index) => (
             <div key={book.id} className="group bg-[var(--background-color)] rounded-lg shadow border border-[var(--accent-color)] hover:border-[var(--hover-accent-color)] transition-all duration-300 ease-in-out flex flex-col overflow-hidden h-full hover:shadow-lg"> {/* Added h-full for consistent height and hover effect, ADDED group CLASS */}
                 {/* Book Cover Image */}
-                <div className="relative w-full h-72 flex items-center justify-center bg-neutral-700 overflow-hidden rounded-t-lg"> {/* UPDATED CLASS */}
+                <div className="relative w-full h-72 flex items-center justify-center bg-neutral-700 overflow-hidden rounded-t-lg">
                   {book.coverImageUrl && book.coverImageUrl !== "NO_COVER_AVAILABLE" ? (
-                    <Image
+                    <img
                       src={book.coverImageUrl}
                       alt={`Cover of ${book.Title}`}
-                      fill={true} // UPDATED: Use fill instead of width/height
-                      className="object-contain transition-transform duration-300 group-hover:scale-105 rounded-t-lg" // UPDATED CLASS
-                      priority={index < 8} // Prioritize loading for the first few images in the grid
+                      className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105 rounded-t-lg"
+                      loading={index < 8 ? "eager" : "lazy"} // Approximate priority with eager loading for first few images
                     />
                   ) : (
                     <div
-                      className="w-full h-full flex items-center justify-center text-neutral-500 text-sm" // UPDATED CLASS and text
+                      className="w-full h-full flex items-center justify-center text-neutral-500 text-sm"
                     >
                       No Image
                     </div>
