@@ -62,12 +62,16 @@ export default function ShortListClient({ initialShorts }) {
       <div className="controls-container mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow flex flex-wrap gap-4 items-center justify-between">
          <input
              type="text"
+             id="search-shorts-input"
+             name="search-shorts-input"
              placeholder="Search shorts..."
              className="w-full md:w-auto flex-grow p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
              value={searchTerm}
              onChange={(e) => setSearchTerm(e.target.value)}
          />
          <select
+          id="sort-shorts-select"
+          name="sort-shorts-select"
           className="p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
           value={sortOrder}
           onChange={(e) => setSortOrder(e.target.value)}

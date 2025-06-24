@@ -104,6 +104,8 @@ export default function FilterPopup({
             <div className="flex gap-4">
               <input
                 type="number"
+                id="filter-min-pages"
+                name="filter-min-pages"
                 placeholder="Min Pages"
                 value={minPages}
                 onChange={(e) => setMinPages(e.target.value)}
@@ -112,6 +114,8 @@ export default function FilterPopup({
               />
               <input
                 type="number"
+                id="filter-max-pages"
+                name="filter-max-pages"
                 placeholder="Max Pages"
                 value={maxPages}
                 onChange={(e) => setMaxPages(e.target.value)}
