@@ -83,11 +83,13 @@ export default function ShortListClient({ initialShorts }) {
      </div>
 
       {/* Header Row */}
-      <div className="flex justify-between items-center p-4 mb-2 text-[var(--accent-color)] font-semibold">
+      <div className="flex justify-between items-center p-4 text-[var(--accent-color)] font-semibold">
         <div className="flex-1 text-left">Title</div>
-        <div className="flex-1 text-center">Status</div>
+        <div className="flex-1 text-center">Type</div>
         <div className="flex-1 text-right">Year</div>
       </div>
+      {/* Separator Line */}
+      <hr className="mb-2 border-[var(--accent-color)] opacity-50" />
 
       {/* Shorts List Display */}
       {/* Renders the list of filtered short stories */}
@@ -98,8 +100,8 @@ export default function ShortListClient({ initialShorts }) {
                     <div className="flex-1 text-left text-xl font-semibold text-[var(--accent-color)] hover:text-[var(--hover-accent-color)] truncate pr-2">
                         {short.title}
                     </div>
-                    <div className="flex-1 text-center text-sm text-[var(--text-color)] opacity-75 px-2">
-                        {short.status || 'N/A'} {/* Display status or N/A if not available */}
+                    <div className="flex-1 text-center text-sm text-[var(--text-color)] opacity-75 px-2 capitalize">
+                        {short.type || 'N/A'} {/* Display type or N/A if not available */}
                     </div>
                     <div className="flex-1 text-right text-sm text-[var(--text-color)] opacity-75 pl-2">
                         {short.year || 'N/A'} {/* Display year or N/A if not available */}
