@@ -4,7 +4,21 @@ import Image from 'next/image'; // Import Next.js Image component
 import Request from '@/app/components/request';
 
 export default async function BookDetailPage({ params }) {
-  const bookData = await Request(`book/${params.id}`);
+  console.log(`[INFO] /pages/books/${params.id}: Fetching book data...`);
+  let bookData;
+  try {
+    bookData = await Request(`book/${params.id}`);
+    if (!bookData || !bookData.data) {
+      console.warn(`[WARN] /pages/books/${params.id}: No bookData or bookData.data found.`);
+      // Return early or ensure bookData is structured to show an error in the component
+    } else {
+      console.log(`[INFO] /pages/books/${params.id}: Successfully fetched data for "${bookData.data.Title}".`);
+    }
+  } catch (error) {
+    console.error(`[ERROR] /pages/books/${params.id}: Error fetching book data:`, error);
+    // Ensure bookData is structured to show an error
+    bookData = { error: `Failed to load book data for ID ${params.id} due to an error.`, data: null };
+  }
 
   if (!bookData || !bookData.data) {
     return (
