@@ -83,13 +83,13 @@ export default function ShortListClient({ initialShorts }) {
      </div>
 
       {/* Header Row */}
-      <div className="flex justify-between items-center p-4 text-[var(--accent-color)] font-semibold">
+      <div className="flex justify-between items-center p-4 text-[var(--accent-color)] text-lg font-bold">
         <div className="flex-1 text-left">Title</div>
         <div className="flex-1 text-center">Type</div>
         <div className="flex-1 text-right">Year</div>
       </div>
       {/* Separator Line */}
-      <hr className="mb-2 border-[var(--accent-color)] opacity-50" />
+      <hr className="mb-2 border-[var(--accent-color)] border-t-2" />
 
       {/* Shorts List Display */}
       {/* Renders the list of filtered short stories */}
@@ -97,13 +97,13 @@ export default function ShortListClient({ initialShorts }) {
          {filteredShorts.map(short => (
              <div key={short.id} className="short-item p-4 rounded-lg shadow transition-colors"> {/* Removed border classes */}
                 <Link href={`/pages/shorts/${short.id}`} className="flex justify-between items-center w-full">
-                    <div className="flex-1 text-left text-xl font-semibold text-[var(--accent-color)] hover:text-[var(--hover-accent-color)] truncate pr-2">
+                    <div className="flex-1 text-left text-base text-[var(--text-color)] truncate pr-2">
                         {short.title}
                     </div>
-                    <div className="flex-1 text-center text-sm text-[var(--text-color)] opacity-75 px-2 capitalize">
+                    <div className="flex-1 text-center text-base text-[var(--text-color)] px-2 capitalize">
                         {short.type || 'N/A'} {/* Display type or N/A if not available */}
                     </div>
-                    <div className="flex-1 text-right text-sm text-[var(--text-color)] opacity-75 pl-2">
+                    <div className="flex-1 text-right text-base text-[var(--text-color)] pl-2">
                         {short.year || 'N/A'} {/* Display year or N/A if not available */}
                     </div>
                 </Link>
