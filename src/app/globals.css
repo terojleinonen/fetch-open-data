@@ -13,6 +13,10 @@
   --map-marker-hover-fill-dark: #4a4a7c; /* Lighter desaturated blue/purple for hover */
   --map-marker-hover-stroke-dark: rgba(192, 192, 192, 0.5); /* Light grey with more opacity */
 
+  /* Alternating row colors for dark theme */
+  --row-bg-odd-dark: var(--background-color-dark); /* Same as main background */
+  --row-bg-even-dark: #111111; /* Slightly lighter than main background */
+
   /* Eery & Minimalistic Light Theme */
   --background-color-light: #f5f5f5; /* Off-white */
   --text-color-light: #333333; /* Dark grey */
@@ -23,6 +27,10 @@
   --map-marker-stroke-light: rgba(51, 51, 51, 0.2); /* Dark grey with transparency */
   --map-marker-hover-fill-light: #6a9292; /* Lighter desaturated cyan/teal for hover */
   --map-marker-hover-stroke-light: rgba(51, 51, 51, 0.5); /* Dark grey with more opacity */
+
+  /* Alternating row colors for light theme */
+  --row-bg-odd-light: var(--background-color-light); /* Same as main background */
+  --row-bg-even-light: #ebebeb; /* Slightly darker than main background */
 }
 
 /* Default to dark theme */
@@ -36,6 +44,8 @@ body {
   --map-marker-stroke: var(--map-marker-stroke-dark);
   --map-marker-hover-fill: var(--map-marker-hover-fill-dark);
   --map-marker-hover-stroke: var(--map-marker-hover-stroke-dark);
+  --row-bg-odd: var(--row-bg-odd-dark);
+  --row-bg-even: var(--row-bg-even-dark);
 
   color: var(--text-color);
   background: var(--background-color);
@@ -54,6 +64,8 @@ body {
     --map-marker-stroke: var(--map-marker-stroke-light);
     --map-marker-hover-fill: var(--map-marker-hover-fill-light);
     --map-marker-hover-stroke: var(--map-marker-hover-stroke-light);
+    --row-bg-odd: var(--row-bg-odd-light);
+    --row-bg-even: var(--row-bg-even-light);
 
     color: var(--text-color);
     background: var(--background-color);
@@ -153,4 +165,18 @@ body::before {
   .controls-container > input[type="text"] {
     flex-grow: 2; /* Make search input wider if desired */
   }
+}
+
+/* Styles for the shorts list */
+.shorts-list-container .short-item {
+  /* Base background color will be applied by :nth-child rules */
+  /* Other styles like padding, border are already on the element from ShortListClient.js */
+}
+
+.shorts-list-container .short-item:nth-child(odd) {
+  background-color: var(--row-bg-odd);
+}
+
+.shorts-list-container .short-item:nth-child(even) {
+  background-color: var(--row-bg-even);
 }
