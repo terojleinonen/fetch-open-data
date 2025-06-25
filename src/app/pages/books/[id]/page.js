@@ -50,25 +50,27 @@ export default async function BookDetailPage({ params }) {
       <div className="details-box">
         <div className="md:flex md:space-x-8">
           {/* Left Column: Cover Image */}
-          <div className="md:w-1/3 mb-6 md:mb-0">
-          {book.largeCoverImageUrl && book.largeCoverImageUrl !== "NO_COVER_AVAILABLE" ? (
-            <Image
-              src={book.largeCoverImageUrl}
-              alt={`Cover of ${book.Title}`}
-              width={400} // Max width for the image
-              height={600} // Corresponding height, adjust as needed for aspect ratio
-              className="rounded-lg shadow-lg object-contain w-full h-auto" // object-contain ensures full image is visible
-              priority // Prioritize loading this critical image
-            />
-          ) : (
-            <div className="w-full h-[450px] md:h-[500px] flex items-center justify-center bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400 rounded-lg shadow-md">
-              No Cover Available
+          <div className="md:w-1/3 mb-6 md:mb-0 flex justify-center"> {/* Added flex and justify-center */}
+            <div className="relative w-full max-w-xs md:max-w-sm h-auto aspect-[2/3]"> {/* Aspect ratio container */}
+              {book.largeCoverImageUrl && book.largeCoverImageUrl !== "NO_COVER_AVAILABLE" ? (
+                <Image
+                  src={book.largeCoverImageUrl}
+                  alt={`Cover of ${book.Title}`}
+                  fill // Fill the container
+                  sizes="(max-width: 768px) 80vw, (max-width: 1200px) 40vw, 30vw" // Responsive sizes
+                  className="rounded-lg shadow-lg object-contain" // object-contain ensures full image is visible
+                  priority // Prioritize loading this critical image
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400 rounded-lg shadow-md">
+                  No Cover Available
+                </div>
+              )}
             </div>
-          )}
-        </div>
+          </div>
 
         {/* Right Column: Book Details */}
-        <div className="md:w-2/3">
+        <div className="md:w-2/3 md:pl-8"> {/* Added padding for spacing from image */}
           <h1 className="text-3xl md:text-4xl font-bold text-[var(--accent-color)] mb-2">{book.Title}</h1>
           {book.subtitle && <p className="text-xl text-gray-600 dark:text-gray-400 mb-3">{book.subtitle}</p>}
 
