@@ -84,6 +84,7 @@ export default function BookDetailsPage() {
             No Image Available
           </div>
         )}
+        </div> {/* Closing the div for image container */}
         <div className="p-6 md:w-2/3">
           <h1 className="text-3xl md:text-4xl font-bold mb-3">{volumeInfo.title}</h1>
           {volumeInfo.subtitle && (
