@@ -67,6 +67,14 @@ body {
   --foreground: var(--text-color);
 }
 
+/* White box style for details pages */
+.details-box {
+  background-color: #ffffff; /* White background */
+  padding: 2rem; /* Adjust padding as needed */
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  color: #333333; /* Dark text color for contrast */
+}
 
 /* Link styles for the home page */
 .home-link {
