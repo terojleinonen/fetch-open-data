@@ -1,8 +1,16 @@
 import Request from "@/app/components/request";
 import BookListClient from "./BookListClient"; // Import the new client component
 
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
 export default async function Page() {
     console.log("[/pages/books/page.js] Server Component execution started.");
+    
+    // Artificial delay for testing Vercel timing issues
+    console.log("[/pages/books/page.js] Starting 2-second artificial delay...");
+    await delay(2000);
+    console.log("[/pages/books/page.js] Finished 2-second artificial delay.");
+
     let booksData;
     try {
       console.log("[/pages/books/page.js] Attempting to call Request('books').");
