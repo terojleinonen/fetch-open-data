@@ -20,9 +20,10 @@ export default async function ShortStoryDetailPage({ params }) {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">{story.title}</h1>
-      <p className="mb-2"><strong>Year:</strong> {story.year}</p>
-      <p className="mb-2"><strong>Type:</strong> {story.type}</p>
+      <div className="details-box">
+        <h1 className="text-3xl font-bold mb-4">{story.title}</h1>
+        <p className="mb-2"><strong>Year:</strong> {story.year}</p>
+        <p className="mb-2"><strong>Type:</strong> {story.type}</p>
       <p className="mb-2"><strong>Originally Published In:</strong> {story.originallyPublishedIn || 'N/A'}</p>
       <p className="mb-2"><strong>Collected In:</strong> {story.collectedIn || 'N/A'}</p>
       {filteredNotes.length > 0 && (
@@ -39,6 +40,7 @@ export default async function ShortStoryDetailPage({ params }) {
       <Link href="/pages/shorts" className="mt-6 inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded shadow">
         Back to Shorts List
       </Link>
+      </div>
     </div>
   );
 }

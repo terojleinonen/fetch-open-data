@@ -46,10 +46,11 @@ export default async function BookDetailPage({ params }) {
   };
 
   return (
-    <div className="container mx-auto p-4 md:p-8 bg-[var(--background-color)] text-[var(--text-color)]">
-      <div className="md:flex md:space-x-8">
-        {/* Left Column: Cover Image */}
-        <div className="md:w-1/3 mb-6 md:mb-0">
+    <div className="container mx-auto p-4 md:p-8">
+      <div className="details-box">
+        <div className="md:flex md:space-x-8">
+          {/* Left Column: Cover Image */}
+          <div className="md:w-1/3 mb-6 md:mb-0">
           {book.largeCoverImageUrl && book.largeCoverImageUrl !== "NO_COVER_AVAILABLE" ? (
             <Image
               src={book.largeCoverImageUrl}
@@ -176,6 +177,7 @@ export default async function BookDetailPage({ params }) {
         <Link href="/pages/books" className="inline-block bg-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] text-white font-semibold py-2 px-4 rounded shadow transition-colors">
           Back to Books List
         </Link>
+      </div>
       </div>
     </div>
   );
