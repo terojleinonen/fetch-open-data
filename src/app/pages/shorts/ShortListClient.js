@@ -84,9 +84,9 @@ export default function ShortListClient({ initialShorts }) {
 
       {/* Shorts List Display */}
       {/* Renders the list of filtered short stories */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="shorts-list-container flex flex-col gap-2"> {/* Changed grid to flex column and reduced gap for a list appearance */}
          {filteredShorts.map(short => (
-             <div key={short.id} className="p-4 bg-[var(--background-color)] rounded-lg shadow border border-[var(--accent-color)] hover:border-[var(--hover-accent-color)] transition-colors">
+             <div key={short.id} className="short-item p-4 rounded-lg shadow border border-[var(--accent-color)] hover:border-[var(--hover-accent-color)] transition-colors"> {/* Added short-item class for styling */}
                  <h2 className="text-xl font-semibold text-[var(--accent-color)] hover:text-[var(--hover-accent-color)]">
                      <Link href={`/pages/shorts/${short.id}`}>
                          {short.title}
