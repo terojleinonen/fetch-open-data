@@ -3,7 +3,7 @@
 import React, { useState, useMemo, Suspense } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-// import Image from 'next/image'; // Import Next.js Image component - REMOVED
+import Image from 'next/image'; // Import Next.js Image component
 import dynamic from 'next/dynamic';
 
 const FilterPopup = dynamic(() => import('./FilterPopup'), {
@@ -176,11 +176,13 @@ export default function BookListClient({ initialBooks }) {
                 {/* Book Cover Image */}
                 <div className="relative w-full h-72 flex items-center justify-center bg-neutral-700 overflow-hidden rounded-t-lg">
                   {book.coverImageUrl && book.coverImageUrl !== "NO_COVER_AVAILABLE" ? (
-                    <img
+                    <Image
                       src={book.coverImageUrl}
                       alt={`Cover of ${book.Title}`}
-                      className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105 rounded-t-lg"
-                      loading={index < 8 ? "eager" : "lazy"} // Approximate priority with eager loading for first few images
+                      fill
+                      style={{ objectFit: "contain" }}
+                      className="transition-transform duration-300 group-hover:scale-105 rounded-t-lg"
+                      priority={index < 8} // Approximate priority with eager loading for first few images
                     />
                   ) : (
                     <div
