@@ -3,6 +3,7 @@
 import React, { useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image'; // Import Next.js Image component
 
 /**
  * VillainListClient component for displaying and filtering a list of villains.
@@ -83,16 +84,43 @@ export default function VillainListClient({ initialVillains }) {
 
       {/* Villains List Display */}
       {/* Renders the list of filtered villains */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-         {filteredVillains.map(villain => (
-             <div key={villain.id} className="p-4 bg-[var(--background-color)] rounded-lg shadow border border-[var(--accent-color)] hover:border-[var(--hover-accent-color)] transition-colors">
-                 <h2 className="text-xl font-semibold text-[var(--accent-color)] hover:text-[var(--hover-accent-color)]">
-                     <Link href={`/pages/villains/${villain.id}`}>
-                         {villain.name}
-                     </Link>
-                 </h2>
-                 {/* Add any other brief details if desired, e.g., villain.status */}
-                 {villain.status && <p className="text-sm text-[var(--text-color)] opacity-75">Status: {villain.status}</p>}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {/* Responsive grid */}
+        {filteredVillains.map((villain, index) => (
+            <div key={villain.id} className="group bg-[var(--background-color)] rounded-lg shadow border border-[var(--accent-color)] hover:border-[var(--hover-accent-color)] transition-all duration-300 ease-in-out flex flex-col overflow-hidden h-full hover:shadow-lg"> {/* Added h-full for consistent height and hover effect, ADDED group CLASS */}
+                {/* Villain Image */}
+                <div className="relative w-full h-72 flex items-center justify-center bg-neutral-700 overflow-hidden rounded-t-lg">
+                  {villain.image_url ? (
+                    <Image
+                      src={villain.image_url}
+                      alt={`Image of ${villain.name}`}
+                      fill
+                      style={{ objectFit: "contain" }}
+                      className="transition-transform duration-300 group-hover:scale-105 rounded-t-lg"
+                      priority={index < 8} // Approximate priority with eager loading for first few images
+                    />
+                  ) : (
+                    <div
+                      className="w-full h-full flex items-center justify-center text-neutral-500 text-sm"
+                    >
+                      No image available
+                    </div>
+                  )}
+                </div>
+                {/* Villain Details */}
+                <div className="p-4 flex flex-col flex-grow"> {/* Added flex-grow to push content to bottom if needed */}
+                     <h2 className="text-lg font-semibold text-[var(--accent-color)] hover:text-[var(--hover-accent-color)] mb-1 truncate" title={villain.name}> {/* Truncate title */}
+                         <Link href={`/pages/villains/${villain.id}`}>
+                             {villain.name}
+                         </Link>
+                     </h2>
+                     {villain.status && <p className="text-xs text-gray-500 dark:text-gray-300 mb-1">Status: {villain.status}</p>}
+
+                     <div className="mt-auto pt-2"> {/* Pushes the link to the bottom */}
+                        <Link href={`/pages/villains/${villain.id}`} className="text-sm text-[var(--accent-color)] hover:text-[var(--hover-accent-color)] font-medium">
+                            View Details
+                        </Link>
+                     </div>
+                 </div>
              </div>
          ))}
      </div>
