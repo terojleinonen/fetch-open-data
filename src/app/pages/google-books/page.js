@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function GoogleBooksPage() {
   const [books, setBooks] = useState([]);
@@ -168,13 +169,15 @@ export default function GoogleBooksPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
         {displayedBooks.map((book) => (
           <div key={book.id} className="bg-neutral-800 bg-opacity-50 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out flex flex-col overflow-hidden border border-neutral-700 hover:border-[var(--accent-color-dark)]">
-            <Link href={`/pages/google-books/${book.id}`} className="flex flex-col flex-grow">
+            <Link href={`/pages/google-books/${book.id}`} className="flex flex-col flex-grow group"> {/* Added group class here */}
               <div className="relative w-full h-72 flex items-center justify-center bg-neutral-700 overflow-hidden">
                 {book.volumeInfo.imageLinks?.thumbnail ? (
-                  <img 
-                    src={book.volumeInfo.imageLinks.thumbnail} 
-                    alt={book.volumeInfo.title} 
-                    className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105" // group-hover might need parent with 'group'
+                  <Image
+                    src={book.volumeInfo.imageLinks.thumbnail}
+                    alt={book.volumeInfo.title}
+                    fill
+                    style={{ objectFit: "contain" }}
+                    className="transition-transform duration-300 group-hover:scale-105"
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center text-neutral-500 text-sm">

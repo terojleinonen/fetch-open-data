@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation'; // Correct hook for App Router
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function BookDetailsPage() {
   const params = useParams(); // Hook to access route parameters
@@ -69,17 +70,21 @@ export default function BookDetailsPage() {
       </Link>
 
       <div className="bg-white shadow-xl rounded-lg overflow-hidden md:flex">
-        {volumeInfo.imageLinks?.large || volumeInfo.imageLinks?.medium || volumeInfo.imageLinks?.thumbnail ? (
-          <img
-            src={volumeInfo.imageLinks?.large || volumeInfo.imageLinks?.medium || volumeInfo.imageLinks?.thumbnail}
-            alt={`Cover of ${volumeInfo.title}`}
-            className="w-full md:w-1/3 h-auto object-contain p-4"
-          />
-        ) : (
-          <div className="w-full md:w-1/3 h-96 bg-gray-200 flex items-center justify-center text-gray-500 p-4">
+        <div className="relative w-full md:w-1/3 h-96 p-4"> {/* Added position: relative and defined height */}
+          {volumeInfo.imageLinks?.large || volumeInfo.imageLinks?.medium || volumeInfo.imageLinks?.thumbnail ? (
+            <Image
+              src={volumeInfo.imageLinks?.large || volumeInfo.imageLinks?.medium || volumeInfo.imageLinks?.thumbnail}
+              alt={`Cover of ${volumeInfo.title}`}
+              fill
+              style={{ objectFit: "contain" }}
+              priority
+            />
+          ) : (
+            <div className="w-full h-full bg-gray-200 flex items-center justify-center text-gray-500"> {/* Adjusted to fill parent */}
             No Image Available
           </div>
         )}
+        </div> {/* Closing the div for image container */}
         <div className="p-6 md:w-2/3">
           <h1 className="text-3xl md:text-4xl font-bold mb-3">{volumeInfo.title}</h1>
           {volumeInfo.subtitle && (
