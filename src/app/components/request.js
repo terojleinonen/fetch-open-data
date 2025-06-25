@@ -25,7 +25,7 @@ export default async function Request(parameter, options = {}) {
 
         const fetchGoogleBookDetails = async (book) => {
           const bookIdentifier = book.Title || book.ISBN || 'Unknown Book (in fetchGoogleBookDetails)';
-
+          
           if (typeof book !== 'object' || book === null || (!book.ISBN && !book.Title)) {
             // console.warn(`[WARN] Request: Insufficient data for Google Books lookup: ${bookIdentifier}`);
             if (book && typeof book === 'object') {
@@ -57,7 +57,7 @@ export default async function Request(parameter, options = {}) {
               global.apiKeyWarningLogged = true;
             }
           }
-
+          
           try {
             const googleBooksResponse = await fetch(googleBooksApiUrl);
             if (!googleBooksResponse.ok) {
@@ -89,7 +89,7 @@ export default async function Request(parameter, options = {}) {
 
               book.coverImageUrl = finalCoverImageUrl.startsWith('http://') ? finalCoverImageUrl.replace(/^http:\/\//i, 'https://') : finalCoverImageUrl;
               book.largeCoverImageUrl = finalLargeCoverImageUrl.startsWith('http://') ? finalLargeCoverImageUrl.replace(/^http:\/\//i, 'https://') : finalLargeCoverImageUrl;
-
+              
               book.subtitle = volumeInfo.subtitle || book.subtitle;
               book.authors = volumeInfo.authors || book.authors;
               book.publisher = volumeInfo.publisher || book.Publisher;
@@ -129,7 +129,7 @@ export default async function Request(parameter, options = {}) {
                 booksProcessedCount++;
             }
         });
-
+        
         await Promise.all(processPromises);
         // console.log(`[INFO] Request: Google Books API calls completed for "${parameter}". ${booksProcessedCount} items processed.`);
       }
