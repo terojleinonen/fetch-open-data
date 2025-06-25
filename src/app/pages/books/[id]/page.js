@@ -3,10 +3,22 @@ import Link from 'next/link';
 import Image from 'next/image'; // Import Next.js Image component
 import Request from '@/app/components/request';
 
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
 export default async function BookDetailPage({ params }) {
+  console.log(`[/pages/books/[id]/page.js] Server Component for book ID ${params.id} started.`);
+
+  // Artificial delay for testing Vercel timing issues
+  console.log(`[/pages/books/[id]/page.js] Starting 2-second artificial delay for book ID ${params.id}...`);
+  await delay(2000);
+  console.log(`[/pages/books/[id]/page.js] Finished 2-second artificial delay for book ID ${params.id}.`);
+
+  console.log(`[/pages/books/[id]/page.js] Attempting to call Request('book/${params.id}').`);
   const bookData = await Request(`book/${params.id}`);
+  console.log(`[/pages/books/[id]/page.js] Call to Request('book/${params.id}') completed.`);
 
   if (!bookData || !bookData.data) {
+    console.warn(`[/pages/books/[id]/page.js] No bookData or bookData.data found for ID ${params.id}.`);
     return (
       <div className="container mx-auto p-4 py-8 text-center">
         <h1 className="text-3xl font-bold text-[var(--accent-color)] mb-4">Book Not Found</h1>
