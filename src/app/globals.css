@@ -47,6 +47,11 @@ body {
   --row-bg-odd: var(--row-bg-odd-dark);
   --row-bg-even: var(--row-bg-even-dark);
 
+  /* Details box colors for dark theme */
+  --details-box-bg: var(--row-bg-even-dark);
+  --details-box-text: var(--text-color-dark);
+  --details-box-shadow: rgba(255, 255, 255, 0.05); /* Subtle light shadow for dark mode */
+
   color: var(--text-color);
   background: var(--background-color);
   font-family: 'GeistMonoVF', 'GeistVF', Arial, Helvetica, sans-serif; /* Prioritize Geist fonts */
@@ -67,6 +72,11 @@ body {
     --row-bg-odd: var(--row-bg-odd-light);
     --row-bg-even: var(--row-bg-even-light);
 
+    /* Details box colors for light theme */
+    --details-box-bg: #ffffff;
+    --details-box-text: #333333;
+    --details-box-shadow: rgba(0, 0, 0, 0.1);
+
     color: var(--text-color);
     background: var(--background-color);
   }
@@ -77,15 +87,20 @@ body {
 :root {
   --background: var(--background-color);
   --foreground: var(--text-color);
+
+  /* Details box specific variables - default to light theme values */
+  --details-box-bg: #ffffff;
+  --details-box-text: #333333;
+  --details-box-shadow: rgba(0, 0, 0, 0.1);
 }
 
 /* White box style for details pages */
 .details-box {
-  background-color: #ffffff; /* White background */
+  background-color: var(--details-box-bg);
   padding: 2rem; /* Adjust padding as needed */
   border-radius: 0.5rem; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  color: #333333; /* Dark text color for contrast */
+  box-shadow: 0 4px 6px var(--details-box-shadow); /* Subtle shadow */
+  color: var(--details-box-text);
 }
 
 /* Link styles for the home page */
