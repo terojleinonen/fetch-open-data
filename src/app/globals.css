@@ -180,3 +180,22 @@ body::before {
 .shorts-list-container .short-item:nth-child(even) {
   background-color: var(--row-bg-even);
 }
+
+/* Mobile navigation menu styles */
+.mobile-menu-bg {
+  background-color: var(--background-color-dark); /* Default to dark theme background */
+}
+
+.mobile-menu-link-hover:hover {
+  background-color: var(--hover-accent-color-dark); /* Default to dark theme hover accent */
+}
+
+@media (prefers-color-scheme: light) {
+  .mobile-menu-bg {
+    background-color: var(--accent-color-light); /* Use light theme accent for menu background */
+  }
+
+  .mobile-menu-link-hover:hover {
+    background-color: var(--hover-accent-color-light); /* Use light theme hover accent for links */
+  }
+}
