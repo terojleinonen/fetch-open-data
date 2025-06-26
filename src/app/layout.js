@@ -29,8 +29,13 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ConditionalNavigationBar /> {/* Use ConditionalNavigationBar */}
-        {children}
+        <div className="flex flex-col md:flex-row min-h-screen">
+          <ConditionalNavigationBar /> {/* Use ConditionalNavigationBar */}
+          <main className="flex-grow p-4 md:p-8"> {/* Added padding for content area */}
+            <h1 className="text-3xl font-bold mb-4 hidden md:block">Google Books</h1> {/* Page Title */}
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );
