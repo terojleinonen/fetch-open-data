@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import ConditionalNavigationBar from "./components/ConditionalNavigationBar"; // Import ConditionalNavigationBar
+import PageTitle from "./components/PageTitle"; // Import PageTitle
 import "./globals.css";
 
 // Defines the Geist Sans font, loads it from a local file, and sets it up as a CSS variable.
@@ -32,7 +33,7 @@ export default function RootLayout({ children }) {
         <div className="flex flex-col md:flex-row min-h-screen">
           <ConditionalNavigationBar /> {/* Use ConditionalNavigationBar */}
           <main className="flex-grow p-4 md:p-8"> {/* Added padding for content area */}
-            <h1 className="text-3xl font-bold mb-4 hidden md:block">Google Books</h1> {/* Page Title */}
+            <PageTitle />
             {children}
           </main>
         </div>
