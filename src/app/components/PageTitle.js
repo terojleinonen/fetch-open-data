@@ -28,20 +28,15 @@ const PageTitle = () => {
   // We'll use a consistent style for all layout titles for now.
   // If specific pages need their own unique title styling like the original Google Books page,
   // that title should be part of the page's content itself rather than this layout component.
-  const titleStyle = pathname === '/pages/google-books'
-    ? "text-4xl md:text-5xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent-color-dark)] via-[var(--hover-accent-color-dark)] to-[var(--accent-color-dark)] py-2 hidden md:block"
-    : "text-3xl font-bold mb-4 hidden md:block";
+  // Applying consistent style for all titles, matching the "Google Books Explorer" style.
+  const titleStyle = "text-4xl md:text-5xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent-color-dark)] via-[var(--hover-accent-color-dark)] to-[var(--accent-color-dark)] py-2 hidden md:block";
 
-
-  // If the title is "Google Books Explorer", it's handled by its own page component.
-  // This PageTitle component is for the titles that appear in the main layout.
-  // Therefore, we will not render "Google Books Explorer" from here to avoid duplication.
-  if (title === 'Google Books Explorer') {
-      // The Google Books page has its own title within its component.
-      // We return null here to avoid duplicating it if this PageTitle component is placed in the global layout.
-      // Or, if the intent is to *replace* that one, this logic needs adjustment.
-      // For now, assuming we don't want to duplicate.
-      return null;
+  // The Google Books Explorer page has its own title.
+  // This component will render titles for other pages.
+  // If this PageTitle component is used in a layout that also includes the Google Books page,
+  // returning null for that specific path prevents duplicate titles.
+  if (pathname === '/pages/google-books') {
+    return null;
   }
 
   return (
