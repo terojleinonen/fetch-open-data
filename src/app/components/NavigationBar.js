@@ -14,8 +14,8 @@ const NavigationBar = () => {
 
   return (
     // On mobile (default): full width, flex-col for header and links.
-    // On desktop (md+): fixed width, flex-col, border, and padding for sidebar.
-    <nav className="bg-background md:w-64 md:flex-shrink-0 md:border-r md:border-gray-700 p-4 md:h-screen md:overflow-y-auto">
+    // On desktop (md+): fixed width, flex-col, and padding for sidebar.
+    <nav className="bg-background md:w-64 md:flex-shrink-0 p-4 md:h-screen md:overflow-y-auto">
       {/* Header: Contains site title and hamburger menu toggle. Visible on all screen sizes. */}
       <div className="flex items-center justify-between md:flex-col md:items-start">
         <div className="text-2xl font-bold mb-0 md:mb-4">Stephen King Universe</div>
