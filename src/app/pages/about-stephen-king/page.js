@@ -8,13 +8,18 @@ const AboutStephenKing = () => {
       <PageTitle title="About Stephen King" />
       <div className="flex flex-col md:flex-row gap-8">
         <div className="w-full md:w-1/3 flex-shrink-0">
-          <Image
-            src="/stephen-king-2024.jpg"
-            alt="Stephen King"
-            width={250}
-            height={375}
-            className="rounded-lg shadow-lg mx-auto md:mx-0 md:float-left md:mr-6 mb-4 md:mb-0"
-          />
+          <figure className="md:float-left md:mr-6 mb-4 md:mb-0">
+            <Image
+              src="/stephen-king-2024.jpg"
+              alt="Stephen King"
+              width={250}
+              height={375}
+              className="rounded-lg shadow-lg mx-auto md:mx-0"
+            />
+            <figcaption className="text-center text-sm mt-2 text-gray-600">
+              Stephen King in 2024. Image from Wikipedia.
+            </figcaption>
+          </figure>
         </div>
         <div className="flex-grow">
           <p className="text-lg leading-relaxed mb-4">
