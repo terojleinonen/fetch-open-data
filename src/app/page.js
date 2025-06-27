@@ -22,6 +22,10 @@ export default function Page() {
           {/* Link to the villains page */}
           <Link href="/pages/villains" className="home-link text-2xl mx-4">VILLAINS</Link> {/* Added text-2xl and mx-4 */}
         </div>
+        <div className="mt-4"> {/* Added margin-top for spacing between links */}
+          {/* Link to the about Stephen King page */}
+          <Link href="/pages/about-stephen-king" className="home-link text-2xl mx-4">ABOUT STEPHEN KING</Link> {/* Added text-2xl and mx-4 */}
+        </div>
       </div>
     </div>
   )
