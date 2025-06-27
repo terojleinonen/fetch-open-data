@@ -47,6 +47,9 @@ export default async function BookDetailPage({ params }) {
 
   return (
     <div className="container mx-auto p-4 md:p-8">
+      <Link href="/pages/books" className="text-blue-500 hover:underline mb-6 inline-block">
+          &larr; Back to Books List
+        </Link>
       <div className="details-box">
         <div className="md:flex md:space-x-8">
           {/* Left Column: Cover Image */}
@@ -175,10 +178,7 @@ export default async function BookDetailPage({ params }) {
         </div>
       )}
 
-      <div className="mt-10 text-center md:text-left">
-        <Link href="/pages/books" className="inline-block bg-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] text-white font-semibold py-2 px-4 rounded shadow transition-colors">
-          Back to Books List
-        </Link>
+      <div className="mt-10 text-center md:text-left">        
       </div>
       </div>
     </div>

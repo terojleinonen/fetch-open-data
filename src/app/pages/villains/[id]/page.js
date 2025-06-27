@@ -20,6 +20,9 @@ export default async function VillainDetailPage({ params }) {
 
   return (
     <div className="container mx-auto p-4">
+      <Link href="/pages/villains" className="text-blue-500 hover:underline mb-6 inline-block">
+            &larr; Back to Villains List
+          </Link>
       <div className="details-box">
         <div className="md:flex md:space-x-6"> {/* Flex container for medium screens and up */}
           {/* Image Placeholder (Left Column on MD+) */}
@@ -66,10 +69,7 @@ export default async function VillainDetailPage({ params }) {
           <VillainBookAppearances villainId={params.id} />
         </div>
 
-        <div className="mt-8 text-center md:text-left"> {/* Adjusted margin and text alignment for button */}
-          <Link href="/pages/villains" className="inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded shadow">
-            Back to Villains List
-          </Link>
+        <div className="mt-8 text-center md:text-left"> {/* Adjusted margin and text alignment for button */}          
         </div>
       </div>
     </div>

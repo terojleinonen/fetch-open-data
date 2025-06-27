@@ -20,6 +20,9 @@ export default async function ShortStoryDetailPage({ params }) {
 
   return (
     <div className="container mx-auto p-4">
+      <Link href="/pages/shorts" className="text-blue-500 hover:underline mb-6 inline-block">
+        &larr; Back to Shorts List
+      </Link>
       <div className="details-box">
         <h1 className="text-3xl font-bold mb-4">{story.title}</h1>
         <p className="mb-2"><strong>Year:</strong> {story.year}</p>
@@ -36,10 +39,7 @@ export default async function ShortStoryDetailPage({ params }) {
           </ul>
         </div>
       )}
-      <br />
-      <Link href="/pages/shorts" className="mt-6 inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded shadow">
-        Back to Shorts List
-      </Link>
+      <br />      
       </div>
     </div>
   );
