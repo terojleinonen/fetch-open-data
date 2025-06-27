@@ -33,4 +33,18 @@ describe('AboutStephenKing Page', () => {
     expect(screen.getByText(/His debut, Carrie \(1974\), established him in horror./)).toBeInTheDocument();
     expect(screen.getByText(/Among other awards, King has won the O. Henry Award/)).toBeInTheDocument();
   });
+
+  it('renders the Wikipedia link', () => {
+    render(<AboutStephenKing />);
+    const wikipediaLink = screen.getByRole('link', { name: /Stephen King Wikipedia page/i });
+    expect(wikipediaLink).toBeInTheDocument();
+    expect(wikipediaLink).toHaveAttribute('href', 'https://en.wikipedia.org/wiki/Stephen_King');
+  });
+
+  it('renders the Back to Home link', () => {
+    render(<AboutStephenKing />);
+    const homeLink = screen.getByRole('link', { name: /Back to Home/i });
+    expect(homeLink).toBeInTheDocument();
+    expect(homeLink).toHaveAttribute('href', '/');
+  });
 });
