@@ -31,6 +31,21 @@
   /* Alternating row colors for light theme */
   --row-bg-odd-light: var(--background-color-light); /* Same as main background */
   --row-bg-even-light: #ebebeb; /* Slightly darker than main background */
+
+  /* Page Title Gradient Colors */
+  --title-gradient-from-dark: var(--accent-color-dark);
+  --title-gradient-via-dark: var(--hover-accent-color-dark);
+  --title-gradient-to-dark: var(--accent-color-dark);
+
+  --title-gradient-from-light: var(--accent-color-light);
+  --title-gradient-via-light: var(--hover-accent-color-light);
+  --title-gradient-to-light: var(--accent-color-light);
+
+  /* Navigation Link Hover Background Colors */
+  --nav-link-hover-bg-dark: #374151; /* Corresponds to gray-700 */
+  --nav-link-hover-bg-light: #d1d5db; /* A lighter gray (gray-300) for less contrast but still eery */
+  --nav-link-focus-ring-dark: #ffffff;
+  --nav-link-focus-ring-light: #2563eb; /* A blue for visibility, similar to Tailwind's default focus ring */
 }
 
 /* Default to dark theme */
@@ -46,6 +61,15 @@ body {
   --map-marker-hover-stroke: var(--map-marker-hover-stroke-dark);
   --row-bg-odd: var(--row-bg-odd-dark);
   --row-bg-even: var(--row-bg-even-dark);
+
+  /* Page title gradient */
+  --title-gradient-from: var(--title-gradient-from-dark);
+  --title-gradient-via: var(--title-gradient-via-dark);
+  --title-gradient-to: var(--title-gradient-to-dark);
+
+  /* Navigation link hover */
+  --nav-link-hover-bg: var(--nav-link-hover-bg-dark);
+  --nav-link-focus-ring: var(--nav-link-focus-ring-dark);
 
   /* Details box colors for dark theme */
   --details-box-bg: var(--row-bg-even-dark);
@@ -71,6 +95,15 @@ body {
     --map-marker-hover-stroke: var(--map-marker-hover-stroke-light);
     --row-bg-odd: var(--row-bg-odd-light);
     --row-bg-even: var(--row-bg-even-light);
+
+    /* Page title gradient */
+    --title-gradient-from: var(--title-gradient-from-light);
+    --title-gradient-via: var(--title-gradient-via-light);
+    --title-gradient-to: var(--title-gradient-to-light);
+
+  /* Navigation link hover */
+  --nav-link-hover-bg: var(--nav-link-hover-bg-light);
+  --nav-link-focus-ring: var(--nav-link-focus-ring-light);
 
     /* Details box colors for light theme */
     --details-box-bg: #ffffff;
@@ -213,4 +246,9 @@ body::before {
   .mobile-menu-link-hover:hover {
     background-color: var(--hover-accent-color-light); /* Use light theme hover accent for links */
   }
+}
+
+/* Utility class for navigation link hover background */
+.nav-link-desktop-hover:hover {
+  background-color: var(--nav-link-hover-bg);
 }

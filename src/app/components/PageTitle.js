@@ -30,8 +30,8 @@ const PageTitle = () => {
   // We'll use a consistent style for all layout titles for now.
   // If specific pages need their own unique title styling like the original Google Books page,
   // that title should be part of the page's content itself rather than this layout component.
-  // Applying consistent style for all titles, matching the "Google Books Explorer" style.
-  const titleStyle = "text-4xl md:text-5xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent-color-dark)] via-[var(--hover-accent-color-dark)] to-[var(--accent-color-dark)] py-2 hidden md:block";
+  // Applying consistent style for all titles, using theme-aware CSS variables for the gradient.
+  const titleStyle = "text-4xl md:text-5xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-[var(--title-gradient-from)] via-[var(--title-gradient-via)] to-[var(--title-gradient-to)] py-2 hidden md:block";
 
   // The Google Books Explorer page has its own title.
   // This component will render titles for other pages.
