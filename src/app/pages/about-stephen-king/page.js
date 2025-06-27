@@ -5,9 +5,10 @@ import PageTitle from '@/app/components/PageTitle';
 const AboutStephenKing = () => {
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="flex flex-col md:flex-row gap-8">
-        <div className="w-full md:w-1/3 flex-shrink-0">
-          <figure className="md:float-left md:mr-6 mb-4 md:mb-0">
+      <div className="details-box"> {/* Added details-box class here */}
+        <div className="flex flex-col md:flex-row gap-8">
+          <div className="w-full md:w-1/3 flex-shrink-0">
+            <figure className="md:float-left md:mr-6 mb-4 md:mb-0">
             <Image
               src="/stephen-king-2024.jpg"
               alt="Stephen King"
@@ -32,6 +33,7 @@ const AboutStephenKing = () => {
           </p>
         </div>
       </div>
+      </div> {/* Closing details-box div */}
       <div className="mt-8 pt-4 border-t border-gray-300 text-center">
         <p className="text-md mb-2">
           For more information, visit the{' '}
