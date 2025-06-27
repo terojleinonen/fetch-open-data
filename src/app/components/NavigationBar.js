@@ -53,25 +53,25 @@ const NavigationBar = () => {
         } mobile-menu-bg flex-col items-stretch space-y-2 mt-4 p-4 rounded-md shadow-lg
            md:flex md:bg-transparent md:shadow-none md:mt-0 md:p-0 md:space-y-2 w-full`}
       >
-        <Link href="/" className={`text-xl font-extrabold py-2 px-4 rounded-md mobile-menu-link-hover md:hover:bg-gray-700 ${pathname === '/' ? 'underline' : ''}`} onClick={handleLinkClick}>
+        <Link href="/" className={`text-lg py-2 px-4 rounded-md mobile-menu-link-hover md:hover:bg-gray-700 ${pathname === '/' ? 'underline' : ''}`} onClick={handleLinkClick}>
           HOME
         </Link>
-        <Link href="/pages/books" className={`text-xl font-extrabold py-2 px-4 rounded-md mobile-menu-link-hover md:hover:bg-gray-700 ${pathname === '/pages/books' ? 'underline' : ''}`} onClick={handleLinkClick}>
+        <Link href="/pages/books" className={`text-lg py-2 px-4 rounded-md mobile-menu-link-hover md:hover:bg-gray-700 ${pathname === '/pages/books' ? 'underline' : ''}`} onClick={handleLinkClick}>
           BOOKS
         </Link>
-        <Link href="/pages/shorts" className={`text-xl font-extrabold py-2 px-4 rounded-md mobile-menu-link-hover md:hover:bg-gray-700 ${pathname === '/pages/shorts' ? 'underline' : ''}`} onClick={handleLinkClick}>
+        <Link href="/pages/shorts" className={`text-lg py-2 px-4 rounded-md mobile-menu-link-hover md:hover:bg-gray-700 ${pathname === '/pages/shorts' ? 'underline' : ''}`} onClick={handleLinkClick}>
           SHORTS
         </Link>
-        <Link href="/pages/villains" className={`text-xl font-extrabold py-2 px-4 rounded-md mobile-menu-link-hover md:hover:bg-gray-700 ${pathname === '/pages/villains' ? 'underline' : ''}`} onClick={handleLinkClick}>
+        <Link href="/pages/villains" className={`text-lg py-2 px-4 rounded-md mobile-menu-link-hover md:hover:bg-gray-700 ${pathname === '/pages/villains' ? 'underline' : ''}`} onClick={handleLinkClick}>
           VILLAINS
         </Link>
-        <Link href="/pages/google-books" className={`text-xl font-extrabold py-2 px-4 rounded-md mobile-menu-link-hover md:hover:bg-gray-700 ${pathname === '/pages/google-books' ? 'underline' : ''}`} onClick={handleLinkClick}>
+        <Link href="/pages/google-books" className={`text-lg  py-2 px-4 rounded-md mobile-menu-link-hover md:hover:bg-gray-700 ${pathname === '/pages/google-books' ? 'underline' : ''}`} onClick={handleLinkClick}>
           GOOGLE BOOKS
         </Link>
-        <Link href="/pages/about-stephen-king" className={`text-xl font-extrabold py-2 px-4 rounded-md mobile-menu-link-hover md:hover:bg-gray-700 ${pathname === '/pages/about-stephen-king' ? 'underline' : ''}`} onClick={handleLinkClick}>
+        <Link href="/pages/about-stephen-king" className={`text-lg py-2 px-4 rounded-md mobile-menu-link-hover md:hover:bg-gray-700 ${pathname === '/pages/about-stephen-king' ? 'underline' : ''}`} onClick={handleLinkClick}>
           ABOUT STEPHEN KING
         </Link>
-        <a href="https://stephenking.com" target="_blank" rel="noopener noreferrer" className="text-xl font-extrabold py-2 px-4 rounded-md mobile-menu-link-hover md:hover:bg-gray-700" onClick={handleLinkClick}>
+        <a href="https://stephenking.com" target="_blank" rel="noopener noreferrer" className="text-lg py-2 px-4 rounded-md mobile-menu-link-hover md:hover:bg-gray-700" onClick={handleLinkClick}>
           STEPHENKING.COM <span className="text-sm opacity-75">(Official Site)</span>
         </a>
       </div>
