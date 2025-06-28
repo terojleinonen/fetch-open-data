@@ -70,12 +70,12 @@ export default function ShortListClient({ initialShorts }) {
   };
 
   return (
-    <div className="px-8 py-12">
+    <div className="py-12 pr-8"> {/* Removed px-8, specifically pl-8 by only keeping pr-8 */}
 
       {/* Main layout: Flex container for sidebar and content */}
-      <div className="flex gap-6"> {/* Added gap for spacing between sidebar and content */}
-        {/* Left Sidebar for Type Filters ONLY */}
-        <div className="w-1/4"> {/* Adjust width as needed, e.g., w-1/5, w-1/3 */}
+      <div className="flex flex-col md:flex-row gap-6"> {/* Adjusted flex direction for mobile and gap */}
+        {/* Left Sidebar for Type Filters ONLY - Hidden on mobile, shown on md and up */}
+        <div className="hidden md:block md:w-1/4"> {/* Hidden on small, takes 1/4 width on medium+ */}
           <TypeFilterMenu
             uniqueTypes={uniqueTypes}
             selectedType={selectedType}
@@ -83,8 +83,8 @@ export default function ShortListClient({ initialShorts }) {
           />
         </div>
 
-        {/* Right Content Area for Search, Sort, and Shorts List */}
-        <div className="w-3/4"> {/* Adjust width as needed, e.g., w-4/5, w-2/3 */}
+        {/* Right Content Area for Search, Sort, and Shorts List - Takes full width on mobile, 3/4 on medium+ */}
+        <div className="w-full md:w-3/4"> {/* Full width on small, 3/4 on medium+ */}
           {/* Search and Sort Controls Container */}
           <div className="controls-container mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow flex flex-wrap gap-4 items-center justify-between">
             <input
