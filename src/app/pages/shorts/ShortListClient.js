@@ -3,6 +3,7 @@
 import React, { useState, useMemo} from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import TypeFilterMenu from '@/app/components/TypeFilterMenu'; // Import the new component
 
 /**
  * ShortListClient component for displaying and filtering a list of short stories.
@@ -73,58 +74,42 @@ export default function ShortListClient({ initialShorts }) {
 
       {/* Main layout: Flex container for sidebar and content */}
       <div className="flex gap-6"> {/* Added gap for spacing between sidebar and content */}
-        {/* Left Sidebar for Filters */}
+        {/* Left Sidebar for Type Filters ONLY */}
         <div className="w-1/4"> {/* Adjust width as needed, e.g., w-1/5, w-1/3 */}
-          {/* Search Input */}
-          <input
-              type="text"
-              id="search-shorts-input"
-              name="search-shorts-input"
-              placeholder="Search shorts..."
-              className="w-full mb-4 p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
+          <TypeFilterMenu
+            uniqueTypes={uniqueTypes}
+            selectedType={selectedType}
+            onSelectType={setSelectedType}
           />
-
-          {/* Type Filter Buttons */}
-          <div className="mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow">
-            <h3 className="text-md font-semibold mb-3 text-[var(--accent-color)]">Filter by Type:</h3>
-            <div className="flex flex-col items-start space-y-1">
-              {uniqueTypes.map(type => (
-                <button
-                  key={type}
-                  onClick={() => setSelectedType(type === 'All' ? '' : type)}
-                  className={`
-                    text-left w-full px-1 py-1 rounded text-sm
-                    ${(selectedType === type || (type === 'All' && !selectedType)) ? 'font-bold text-[var(--hover-accent-color)]' : 'text-[var(--text-color)]'}
-                    hover:text-[var(--hover-accent-color)]
-                    focus:outline-none
-                  `}
-                  style={{ textDecoration: 'none', background: 'none', border: 'none', cursor: 'pointer' }}
-                >
-                  {type.charAt(0).toUpperCase() + type.slice(1)} {/* Capitalize first letter */}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Sort Select */}
-          <select
-            id="sort-shorts-select"
-            name="sort-shorts-select"
-            className="w-full p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] shadow"
-            value={sortOrder}
-            onChange={(e) => setSortOrder(e.target.value)}
-          >
-            <option value="alphabetical">Alphabetical (A-Z)</option>
-            <option value="year_newest_to_oldest">Year (Newest to Oldest)</option>
-            <option value="year_oldest_to_newest">Year (Oldest to Newest)</option>
-          </select>
         </div>
 
-        {/* Right Content Area for Shorts List */}
+        {/* Right Content Area for Search, Sort, and Shorts List */}
         <div className="w-3/4"> {/* Adjust width as needed, e.g., w-4/5, w-2/3 */}
-          {/* Header Row */}
+          {/* Search and Sort Controls Container */}
+          <div className="controls-container mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow flex flex-wrap gap-4 items-center justify-between">
+            <input
+                type="text"
+                id="search-shorts-input"
+                name="search-shorts-input"
+                placeholder="Search shorts..."
+                className="w-full md:w-auto flex-grow p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <select
+              id="sort-shorts-select"
+              name="sort-shorts-select"
+              className="p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
+              value={sortOrder}
+              onChange={(e) => setSortOrder(e.target.value)}
+            >
+              <option value="alphabetical">Alphabetical (A-Z)</option>
+              <option value="year_newest_to_oldest">Year (Newest to Oldest)</option>
+              <option value="year_oldest_to_newest">Year (Oldest to Newest)</option>
+            </select>
+          </div>
+
+          {/* Header Row for List */}
           <div className="flex justify-between items-center p-4 text-[var(--accent-color)] text-lg font-bold">
             <div className="flex-1 text-left">Title</div>
             <div className="flex-1 text-center">Type</div>
