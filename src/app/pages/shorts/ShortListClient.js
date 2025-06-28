@@ -34,7 +34,27 @@ export default function ShortListClient({ initialShorts }) {
 
       return shortsArray;
     }, [initialShorts, searchTerm, sortOrder]);
-    
+
+  // Function to handle selecting and navigating to a random short story
+  const handleRandomShort = () => {
+    // Check if there are short stories available
+    if (initialShorts && initialShorts.data && initialShorts.data.length > 0) {
+      // Generate a random index
+      const randomIndex = Math.floor(Math.random() * initialShorts.data.length);
+      // Get the random short story
+      const randomShort = initialShorts.data[randomIndex];
+      // Check if the short story and its ID are valid
+      if (randomShort && randomShort.id) {
+        // Navigate to the short story's page
+        router.push(`/pages/shorts/${randomShort.id}`);
+      } else {
+        console.error("Failed to get random short story or ID is missing", randomShort);
+      }
+    } else {
+      console.error("No short stories available to select a random one from.");
+    }
+  };
+
   return (
     <div className="px-8 py-12">
 
@@ -60,38 +80,36 @@ export default function ShortListClient({ initialShorts }) {
           <option value="year_newest_to_oldest">Year (Newest to Oldest)</option>
           <option value="year_oldest_to_newest">Year (Oldest to Newest)</option>
         </select>
-        {/* TODO: Add a filter button if necessary */}
      </div>
+
+      {/* Header Row */}
+      <div className="flex justify-between items-center p-4 text-[var(--accent-color)] text-lg font-bold">
+        <div className="flex-1 text-left">Title</div>
+        <div className="flex-1 text-center">Type</div>
+        <div className="flex-1 text-right">Year</div>
+      </div>
+      {/* Separator Line */}
+      <hr className="mb-2 border-[var(--accent-color)] border-t-2" />
 
       {/* Shorts List Display */}
       {/* Renders the list of filtered short stories */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {/* Responsive grid */}
-        {filteredShorts.map(short => (
-          <div key={short.id} className="group bg-[var(--background-color)] rounded-lg shadow border border-[var(--accent-color)] hover:border-[var(--hover-accent-color)] transition-all duration-300 ease-in-out flex flex-col overflow-hidden h-full hover:shadow-lg">
-            {/* Placeholder for image or icon */}
-            <div className="relative w-full h-72 flex items-center justify-center bg-neutral-700 overflow-hidden rounded-t-lg">
-              <div className="w-full h-full flex items-center justify-center text-neutral-500 text-sm">
-                No Image
-              </div>
-            </div>
-            {/* Short Story Details */}
-            <div className="p-4 flex flex-col flex-grow">
-              <h2 className="text-lg font-semibold text-[var(--accent-color)] hover:text-[var(--hover-accent-color)] mb-1 truncate" title={short.title}>
-                <Link href={`/pages/shorts/${short.id}`}>
-                  {short.title}
+      <div className="shorts-list-container flex flex-col gap-2">
+         {filteredShorts.map(short => (
+             <div key={short.id} className="short-item p-4 rounded-lg shadow transition-colors"> {/* Removed border classes */}
+                <Link href={`/pages/shorts/${short.id}`} className="flex justify-between items-center w-full">
+                    <div className="flex-1 text-left text-base text-[var(--text-color)] truncate pr-2">
+                        {short.title}
+                    </div>
+                    <div className="flex-1 text-center text-base text-[var(--text-color)] px-2 capitalize">
+                        {short.type || 'N/A'} {/* Display type or N/A if not available */}
+                    </div>
+                    <div className="flex-1 text-right text-base text-[var(--text-color)] pl-2">
+                        {short.year || 'N/A'} {/* Display year or N/A if not available */}
+                    </div>
                 </Link>
-              </h2>
-              <p className="text-xs text-gray-500 dark:text-gray-300 mb-1">Type: {short.type || 'N/A'}</p>
-              <p className="text-xs text-gray-500 dark:text-gray-300 mb-1">Year: {short.year || 'N/A'}</p>
-              <div className="mt-auto pt-2">
-                <Link href={`/pages/shorts/${short.id}`} className="text-sm text-[var(--accent-color)] hover:text-[var(--hover-accent-color)] font-medium">
-                  View Details
-                </Link>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+             </div>
+         ))}
+     </div>
      {/* Display a message if no short stories match the search term */}
      {filteredShorts.length === 0 && searchTerm && (
          <p className="text-center text-[var(--text-color)] mt-4">No shorts found matching your search.</p>
