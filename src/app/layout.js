@@ -30,9 +30,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="flex flex-col md:flex-row min-h-screen">
+        <div className="flex flex-col min-h-screen"> {/* Always flex-col */}
           <ConditionalNavigationBar /> {/* Use ConditionalNavigationBar */}
-          <main className="flex-grow p-4 md:p-8"> {/* Added padding for content area */}
+          <main className="flex-grow p-4 md:p-8"> {/* Padding seems okay, might need adjustment after testing */}
             <PageTitle />
             {children}
           </main>
