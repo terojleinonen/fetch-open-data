@@ -43,7 +43,7 @@ export default function VillainListClient({ initialVillains }) {
   return (
     <div className="px-8 py-12">
 
-      {/* Search input and Sort button */}
+      {/* Search and Sort Controls */}
       <div className="controls-container mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow flex flex-wrap gap-4 items-center justify-between">
          <input
              type="text"
@@ -54,14 +54,19 @@ export default function VillainListClient({ initialVillains }) {
              value={searchTerm}
              onChange={(e) => setSearchTerm(e.target.value)}
          />
-        <button
-          onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
-          className="p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] hover:text-[var(--background-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] transition-colors md:w-auto w-full"
+        <select
+          id="sort-villains-select"
+          name="sort-villains-select"
+          className="p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
+          value={sortOrder}
+          onChange={(e) => setSortOrder(e.target.value)}
         >
-          Sort by Name ({sortOrder === 'asc' ? 'A-Z' : 'Z-A'})
-        </button>
+          <option value="none">Sort by...</option>
+          <option value="asc">Name (A-Z)</option>
+          <option value="desc">Name (Z-A)</option>
+        </select>
+        {/* TODO: Add a filter button if necessary */}
      </div>
-
       {/* Villains List Display */}
       {/* Renders the list of filtered villains */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {/* Responsive grid */}
