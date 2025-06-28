@@ -1,32 +1,55 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
-// Page component - Renders the main page with links to other sections.
+// Data for the links and summaries
+const pageLinks = [
+  { href: "/pages/books", title: "BOOKS", summary: "Explore a comprehensive list of Stephen King's novels." },
+  { href: "/pages/shorts", title: "SHORTS", summary: "Discover Stephen King's captivating short stories and novellas." },
+  { href: "/pages/villains", title: "VILLAINS", summary: "Delve into the dark world of Stephen King's most memorable villains." },
+  { href: "/pages/google-books", title: "GOOGLE BOOKS", summary: "Search and browse Stephen King's works available on Google Books." },
+  { href: "/pages/about-stephen-king", title: "ABOUT STEPHEN KING", summary: "Learn more about the life and career of the master of horror." },
+  { href: "https://stephenking.com", title: "STEPHENKING.COM", summary: "Visit the official website for the latest news and updates.", isExternal: true },
+];
+
+// Page component - Renders the main page with title and navigation links with summaries.
 export default function Page() {
   return (
-    <div className="flex justify-center items-center h-screen bg-transparent">
-      <div className="text-center"> {/* Changed text-4xl to text-center for better alignment of title and links */}
-        <div> {/* Removed text-6xl from here */}
-          <h1 className="text-6xl text-[var(--text-color)]">
-            Stephen King Universe
-          </h1>
-        </div>
-        <div className="mt-8"> {/* Added margin-top for spacing between title and links */}
-          {/* Link to the books page */}
-          <Link href="/pages/books" className="home-link text-2xl mx-4">BOOKS</Link> {/* Added text-2xl and mx-4 for better appearance */}
-        </div>
-        <div className="mt-4"> {/* Added margin-top for spacing between links */}
-          {/* Link to the shorts page */}
-          <Link href="/pages/shorts" className="home-link text-2xl mx-4">SHORTS</Link> {/* Added text-2xl and mx-4 */}
-        </div>
-        <div className="mt-4"> {/* Added margin-top for spacing between links */}
-          {/* Link to the villains page */}
-          <Link href="/pages/villains" className="home-link text-2xl mx-4">VILLAINS</Link> {/* Added text-2xl and mx-4 */}
-        </div>
-        <div className="mt-4"> {/* Added margin-top for spacing between links */}
-          {/* Link to the about Stephen King page */}
-          <Link href="/pages/about-stephen-king" className="home-link text-2xl mx-4">ABOUT STEPHEN KING</Link> {/* Added text-2xl and mx-4 */}
+    <div className="flex flex-col items-center min-h-screen bg-transparent py-10 px-4">
+      {/* Main Title */}
+      <div className="text-center mb-12">
+        <h1 className="text-6xl text-[var(--text-color)]">
+          Stephen King Universe
+        </h1>
+      </div>
+
+      {/* Links Container */}
+      <div className="w-full max-w-2xl"> {/* Max width for better readability on large screens */}
+        <div className="space-y-6"> {/* Vertical spacing between link items */}
+          {pageLinks.map((link) => (
+            <div key={link.title} className="flex flex-col items-start"> {/* Each link item: title + summary */}
+              {link.isExternal ? (
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="home-link text-2xl font-semibold text-[var(--link-color)] hover:text-[var(--link-hover-color)] hover:underline"
+                >
+                  {link.title} <span className="text-sm opacity-75">(Official Site)</span>
+                </a>
+              ) : (
+                <Link
+                  href={link.href}
+                  className="home-link text-2xl font-semibold text-[var(--link-color)] hover:text-[var(--link-hover-color)] hover:underline"
+                >
+                  {link.title}
+                </Link>
+              )}
+              <p className="text-md text-gray-400 mt-1 ml-0.5"> {/* Summary text style, left-aligned */}
+                {link.summary}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
-  )
+  );
 }
