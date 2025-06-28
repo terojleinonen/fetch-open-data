@@ -42,10 +42,16 @@
   --title-gradient-to-light: var(--accent-color-light);
 
   /* Navigation Link Hover Background Colors */
-  --nav-link-hover-bg-dark: #374151; /* Corresponds to gray-700 */
-  --nav-link-hover-bg-light: #d1d5db; /* A lighter gray (gray-300) for less contrast but still eery */
   --nav-link-focus-ring-dark: #ffffff;
   --nav-link-focus-ring-light: #2563eb; /* A blue for visibility, similar to Tailwind's default focus ring */
+
+  /* Specific Nav Bar Background Grays -- REMOVED */
+  /* --nav-background-dark: #374151; */ /* gray-700 */
+  /* --nav-background-light: #d1d5db; */ /* gray-300 */
+
+  /* Green for hover (reinstated/ensured) */
+  --eery-green-dark: #3B8C6E;
+  --eery-green-light: #4AAB88;
 }
 
 /* Default to dark theme */
@@ -68,7 +74,7 @@ body {
   --title-gradient-to: var(--title-gradient-to-dark);
 
   /* Navigation link hover */
-  --nav-link-hover-bg: var(--nav-link-hover-bg-dark);
+  --nav-link-hover-bg: var(--eery-green-dark); /* Green for dark theme hover */
   --nav-link-focus-ring: var(--nav-link-focus-ring-dark);
 
   /* Details box colors for dark theme */
@@ -102,7 +108,7 @@ body {
     --title-gradient-to: var(--title-gradient-to-light);
 
   /* Navigation link hover */
-  --nav-link-hover-bg: var(--nav-link-hover-bg-light);
+  --nav-link-hover-bg: var(--eery-green-light); /* Green for light theme hover */
   --nav-link-focus-ring: var(--nav-link-focus-ring-light);
 
     /* Details box colors for light theme */
@@ -231,20 +237,22 @@ body::before {
 
 /* Mobile navigation menu styles */
 .mobile-menu-bg {
-  background-color: var(--background-color-dark); /* Default to dark theme background */
+  /* Updated to use the page background color */
+  background-color: var(--background-color-dark);
 }
 
 .mobile-menu-link-hover:hover {
-  background-color: var(--hover-accent-color-dark); /* Default to dark theme hover accent */
+  background-color: var(--nav-link-hover-bg); /* Use the general nav link hover (green) */
 }
 
 @media (prefers-color-scheme: light) {
   .mobile-menu-bg {
-    background-color: var(--accent-color-light); /* Use light theme accent for menu background */
+    /* Updated to use the page background color for light theme */
+    background-color: var(--background-color-light);
   }
 
   .mobile-menu-link-hover:hover {
-    background-color: var(--hover-accent-color-light); /* Use light theme hover accent for links */
+    background-color: var(--nav-link-hover-bg); /* Use the general nav link hover (green) for light theme */
   }
 }
 
@@ -252,3 +260,10 @@ body::before {
 .nav-link-desktop-hover:hover {
   background-color: var(--nav-link-hover-bg);
 }
+
+/* Custom class for the navigation bar background -- REMOVED */
+/* .bg-custom-nav-gray {
+  background-color: var(--nav-background-dark); / Default to dark theme nav background /
+} */
+
+/* Duplicated @media (prefers-color-scheme: light) block removed from here */
