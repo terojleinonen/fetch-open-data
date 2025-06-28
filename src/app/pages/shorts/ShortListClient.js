@@ -3,6 +3,7 @@
 import React, { useState, useMemo} from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import TypeFilterMenu from '@/app/components/TypeFilterMenu'; // Import the new component
 
 /**
  * ShortListClient component for displaying and filtering a list of short stories.
@@ -15,7 +16,16 @@ export default function ShortListClient({ initialShorts }) {
   const [searchTerm, setSearchTerm] = useState('');
   // State variable for the sort order
   const [sortOrder, setSortOrder] = useState('alphabetical');
+  // State variable for the selected type
+  const [selectedType, setSelectedType] = useState('');
   const router = useRouter();
+
+  // Memoized variable for unique types
+  const uniqueTypes = useMemo(() => {
+    if (!initialShorts || !initialShorts.data) return [];
+    const types = new Set(initialShorts.data.map(short => short.type).filter(Boolean));
+    return ['All', ...Array.from(types)];
+  }, [initialShorts]);
 
   // Memoized variable for filtered short stories based on the search term and sort order
   const filteredShorts = useMemo(() => {
@@ -23,6 +33,10 @@ export default function ShortListClient({ initialShorts }) {
       let shortsArray = initialShorts.data.filter(short =>
         short.title.toLowerCase().includes(searchTerm.toLowerCase())
       );
+
+      if (selectedType && selectedType !== 'All') {
+        shortsArray = shortsArray.filter(short => short.type === selectedType);
+      }
 
       if (sortOrder === 'alphabetical') {
         shortsArray.sort((a, b) => a.title.localeCompare(b.title));
@@ -33,7 +47,7 @@ export default function ShortListClient({ initialShorts }) {
       }
 
       return shortsArray;
-    }, [initialShorts, searchTerm, sortOrder]);
+    }, [initialShorts, searchTerm, sortOrder, selectedType]);
 
   // Function to handle selecting and navigating to a random short story
   const handleRandomShort = () => {
@@ -58,62 +72,81 @@ export default function ShortListClient({ initialShorts }) {
   return (
     <div className="px-8 py-12">
 
-      {/* Search and Sort Controls */}
-      <div className="controls-container mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow flex flex-wrap gap-4 items-center justify-between">
-         <input
-             type="text"
-             id="search-shorts-input"
-             name="search-shorts-input"
-             placeholder="Search shorts..."
-             className="w-full md:w-auto flex-grow p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
-             value={searchTerm}
-             onChange={(e) => setSearchTerm(e.target.value)}
-         />
-         <select
-          id="sort-shorts-select"
-          name="sort-shorts-select"
-          className="p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
-          value={sortOrder}
-          onChange={(e) => setSortOrder(e.target.value)}
-        >
-          <option value="alphabetical">Alphabetical (A-Z)</option>
-          <option value="year_newest_to_oldest">Year (Newest to Oldest)</option>
-          <option value="year_oldest_to_newest">Year (Oldest to Newest)</option>
-        </select>
-     </div>
+      {/* Main layout: Flex container for sidebar and content */}
+      <div className="flex gap-6"> {/* Added gap for spacing between sidebar and content */}
+        {/* Left Sidebar for Type Filters ONLY */}
+        <div className="w-1/4"> {/* Adjust width as needed, e.g., w-1/5, w-1/3 */}
+          <TypeFilterMenu
+            uniqueTypes={uniqueTypes}
+            selectedType={selectedType}
+            onSelectType={setSelectedType}
+          />
+        </div>
 
-      {/* Header Row */}
-      <div className="flex justify-between items-center p-4 text-[var(--accent-color)] text-lg font-bold">
-        <div className="flex-1 text-left">Title</div>
-        <div className="flex-1 text-center">Type</div>
-        <div className="flex-1 text-right">Year</div>
+        {/* Right Content Area for Search, Sort, and Shorts List */}
+        <div className="w-3/4"> {/* Adjust width as needed, e.g., w-4/5, w-2/3 */}
+          {/* Search and Sort Controls Container */}
+          <div className="controls-container mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow flex flex-wrap gap-4 items-center justify-between">
+            <input
+                type="text"
+                id="search-shorts-input"
+                name="search-shorts-input"
+                placeholder="Search shorts..."
+                className="w-full md:w-auto flex-grow p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <select
+              id="sort-shorts-select"
+              name="sort-shorts-select"
+              className="p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
+              value={sortOrder}
+              onChange={(e) => setSortOrder(e.target.value)}
+            >
+              <option value="alphabetical">Alphabetical (A-Z)</option>
+              <option value="year_newest_to_oldest">Year (Newest to Oldest)</option>
+              <option value="year_oldest_to_newest">Year (Oldest to Newest)</option>
+            </select>
+          </div>
+
+          {/* Header Row for List */}
+          <div className="flex justify-between items-center p-4 text-[var(--accent-color)] text-lg font-bold">
+            <div className="flex-1 text-left">Title</div>
+            <div className="flex-1 text-center">Type</div>
+            <div className="flex-1 text-right">Year</div>
+          </div>
+          {/* Separator Line */}
+          <hr className="mb-2 border-[var(--accent-color)] border-t-2" />
+
+          {/* Shorts List Display */}
+          {/* Renders the list of filtered short stories */}
+          <div className="shorts-list-container flex flex-col gap-2">
+            {filteredShorts.map(short => (
+                <div key={short.id} className="short-item p-4 rounded-lg shadow transition-colors"> {/* Removed border classes */}
+                  <Link href={`/pages/shorts/${short.id}`} className="flex justify-between items-center w-full">
+                      <div className="flex-1 text-left text-base text-[var(--text-color)] truncate pr-2">
+                          {short.title}
+                      </div>
+                      <div className="flex-1 text-center text-base text-[var(--text-color)] px-2 capitalize">
+                          {short.type || 'N/A'} {/* Display type or N/A if not available */}
+                      </div>
+                      <div className="flex-1 text-right text-base text-[var(--text-color)] pl-2">
+                          {short.year || 'N/A'} {/* Display year or N/A if not available */}
+                      </div>
+                  </Link>
+                </div>
+            ))}
+          </div>
+          {/* Display a message if no short stories match the search term */}
+          {filteredShorts.length === 0 && searchTerm && (
+              <p className="text-center text-[var(--text-color)] mt-4">No shorts found matching your search.</p>
+          )}
+          {/* Display a message if no short stories match the type filter */}
+          {filteredShorts.length === 0 && selectedType && selectedType !== 'All' && (
+            <p className="text-center text-[var(--text-color)] mt-4">No shorts found for the type &apos;{selectedType}&apos;.</p>
+          )}
+        </div>
       </div>
-      {/* Separator Line */}
-      <hr className="mb-2 border-[var(--accent-color)] border-t-2" />
-
-      {/* Shorts List Display */}
-      {/* Renders the list of filtered short stories */}
-      <div className="shorts-list-container flex flex-col gap-2">
-         {filteredShorts.map(short => (
-             <div key={short.id} className="short-item p-4 rounded-lg shadow transition-colors"> {/* Removed border classes */}
-                <Link href={`/pages/shorts/${short.id}`} className="flex justify-between items-center w-full">
-                    <div className="flex-1 text-left text-base text-[var(--text-color)] truncate pr-2">
-                        {short.title}
-                    </div>
-                    <div className="flex-1 text-center text-base text-[var(--text-color)] px-2 capitalize">
-                        {short.type || 'N/A'} {/* Display type or N/A if not available */}
-                    </div>
-                    <div className="flex-1 text-right text-base text-[var(--text-color)] pl-2">
-                        {short.year || 'N/A'} {/* Display year or N/A if not available */}
-                    </div>
-                </Link>
-             </div>
-         ))}
-     </div>
-     {/* Display a message if no short stories match the search term */}
-     {filteredShorts.length === 0 && searchTerm && (
-         <p className="text-center text-[var(--text-color)] mt-4">No shorts found matching your search.</p>
-     )}
       <div className="text-center mt-12"><Link href="/" className="home-link text-xl">Return to Home</Link></div>
     </div>
   );
