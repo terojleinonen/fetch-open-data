@@ -15,11 +15,11 @@ export default function Page() {
   return (
     <div className="flex flex-col items-center min-h-screen bg-transparent py-10 px-4">
       {/* Main Title */}
-      <div className="text-center mb-12">
+      {/*<div className="text-center">
         <h1 className="text-6xl text-[var(--text-color)]">
           Stephen King Universe
         </h1>
-      </div>
+      </div>*/}
 
       {/* Links Container */}
       <div className="w-full max-w-2xl"> {/* Max width for better readability on large screens */}
