@@ -158,7 +158,7 @@ export default function ShortListClient({ initialShorts }) {
           )}
           {/* Display a message if no short stories match the type filter */}
           {filteredShorts.length === 0 && selectedType && selectedType !== 'All' && (
-            <p className="text-center text-[var(--text-color)] mt-4">No shorts found for the type '{selectedType}'.</p>
+            <p className="text-center text-[var(--text-color)] mt-4">No shorts found for the type &apos;{selectedType}&apos;.</p>
           )}
         </div>
       </div>
