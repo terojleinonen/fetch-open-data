@@ -94,21 +94,21 @@ describe('GoogleBooksPage', () => {
       fireEvent.change(searchInput, { target: { value: 'Specific Book' } });
     });
     expect(searchInput).toHaveValue('Specific Book');
-
+    
     await act(async () => {
         fireEvent.click(searchButton);
     });
     expect(sessionStorage.setItem).toHaveBeenCalledWith('googleBooks_searchQuery', JSON.stringify('Specific Book'));
     // We are no longer reliably testing if fetch is called immediately after this state change.
   });
-
+  
   test('loads initial language from sessionStorage if present', async () => {
     // Clear any previous fetch calls from other tests or beforeEach
     fetch.mockClear();
     sessionStorage.getItem.mockReturnValueOnce(JSON.stringify('de'));
 
     render(<GoogleBooksPage />);
-
+    
     await waitFor(() => expect(screen.queryByText('Loading books...')).not.toBeInTheDocument());
     await waitFor(() => expect(screen.getByRole('combobox', { name: 'Filter by Language' })).toHaveValue('de'));
     expect(sessionStorage.getItem).toHaveBeenCalledWith('googleBooks_language');
