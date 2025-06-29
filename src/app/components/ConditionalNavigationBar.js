@@ -6,6 +6,10 @@ import NavigationBar from '@/app/components/NavigationBar';
 export default function ConditionalNavigationBar() {
   const pathname = usePathname();
 
-  // Always render NavigationBar
+  // Only render NavigationBar if the pathname is not "/"
+  if (pathname === '/') {
+    return null;
+  }
+
   return <NavigationBar />;
 }
