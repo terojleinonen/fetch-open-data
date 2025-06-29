@@ -15,7 +15,7 @@ export default function GoogleBooksPage() {
   // Search States
   const [searchInputText, setSearchInputText] = useState(''); // For direct input binding
   const [searchQuery, setSearchQuery] = useState(''); // Value for API query, set on search execution
-  const [language, setLanguage] = useState(''); // Language for API query
+  // const [language, setLanguage] = useState(''); // Language for API query - REMOVED, will be passed from advanced search or not used
 
   // Pagination States
   const [currentPage, setCurrentPage] = useState(0); // 0-indexed for startIndex for API
@@ -51,10 +51,10 @@ export default function GoogleBooksPage() {
       const savedCurrentPage = sessionStorage.getItem('googleBooks_currentPage');
       if (savedCurrentPage) setCurrentPage(JSON.parse(savedCurrentPage));
     }
-
-    // Language is independent of advanced search term, load from session
-    const savedLanguage = sessionStorage.getItem('googleBooks_language');
-    if (savedLanguage) setLanguage(JSON.parse(savedLanguage));
+    
+    // Language is independent of advanced search term, load from session - REMOVED
+    // const savedLanguage = sessionStorage.getItem('googleBooks_language');
+    // if (savedLanguage) setLanguage(JSON.parse(savedLanguage));
 
   }, []); // Empty dependency array means this runs once on mount
 
@@ -74,17 +74,25 @@ export default function GoogleBooksPage() {
     sessionStorage.setItem('googleBooks_currentPage', JSON.stringify(currentPage));
   }, [currentPage]);
 
-  useEffect(() => {
-    sessionStorage.setItem('googleBooks_language', JSON.stringify(language));
-  }, [language]);
+  // useEffect(() => { // REMOVED language saving to session storage
+  //   sessionStorage.setItem('googleBooks_language', JSON.stringify(language));
+  // }, [language]);
 
 
   // This useEffect will be responsible for fetching books from the API
   useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const advLang = params.get('adv_lang');
+    const advFilter = params.get('adv_filter');
+    const advPrintType = params.get('adv_printType');
+    const advOrderBy = params.get('adv_orderBy');
+    const advInPublisher = params.get('adv_inPublisher');
+
+
     // Only fetch if not loading initial state from session or if critical states are defined
     // This check helps prevent fetching with default/empty states if session state is pending
     // However, the initial load from session is synchronous if sessionStorage is fast.
-    // The main fetch depends on searchQuery, currentPage. // sortConfig.key removed
+    // The main fetch depends on searchQuery, currentPage. 
     // If these are correctly initialized from session, the first fetch will use them.
 
     const fetchBooksFromAPI = async () => {
@@ -92,21 +100,36 @@ export default function GoogleBooksPage() {
       setError(null);
       
       let apiQueryParts = ['inauthor:stephen king'];
-      // Ensure searchQuery is a string before calling trim, especially if loaded from session as null
       const currentSearchQuery = typeof searchQuery === 'string' ? searchQuery : '';
-      if (currentSearchQuery.trim() !== '') {
-        apiQueryParts.push(`intitle:${currentSearchQuery.trim()}`);
+      
+      // Prefer advanced search term if it came from URL, otherwise use current searchQuery
+      const titleQuery = params.get('adv_searchTerm') || currentSearchQuery;
+
+      if (titleQuery.trim() !== '') {
+        apiQueryParts.push(`intitle:${titleQuery.trim()}`);
+      }
+      if (advInPublisher && advInPublisher.trim() !== '') {
+        apiQueryParts.push(`inpublisher:${advInPublisher.trim()}`);
       }
       
       const queryString = apiQueryParts.join('+');
       const startIndex = currentPage * booksPerPage;
-      // Always orderBy relevance, or whatever Google's default is if not specified.
-      // The `orderBy=relevance` is often the default if no specific `orderBy` is given for general queries.
-      let apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(queryString)}&startIndex=${startIndex}&maxResults=${booksPerPage}&orderBy=relevance`;
+      
+      let apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(queryString)}&startIndex=${startIndex}&maxResults=${booksPerPage}`;
 
-      if (language) {
-        apiUrl += `&langRestrict=${language}`;
+      // Apply advanced parameters from URL
+      if (advLang) {
+        apiUrl += `&langRestrict=${advLang}`;
       }
+      if (advFilter) {
+        apiUrl += `&filter=${advFilter}`;
+      }
+      if (advPrintType) {
+        apiUrl += `&printType=${advPrintType}`;
+      }
+      // Use advOrderBy if present, otherwise default to relevance (API default or explicitly set)
+      apiUrl += `&orderBy=${advOrderBy || 'relevance'}`;
+
 
       try {
         const response = await fetch(apiUrl);
@@ -126,7 +149,7 @@ export default function GoogleBooksPage() {
     };
 
     fetchBooksFromAPI();
-  }, [searchQuery, currentPage, language]);
+  }, [searchQuery, currentPage, typeof window !== 'undefined' ? window.location.search : '']); // Re-fetch if URL query params change
 
 
   const handleNextPage = () => {
@@ -195,29 +218,8 @@ export default function GoogleBooksPage() {
               </button>
             </div>
 
-            {/* Language Dropdown */}
-            <div className="flex-shrink-0 sm:w-auto w-full"> {/* Control width on small screens */}
-              <select
-                id="language-select"
-                value={language}
-                onChange={(e) => {
-                  setLanguage(e.target.value);
-                  setCurrentPage(0); // Reset to first page on language change
-                }}
-                className={`${inputBaseClasses} p-3 text-base focus:ring-2 w-full`} // Ensure w-full for responsiveness
-                aria-label="Filter by Language" // Added aria-label for accessibility as visual label is removed
-              >
-                <option value="">All Languages</option>
-                <option value="en">English</option>
-                <option value="es">Spanish</option>
-                <option value="fr">French</option>
-                <option value="de">German</option>
-                <option value="ja">Japanese</option>
-                <option value="it">Italian</option>
-                <option value="pt">Portuguese</option>
-                {/* Add more languages as needed */}
-              </select>
-            </div>
+            {/* Language Dropdown - REMOVED */}
+            {/* <div className="flex-shrink-0 sm:w-auto w-full"> ... </div> */}
           </div>
           <div className="text-center mt-3"> {/* Increased margin-top for better spacing */}
             <Link href="/pages/google-books/advanced-search" className="inline-block px-4 py-2 text-sm font-medium text-[var(--accent-color-dark)] border border-[var(--accent-color-dark)] rounded-md hover:bg-[var(--accent-color-dark)] hover:text-white transition-colors duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--accent-color-dark)] focus:ring-offset-[var(--background-color-dark)]">
