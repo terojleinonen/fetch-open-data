@@ -39,22 +39,24 @@ describe('VillainListClient', () => {
 
   it('sorts villains alphabetically (A-Z)', () => {
     render(<VillainListClient initialVillains={mockVillains} />);
-    const sortButton = screen.getByText('Sort by Name (Z-A)'); // Initial state is 'none', effectively Z-A for the first click
-    fireEvent.click(sortButton); // Sort A-Z
+    const sortSelect = screen.getByRole('combobox');
+    fireEvent.change(sortSelect, { target: { value: 'asc' } }); // Select 'Name (A-Z)'
 
-    const villainLinks = screen.getAllByRole('link', { name: /^(?!Return to Home)/i });
-    const villains = villainLinks.map(link => link.textContent);
+    const allLinks = screen.getAllByRole('link', { name: /^(?!Return to Home)/i });
+    const villainNameLinks = allLinks.filter(link => link.textContent !== 'View Details');
+    const villains = villainNameLinks.map(link => link.textContent);
     expect(villains).toEqual(['Bane', 'Joker', 'Penguin', 'Riddler']);
   });
 
   it('sorts villains alphabetically (Z-A)', () => {
     render(<VillainListClient initialVillains={mockVillains} />);
-    const sortButton = screen.getByText('Sort by Name (Z-A)'); // Initial state is 'none', effectively Z-A for the first click
-    fireEvent.click(sortButton); // Sort A-Z
-    fireEvent.click(sortButton); // Sort Z-A
+    const sortSelect = screen.getByRole('combobox');
+    // Initial sort is 'none'. To sort Z-A, we change the select value to 'desc'.
+    fireEvent.change(sortSelect, { target: { value: 'desc' } });
 
-    const villainLinks = screen.getAllByRole('link', { name: /^(?!Return to Home)/i });
-    const villains = villainLinks.map(link => link.textContent);
+    const allLinks = screen.getAllByRole('link', { name: /^(?!Return to Home)/i });
+    const villainNameLinks = allLinks.filter(link => link.textContent !== 'View Details');
+    const villains = villainNameLinks.map(link => link.textContent);
     expect(villains).toEqual(['Riddler', 'Penguin', 'Joker', 'Bane']);
   });
 
