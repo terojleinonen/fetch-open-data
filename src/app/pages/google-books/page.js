@@ -15,6 +15,7 @@ export default function GoogleBooksPage() {
   // Search States
   const [searchInputText, setSearchInputText] = useState(''); // For direct input binding
   const [searchQuery, setSearchQuery] = useState(''); // Value for API query, set on search execution
+  const [language, setLanguage] = useState(''); // Language for API query
 
   // Pagination States
   const [currentPage, setCurrentPage] = useState(0); // 0-indexed for startIndex for API
@@ -33,11 +34,16 @@ export default function GoogleBooksPage() {
 
     const savedCurrentPage = sessionStorage.getItem('googleBooks_currentPage');
     if (savedCurrentPage) setCurrentPage(JSON.parse(savedCurrentPage));
+
+    const savedLanguage = sessionStorage.getItem('googleBooks_language');
+    if (savedLanguage) setLanguage(JSON.parse(savedLanguage));
   }, []);
 
   const executeSearch = () => {
     setSearchQuery(searchInputText);
     setCurrentPage(0);
+    // Language is set directly by its own dropdown, no need to include in executeSearch logic explicitly
+    // unless future requirements link them more directly (e.g. language change triggers search)
   };
 
   // Save state to sessionStorage whenever they change
@@ -48,6 +54,10 @@ export default function GoogleBooksPage() {
   useEffect(() => {
     sessionStorage.setItem('googleBooks_currentPage', JSON.stringify(currentPage));
   }, [currentPage]);
+
+  useEffect(() => {
+    sessionStorage.setItem('googleBooks_language', JSON.stringify(language));
+  }, [language]);
 
 
   // This useEffect will be responsible for fetching books from the API
@@ -75,6 +85,10 @@ export default function GoogleBooksPage() {
       // The `orderBy=relevance` is often the default if no specific `orderBy` is given for general queries.
       let apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(queryString)}&startIndex=${startIndex}&maxResults=${booksPerPage}&orderBy=relevance`;
 
+      if (language) {
+        apiUrl += `&langRestrict=${language}`;
+      }
+
       try {
         const response = await fetch(apiUrl);
         if (!response.ok) {
@@ -93,7 +107,7 @@ export default function GoogleBooksPage() {
     };
 
     fetchBooksFromAPI();
-  }, [searchQuery, currentPage]);
+  }, [searchQuery, currentPage, language]);
 
 
   const handleNextPage = () => {
@@ -138,26 +152,55 @@ export default function GoogleBooksPage() {
           Google Books Explorer
         </h1>
         
-        <div className="mb-8 max-w-2xl mx-auto relative flex items-center">
-          <input
-            type="text"
-            value={searchInputText}
-            onChange={handleSearchInputChange}
-            onKeyDown={handleSearchKeyDown}
-            placeholder="Search by title (e.g., The Shining)..."
-            className={`${inputBaseClasses} p-3 text-base focus:ring-2 pr-10`} // Added pr-10 for icon spacing
-          />
-          <button
-            onClick={executeSearch}
-            className="absolute right-0 top-0 h-full px-3 flex items-center justify-center text-neutral-400 hover:text-[var(--accent-color-dark)] focus:outline-none"
-            aria-label="Search"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-              <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-            </svg>
-          </button>
-        </div>
+        <div className="max-w-2xl mx-auto">
+          {/* Flex container for search bar and language dropdown */}
+          <div className="flex flex-col sm:flex-row gap-4 mb-4">
+            {/* Search Input with relative positioning for the icon */}
+            <div className="relative flex-grow">
+              <input
+                type="text"
+                value={searchInputText}
+                onChange={handleSearchInputChange}
+                onKeyDown={handleSearchKeyDown}
+                placeholder="Search by title (e.g., The Shining)..."
+                className={`${inputBaseClasses} p-3 text-base focus:ring-2 pr-10 w-full`} // Ensure w-full for responsiveness
+              />
+              <button
+                onClick={executeSearch}
+                className="absolute right-0 top-0 h-full px-3 flex items-center justify-center text-neutral-400 hover:text-[var(--accent-color-dark)] focus:outline-none"
+                aria-label="Search"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+              </button>
+            </div>
 
+            {/* Language Dropdown */}
+            <div className="flex-shrink-0 sm:w-auto w-full"> {/* Control width on small screens */}
+              <select
+                id="language-select"
+                value={language}
+                onChange={(e) => {
+                  setLanguage(e.target.value);
+                  setCurrentPage(0); // Reset to first page on language change
+                }}
+                className={`${inputBaseClasses} p-3 text-base focus:ring-2 w-full`} // Ensure w-full for responsiveness
+                aria-label="Filter by Language" // Added aria-label for accessibility as visual label is removed
+              >
+                <option value="">All Languages</option>
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="ja">Japanese</option>
+                <option value="it">Italian</option>
+                <option value="pt">Portuguese</option>
+                {/* Add more languages as needed */}
+              </select>
+            </div>
+          </div>
+        </div>
       </header>
 
       {displayedBooks.length === 0 && !loading && (
