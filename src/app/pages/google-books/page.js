@@ -107,7 +107,7 @@ export default function GoogleBooksPage() {
     };
 
     fetchBooksFromAPI();
-  }, [searchQuery, currentPage]);
+  }, [searchQuery, currentPage, language]);
 
 
   const handleNextPage = () => {

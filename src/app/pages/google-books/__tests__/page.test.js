@@ -28,8 +28,13 @@ Object.defineProperty(window, 'sessionStorage', {
 });
 
 // Mock next/link and next/image
-jest.mock('next/link', () => ({ children, href }) => <a href={href}>{children}</a>);
-jest.mock('next/image', () => ({ src, alt, fill, style, className }) => <img src={src} alt={alt} style={style} className={className} />);
+const MockLink = ({ children, href }) => <a href={href}>{children}</a>;
+MockLink.displayName = 'MockLink';
+jest.mock('next/link', () => MockLink);
+
+const MockImage = ({ src, alt, fill, style, className }) => <img src={src} alt={alt} style={style} className={className} />;
+MockImage.displayName = 'MockImage';
+jest.mock('next/image', () => MockImage);
 
 
 describe('GoogleBooksPage', () => {
