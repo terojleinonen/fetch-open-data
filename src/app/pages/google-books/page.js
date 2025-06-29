@@ -51,7 +51,7 @@ export default function GoogleBooksPage() {
       const savedCurrentPage = sessionStorage.getItem('googleBooks_currentPage');
       if (savedCurrentPage) setCurrentPage(JSON.parse(savedCurrentPage));
     }
-
+    
     // Language is independent of advanced search term, load from session - REMOVED
     // const savedLanguage = sessionStorage.getItem('googleBooks_language');
     // if (savedLanguage) setLanguage(JSON.parse(savedLanguage));
@@ -92,7 +92,7 @@ export default function GoogleBooksPage() {
     // Only fetch if not loading initial state from session or if critical states are defined
     // This check helps prevent fetching with default/empty states if session state is pending
     // However, the initial load from session is synchronous if sessionStorage is fast.
-    // The main fetch depends on searchQuery, currentPage.
+    // The main fetch depends on searchQuery, currentPage. 
     // If these are correctly initialized from session, the first fetch will use them.
 
     const fetchBooksFromAPI = async () => {
@@ -101,7 +101,7 @@ export default function GoogleBooksPage() {
       
       let apiQueryParts = ['inauthor:stephen king'];
       const currentSearchQuery = typeof searchQuery === 'string' ? searchQuery : '';
-
+      
       // Prefer advanced search term if it came from URL, otherwise use current searchQuery
       const titleQuery = params.get('adv_searchTerm') || currentSearchQuery;
 
@@ -114,7 +114,7 @@ export default function GoogleBooksPage() {
       
       const queryString = apiQueryParts.join('+');
       const startIndex = currentPage * booksPerPage;
-
+      
       let apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(queryString)}&startIndex=${startIndex}&maxResults=${booksPerPage}`;
 
       // Apply advanced parameters from URL
