@@ -22,22 +22,41 @@ export default function GoogleBooksPage() {
   const [totalItemsFromAPI, setTotalItemsFromAPI] = useState(0); // Total items from API for a given query
   const booksPerPage = 20; // Max results per API call
 
-  // State Initialization from sessionStorage (runs once on mount)
+  // State Initialization from sessionStorage and URL parameters (runs once on mount)
   useEffect(() => {
-    // Load debounced search query for API, and also set the input text to match
-    const savedSearchQuery = sessionStorage.getItem('googleBooks_searchQuery');
-    if (savedSearchQuery) {
-      const parsedQuery = JSON.parse(savedSearchQuery);
-      setSearchQuery(parsedQuery);
-      setSearchInputText(parsedQuery);
+    const params = new URLSearchParams(window.location.search);
+    const advancedSearchTerm = params.get('adv_searchTerm');
+
+    if (advancedSearchTerm) {
+      // If an advanced search term is present in the URL, use it
+      setSearchInputText(advancedSearchTerm);
+      setSearchQuery(advancedSearchTerm);
+      setCurrentPage(0); // Reset to first page for new search
+      // Clear the adv_searchTerm from URL to prevent re-triggering on refresh if not desired,
+      // and rely on sessionStorage for subsequent state persistence.
+      // Or, keep it if you want the URL to be the source of truth for this specific search.
+      // For this implementation, let's clear it and let sessionStorage take over.
+      const newUrl = window.location.pathname; // Get path without query params
+      window.history.replaceState({...window.history.state, as: newUrl, url: newUrl }, '', newUrl);
+
+    } else {
+      // Otherwise, load from sessionStorage as before
+      const savedSearchQuery = sessionStorage.getItem('googleBooks_searchQuery');
+      if (savedSearchQuery) {
+        const parsedQuery = JSON.parse(savedSearchQuery);
+        setSearchQuery(parsedQuery);
+        setSearchInputText(parsedQuery);
+      }
+
+      const savedCurrentPage = sessionStorage.getItem('googleBooks_currentPage');
+      if (savedCurrentPage) setCurrentPage(JSON.parse(savedCurrentPage));
     }
 
-    const savedCurrentPage = sessionStorage.getItem('googleBooks_currentPage');
-    if (savedCurrentPage) setCurrentPage(JSON.parse(savedCurrentPage));
-
+    // Language is independent of advanced search term, load from session
     const savedLanguage = sessionStorage.getItem('googleBooks_language');
     if (savedLanguage) setLanguage(JSON.parse(savedLanguage));
-  }, []);
+
+  }, []); // Empty dependency array means this runs once on mount
 
   const executeSearch = () => {
     setSearchQuery(searchInputText);
@@ -199,6 +218,11 @@ export default function GoogleBooksPage() {
                 {/* Add more languages as needed */}
               </select>
             </div>
+          </div>
+          <div className="text-center mt-3"> {/* Increased margin-top for better spacing */}
+            <Link href="/pages/google-books/advanced-search" className="inline-block px-4 py-2 text-sm font-medium text-[var(--accent-color-dark)] border border-[var(--accent-color-dark)] rounded-md hover:bg-[var(--accent-color-dark)] hover:text-white transition-colors duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--accent-color-dark)] focus:ring-offset-[var(--background-color-dark)]">
+              Go to Advanced Search
+            </Link>
           </div>
         </div>
       </header>
