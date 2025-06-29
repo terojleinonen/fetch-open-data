@@ -28,13 +28,17 @@ Object.defineProperty(window, 'sessionStorage', {
 });
 
 // Mock next/link and next/image
-const MockLink = ({ children, href }) => <a href={href}>{children}</a>;
-MockLink.displayName = 'MockLink';
-jest.mock('next/link', () => MockLink);
+jest.mock('next/link', () => {
+  const MockLink = ({ children, href }) => <a href={href}>{children}</a>;
+  MockLink.displayName = 'MockLink';
+  return MockLink;
+});
 
-const MockImage = ({ src, alt, fill, style, className }) => <img src={src} alt={alt} style={style} className={className} />;
-MockImage.displayName = 'MockImage';
-jest.mock('next/image', () => MockImage);
+jest.mock('next/image', () => {
+  const MockImage = ({ src, alt, fill, style, className }) => <img src={src} alt={alt} style={style} className={className} />;
+  MockImage.displayName = 'MockImage';
+  return MockImage;
+});
 
 
 describe('GoogleBooksPage', () => {
@@ -60,7 +64,7 @@ describe('GoogleBooksPage', () => {
     render(<GoogleBooksPage />);
     await waitFor(() => expect(screen.queryByText('Loading books...')).not.toBeInTheDocument());
     expect(screen.getByPlaceholderText('Search by title (e.g., The Shining)...')).toBeInTheDocument();
-    expect(screen.getByLabelText('Filter by Language:')).toBeInTheDocument();
+    expect(screen.getByRole('combobox', { name: 'Filter by Language' })).toBeInTheDocument();
     // Verify initial fetch call (once)
     expect(fetch).toHaveBeenCalledTimes(1);
   });
@@ -69,7 +73,7 @@ describe('GoogleBooksPage', () => {
     render(<GoogleBooksPage />);
     await waitFor(() => expect(screen.queryByText('Loading books...')).not.toBeInTheDocument());
 
-    const languageSelect = screen.getByLabelText('Filter by Language:');
+    const languageSelect = screen.getByRole('combobox', { name: 'Filter by Language' });
     await act(async () => {
       fireEvent.change(languageSelect, { target: { value: 'es' } });
     });
@@ -90,23 +94,23 @@ describe('GoogleBooksPage', () => {
       fireEvent.change(searchInput, { target: { value: 'Specific Book' } });
     });
     expect(searchInput).toHaveValue('Specific Book');
-
+    
     await act(async () => {
         fireEvent.click(searchButton);
     });
     expect(sessionStorage.setItem).toHaveBeenCalledWith('googleBooks_searchQuery', JSON.stringify('Specific Book'));
     // We are no longer reliably testing if fetch is called immediately after this state change.
   });
-
+  
   test('loads initial language from sessionStorage if present', async () => {
     // Clear any previous fetch calls from other tests or beforeEach
     fetch.mockClear();
     sessionStorage.getItem.mockReturnValueOnce(JSON.stringify('de'));
 
     render(<GoogleBooksPage />);
-
+    
     await waitFor(() => expect(screen.queryByText('Loading books...')).not.toBeInTheDocument());
-    await waitFor(() => expect(screen.getByLabelText('Filter by Language:')).toHaveValue('de'));
+    await waitFor(() => expect(screen.getByRole('combobox', { name: 'Filter by Language' })).toHaveValue('de'));
     expect(sessionStorage.getItem).toHaveBeenCalledWith('googleBooks_language');
 
     // Check if the initial fetch call (after potential session load) contains the langRestrict param
