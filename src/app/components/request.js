@@ -1,6 +1,7 @@
 export default async function Request(parameter, options = {}) {
     const { skipGoogleBooks = false } = options;
-    const apiKey = process.env.NEXT_PUBLIC_GOOGLE_BOOKS_API_KEY;
+    // Use GOOGLE_BOOKS_API_KEY (server-side environment variable)
+    const apiKey = process.env.GOOGLE_BOOKS_API_KEY;
     const url = 'https://stephen-king-api.onrender.com/api/';
     const headers = new Headers({
       "User-Agent": "fetch-open-data/1.0"
@@ -53,7 +54,8 @@ export default async function Request(parameter, options = {}) {
             googleBooksApiUrl += `&key=${apiKey}`;
           } else if (googleBooksApiUrl && !apiKey) {
             if (!global.apiKeyWarningLogged) { // Log only once
-              console.warn("[WARN] Request: Google Books API key (NEXT_PUBLIC_GOOGLE_BOOKS_API_KEY) is missing. Requests may be rate-limited or fail.");
+              // Updated warning message to reflect the correct environment variable name
+              console.warn("[WARN] Request: Google Books API key (GOOGLE_BOOKS_API_KEY) is missing for server-side requests in request.js. Requests may be rate-limited or fail.");
               global.apiKeyWarningLogged = true;
             }
           }

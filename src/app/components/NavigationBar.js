@@ -8,6 +8,11 @@ const NavigationBar = () => {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  // If the pathname is "/", don't render the navigation bar.
+  if (pathname === '/') {
+    return null;
+  }
+
   const handleLinkClick = () => {
     setIsMobileMenuOpen(false);
   };
