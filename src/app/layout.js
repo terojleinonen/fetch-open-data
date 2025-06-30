@@ -1,5 +1,5 @@
 import localFont from "next/font/local";
-import ConditionalNavigationBar from "./components/ConditionalNavigationBar"; // Import ConditionalNavigationBar
+import NavigationBar from "./components/NavigationBar"; // Import NavigationBar
 import PageTitle from "./components/PageTitle"; // Import PageTitle
 import "./globals.css";
 
@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div className="flex flex-col min-h-screen"> {/* Always flex-col */}
-          <ConditionalNavigationBar /> {/* Use ConditionalNavigationBar */}
+          <NavigationBar /> {/* Use NavigationBar */}
           <main className="flex-grow p-4 md:p-8"> {/* Padding seems okay, might need adjustment after testing */}
             <PageTitle />
             {children}

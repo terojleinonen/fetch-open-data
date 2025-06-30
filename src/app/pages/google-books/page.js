@@ -115,26 +115,27 @@ export default function GoogleBooksPage() {
       const queryString = apiQueryParts.join('+');
       const startIndex = currentPage * booksPerPage;
       
-      let apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(queryString)}&startIndex=${startIndex}&maxResults=${booksPerPage}`;
+      // Construct query parameters for the internal proxy
+      const internalApiParams = new URLSearchParams({
+        q: queryString,
+        startIndex: startIndex.toString(),
+        maxResults: booksPerPage.toString(),
+        orderBy: advOrderBy || 'relevance',
+      });
 
-      // Apply advanced parameters from URL
-      if (advLang) {
-        apiUrl += `&langRestrict=${advLang}`;
-      }
-      if (advFilter) {
-        apiUrl += `&filter=${advFilter}`;
-      }
-      if (advPrintType) {
-        apiUrl += `&printType=${advPrintType}`;
-      }
-      // Use advOrderBy if present, otherwise default to relevance (API default or explicitly set)
-      apiUrl += `&orderBy=${advOrderBy || 'relevance'}`;
+      if (advLang) internalApiParams.append('langRestrict', advLang);
+      if (advFilter) internalApiParams.append('filter', advFilter);
+      if (advPrintType) internalApiParams.append('printType', advPrintType);
 
+      // Use the new internal proxy route
+      const apiUrl = `/api/google-books-proxy?${internalApiParams.toString()}`;
 
       try {
         const response = await fetch(apiUrl);
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+          // Try to parse error from proxy, or use statusText
+          const errorData = await response.json().catch(() => ({ error: `HTTP error! status: ${response.statusText}` }));
+          throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
         setDisplayedBooks(data.items || []); // Changed from setAllFetchedBooks
