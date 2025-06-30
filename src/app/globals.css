@@ -2,71 +2,71 @@
 @import "tailwindcss";
 
 :root {
-  /* Eery & Minimalistic Dark Theme */
-  --background-color-dark: #0a0a0a; /* Very dark grey, almost black */
-  --text-color-dark: #c0c0c0; /* Light grey */
-  --accent-color-dark: #5a5a8c; /* Desaturated blue/purple */
-  --hover-accent-color-dark: #6a6aa2; /* Slightly lighter desaturated blue/purple */
-  --shadow-color-dark: #050505; /* Darker shade for depth */
-  --map-marker-fill-dark: #3a3a5c; /* Desaturated blue/purple for map markers */
-  --map-marker-stroke-dark: rgba(192, 192, 192, 0.2); /* Light grey with transparency */
-  --map-marker-hover-fill-dark: #4a4a7c; /* Lighter desaturated blue/purple for hover */
-  --map-marker-hover-stroke-dark: rgba(192, 192, 192, 0.5); /* Light grey with more opacity */
+  /* Stephen King Inspired Dark Theme */
+  --sk-background-dark: #000000; /* Black */
+  --sk-text-dark: #FFFFFF;       /* White */
+  --sk-accent-dark: #FF0000;     /* Red */
+  --sk-hover-accent-dark: #CC0000; /* Darker Red for hover */
+  --sk-shadow-dark: #330000;      /* Dark Red for shadow/depth */
 
   /* Alternating row colors for dark theme */
-  --row-bg-odd-dark: var(--background-color-dark); /* Same as main background */
-  --row-bg-even-dark: #111111; /* Slightly lighter than main background */
+  --sk-row-bg-odd-dark: var(--sk-background-dark);
+  --sk-row-bg-even-dark: #1a1a1a; /* Very dark grey, slightly lighter than black */
 
-  /* Eery & Minimalistic Light Theme */
-  --background-color-light: #f5f5f5; /* Off-white */
-  --text-color-light: #333333; /* Dark grey */
-  --accent-color-light: #4a7c7c; /* Desaturated cyan/teal */
-  --hover-accent-color-light: #3a6c6c; /* Slightly darker desaturated cyan/teal */
-  --shadow-color-light: #e0e0e0; /* Light grey for depth */
-  --map-marker-fill-light: #7aa2a2; /* Desaturated cyan/teal for map markers */
-  --map-marker-stroke-light: rgba(51, 51, 51, 0.2); /* Dark grey with transparency */
-  --map-marker-hover-fill-light: #6a9292; /* Lighter desaturated cyan/teal for hover */
-  --map-marker-hover-stroke-light: rgba(51, 51, 51, 0.5); /* Dark grey with more opacity */
+  /* Stephen King Inspired Light Theme */
+  --sk-background-light: #FFFFFF; /* White */
+  --sk-text-light: #000000;       /* Black */
+  --sk-accent-light: #FF0000;     /* Red */
+  --sk-hover-accent-light: #CC0000; /* Darker Red for hover */
+  --sk-shadow-light: #FFD1D1;     /* Light Red for shadow/depth */
 
   /* Alternating row colors for light theme */
-  --row-bg-odd-light: var(--background-color-light); /* Same as main background */
-  --row-bg-even-light: #ebebeb; /* Slightly darker than main background */
+  --sk-row-bg-odd-light: var(--sk-background-light);
+  --sk-row-bg-even-light: #f0f0f0; /* Very light grey */
 
-  /* Page Title Gradient Colors */
-  --title-gradient-from-dark: var(--accent-color-dark);
-  --title-gradient-via-dark: var(--hover-accent-color-dark);
-  --title-gradient-to-dark: var(--accent-color-dark);
+  /* Page Title Gradient Colors (using accent) */
+  --title-gradient-from-dark: var(--sk-accent-dark);
+  --title-gradient-via-dark: var(--sk-hover-accent-dark);
+  --title-gradient-to-dark: var(--sk-accent-dark);
 
-  --title-gradient-from-light: var(--accent-color-light);
-  --title-gradient-via-light: var(--hover-accent-color-light);
-  --title-gradient-to-light: var(--accent-color-light);
+  --title-gradient-from-light: var(--sk-accent-light);
+  --title-gradient-via-light: var(--sk-hover-accent-light);
+  --title-gradient-to-light: var(--sk-accent-light);
 
-  /* Navigation Link Hover Background Colors */
-  --nav-link-focus-ring-dark: #ffffff;
-  --nav-link-focus-ring-light: #2563eb; /* A blue for visibility, similar to Tailwind's default focus ring */
+  /* Navigation Link Focus Ring */
+  --nav-link-focus-ring-dark: var(--sk-accent-dark);
+  --nav-link-focus-ring-light: var(--sk-accent-light);
 
-  /* Specific Nav Bar Background Grays -- REMOVED */
-  /* --nav-background-dark: #374151; */ /* gray-700 */
-  /* --nav-background-light: #d1d5db; */ /* gray-300 */
+  /* Navigation Link Hover Background (using accent) */
+  --nav-link-hover-bg-dark: var(--sk-hover-accent-dark);
+  --nav-link-hover-bg-light: var(--sk-hover-accent-light);
 
-  /* Green for hover (reinstated/ensured) */
-  --eery-green-dark: #3B8C6E;
-  --eery-green-light: #4AAB88;
+
+  /* Map Marker colors - can be adapted or kept generic if SK site doesn't have maps */
+  --map-marker-fill-dark: var(--sk-accent-dark);
+  --map-marker-stroke-dark: rgba(255, 255, 255, 0.3);
+  --map-marker-hover-fill-dark: var(--sk-hover-accent-dark);
+  --map-marker-hover-stroke-dark: rgba(255, 255, 255, 0.7);
+
+  --map-marker-fill-light: var(--sk-accent-light);
+  --map-marker-stroke-light: rgba(0, 0, 0, 0.3);
+  --map-marker-hover-fill-light: var(--sk-hover-accent-light);
+  --map-marker-hover-stroke-light: rgba(0, 0, 0, 0.7);
 }
 
 /* Default to dark theme */
 body {
-  --background-color: var(--background-color-dark);
-  --text-color: var(--text-color-dark);
-  --accent-color: var(--accent-color-dark);
-  --hover-accent-color: var(--hover-accent-color-dark);
-  --shadow-color: var(--shadow-color-dark);
+  --background-color: var(--sk-background-dark);
+  --text-color: var(--sk-text-dark);
+  --accent-color: var(--sk-accent-dark);
+  --hover-accent-color: var(--sk-hover-accent-dark);
+  --shadow-color: var(--sk-shadow-dark);
   --map-marker-fill: var(--map-marker-fill-dark);
   --map-marker-stroke: var(--map-marker-stroke-dark);
   --map-marker-hover-fill: var(--map-marker-hover-fill-dark);
   --map-marker-hover-stroke: var(--map-marker-hover-stroke-dark);
-  --row-bg-odd: var(--row-bg-odd-dark);
-  --row-bg-even: var(--row-bg-even-dark);
+  --row-bg-odd: var(--sk-row-bg-odd-dark);
+  --row-bg-even: var(--sk-row-bg-even-dark);
 
   /* Page title gradient */
   --title-gradient-from: var(--title-gradient-from-dark);
@@ -74,13 +74,13 @@ body {
   --title-gradient-to: var(--title-gradient-to-dark);
 
   /* Navigation link hover */
-  --nav-link-hover-bg: var(--eery-green-dark); /* Green for dark theme hover */
+  --nav-link-hover-bg: var(--nav-link-hover-bg-dark);
   --nav-link-focus-ring: var(--nav-link-focus-ring-dark);
 
   /* Details box colors for dark theme */
-  --details-box-bg: var(--row-bg-even-dark);
-  --details-box-text: var(--text-color-dark);
-  --details-box-shadow: rgba(255, 255, 255, 0.05); /* Subtle light shadow for dark mode */
+  --details-box-bg: var(--sk-row-bg-even-dark);
+  --details-box-text: var(--sk-text-dark);
+  --details-box-shadow: rgba(255, 0, 0, 0.1); /* Subtle red shadow for dark mode */
 
   color: var(--text-color);
   background: var(--background-color);
@@ -90,17 +90,17 @@ body {
 /* Light theme using prefers-color-scheme */
 @media (prefers-color-scheme: light) {
   body {
-    --background-color: var(--background-color-light);
-    --text-color: var(--text-color-light);
-    --accent-color: var(--accent-color-light);
-    --hover-accent-color: var(--hover-accent-color-light);
-    --shadow-color: var(--shadow-color-light);
+    --background-color: var(--sk-background-light);
+    --text-color: var(--sk-text-light);
+    --accent-color: var(--sk-accent-light);
+    --hover-accent-color: var(--sk-hover-accent-light);
+    --shadow-color: var(--sk-shadow-light);
     --map-marker-fill: var(--map-marker-fill-light);
     --map-marker-stroke: var(--map-marker-stroke-light);
     --map-marker-hover-fill: var(--map-marker-hover-fill-light);
     --map-marker-hover-stroke: var(--map-marker-hover-stroke-light);
-    --row-bg-odd: var(--row-bg-odd-light);
-    --row-bg-even: var(--row-bg-even-light);
+    --row-bg-odd: var(--sk-row-bg-odd-light);
+    --row-bg-even: var(--sk-row-bg-even-light);
 
     /* Page title gradient */
     --title-gradient-from: var(--title-gradient-from-light);
@@ -108,13 +108,13 @@ body {
     --title-gradient-to: var(--title-gradient-to-light);
 
   /* Navigation link hover */
-  --nav-link-hover-bg: var(--eery-green-light); /* Green for light theme hover */
+  --nav-link-hover-bg: var(--nav-link-hover-bg-light);
   --nav-link-focus-ring: var(--nav-link-focus-ring-light);
 
     /* Details box colors for light theme */
-    --details-box-bg: #ffffff;
-    --details-box-text: #333333;
-    --details-box-shadow: rgba(0, 0, 0, 0.1);
+    --details-box-bg: var(--sk-row-bg-even-light); /* Use a slightly off-white for the box */
+    --details-box-text: var(--sk-text-light);
+    --details-box-shadow: rgba(255, 0, 0, 0.05); /* Subtle red shadow for light mode */
 
     color: var(--text-color);
     background: var(--background-color);
@@ -127,10 +127,8 @@ body {
   --background: var(--background-color);
   --foreground: var(--text-color);
 
-  /* Details box specific variables - default to light theme values */
-  --details-box-bg: #ffffff;
-  --details-box-text: #333333;
-  --details-box-shadow: rgba(0, 0, 0, 0.1);
+  /* Details box specific variables - ensure they are updated by body theme */
+  /* No need to redefine --details-box-bg, etc. here if they are set in body and @media */
 }
 
 /* White box style for details pages */
@@ -147,8 +145,6 @@ body {
   color: var(--accent-color);
   font-family: Georgia, serif;
   text-decoration: none;
-  /* Assuming default browser/Tailwind link font size is acceptable for now.
-     Adjust font-size or margins here if needed later. */
 }
 
 .home-link:hover {
@@ -179,54 +175,47 @@ body::before {
 
 /* Styles for SVG map markers */
 .map-marker {
-  fill: var(--map-marker-fill); /* Use theme-aware fill color */
-  stroke: var(--map-marker-stroke); /* Use theme-aware stroke color */
+  fill: var(--map-marker-fill);
+  stroke: var(--map-marker-stroke);
   stroke-width: 1px;
   cursor: pointer;
-  transition: fill 0.3s ease, stroke 0.3s ease; /* For smooth hover, removed transform transition */
+  transition: fill 0.3s ease, stroke 0.3s ease;
 }
 
 .map-marker:hover {
-  fill: var(--map-marker-hover-fill); /* Use theme-aware hover fill color */
-  stroke: var(--map-marker-hover-stroke); /* Use theme-aware hover stroke color */
+  fill: var(--map-marker-hover-fill);
+  stroke: var(--map-marker-hover-stroke);
 }
 
 /* Info Panel Styles */
 #info-panel-close {
-  /* Base styles are a mix of inline and Tailwind classes */
-  /* Adding transition here for the hover effect */
   transition: color 0.2s ease;
 }
 
 #info-panel-close:hover {
-  color: var(--accent-color); /* Use accent-color for hover, overriding inline text-color */
+  color: var(--accent-color);
 }
 
 /* Styles for search, sort, and filter controls */
 .controls-container > * {
-  width: 100%; /* Default to full width for mobile (column layout) */
+  width: 100%;
 }
 
-@media (min-width: 768px) { /* md breakpoint or your specific breakpoint for row layout */
+@media (min-width: 768px) {
   .controls-container {
     display: flex;
-    justify-content: space-between; /* Or your desired alignment */
+    justify-content: space-between;
   }
   .controls-container > * {
-    width: auto; /* Reset width for row layout */
-    flex-grow: 1; /* Allow elements to grow if needed */
+    width: auto;
+    flex-grow: 1;
   }
   .controls-container > input[type="text"] {
-    flex-grow: 2; /* Make search input wider if desired */
+    flex-grow: 2;
   }
 }
 
 /* Styles for the shorts list */
-.shorts-list-container .short-item {
-  /* Base background color will be applied by :nth-child rules */
-  /* Other styles like padding, border are already on the element from ShortListClient.js */
-}
-
 .shorts-list-container .short-item:nth-child(odd) {
   background-color: var(--row-bg-odd);
 }
@@ -237,33 +226,14 @@ body::before {
 
 /* Mobile navigation menu styles */
 .mobile-menu-bg {
-  /* Updated to use the page background color */
-  background-color: var(--background-color-dark);
+  background-color: var(--background-color); /* Use themed background */
 }
 
 .mobile-menu-link-hover:hover {
-  background-color: var(--nav-link-hover-bg); /* Use the general nav link hover (green) */
-}
-
-@media (prefers-color-scheme: light) {
-  .mobile-menu-bg {
-    /* Updated to use the page background color for light theme */
-    background-color: var(--background-color-light);
-  }
-
-  .mobile-menu-link-hover:hover {
-    background-color: var(--nav-link-hover-bg); /* Use the general nav link hover (green) for light theme */
-  }
+  background-color: var(--nav-link-hover-bg);
 }
 
 /* Utility class for navigation link hover background */
 .nav-link-desktop-hover:hover {
   background-color: var(--nav-link-hover-bg);
 }
-
-/* Custom class for the navigation bar background -- REMOVED */
-/* .bg-custom-nav-gray {
-  background-color: var(--nav-background-dark); / Default to dark theme nav background /
-} */
-
-/* Duplicated @media (prefers-color-scheme: light) block removed from here */
