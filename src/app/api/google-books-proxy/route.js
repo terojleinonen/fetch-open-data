@@ -12,15 +12,30 @@ export async function GET(request) {
   const orderBy = searchParams.get('orderBy') || 'relevance';
 
   const apiKey = process.env.GOOGLE_BOOKS_API_KEY;
+  console.log("Attempting to use Google Books API Key. Is it present?", !!apiKey); // Log whether the API key is found
 
   if (!q) {
+    console.error("Query parameter 'q' is missing from the request.");
     return NextResponse.json({ error: 'Query parameter "q" is required' }, { status: 400 });
   }
 
   if (!apiKey) {
-    console.error("Google Books API Key (GOOGLE_BOOKS_API_KEY) is not configured in environment variables.");
+    console.error("Google Books API Key (GOOGLE_BOOKS_API_KEY) is not configured in environment variables. Please check Vercel deployment settings.");
     return NextResponse.json({ error: 'Server configuration error. API key missing.' }, { status: 500 });
   }
+
+  // Construct the API URL without the key for logging purposes
+  let logApiUrl = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=${encodeURIComponent(maxResults)}&startIndex=${encodeURIComponent(startIndex)}&orderBy=${encodeURIComponent(orderBy)}`;
+  if (langRestrict) {
+    logApiUrl += `&langRestrict=${encodeURIComponent(langRestrict)}`;
+  }
+  if (filter) {
+    logApiUrl += `&filter=${encodeURIComponent(filter)}`;
+  }
+  if (printType) {
+    logApiUrl += `&printType=${encodeURIComponent(printType)}`;
+  }
+  console.log("Constructed Google Books API URL (excluding key for security):", logApiUrl);
 
   let apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=${encodeURIComponent(maxResults)}&startIndex=${encodeURIComponent(startIndex)}&key=${apiKey}&orderBy=${encodeURIComponent(orderBy)}`;
 
