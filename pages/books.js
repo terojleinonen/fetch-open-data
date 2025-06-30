@@ -16,7 +16,7 @@ export default function BooksPage({ books, error }) {
   if (!books || books.length === 0) {
     return (
       <Layout title="Books - Stephen King Fan Hub">
-        <h1 className="text-3xl md:text-4xl font-bold text-classic-red mb-6">Stephen King's Novels & Collections</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-classic-red mb-6">Stephen King&apos;s Novels &amp; Collections</h1>
         <p className="text-dark-gray">No books found or still loading...</p>
         {/* You could add a spinner or a more sophisticated loading state here */}
       </Layout>
@@ -26,7 +26,7 @@ export default function BooksPage({ books, error }) {
   return (
     <Layout title="Books - Stephen King Fan Hub">
       <h1 className="text-3xl md:text-4xl font-bold text-classic-red mb-8 text-center">
-        Stephen King's Novels & Collections
+        Stephen King&apos;s Novels &amp; Collections
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
         {books.map((book) => (

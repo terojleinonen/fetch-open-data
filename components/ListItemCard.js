@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const ListItemCard = ({
   title,
@@ -6,23 +7,36 @@ const ListItemCard = ({
   type, // For shorts: "short story", "novella", etc.
   keyInfo, // For publisher, status, etc. as a string
   imageUrl,
-  altText = "Item image",
+  altText = "Item image", // Default alt text
   notes,
   description, // For Google Books short description
   detailsLink, // Internal Next.js Link or external URL
   externalLink = false, // If true, detailsLink opens in new tab
   children // For additional custom content (e.g., villain's works)
 }) => {
+
+  const effectiveAltText = altText === "Item image" && title ? `Cover for ${title}` : altText;
+
   const cardContent = (
     <>
       {imageUrl && (
-        <div className="w-full h-48 sm:h-56 md:h-64 bg-gray-200 overflow-hidden rounded-t-lg">
-          {/* Using <img> tag directly for external URLs. For Next.js Image optimization,
-              you'd need to configure image domains in next.config.js if not using a loader. */}
-          <img
+        <div className="relative w-full h-48 sm:h-56 md:h-64 bg-gray-200 overflow-hidden rounded-t-lg group-hover:opacity-90 transition-opacity">
+          {/*
+            Using next/image. Requires configuration in next.config.js for external domains like 'books.google.com'.
+            Example next.config.js:
+            module.exports = {
+              images: {
+                domains: ['books.google.com'],
+              },
+            }
+          */}
+          <Image
             src={imageUrl}
-            alt={altText || `Cover for ${title}`}
-            className="w-full h-full object-cover group-hover:opacity-90 transition-opacity"
+            alt={effectiveAltText}
+            fill // Replaces layout="fill" and objectFit="cover" in newer Next.js
+            className="object-cover" // Equivalent to object-fit: cover
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw" // Helps with responsive image loading
+            priority={false} // Set to true for above-the-fold images if needed, but generally false for lists
           />
         </div>
       )}
@@ -43,7 +57,6 @@ const ListItemCard = ({
           </p>
         )}
 
-        {/* For custom content like villain's works */}
         {children && <div className="text-sm mt-auto pt-2 border-t border-gray-200">{children}</div>}
       </div>
     </>

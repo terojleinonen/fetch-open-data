@@ -35,7 +35,7 @@ export default function HomePage() {
           </div>
           <div className="p-4">
             <h3 className="text-xl font-semibold text-classic-red mb-2">Iconic Villains</h3>
-            <p className="text-gray-600">Learn about the antagonists that haunt King's universe.</p>
+            <p className="text-gray-600">Learn about the antagonists that haunt King&apos;s universe.</p>
           </div>
           <div className="p-4">
             <h3 className="text-xl font-semibold text-classic-red mb-2">Rich Lore</h3>

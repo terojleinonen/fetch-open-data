@@ -17,7 +17,7 @@ export default function VillainsPage({ villains, error }) {
   if (!villains || villains.length === 0) {
     return (
       <Layout title="Villains - Stephen King Fan Hub">
-        <h1 className="text-3xl md:text-4xl font-bold text-classic-red mb-6 text-center">Iconic Villains from King's Universe</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-classic-red mb-6 text-center">Iconic Villains from King&apos;s Universe</h1>
         <p className="text-dark-gray text-center">No villains found or still loading...</p>
       </Layout>
     );
@@ -26,7 +26,7 @@ export default function VillainsPage({ villains, error }) {
   return (
     <Layout title="Villains - Stephen King Fan Hub">
       <h1 className="text-3xl md:text-4xl font-bold text-classic-red mb-8 text-center">
-        Iconic Villains from King's Universe
+        Iconic Villains from King&apos;s Universe
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 md:gap-8"> {/* Max 3 cols for more content per card */}
         {villains.map((villain) => (

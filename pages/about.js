@@ -30,7 +30,7 @@ const AboutPage = () => {
             readers for decades, resulting in book sales exceeding 350 million copies worldwide.
           </p>
           <p>
-            Many of King's works have been adapted into critically acclaimed and commercially
+            Many of King&apos;s works have been adapted into critically acclaimed and commercially
             successful films, television series, miniseries, and comic books, further cementing
             his status as a cultural icon. To date, King has published 65 novels, including
             seven under the pen name Richard Bachman, and five non-fiction books. His literary
@@ -41,32 +41,32 @@ const AboutPage = () => {
           <h2>Early Life and Influences</h2>
           <p>
             Born in Portland, Maine, a state that would later feature prominently in many of his
-            stories, King's early life was marked by unique experiences that shaped his creative
+            stories, King&apos;s early life was marked by unique experiences that shaped his creative
             voice. He attended grammar school in Durham and later Lisbon Falls High School.
             An early fascination with horror and the macabre was evident from a young age,
             reportedly sparked by discovering a collection of H.P. Lovecraft stories.
           </p>
           <p>
             He began writing for pleasure while still in school, contributing articles to
-            Dave's Rag, the newspaper his brother published with a mimeograph machine, and later
+            Dave&apos;s Rag, the newspaper his brother published with a mimeograph machine, and later
             selling stories to his friends based on movies he had seen. His first independently
             published story appeared in a fanzine in 1965.
           </p>
 
-          <h2>The Breakthrough: "Carrie"</h2>
+          <h2>The Breakthrough: &ldquo;Carrie&rdquo;</h2>
           <p>
             After graduating from the University of Maine at Orono in 1970 with a B.A. in English,
             King worked as a teacher while continuing to write in his spare time. His breakthrough
-            came when his first novel, "Carrie," was accepted for publication by Doubleday in 1973
+            came when his first novel, &ldquo;Carrie,&rdquo; was accepted for publication by Doubleday in 1973
             and published in 1974. The novel, a chilling tale of a telekinetic teenager, became a
             significant success and launched his career as a full-time writer.
           </p>
 
           <h2>Major Works and Themes</h2>
           <p>
-            King's bibliography is vast and varied, including iconic titles such as "Salem's Lot,"
-            "The Shining," "The Stand," "It," "Misery," "Pet Sematary," "The Green Mile," and the
-            epic "Dark Tower" series.
+            King&apos;s bibliography is vast and varied, including iconic titles such as &ldquo;Salem&apos;s Lot,&rdquo;
+            &ldquo;The Shining,&rdquo; &ldquo;The Stand,&rdquo; &ldquo;It,&rdquo; &ldquo;Misery,&rdquo; &ldquo;Pet Sematary,&rdquo; &ldquo;The Green Mile,&rdquo; and the
+            epic &ldquo;Dark Tower&rdquo; series.
           </p>
           <p>
             Common themes in his work include the nature of good versus evil, the complexities of
@@ -78,13 +78,13 @@ const AboutPage = () => {
 
           <h2>Legacy and Impact</h2>
           <p>
-            Stephen King's impact on contemporary literature and popular culture is undeniable.
+            Stephen King&apos;s impact on contemporary literature and popular culture is undeniable.
             He has received numerous accolades for his work, including the National Book Foundation
             Medal for Distinguished Contribution to American Letters in 2003 and the National Medal
             of Arts in 2014.
           </p>
           <p>
-            Beyond the scares, King's writing is celebrated for its rich character development,
+            Beyond the scares, King&apos;s writing is celebrated for its rich character development,
             intricate plotting, and keen observations of American society. He continues to be a
             prolific and influential voice, eagerly read by millions around the globe.
           </p>
