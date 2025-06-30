@@ -1,3 +1,5 @@
+"use client"; // Required because this component uses the useRouter hook
+
 import Link from 'next/link';
 import { useRouter } from 'next/router'; // To style active links
 
