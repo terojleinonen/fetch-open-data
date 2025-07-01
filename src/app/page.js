@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import BookCarousel from '../components/BookCarousel'; // Import the carousel component
+import BookCarousel from './components/BookCarousel'; // Import the carousel component
 
 // Data for the links and summaries
 const pageLinks = [
