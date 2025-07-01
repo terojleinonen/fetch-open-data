@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import BookCarousel from './components/BookCarousel'; // Import the carousel component
 
 // Data for the links and summaries
 const pageLinks = [
@@ -14,15 +15,11 @@ const pageLinks = [
 export default function Page() {
   return (
     <div className="flex flex-col items-center min-h-screen bg-transparent py-10 px-4">
-      {/* Main Title */}
-      {/*<div className="text-center">
-        <h1 className="text-6xl text-[var(--text-color)]">
-          Stephen King Universe
-        </h1>
-      </div>*/}
+      {/* Book Carousel */}
+      <BookCarousel />
 
       {/* Links Container */}
-      <div className="w-full max-w-2xl"> {/* Max width for better readability on large screens */}
+      <div className="w-full max-w-2xl mt-8"> {/* Added margin-top for spacing */}
         <div className="space-y-6"> {/* Vertical spacing between link items */}
           {pageLinks.map((link) => (
             <div key={link.title} className="flex flex-col items-start"> {/* Each link item: title + summary */}
