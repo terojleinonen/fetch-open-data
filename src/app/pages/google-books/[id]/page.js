@@ -69,7 +69,7 @@ export default function BookDetailsPage() {
         &larr; Back to Book List
       </Link>
 
-      <div className="bg-white shadow-xl rounded-lg overflow-hidden md:flex">
+      <div className="details-box shadow-xl rounded-lg overflow-hidden md:flex">
         <div className="relative w-full md:w-1/3 h-96 p-4"> {/* Added position: relative and defined height */}
           {volumeInfo.imageLinks?.large || volumeInfo.imageLinks?.medium || volumeInfo.imageLinks?.thumbnail ? (
             <Image
