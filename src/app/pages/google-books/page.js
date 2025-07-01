@@ -256,7 +256,7 @@ export default function GoogleBooksPage() {
                 )}
               </div>
               <div className="p-4 flex flex-col flex-grow">
-                <h2 className="text-md font-semibold text-foreground mb-1 truncate" title={book.volumeInfo.title}>
+                <h2 className="text-md font-semibold text-[var(--accent-color)] mb-1 truncate" title={book.volumeInfo.title}>
                   {book.volumeInfo.title}
                 </h2>
                 <p className="text-xs text-neutral-400 mb-2 truncate">
@@ -278,7 +278,7 @@ export default function GoogleBooksPage() {
           <button 
             onClick={handlePreviousPage} 
             disabled={currentPage === 0 || loading}
-            className="px-5 py-2 bg-[var(--accent-color-dark)] text-white font-semibold rounded-md shadow-md hover:bg-[var(--hover-accent-color-dark)] disabled:bg-neutral-600 disabled:text-neutral-400 disabled:cursor-not-allowed transition-colors"
+            className="px-5 py-2 bg-[var(--accent-color)] text-[var(--text-color)] font-semibold rounded-md shadow-md hover:bg-[var(--hover-accent-color)] disabled:bg-neutral-600 disabled:text-neutral-400 disabled:cursor-not-allowed transition-colors"
           >
             Previous
           </button>
@@ -288,7 +288,7 @@ export default function GoogleBooksPage() {
           <button 
             onClick={handleNextPage} 
             disabled={loading || (currentPage + 1) >= totalPages}
-            className="px-5 py-2 bg-[var(--accent-color-dark)] text-white font-semibold rounded-md shadow-md hover:bg-[var(--hover-accent-color-dark)] disabled:bg-neutral-600 disabled:text-neutral-400 disabled:cursor-not-allowed transition-colors"
+            className="px-5 py-2 bg-[var(--accent-color)] text-[var(--text-color)] font-semibold rounded-md shadow-md hover:bg-[var(--hover-accent-color)] disabled:bg-neutral-600 disabled:text-neutral-400 disabled:cursor-not-allowed transition-colors"
           >
             Next
           </button>
