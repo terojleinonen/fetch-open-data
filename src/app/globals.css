@@ -121,6 +121,26 @@ body {
   }
 }
 
+/* Generic background text style for pages */
+.page-background-text::before {
+  content: var(--page-background-text-content, ''); /* Use CSS variable for text */
+  position: fixed; /* Use fixed to ensure it stays in place even with scrolling */
+  left: 50%;
+  top: 15%; /* Adjusted to move text higher, near title level */
+  transform: translateX(-50%); /* Only translate X for centering, Y position controlled by top */
+  font-size: 8vw; /* Responsive font size, slightly reduced */
+  font-weight: bold;
+  color: rgba(128, 128, 128, 0.05); /* Very light gray with low opacity */
+  white-space: normal; /* Allow text to wrap */
+  line-height: 1.2; /* Adjust line height for wrapped text */
+  z-index: -1; /* Ensure it's behind all other content */
+  pointer-events: none; /* Make sure it doesn't interfere with mouse events */
+  text-align: center; /* Center the text */
+  overflow: hidden; /* Hide any part of the text that might overflow */
+  width: 90%; /* Reduce width slightly to give some padding from edges */
+  word-break: break-word; /* Break words if necessary to prevent overflow */
+}
+
 /* Update existing variables to use the new scheme or remove if redundant */
 /* These are used by Tailwind config */
 :root {
