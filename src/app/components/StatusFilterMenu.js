@@ -12,7 +12,7 @@ import React from 'react';
  */
 export default function StatusFilterMenu({ uniqueStatuses, selectedStatus, onSelectStatus }) {
   return (
-    <div className="mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow">
+    <div className="mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow w-max"> {/* Added w-max to make the container fit its content */}
       <h3 className="text-md font-semibold mb-3 text-[var(--accent-color)]">Filter by Status:</h3>
       <div className="flex flex-col items-start space-y-1">
         {uniqueStatuses.map(status => (
@@ -20,7 +20,7 @@ export default function StatusFilterMenu({ uniqueStatuses, selectedStatus, onSel
             key={status}
             onClick={() => onSelectStatus(status === 'All' ? '' : status)}
             className={`
-              text-left w-full px-1 py-1 rounded text-sm
+              text-left px-1 py-1 rounded text-sm
               ${(selectedStatus === status || (status === 'All' && !selectedStatus)) ? 'font-bold text-[var(--hover-accent-color)]' : 'text-[var(--text-color)]'}
               hover:text-[var(--hover-accent-color)]
               focus:outline-none

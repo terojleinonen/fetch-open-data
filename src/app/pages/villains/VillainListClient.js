@@ -107,7 +107,12 @@ export default function VillainListClient({ initialVillains }) {
       {/* Renders the list of filtered villains */}
       <div className="villains-list-container flex flex-col gap-2">
         {filteredVillains.map((villain, index) => (
-          <div key={villain.id} className="villain-item p-4 rounded-lg shadow transition-colors">
+          <div
+            key={villain.id}
+            className={`villain-item p-4 rounded-lg shadow transition-colors ${
+              index % 2 === 0 ? 'bg-[var(--row-bg-even)]' : 'bg-[var(--row-bg-odd)]'
+            }`}
+          >
             <Link href={`/pages/villains/${villain.id}`} className="flex justify-between items-center w-full">
               <div className="flex-1 text-left text-base text-[var(--text-color)] truncate pr-2">
                 {villain.name}
