@@ -18,7 +18,10 @@ export default async function Page() {
     }
 
     return (
-      <div>
+      <div
+        className="page-background-text"
+        style={{ '--page-background-text-content': "'BOOKS'" }}
+      >
         <BookListClient initialBooks={booksData} /> {/* Pass data to client component */}
       </div>
     )

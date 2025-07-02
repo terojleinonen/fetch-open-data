@@ -121,13 +121,13 @@ body {
   }
 }
 
-/* Added for home page background text */
-.home-background-text::before {
-  content: 'STEPHEN KING UNIVERSE: HOME';
+/* Generic background text style for pages */
+.page-background-text::before {
+  content: var(--page-background-text-content, ''); /* Use CSS variable for text */
   position: fixed; /* Use fixed to ensure it stays in place even with scrolling */
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: 15%; /* Adjusted to move text higher, near title level */
+  transform: translateX(-50%); /* Only translate X for centering, Y position controlled by top */
   font-size: 8vw; /* Responsive font size, slightly reduced */
   font-weight: bold;
   color: rgba(128, 128, 128, 0.05); /* Very light gray with low opacity */
