@@ -14,7 +14,10 @@ const pageLinks = [
 // Page component - Renders the main page with title and navigation links with summaries.
 export default function Page() {
   return (
-    <div className="flex flex-col items-center min-h-screen bg-transparent py-10 px-4">
+    <div
+      className="flex flex-col items-center min-h-screen bg-transparent py-10 px-4 page-background-text"
+      style={{ '--page-background-text-content': "'STEPHEN KING UNIVERSE: HOME'" }}
+    >
       {/* Book Carousel */}
       <BookCarousel />
 
