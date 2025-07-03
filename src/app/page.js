@@ -7,14 +7,17 @@ const pageLinks = [
   { href: "/pages/shorts", title: "SHORTS", summary: "Discover Stephen King's captivating short stories and novellas." },
   { href: "/pages/villains", title: "VILLAINS", summary: "Delve into the dark world of Stephen King's most memorable villains." },
   { href: "/pages/google-books", title: "GOOGLE BOOKS", summary: "Search and browse Stephen King's works available on Google Books." },
-  { href: "/pages/about-stephen-king", title: "ABOUT STEPHEN KING", summary: "Learn more about the life and career of the master of horror." },
+  { href: "/pages/about-stephen-king", title: "KINGGRAPHY", summary: "Learn more about the life and career of Stephen King." }, // Updated title and summary
   { href: "https://stephenking.com", title: "STEPHENKING.COM", summary: "Visit the official website for the latest news and updates.", isExternal: true },
 ];
 
 // Page component - Renders the main page with title and navigation links with summaries.
 export default function Page() {
   return (
-    <div className="flex flex-col items-center min-h-screen bg-transparent py-10 px-4">
+    <div
+      className="flex flex-col items-center min-h-screen bg-transparent py-10 px-4 page-background-text"
+      style={{ '--page-background-text-content': "'KINGOLOGY: HOME'" }}
+    >
       {/* Book Carousel */}
       <BookCarousel />
 

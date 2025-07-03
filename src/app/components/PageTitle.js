@@ -17,7 +17,7 @@ const PageTitle = () => {
   } else if (pathname === '/pages/google-books') {
     title = 'Google Books Explorer';
   } else if (pathname === '/pages/about-stephen-king') {
-    title = 'About Stephen King';
+    title = 'Kinggraphy'; // Updated title
   }
   // Add more pages and titles here as needed
 

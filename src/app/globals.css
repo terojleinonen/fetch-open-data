@@ -119,6 +119,32 @@ body {
     color: var(--text-color);
     background: var(--background-color);
   }
+
+  /* Adjust background text color for light theme */
+  .page-background-text::before {
+    color: rgba(100, 100, 100, 0.05); /* Darker gray, low opacity for light backgrounds */
+  }
+}
+
+/* Generic background text style for pages */
+.page-background-text::before {
+  content: var(--page-background-text-content, ''); /* Use CSS variable for text */
+  position: fixed; /* Use fixed to ensure it stays in place even with scrolling */
+  left: 2%; /* Align to the left with a small offset */
+  top: 6rem; /* Reverted: Position below a typical navbar height (e.g., 96px) */
+  transform: none; /* No translation needed for left alignment */
+  font-size: 8vw; /* Responsive font size */
+  font-weight: bold;
+  /* Default for dark theme: lighter/more visible gray */
+  color: rgba(200, 200, 200, 0.08);
+  white-space: normal; /* Allow text to wrap */
+  line-height: 1.2; /* Adjust line height for wrapped text */
+  z-index: -1; /* Ensure it's behind all other content */
+  pointer-events: none; /* Make sure it doesn't interfere with mouse events */
+  text-align: left; /* Align text to the left */
+  overflow: hidden; /* Hide any part of the text that might overflow */
+  width: 96%; /* Fill most of the width, leaving a small right offset */
+  word-break: break-word; /* Break words if necessary to prevent overflow */
 }
 
 /* Update existing variables to use the new scheme or remove if redundant */

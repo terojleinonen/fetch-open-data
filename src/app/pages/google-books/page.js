@@ -189,7 +189,10 @@ export default function GoogleBooksPage() {
   const inputBaseClasses = "w-full p-2 bg-[var(--background-color-dark)] text-[var(--text-color-dark)] border border-[var(--shadow-color-dark)] rounded-md shadow-sm text-sm focus:ring-[var(--accent-color-dark)] focus:border-[var(--accent-color-dark)] placeholder-gray-500";
 
   return (
-    <div className="min-h-screen bg-background text-foreground p-4 md:p-8">
+    <div
+      className="min-h-screen bg-background text-foreground p-4 md:p-8 page-background-text"
+      style={{ '--page-background-text-content': "'GOOGLE BOOKS'" }}
+    >
       <header className="mb-10">
         <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent-color-dark)] via-[var(--hover-accent-color-dark)] to-[var(--accent-color-dark)] py-2">
           Google Books Explorer

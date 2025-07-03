@@ -15,10 +15,10 @@ const NavigationBar = () => {
   return (
     // On mobile (default): full width, flex-col for header and links.
     // On desktop (md+): full width, flex-row, and padding for horizontal navbar.
-    <nav className="w-full p-4 md:flex md:items-center md:justify-between shadow-md bg-background">
+    <nav className="w-full p-4 md:flex md:items-center md:justify-between shadow-md bg-background z-50 relative">
       {/* Header: Contains site title and hamburger menu toggle. Visible on all screen sizes. */}
       <div className="flex items-center justify-between">
-        <div className="text-2xl font-bold">Stephen King Universe</div>
+        <div className="text-2xl font-bold">Kingology</div> {/* Updated title, reverted font size class */}
         <button
            className="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[var(--nav-link-focus-ring)]"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -69,7 +69,7 @@ const NavigationBar = () => {
           GOOGLE BOOKS
         </Link>
         <Link href="/pages/about-stephen-king" className={`text-lg font-bold py-2 px-4 rounded-md mobile-menu-link-hover nav-link-desktop-hover ${pathname === '/pages/about-stephen-king' ? 'underline' : ''}`} onClick={handleLinkClick}>
-          ABOUT STEPHEN KING
+          KINGGRAPHY
         </Link>
         <a href="https://stephenking.com" target="_blank" rel="noopener noreferrer" className="text-lg font-bold py-2 px-4 rounded-md mobile-menu-link-hover nav-link-desktop-hover" onClick={handleLinkClick}>
           STEPHENKING.COM <span className="text-sm opacity-75">(Official Site)</span>
