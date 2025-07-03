@@ -172,7 +172,7 @@ export default function BookListClient({ initialBooks }) {
               />
             </div>
           </div>
-
+          
           {/* Reset Filters Button */}
           <button
             onClick={handleResetFilters}
@@ -261,16 +261,16 @@ export default function BookListClient({ initialBooks }) {
      {filteredBooks.length === 0 && searchTerm && (
          <p className="text-center text-[var(--text-color)] mt-4">No books found matching your search.</p>
      )}
-+          {/* Display a message if no books match the filters (excluding search) */}
-+          {filteredBooks.length === 0 && !searchTerm && (selectedYear || selectedPublisher || minPages || maxPages) && (
-+            <p className="text-center text-[var(--text-color)] mt-4">No books found matching your filter criteria.</p>
-+          )}
-+        </div> {/* End of Main Content Area */}
-+
-+        {/* Right Empty Sidebar for spacing */}
-+        <div className="hidden md:block md:w-1/8"></div>
-+      </div> {/* End of Main Flex Container */}
-+      <div className="text-center mt-12"><Link href="/" className="home-link text-xl">Return to Home</Link></div>
-+    </div>
-+  );
+          {/* Display a message if no books match the filters (excluding search) */}
+          {filteredBooks.length === 0 && !searchTerm && (selectedYear || selectedPublisher || minPages || maxPages) && (
+            <p className="text-center text-[var(--text-color)] mt-4">No books found matching your filter criteria.</p>
+          )}
+        </div> {/* End of Main Content Area */}
+
+        {/* Right Empty Sidebar for spacing */}
+        <div className="hidden md:block md:w-1/8"></div>
+      </div> {/* End of Main Flex Container */}
+      <div className="text-center mt-12"><Link href="/" className="home-link text-xl">Return to Home</Link></div>
+    </div>
+  );
 }
