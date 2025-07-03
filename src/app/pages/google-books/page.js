@@ -239,12 +239,14 @@ export default function GoogleBooksPage() {
         </p>
       )}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-        {displayedBooks.map((book) => (
-          <div key={book.id} className="bg-neutral-800 bg-opacity-50 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out flex flex-col overflow-hidden border border-neutral-700 hover:border-[var(--accent-color-dark)]">
-            <Link href={`/pages/google-books/${book.id}`} className="flex flex-col flex-grow group"> {/* Added group class here */}
-              <div className="relative w-full h-72 flex items-center justify-center bg-neutral-700 overflow-hidden">
-                {book.volumeInfo.imageLinks?.thumbnail ? (
+      {/* Centering container for the grid and pagination */}
+      <div className="max-w-screen-xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+          {displayedBooks.map((book) => (
+            <div key={book.id} className="bg-neutral-800 bg-opacity-50 rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out flex flex-col overflow-hidden border border-neutral-700 hover:border-[var(--accent-color-dark)]">
+              <Link href={`/pages/google-books/${book.id}`} className="flex flex-col flex-grow group"> {/* Added group class here */}
+                <div className="relative w-full h-72 flex items-center justify-center bg-neutral-700 overflow-hidden">
+                  {book.volumeInfo.imageLinks?.thumbnail ? (
                   <Image
                     src={book.volumeInfo.imageLinks.thumbnail}
                     alt={book.volumeInfo.title}
@@ -297,6 +299,7 @@ export default function GoogleBooksPage() {
           </button>
         </div>
       )}
+      </div> {/* End of centering container */}
     </div>
   );
 }

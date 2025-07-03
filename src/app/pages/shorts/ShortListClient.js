@@ -70,12 +70,14 @@ export default function ShortListClient({ initialShorts }) {
   };
 
   return (
-    <div className="py-12 pr-8"> {/* Removed px-8, specifically pl-8 by only keeping pr-8 */}
+    <div className="py-12"> {/* Removed pr-8 to allow full width for centering */}
 
       {/* Main layout: Flex container for sidebar and content */}
-      <div className="flex flex-col md:flex-row gap-6"> {/* Adjusted flex direction for mobile and gap */}
+      {/* Added md:justify-center to center the content block on medium screens and up */}
+      <div className="flex flex-col md:flex-row gap-6 md:justify-center"> {/* Adjusted flex direction for mobile and gap */}
         {/* Left Sidebar for Type Filters ONLY - Hidden on mobile, shown on md and up */}
-        <div className="hidden md:block md:w-1/4"> {/* Hidden on small, takes 1/4 width on medium+ */}
+        {/* Reduced width from md:w-1/4 to md:w-1/8 */}
+        <div className="hidden md:block md:w-1/8">
           <TypeFilterMenu
             uniqueTypes={uniqueTypes}
             selectedType={selectedType}
@@ -83,8 +85,9 @@ export default function ShortListClient({ initialShorts }) {
           />
         </div>
 
-        {/* Right Content Area for Search, Sort, and Shorts List - Takes full width on mobile, 3/4 on medium+ */}
-        <div className="w-full md:w-3/4"> {/* Full width on small, 3/4 on medium+ */}
+        {/* Right Content Area for Search, Sort, and Shorts List - Takes full width on mobile, 6/8 (3/4) on medium+ */}
+        {/* Adjusted width to md:w-6/8 */}
+        <div className="w-full md:w-6/8 px-4 md:px-0"> {/* Added horizontal padding for mobile, removed for md+ to rely on parent centering */}
           {/* Search and Sort Controls Container */}
           <div className="controls-container mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow flex flex-wrap gap-4 items-center justify-between">
             <input
@@ -146,6 +149,8 @@ export default function ShortListClient({ initialShorts }) {
             <p className="text-center text-[var(--text-color)] mt-4">No shorts found for the type &apos;{selectedType}&apos;.</p>
           )}
         </div>
+        {/* Empty div for right-side spacing on medium screens and up, matches sidebar width */}
+        <div className="hidden md:block md:w-1/8"></div>
       </div>
       <div className="text-center mt-12"><Link href="/" className="home-link text-xl">Return to Home</Link></div>
     </div>
