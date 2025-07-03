@@ -4,11 +4,11 @@ import React, { useState, useMemo, Suspense } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image'; // Import Next.js Image component
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic'; // FilterPopup no longer dynamically imported
 
-const FilterPopup = dynamic(() => import('./FilterPopup'), {
-  suspense: true,
-});
+// const FilterPopup = dynamic(() => import('./FilterPopup'), { // FilterPopup component removed
+//   suspense: true,
+// });
 
 /**
  * BookListClient component for displaying and filtering a list of books.
@@ -25,8 +25,31 @@ export default function BookListClient({ initialBooks }) {
   const [selectedPublisher, setSelectedPublisher] = useState('');
   const [minPages, setMinPages] = useState('');
   const [maxPages, setMaxPages] = useState('');
-  const [isFilterPopupOpen, setIsFilterPopupOpen] = useState(false);
+  const [isFilterPopupOpen, setIsFilterPopupOpen] = useState(false); // This will be removed
   const router = useRouter();
+
+  // Memoized lists for dropdowns (moved from FilterPopup)
+  const uniqueYears = useMemo(() => {
+    if (!initialBooks?.data || !Array.isArray(initialBooks.data)) return [];
+    const years = new Set(initialBooks.data.map(book => book.Year).filter(Boolean));
+    return Array.from(years).sort((a, b) => b - a); // Descending order
+  }, [initialBooks]);
+
+  const uniquePublishers = useMemo(() => {
+    if (!initialBooks?.data || !Array.isArray(initialBooks.data)) return [];
+    const publishers = new Set(initialBooks.data.map(book => book.Publisher).filter(Boolean));
+    return Array.from(publishers).sort(); // Ascending order
+  }, [initialBooks]);
+
+  // Handler for resetting filters (moved and adapted from FilterPopup)
+  const handleResetFilters = () => {
+    setSelectedYear('');
+    setSelectedPublisher('');
+    setMinPages('');
+    setMaxPages('');
+    // setSearchTerm(''); // Optionally reset search term as well
+    // setSortOrder('alphabetical'); // Optionally reset sort order
+  };
 
   // Memoized variable for filtered books based on the search term and sort order
   const filteredBooks = useMemo(() => {
@@ -85,71 +108,108 @@ export default function BookListClient({ initialBooks }) {
   }
 
   return (
-    <div className={`px-8 py-12 transition-[margin-right] duration-300 ease-in-out ${isFilterPopupOpen ? 'md:mr-80' : 'md:mr-0'}`}>
-      
-      {/* Search and Sort Controls */}
-      <div className="controls-container mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow flex flex-wrap gap-4 items-center justify-between">
-         <input
-             type="text"
-             id="search-books-input"
-             name="search-books-input"
-             placeholder="Search books..."
-             className="w-full md:w-auto flex-grow p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
-             value={searchTerm}
-             onChange={(e) => setSearchTerm(e.target.value)}
-         />
-         <select
-          id="sort-books-select"
-          name="sort-books-select"
-          className="p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
-          value={sortOrder}
-          onChange={(e) => setSortOrder(e.target.value)}
-        >
-          <option value="alphabetical">Alphabetical (A-Z)</option>
-          <option value="year_newest_to_oldest">Year (Newest to Oldest)</option>
-          <option value="year_oldest_to_newest">Year (Oldest to Newest)</option>
-        </select>
-        <button
-          onClick={() => setIsFilterPopupOpen(!isFilterPopupOpen)} // Toggle behavior
-          className="bg-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] text-[var(--text-color)] font-bold py-2 px-4 h-10 rounded"
-        >
-          Filters
-        </button>
-     </div>
+    <div className="py-12"> {/* Removed px-8 and transition classes */}
+      {/* Main layout: Flex container for sidebar and content */}
+      <div className="flex flex-col md:flex-row gap-6 md:justify-center">
+        {/* Left Sidebar for Filters */}
+        <div className="hidden md:block md:w-1/8 p-4 bg-[var(--background-color)] rounded-lg shadow self-start"> {/* Added self-start for alignment */}
+          <h2 className="text-xl font-semibold text-[var(--text-color)] mb-4">Filters</h2>
+          {/* Year Filter */}
+          <div className="mb-4">
+            <label htmlFor="filter-year" className="block text-sm font-medium text-[var(--text-color)] mb-1">Year</label>
+            <select
+              id="filter-year"
+              value={selectedYear}
+              onChange={(e) => setSelectedYear(e.target.value)}
+              className="w-full p-2 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] outline-none"
+            >
+              <option value="">All Years</option>
+              {uniqueYears.map(year => (
+                <option key={year} value={year}>{year}</option>
+              ))}
+            </select>
+          </div>
 
-      {isFilterPopupOpen && (
-        <Suspense fallback={<div>Loading filters...</div>}>
-          <FilterPopup
-            isOpen={isFilterPopupOpen}
-            initialBooks={initialBooks}
-            selectedYear={selectedYear}
-            setSelectedYear={setSelectedYear}
-            selectedPublisher={selectedPublisher}
-            setSelectedPublisher={setSelectedPublisher}
-            minPages={minPages}
-            setMinPages={setMinPages}
-            maxPages={maxPages}
-            setMaxPages={setMaxPages}
-            onApplyFilters={() => {
-              console.log('Apply filters clicked');
-              // Implement actual filter logic here in a future step
-              setIsFilterPopupOpen(false);
-            }}
-            onResetFilters={() => {
-              setSelectedYear('');
-              setSelectedPublisher('');
-              setMinPages('');
-              setMaxPages('');
-              console.log('Reset filters clicked');
-              // Optionally, re-apply filters or close popup
-            }}
-            onClose={() => setIsFilterPopupOpen(false)}
-          />
-        </Suspense>
-      )}
+          {/* Publisher Filter */}
+          <div className="mb-4">
+            <label htmlFor="filter-publisher" className="block text-sm font-medium text-[var(--text-color)] mb-1">Publisher</label>
+            <select
+              id="filter-publisher"
+              value={selectedPublisher}
+              onChange={(e) => setSelectedPublisher(e.target.value)}
+              className="w-full p-2 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] outline-none"
+            >
+              <option value="">All Publishers</option>
+              {uniquePublishers.map(publisher => (
+                <option key={publisher} value={publisher}>{publisher}</option>
+              ))}
+            </select>
+          </div>
 
-      {/* Books List Display */}
-      {/* Renders the list of filtered books */}
+          {/* Page Count Filter */}
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-[var(--text-color)] mb-1">Page Count</label>
+            <div className="flex gap-2 mb-2">
+              <input
+                type="number"
+                id="filter-min-pages"
+                name="filter-min-pages"
+                placeholder="Min"
+                value={minPages}
+                onChange={(e) => setMinPages(e.target.value)}
+                className="w-full p-2 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] outline-none"
+                min="0"
+              />
+              <input
+                type="number"
+                id="filter-max-pages"
+                name="filter-max-pages"
+                placeholder="Max"
+                value={maxPages}
+                onChange={(e) => setMaxPages(e.target.value)}
+                className="w-full p-2 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] outline-none"
+                min="0"
+              />
+            </div>
+          </div>
+
+          {/* Reset Filters Button */}
+          <button
+            onClick={handleResetFilters}
+            className="w-full bg-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] text-[var(--text-color)] font-bold py-2 px-4 rounded"
+          >
+            Reset Filters
+          </button>
+        </div>
+
+        {/* Main Content Area: Search, Sort, and Books List */}
+        <div className="w-full md:w-6/8 px-4 md:px-0">
+          {/* Search and Sort Controls */}
+          <div className="controls-container mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow flex flex-wrap gap-4 items-center justify-between">
+            <input
+                type="text"
+                id="search-books-input"
+                name="search-books-input"
+                placeholder="Search books..."
+                className="w-full md:w-auto flex-grow p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <select
+              id="sort-books-select"
+              name="sort-books-select"
+              className="p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
+              value={sortOrder}
+              onChange={(e) => setSortOrder(e.target.value)}
+            >
+              <option value="alphabetical">Alphabetical (A-Z)</option>
+              <option value="year_newest_to_oldest">Year (Newest to Oldest)</option>
+              <option value="year_oldest_to_newest">Year (Oldest to Newest)</option>
+            </select>
+            {/* Filter toggle button removed */}
+          </div>
+
+          {/* Books List Display */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {/* Responsive grid */}
         {filteredBooks.map((book, index) => (
             <div key={book.id} className="group bg-[var(--background-color)] rounded-lg shadow border border-[var(--accent-color)] hover:border-[var(--hover-accent-color)] transition-all duration-300 ease-in-out flex flex-col overflow-hidden h-full hover:shadow-lg"> {/* Added h-full for consistent height and hover effect, ADDED group CLASS */}
@@ -201,7 +261,16 @@ export default function BookListClient({ initialBooks }) {
      {filteredBooks.length === 0 && searchTerm && (
          <p className="text-center text-[var(--text-color)] mt-4">No books found matching your search.</p>
      )}
-      <div className="text-center mt-12"><Link href="/" className="home-link text-xl">Return to Home</Link></div>
-    </div>
-  );
++          {/* Display a message if no books match the filters (excluding search) */}
++          {filteredBooks.length === 0 && !searchTerm && (selectedYear || selectedPublisher || minPages || maxPages) && (
++            <p className="text-center text-[var(--text-color)] mt-4">No books found matching your filter criteria.</p>
++          )}
++        </div> {/* End of Main Content Area */}
++
++        {/* Right Empty Sidebar for spacing */}
++        <div className="hidden md:block md:w-1/8"></div>
++      </div> {/* End of Main Flex Container */}
++      <div className="text-center mt-12"><Link href="/" className="home-link text-xl">Return to Home</Link></div>
++    </div>
++  );
 }
