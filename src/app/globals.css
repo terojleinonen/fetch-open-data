@@ -136,7 +136,7 @@ body {
   font-size: 8vw; /* Responsive font size */
   font-weight: bold;
   /* Default for dark theme: lighter/more visible gray */
-  color: rgba(200, 200, 200, 0.08);
+  color: rgba(200, 200, 200, 0.08); 
   white-space: normal; /* Allow text to wrap */
   line-height: 1.2; /* Adjust line height for wrapped text */
   z-index: -1; /* Ensure it's behind all other content */
