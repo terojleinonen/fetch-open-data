@@ -4,9 +4,9 @@ import PageTitle from '@/app/components/PageTitle';
 
 const AboutStephenKing = () => {
   return (
-    <div
+    <div 
       className="container mx-auto px-4 py-8 page-background-text"
-      style={{ '--page-background-text-content': "'ABOUT STEPHEN KING'" }}
+      style={{ '--page-background-text-content': "'KINGGRAPHY'" }}
     >
       <Link href="/" className="text-blue-500 hover:underline mb-6 inline-block">
           &larr; Back to Home

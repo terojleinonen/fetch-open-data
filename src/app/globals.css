@@ -131,7 +131,7 @@ body {
   content: var(--page-background-text-content, ''); /* Use CSS variable for text */
   position: fixed; /* Use fixed to ensure it stays in place even with scrolling */
   left: 2%; /* Align to the left with a small offset */
-  top: 15%; /* Adjusted to move text higher, near title level */
+  top: 6rem; /* Reverted: Position below a typical navbar height (e.g., 96px) */
   transform: none; /* No translation needed for left alignment */
   font-size: 8vw; /* Responsive font size */
   font-weight: bold;
