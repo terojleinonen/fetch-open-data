@@ -104,7 +104,7 @@ export default function BookListClient({ initialBooks }) {
       // Assuming 'Year' can be used for date sorting, adjust if a more specific date field is available
       booksArray.sort((a, b) => (a.publishedDate || a.Year) - (b.publishedDate || b.Year));
     }
-
+    
 
     return booksArray;
   }, [initialBooks, searchTerm, titleSortOrder, dateSortOrder, selectedYear, selectedPublisher, minPages, maxPages]);
