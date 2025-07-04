@@ -20,45 +20,61 @@ const mockVillains = {
 };
 
 describe('VillainListClient', () => {
-  it('renders the search input and villains list', () => {
+  it('renders the search icon button and villains list initially', () => {
     render(<VillainListClient initialVillains={mockVillains} />);
-    expect(screen.getByPlaceholderText('Search villains...')).toBeInTheDocument();
+    // Search input is not initially visible
+    expect(screen.queryByPlaceholderText('Search villains...')).not.toBeInTheDocument();
+    // Search icon button should be present
+    expect(screen.getByRole('button', { name: /open search bar/i })).toBeInTheDocument();
     expect(screen.getByText('Joker')).toBeInTheDocument();
     expect(screen.getByText('Penguin')).toBeInTheDocument();
     expect(screen.getByText('Riddler')).toBeInTheDocument();
     expect(screen.getByText('Bane')).toBeInTheDocument();
   });
 
-  it('filters villains based on search term', () => {
+  it('filters villains based on search term after opening search bar', () => {
     render(<VillainListClient initialVillains={mockVillains} />);
+    // Click the search icon button to reveal the search input
+    const searchIconButton = screen.getByRole('button', { name: /open search bar/i });
+    fireEvent.click(searchIconButton);
+
     const searchInput = screen.getByPlaceholderText('Search villains...');
     fireEvent.change(searchInput, { target: { value: 'joker' } });
     expect(screen.getByText('Joker')).toBeInTheDocument();
     expect(screen.queryByText('Penguin')).not.toBeInTheDocument();
   });
 
-  it('sorts villains alphabetically (A-Z)', () => {
+  it('sorts villains alphabetically (A-Z and Z-A) using the sort button', () => {
     render(<VillainListClient initialVillains={mockVillains} />);
-    const sortSelect = screen.getByRole('combobox');
-    fireEvent.change(sortSelect, { target: { value: 'asc' } }); // Select 'Name (A-Z)'
+    const sortButton = screen.getByRole('button', { name: /A-Z|Z-A/i }); // Matches initial A-Z or toggled Z-A
 
-    const allLinks = screen.getAllByRole('link', { name: /^(?!Return to Home)/i });
+    // Initial state should be A-Z (Bane, Joker, Penguin, Riddler)
+    // The component initializes with nameSortOrder 'A-Z'.
+    // We need to ensure the list is rendered in that order first.
+    let allLinks = screen.getAllByRole('link', { name: /^(?!Return to Home)/i });
     const villainNameLinks = allLinks.filter(link => link.textContent !== 'View Details');
-    const villains = villainNameLinks.map(link => link.textContent);
+    let villains = villainNameLinks.map(link => link.textContent);
+    expect(villains).toEqual(['Bane', 'Joker', 'Penguin', 'Riddler']);
+
+    // Click the sort button to change to Z-A
+    fireEvent.click(sortButton);
+    expect(sortButton).toHaveTextContent('Z-A'); // Check if button text updated
+
+    allLinks = screen.getAllByRole('link', { name: /^(?!Return to Home)/i });
+    const villainNameLinksZA = allLinks.filter(link => link.textContent !== 'View Details');
+    villains = villainNameLinksZA.map(link => link.textContent);
+    expect(villains).toEqual(['Riddler', 'Penguin', 'Joker', 'Bane']);
+
+    // Click again to go back to A-Z
+    fireEvent.click(sortButton);
+    expect(sortButton).toHaveTextContent('A-Z');
+
+    allLinks = screen.getAllByRole('link', { name: /^(?!Return to Home)/i });
+    const villainNameLinksAZ_again = allLinks.filter(link => link.textContent !== 'View Details');
+    villains = villainNameLinksAZ_again.map(link => link.textContent);
     expect(villains).toEqual(['Bane', 'Joker', 'Penguin', 'Riddler']);
   });
 
-  it('sorts villains alphabetically (Z-A)', () => {
-    render(<VillainListClient initialVillains={mockVillains} />);
-    const sortSelect = screen.getByRole('combobox');
-    // Initial sort is 'none'. To sort Z-A, we change the select value to 'desc'.
-    fireEvent.change(sortSelect, { target: { value: 'desc' } });
-
-    const allLinks = screen.getAllByRole('link', { name: /^(?!Return to Home)/i });
-    const villainNameLinks = allLinks.filter(link => link.textContent !== 'View Details');
-    const villains = villainNameLinks.map(link => link.textContent);
-    expect(villains).toEqual(['Riddler', 'Penguin', 'Joker', 'Bane']);
-  });
 
   it('handles random villain selection', () => {
     const mockRouter = jest.requireMock('next/navigation').useRouter();

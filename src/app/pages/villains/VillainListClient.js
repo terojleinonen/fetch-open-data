@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image'; // Import Next.js Image component
 import StatusFilterMenu from '@/app/components/StatusFilterMenu'; // Import the new component
+import SearchIcon from '../../../../public/search-icon.svg'; // Import the search icon
 
 /**
  * VillainListClient component for displaying and filtering a list of villains.
@@ -15,8 +16,10 @@ import StatusFilterMenu from '@/app/components/StatusFilterMenu'; // Import the 
 export default function VillainListClient({ initialVillains }) {
   // State variable for the search term
   const [searchTerm, setSearchTerm] = useState('');
+  // State variable for search bar visibility
+  const [isSearchBarVisible, setIsSearchBarVisible] = useState(false);
   // State variable for the sort order
-  const [sortOrder, setSortOrder] = useState('none'); // 'none', 'asc', 'desc'
+  const [nameSortOrder, setNameSortOrder] = useState('A-Z'); // 'A-Z', 'Z-A'
   // State variable for the selected status
   const [selectedStatus, setSelectedStatus] = useState('');
   const router = useRouter();
@@ -39,21 +42,17 @@ export default function VillainListClient({ initialVillains }) {
     }
 
     // Sort villains
-    if (sortOrder !== 'none') {
-      villains.sort((a, b) => {
-        const nameA = a.name.toLowerCase();
-        const nameB = b.name.toLowerCase();
-        if (nameA < nameB) return sortOrder === 'asc' ? -1 : 1;
-        if (nameA > nameB) return sortOrder === 'asc' ? 1 : -1;
-        return 0;
-      });
+    if (nameSortOrder === 'A-Z') {
+      villains.sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
+    } else if (nameSortOrder === 'Z-A') {
+      villains.sort((a, b) => b.name.toLowerCase().localeCompare(a.name.toLowerCase()));
     }
 
     // Filter villains by search term
     return villains.filter(villain =>
       villain.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
-  }, [initialVillains, searchTerm, sortOrder, selectedStatus]);
+  }, [initialVillains, searchTerm, nameSortOrder, selectedStatus]);
 
   return (
     <div className="py-12"> {/* Removed pr-8 to allow full width for centering */}
@@ -76,28 +75,46 @@ export default function VillainListClient({ initialVillains }) {
         <div className="w-full md:w-6/8 px-4 md:px-0"> {/* Added horizontal padding for mobile, removed for md+ to rely on parent centering */}
           {/* Search and Sort Controls Container */}
           <div className="controls-container mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow flex flex-wrap gap-4 items-center justify-between">
-            <input
-             type="text"
-             id="search-villains-input"
-             name="search-villains-input"
-             placeholder="Search villains..."
-             className="w-full md:w-auto flex-grow p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
-             value={searchTerm}
-             onChange={(e) => setSearchTerm(e.target.value)}
-         />
-        <select
-          id="sort-villains-select"
-          name="sort-villains-select"
-          className="p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
-          value={sortOrder}
-          onChange={(e) => setSortOrder(e.target.value)}
-        >
-          <option value="none">Sort by...</option>
-          <option value="asc">Name (A-Z)</option>
-          <option value="desc">Name (Z-A)</option>
-        </select>
-        {/* TODO: Add a filter button if necessary */}
-     </div>
+            {/* Sort Button on the left */}
+            <div className="flex gap-2">
+              <button
+                onClick={() => setNameSortOrder(nameSortOrder === 'A-Z' ? 'Z-A' : 'A-Z')}
+                className="px-3 py-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] text-xs flex items-center justify-center"
+                style={{ minWidth: '4rem' }}
+              >
+                {nameSortOrder}
+              </button>
+            </div>
+
+            {/* Search bar and Icon on the right */}
+            <div className="flex-grow flex justify-end items-center gap-2 ml-4">
+              {isSearchBarVisible && (
+                <div className="relative flex-grow">
+                  <input
+                    type="text"
+                    id="search-villains-input"
+                    name="search-villains-input"
+                    placeholder="Search villains..."
+                    className="w-full p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] pl-10"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    autoFocus
+                  />
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <Image src={SearchIcon} alt="Search" width={20} height={20} className="search-icon" />
+                  </div>
+                </div>
+              )}
+              <button
+                onClick={() => setIsSearchBarVisible(!isSearchBarVisible)}
+                className="p-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] flex items-center justify-center flex-shrink-0"
+                style={{ minWidth: '2.5rem', width: '2.5rem' }}
+                aria-label={isSearchBarVisible ? "Close search bar" : "Open search bar"}
+              >
+                <Image src={SearchIcon} alt="Search" width={20} height={20} className="search-icon" />
+              </button>
+            </div>
+          </div>
       {/* Header Row for List */}
       <div className="flex justify-between items-center p-4 text-[var(--accent-color)] text-lg font-bold">
         <div className="flex-1 text-left">Name</div>

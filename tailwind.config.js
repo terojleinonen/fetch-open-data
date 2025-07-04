@@ -13,6 +13,10 @@ module.exports = {
         'medium-gray': '#A0A0A0',
         'classic-red': '#A93226',
         'red-700': '#922B21', // Darker shade for hover
+        'kitab-button-background': 'var(--kitab-button-background)',
+        'kitab-button-text': 'var(--kitab-button-text)',
+        'kitab-button-border': 'var(--kitab-button-border)',
+        'kitab-button-hover-background': 'var(--kitab-button-hover-background)',
       },
       fontFamily: {
         // Using Tailwind's defaults is fine, but you can customize like so:

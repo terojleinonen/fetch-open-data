@@ -52,6 +52,18 @@
   --map-marker-stroke-light: rgba(0, 0, 0, 0.3);
   --map-marker-hover-fill-light: var(--sk-hover-accent-light);
   --map-marker-hover-stroke-light: rgba(0, 0, 0, 0.7);
+
+  /* Button specific styles for light theme */
+  --kitab-button-background-light: #FFFFFF; /* White background */
+  --kitab-button-text-light: #000000;       /* Black text */
+  --kitab-button-border-light: #000000;     /* Black border */
+  --kitab-button-hover-background-light: #f0f0f0; /* Light gray hover */
+
+  /* Button specific styles for dark theme */
+  --kitab-button-background-dark: #000000;  /* Black background */
+  --kitab-button-text-dark: #FFFFFF;        /* White text */
+  --kitab-button-border-dark: #FFFFFF;      /* White border */
+  --kitab-button-hover-background-dark: #333333;  /* Dark gray hover */
 }
 
 /* Default to dark theme */
@@ -81,6 +93,12 @@ body {
   --details-box-bg: var(--sk-row-bg-even-dark);
   --details-box-text: var(--sk-text-dark);
   --details-box-shadow: rgba(255, 0, 0, 0.1); /* Subtle red shadow for dark mode */
+
+  /* Button styles for dark theme */
+  --kitab-button-background: var(--kitab-button-background-dark);
+  --kitab-button-text: var(--kitab-button-text-dark);
+  --kitab-button-border: var(--kitab-button-border-dark);
+  --kitab-button-hover-background: var(--kitab-button-hover-background-dark);
 
   color: var(--text-color);
   background: var(--background-color);
@@ -115,6 +133,12 @@ body {
     --details-box-bg: var(--sk-row-bg-even-light); /* Use a slightly off-white for the box */
     --details-box-text: var(--sk-text-light);
     --details-box-shadow: rgba(255, 0, 0, 0.05); /* Subtle red shadow for light mode */
+
+    /* Button styles for light theme */
+    --kitab-button-background: var(--kitab-button-background-light);
+    --kitab-button-text: var(--kitab-button-text-light);
+    --kitab-button-border: var(--kitab-button-border-light);
+    --kitab-button-hover-background: var(--kitab-button-hover-background-light);
 
     color: var(--text-color);
     background: var(--background-color);
@@ -263,3 +287,11 @@ body::before {
 .nav-link-desktop-hover:hover {
   background-color: var(--nav-link-hover-bg);
 }
+
+/* Styling for the search icon to ensure visibility */
+.search-icon {
+  stroke: var(--text-color); /* Default to text color, which is theme aware */
+}
+
+/* Override for search icon when inside the input field if needed, e.g. to ensure it's not borderless */
+/* For now, relying on the SVG's inherent borderless nature */
