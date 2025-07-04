@@ -104,7 +104,7 @@ export default function BookListClient({ initialBooks }) {
       // Assuming 'Year' can be used for date sorting, adjust if a more specific date field is available
       booksArray.sort((a, b) => (a.publishedDate || a.Year) - (b.publishedDate || b.Year));
     }
-
+    
 
     return booksArray;
   }, [initialBooks, searchTerm, titleSortOrder, dateSortOrder, selectedYear, selectedPublisher, minPages, maxPages]);
@@ -220,7 +220,7 @@ export default function BookListClient({ initialBooks }) {
             <div className="flex-grow flex justify-end items-center gap-2 ml-4"> {/* Added ml-4 for spacing */}
               {isSearchBarVisible && (
                 // Ensure this div allows the input to grow but also respects the icon button's space
-                <div className="relative flex-grow">
+                <div className="relative flex-grow"> 
                   <input
                     type="text"
                     id="search-books-input"
