@@ -104,7 +104,7 @@ export default function BookListClient({ initialBooks }) {
       // Assuming 'Year' can be used for date sorting, adjust if a more specific date field is available
       booksArray.sort((a, b) => (a.publishedDate || a.Year) - (b.publishedDate || b.Year));
     }
-
+    
 
     return booksArray;
   }, [initialBooks, searchTerm, titleSortOrder, dateSortOrder, selectedYear, selectedPublisher, minPages, maxPages]);
@@ -204,7 +204,7 @@ export default function BookListClient({ initialBooks }) {
                   id="search-books-input"
                   name="search-books-input"
                   placeholder="Search books..."
-                  className="w-full md:w-auto flex-grow p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] pl-10" // Add padding for icon
+                  className="w-full p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] pl-10" // Ensure full width and padding for icon
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
@@ -213,28 +213,32 @@ export default function BookListClient({ initialBooks }) {
                 </div>
               </div>
             ) : (
+              // Search Icon Button - takes up minimal space and expands search bar on click
               <button
                 onClick={() => setIsSearchBarVisible(true)}
-                className="p-2 h-10 rounded bg-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] flex items-center"
+                className="p-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] flex items-center justify-center"
+                style={{ minWidth: '2.5rem' }} // Fixed width for icon button
+                aria-label="Open search bar"
               >
-                <Image src={SearchIcon} alt="Search" width={20} height={20} className="mr-2" />
-                Search
+                <Image src={SearchIcon} alt="Search" width={20} height={20} />
               </button>
             )}
             {/* Sort by Title Button */}
             <button
               onClick={() => setTitleSortOrder(titleSortOrder === 'A-Z' ? 'Z-A' : 'A-Z')}
-              className="p-2 h-10 rounded bg-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
+              className="p-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] text-xs" // Adjusted classes for styling and size
+              style={{ minWidth: 'fit-content' }} // Ensure button is as narrow as possible
             >
-              Sort by Title: {titleSortOrder}
+              {titleSortOrder}
             </button>
 
             {/* Sort by Date Button */}
             <button
               onClick={() => setDateSortOrder(dateSortOrder === 'Newest-Oldest' ? 'Oldest-Newest' : 'Newest-Oldest')}
-              className="p-2 h-10 rounded bg-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
+              className="p-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] text-xs" // Adjusted classes for styling and size
+              style={{ minWidth: 'fit-content' }} // Ensure button is as narrow as possible
             >
-              Sort by Date: {dateSortOrder}
+              {dateSortOrder}
             </button>
             {/* Filter toggle button removed */}
           </div>
