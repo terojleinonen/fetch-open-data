@@ -4,6 +4,7 @@ import React, { useState, useMemo, Suspense } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image'; // Import Next.js Image component
+import SearchIcon from '../../../../public/search-icon.svg'; // Import the search icon
 // import dynamic from 'next/dynamic'; // FilterPopup no longer dynamically imported
 
 // const FilterPopup = dynamic(() => import('./FilterPopup'), { // FilterPopup component removed
@@ -20,7 +21,9 @@ export default function BookListClient({ initialBooks }) {
    // State variable for the search term
    const [searchTerm, setSearchTerm] = useState('');
    // State variable for the sort order
-   const [sortOrder, setSortOrder] = useState('alphabetical');
+   const [titleSortOrder, setTitleSortOrder] = useState('A-Z'); // 'A-Z' or 'Z-A'
+   const [dateSortOrder, setDateSortOrder] = useState('Newest-Oldest'); // 'Newest-Oldest' or 'Oldest-Newest'
+   const [isSearchBarVisible, setIsSearchBarVisible] = useState(false);
   const [selectedYear, setSelectedYear] = useState('');
   const [selectedPublisher, setSelectedPublisher] = useState('');
   const [minPages, setMinPages] = useState('');
@@ -87,16 +90,24 @@ export default function BookListClient({ initialBooks }) {
       return true;
     });
 
-    if (sortOrder === 'alphabetical') {
+    // Apply sorting
+    if (titleSortOrder === 'A-Z') {
       booksArray.sort((a, b) => a.Title.toLowerCase().localeCompare(b.Title.toLowerCase()));
-    } else if (sortOrder === 'year_newest_to_oldest') {
-      booksArray.sort((a, b) => b.Year - a.Year);
-    } else if (sortOrder === 'year_oldest_to_newest') {
-      booksArray.sort((a, b) => a.Year - b.Year);
+    } else if (titleSortOrder === 'Z-A') {
+      booksArray.sort((a, b) => b.Title.toLowerCase().localeCompare(a.Title.toLowerCase()));
     }
 
+    if (dateSortOrder === 'Newest-Oldest') {
+      // Assuming 'Year' can be used for date sorting, adjust if a more specific date field is available
+      booksArray.sort((a, b) => (b.publishedDate || b.Year) - (a.publishedDate || a.Year));
+    } else if (dateSortOrder === 'Oldest-Newest') {
+      // Assuming 'Year' can be used for date sorting, adjust if a more specific date field is available
+      booksArray.sort((a, b) => (a.publishedDate || a.Year) - (b.publishedDate || b.Year));
+    }
+
+
     return booksArray;
-  }, [initialBooks, searchTerm, sortOrder, selectedYear, selectedPublisher, minPages, maxPages]);
+  }, [initialBooks, searchTerm, titleSortOrder, dateSortOrder, selectedYear, selectedPublisher, minPages, maxPages]);
 
   if (!initialBooks || !initialBooks.data || !Array.isArray(initialBooks.data)) {
     return (
@@ -186,26 +197,45 @@ export default function BookListClient({ initialBooks }) {
         <div className="w-full md:w-6/8 px-4 md:px-0">
           {/* Search and Sort Controls */}
           <div className="controls-container mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow flex flex-wrap gap-4 items-center justify-between">
-            <input
-                type="text"
-                id="search-books-input"
-                name="search-books-input"
-                placeholder="Search books..."
-                className="w-full md:w-auto flex-grow p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-            />
-            <select
-              id="sort-books-select"
-              name="sort-books-select"
-              className="p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
-              value={sortOrder}
-              onChange={(e) => setSortOrder(e.target.value)}
+            {isSearchBarVisible ? (
+              <div className="relative flex-grow">
+                <input
+                  type="text"
+                  id="search-books-input"
+                  name="search-books-input"
+                  placeholder="Search books..."
+                  className="w-full md:w-auto flex-grow p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] pl-10" // Add padding for icon
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                />
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <Image src={SearchIcon} alt="Search" width={20} height={20} />
+                </div>
+              </div>
+            ) : (
+              <button
+                onClick={() => setIsSearchBarVisible(true)}
+                className="p-2 h-10 rounded bg-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] flex items-center"
+              >
+                <Image src={SearchIcon} alt="Search" width={20} height={20} className="mr-2" />
+                Search
+              </button>
+            )}
+            {/* Sort by Title Button */}
+            <button
+              onClick={() => setTitleSortOrder(titleSortOrder === 'A-Z' ? 'Z-A' : 'A-Z')}
+              className="p-2 h-10 rounded bg-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
             >
-              <option value="alphabetical">Alphabetical (A-Z)</option>
-              <option value="year_newest_to_oldest">Year (Newest to Oldest)</option>
-              <option value="year_oldest_to_newest">Year (Oldest to Newest)</option>
-            </select>
+              Sort by Title: {titleSortOrder}
+            </button>
+
+            {/* Sort by Date Button */}
+            <button
+              onClick={() => setDateSortOrder(dateSortOrder === 'Newest-Oldest' ? 'Oldest-Newest' : 'Newest-Oldest')}
+              className="p-2 h-10 rounded bg-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
+            >
+              Sort by Date: {dateSortOrder}
+            </button>
             {/* Filter toggle button removed */}
           </div>
 
