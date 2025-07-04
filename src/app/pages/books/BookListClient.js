@@ -4,6 +4,7 @@ import React, { useState, useMemo, Suspense } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image'; // Import Next.js Image component
+import SearchIcon from '../../../../public/search-icon.svg'; // Import the search icon
 // import dynamic from 'next/dynamic'; // FilterPopup no longer dynamically imported
 
 // const FilterPopup = dynamic(() => import('./FilterPopup'), { // FilterPopup component removed
@@ -20,7 +21,9 @@ export default function BookListClient({ initialBooks }) {
    // State variable for the search term
    const [searchTerm, setSearchTerm] = useState('');
    // State variable for the sort order
-   const [sortOrder, setSortOrder] = useState('alphabetical');
+   const [titleSortOrder, setTitleSortOrder] = useState('A-Z'); // 'A-Z' or 'Z-A'
+   const [dateSortOrder, setDateSortOrder] = useState('Newest-Oldest'); // 'Newest-Oldest' or 'Oldest-Newest'
+   const [isSearchBarVisible, setIsSearchBarVisible] = useState(false);
   const [selectedYear, setSelectedYear] = useState('');
   const [selectedPublisher, setSelectedPublisher] = useState('');
   const [minPages, setMinPages] = useState('');
@@ -87,16 +90,24 @@ export default function BookListClient({ initialBooks }) {
       return true;
     });
 
-    if (sortOrder === 'alphabetical') {
+    // Apply sorting
+    if (titleSortOrder === 'A-Z') {
       booksArray.sort((a, b) => a.Title.toLowerCase().localeCompare(b.Title.toLowerCase()));
-    } else if (sortOrder === 'year_newest_to_oldest') {
-      booksArray.sort((a, b) => b.Year - a.Year);
-    } else if (sortOrder === 'year_oldest_to_newest') {
-      booksArray.sort((a, b) => a.Year - b.Year);
+    } else if (titleSortOrder === 'Z-A') {
+      booksArray.sort((a, b) => b.Title.toLowerCase().localeCompare(a.Title.toLowerCase()));
     }
 
+    if (dateSortOrder === 'Newest-Oldest') {
+      // Assuming 'Year' can be used for date sorting, adjust if a more specific date field is available
+      booksArray.sort((a, b) => (b.publishedDate || b.Year) - (a.publishedDate || a.Year));
+    } else if (dateSortOrder === 'Oldest-Newest') {
+      // Assuming 'Year' can be used for date sorting, adjust if a more specific date field is available
+      booksArray.sort((a, b) => (a.publishedDate || a.Year) - (b.publishedDate || b.Year));
+    }
+
+
     return booksArray;
-  }, [initialBooks, searchTerm, sortOrder, selectedYear, selectedPublisher, minPages, maxPages]);
+  }, [initialBooks, searchTerm, titleSortOrder, dateSortOrder, selectedYear, selectedPublisher, minPages, maxPages]);
 
   if (!initialBooks || !initialBooks.data || !Array.isArray(initialBooks.data)) {
     return (
@@ -186,26 +197,101 @@ export default function BookListClient({ initialBooks }) {
         <div className="w-full md:w-6/8 px-4 md:px-0">
           {/* Search and Sort Controls */}
           <div className="controls-container mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow flex flex-wrap gap-4 items-center justify-between">
-            <input
-                type="text"
-                id="search-books-input"
-                name="search-books-input"
-                placeholder="Search books..."
-                className="w-full md:w-auto flex-grow p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-            />
-            <select
-              id="sort-books-select"
-              name="sort-books-select"
-              className="p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
-              value={sortOrder}
-              onChange={(e) => setSortOrder(e.target.value)}
+            {/* Sort Buttons on the left */}
+            <div className="flex gap-2">
+              <button
+                onClick={() => setTitleSortOrder(titleSortOrder === 'A-Z' ? 'Z-A' : 'A-Z')}
+                className="p-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] text-xs"
+                style={{ minWidth: 'fit-content' }}
+              >
+                {titleSortOrder}
+              </button>
+              <button
+                onClick={() => setDateSortOrder(dateSortOrder === 'Newest-Oldest' ? 'Oldest-Newest' : 'Newest-Oldest')}
+                className="p-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] text-xs"
+                style={{ minWidth: 'fit-content' }}
+              >
+                {dateSortOrder}
+              </button>
+            </div>
+
+            {/* Search bar and Icon on the right */}
+            {/* This div will ensure the search input takes available space and icon is at the end */}
+            <div className="flex-grow flex justify-end items-center gap-2 ml-4"> {/* Added ml-4 for spacing */}
+              {isSearchBarVisible && (
+                // Ensure this div allows the input to grow but also respects the icon button's space
+                <div className="relative flex-grow">
+                  <input
+                    type="text"
+                    id="search-books-input"
+                    name="search-books-input"
+                    placeholder="Search books..."
+                    className="w-full p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] pl-10"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    autoFocus // Automatically focus the search bar when it appears
+                  />
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <Image src={SearchIcon} alt="Search" width={20} height={20} />
+                  </div>
+                </div>
+              )}
+              {/* Search Icon Button - always visible */}
+              <button
+                onClick={() => setIsSearchBarVisible(!isSearchBarVisible)} // Toggle visibility
+                className="p-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] flex items-center justify-center flex-shrink-0" // Added flex-shrink-0
+                style={{ minWidth: '2.5rem', width: '2.5rem' }} // Fixed size for the icon button
+                aria-label={isSearchBarVisible ? "Close search bar" : "Open search bar"}
+              >
+                <Image src={SearchIcon} alt="Search" width={20} height={20} />
+              </button>
+            </div>
+          </div>
+
+          {/* Books List Display */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {/* Responsive grid */}
+        {filteredBooks.map((book, index) => (
+          <Link key={book.id} href={`/pages/books/${book.id}`} className="group bg-[var(--background-color)] rounded-lg shadow border border-black hover:border-black transition-all duration-300 ease-in-out flex flex-col overflow-hidden h-full hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-black"> {/* Changed border to black and focus ring to black */}
+                  type="text"
+                  id="search-books-input"
+                  name="search-books-input"
+                  placeholder="Search books..."
+                  className="w-full p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] pl-10" // Ensure full width and padding for icon
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                />
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <Image src={SearchIcon} alt="Search" width={20} height={20} />
+                </div>
+              </div>
+            ) : (
+              // Search Icon Button - takes up minimal space and expands search bar on click
+              <button
+                onClick={() => setIsSearchBarVisible(true)}
+                className="p-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] flex items-center justify-center"
+                style={{ minWidth: '2.5rem' }} // Fixed width for icon button
+                aria-label="Open search bar"
+              >
+                <Image src={SearchIcon} alt="Search" width={20} height={20} />
+              </button>
+            )}
+            {/* Sort by Title Button */}
+            <button
+              onClick={() => setTitleSortOrder(titleSortOrder === 'A-Z' ? 'Z-A' : 'A-Z')}
+              className="p-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] text-xs" // Adjusted classes for styling and size
+              style={{ minWidth: 'fit-content' }} // Ensure button is as narrow as possible
             >
-              <option value="alphabetical">Alphabetical (A-Z)</option>
-              <option value="year_newest_to_oldest">Year (Newest to Oldest)</option>
-              <option value="year_oldest_to_newest">Year (Oldest to Newest)</option>
-            </select>
+              {titleSortOrder}
+            </button>
+
+            {/* Sort by Date Button */}
+            <button
+              onClick={() => setDateSortOrder(dateSortOrder === 'Newest-Oldest' ? 'Oldest-Newest' : 'Newest-Oldest')}
+              className="p-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] text-xs" // Adjusted classes for styling and size
+              style={{ minWidth: 'fit-content' }} // Ensure button is as narrow as possible
+            >
+              {dateSortOrder}
+            </button>
             {/* Filter toggle button removed */}
           </div>
 
