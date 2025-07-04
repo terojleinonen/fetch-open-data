@@ -212,10 +212,11 @@ export default function BookListClient({ initialBooks }) {
           {/* Books List Display */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {/* Responsive grid */}
         {filteredBooks.map((book, index) => (
-            <div key={book.id} className="group bg-[var(--background-color)] rounded-lg shadow border border-[var(--accent-color)] hover:border-[var(--hover-accent-color)] transition-all duration-300 ease-in-out flex flex-col overflow-hidden h-full hover:shadow-lg"> {/* Added h-full for consistent height and hover effect, ADDED group CLASS */}
-                {/* Book Cover Image */}
-                <div className="relative w-full h-72 flex items-center justify-center bg-neutral-700 overflow-hidden rounded-t-lg">
-                  {book.coverImageUrl && book.coverImageUrl !== "NO_COVER_AVAILABLE" ? (
+          <Link key={book.id} href={`/pages/books/${book.id}`} className="group bg-[var(--background-color)] rounded-lg shadow border border-black hover:border-black transition-all duration-300 ease-in-out flex flex-col overflow-hidden h-full hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-black"> {/* Changed border to black and focus ring to black */}
+            {/* Entire card is a link, so no separate key needed on the inner div if we remove it or change its role */}
+            {/* Book Cover Image */}
+            <div className="relative w-full h-72 flex items-center justify-center bg-neutral-700 overflow-hidden rounded-t-lg">
+              {book.coverImageUrl && book.coverImageUrl !== "NO_COVER_AVAILABLE" ? (
                     <Image
                       src={book.coverImageUrl}
                       alt={`Cover of ${book.Title}`}
@@ -233,28 +234,25 @@ export default function BookListClient({ initialBooks }) {
                   )}
                 </div>
                 {/* Book Details */}
-                <div className="p-4 flex flex-col flex-grow"> {/* Added flex-grow to push content to bottom if needed */}
-                     <h2 className="text-lg font-semibold text-[var(--accent-color)] hover:text-[var(--hover-accent-color)] mb-1 truncate" title={book.Title}> {/* Truncate title */}
-                         <Link href={`/pages/books/${book.id}`}>
-                             {book.Title}
-                         </Link>
+                <div className="p-4 flex flex-col flex-grow bg-gray-700 text-gray-200"> {/* Dark background and light text for contrast */}
+                     <h2 className="text-lg font-semibold text-red-500 mb-1 truncate" title={book.Title}> {/* Ensure title is visible and red */}
+                        {book.Title}
                      </h2>
                      {book.authors && Array.isArray(book.authors) && book.authors.length > 0 && (
-                        <p className="text-xs text-gray-600 dark:text-gray-400 mb-1 truncate" title={book.authors.join(', ')}> {/* Truncate authors */}
+                        <p className="text-xs text-gray-300 mb-1 truncate" title={book.authors.join(', ')}> {/* Adjusted for dark bg */}
                             By: {book.authors.join(', ')}
                         </p>
                      )}
                      {/* Display publishedDate if available (from Google Books), otherwise fallback to Year */}
-                     {book.publishedDate && <p className="text-xs text-gray-500 dark:text-gray-300 mb-1">Published: {book.publishedDate}</p>}
-                     {!book.publishedDate && book.Year && <p className="text-xs text-gray-500 dark:text-gray-300 mb-1">Year: {book.Year}</p>}
+                     {book.publishedDate && <p className="text-xs text-gray-300 mb-1">Published: {book.publishedDate}</p>}
+                     {!book.publishedDate && book.Year && <p className="text-xs text-gray-300 mb-1">Year: {book.Year}</p>}
 
-                     <div className="mt-auto pt-2"> {/* Pushes the link to the bottom */}
-                        <Link href={`/pages/books/${book.id}`} className="text-sm text-[var(--accent-color)] hover:text-[var(--hover-accent-color)] font-medium">
-                            View Details
-                        </Link>
-                     </div>
+                     {/* "View Details" link removed as the whole card is a link */}
+                     {/* <div className="mt-auto pt-2">  */}
+                        {/* <span className="text-sm text-[var(--accent-color)] font-medium">View Details</span> */}
+                     {/* </div> */}
                  </div>
-             </div>
+          </Link>
          ))}
      </div>
      {/* Display a message if no books match the search term */}
