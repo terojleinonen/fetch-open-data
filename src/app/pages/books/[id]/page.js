@@ -178,9 +178,8 @@ export default async function BookDetailPage({ params }) {
         </div>
       )}
 
-      <div className="mt-10 text-center md:text-left">        
-      </div>
-      </div>
+      {/* The empty div that was here was removed as it caused a syntax error. */}
+      </div> {/* This closes details-box */}
     </div>
   );
 }
