@@ -1,9 +1,11 @@
 "use client";
 
-import React, { useState, useMemo} from 'react';
+import React, { useState, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image'; // Import Next.js Image component
 import TypeFilterMenu from '@/app/components/TypeFilterMenu'; // Import the new component
+import SearchIcon from '../../../../public/search-icon.svg'; // Import the search icon
 
 /**
  * ShortListClient component for displaying and filtering a list of short stories.
@@ -14,8 +16,11 @@ import TypeFilterMenu from '@/app/components/TypeFilterMenu'; // Import the new 
 export default function ShortListClient({ initialShorts }) {
   // State variable for the search term
   const [searchTerm, setSearchTerm] = useState('');
-  // State variable for the sort order
-  const [sortOrder, setSortOrder] = useState('alphabetical');
+  // State variables for sorting
+  const [titleSortOrder, setTitleSortOrder] = useState('A-Z'); // 'A-Z', 'Z-A'
+  const [yearSortOrder, setYearSortOrder] = useState('Newest-Oldest'); // 'Newest-Oldest', 'Oldest-Newest'
+  // State variable for search bar visibility
+  const [isSearchBarVisible, setIsSearchBarVisible] = useState(false);
   // State variable for the selected type
   const [selectedType, setSelectedType] = useState('');
   const router = useRouter();
@@ -38,16 +43,21 @@ export default function ShortListClient({ initialShorts }) {
         shortsArray = shortsArray.filter(short => short.type === selectedType);
       }
 
-      if (sortOrder === 'alphabetical') {
-        shortsArray.sort((a, b) => a.title.localeCompare(b.title));
-      } else if (sortOrder === 'year_newest_to_oldest') {
-        shortsArray.sort((a, b) => b.year - a.year);
-      } else if (sortOrder === 'year_oldest_to_newest') {
-        shortsArray.sort((a, b) => a.year - b.year);
+      // Apply sorting
+      if (titleSortOrder === 'A-Z') {
+        shortsArray.sort((a, b) => a.title.toLowerCase().localeCompare(b.title.toLowerCase()));
+      } else if (titleSortOrder === 'Z-A') {
+        shortsArray.sort((a, b) => b.title.toLowerCase().localeCompare(a.title.toLowerCase()));
+      }
+
+      if (yearSortOrder === 'Newest-Oldest') {
+        shortsArray.sort((a, b) => (b.year || 0) - (a.year || 0)); // Handle null/undefined years
+      } else if (yearSortOrder === 'Oldest-Newest') {
+        shortsArray.sort((a, b) => (a.year || 0) - (b.year || 0)); // Handle null/undefined years
       }
 
       return shortsArray;
-    }, [initialShorts, searchTerm, sortOrder, selectedType]);
+    }, [initialShorts, searchTerm, titleSortOrder, yearSortOrder, selectedType]);
 
   // Function to handle selecting and navigating to a random short story
   const handleRandomShort = () => {
@@ -90,26 +100,52 @@ export default function ShortListClient({ initialShorts }) {
         <div className="w-full md:w-6/8 px-4 md:px-0"> {/* Added horizontal padding for mobile, removed for md+ to rely on parent centering */}
           {/* Search and Sort Controls Container */}
           <div className="controls-container mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow flex flex-wrap gap-4 items-center justify-between">
-            <input
-                type="text"
-                id="search-shorts-input"
-                name="search-shorts-input"
-                placeholder="Search shorts..."
-                className="w-full md:w-auto flex-grow p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-            />
-            <select
-              id="sort-shorts-select"
-              name="sort-shorts-select"
-              className="p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)]"
-              value={sortOrder}
-              onChange={(e) => setSortOrder(e.target.value)}
-            >
-              <option value="alphabetical">Alphabetical (A-Z)</option>
-              <option value="year_newest_to_oldest">Year (Newest to Oldest)</option>
-              <option value="year_oldest_to_newest">Year (Oldest to Newest)</option>
-            </select>
+            {/* Sort Buttons on the left */}
+            <div className="flex gap-2">
+              <button
+                onClick={() => setTitleSortOrder(titleSortOrder === 'A-Z' ? 'Z-A' : 'A-Z')}
+                className="px-3 py-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] text-xs flex items-center justify-center"
+                style={{ minWidth: '4rem' }}
+              >
+                {titleSortOrder}
+              </button>
+              <button
+                onClick={() => setYearSortOrder(yearSortOrder === 'Newest-Oldest' ? 'Oldest-Newest' : 'Newest-Oldest')}
+                className="px-3 py-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] text-xs flex items-center justify-center"
+                style={{ minWidth: '4rem' }}
+              >
+                {yearSortOrder}
+              </button>
+            </div>
+
+            {/* Search bar and Icon on the right */}
+            <div className="flex-grow flex justify-end items-center gap-2 ml-4">
+              {isSearchBarVisible && (
+                <div className="relative flex-grow">
+                  <input
+                    type="text"
+                    id="search-shorts-input"
+                    name="search-shorts-input"
+                    placeholder="Search shorts..."
+                    className="w-full p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] pl-10"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    autoFocus
+                  />
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <Image src={SearchIcon} alt="Search" width={20} height={20} className="search-icon" />
+                  </div>
+                </div>
+              )}
+              <button
+                onClick={() => setIsSearchBarVisible(!isSearchBarVisible)}
+                className="p-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] flex items-center justify-center flex-shrink-0"
+                style={{ minWidth: '2.5rem', width: '2.5rem' }}
+                aria-label={isSearchBarVisible ? "Close search bar" : "Open search bar"}
+              >
+                <Image src={SearchIcon} alt="Search" width={20} height={20} className="search-icon" />
+              </button>
+            </div>
           </div>
 
           {/* Header Row for List */}

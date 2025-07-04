@@ -104,7 +104,7 @@ export default function BookListClient({ initialBooks }) {
       // Assuming 'Year' can be used for date sorting, adjust if a more specific date field is available
       booksArray.sort((a, b) => (a.publishedDate || a.Year) - (b.publishedDate || b.Year));
     }
-
+    
 
     return booksArray;
   }, [initialBooks, searchTerm, titleSortOrder, dateSortOrder, selectedYear, selectedPublisher, minPages, maxPages]);
@@ -201,15 +201,15 @@ export default function BookListClient({ initialBooks }) {
             <div className="flex gap-2">
               <button
                 onClick={() => setTitleSortOrder(titleSortOrder === 'A-Z' ? 'Z-A' : 'A-Z')}
-                className="p-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] text-xs"
-                style={{ minWidth: 'fit-content' }}
+                className="px-3 py-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] text-xs flex items-center justify-center"
+                style={{ minWidth: '4rem' }} // Provide a slightly larger min-width for text buttons
               >
                 {titleSortOrder}
               </button>
               <button
                 onClick={() => setDateSortOrder(dateSortOrder === 'Newest-Oldest' ? 'Oldest-Newest' : 'Newest-Oldest')}
-                className="p-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] text-xs"
-                style={{ minWidth: 'fit-content' }}
+                className="px-3 py-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] text-xs flex items-center justify-center"
+                style={{ minWidth: '4rem' }} // Provide a slightly larger min-width for text buttons
               >
                 {dateSortOrder}
               </button>
@@ -220,7 +220,7 @@ export default function BookListClient({ initialBooks }) {
             <div className="flex-grow flex justify-end items-center gap-2 ml-4"> {/* Added ml-4 for spacing */}
               {isSearchBarVisible && (
                 // Ensure this div allows the input to grow but also respects the icon button's space
-                <div className="relative flex-grow">
+                <div className="relative flex-grow"> 
                   <input
                     type="text"
                     id="search-books-input"

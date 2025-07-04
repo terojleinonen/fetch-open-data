@@ -287,3 +287,11 @@ body::before {
 .nav-link-desktop-hover:hover {
   background-color: var(--nav-link-hover-bg);
 }
+
+/* Styling for the search icon to ensure visibility */
+.search-icon {
+  stroke: var(--text-color); /* Default to text color, which is theme aware */
+}
+
+/* Override for search icon when inside the input field if needed, e.g. to ensure it's not borderless */
+/* For now, relying on the SVG's inherent borderless nature */
