@@ -62,14 +62,14 @@ export default function AdaptationListClient({ initialAdaptations }) {
   const getAdaptationLink = (adaptation) => {
     const workType = adaptation.originalWorkType ? adaptation.originalWorkType.toLowerCase() : '';
     // Sanitize the title for URL: replace spaces with hyphens, remove special characters, and convert to lowercase
-    const workTitle = adaptation.originalWorkTitle
+    const workTitle = adaptation.originalWorkTitle 
       ? adaptation.originalWorkTitle.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '')
       : '';
 
     if (!workTitle) {
       // If there's no original work title, or it's something like "[4]", link to home or a placeholder.
       // This handles cases where the originalWorkTitle might be a citation like "[4]" or empty.
-      return '/';
+      return '/'; 
     }
 
     if (workType === 'novel' || workType === 'novella' || workType === 'series') {
@@ -80,7 +80,7 @@ export default function AdaptationListClient({ initialAdaptations }) {
       // For short stories, link to the shorts page.
       return `/pages/shorts/${workTitle}`;
     }
-
+    
     // Fallback for types that don't have a clear page (e.g., empty originalWorkType, or unhandled types)
     // or if originalWorkTitle was a citation.
     // Check if originalWorkTitle looks like a citation (e.g., "[4]") and redirect to home
@@ -90,7 +90,7 @@ export default function AdaptationListClient({ initialAdaptations }) {
 
     // If it's not a citation but type is unknown or title is present, try a generic search or link to home.
     // For now, linking to home as a safe fallback.
-    return '/';
+    return '/'; 
   };
 
   return (
