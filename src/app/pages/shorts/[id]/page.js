@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import Request from '@/app/components/request';
+import AdaptationList from '@/app/components/AdaptationList';
+import allAdaptationsData from '@/app/data/adaptations.json';
 
 export default async function ShortStoryDetailPage({ params }) {
   const shortData = await Request(`short/${params.id}`);
@@ -13,16 +15,6 @@ export default async function ShortStoryDetailPage({ params }) {
       </div>
     );
   }
-
-// Moved imports to the top level
-import AdaptationList from '@/app/components/AdaptationList';
-// Dynamically importing JSON is fine, but for consistency with books page and typical server component patterns,
-// a static import is also okay if not specifically needing lazy load for the JSON itself.
-// However, the await import() pattern is valid in Server Components for data.
-// For this fix, ensuring AdaptationList is a top-level static import is key.
-// Let's assume direct import for allAdaptationsData for simplicity like in books page,
-// unless lazy loading of the JSON data itself was a specific performance goal.
-import allAdaptationsData from '@/app/data/adaptations.json';
 
   const story = shortData.data;
   const filteredNotes = story.notes ? story.notes.filter(note => note && note.trim() !== '') : [];
