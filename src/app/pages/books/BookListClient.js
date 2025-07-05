@@ -232,7 +232,7 @@ export default function BookListClient({ initialBooks }) {
                     autoFocus // Automatically focus the search bar when it appears
                   />
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Image src={SearchIcon} alt="Search" width={20} height={20} />
+                    <Image src={SearchIcon} alt="Search" width={20} height={20} className="search-icon" />
                   </div>
                 </div>
               )}
@@ -243,7 +243,7 @@ export default function BookListClient({ initialBooks }) {
                 style={{ minWidth: '2.5rem', width: '2.5rem' }} // Fixed size for the icon button
                 aria-label={isSearchBarVisible ? "Close search bar" : "Open search bar"}
               >
-                <Image src={SearchIcon} alt="Search" width={20} height={20} />
+                <Image src={SearchIcon} alt="Search" width={20} height={20} className="search-icon" />
               </button>
             </div>
           </div>
