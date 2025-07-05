@@ -32,11 +32,11 @@ export default async function BookDetailPage({ params }) {
     );
   }
 
-  const book = bookData.data;
-  const filteredNotes = book.Notes ? book.Notes.filter(note => note.trim() !== '') : [];
-
 import AdaptationList from '@/app/components/AdaptationList';
 import allAdaptationsData from '@/app/data/adaptations.json'; // Import the scraped data
+
+  const book = bookData.data;
+  const filteredNotes = book.Notes ? book.Notes.filter(note => note.trim() !== '') : [];
 
 // Helper function to normalize title for matching
 const normalizeTitleForMatch = (title) => {

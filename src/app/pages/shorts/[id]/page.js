@@ -14,17 +14,18 @@ export default async function ShortStoryDetailPage({ params }) {
     );
   }
 
+// Moved imports to the top level
+import AdaptationList from '@/app/components/AdaptationList';
+// Dynamically importing JSON is fine, but for consistency with books page and typical server component patterns,
+// a static import is also okay if not specifically needing lazy load for the JSON itself.
+// However, the await import() pattern is valid in Server Components for data.
+// For this fix, ensuring AdaptationList is a top-level static import is key.
+// Let's assume direct import for allAdaptationsData for simplicity like in books page,
+// unless lazy loading of the JSON data itself was a specific performance goal.
+import allAdaptationsData from '@/app/data/adaptations.json';
+
   const story = shortData.data;
   const filteredNotes = story.notes ? story.notes.filter(note => note && note.trim() !== '') : [];
-
-  // Import AdaptationList and data
-  const AdaptationList = React.lazy(() => import('@/app/components/AdaptationList')); // Lazy load if preferred
-  // For server components, direct import is fine:
-  // import AdaptationList from '@/app/components/AdaptationList';
-  // import allAdaptationsData from '@/app/data/adaptations.json';
-  // Since this is an async Server Component, we can fetch/import directly.
-  const allAdaptationsData = (await import('@/app/data/adaptations.json')).default;
-
 
   // Helper function to normalize title for matching (can be moved to a shared util if used in more places)
   const normalizeTitleForMatch = (title) => {
@@ -60,10 +61,10 @@ export default async function ShortStoryDetailPage({ params }) {
       <br />
 
       {/* Adaptations Section */}
-      <React.Suspense fallback={<p>Loading adaptations...</p>}>
-        <AdaptationList adaptations={
-          allAdaptationsData.filter(adaptation => {
-            const normStoryTitle = normalizeTitleForMatch(story.title);
+      {/* Removed React.Suspense and React.lazy as AdaptationList is now directly imported */}
+      <AdaptationList adaptations={
+        allAdaptationsData.filter(adaptation => {
+          const normStoryTitle = normalizeTitleForMatch(story.title);
             const normOriginalWorkTitle = normalizeTitleForMatch(adaptation.originalWorkTitle);
 
             return normOriginalWorkTitle === normStoryTitle ||
