@@ -16,7 +16,7 @@ export default function Page() {
   return (
     <div 
       className="flex flex-col items-center min-h-screen bg-transparent py-10 px-4 page-background-text"
-      style={{ '--page-background-text-content': "'KINGOLOGY: HOME'" }}
+      style={{ '--page-background-text-content': "'STEPHEN KING UNIVERSE'" }}
     >
       {/* Book Carousel */}
       <BookCarousel />
