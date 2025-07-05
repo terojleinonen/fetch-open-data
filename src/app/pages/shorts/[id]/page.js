@@ -71,7 +71,6 @@ import allAdaptationsData from '@/app/data/adaptations.json';
                    (adaptation.originalWorkTitle === adaptation.adaptationTitle && normalizeTitleForMatch(adaptation.adaptationTitle) === normStoryTitle);
           })
         } />
-      </React.Suspense>
 
       </div>
     </div>
