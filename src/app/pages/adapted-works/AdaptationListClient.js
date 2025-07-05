@@ -60,20 +60,37 @@ export default function AdaptationListClient({ initialAdaptations }) {
 
   // Function to generate the link for an adaptation
   const getAdaptationLink = (adaptation) => {
-    // Simple placeholder for linking logic
-    // This should be replaced with actual logic to link to book/short story pages
-    // For now, links to home if no specific link can be generated
     const workType = adaptation.originalWorkType ? adaptation.originalWorkType.toLowerCase() : '';
-    const workTitle = adaptation.originalWorkTitle ? adaptation.originalWorkTitle.toLowerCase().replace(/\s+/g, '-') : '';
+    // Sanitize the title for URL: replace spaces with hyphens, remove special characters, and convert to lowercase
+    const workTitle = adaptation.originalWorkTitle 
+      ? adaptation.originalWorkTitle.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '')
+      : '';
 
-    if (workType === 'novel' || workType === 'novella') {
+    if (!workTitle) {
+      // If there's no original work title, or it's something like "[4]", link to home or a placeholder.
+      // This handles cases where the originalWorkTitle might be a citation like "[4]" or empty.
+      return '/'; 
+    }
+
+    if (workType === 'novel' || workType === 'novella' || workType === 'series') {
+      // For novels, novellas, and series, link to the books page.
+      // The scraper data sometimes uses "Series" for "The Dark Tower"
       return `/pages/books/${workTitle}`;
     } else if (workType === 'short story') {
-      // Assuming short story IDs are similar to titles for linking
+      // For short stories, link to the shorts page.
       return `/pages/shorts/${workTitle}`;
     }
-    // Fallback if no specific link can be determined
-    return '/'; // Link to home page or a generic placeholder
+    
+    // Fallback for types that don't have a clear page (e.g., empty originalWorkType, or unhandled types)
+    // or if originalWorkTitle was a citation.
+    // Check if originalWorkTitle looks like a citation (e.g., "[4]") and redirect to home
+    if (/^\[\d+\]$/.test(adaptation.originalWorkTitle)) {
+        return '/';
+    }
+
+    // If it's not a citation but type is unknown or title is present, try a generic search or link to home.
+    // For now, linking to home as a safe fallback.
+    return '/'; 
   };
 
   return (
