@@ -2,6 +2,7 @@
   "name": "fetch-open-data",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,7 +12,9 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.10",
+    "cheerio": "^1.1.0",
     "next": "^15.1.0",
+    "node-fetch": "^3.3.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "requests": "^0.3.0"

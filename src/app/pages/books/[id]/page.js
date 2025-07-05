@@ -1,7 +1,19 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image'; // Import Next.js Image component
+import Image from 'next/image';
 import Request from '@/app/components/request';
+import AdaptationList from '@/app/components/AdaptationList';
+import allAdaptationsData from '@/app/data/adaptations.json';
+
+// Helper function to normalize title for matching
+const normalizeTitleForMatch = (title) => {
+  if (!title) return '';
+  return title.toLowerCase()
+    .replace(/\b(the|a|an)\b/g, '')
+    .replace(/[^\w\s]/gi, '')
+    .replace(/\s+/g, '')
+    .trim();
+};
 
 export default async function BookDetailPage({ params }) {
   console.log(`[INFO] /pages/books/${params.id}: Fetching book data...`);
@@ -10,13 +22,11 @@ export default async function BookDetailPage({ params }) {
     bookData = await Request(`book/${params.id}`);
     if (!bookData || !bookData.data) {
       console.warn(`[WARN] /pages/books/${params.id}: No bookData or bookData.data found.`);
-      // Return early or ensure bookData is structured to show an error in the component
     } else {
       console.log(`[INFO] /pages/books/${params.id}: Successfully fetched data for "${bookData.data.Title}".`);
     }
   } catch (error) {
     console.error(`[ERROR] /pages/books/${params.id}: Error fetching book data:`, error);
-    // Ensure bookData is structured to show an error
     bookData = { error: `Failed to load book data for ID ${params.id} due to an error.`, data: null };
   }
 
@@ -35,7 +45,6 @@ export default async function BookDetailPage({ params }) {
   const book = bookData.data;
   const filteredNotes = book.Notes ? book.Notes.filter(note => note.trim() !== '') : [];
 
-  // Helper function to render book details
   const renderDetail = (label, value) => {
     if (!value) return null;
     return (
@@ -52,17 +61,16 @@ export default async function BookDetailPage({ params }) {
         </Link>
       <div className="details-box">
         <div className="md:flex md:space-x-8">
-          {/* Left Column: Cover Image */}
-          <div className="md:w-1/3 mb-6 md:mb-0 flex justify-center"> {/* Added flex and justify-center */}
-            <div className="relative w-full max-w-xs md:max-w-sm h-auto aspect-[2/3]"> {/* Aspect ratio container */}
+          <div className="md:w-1/3 mb-6 md:mb-0 flex justify-center">
+            <div className="relative w-full max-w-xs md:max-w-sm h-auto aspect-[2/3]">
               {book.largeCoverImageUrl && book.largeCoverImageUrl !== "NO_COVER_AVAILABLE" ? (
                 <Image
                   src={book.largeCoverImageUrl}
                   alt={`Cover of ${book.Title}`}
-                  fill // Fill the container
-                  sizes="(max-width: 768px) 80vw, (max-width: 1200px) 40vw, 30vw" // Responsive sizes
-                  className="rounded-lg shadow-lg object-contain" // object-contain ensures full image is visible
-                  priority // Prioritize loading this critical image
+                  fill
+                  sizes="(max-width: 768px) 80vw, (max-width: 1200px) 40vw, 30vw"
+                  className="rounded-lg shadow-lg object-contain"
+                  priority
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400 rounded-lg shadow-md">
@@ -72,8 +80,7 @@ export default async function BookDetailPage({ params }) {
             </div>
           </div>
 
-        {/* Right Column: Book Details */}
-        <div className="md:w-2/3 md:pl-8"> {/* Added padding for spacing from image */}
+        <div className="md:w-2/3 md:pl-8">
           <h1 className="text-3xl md:text-4xl font-bold text-[var(--accent-color)] mb-2">{book.Title}</h1>
           {book.subtitle && <p className="text-xl text-gray-600 dark:text-gray-400 mb-3">{book.subtitle}</p>}
 
@@ -91,7 +98,7 @@ export default async function BookDetailPage({ params }) {
             </div>
             <div>
               {renderDetail("ISBN", book.ISBN)}
-              {renderDetail("Pages", book.Pages || book.pageCount)} {/* Use pageCount as fallback */}
+              {renderDetail("Pages", book.Pages || book.pageCount)}
               {renderDetail("Language", book.language?.toUpperCase())}
             </div>
           </div>
@@ -131,7 +138,6 @@ export default async function BookDetailPage({ params }) {
         </div>
       </div>
 
-      {/* Notes and Villains Sections - Full Width Below Columns */}
       {filteredNotes.length > 0 && (
         <div className="mt-8 pt-6 border-t border-gray-300 dark:border-gray-600">
           <h2 className="text-2xl font-semibold text-[var(--accent-color)] mb-3">Notes</h2>
@@ -171,15 +177,24 @@ export default async function BookDetailPage({ params }) {
           </ul>
         </div>
       )}
-      {(!book.villains || book.villains.length === 0) && bookData?.data && /* Only show if book data was loaded */ (
+      {(!book.villains || book.villains.length === 0) && bookData?.data && (
         <div className="mt-8 pt-6 border-t border-gray-300 dark:border-gray-600">
           <h2 className="text-2xl font-semibold text-[var(--accent-color)] mb-3">Villains in this Book</h2>
           <p className="text-sm">No villains listed for this book.</p>
         </div>
       )}
 
-      {/* The empty div that was here was removed as it caused a syntax error. */}
-      </div> {/* This closes details-box */}
+      <AdaptationList adaptations={
+        allAdaptationsData.filter(adaptation => {
+          const normBookTitle = normalizeTitleForMatch(book.Title);
+          const normOriginalWorkTitle = normalizeTitleForMatch(adaptation.originalWorkTitle);
+
+          return normOriginalWorkTitle === normBookTitle ||
+                 (adaptation.originalWorkTitle === adaptation.adaptationTitle && normalizeTitleForMatch(adaptation.adaptationTitle) === normBookTitle);
+        })
+      } />
+
+      </div>
     </div>
   );
 }
