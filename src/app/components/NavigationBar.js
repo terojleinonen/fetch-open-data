@@ -18,7 +18,7 @@ const NavigationBar = () => {
     <nav className="w-full p-4 md:flex md:items-center md:justify-between shadow-md bg-background z-50 relative">
       {/* Header: Contains site title and hamburger menu toggle. Visible on all screen sizes. */}
       <div className="flex items-center justify-between">
-        <div className="text-2xl font-bold">Kingology</div> {/* Updated title, reverted font size class */}
+        <div className="text-xl lg:text-2xl font-bold whitespace-nowrap">Stephen King Universe</div> {/* Updated title, reverted font size class */}
         <button
            className="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[var(--nav-link-focus-ring)]"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -51,28 +51,28 @@ const NavigationBar = () => {
         className={`${
           isMobileMenuOpen ? 'flex' : 'hidden'
         } flex-col items-stretch space-y-2 mt-4 p-4 rounded-md shadow-lg mobile-menu-bg
-           md:flex md:flex-row md:items-center md:space-y-0 md:space-x-2 md:mt-0 md:p-0 md:shadow-none md:bg-transparent w-full md:w-auto`}
+           md:flex md:flex-row md:items-center md:space-y-0 md:space-x-1 md:mt-0 md:p-0 md:shadow-none md:bg-transparent w-full md:w-auto`}
       >
-        <Link href="/" className={`text-lg font-bold py-2 px-4 rounded-md mobile-menu-link-hover nav-link-desktop-hover ${pathname === '/' ? 'underline' : ''}`} onClick={handleLinkClick}>
+        <Link href="/" className={`text-sm lg:text-base font-bold py-2 px-3 rounded-md mobile-menu-link-hover nav-link-desktop-hover ${pathname === '/' ? 'underline' : ''}`} onClick={handleLinkClick}>
           HOME
         </Link>
-        <Link href="/pages/books" className={`text-lg font-bold py-2 px-4 rounded-md mobile-menu-link-hover nav-link-desktop-hover ${pathname === '/pages/books' ? 'underline' : ''}`} onClick={handleLinkClick}>
+        <Link href="/pages/books" className={`text-sm lg:text-base font-bold py-2 px-3 rounded-md mobile-menu-link-hover nav-link-desktop-hover ${pathname === '/pages/books' ? 'underline' : ''}`} onClick={handleLinkClick}>
           BOOKS
         </Link>
-        <Link href="/pages/shorts" className={`text-lg font-bold py-2 px-4 rounded-md mobile-menu-link-hover nav-link-desktop-hover ${pathname === '/pages/shorts' ? 'underline' : ''}`} onClick={handleLinkClick}>
+        <Link href="/pages/shorts" className={`text-sm lg:text-base font-bold py-2 px-3 rounded-md mobile-menu-link-hover nav-link-desktop-hover ${pathname === '/pages/shorts' ? 'underline' : ''}`} onClick={handleLinkClick}>
           SHORTS
         </Link>
-        <Link href="/pages/villains" className={`text-lg font-bold py-2 px-4 rounded-md mobile-menu-link-hover nav-link-desktop-hover ${pathname === '/pages/villains' ? 'underline' : ''}`} onClick={handleLinkClick}>
+        <Link href="/pages/villains" className={`text-sm lg:text-base font-bold py-2 px-3 rounded-md mobile-menu-link-hover nav-link-desktop-hover ${pathname === '/pages/villains' ? 'underline' : ''}`} onClick={handleLinkClick}>
           VILLAINS
         </Link>
-        <Link href="/pages/google-books" className={`text-lg font-bold  py-2 px-4 rounded-md mobile-menu-link-hover nav-link-desktop-hover ${pathname === '/pages/google-books' ? 'underline' : ''}`} onClick={handleLinkClick}>
+        <Link href="/pages/google-books" className={`text-sm lg:text-base font-bold py-2 px-3 rounded-md mobile-menu-link-hover nav-link-desktop-hover ${pathname === '/pages/google-books' ? 'underline' : ''}`} onClick={handleLinkClick}>
           GOOGLE BOOKS
         </Link>
-        <Link href="/pages/about-stephen-king" className={`text-lg font-bold py-2 px-4 rounded-md mobile-menu-link-hover nav-link-desktop-hover ${pathname === '/pages/about-stephen-king' ? 'underline' : ''}`} onClick={handleLinkClick}>
+        <Link href="/pages/about-stephen-king" className={`text-sm lg:text-base font-bold py-2 px-3 rounded-md mobile-menu-link-hover nav-link-desktop-hover ${pathname === '/pages/about-stephen-king' ? 'underline' : ''}`} onClick={handleLinkClick}>
           KINGGRAPHY
         </Link>
-        <a href="https://stephenking.com" target="_blank" rel="noopener noreferrer" className="text-lg font-bold py-2 px-4 rounded-md mobile-menu-link-hover nav-link-desktop-hover" onClick={handleLinkClick}>
-          STEPHENKING.COM <span className="text-sm opacity-75">(Official Site)</span>
+        <a href="https://stephenking.com" target="_blank" rel="noopener noreferrer" className="text-sm lg:text-base font-bold py-2 px-3 rounded-md mobile-menu-link-hover nav-link-desktop-hover" onClick={handleLinkClick}>
+          STEPHENKING.COM <span className="text-xs lg:text-sm opacity-75">(Official Site)</span>
         </a>
       </div>
     </nav>

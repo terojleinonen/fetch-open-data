@@ -169,7 +169,24 @@ body {
   overflow: hidden; /* Hide any part of the text that might overflow */
   width: 96%; /* Fill most of the width, leaving a small right offset */
   word-break: break-word; /* Break words if necessary to prevent overflow */
+  white-space: nowrap; /* Ensure the title stays on one line */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis if text is too long */
 }
+
+/* Responsive font size for page-background-text */
+@media (max-width: 768px) {
+  .page-background-text::before {
+    font-size: 6vw; /* Smaller font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .page-background-text::before {
+    font-size: 4vw; /* Even smaller font size for very small screens */
+  }
+}
+
 
 /* Update existing variables to use the new scheme or remove if redundant */
 /* These are used by Tailwind config */
