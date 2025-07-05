@@ -71,9 +71,6 @@ const NavigationBar = () => {
         <Link href="/pages/about-stephen-king" className={`text-sm lg:text-base font-bold py-2 px-3 rounded-md mobile-menu-link-hover nav-link-desktop-hover ${pathname === '/pages/about-stephen-king' ? 'underline' : ''}`} onClick={handleLinkClick}>
           KINGGRAPHY
         </Link>
-        <a href="https://stephenking.com" target="_blank" rel="noopener noreferrer" className="text-sm lg:text-base font-bold py-2 px-3 rounded-md mobile-menu-link-hover nav-link-desktop-hover" onClick={handleLinkClick}>
-          STEPHENKING.COM <span className="text-xs lg:text-sm opacity-75">(Official Site)</span>
-        </a>
       </div>
     </nav>
   );

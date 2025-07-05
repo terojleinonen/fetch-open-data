@@ -53,7 +53,18 @@ const AboutStephenKing = () => {
           </a>
           .
         </p>
-        
+        <p className="text-md mb-2">
+          Visit the official{' '}
+          <a
+            href="https://stephenking.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:underline"
+          >
+            StephenKing.com
+          </a>
+          .
+        </p>
       </div>
     </div>
   );
