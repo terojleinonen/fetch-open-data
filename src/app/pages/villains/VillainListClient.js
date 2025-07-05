@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image'; // Import Next.js Image component
 import StatusFilterMenu from '@/app/components/StatusFilterMenu'; // Import the new component
-import SearchIcon from '../../../../public/search-icon.svg'; // Import the search icon
 
 /**
  * VillainListClient component for displaying and filtering a list of villains.
@@ -100,8 +99,11 @@ export default function VillainListClient({ initialVillains }) {
                     onChange={(e) => setSearchTerm(e.target.value)}
                     autoFocus
                   />
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <Image src={SearchIcon} alt="Search" width={20} height={20} className="search-icon" />
+                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[var(--text-color)]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
                   </div>
                 </div>
               )}
@@ -111,7 +113,10 @@ export default function VillainListClient({ initialVillains }) {
                 style={{ minWidth: '2.5rem', width: '2.5rem' }}
                 aria-label={isSearchBarVisible ? "Close search bar" : "Open search bar"}
               >
-                <Image src={SearchIcon} alt="Search" width={20} height={20} className="search-icon" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
               </button>
             </div>
           </div>
