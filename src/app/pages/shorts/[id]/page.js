@@ -17,6 +17,24 @@ export default async function ShortStoryDetailPage({ params }) {
   const story = shortData.data;
   const filteredNotes = story.notes ? story.notes.filter(note => note && note.trim() !== '') : [];
 
+  // Import AdaptationList and data
+  const AdaptationList = React.lazy(() => import('@/app/components/AdaptationList')); // Lazy load if preferred
+  // For server components, direct import is fine:
+  // import AdaptationList from '@/app/components/AdaptationList';
+  // import allAdaptationsData from '@/app/data/adaptations.json';
+  // Since this is an async Server Component, we can fetch/import directly.
+  const allAdaptationsData = (await import('@/app/data/adaptations.json')).default;
+
+
+  // Helper function to normalize title for matching (can be moved to a shared util if used in more places)
+  const normalizeTitleForMatch = (title) => {
+    if (!title) return '';
+    return title.toLowerCase()
+      .replace(/\b(the|a|an)\b/g, '')
+      .replace(/[^\w\s]/gi, '')
+      .replace(/\s+/g, '')
+      .trim();
+  };
 
   return (
     <div className="container mx-auto p-4">
@@ -39,7 +57,21 @@ export default async function ShortStoryDetailPage({ params }) {
           </ul>
         </div>
       )}
-      <br />      
+      <br />
+
+      {/* Adaptations Section */}
+      <React.Suspense fallback={<p>Loading adaptations...</p>}>
+        <AdaptationList adaptations={
+          allAdaptationsData.filter(adaptation => {
+            const normStoryTitle = normalizeTitleForMatch(story.title);
+            const normOriginalWorkTitle = normalizeTitleForMatch(adaptation.originalWorkTitle);
+
+            return normOriginalWorkTitle === normStoryTitle ||
+                   (adaptation.originalWorkTitle === adaptation.adaptationTitle && normalizeTitleForMatch(adaptation.adaptationTitle) === normStoryTitle);
+          })
+        } />
+      </React.Suspense>
+
       </div>
     </div>
   );

@@ -35,6 +35,21 @@ export default async function BookDetailPage({ params }) {
   const book = bookData.data;
   const filteredNotes = book.Notes ? book.Notes.filter(note => note.trim() !== '') : [];
 
+import AdaptationList from '@/app/components/AdaptationList';
+import allAdaptationsData from '@/app/data/adaptations.json'; // Import the scraped data
+
+// Helper function to normalize title for matching
+const normalizeTitleForMatch = (title) => {
+  if (!title) return '';
+  // More robust normalization: lowercase, remove articles, remove punctuation, and whitespace
+  return title.toLowerCase()
+    .replace(/\b(the|a|an)\b/g, '') // remove articles
+    .replace(/[^\w\s]/gi, '')    // remove punctuation
+    .replace(/\s+/g, '')         // remove all whitespace
+    .trim();
+};
+
+
   // Helper function to render book details
   const renderDetail = (label, value) => {
     if (!value) return null;
@@ -178,7 +193,18 @@ export default async function BookDetailPage({ params }) {
         </div>
       )}
 
-      {/* The empty div that was here was removed as it caused a syntax error. */}
+      {/* Adaptations Section */}
+      <AdaptationList adaptations={
+        allAdaptationsData.filter(adaptation => {
+          const normBookTitle = normalizeTitleForMatch(book.Title);
+          const normOriginalWorkTitle = normalizeTitleForMatch(adaptation.originalWorkTitle);
+
+          // Direct match or if originalWorkTitle is "same as adaptation" and adaptation title matches book title
+          return normOriginalWorkTitle === normBookTitle ||
+                 (adaptation.originalWorkTitle === adaptation.adaptationTitle && normalizeTitleForMatch(adaptation.adaptationTitle) === normBookTitle);
+        })
+      } />
+
       </div> {/* This closes details-box */}
     </div>
   );
