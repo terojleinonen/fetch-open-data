@@ -307,7 +307,7 @@ body::before {
 
 /* Styling for the search icon to ensure visibility */
 .search-icon {
-  stroke: var(--text-color); /* Default to text color, which is theme aware */
+  color: var(--text-color); /* Default to text color, which is theme aware. SVG uses stroke="currentColor" */
 }
 
 /* Override for search icon when inside the input field if needed, e.g. to ensure it's not borderless */
