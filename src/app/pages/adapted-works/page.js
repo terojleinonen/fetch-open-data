@@ -11,7 +11,7 @@ export default async function Page() {
       Request('books'),
       Request('shorts')
     ]);
-
+    
     // Basic check if fetched data seems valid, primarily for server-side issues.
     if (!booksData?.data || !shortsData?.data) {
       console.error("[ERROR] adapted-works/page.js: Books or Shorts data failed to load properly.");
@@ -23,7 +23,7 @@ export default async function Page() {
         className="page-background-text"
         style={{ '--page-background-text-content': "'ADAPTED WORKS'" }}
       >
-        <AdaptationListClient
+        <AdaptationListClient 
           initialAdaptations={adaptationsData} // Now using directly imported data
           initialBooks={booksData}
           initialShorts={shortsData}

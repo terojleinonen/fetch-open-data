@@ -38,7 +38,7 @@ export default function AdaptationListClient({ initialAdaptations, initialBooks,
     const map = new Map();
     initialBooks.data.forEach(book => {
       // The external API uses "Title" for books
-      map.set(normalizeTitle(book.Title), book.id);
+      map.set(normalizeTitle(book.Title), book.id); 
     });
     // console.log("[DEBUG] AdaptationListClient: bookTitleToIdMap created, size:", map.size);
     return map;
@@ -113,11 +113,11 @@ export default function AdaptationListClient({ initialAdaptations, initialBooks,
         return `/pages/shorts/${foundId}`;
       }
     }
-
+    
     // Fallback if no ID is found or type is not matched
     const fallbackLink = '/';
     // console.log(`[DEBUG] getAdaptationLink: No ID match for: '${originalTitle}' (Normalized: '${normalizedOriginalTitle}', Type: '${originalWorkType}'). Falling back to: ${fallbackLink}`);
-    return fallbackLink;
+    return fallbackLink; 
   };
 
   // console.log("[DEBUG] AdaptationListClient: filteredAdaptations count:", filteredAdaptations.length);
