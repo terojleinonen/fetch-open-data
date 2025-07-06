@@ -26,6 +26,8 @@ export default function AdaptationListClient({ initialAdaptations, initialBooks,
   const [selectedType, setSelectedType] = useState('');
   const router = useRouter();
 
+  console.log("[DEBUG] AdaptationListClient: Rendering. Received props:", { initialAdaptations, initialBooks, initialShorts });
+
   const normalizeTitle = (title) => {
     if (!title) return '';
     return title.toLowerCase().replace(/[^\w\s]/gi, '').replace(/\s+/g, ' ').trim();
@@ -36,8 +38,9 @@ export default function AdaptationListClient({ initialAdaptations, initialBooks,
     const map = new Map();
     initialBooks.data.forEach(book => {
       // The external API uses "Title" for books
-      map.set(normalizeTitle(book.Title), book.id); 
+      map.set(normalizeTitle(book.Title), book.id);
     });
+    console.log("[DEBUG] AdaptationListClient: bookTitleToIdMap created, size:", map.size);
     return map;
   }, [initialBooks]);
 
@@ -48,6 +51,7 @@ export default function AdaptationListClient({ initialAdaptations, initialBooks,
       // The external API uses "title" (lowercase) for shorts
       map.set(normalizeTitle(short.title), short.id);
     });
+    console.log("[DEBUG] AdaptationListClient: shortTitleToIdMap created, size:", map.size);
     return map;
   }, [initialShorts]);
 
@@ -109,11 +113,14 @@ export default function AdaptationListClient({ initialAdaptations, initialBooks,
         return `/pages/shorts/${foundId}`;
       }
     }
-    
+
     // Fallback if no ID is found or type is not matched
-    // console.log(`No ID match for: ${originalTitle} (Normalized: ${normalizedOriginalTitle}, Type: ${originalWorkType})`);
-    return '/'; 
+    const fallbackLink = '/';
+    // console.log(`[DEBUG] getAdaptationLink: No ID match for: '${originalTitle}' (Normalized: '${normalizedOriginalTitle}', Type: '${originalWorkType}'). Falling back to: ${fallbackLink}`);
+    return fallbackLink;
   };
+
+  console.log("[DEBUG] AdaptationListClient: filteredAdaptations count:", filteredAdaptations.length);
 
   return (
     <div className="py-12"> {/* Removed pr-8 to allow full width for centering */}
