@@ -3,15 +3,22 @@
     "adaptationTitle": "Creepshow",
     "year": "1982",
     "type": "Film",
-    "originalWorkTitle": "Weeds",
-    "originalWorkType": ""
+    "originalWorkTitle": "Weeds and The Crate",
+    "originalWorkType": "Short story"
   },
   {
     "adaptationTitle": "Cat's Eye",
     "year": "1985",
     "type": "Film",
-    "originalWorkTitle": "Quitters, Inc.",
-    "originalWorkType": ""
+    "originalWorkTitle": "Quitters, Inc. and The Ledge",
+    "originalWorkType": "Short story"
+  },
+  {
+    "adaptationTitle": "Silver Bullet",
+    "year": "1985",
+    "type": "Film",
+    "originalWorkTitle": "Cycle of the Werewolf",
+    "originalWorkType": "Novella"
   },
   {
     "adaptationTitle": "Maximum Overdrive",
@@ -59,7 +66,7 @@
     "adaptationTitle": "It Chapter Two",
     "year": "2019",
     "type": "Film",
-    "originalWorkTitle": "It Chapter Two",
+    "originalWorkTitle": "It",
     "originalWorkType": "Novel"
   },
   {
@@ -84,18 +91,18 @@
     "originalWorkType": "Novel"
   },
   {
-    "adaptationTitle": "David Cronenberg",
-    "year": "The Dead Zone",
+    "adaptationTitle": "The Dead Zone",
+    "year": "1983",
     "type": "Film",
-    "originalWorkTitle": "[4]",
-    "originalWorkType": ""
+    "originalWorkTitle": "The Dead Zone",
+    "originalWorkType": "Novel"
   },
   {
-    "adaptationTitle": "John Carpenter",
-    "year": "Christine",
+    "adaptationTitle": "Christine",
+    "year": "1983",
     "type": "Film",
-    "originalWorkTitle": "[5]",
-    "originalWorkType": ""
+    "originalWorkTitle": "Christine",
+    "originalWorkType": "Novel"
   },
   {
     "adaptationTitle": "Children of the Corn",
@@ -105,11 +112,11 @@
     "originalWorkType": "Short story"
   },
   {
-    "adaptationTitle": "Mark L. Lester",
-    "year": "Firestarter",
+    "adaptationTitle": "Firestarter",
+    "year": "1984",
     "type": "Film",
-    "originalWorkTitle": "[7]",
-    "originalWorkType": ""
+    "originalWorkTitle": "Firestarter",
+    "originalWorkType": "Novel"
   },
   {
     "adaptationTitle": "Stand by Me",
@@ -133,18 +140,18 @@
     "originalWorkType": "Short story"
   },
   {
-    "adaptationTitle": "Ralph S. Singleton",
-    "year": "Graveyard Shift",
+    "adaptationTitle": "Graveyard Shift",
+    "year": "1990",
     "type": "Film",
-    "originalWorkTitle": "[11]",
-    "originalWorkType": ""
+    "originalWorkTitle": "Graveyard Shift",
+    "originalWorkType": "Short story"
   },
   {
-    "adaptationTitle": "Rob Reiner",
-    "year": "Misery",
+    "adaptationTitle": "Misery",
+    "year": "1990",
     "type": "Film",
-    "originalWorkTitle": "[12]",
-    "originalWorkType": ""
+    "originalWorkTitle": "Misery",
+    "originalWorkType": "Novel"
   },
   {
     "adaptationTitle": "The Dark Half",
@@ -154,11 +161,11 @@
     "originalWorkType": "Novel"
   },
   {
-    "adaptationTitle": "Fraser Clarke Heston",
-    "year": "Needful Things",
+    "adaptationTitle": "Needful Things",
+    "year": "1993",
     "type": "Film",
-    "originalWorkTitle": "[14]",
-    "originalWorkType": ""
+    "originalWorkTitle": "Needful Things",
+    "originalWorkType": "Novel"
   },
   {
     "adaptationTitle": "The Shawshank Redemption",
@@ -175,11 +182,11 @@
     "originalWorkType": "Short story"
   },
   {
-    "adaptationTitle": "Taylor Hackford",
-    "year": "Dolores Claiborne",
+    "adaptationTitle": "Dolores Claiborne",
+    "year": "1995",
     "type": "Film",
-    "originalWorkTitle": "[17]",
-    "originalWorkType": ""
+    "originalWorkTitle": "Dolores Claiborne",
+    "originalWorkType": "Novel"
   },
   {
     "adaptationTitle": "The Night Flier",
@@ -224,11 +231,11 @@
     "originalWorkType": "Novella"
   },
   {
-    "adaptationTitle": "Mick Garris",
-    "year": "Riding the Bullet",
+    "adaptationTitle": "Riding the Bullet",
+    "year": "2004",
     "type": "Film",
-    "originalWorkTitle": "[24]",
-    "originalWorkType": ""
+    "originalWorkTitle": "Riding the Bullet",
+    "originalWorkType": "Novella"
   },
   {
     "adaptationTitle": "1408",
@@ -238,18 +245,18 @@
     "originalWorkType": "Short story"
   },
   {
-    "adaptationTitle": "Anurag Kashyap",
-    "year": "No Smoking",
+    "adaptationTitle": "No Smoking",
+    "year": "2007",
     "type": "Film",
-    "originalWorkTitle": "[26]",
-    "originalWorkType": ""
+    "originalWorkTitle": "Quitters, Inc.",
+    "originalWorkType": "Short story"
   },
   {
-    "adaptationTitle": "Frank Darabont",
-    "year": "The Mist",
+    "adaptationTitle": "The Mist",
+    "year": "2007",
     "type": "Film",
-    "originalWorkTitle": "[27]",
-    "originalWorkType": ""
+    "originalWorkTitle": "The Mist",
+    "originalWorkType": "Novella"
   },
   {
     "adaptationTitle": "Dolan's Cadillac",
@@ -276,29 +283,29 @@
     "adaptationTitle": "The Dark Tower",
     "year": "2017",
     "type": "Film",
-    "originalWorkTitle": "Based on the series of the same name",
+    "originalWorkTitle": "The Dark Tower",
     "originalWorkType": "Series"
   },
   {
-    "adaptationTitle": "Andy Muschietti",
-    "year": "It",
+    "adaptationTitle": "It",
+    "year": "2017",
     "type": "Film",
-    "originalWorkTitle": "[32]",
-    "originalWorkType": ""
+    "originalWorkTitle": "It",
+    "originalWorkType": "Novel"
   },
   {
-    "adaptationTitle": "Mike Flanagan",
-    "year": "Gerald's Game",
+    "adaptationTitle": "Gerald's Game",
+    "year": "2017",
     "type": "Film",
-    "originalWorkTitle": "[33]",
-    "originalWorkType": ""
+    "originalWorkTitle": "Gerald's Game",
+    "originalWorkType": "Novel"
   },
   {
-    "adaptationTitle": "Zak Hilditch",
-    "year": "1922",
+    "adaptationTitle": "1922",
+    "year": "2017",
     "type": "Film",
-    "originalWorkTitle": "[34]",
-    "originalWorkType": ""
+    "originalWorkTitle": "1922",
+    "originalWorkType": "Novella"
   },
   {
     "adaptationTitle": "Pet Sematary",
@@ -308,25 +315,18 @@
     "originalWorkType": "Novel"
   },
   {
-    "adaptationTitle": "Andy Muschietti",
-    "year": "It Chapter Two",
+    "adaptationTitle": "In the Tall Grass",
+    "year": "2019",
     "type": "Film",
-    "originalWorkTitle": "[36]",
-    "originalWorkType": ""
+    "originalWorkTitle": "In the Tall Grass",
+    "originalWorkType": "Novella"
   },
   {
-    "adaptationTitle": "Vincenzo Natali",
-    "year": "In the Tall Grass",
+    "adaptationTitle": "Doctor Sleep",
+    "year": "2019",
     "type": "Film",
-    "originalWorkTitle": "[37]",
-    "originalWorkType": ""
-  },
-  {
-    "adaptationTitle": "Mike Flanagan",
-    "year": "Doctor Sleep",
-    "type": "Film",
-    "originalWorkTitle": "[38]",
-    "originalWorkType": ""
+    "originalWorkTitle": "Doctor Sleep",
+    "originalWorkType": "Novel"
   },
   {
     "adaptationTitle": "Children of the Corn",
@@ -343,11 +343,11 @@
     "originalWorkType": "Novel"
   },
   {
-    "adaptationTitle": "John Lee Hancock",
-    "year": "Mr. Harrigan's Phone",
+    "adaptationTitle": "Mr. Harrigan's Phone",
+    "year": "2022",
     "type": "Film",
-    "originalWorkTitle": "[41]",
-    "originalWorkType": ""
+    "originalWorkTitle": "Mr. Harrigan's Phone",
+    "originalWorkType": "Novella"
   },
   {
     "adaptationTitle": "The Boogeyman",
@@ -364,11 +364,11 @@
     "originalWorkType": "Novella"
   },
   {
-    "adaptationTitle": "Gary Dauberman",
-    "year": "'Salem's Lot",
+    "adaptationTitle": "'Salem's Lot",
+    "year": "2024",
     "type": "Film",
-    "originalWorkTitle": "[44]",
-    "originalWorkType": ""
+    "originalWorkTitle": "'Salem's Lot",
+    "originalWorkType": "Novel"
   },
   {
     "adaptationTitle": "The Monkey",
@@ -385,10 +385,10 @@
     "originalWorkType": "Novel"
   },
   {
-    "adaptationTitle": "Edgar Wright",
-    "year": "The Running Man",
+    "adaptationTitle": "The Running Man",
+    "year": "2025",
     "type": "Film",
-    "originalWorkTitle": "Edgar Wright",
+    "originalWorkTitle": "The Running Man",
     "originalWorkType": "Novel"
   },
   {
@@ -409,8 +409,8 @@
     "adaptationTitle": "The Langoliers",
     "year": "1995",
     "type": "Television",
-    "originalWorkTitle": "Four Past Midnight",
-    "originalWorkType": "Novel"
+    "originalWorkTitle": "The Langoliers",
+    "originalWorkType": "Novella"
   },
   {
     "adaptationTitle": "The Shining",
@@ -429,42 +429,56 @@
   {
     "adaptationTitle": "Heads Will Roll",
     "year": "2014",
-    "type": "TV Series",
-    "originalWorkTitle": "Heads Will Roll",
+    "type": "Television",
+    "originalWorkTitle": "Under the Dome",
     "originalWorkType": "Novel"
   },
   {
     "adaptationTitle": "People in the Rain",
     "year": "2017",
-    "type": "TV Series",
-    "originalWorkTitle": "People in the Rain",
+    "type": "Television",
+    "originalWorkTitle": "Mr. Mercedes",
     "originalWorkType": "Novel"
   },
   {
     "adaptationTitle": "The House of the Dead",
     "year": "2021",
-    "type": "Miniseries",
-    "originalWorkTitle": "The House of the Dead",
+    "type": "Television",
+    "originalWorkTitle": "The Stand",
+    "originalWorkType": "Novel"
+  },
+  {
+    "adaptationTitle": "The Circle Closes",
+    "year": "2021",
+    "type": "Television",
+    "originalWorkTitle": "The Stand",
+    "originalWorkType": "Novel"
+  },
+  {
+    "adaptationTitle": "Lisey's Story",
+    "year": "2021",
+    "type": "Television",
+    "originalWorkTitle": "Lisey's Story",
     "originalWorkType": "Novel"
   },
   {
     "adaptationTitle": "Salem's Lot",
     "year": "1979",
     "type": "Television",
-    "originalWorkTitle": "Salem's Lot",
+    "originalWorkTitle": "'Salem's Lot",
     "originalWorkType": "Novel"
   },
   {
     "adaptationTitle": "The Word Processor of the Gods",
     "year": "1984",
-    "type": "TV Episode (Anthology)",
+    "type": "Television",
     "originalWorkTitle": "The Word Processor of the Gods",
     "originalWorkType": "Short story"
   },
   {
     "adaptationTitle": "Gramma",
     "year": "1986",
-    "type": "TV Episode (Anthology)",
+    "type": "Television",
     "originalWorkTitle": "Gramma",
     "originalWorkType": "Short story"
   },
@@ -478,8 +492,15 @@
   {
     "adaptationTitle": "The Moving Finger",
     "year": "1991",
-    "type": "TV Episode (Anthology)",
+    "type": "Television",
     "originalWorkTitle": "The Moving Finger",
+    "originalWorkType": "Short story"
+  },
+  {
+    "adaptationTitle": "Sometimes They Come Back",
+    "year": "1991",
+    "type": "Television",
+    "originalWorkTitle": "Sometimes They Come Back",
     "originalWorkType": "Short story"
   },
   {
@@ -497,18 +518,18 @@
     "originalWorkType": "Short story"
   },
   {
-    "adaptationTitle": "Chattery Teeth",
-    "year": "Quicksilver Highway",
+    "adaptationTitle": "Quicksilver Highway",
+    "year": "1997",
     "type": "Television",
-    "originalWorkTitle": "20th Television",
-    "originalWorkType": ""
+    "originalWorkTitle": "Chattery Teeth",
+    "originalWorkType": "Short story"
   },
   {
-    "adaptationTitle": "The Outer Limits",
-    "year": "The Revelations of 'Becka Paulson",
+    "adaptationTitle": "The Revelations of 'Becka Paulson",
+    "year": "1997",
     "type": "Television",
-    "originalWorkTitle": "MGM Television",
-    "originalWorkType": ""
+    "originalWorkTitle": "The Revelations of 'Becka Paulson",
+    "originalWorkType": "Short story"
   },
   {
     "adaptationTitle": "Woh",
@@ -535,15 +556,15 @@
     "adaptationTitle": "Salem's Lot",
     "year": "2004",
     "type": "Television",
-    "originalWorkTitle": "Salem's Lot",
+    "originalWorkTitle": "'Salem's Lot",
     "originalWorkType": "Novel"
   },
   {
     "adaptationTitle": "Nightmares & Dreamscapes",
     "year": "2006",
     "type": "Television",
-    "originalWorkTitle": "Nightmares & Dreamscapes",
-    "originalWorkType": ""
+    "originalWorkTitle": "Nightmares & Dreamscapes, Everything's Eventual, and Night Shift",
+    "originalWorkType": "Short story collection"
   },
   {
     "adaptationTitle": "Children of the Corn",
@@ -584,7 +605,7 @@
     "adaptationTitle": "11.22.63",
     "year": "2016",
     "type": "Television",
-    "originalWorkTitle": "11.22.63",
+    "originalWorkTitle": "11/22/63",
     "originalWorkType": "Novel"
   },
   {
@@ -598,15 +619,15 @@
     "adaptationTitle": "Mr. Mercedes",
     "year": "2017–2019",
     "type": "Television",
-    "originalWorkTitle": "Mr. Mercedes",
-    "originalWorkType": "Novel"
+    "originalWorkTitle": "Mr. Mercedes, Finders Keepers and End of Watch",
+    "originalWorkType": "Novel series"
   },
   {
-    "adaptationTitle": "Creepshow",
+    "adaptationTitle": "Creepshow (TV series)",
     "year": "2019, 2020",
     "type": "Television",
-    "originalWorkTitle": "Gray Matter",
-    "originalWorkType": ""
+    "originalWorkTitle": "Gray Matter and Survivor Type",
+    "originalWorkType": "Short story"
   },
   {
     "adaptationTitle": "The Outsider",
@@ -637,14 +658,14 @@
     "originalWorkType": "Novel"
   },
   {
-    "adaptationTitle": "Carrie",
+    "adaptationTitle": "Carrie (TV series)",
     "year": "TBA",
     "type": "Television",
     "originalWorkTitle": "Carrie",
     "originalWorkType": "Novel"
   },
   {
-    "adaptationTitle": "Fairy Tale",
+    "adaptationTitle": "Fairy Tale (TV series)",
     "year": "TBA",
     "type": "Television",
     "originalWorkTitle": "Fairy Tale",
