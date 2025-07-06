@@ -5,6 +5,7 @@ import BookCarousel from './components/BookCarousel'; // Import the carousel com
 const pageLinks = [
   { href: "/pages/books", title: "BOOKS", summary: "Explore a comprehensive list of Stephen King's novels." },
   { href: "/pages/shorts", title: "SHORTS", summary: "Discover Stephen King's captivating short stories and novellas." },
+  { href: "/pages/adapted-works", title: "ADAPTED WORKS", summary: "Explore adaptations of Stephen King's works." },
   { href: "/pages/villains", title: "VILLAINS", summary: "Delve into the dark world of Stephen King's most memorable villains." },
   { href: "/pages/google-books", title: "GOOGLE BOOKS", summary: "Search and browse Stephen King's works available on Google Books." },
   { href: "/pages/about-stephen-king", title: "KINGGRAPHY", summary: "Learn more about the life and career of Stephen King." }, // Updated title and summary

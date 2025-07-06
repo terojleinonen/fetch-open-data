@@ -2,18 +2,24 @@ export default async function Request(parameter, options = {}) {
     const { skipGoogleBooks = false } = options;
     // Use GOOGLE_BOOKS_API_KEY (server-side environment variable)
     const apiKey = process.env.GOOGLE_BOOKS_API_KEY;
-    const url = 'https://stephen-king-api.onrender.com/api/';
+    let baseUrl = 'https://stephen-king-api.onrender.com/api/';
     const headers = new Headers({
       "User-Agent": "fetch-open-data/1.0"
     });
     let data;
 
-    // console.log(`[INFO] Request: Initiating for "${parameter}", skipGoogleBooks: ${skipGoogleBooks}`);
+    // All requests will now go to the external API, as adaptations.json is directly imported.
+    // The special handling for 'adaptations' parameter to use a local API route is removed.
+    // console.log(`[INFO] Request: Initiating for parameter: "${parameter}"`);
+
+    const finalUrl = baseUrl + parameter;
+    // console.log(`[INFO] Request: Attempting to fetch from finalUrl: ${finalUrl}`);
 
     try {
-      const response = await fetch(url + parameter, headers);
+      const response = await fetch(finalUrl, headers);
+      // console.log(`[INFO] Request: Response status for "${finalUrl}": ${response.status}`);
       if (!response.ok) {
-        console.error(`[ERROR] Request: Primary API error for "${parameter}": Status ${response.status}`);
+        console.error(`[ERROR] Request: API error for "${parameter}" from URL "${finalUrl}": Status ${response.status}, StatusText: ${response.statusText}`);
         throw new Error(`HTTP error: Status ${response.status}`);
       }
       data = await response.json();
