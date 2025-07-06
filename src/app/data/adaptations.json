@@ -3,651 +3,864 @@
     "adaptationTitle": "Creepshow",
     "year": "1982",
     "type": "Film",
-    "originalWorkTitle": "Weeds",
-    "originalWorkType": ""
+    "adaptationLink": "https://en.wikipedia.org/wiki/Creepshow",
+    "originalWorkTitle": "Weeds and The Crate",
+    "originalWorkType": "Short story",
+    "originalWorkLink": "https://en.wikipedia.org/wiki/Weeds_(short_story)"
   },
   {
     "adaptationTitle": "Cat's Eye",
     "year": "1985",
     "type": "Film",
-    "originalWorkTitle": "Quitters, Inc.",
-    "originalWorkType": ""
+    "adaptationLink": "https://en.wikipedia.org/wiki/Cat%27s_Eye_(1985_film)",
+    "originalWorkTitle": "Quitters, Inc. and The Ledge",
+    "originalWorkType": "Short story",
+    "originalWorkLink": "https://en.wikipedia.org/wiki/Quitters,_Inc."
+  },
+  {
+    "adaptationTitle": "Silver Bullet",
+    "year": "1985",
+    "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Silver_Bullet_(film)",
+    "originalWorkTitle": "Cycle of the Werewolf",
+    "originalWorkType": "Novella",
+    "originalWorkLink": "/pages/shorts/15"
   },
   {
     "adaptationTitle": "Maximum Overdrive",
     "year": "1986",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Maximum_Overdrive",
     "originalWorkTitle": "Trucks",
-    "originalWorkType": "Short story"
+    "originalWorkType": "Short story",
+    "originalWorkLink": "/pages/shorts/44"
   },
   {
     "adaptationTitle": "Creepshow 2",
     "year": "1987",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Creepshow_2",
     "originalWorkTitle": "The Raft",
-    "originalWorkType": "Short story"
+    "originalWorkType": "Short story",
+    "originalWorkLink": "/pages/shorts/87"
   },
   {
-    "adaptationTitle": "Pet Sematary",
+    "adaptationTitle": "Pet Sematary (1989 film)",
     "year": "1989",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Pet_Sematary_(1989_film)",
     "originalWorkTitle": "Pet Sematary",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/14"
   },
   {
     "adaptationTitle": "Thinner",
     "year": "1996",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Thinner_(film)",
     "originalWorkTitle": "Thinner",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/18"
   },
   {
-    "adaptationTitle": "A Good Marriage",
+    "adaptationTitle": "A Good Marriage (film)",
     "year": "2014",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/A_Good_Marriage_(film)",
     "originalWorkTitle": "A Good Marriage",
-    "originalWorkType": "Novella"
+    "originalWorkType": "Novella",
+    "originalWorkLink": "/pages/shorts/180"
   },
   {
-    "adaptationTitle": "Cell",
+    "adaptationTitle": "Cell (film)",
     "year": "2016",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Cell_(film)",
     "originalWorkTitle": "Cell",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/44"
   },
   {
     "adaptationTitle": "It Chapter Two",
     "year": "2019",
     "type": "Film",
-    "originalWorkTitle": "It Chapter Two",
-    "originalWorkType": "Novel"
+    "adaptationLink": "https://en.wikipedia.org/wiki/It_Chapter_Two",
+    "originalWorkTitle": "It",
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/19"
   },
   {
-    "adaptationTitle": "Carrie",
+    "adaptationTitle": "Carrie (1976 film)",
     "year": "1976",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Carrie_(1976_film)",
     "originalWorkTitle": "Carrie",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/1"
   },
   {
-    "adaptationTitle": "The Shining",
+    "adaptationTitle": "The Shining (film)",
     "year": "1980",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Shining_(film)",
     "originalWorkTitle": "The Shining",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/3"
   },
   {
-    "adaptationTitle": "Cujo",
+    "adaptationTitle": "Cujo (film)",
     "year": "1983",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Cujo_(film)",
     "originalWorkTitle": "Cujo",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/10"
   },
   {
-    "adaptationTitle": "David Cronenberg",
-    "year": "The Dead Zone",
+    "adaptationTitle": "The Dead Zone (film)",
+    "year": "1983",
     "type": "Film",
-    "originalWorkTitle": "[4]",
-    "originalWorkType": ""
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Dead_Zone_(film)",
+    "originalWorkTitle": "The Dead Zone",
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/7"
   },
   {
-    "adaptationTitle": "John Carpenter",
-    "year": "Christine",
+    "adaptationTitle": "Christine (1983 film)",
+    "year": "1983",
     "type": "Film",
-    "originalWorkTitle": "[5]",
-    "originalWorkType": ""
+    "adaptationLink": "https://en.wikipedia.org/wiki/Christine_(1983_film)",
+    "originalWorkTitle": "Christine",
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/13"
   },
   {
-    "adaptationTitle": "Children of the Corn",
+    "adaptationTitle": "Children of the Corn (1984 film)",
     "year": "1984",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Children_of_the_Corn_(1984_film)",
     "originalWorkTitle": "Children of the Corn",
-    "originalWorkType": "Short story"
+    "originalWorkType": "Short story",
+    "originalWorkLink": "/pages/shorts/53"
   },
   {
-    "adaptationTitle": "Mark L. Lester",
-    "year": "Firestarter",
+    "adaptationTitle": "Firestarter (1984 film)",
+    "year": "1984",
     "type": "Film",
-    "originalWorkTitle": "[7]",
-    "originalWorkType": ""
+    "adaptationLink": "https://en.wikipedia.org/wiki/Firestarter_(1984_film)",
+    "originalWorkTitle": "Firestarter",
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/8"
   },
   {
-    "adaptationTitle": "Stand by Me",
+    "adaptationTitle": "Stand by Me (film)",
     "year": "1986",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Stand_by_Me_(film)",
     "originalWorkTitle": "The Body",
-    "originalWorkType": "Novella"
+    "originalWorkType": "Novella",
+    "originalWorkLink": "/pages/shorts/84"
   },
   {
-    "adaptationTitle": "The Running Man",
+    "adaptationTitle": "The Running Man (1987 film)",
     "year": "1987",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Running_Man_(1987_film)",
     "originalWorkTitle": "The Running Man",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/11"
   },
   {
     "adaptationTitle": "Tales from the Darkside: The Movie",
     "year": "1990",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Tales_from_the_Darkside:_The_Movie",
     "originalWorkTitle": "The Cat from Hell",
-    "originalWorkType": "Short story"
+    "originalWorkType": "Short story",
+    "originalWorkLink": "/pages/shorts/55"
   },
   {
-    "adaptationTitle": "Ralph S. Singleton",
-    "year": "Graveyard Shift",
+    "adaptationTitle": "Graveyard Shift (1990 film)",
+    "year": "1990",
     "type": "Film",
-    "originalWorkTitle": "[11]",
-    "originalWorkType": ""
+    "adaptationLink": "https://en.wikipedia.org/wiki/Graveyard_Shift_(1990_film)",
+    "originalWorkTitle": "Graveyard Shift",
+    "originalWorkType": "Short story",
+    "originalWorkLink": "/pages/shorts/29"
   },
   {
-    "adaptationTitle": "Rob Reiner",
-    "year": "Misery",
+    "adaptationTitle": "Misery (film)",
+    "year": "1990",
     "type": "Film",
-    "originalWorkTitle": "[12]",
-    "originalWorkType": ""
+    "adaptationLink": "https://en.wikipedia.org/wiki/Misery_(film)",
+    "originalWorkTitle": "Misery",
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/21"
   },
   {
-    "adaptationTitle": "The Dark Half",
+    "adaptationTitle": "The Dark Half (film)",
     "year": "1993",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Dark_Half_(film)",
     "originalWorkTitle": "The Dark Half",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/23"
   },
   {
-    "adaptationTitle": "Fraser Clarke Heston",
-    "year": "Needful Things",
+    "adaptationTitle": "Needful Things (film)",
+    "year": "1993",
     "type": "Film",
-    "originalWorkTitle": "[14]",
-    "originalWorkType": ""
+    "adaptationLink": "https://en.wikipedia.org/wiki/Needful_Things_(film)",
+    "originalWorkTitle": "Needful Things",
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/26"
   },
   {
     "adaptationTitle": "The Shawshank Redemption",
     "year": "1994",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Shawshank_Redemption",
     "originalWorkTitle": "Rita Hayworth and Shawshank Redemption",
-    "originalWorkType": "Novella"
+    "originalWorkType": "Novella",
+    "originalWorkLink": "/pages/shorts/86"
   },
   {
-    "adaptationTitle": "The Mangler",
+    "adaptationTitle": "The Mangler (film)",
     "year": "1995",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Mangler_(film)",
     "originalWorkTitle": "The Mangler",
-    "originalWorkType": "Short story"
+    "originalWorkType": "Short story",
+    "originalWorkLink": "/pages/shorts/42"
   },
   {
-    "adaptationTitle": "Taylor Hackford",
-    "year": "Dolores Claiborne",
+    "adaptationTitle": "Dolores Claiborne (film)",
+    "year": "1995",
     "type": "Film",
-    "originalWorkTitle": "[17]",
-    "originalWorkType": ""
+    "adaptationLink": "https://en.wikipedia.org/wiki/Dolores_Claiborne_(film)",
+    "originalWorkTitle": "Dolores Claiborne",
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/28"
   },
   {
-    "adaptationTitle": "The Night Flier",
+    "adaptationTitle": "The Night Flier (film)",
     "year": "1997",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Night_Flier_(film)",
     "originalWorkTitle": "The Night Flier",
-    "originalWorkType": "Short story"
+    "originalWorkType": "Short story",
+    "originalWorkLink": "/pages/shorts/106"
   },
   {
-    "adaptationTitle": "Apt Pupil",
+    "adaptationTitle": "Apt Pupil (film)",
     "year": "1998",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Apt_Pupil_(film)",
     "originalWorkTitle": "Apt Pupil",
-    "originalWorkType": "Novella"
+    "originalWorkType": "Novella",
+    "originalWorkLink": "/pages/shorts/83"
   },
   {
-    "adaptationTitle": "The Green Mile",
+    "adaptationTitle": "The Green Mile (film)",
     "year": "1999",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Green_Mile_(film)",
     "originalWorkTitle": "The Green Mile",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/31"
   },
   {
-    "adaptationTitle": "Hearts in Atlantis",
+    "adaptationTitle": "Hearts in Atlantis (film)",
     "year": "2001",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Hearts_in_Atlantis_(film)",
     "originalWorkTitle": "Low Men in Yellow Coats",
-    "originalWorkType": "Novella"
+    "originalWorkType": "Novella",
+    "originalWorkLink": "/pages/shorts/144"
   },
   {
-    "adaptationTitle": "Dreamcatcher",
+    "adaptationTitle": "Dreamcatcher (2003 film)",
     "year": "2003",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Dreamcatcher_(2003_film)",
     "originalWorkTitle": "Dreamcatcher",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/37"
   },
   {
     "adaptationTitle": "Secret Window",
     "year": "2004",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Secret_Window",
     "originalWorkTitle": "Secret Window, Secret Garden",
-    "originalWorkType": "Novella"
+    "originalWorkType": "Novella",
+    "originalWorkLink": "/pages/shorts/116"
   },
   {
-    "adaptationTitle": "Mick Garris",
-    "year": "Riding the Bullet",
+    "adaptationTitle": "Riding the Bullet (film)",
+    "year": "2004",
     "type": "Film",
-    "originalWorkTitle": "[24]",
-    "originalWorkType": ""
+    "adaptationLink": "https://en.wikipedia.org/wiki/Riding_the_Bullet_(film)",
+    "originalWorkTitle": "Riding the Bullet",
+    "originalWorkType": "Novella",
+    "originalWorkLink": "/pages/shorts/148"
   },
   {
-    "adaptationTitle": "1408",
+    "adaptationTitle": "1408 (film)",
     "year": "2007",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/1408_(film)",
     "originalWorkTitle": "1408",
-    "originalWorkType": "Short story"
+    "originalWorkType": "Short story",
+    "originalWorkLink": "/pages/shorts/146"
   },
   {
-    "adaptationTitle": "Anurag Kashyap",
-    "year": "No Smoking",
+    "adaptationTitle": "No Smoking (2007 film)",
+    "year": "2007",
     "type": "Film",
-    "originalWorkTitle": "[26]",
-    "originalWorkType": ""
+    "adaptationLink": "https://en.wikipedia.org/wiki/No_Smoking_(2007_film)",
+    "originalWorkTitle": "Quitters, Inc.",
+    "originalWorkType": "Short story",
+    "originalWorkLink": "/pages/shorts/60"
   },
   {
-    "adaptationTitle": "Frank Darabont",
-    "year": "The Mist",
+    "adaptationTitle": "The Mist (film)",
+    "year": "2007",
     "type": "Film",
-    "originalWorkTitle": "[27]",
-    "originalWorkType": ""
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Mist_(film)",
+    "originalWorkTitle": "The Mist",
+    "originalWorkType": "Novella",
+    "originalWorkLink": "/pages/shorts/67"
   },
   {
-    "adaptationTitle": "Dolan's Cadillac",
+    "adaptationTitle": "Dolan's Cadillac (film)",
     "year": "2009",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Dolan%27s_Cadillac_(film)",
     "originalWorkTitle": "Dolan's Cadillac",
-    "originalWorkType": "Novella"
+    "originalWorkType": "Novella",
+    "originalWorkLink": "/pages/shorts/98"
   },
   {
-    "adaptationTitle": "Carrie",
+    "adaptationTitle": "Carrie (2013 film)",
     "year": "2013",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Carrie_(2013_film)",
     "originalWorkTitle": "Carrie",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/1"
   },
   {
-    "adaptationTitle": "Mercy",
+    "adaptationTitle": "Mercy (2014 film)",
     "year": "2014",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Mercy_(2014_film)",
     "originalWorkTitle": "Gramma",
-    "originalWorkType": "Short story"
+    "originalWorkType": "Short story",
+    "originalWorkLink": "/pages/shorts/93"
   },
   {
-    "adaptationTitle": "The Dark Tower",
+    "adaptationTitle": "The Dark Tower (2017 film)",
     "year": "2017",
     "type": "Film",
-    "originalWorkTitle": "Based on the series of the same name",
-    "originalWorkType": "Series"
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Dark_Tower_(2017_film)",
+    "originalWorkTitle": "The Dark Tower",
+    "originalWorkType": "Series",
+    "originalWorkLink": "https://en.wikipedia.org/wiki/The_Dark_Tower_(series)"
   },
   {
-    "adaptationTitle": "Andy Muschietti",
-    "year": "It",
+    "adaptationTitle": "It (2017 film)",
+    "year": "2017",
     "type": "Film",
-    "originalWorkTitle": "[32]",
-    "originalWorkType": ""
+    "adaptationLink": "https://en.wikipedia.org/wiki/It_(2017_film)",
+    "originalWorkTitle": "It",
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/19"
   },
   {
-    "adaptationTitle": "Mike Flanagan",
-    "year": "Gerald's Game",
+    "adaptationTitle": "Gerald's Game (film)",
+    "year": "2017",
     "type": "Film",
-    "originalWorkTitle": "[33]",
-    "originalWorkType": ""
+    "adaptationLink": "https://en.wikipedia.org/wiki/Gerald%27s_Game_(film)",
+    "originalWorkTitle": "Gerald's Game",
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/27"
   },
   {
-    "adaptationTitle": "Zak Hilditch",
-    "year": "1922",
+    "adaptationTitle": "1922 (2017 film)",
+    "year": "2017",
     "type": "Film",
-    "originalWorkTitle": "[34]",
-    "originalWorkType": ""
+    "adaptationLink": "https://en.wikipedia.org/wiki/1922_(2017_film)",
+    "originalWorkTitle": "1922",
+    "originalWorkType": "Novella",
+    "originalWorkLink": "/pages/shorts/177"
   },
   {
-    "adaptationTitle": "Pet Sematary",
+    "adaptationTitle": "Pet Sematary (2019 film)",
     "year": "2019",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Pet_Sematary_(2019_film)",
     "originalWorkTitle": "Pet Sematary",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/14"
   },
   {
-    "adaptationTitle": "Andy Muschietti",
-    "year": "It Chapter Two",
+    "adaptationTitle": "In the Tall Grass (film)",
+    "year": "2019",
     "type": "Film",
-    "originalWorkTitle": "[36]",
-    "originalWorkType": ""
+    "adaptationLink": "https://en.wikipedia.org/wiki/In_the_Tall_Grass_(film)",
+    "originalWorkTitle": "In the Tall Grass",
+    "originalWorkType": "Novella",
+    "originalWorkLink": "/pages/shorts/186"
   },
   {
-    "adaptationTitle": "Vincenzo Natali",
-    "year": "In the Tall Grass",
+    "adaptationTitle": "Doctor Sleep (2019 film)",
+    "year": "2019",
     "type": "Film",
-    "originalWorkTitle": "[37]",
-    "originalWorkType": ""
+    "adaptationLink": "https://en.wikipedia.org/wiki/Doctor_Sleep_(2019_film)",
+    "originalWorkTitle": "Doctor Sleep",
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/52"
   },
   {
-    "adaptationTitle": "Mike Flanagan",
-    "year": "Doctor Sleep",
-    "type": "Film",
-    "originalWorkTitle": "[38]",
-    "originalWorkType": ""
-  },
-  {
-    "adaptationTitle": "Children of the Corn",
+    "adaptationTitle": "Children of the Corn (2020 film)",
     "year": "2020",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Children_of_the_Corn_(2020_film)",
     "originalWorkTitle": "Children of the Corn",
-    "originalWorkType": "Short story"
+    "originalWorkType": "Short story",
+    "originalWorkLink": "/pages/shorts/53"
   },
   {
-    "adaptationTitle": "Firestarter",
+    "adaptationTitle": "Firestarter (2022 film)",
     "year": "2022",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Firestarter_(2022_film)",
     "originalWorkTitle": "Firestarter",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/8"
   },
   {
-    "adaptationTitle": "John Lee Hancock",
-    "year": "Mr. Harrigan's Phone",
+    "adaptationTitle": "Mr. Harrigan's Phone (film)",
+    "year": "2022",
     "type": "Film",
-    "originalWorkTitle": "[41]",
-    "originalWorkType": ""
+    "adaptationLink": "https://en.wikipedia.org/wiki/Mr._Harrigan%27s_Phone_(film)",
+    "originalWorkTitle": "Mr. Harrigan's Phone",
+    "originalWorkType": "Novella",
+    "originalWorkLink": "/pages/shorts/209"
   },
   {
-    "adaptationTitle": "The Boogeyman",
+    "adaptationTitle": "The Boogeyman (2023 film)",
     "year": "2023",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Boogeyman_(2023_film)",
     "originalWorkTitle": "The Boogeyman",
-    "originalWorkType": "Short story"
+    "originalWorkType": "Short story",
+    "originalWorkLink": "/pages/shorts/43"
   },
   {
-    "adaptationTitle": "The Life of Chuck",
+    "adaptationTitle": "The Life of Chuck (film)",
     "year": "2024",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Life_of_Chuck_(film)",
     "originalWorkTitle": "The Life of Chuck",
-    "originalWorkType": "Novella"
+    "originalWorkType": "Novella",
+    "originalWorkLink": "/pages/shorts/208"
   },
   {
-    "adaptationTitle": "Gary Dauberman",
-    "year": "'Salem's Lot",
+    "adaptationTitle": "'Salem's Lot (2024 film)",
+    "year": "2024",
     "type": "Film",
-    "originalWorkTitle": "[44]",
-    "originalWorkType": ""
+    "adaptationLink": "https://en.wikipedia.org/wiki/%27Salem%27s_Lot_(film)",
+    "originalWorkTitle": "'Salem's Lot",
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/2"
   },
   {
-    "adaptationTitle": "The Monkey",
+    "adaptationTitle": "The Monkey (film)",
     "year": "2025",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Monkey_(film)",
     "originalWorkTitle": "The Monkey",
-    "originalWorkType": "Short story"
+    "originalWorkType": "Short story",
+    "originalWorkLink": "/pages/shorts/71"
   },
   {
-    "adaptationTitle": "The Long Walk",
+    "adaptationTitle": "The Long Walk (2025 film)",
     "year": "2025",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Long_Walk_(2025_film)",
     "originalWorkTitle": "The Long Walk",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/6"
   },
   {
-    "adaptationTitle": "Edgar Wright",
-    "year": "The Running Man",
+    "adaptationTitle": "The Running Man (2025 film)",
+    "year": "2025",
     "type": "Film",
-    "originalWorkTitle": "Edgar Wright",
-    "originalWorkType": "Novel"
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Running_Man_(2025_film)",
+    "originalWorkTitle": "The Running Man",
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/11"
   },
   {
-    "adaptationTitle": "Billy Summers",
+    "adaptationTitle": "Billy Summers (film)",
     "year": "TBA",
     "type": "Film",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Billy_Summers#Film_adaptation",
     "originalWorkTitle": "Billy Summers",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/63"
   },
   {
-    "adaptationTitle": "The Stand",
+    "adaptationTitle": "The Stand (1994 miniseries)",
     "year": "1994",
     "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Stand_(1994_miniseries)",
     "originalWorkTitle": "The Stand",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/5"
   },
   {
-    "adaptationTitle": "The Langoliers",
+    "adaptationTitle": "The Langoliers (miniseries)",
     "year": "1995",
     "type": "Television",
-    "originalWorkTitle": "Four Past Midnight",
-    "originalWorkType": "Novel"
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Langoliers_(miniseries)",
+    "originalWorkTitle": "The Langoliers",
+    "originalWorkType": "Novella",
+    "originalWorkLink": "/pages/shorts/114"
   },
   {
-    "adaptationTitle": "The Shining",
+    "adaptationTitle": "The Shining (miniseries)",
     "year": "1997",
     "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Shining_(miniseries)",
     "originalWorkTitle": "The Shining",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/3"
   },
   {
-    "adaptationTitle": "Desperation",
+    "adaptationTitle": "Desperation (TV film)",
     "year": "2006",
     "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Stephen_King%27s_Desperation",
     "originalWorkTitle": "Desperation",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/32"
   },
   {
-    "adaptationTitle": "Heads Will Roll",
+    "adaptationTitle": "Heads Will Roll (Under the Dome episode)",
     "year": "2014",
-    "type": "TV Series",
-    "originalWorkTitle": "Heads Will Roll",
-    "originalWorkType": "Novel"
+    "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Heads_Will_Roll_(Under_the_Dome)",
+    "originalWorkTitle": "Under the Dome",
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/48"
   },
   {
-    "adaptationTitle": "People in the Rain",
+    "adaptationTitle": "People in the Rain (Mr. Mercedes episode)",
     "year": "2017",
-    "type": "TV Series",
-    "originalWorkTitle": "People in the Rain",
-    "originalWorkType": "Novel"
+    "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Mr._Mercedes_(TV_series)#Episodes",
+    "originalWorkTitle": "Mr. Mercedes",
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/53"
   },
   {
-    "adaptationTitle": "The House of the Dead",
+    "adaptationTitle": "The House of the Dead (The Stand episode)",
     "year": "2021",
-    "type": "Miniseries",
-    "originalWorkTitle": "The House of the Dead",
-    "originalWorkType": "Novel"
+    "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Stand_(2020_miniseries)#Episodes",
+    "originalWorkTitle": "The Stand",
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/5"
   },
   {
-    "adaptationTitle": "Salem's Lot",
+    "adaptationTitle": "The Circle Closes (The Stand episode)",
+    "year": "2021",
+    "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Stand_(2020_miniseries)#Episodes",
+    "originalWorkTitle": "The Stand",
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/5"
+  },
+  {
+    "adaptationTitle": "Lisey's Story (miniseries)",
+    "year": "2021",
+    "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Lisey%27s_Story_(miniseries)",
+    "originalWorkTitle": "Lisey's Story",
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/45"
+  },
+  {
+    "adaptationTitle": "Salem's Lot (1979 miniseries)",
     "year": "1979",
     "type": "Television",
-    "originalWorkTitle": "Salem's Lot",
-    "originalWorkType": "Novel"
+    "adaptationLink": "https://en.wikipedia.org/wiki/Salem%27s_Lot_(1979_miniseries)",
+    "originalWorkTitle": "'Salem's Lot",
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/2"
   },
   {
-    "adaptationTitle": "The Word Processor of the Gods",
+    "adaptationTitle": "The Word Processor of the Gods (Tales from the Darkside episode)",
     "year": "1984",
-    "type": "TV Episode (Anthology)",
-    "originalWorkTitle": "The Word Processor of the Gods",
-    "originalWorkType": "Short story"
+    "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/List_of_Tales_from_the_Darkside_episodes#Season_1_(1984%E2%80%9385)",
+    "originalWorkTitle": "Word Processor of the Gods",
+    "originalWorkType": "Short story",
+    "originalWorkLink": "/pages/shorts/89"
   },
   {
-    "adaptationTitle": "Gramma",
+    "adaptationTitle": "Gramma (The Twilight Zone episode)",
     "year": "1986",
-    "type": "TV Episode (Anthology)",
+    "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Gramma_(The_Twilight_Zone)",
     "originalWorkTitle": "Gramma",
-    "originalWorkType": "Short story"
+    "originalWorkType": "Short story",
+    "originalWorkLink": "/pages/shorts/93"
   },
   {
-    "adaptationTitle": "It",
+    "adaptationTitle": "It (miniseries)",
     "year": "1990",
     "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/It_(miniseries)",
     "originalWorkTitle": "It",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/19"
   },
   {
-    "adaptationTitle": "The Moving Finger",
+    "adaptationTitle": "The Moving Finger (Monsters episode)",
     "year": "1991",
-    "type": "TV Episode (Anthology)",
+    "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Moving_Finger_(short_story)#Adaptations",
     "originalWorkTitle": "The Moving Finger",
-    "originalWorkType": "Short story"
+    "originalWorkType": "Short story",
+    "originalWorkLink": "/pages/shorts/119"
   },
   {
-    "adaptationTitle": "The Tommyknockers",
+    "adaptationTitle": "Sometimes They Come Back (TV film)",
+    "year": "1991",
+    "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Sometimes_They_Come_Back_(film)",
+    "originalWorkTitle": "Sometimes They Come Back",
+    "originalWorkType": "Short story",
+    "originalWorkLink": "/pages/shorts/47"
+  },
+  {
+    "adaptationTitle": "The Tommyknockers (miniseries)",
     "year": "1993",
     "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Tommyknockers_(miniseries)",
     "originalWorkTitle": "The Tommyknockers",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/22"
   },
   {
-    "adaptationTitle": "Trucks",
+    "adaptationTitle": "Trucks (TV film)",
     "year": "1997",
     "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Trucks_(film)",
     "originalWorkTitle": "Trucks",
-    "originalWorkType": "Short story"
+    "originalWorkType": "Short story",
+    "originalWorkLink": "/pages/shorts/44"
   },
   {
-    "adaptationTitle": "Chattery Teeth",
-    "year": "Quicksilver Highway",
+    "adaptationTitle": "Quicksilver Highway",
+    "year": "1997",
     "type": "Television",
-    "originalWorkTitle": "20th Television",
-    "originalWorkType": ""
+    "adaptationLink": "https://en.wikipedia.org/wiki/Quicksilver_Highway",
+    "originalWorkTitle": "Chattery Teeth",
+    "originalWorkType": "Short story",
+    "originalWorkLink": "/pages/shorts/121"
   },
   {
-    "adaptationTitle": "The Outer Limits",
-    "year": "The Revelations of 'Becka Paulson",
+    "adaptationTitle": "The Revelations of 'Becka Paulson (The Outer Limits episode)",
+    "year": "1997",
     "type": "Television",
-    "originalWorkTitle": "MGM Television",
-    "originalWorkType": ""
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Revelations_of_%27Becka_Paulson_(The_Outer_Limits)",
+    "originalWorkTitle": "The Revelations of 'Becka Paulson",
+    "originalWorkType": "Short story",
+    "originalWorkLink": "/pages/shorts/96"
   },
   {
     "adaptationTitle": "Woh",
     "year": "1998",
     "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Woh",
     "originalWorkTitle": "It",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/19"
   },
   {
-    "adaptationTitle": "Carrie",
+    "adaptationTitle": "Carrie (2002 TV film)",
     "year": "2002",
     "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Carrie_(2002_film)",
     "originalWorkTitle": "Carrie",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/1"
   },
   {
-    "adaptationTitle": "The Dead Zone",
+    "adaptationTitle": "The Dead Zone (TV series)",
     "year": "2002–2007",
     "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Dead_Zone_(TV_series)",
     "originalWorkTitle": "The Dead Zone",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/7"
   },
   {
-    "adaptationTitle": "Salem's Lot",
+    "adaptationTitle": "Salem's Lot (2004 miniseries)",
     "year": "2004",
     "type": "Television",
-    "originalWorkTitle": "Salem's Lot",
-    "originalWorkType": "Novel"
+    "adaptationLink": "https://en.wikipedia.org/wiki/Salem%27s_Lot_(2004_miniseries)",
+    "originalWorkTitle": "'Salem's Lot",
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/2"
   },
   {
-    "adaptationTitle": "Nightmares & Dreamscapes",
+    "adaptationTitle": "Nightmares & Dreamscapes: From the Stories of Stephen King",
     "year": "2006",
     "type": "Television",
-    "originalWorkTitle": "Nightmares & Dreamscapes",
-    "originalWorkType": ""
+    "adaptationLink": "https://en.wikipedia.org/wiki/Nightmares_%26_Dreamscapes:_From_the_Stories_of_Stephen_King",
+    "originalWorkTitle": "Nightmares & Dreamscapes, Everything's Eventual, and Night Shift",
+    "originalWorkType": "Short story collection",
+    "originalWorkLink": "https://en.wikipedia.org/wiki/Nightmares_%26_Dreamscapes"
   },
   {
-    "adaptationTitle": "Children of the Corn",
+    "adaptationTitle": "Children of the Corn (2009 TV film)",
     "year": "2009",
     "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Children_of_the_Corn_(2009_film)",
     "originalWorkTitle": "Children of the Corn",
-    "originalWorkType": "Short story"
+    "originalWorkType": "Short story",
+    "originalWorkLink": "/pages/shorts/53"
   },
   {
-    "adaptationTitle": "Haven",
+    "adaptationTitle": "Haven (TV series)",
     "year": "2010–2015",
     "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Haven_(TV_series)",
     "originalWorkTitle": "The Colorado Kid",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/43"
   },
   {
-    "adaptationTitle": "Bag of Bones",
+    "adaptationTitle": "Bag of Bones (miniseries)",
     "year": "2011",
     "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Bag_of_Bones_(miniseries)",
     "originalWorkTitle": "Bag of Bones",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/35"
   },
   {
-    "adaptationTitle": "Under the Dome",
+    "adaptationTitle": "Under the Dome (TV series)",
     "year": "2013–2015",
     "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Under_the_Dome_(TV_series)",
     "originalWorkTitle": "Under the Dome",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/48"
   },
   {
-    "adaptationTitle": "Big Driver",
+    "adaptationTitle": "Big Driver (TV film)",
     "year": "2014",
     "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Big_Driver_(film)",
     "originalWorkTitle": "Big Driver",
-    "originalWorkType": "Novella"
+    "originalWorkType": "Novella",
+    "originalWorkLink": "/pages/shorts/178"
   },
   {
-    "adaptationTitle": "11.22.63",
+    "adaptationTitle": "11.22.63 (miniseries)",
     "year": "2016",
     "type": "Television",
-    "originalWorkTitle": "11.22.63",
-    "originalWorkType": "Novel"
+    "adaptationLink": "https://en.wikipedia.org/wiki/11.22.63",
+    "originalWorkTitle": "11/22/63",
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/49"
   },
   {
-    "adaptationTitle": "The Mist",
+    "adaptationTitle": "The Mist (TV series)",
     "year": "2017",
     "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Mist_(TV_series)",
     "originalWorkTitle": "The Mist",
-    "originalWorkType": "Novella"
+    "originalWorkType": "Novella",
+    "originalWorkLink": "/pages/shorts/67"
   },
   {
-    "adaptationTitle": "Mr. Mercedes",
+    "adaptationTitle": "Mr. Mercedes (TV series)",
     "year": "2017–2019",
     "type": "Television",
-    "originalWorkTitle": "Mr. Mercedes",
-    "originalWorkType": "Novel"
+    "adaptationLink": "https://en.wikipedia.org/wiki/Mr._Mercedes_(TV_series)",
+    "originalWorkTitle": "Mr. Mercedes, Finders Keepers and End of Watch",
+    "originalWorkType": "Novel series",
+    "originalWorkLink": "https://en.wikipedia.org/wiki/Bill_Hodges_Trilogy"
   },
   {
-    "adaptationTitle": "Creepshow",
-    "year": "2019, 2020",
+    "adaptationTitle": "Creepshow (TV series)",
+    "year": "2019–Present",
     "type": "Television",
-    "originalWorkTitle": "Gray Matter",
-    "originalWorkType": ""
+    "adaptationLink": "https://en.wikipedia.org/wiki/Creepshow_(TV_series)",
+    "originalWorkTitle": "Gray Matter and Survivor Type",
+    "originalWorkType": "Short story",
+    "originalWorkLink": "/pages/shorts/45"
   },
   {
-    "adaptationTitle": "The Outsider",
+    "adaptationTitle": "The Outsider (miniseries)",
     "year": "2020",
     "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Outsider_(miniseries)",
     "originalWorkTitle": "The Outsider",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/59"
   },
   {
-    "adaptationTitle": "The Stand",
+    "adaptationTitle": "The Stand (2020 miniseries)",
     "year": "2020–2021",
     "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Stand_(2020_miniseries)",
     "originalWorkTitle": "The Stand",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/5"
   },
   {
     "adaptationTitle": "Chapelwaite",
     "year": "2021",
     "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Chapelwaite",
     "originalWorkTitle": "Jerusalem's Lot",
-    "originalWorkType": "Short story"
+    "originalWorkType": "Short story",
+    "originalWorkLink": "/pages/shorts/58"
   },
   {
-    "adaptationTitle": "The Institute",
+    "adaptationTitle": "The Institute (TV series)",
     "year": "2025",
     "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/The_Institute_(TV_series)",
     "originalWorkTitle": "The Institute",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/61"
   },
   {
-    "adaptationTitle": "Carrie",
+    "adaptationTitle": "Carrie (upcoming TV series)",
     "year": "TBA",
     "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Carrie_(miniseries)",
     "originalWorkTitle": "Carrie",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "/pages/books/1"
   },
   {
-    "adaptationTitle": "Fairy Tale",
+    "adaptationTitle": "Fairy Tale (TV series)",
     "year": "TBA",
     "type": "Television",
+    "adaptationLink": "https://en.wikipedia.org/wiki/Fairy_Tale_(novel)#TV_series_adaptation",
     "originalWorkTitle": "Fairy Tale",
-    "originalWorkType": "Novel"
+    "originalWorkType": "Novel",
+    "originalWorkLink": "https://en.wikipedia.org/wiki/Fairy_Tale_(novel)"
   }
 ]
