@@ -2,7 +2,7 @@ export default async function Request(parameter, options = {}) {
     const { skipGoogleBooks = false } = options;
     // Use GOOGLE_BOOKS_API_KEY (server-side environment variable)
     const apiKey = process.env.GOOGLE_BOOKS_API_KEY;
-    const url = 'https://stephen-king-api.onrender.com/api/';
+    let baseUrl = 'https://stephen-king-api.onrender.com/api/';
     const headers = new Headers({
       "User-Agent": "fetch-open-data/1.0"
     });
@@ -10,10 +10,21 @@ export default async function Request(parameter, options = {}) {
 
     // console.log(`[INFO] Request: Initiating for "${parameter}", skipGoogleBooks: ${skipGoogleBooks}`);
 
+    // Check if the request is for adaptations, and use the local API route
+    if (parameter === 'adaptations') {
+      // Assuming the component is used in a context where relative paths work for API routes
+      // Or, if running server-side, ensure the full URL is correctly formed if needed.
+      // For client-side requests, /api/adaptations should work.
+      // For server-side components (like the Page component), /api routes are typically fetched
+      // using their absolute URL or a relative path if the fetch is from the same domain.
+      // Let's use a relative path, which Next.js should handle correctly for API routes.
+      baseUrl = '/api/';
+    }
+
     try {
-      const response = await fetch(url + parameter, headers);
+      const response = await fetch(baseUrl + parameter, headers);
       if (!response.ok) {
-        console.error(`[ERROR] Request: Primary API error for "${parameter}": Status ${response.status}`);
+        console.error(`[ERROR] Request: Primary API error for "${parameter}" from URL "${baseUrl + parameter}": Status ${response.status}`);
         throw new Error(`HTTP error: Status ${response.status}`);
       }
       data = await response.json();
