@@ -10,9 +10,11 @@ import TypeFilterMenu from '@/app/components/TypeFilterMenu'; // Import the new 
  * AdaptationListClient component for displaying and filtering a list of adaptations.
  * @param {object} props - Component props.
  * @param {object} props.initialAdaptations - Initial list of adaptations to display.
+ * @param {object} props.initialBooks - Initial list of books for ID lookup.
+ * @param {object} props.initialShorts - Initial list of short stories for ID lookup.
  * @returns {JSX.Element} The AdaptationListClient component.
  */
-export default function AdaptationListClient({ initialAdaptations }) {
+export default function AdaptationListClient({ initialAdaptations, initialBooks, initialShorts }) {
   // State variable for the search term
   const [searchTerm, setSearchTerm] = useState('');
   // State variables for sorting
@@ -23,6 +25,31 @@ export default function AdaptationListClient({ initialAdaptations }) {
   // State variable for the selected type
   const [selectedType, setSelectedType] = useState('');
   const router = useRouter();
+
+  const normalizeTitle = (title) => {
+    if (!title) return '';
+    return title.toLowerCase().replace(/[^\w\s]/gi, '').replace(/\s+/g, ' ').trim();
+  };
+
+  const bookTitleToIdMap = useMemo(() => {
+    if (!initialBooks || !initialBooks.data) return new Map();
+    const map = new Map();
+    initialBooks.data.forEach(book => {
+      // The external API uses "Title" for books
+      map.set(normalizeTitle(book.Title), book.id); 
+    });
+    return map;
+  }, [initialBooks]);
+
+  const shortTitleToIdMap = useMemo(() => {
+    if (!initialShorts || !initialShorts.data) return new Map();
+    const map = new Map();
+    initialShorts.data.forEach(short => {
+      // The external API uses "title" (lowercase) for shorts
+      map.set(normalizeTitle(short.title), short.id);
+    });
+    return map;
+  }, [initialShorts]);
 
   // Memoized variable for unique types
   const uniqueTypes = useMemo(() => {
@@ -60,36 +87,31 @@ export default function AdaptationListClient({ initialAdaptations }) {
 
   // Function to generate the link for an adaptation
   const getAdaptationLink = (adaptation) => {
-    const workType = adaptation.originalWorkType ? adaptation.originalWorkType.toLowerCase() : '';
-    // Sanitize the title for URL: replace spaces with hyphens, remove special characters, and convert to lowercase
-    const workTitle = adaptation.originalWorkTitle 
-      ? adaptation.originalWorkTitle.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '')
-      : '';
+    const originalWorkType = adaptation.originalWorkType ? adaptation.originalWorkType.toLowerCase() : '';
+    const originalTitle = adaptation.originalWorkTitle;
 
-    if (!workTitle) {
-      // If there's no original work title, or it's something like "[4]", link to home or a placeholder.
-      // This handles cases where the originalWorkTitle might be a citation like "[4]" or empty.
-      return '/'; 
+    // Handle cases with no title or citation-like titles first
+    if (!originalTitle || /^\[\d+\]$/.test(originalTitle) || originalTitle.toLowerCase() === 'based on the series of the same name') {
+      return '/';
     }
 
-    if (workType === 'novel' || workType === 'novella' || workType === 'series') {
-      // For novels, novellas, and series, link to the books page.
-      // The scraper data sometimes uses "Series" for "The Dark Tower"
-      return `/pages/books/${workTitle}`;
-    } else if (workType === 'short story') {
-      // For short stories, link to the shorts page.
-      return `/pages/shorts/${workTitle}`;
+    const normalizedOriginalTitle = normalizeTitle(originalTitle);
+    let foundId;
+
+    if (originalWorkType === 'novel' || originalWorkType === 'novella' || originalWorkType === 'series') {
+      foundId = bookTitleToIdMap.get(normalizedOriginalTitle);
+      if (foundId) {
+        return `/pages/books/${foundId}`;
+      }
+    } else if (originalWorkType === 'short story') {
+      foundId = shortTitleToIdMap.get(normalizedOriginalTitle);
+      if (foundId) {
+        return `/pages/shorts/${foundId}`;
+      }
     }
     
-    // Fallback for types that don't have a clear page (e.g., empty originalWorkType, or unhandled types)
-    // or if originalWorkTitle was a citation.
-    // Check if originalWorkTitle looks like a citation (e.g., "[4]") and redirect to home
-    if (/^\[\d+\]$/.test(adaptation.originalWorkTitle)) {
-        return '/';
-    }
-
-    // If it's not a citation but type is unknown or title is present, try a generic search or link to home.
-    // For now, linking to home as a safe fallback.
+    // Fallback if no ID is found or type is not matched
+    // console.log(`No ID match for: ${originalTitle} (Normalized: ${normalizedOriginalTitle}, Type: ${originalWorkType})`);
     return '/'; 
   };
 
