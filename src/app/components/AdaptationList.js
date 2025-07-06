@@ -27,15 +27,36 @@ const AdaptationList = ({ adaptations }) => {
   return (
     <div className="mt-8 pt-6 border-t border-gray-300 dark:border-gray-600">
       <h2 className="text-2xl font-semibold text-[var(--accent-color)] mb-3">Adaptations</h2>
-      <ul className="list-disc pl-5 space-y-2">
+      <ul className="list-disc pl-5 space-y-3"> {/* Increased space-y for better readability with new line */}
         {finalAdaptations.map((adaptation, index) => (
-          <li key={`${adaptation.adaptationTitle}-${adaptation.year}-${index}`} className="text-sm">
-            <strong className="font-medium">{adaptation.adaptationTitle}</strong> ({adaptation.year})
+          <li key={`${adaptation.adaptationTitle}-${adaptation.year}-${index}`} className="text-sm leading-relaxed">
+            <a
+              href={adaptation.adaptationLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-[var(--link-color)] hover:underline"
+            >
+              {adaptation.adaptationTitle}
+            </a>
+            <span className="text-gray-700 dark:text-gray-300"> ({adaptation.year})</span>
             <span className="text-gray-600 dark:text-gray-400 italic ml-2">- {adaptation.type}</span>
-            {/* Optional: Display original work title if it differs significantly or for clarity, though context implies it.
-                For now, keeping it concise as it's under the work's page.
-            <p className="text-xs text-gray-500 dark:text-gray-500 pl-2">Based on: {adaptation.originalWorkTitle}</p>
-            */}
+
+            {adaptation.originalWorkTitle && adaptation.originalWorkLink && (
+              <div className="pl-4 text-xs"> {/* Indent "Based on" slightly */}
+                <span className="text-gray-500 dark:text-gray-400">Based on: </span>
+                <a
+                  href={adaptation.originalWorkLink}
+                  target={adaptation.originalWorkLink.startsWith('http') ? '_blank' : '_self'}
+                  rel="noopener noreferrer"
+                  className="text-[var(--link-color)] hover:underline italic"
+                >
+                  {adaptation.originalWorkTitle}
+                </a>
+                {adaptation.originalWorkType && (
+                  <span className="text-gray-500 dark:text-gray-400"> ({adaptation.originalWorkType})</span>
+                )}
+              </div>
+            )}
           </li>
         ))}
       </ul>
