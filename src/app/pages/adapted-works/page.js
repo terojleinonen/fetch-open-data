@@ -1,23 +1,21 @@
 import Request from "@/app/components/request";
 import AdaptationListClient from "./AdaptationListClient"; // Import the new client component
+import adaptationsDataJson from '@/app/data/adaptations.json'; // Direct import
 
 export default async function Page() {
-    console.log("[DEBUG] adapted-works/page.js: Fetching data...");
-    // Fetch all necessary data in parallel
-    const [adaptationsData, booksData, shortsData] = await Promise.all([
-      Request('adaptations'),
+    // Structure the directly imported adaptations data as if it came from Request
+    const adaptationsData = { data: adaptationsDataJson };
+
+    // Fetch other necessary data in parallel
+    const [booksData, shortsData] = await Promise.all([
       Request('books'),
       Request('shorts')
     ]);
-
-    console.log("[DEBUG] adapted-works/page.js: Data fetched.");
-    console.log(`[DEBUG] adaptationsData: ${adaptationsData ? `OK (items: ${adaptationsData.data?.length})` : 'Error or undefined'}`);
-    console.log(`[DEBUG] booksData: ${booksData ? `OK (items: ${booksData.data?.length})` : 'Error or undefined'}`);
-    console.log(`[DEBUG] shortsData: ${shortsData ? `OK (items: ${shortsData.data?.length})` : 'Error or undefined'}`);
-
-    if (!adaptationsData || !booksData || !shortsData) {
-      console.error("[ERROR] adapted-works/page.js: One or more datasets failed to load. Check Request logs.");
-      // Optionally, you could return a dedicated error component here
+    
+    // Basic check if fetched data seems valid, primarily for server-side issues.
+    if (!booksData?.data || !shortsData?.data) {
+      console.error("[ERROR] adapted-works/page.js: Books or Shorts data failed to load properly.");
+      // Consider returning an error component or specific state to AdaptationListClient
     }
 
     return (
@@ -25,8 +23,8 @@ export default async function Page() {
         className="page-background-text"
         style={{ '--page-background-text-content': "'ADAPTED WORKS'" }}
       >
-        <AdaptationListClient
-          initialAdaptations={adaptationsData}
+        <AdaptationListClient 
+          initialAdaptations={adaptationsData} // Now using directly imported data
           initialBooks={booksData}
           initialShorts={shortsData}
         />

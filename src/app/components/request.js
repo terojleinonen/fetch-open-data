@@ -8,34 +8,18 @@ export default async function Request(parameter, options = {}) {
     });
     let data;
 
-    console.log(`[DEBUG] Request: Initiating for parameter: "${parameter}"`);
-    const isServer = typeof window === 'undefined';
-    console.log(`[DEBUG] Request: Running on server? ${isServer}`);
-
-    // Check if the request is for adaptations, and use the local API route
-    if (parameter === 'adaptations') {
-      if (isServer) {
-        const protocol = process.env.VERCEL_ENV === 'production' ? 'https' : 'http';
-        const host = process.env.VERCEL_URL || 'localhost:3000';
-        baseUrl = `${protocol}://${host}/api/`;
-        console.log(`[DEBUG] Request (adaptations, server): VERCEL_ENV=${process.env.VERCEL_ENV}, VERCEL_URL=${process.env.VERCEL_URL}, Constructed baseUrl=${baseUrl}`);
-      } else {
-        // Client-side: relative URL is fine
-        baseUrl = '/api/';
-        console.log(`[DEBUG] Request (adaptations, client): Using relative baseUrl=${baseUrl}`);
-      }
-    } else {
-      console.log(`[DEBUG] Request (non-adaptations): Using default baseUrl=${baseUrl} for parameter "${parameter}"`);
-    }
+    // All requests will now go to the external API, as adaptations.json is directly imported.
+    // The special handling for 'adaptations' parameter to use a local API route is removed.
+    // console.log(`[INFO] Request: Initiating for parameter: "${parameter}"`);
 
     const finalUrl = baseUrl + parameter;
-    console.log(`[DEBUG] Request: Attempting to fetch from finalUrl: ${finalUrl}`);
+    // console.log(`[INFO] Request: Attempting to fetch from finalUrl: ${finalUrl}`);
 
     try {
       const response = await fetch(finalUrl, headers);
-      console.log(`[DEBUG] Request: Response status for "${finalUrl}": ${response.status}`);
+      // console.log(`[INFO] Request: Response status for "${finalUrl}": ${response.status}`);
       if (!response.ok) {
-        console.error(`[ERROR] Request: Primary API error for "${parameter}" from URL "${finalUrl}": Status ${response.status}, StatusText: ${response.statusText}`);
+        console.error(`[ERROR] Request: API error for "${parameter}" from URL "${finalUrl}": Status ${response.status}, StatusText: ${response.statusText}`);
         throw new Error(`HTTP error: Status ${response.status}`);
       }
       data = await response.json();
