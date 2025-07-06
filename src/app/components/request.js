@@ -2,7 +2,7 @@ export default async function Request(parameter, options = {}) {
     const { skipGoogleBooks = false } = options;
     // Use GOOGLE_BOOKS_API_KEY (server-side environment variable)
     const apiKey = process.env.GOOGLE_BOOKS_API_KEY;
-    const url = 'https://stephen-king-api.onrender.com/api/';
+    let baseUrl = 'https://stephen-king-api.onrender.com/api/';
     const headers = new Headers({
       "User-Agent": "fetch-open-data/1.0"
     });
@@ -10,10 +10,25 @@ export default async function Request(parameter, options = {}) {
 
     // console.log(`[INFO] Request: Initiating for "${parameter}", skipGoogleBooks: ${skipGoogleBooks}`);
 
+    // Check if the request is for adaptations, and use the local API route
+    if (parameter === 'adaptations') {
+      // Determine if running on server or client to construct the correct base URL
+      if (typeof window === 'undefined') {
+        // Server-side: construct absolute URL
+        const protocol = process.env.VERCEL_ENV === 'production' ? 'https' : 'http';
+        const host = process.env.VERCEL_URL || 'localhost:3000'; // VERCEL_URL is provided by Vercel, fallback for local
+        baseUrl = `${protocol}://${host}/api/`;
+      } else {
+        // Client-side: relative URL is fine
+        baseUrl = '/api/';
+      }
+    }
+
     try {
-      const response = await fetch(url + parameter, headers);
+      const finalUrl = baseUrl + parameter;
+      const response = await fetch(finalUrl, headers);
       if (!response.ok) {
-        console.error(`[ERROR] Request: Primary API error for "${parameter}": Status ${response.status}`);
+        console.error(`[ERROR] Request: Primary API error for "${parameter}" from URL "${finalUrl}": Status ${response.status}`);
         throw new Error(`HTTP error: Status ${response.status}`);
       }
       data = await response.json();

@@ -62,6 +62,9 @@ const NavigationBar = () => {
         <Link href="/pages/shorts" className={`text-sm lg:text-base font-bold py-2 px-3 rounded-md mobile-menu-link-hover nav-link-desktop-hover ${pathname === '/pages/shorts' ? 'underline' : ''}`} onClick={handleLinkClick}>
           SHORTS
         </Link>
+        <Link href="/pages/adapted-works" className={`text-sm lg:text-base font-bold py-2 px-3 rounded-md mobile-menu-link-hover nav-link-desktop-hover ${pathname === '/pages/adapted-works' ? 'underline' : ''}`} onClick={handleLinkClick}>
+          ADAPTED WORKS
+        </Link>
         <Link href="/pages/villains" className={`text-sm lg:text-base font-bold py-2 px-3 rounded-md mobile-menu-link-hover nav-link-desktop-hover ${pathname === '/pages/villains' ? 'underline' : ''}`} onClick={handleLinkClick}>
           VILLAINS
         </Link>
