@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image'; // Import Next.js Image component
 import StatusFilterMenu from '@/app/components/StatusFilterMenu'; // Import the new component
+import SearchAndSortControls from '@/app/components/SearchAndSortControls'; // Import the new component
 
 /**
  * VillainListClient component for displaying and filtering a list of villains.
@@ -15,10 +16,10 @@ import StatusFilterMenu from '@/app/components/StatusFilterMenu'; // Import the 
 export default function VillainListClient({ initialVillains }) {
   // State variable for the search term
   const [searchTerm, setSearchTerm] = useState('');
-  // State variable for search bar visibility
-  const [isSearchBarVisible, setIsSearchBarVisible] = useState(false);
-  // State variable for the sort order
-  const [nameSortOrder, setNameSortOrder] = useState('A-Z'); // 'A-Z', 'Z-A'
+  // New sortConfig state
+  const [sortConfig, setSortConfig] = useState({ key: 'name', direction: 'ascending' });
+  // State variable for search bar visibility - will be removed
+  // const [isSearchBarVisible, setIsSearchBarVisible] = useState(false);
   // State variable for the selected status
   const [selectedStatus, setSelectedStatus] = useState('');
   const router = useRouter();
@@ -33,25 +34,46 @@ export default function VillainListClient({ initialVillains }) {
   // Memoized variable for filtered villains based on the search term, sort order, and selected status
   const filteredVillains = useMemo(() => {
     if (!initialVillains || !initialVillains.data) return [];
-    let villains = [...initialVillains.data];
+    let processableVillains = [...initialVillains.data];
+
+    // Filter by search term first
+    if (searchTerm) {
+      processableVillains = processableVillains.filter(villain =>
+        villain.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
 
     // Filter by status
     if (selectedStatus && selectedStatus !== 'All') {
-      villains = villains.filter(villain => villain.status === selectedStatus);
+      processableVillains = processableVillains.filter(villain => villain.status === selectedStatus);
     }
 
-    // Sort villains
-    if (nameSortOrder === 'A-Z') {
-      villains.sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()));
-    } else if (nameSortOrder === 'Z-A') {
-      villains.sort((a, b) => b.name.toLowerCase().localeCompare(a.name.toLowerCase()));
+    // Sort villains using sortConfig
+    if (sortConfig.key) { // key will be 'name'
+      processableVillains.sort((a, b) => {
+        const valA = a[sortConfig.key].toLowerCase();
+        const valB = b[sortConfig.key].toLowerCase();
+
+        if (valA < valB) {
+          return sortConfig.direction === 'ascending' ? -1 : 1;
+        }
+        if (valA > valB) {
+          return sortConfig.direction === 'ascending' ? 1 : -1;
+        }
+        return 0;
+      });
     }
 
-    // Filter villains by search term
-    return villains.filter(villain =>
-      villain.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-  }, [initialVillains, searchTerm, nameSortOrder, selectedStatus]);
+    return processableVillains;
+  }, [initialVillains, searchTerm, sortConfig, selectedStatus]);
+
+  const requestSort = (key) => {
+    let direction = 'ascending';
+    if (sortConfig.key === key && sortConfig.direction === 'ascending') {
+      direction = 'descending';
+    }
+    setSortConfig({ key, direction });
+  };
 
   return (
     <div className="py-12"> {/* Removed pr-8 to allow full width for centering */}
@@ -72,54 +94,15 @@ export default function VillainListClient({ initialVillains }) {
         {/* Right Content Area for Search, Sort, and Villains List - Takes full width on mobile, 6/8 (3/4) on medium+ */}
         {/* Adjusted width to md:w-6/8 */}
         <div className="w-full md:w-6/8 px-4 md:px-0"> {/* Added horizontal padding for mobile, removed for md+ to rely on parent centering */}
-          {/* Search and Sort Controls Container */}
-          <div className="controls-container mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow flex flex-wrap gap-4 items-center justify-between">
-            {/* Sort Button on the left */}
-            <div className="flex gap-2">
-              <button
-                onClick={() => setNameSortOrder(nameSortOrder === 'A-Z' ? 'Z-A' : 'A-Z')}
-                className="px-3 py-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] text-xs flex items-center justify-center"
-                style={{ minWidth: '4rem' }}
-              >
-                {nameSortOrder}
-              </button>
-            </div>
-
-            {/* Search bar and Icon on the right */}
-            <div className="flex-grow flex justify-end items-center gap-2 ml-4">
-              {isSearchBarVisible && (
-                <div className="relative flex-grow">
-                  <input
-                    type="text"
-                    id="search-villains-input"
-                    name="search-villains-input"
-                    placeholder="Search villains..."
-                    className="w-full p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] pl-10"
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    autoFocus
-                  />
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[var(--text-color)]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      <circle cx="11" cy="11" r="8"></circle>
-                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                  </div>
-                </div>
-              )}
-              <button
-                onClick={() => setIsSearchBarVisible(!isSearchBarVisible)}
-                className="p-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] flex items-center justify-center flex-shrink-0"
-                style={{ minWidth: '2.5rem', width: '2.5rem' }}
-                aria-label={isSearchBarVisible ? "Close search bar" : "Open search bar"}
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-              </button>
-            </div>
-          </div>
+          {/* Use new SearchAndSortControls component */}
+          <SearchAndSortControls
+            searchTerm={searchTerm}
+            sortConfig={sortConfig}
+            onSearchChange={(e) => setSearchTerm(e.target.value)}
+            onRequestSort={requestSort}
+            sortOptions={[{ key: 'name', label: 'Name', title: 'Name' }]} // Property is 'name'
+            searchPlaceholder="Search by villain name..."
+          />
       {/* Header Row for List */}
       <div className="flex justify-between items-center p-4 text-[var(--accent-color)] text-lg font-bold">
         <div className="flex-1 text-left">Name</div>
