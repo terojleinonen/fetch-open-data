@@ -6,7 +6,7 @@ export default async function AdaptedWorksPage() {
   const adaptations = adaptationsDataJson; // Already an array
 
   return (
-    <div className="container mx-auto px-4 py-8 text-[var(--text-color)]">
+    <div className="container mx-auto px-4 py-8 text-[var(--text-color)] max-w-5xl">
       <PageTitle title="Adapted Works" />
 
       <div
