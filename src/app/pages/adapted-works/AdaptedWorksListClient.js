@@ -2,9 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
-import ArrowDownIcon from '@/app/components/icons/ArrowDownIcon';
-import ArrowUpIcon from '@/app/components/icons/ArrowUpIcon';
-import SearchIcon from '@/app/components/icons/SearchIcon';
+import SearchAndSortControls from '@/app/components/SearchAndSortControls'; // Import the new component
 
 export default function AdaptedWorksListClient({ adaptations: initialAdaptations }) {
   const [searchTerm, setSearchTerm] = useState('');
@@ -63,54 +61,21 @@ export default function AdaptedWorksListClient({ adaptations: initialAdaptations
     );
   }
 
-  const getSortIcon = (key) => {
-    if (sortConfig.key !== key) {
-      // Using a more subtle default icon for non-active sort buttons
-      return <ArrowDownIcon className="w-4 h-4 ml-1 opacity-25" />; 
-    }
-    // Active sort button
-    if (key === 'adaptationTitle') {
-      // For title: A-Z (ascending) uses ArrowDown, Z-A (descending) uses ArrowUp
-      return sortConfig.direction === 'ascending' ? <ArrowDownIcon className="w-4 h-4 ml-1" /> : <ArrowUpIcon className="w-4 h-4 ml-1" />;
-    }
-    // For year: Oldest-Newest (ascending) uses ArrowUp, Newest-Oldest (descending) uses ArrowDown
-    return sortConfig.direction === 'ascending' ? <ArrowUpIcon className="w-4 h-4 ml-1" /> : <ArrowDownIcon className="w-4 h-4 ml-1" />;
-  };
+  const sortOptions = [
+    { key: 'adaptationTitle', label: 'Title', title: 'Title' },
+    { key: 'year', label: 'Year', year: 'Year' }
+  ];
 
   return (
     <div className="container mx-auto px-4 py-8 text-[var(--text-color)] max-w-5xl">
-      <div className="mb-8 p-4 border border-[var(--border-color)] rounded-lg bg-[var(--background-start-rgb)] bg-opacity-30 backdrop-blur-sm">
-        <div className="flex flex-col md:flex-row gap-4 items-center">
-          <div className="relative flex-grow">
-            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <SearchIcon className="h-5 w-5 text-[var(--text-color)] opacity-70" />
-            </div>
-            <input
-              type="text"
-              placeholder="Search by title..."
-              className="w-full p-2 pl-10 border border-[var(--border-color)] rounded-md bg-transparent text-[var(--text-color)] placeholder-[var(--text-color)] placeholder-opacity-70 focus:ring-2 focus:ring-[var(--accent-color)] focus:border-[var(--accent-color)] outline-none"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
-          </div>
-          <div className="flex flex-wrap justify-center md:justify-end gap-2">
-            <button
-              onClick={() => requestSort('adaptationTitle')}
-              className="flex items-center px-3 py-2 text-sm border border-[var(--button-border)] rounded-md hover:bg-[var(--button-hover-background)] text-[var(--button-text)] bg-[var(--button-background)] transition-colors"
-            >
-              Title {sortConfig.key === 'adaptationTitle' && (sortConfig.direction === 'ascending' ? '(A-Z)' : '(Z-A)')}
-              {getSortIcon('adaptationTitle')}
-            </button>
-            <button
-              onClick={() => requestSort('year')}
-              className="flex items-center px-3 py-2 text-sm border border-[var(--button-border)] rounded-md hover:bg-[var(--button-hover-background)] text-[var(--button-text)] bg-[var(--button-background)] transition-colors"
-            >
-              Year {sortConfig.key === 'year' && (sortConfig.direction === 'ascending' ? '(Oldest)' : '(Newest)')}
-              {getSortIcon('year')}
-            </button>
-          </div>
-        </div>
-      </div>
+      <SearchAndSortControls
+        searchTerm={searchTerm}
+        sortConfig={sortConfig}
+        onSearchChange={(e) => setSearchTerm(e.target.value)}
+        onRequestSort={requestSort}
+        sortOptions={sortOptions}
+        searchPlaceholder="Search by adaptation title..."
+      />
 
       {filteredAndSortedAdaptations.length > 0 ? (
         <ul className="space-y-6">
