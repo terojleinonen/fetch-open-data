@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image'; // Import Next.js Image component
 import TypeFilterMenu from '@/app/components/TypeFilterMenu'; // Import the new component
+import SearchAndSortControls from '@/app/components/SearchAndSortControls'; // Import the new component
 
 /**
  * ShortListClient component for displaying and filtering a list of short stories.
@@ -15,11 +16,10 @@ import TypeFilterMenu from '@/app/components/TypeFilterMenu'; // Import the new 
 export default function ShortListClient({ initialShorts }) {
   // State variable for the search term
   const [searchTerm, setSearchTerm] = useState('');
-  // State variables for sorting
-  const [titleSortOrder, setTitleSortOrder] = useState('A-Z'); // 'A-Z', 'Z-A'
-  const [yearSortOrder, setYearSortOrder] = useState('Newest-Oldest'); // 'Newest-Oldest', 'Oldest-Newest'
-  // State variable for search bar visibility
-  const [isSearchBarVisible, setIsSearchBarVisible] = useState(false);
+  // New sortConfig state
+  const [sortConfig, setSortConfig] = useState({ key: 'title', direction: 'ascending' });
+  // State variable for search bar visibility - will be removed as SearchAndSortControls handles it
+  // const [isSearchBarVisible, setIsSearchBarVisible] = useState(false);
   // State variable for the selected type
   const [selectedType, setSelectedType] = useState('');
   const router = useRouter();
@@ -42,21 +42,40 @@ export default function ShortListClient({ initialShorts }) {
         shortsArray = shortsArray.filter(short => short.type === selectedType);
       }
 
-      // Apply sorting
-      if (titleSortOrder === 'A-Z') {
-        shortsArray.sort((a, b) => a.title.toLowerCase().localeCompare(b.title.toLowerCase()));
-      } else if (titleSortOrder === 'Z-A') {
-        shortsArray.sort((a, b) => b.title.toLowerCase().localeCompare(a.title.toLowerCase()));
-      }
+      // Apply sorting using sortConfig
+      if (sortConfig.key) {
+        shortsArray.sort((a, b) => {
+          let valA = a[sortConfig.key];
+          let valB = b[sortConfig.key];
 
-      if (yearSortOrder === 'Newest-Oldest') {
-        shortsArray.sort((a, b) => (b.year || 0) - (a.year || 0)); // Handle null/undefined years
-      } else if (yearSortOrder === 'Oldest-Newest') {
-        shortsArray.sort((a, b) => (a.year || 0) - (b.year || 0)); // Handle null/undefined years
+          if (sortConfig.key === 'year') {
+            valA = parseInt(valA, 10) || 0;
+            valB = parseInt(valB, 10) || 0;
+          } else if (typeof valA === 'string') { // For title
+            valA = valA.toLowerCase();
+            valB = valB.toLowerCase();
+          }
+
+          if (valA < valB) {
+            return sortConfig.direction === 'ascending' ? -1 : 1;
+          }
+          if (valA > valB) {
+            return sortConfig.direction === 'ascending' ? 1 : -1;
+          }
+          return 0;
+        });
       }
 
       return shortsArray;
-    }, [initialShorts, searchTerm, titleSortOrder, yearSortOrder, selectedType]);
+    }, [initialShorts, searchTerm, sortConfig, selectedType]);
+
+  const requestSort = (key) => {
+    let direction = 'ascending';
+    if (sortConfig.key === key && sortConfig.direction === 'ascending') {
+      direction = 'descending';
+    }
+    setSortConfig({ key, direction });
+  };
 
   // Function to handle selecting and navigating to a random short story
   const handleRandomShort = () => {
@@ -97,61 +116,18 @@ export default function ShortListClient({ initialShorts }) {
         {/* Right Content Area for Search, Sort, and Shorts List - Takes full width on mobile, 6/8 (3/4) on medium+ */}
         {/* Adjusted width to md:w-6/8 */}
         <div className="w-full md:w-6/8 px-4 md:px-0"> {/* Added horizontal padding for mobile, removed for md+ to rely on parent centering */}
-          {/* Search and Sort Controls Container */}
-          <div className="controls-container mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow flex flex-wrap gap-4 items-center justify-between">
-            {/* Sort Buttons on the left */}
-            <div className="flex gap-2">
-              <button
-                onClick={() => setTitleSortOrder(titleSortOrder === 'A-Z' ? 'Z-A' : 'A-Z')}
-                className="px-3 py-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] text-xs flex items-center justify-center"
-                style={{ minWidth: '4rem' }}
-              >
-                {titleSortOrder}
-              </button>
-              <button
-                onClick={() => setYearSortOrder(yearSortOrder === 'Newest-Oldest' ? 'Oldest-Newest' : 'Newest-Oldest')}
-                className="px-3 py-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] text-xs flex items-center justify-center"
-                style={{ minWidth: '4rem' }}
-              >
-                {yearSortOrder}
-              </button>
-            </div>
-
-            {/* Search bar and Icon on the right */}
-            <div className="flex-grow flex justify-end items-center gap-2 ml-4">
-              {isSearchBarVisible && (
-                <div className="relative flex-grow">
-                  <input
-                    type="text"
-                    id="search-shorts-input"
-                    name="search-shorts-input"
-                    placeholder="Search shorts..."
-                    className="w-full p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] pl-10"
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    autoFocus
-                  />
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[var(--text-color)]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      <circle cx="11" cy="11" r="8"></circle>
-                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                  </div>
-                </div>
-              )}
-              <button
-                onClick={() => setIsSearchBarVisible(!isSearchBarVisible)}
-                className="p-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] flex items-center justify-center flex-shrink-0"
-                style={{ minWidth: '2.5rem', width: '2.5rem' }}
-                aria-label={isSearchBarVisible ? "Close search bar" : "Open search bar"}
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-              </button>
-            </div>
-          </div>
+          {/* Use new SearchAndSortControls component */}
+          <SearchAndSortControls
+            searchTerm={searchTerm}
+            sortConfig={sortConfig}
+            onSearchChange={(e) => setSearchTerm(e.target.value)}
+            onRequestSort={requestSort}
+            sortOptions={[
+              { key: 'title', label: 'Title', title: 'Title' }, // Property name is 'title'
+              { key: 'year', label: 'Year', year: 'Year' }        // Property name is 'year'
+            ]}
+            searchPlaceholder="Search by short story title..."
+          />
 
           {/* Header Row for List */}
           <div className="flex justify-between items-center p-4 text-[var(--accent-color)] text-lg font-bold">

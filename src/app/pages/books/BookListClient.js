@@ -4,7 +4,7 @@ import React, { useState, useMemo, Suspense } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image'; // Import Next.js Image component
-// import dynamic from 'next/dynamic'; // FilterPopup no longer dynamically imported
+import SearchAndSortControls from '@/app/components/SearchAndSortControls'; // Import the new component
 
 // const FilterPopup = dynamic(() => import('./FilterPopup'), { // FilterPopup component removed
 //   suspense: true,
@@ -19,10 +19,9 @@ import Image from 'next/image'; // Import Next.js Image component
 export default function BookListClient({ initialBooks }) {
    // State variable for the search term
    const [searchTerm, setSearchTerm] = useState('');
-   // State variable for the sort order
-   const [titleSortOrder, setTitleSortOrder] = useState('A-Z'); // 'A-Z' or 'Z-A'
-   const [dateSortOrder, setDateSortOrder] = useState('Newest-Oldest'); // 'Newest-Oldest' or 'Oldest-Newest'
-   const [isSearchBarVisible, setIsSearchBarVisible] = useState(false);
+   // New sortConfig state for SearchAndSortControls
+   const [sortConfig, setSortConfig] = useState({ key: 'Title', direction: 'ascending' });
+   // const [isSearchBarVisible, setIsSearchBarVisible] = useState(false); // Will be handled by SearchAndSortControls
   const [selectedYear, setSelectedYear] = useState('');
   const [selectedPublisher, setSelectedPublisher] = useState('');
   const [minPages, setMinPages] = useState('');
@@ -89,24 +88,41 @@ export default function BookListClient({ initialBooks }) {
       return true;
     });
 
-    // Apply sorting
-    if (titleSortOrder === 'A-Z') {
-      booksArray.sort((a, b) => a.Title.toLowerCase().localeCompare(b.Title.toLowerCase()));
-    } else if (titleSortOrder === 'Z-A') {
-      booksArray.sort((a, b) => b.Title.toLowerCase().localeCompare(a.Title.toLowerCase()));
-    }
+    // Apply sorting using sortConfig
+    if (sortConfig.key) {
+      booksArray.sort((a, b) => {
+        let valA = a[sortConfig.key];
+        let valB = b[sortConfig.key];
 
-    if (dateSortOrder === 'Newest-Oldest') {
-      // Assuming 'Year' can be used for date sorting, adjust if a more specific date field is available
-      booksArray.sort((a, b) => (b.publishedDate || b.Year) - (a.publishedDate || a.Year));
-    } else if (dateSortOrder === 'Oldest-Newest') {
-      // Assuming 'Year' can be used for date sorting, adjust if a more specific date field is available
-      booksArray.sort((a, b) => (a.publishedDate || a.Year) - (b.publishedDate || b.Year));
+        if (sortConfig.key === 'Year') { // Assuming 'Year' is the property for publication year
+          valA = parseInt(valA, 10) || 0; // Fallback to 0 if parsing fails
+          valB = parseInt(valB, 10) || 0;
+        } else if (typeof valA === 'string') {
+          valA = valA.toLowerCase();
+          valB = valB.toLowerCase();
+        }
+
+        if (valA < valB) {
+          return sortConfig.direction === 'ascending' ? -1 : 1;
+        }
+        if (valA > valB) {
+          return sortConfig.direction === 'ascending' ? 1 : -1;
+        }
+        return 0;
+      });
     }
     
 
     return booksArray;
-  }, [initialBooks, searchTerm, titleSortOrder, dateSortOrder, selectedYear, selectedPublisher, minPages, maxPages]);
+  }, [initialBooks, searchTerm, sortConfig, selectedYear, selectedPublisher, minPages, maxPages]);
+
+  const requestSort = (key) => {
+    let direction = 'ascending';
+    if (sortConfig.key === key && sortConfig.direction === 'ascending') {
+      direction = 'descending';
+    }
+    setSortConfig({ key, direction });
+  };
 
   if (!initialBooks || !initialBooks.data || !Array.isArray(initialBooks.data)) {
     return (
@@ -194,64 +210,18 @@ export default function BookListClient({ initialBooks }) {
 
         {/* Main Content Area: Search, Sort, and Books List */}
         <div className="w-full md:w-6/8 px-4 md:px-0">
-          {/* Search and Sort Controls */}
-          <div className="controls-container mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow flex flex-wrap gap-4 items-center justify-between">
-            {/* Sort Buttons on the left */}
-            <div className="flex gap-2">
-              <button
-                onClick={() => setTitleSortOrder(titleSortOrder === 'A-Z' ? 'Z-A' : 'A-Z')}
-                className="px-3 py-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] text-xs flex items-center justify-center"
-                style={{ minWidth: '4rem' }} // Provide a slightly larger min-width for text buttons
-              >
-                {titleSortOrder}
-              </button>
-              <button
-                onClick={() => setDateSortOrder(dateSortOrder === 'Newest-Oldest' ? 'Oldest-Newest' : 'Newest-Oldest')}
-                className="px-3 py-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] text-xs flex items-center justify-center"
-                style={{ minWidth: '4rem' }} // Provide a slightly larger min-width for text buttons
-              >
-                {dateSortOrder}
-              </button>
-            </div>
-
-            {/* Search bar and Icon on the right */}
-            {/* This div will ensure the search input takes available space and icon is at the end */}
-            <div className="flex-grow flex justify-end items-center gap-2 ml-4"> {/* Added ml-4 for spacing */}
-              {isSearchBarVisible && (
-                // Ensure this div allows the input to grow but also respects the icon button's space
-                <div className="relative flex-grow"> 
-                  <input
-                    type="text"
-                    id="search-books-input"
-                    name="search-books-input"
-                    placeholder="Search books..."
-                    className="w-full p-2 h-10 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] pl-10"
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    autoFocus // Automatically focus the search bar when it appears
-                  />
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[var(--text-color)]">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      <circle cx="11" cy="11" r="8"></circle>
-                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                    </svg>
-                  </div>
-                </div>
-              )}
-              {/* Search Icon Button - always visible */}
-              <button
-                onClick={() => setIsSearchBarVisible(!isSearchBarVisible)} // Toggle visibility
-                className="p-2 h-10 rounded border किताब-बटन-सीमा किताब-बटन-पाठ किताब-बटन-पृष्ठभूमि hover:किताब-बटन-पृष्ठभूमि-होवर focus:ring-1 focus:ring-[var(--hover-accent-color)] flex items-center justify-center flex-shrink-0" // Added flex-shrink-0
-                style={{ minWidth: '2.5rem', width: '2.5rem' }} // Fixed size for the icon button
-                aria-label={isSearchBarVisible ? "Close search bar" : "Open search bar"}
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-              </button>
-            </div>
-          </div>
+          {/* Use new SearchAndSortControls component */}
+          <SearchAndSortControls
+            searchTerm={searchTerm}
+            sortConfig={sortConfig}
+            onSearchChange={(e) => setSearchTerm(e.target.value)}
+            onRequestSort={requestSort}
+            sortOptions={[
+              { key: 'Title', label: 'Title', title: 'Title' }, // Use 'Title' to match book data property
+              { key: 'Year', label: 'Year', year: 'Year' }      // Use 'Year' to match book data property
+            ]}
+            searchPlaceholder="Search by book title..."
+          />
 
           {/* Books List Display */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {/* Responsive grid */}
