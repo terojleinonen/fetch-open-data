@@ -66,7 +66,7 @@ export default function AdaptedWorksListClient({ adaptations: initialAdaptations
   const getSortIcon = (key) => {
     if (sortConfig.key !== key) {
       // Using a more subtle default icon for non-active sort buttons
-      return <ArrowDownIcon className="w-4 h-4 ml-1 opacity-25" />;
+      return <ArrowDownIcon className="w-4 h-4 ml-1 opacity-25" />; 
     }
     // Active sort button
     if (key === 'adaptationTitle') {
