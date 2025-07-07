@@ -4,6 +4,7 @@ import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import ArrowDownIcon from '@/app/components/icons/ArrowDownIcon';
 import ArrowUpIcon from '@/app/components/icons/ArrowUpIcon';
+import SearchIcon from '@/app/components/icons/SearchIcon';
 
 export default function AdaptedWorksListClient({ adaptations: initialAdaptations }) {
   const [searchTerm, setSearchTerm] = useState('');
@@ -65,7 +66,7 @@ export default function AdaptedWorksListClient({ adaptations: initialAdaptations
   const getSortIcon = (key) => {
     if (sortConfig.key !== key) {
       // Using a more subtle default icon for non-active sort buttons
-      return <ArrowDownIcon className="w-4 h-4 ml-1 opacity-25" />;
+      return <ArrowDownIcon className="w-4 h-4 ml-1 opacity-25" />; 
     }
     // Active sort button
     if (key === 'adaptationTitle') {
@@ -80,13 +81,18 @@ export default function AdaptedWorksListClient({ adaptations: initialAdaptations
     <div className="container mx-auto px-4 py-8 text-[var(--text-color)] max-w-5xl">
       <div className="mb-8 p-4 border border-[var(--border-color)] rounded-lg bg-[var(--background-start-rgb)] bg-opacity-30 backdrop-blur-sm">
         <div className="flex flex-col md:flex-row gap-4 items-center">
-          <input
-            type="text"
-            placeholder="Search by title..."
-            className="flex-grow p-2 border border-[var(--border-color)] rounded-md bg-transparent text-[var(--text-color)] placeholder-[var(--text-color)] placeholder-opacity-70 focus:ring-2 focus:ring-[var(--accent-color)] focus:border-[var(--accent-color)] outline-none"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
+          <div className="relative flex-grow">
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <SearchIcon className="h-5 w-5 text-[var(--text-color)] opacity-70" />
+            </div>
+            <input
+              type="text"
+              placeholder="Search by title..."
+              className="w-full p-2 pl-10 border border-[var(--border-color)] rounded-md bg-transparent text-[var(--text-color)] placeholder-[var(--text-color)] placeholder-opacity-70 focus:ring-2 focus:ring-[var(--accent-color)] focus:border-[var(--accent-color)] outline-none"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
           <div className="flex flex-wrap justify-center md:justify-end gap-2">
             <button
               onClick={() => requestSort('adaptationTitle')}
@@ -123,9 +129,9 @@ export default function AdaptedWorksListClient({ adaptations: initialAdaptations
                   {adaptation.adaptationTitle}
                 </a>
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 text-sm">
-                <p><strong className="font-medium">Year:</strong> {adaptation.year}</p>
-                <p><strong className="font-medium">Type:</strong> {adaptation.type}</p>
+            <div className="text-sm mt-1">
+              <div><strong className="font-medium">Year:</strong> {adaptation.year}</div>
+              <div><strong className="font-medium">Type:</strong> {adaptation.type}</div>
               </div>
               {adaptation.originalWorkTitle && (
                 <div className="mt-2 text-sm">
