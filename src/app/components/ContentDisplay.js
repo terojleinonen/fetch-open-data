@@ -21,7 +21,7 @@ const ContentDisplay = ({ items, view = 'list' }) => { // Default to 'list' view
           <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
             {items.map((item) => (
               // ListItem will be modified to render a <tr> element
-              <ListItem key={item.id || item.title} item={item} />
+              <ListItem key={item.id || item.title} item={item} /> 
             ))}
           </tbody>
         </table>
