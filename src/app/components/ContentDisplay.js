@@ -24,10 +24,10 @@ const ContentDisplay = ({ items, view = 'list', columns = [] }) => { // Added co
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
-            {items.map((item, index) => (
-              <ListItem
-                key={item.id || item.title || index}
-                item={item}
+            {items.map((item, index) => ( 
+              <ListItem 
+                key={item.id || item.title || index} 
+                item={item} 
                 columns={columns} // Pass columns to ListItem
                 rowIndex={index} // For zebra striping
               />
