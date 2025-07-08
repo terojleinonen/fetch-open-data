@@ -24,13 +24,15 @@ const ListItem = ({ item, columns, rowIndex }) => {
   return (
     <tr className={rowClasses.trim()}>
       {columns.map((col) => (
-        <td key={col.key} className="px-6 py-4 text-gray-700 dark:text-gray-300 whitespace-normal">
-          {col.isLink && item.linkUrl ? (
+        <td key={col.key} className="px-6 py-4 text-gray-700 dark:text-gray-300 whitespace-normal align-top"> {/* Added align-top for consistency if cell content varies in height */}
+          {typeof col.render === 'function' ? (
+            col.render(item) // Use custom render function
+          ) : col.isLink && item.linkUrl ? ( // Fallback to default link rendering for the designated 'isLink' column
             <Link href={item.linkUrl} className="hover:underline text-indigo-600 dark:text-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-300 rounded">
               {String(item[col.key] ?? '-')}
             </Link>
-          ) : (
-            String(item[col.key] ?? '-') // Ensure content is always a string, fallback to '-'
+          ) : ( // Fallback to default text rendering
+            String(item[col.key] ?? '-')
           )}
         </td>
       ))}

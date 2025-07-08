@@ -1,73 +1,95 @@
 "use client";
 
 import React, { useState, useMemo } from 'react';
+import Link from 'next/link'; // Added for the custom render function
 import SearchAndSortControls from '@/app/components/SearchAndSortControls';
 import ViewSwitcher from '@/app/components/ViewSwitcher';
 import ContentDisplay from '@/app/components/ContentDisplay';
 
 export default function AdaptedWorksListClient({ adaptations: initialAdaptations }) {
   const [searchTerm, setSearchTerm] = useState('');
-  // Default sort key to 'title' from processed data
-  const [sortConfig, setSortConfig] = useState({ key: 'title', direction: 'ascending' });
-  const [currentView, setCurrentView] = useState('grid'); // Default to grid view
+  const [sortConfig, setSortConfig] = useState({ key: 'title', direction: 'ascending' }); 
+  const [currentView, setCurrentView] = useState('grid');
 
   const adaptedWorksColumns = [
-    { key: 'title', label: 'Title', isLink: true },
+    { key: 'title', label: 'Title', isLink: true }, // This will use item.linkUrl for the main adaptation link
     { key: 'yearDisplay', label: 'Year' },
     { key: 'typeDisplay', label: 'Type' },
-    { key: 'basedOnDisplay', label: 'Based On' }
+    { 
+      key: 'originalWorkInfo', // A key that represents the data unit for the column
+      label: 'Based On',
+      render: (item) => {
+        if (!item.originalWorkTitle) {
+          return <span className="text-gray-500 dark:text-gray-400">-</span>;
+        }
+        if (item.originalWorkLink) {
+          const commonLinkClasses = "hover:underline text-sky-600 dark:text-sky-400";
+          if (item.originalWorkLink.startsWith('/')) {
+            return (
+              <Link href={item.originalWorkLink} className={commonLinkClasses}>
+                {item.originalWorkTitle}
+              </Link>
+            );
+          } else if (item.originalWorkLink.startsWith('http')) {
+            return (
+              <a 
+                href={item.originalWorkLink} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={commonLinkClasses}
+              >
+                {item.originalWorkTitle}
+              </a>
+            );
+          }
+        }
+        return item.originalWorkTitle; // Just text if no valid link
+      } 
+    }
   ];
 
   const processedAdaptations = useMemo(() => {
     let items = [...initialAdaptations];
 
-    // Filter logic
     if (searchTerm) {
       items = items.filter(adaptation =>
         adaptation.adaptationTitle?.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
-
-    // Transform data first to have consistent keys for sorting and display
+    
     let transformedItems = items.map((adaptation, index) => ({
-      id: `${adaptation.adaptationTitle}-${adaptation.year}-${index}`, // Create a unique ID
+      id: `${adaptation.adaptationTitle}-${adaptation.year}-${index}`, 
       title: adaptation.adaptationTitle || 'N/A',
       yearDisplay: String(adaptation.year) || 'N/A',
       typeDisplay: adaptation.type || 'N/A',
-      basedOnDisplay: adaptation.originalWorkTitle || 'N/A',
-      linkUrl: adaptation.adaptationLink, // External link
-      imageUrl: adaptation.posterUrl || null, // For grid view
-      originalYear: adaptation.year // Keep original year for numeric sorting
+      linkUrl: adaptation.adaptationLink, 
+      imageUrl: adaptation.posterUrl || null,
+      originalYear: adaptation.year,
+      originalWorkTitle: adaptation.originalWorkTitle, 
+      originalWorkLink: adaptation.originalWorkLink   
     }));
 
-    // Sorting logic - applied to transformed items
     if (sortConfig.key) {
       transformedItems.sort((a, b) => {
         let valA, valB;
-
-        // Use originalYear for numeric sort if key is 'year', otherwise use the specified key
-        if (sortConfig.key === 'year') {
+        if (sortConfig.key === 'year') { 
           valA = a.originalYear;
           valB = b.originalYear;
-        } else {
+        } else { 
           valA = a[sortConfig.key];
           valB = b[sortConfig.key];
         }
-
-        // Type checking and normalization for comparison
+        
         if (typeof valA === 'string') valA = valA.toLowerCase();
         if (typeof valB === 'string') valB = valB.toLowerCase();
-
-        // For numeric fields like year, ensure they are numbers
+        
         if (sortConfig.key === 'year') {
             valA = Number(valA);
             valB = Number(valB);
-        } else if (typeof valA !== 'number' || typeof valB !== 'number') {
-            // Fallback for non-numeric, non-string (should ideally not happen with proper data)
+        } else if (typeof valA !== 'number' && typeof valB !== 'number') { 
             valA = String(valA).toLowerCase();
             valB = String(valB).toLowerCase();
         }
-
 
         if (valA < valB) return sortConfig.direction === 'ascending' ? -1 : 1;
         if (valA > valB) return sortConfig.direction === 'ascending' ? 1 : -1;
@@ -89,10 +111,9 @@ export default function AdaptedWorksListClient({ adaptations: initialAdaptations
     return <div className="px-8 py-12"><p className="text-[var(--text-color)]">No adaptations information available.</p></div>;
   }
 
-  // Sort options should use the keys from the transformed data or a specific key for sorting (like 'year' for 'originalYear')
   const sortOptions = [
-    { key: 'title', label: 'Title' },
-    { key: 'year', label: 'Year' } // This key 'year' will trigger sorting by 'originalYear' in the sort logic
+    { key: 'title', label: 'Title' }, 
+    { key: 'year', label: 'Year' } 
   ];
 
   return (
@@ -113,12 +134,12 @@ export default function AdaptedWorksListClient({ adaptations: initialAdaptations
         </div>
       </div>
 
-      <ContentDisplay
-        items={processedAdaptations}
-        view={currentView}
-        columns={adaptedWorksColumns}
+      <ContentDisplay 
+        items={processedAdaptations} 
+        view={currentView} 
+        columns={adaptedWorksColumns} 
       />
-
+      
       {processedAdaptations.length === 0 && searchTerm && (
         <p className="text-center text-[var(--text-color)] py-10">No adaptations found matching your search.</p>
       )}
