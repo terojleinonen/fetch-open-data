@@ -3,8 +3,11 @@
 import React, { useState, useMemo, Suspense } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import Image from 'next/image'; // Import Next.js Image component
-import SearchAndSortControls from '@/app/components/SearchAndSortControls'; // Import the new component
+// import Image from 'next/image'; // No longer directly used here, ContentDisplay handles images
+import SearchAndSortControls from '@/app/components/SearchAndSortControls';
+import ViewSwitcher from '@/app/components/ViewSwitcher'; // Added
+import ContentDisplay from '@/app/components/ContentDisplay'; // Added
+
 
 // const FilterPopup = dynamic(() => import('./FilterPopup'), { // FilterPopup component removed
 //   suspense: true,
@@ -21,13 +24,18 @@ export default function BookListClient({ initialBooks }) {
    const [searchTerm, setSearchTerm] = useState('');
    // New sortConfig state for SearchAndSortControls
    const [sortConfig, setSortConfig] = useState({ key: 'Title', direction: 'ascending' });
-   // const [isSearchBarVisible, setIsSearchBarVisible] = useState(false); // Will be handled by SearchAndSortControls
   const [selectedYear, setSelectedYear] = useState('');
   const [selectedPublisher, setSelectedPublisher] = useState('');
   const [minPages, setMinPages] = useState('');
   const [maxPages, setMaxPages] = useState('');
-  const [isFilterPopupOpen, setIsFilterPopupOpen] = useState(false); // This will be removed
+  const [currentView, setCurrentView] = useState('grid'); // Added state for view, default to grid
   const router = useRouter();
+
+  const bookColumns = [
+    { key: 'title', label: 'Title', isLink: true },
+    { key: 'authorsDisplay', label: 'Authors' },
+    { key: 'yearDisplay', label: 'Year' }
+  ];
 
   // Memoized lists for dropdowns (moved from FilterPopup)
   const uniqueYears = useMemo(() => {
@@ -52,8 +60,8 @@ export default function BookListClient({ initialBooks }) {
     // setSortOrder('alphabetical'); // Optionally reset sort order
   };
 
-  // Memoized variable for filtered books based on the search term and sort order
-  const filteredBooks = useMemo(() => {
+  // Memoized variable for filtered and processed books
+  const processedBooks = useMemo(() => {
     if (!initialBooks || !initialBooks.data || !Array.isArray(initialBooks.data)) return [];
 
     const minPagesNumeric = minPages !== '' ? parseInt(minPages, 10) : null;
@@ -61,59 +69,50 @@ export default function BookListClient({ initialBooks }) {
     const yearNumeric = selectedYear !== '' ? parseInt(selectedYear, 10) : null;
 
     let booksArray = initialBooks.data.filter(book => {
-      // Search term filter (existing)
       const searchTermMatch = book.Title.toLowerCase().includes(searchTerm.toLowerCase());
       if (!searchTermMatch) return false;
-
-      // Year filter
-      if (yearNumeric !== null && book.Year !== yearNumeric) {
-        return false;
-      }
-
-      // Publisher filter
-      if (selectedPublisher && book.Publisher && book.Publisher.toLowerCase() !== selectedPublisher.toLowerCase()) {
-        return false;
-      }
-
-      // Min pages filter
-      if (minPagesNumeric !== null && (!book.Pages || book.Pages < minPagesNumeric)) {
-        return false;
-      }
-
-      // Max pages filter
-      if (maxPagesNumeric !== null && (!book.Pages || book.Pages > maxPagesNumeric)) {
-        return false;
-      }
-
+      if (yearNumeric !== null && book.Year !== yearNumeric) return false;
+      if (selectedPublisher && book.Publisher && book.Publisher.toLowerCase() !== selectedPublisher.toLowerCase()) return false;
+      if (minPagesNumeric !== null && (!book.Pages || book.Pages < minPagesNumeric)) return false;
+      if (maxPagesNumeric !== null && (!book.Pages || book.Pages > maxPagesNumeric)) return false;
       return true;
     });
 
-    // Apply sorting using sortConfig
     if (sortConfig.key) {
       booksArray.sort((a, b) => {
         let valA = a[sortConfig.key];
         let valB = b[sortConfig.key];
 
-        if (sortConfig.key === 'Year') { // Assuming 'Year' is the property for publication year
-          valA = parseInt(valA, 10) || 0; // Fallback to 0 if parsing fails
+        if (sortConfig.key === 'Year') {
+          valA = parseInt(valA, 10) || 0;
           valB = parseInt(valB, 10) || 0;
         } else if (typeof valA === 'string') {
           valA = valA.toLowerCase();
           valB = valB.toLowerCase();
         }
 
-        if (valA < valB) {
-          return sortConfig.direction === 'ascending' ? -1 : 1;
-        }
-        if (valA > valB) {
-          return sortConfig.direction === 'ascending' ? 1 : -1;
-        }
+        if (valA < valB) return sortConfig.direction === 'ascending' ? -1 : 1;
+        if (valA > valB) return sortConfig.direction === 'ascending' ? 1 : -1;
         return 0;
       });
     }
     
-
-    return booksArray;
+    // Transform data for ContentDisplay (List and Grid views)
+    return booksArray.map(book => ({
+      id: book.id,
+      title: book.Title,
+      // For GridView
+      imageUrl: book.coverImageUrl && book.coverImageUrl !== "NO_COVER_AVAILABLE" ? book.coverImageUrl : null,
+      // For ListView (tabular)
+      authorsDisplay: book.authors ? book.authors.join(', ') : 'Unknown Author',
+      yearDisplay: book.Year ? String(book.Year) : 'Unknown Year',
+      // For general linking
+      linkUrl: `/pages/books/${book.id}`,
+      // The 'description' field for ListItem (if it were still generic) is now split into authorsDisplay and yearDisplay for the table.
+      // If ImageItem needs a description, it would typically use the 'title' or we could add a specific one.
+      // For ListItem (if it were still the old version), it would need this combined description:
+      // description: `${book.authors ? book.authors.join(', ') : 'Unknown Author'} - ${book.Year || 'Unknown Year'}`,
+    }));
   }, [initialBooks, searchTerm, sortConfig, selectedYear, selectedPublisher, minPages, maxPages]);
 
   const requestSort = (key) => {
@@ -134,11 +133,10 @@ export default function BookListClient({ initialBooks }) {
   }
 
   return (
-    <div className="py-12"> {/* Removed px-8 and transition classes */}
-      {/* Main layout: Flex container for sidebar and content */}
+    <div className="py-12">
       <div className="flex flex-col md:flex-row gap-6 md:justify-center">
         {/* Left Sidebar for Filters */}
-        <div className="hidden md:block md:w-1/8 p-4 bg-[var(--background-color)] rounded-lg shadow self-start"> {/* Added self-start for alignment */}
+        <div className="hidden md:block md:w-1/8 p-4 bg-[var(--background-color)] rounded-lg shadow self-start">
           <h2 className="text-xl font-semibold text-[var(--text-color)] mb-4">Filters</h2>
           {/* Year Filter */}
           <div className="mb-4">
@@ -199,7 +197,6 @@ export default function BookListClient({ initialBooks }) {
             </div>
           </div>
           
-          {/* Reset Filters Button */}
           <button
             onClick={handleResetFilters}
             className="w-full bg-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] text-[var(--text-color)] font-bold py-2 px-4 rounded"
@@ -208,80 +205,46 @@ export default function BookListClient({ initialBooks }) {
           </button>
         </div>
 
-        {/* Main Content Area: Search, Sort, and Books List */}
+        {/* Main Content Area: Search, Sort, ViewSwitcher, and ContentDisplay */}
         <div className="w-full md:w-6/8 px-4 md:px-0">
-          {/* Use new SearchAndSortControls component */}
-          <SearchAndSortControls
-            searchTerm={searchTerm}
-            sortConfig={sortConfig}
-            onSearchChange={(e) => setSearchTerm(e.target.value)}
-            onRequestSort={requestSort}
-            sortOptions={[
-              { key: 'Title', label: 'Title', title: 'Title' }, // Use 'Title' to match book data property
-              { key: 'Year', label: 'Year', year: 'Year' }      // Use 'Year' to match book data property
-            ]}
-            searchPlaceholder="Search by book title..."
-          />
+          <div className="flex flex-col sm:flex-row items-center mb-4 sm:space-x-2">
+            <div className="flex-grow w-full sm:w-auto">
+              <SearchAndSortControls
+                searchTerm={searchTerm}
+                sortConfig={sortConfig}
+                onSearchChange={(e) => setSearchTerm(e.target.value)}
+                onRequestSort={requestSort}
+                sortOptions={[
+                  { key: 'Title', label: 'Title', title: 'Title' },
+                  { key: 'Year', label: 'Year', year: 'Year' }
+                ]}
+                searchPlaceholder="Search by book title..."
+              />
+            </div>
+            <div className="mt-2 sm:mt-0">
+                <ViewSwitcher currentView={currentView} onViewChange={setCurrentView} />
+            </div>
+          </div>
 
-          {/* Books List Display */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {/* Responsive grid */}
-            {filteredBooks.map((book, index) => (
-              <Link key={book.id} href={`/pages/books/${book.id}`} className="group bg-[var(--background-color)] rounded-lg shadow border border-black hover:border-black transition-all duration-300 ease-in-out flex flex-col overflow-hidden h-full hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-black"> {/* Changed border to black and focus ring to black */}
-                {/* Entire card is a link, so no separate key needed on the inner div if we remove it or change its role */}
-                {/* Book Cover Image */}
-                <div className="relative w-full h-72 flex items-center justify-center bg-neutral-700 overflow-hidden rounded-t-lg">
-              {book.coverImageUrl && book.coverImageUrl !== "NO_COVER_AVAILABLE" ? (
-                    <Image
-                      src={book.coverImageUrl}
-                      alt={`Cover of ${book.Title}`}
-                      fill
-                      style={{ objectFit: "contain" }}
-                      className="transition-transform duration-300 group-hover:scale-105 rounded-t-lg"
-                      priority={index < 8} // Approximate priority with eager loading for first few images
-                    />
-                  ) : (
-                    <div
-                      className="w-full h-full flex items-center justify-center text-neutral-500 text-sm"
-                    >
-                      No Image
-                    </div>
-                  )}
-                </div>
-                {/* Book Details */}
-                <div className="p-4 flex flex-col flex-grow bg-gray-700 text-gray-200"> {/* Dark background and light text for contrast */}
-                     <h2 className="text-lg font-semibold text-red-500 mb-1 truncate" title={book.Title}> {/* Ensure title is visible and red */}
-                        {book.Title}
-                     </h2>
-                     {book.authors && Array.isArray(book.authors) && book.authors.length > 0 && (
-                        <p className="text-xs text-gray-300 mb-1 truncate" title={book.authors.join(', ')}> {/* Adjusted for dark bg */}
-                            By: {book.authors.join(', ')}
-                        </p>
-                     )}
-                     {/* Display publishedDate if available (from Google Books), otherwise fallback to Year */}
-                     {book.publishedDate && <p className="text-xs text-gray-300 mb-1">Published: {book.publishedDate}</p>}
-                     {!book.publishedDate && book.Year && <p className="text-xs text-gray-300 mb-1">Year: {book.Year}</p>}
+          <ContentDisplay items={processedBooks} view={currentView} columns={bookColumns} />
 
-                     {/* "View Details" link removed as the whole card is a link */}
-                     {/* <div className="mt-auto pt-2">  */}
-                        {/* <span className="text-sm text-[var(--accent-color)] font-medium">View Details</span> */}
-                     {/* </div> */}
-                 </div>
-          </Link>
-         ))}
-     </div>
-     {/* Display a message if no books match the search term */}
-     {filteredBooks.length === 0 && searchTerm && (
-         <p className="text-center text-[var(--text-color)] mt-4">No books found matching your search.</p>
-     )}
-          {/* Display a message if no books match the filters (excluding search) */}
-          {filteredBooks.length === 0 && !searchTerm && (selectedYear || selectedPublisher || minPages || maxPages) && (
+          {processedBooks.length === 0 && searchTerm && (
+            <p className="text-center text-[var(--text-color)] mt-4">No books found matching your search.</p>
+          )}
+          {processedBooks.length === 0 && !searchTerm && (selectedYear || selectedPublisher || minPages || maxPages) && (
             <p className="text-center text-[var(--text-color)] mt-4">No books found matching your filter criteria.</p>
           )}
-        </div> {/* End of Main Content Area */}
+           {processedBooks.length === 0 && !searchTerm && !selectedYear && !selectedPublisher && !minPages && !maxPages && initialBooks?.data?.length > 0 && (
+            <p className="text-center text-[var(--text-color)] mt-4">No books to display with current filters. Try broadening your criteria.</p>
+          )}
+           {initialBooks?.data?.length === 0 && (
+             <p className="text-center text-[var(--text-color)] mt-4">There are no books to display at the moment.</p>
+           )}
+        </div>
 
         {/* Right Empty Sidebar for spacing */}
         <div className="hidden md:block md:w-1/8"></div>
-      </div> {/* End of Main Flex Container */}
+      </div>
       <div className="text-center mt-12"><Link href="/" className="home-link text-xl">Return to Home</Link></div>
     </div>
   );

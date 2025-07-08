@@ -1,48 +1,80 @@
 "use client";
 
 import React, { useState, useMemo } from 'react';
-import Link from 'next/link';
-import SearchAndSortControls from '@/app/components/SearchAndSortControls'; // Import the new component
+import SearchAndSortControls from '@/app/components/SearchAndSortControls';
+import ViewSwitcher from '@/app/components/ViewSwitcher';
+import ContentDisplay from '@/app/components/ContentDisplay';
 
 export default function AdaptedWorksListClient({ adaptations: initialAdaptations }) {
   const [searchTerm, setSearchTerm] = useState('');
-  const [sortConfig, setSortConfig] = useState({ key: 'adaptationTitle', direction: 'ascending' });
+  // Default sort key to 'title' from processed data
+  const [sortConfig, setSortConfig] = useState({ key: 'title', direction: 'ascending' });
+  const [currentView, setCurrentView] = useState('grid'); // Default to grid view
 
-  const filteredAndSortedAdaptations = useMemo(() => {
-    let adaptableAdaptations = [...initialAdaptations];
+  const adaptedWorksColumns = [
+    { key: 'title', label: 'Title', isLink: true },
+    { key: 'yearDisplay', label: 'Year' },
+    { key: 'typeDisplay', label: 'Type' },
+    { key: 'basedOnDisplay', label: 'Based On' }
+  ];
+
+  const processedAdaptations = useMemo(() => {
+    let items = [...initialAdaptations];
 
     // Filter logic
     if (searchTerm) {
-      adaptableAdaptations = adaptableAdaptations.filter(adaptation =>
-        adaptation.adaptationTitle.toLowerCase().includes(searchTerm.toLowerCase())
+      items = items.filter(adaptation =>
+        adaptation.adaptationTitle?.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
 
-    // Sorting logic
+    // Transform data first to have consistent keys for sorting and display
+    let transformedItems = items.map((adaptation, index) => ({
+      id: `${adaptation.adaptationTitle}-${adaptation.year}-${index}`, // Create a unique ID
+      title: adaptation.adaptationTitle || 'N/A',
+      yearDisplay: String(adaptation.year) || 'N/A',
+      typeDisplay: adaptation.type || 'N/A',
+      basedOnDisplay: adaptation.originalWorkTitle || 'N/A',
+      linkUrl: adaptation.adaptationLink, // External link
+      imageUrl: adaptation.posterUrl || null, // For grid view
+      originalYear: adaptation.year // Keep original year for numeric sorting
+    }));
+
+    // Sorting logic - applied to transformed items
     if (sortConfig.key) {
-      adaptableAdaptations.sort((a, b) => {
-        let valA = a[sortConfig.key];
-        let valB = b[sortConfig.key];
+      transformedItems.sort((a, b) => {
+        let valA, valB;
 
-        // Handle numeric sorting for year
+        // Use originalYear for numeric sort if key is 'year', otherwise use the specified key
         if (sortConfig.key === 'year') {
-          valA = parseInt(valA, 10);
-          valB = parseInt(valB, 10);
-        } else if (typeof valA === 'string') { // Handle string sorting for title
-          valA = valA.toLowerCase();
-          valB = valB.toLowerCase();
+          valA = a.originalYear;
+          valB = b.originalYear;
+        } else {
+          valA = a[sortConfig.key];
+          valB = b[sortConfig.key];
         }
 
-        if (valA < valB) {
-          return sortConfig.direction === 'ascending' ? -1 : 1;
+        // Type checking and normalization for comparison
+        if (typeof valA === 'string') valA = valA.toLowerCase();
+        if (typeof valB === 'string') valB = valB.toLowerCase();
+
+        // For numeric fields like year, ensure they are numbers
+        if (sortConfig.key === 'year') {
+            valA = Number(valA);
+            valB = Number(valB);
+        } else if (typeof valA !== 'number' || typeof valB !== 'number') {
+            // Fallback for non-numeric, non-string (should ideally not happen with proper data)
+            valA = String(valA).toLowerCase();
+            valB = String(valB).toLowerCase();
         }
-        if (valA > valB) {
-          return sortConfig.direction === 'ascending' ? 1 : -1;
-        }
+
+
+        if (valA < valB) return sortConfig.direction === 'ascending' ? -1 : 1;
+        if (valA > valB) return sortConfig.direction === 'ascending' ? 1 : -1;
         return 0;
       });
     }
-    return adaptableAdaptations;
+    return transformedItems;
   }, [initialAdaptations, searchTerm, sortConfig]);
 
   const requestSort = (key) => {
@@ -54,90 +86,44 @@ export default function AdaptedWorksListClient({ adaptations: initialAdaptations
   };
 
   if (!initialAdaptations || initialAdaptations.length === 0) {
-    return (
-      <div className="px-8 py-12">
-        <p className="text-[var(--text-color)]">No adaptations information available.</p>
-      </div>
-    );
+    return <div className="px-8 py-12"><p className="text-[var(--text-color)]">No adaptations information available.</p></div>;
   }
 
+  // Sort options should use the keys from the transformed data or a specific key for sorting (like 'year' for 'originalYear')
   const sortOptions = [
-    { key: 'adaptationTitle', label: 'Title', title: 'Title' },
-    { key: 'year', label: 'Year', year: 'Year' }
+    { key: 'title', label: 'Title' },
+    { key: 'year', label: 'Year' } // This key 'year' will trigger sorting by 'originalYear' in the sort logic
   ];
 
   return (
-    <div className="container mx-auto px-4 py-8 text-[var(--text-color)] max-w-5xl">
-      <SearchAndSortControls
-        searchTerm={searchTerm}
-        sortConfig={sortConfig}
-        onSearchChange={(e) => setSearchTerm(e.target.value)}
-        onRequestSort={requestSort}
-        sortOptions={sortOptions}
-        searchPlaceholder="Search by adaptation title..."
+    <div className="container mx-auto px-4 py-8 text-[var(--text-color)]">
+      <div className="flex flex-col sm:flex-row items-center mb-4 sm:space-x-2">
+        <div className="flex-grow w-full sm:w-auto">
+          <SearchAndSortControls
+            searchTerm={searchTerm}
+            sortConfig={sortConfig}
+            onSearchChange={(e) => setSearchTerm(e.target.value)}
+            onRequestSort={requestSort}
+            sortOptions={sortOptions}
+            searchPlaceholder="Search by adaptation title..."
+          />
+        </div>
+        <div className="mt-2 sm:mt-0">
+          <ViewSwitcher currentView={currentView} onViewChange={setCurrentView} />
+        </div>
+      </div>
+
+      <ContentDisplay
+        items={processedAdaptations}
+        view={currentView}
+        columns={adaptedWorksColumns}
       />
 
-      {filteredAndSortedAdaptations.length > 0 ? (
-        <ul className="space-y-6">
-          {filteredAndSortedAdaptations.map((adaptation, index) => (
-            <li
-              key={`${adaptation.adaptationLink}-${index}-${adaptation.adaptationTitle}`} // Added title to key for better uniqueness
-              className="p-6 border border-[var(--border-color)] rounded-lg shadow-lg bg-[var(--background-start-rgb)] bg-opacity-50 backdrop-blur-md"
-            >
-              <h2 className="text-2xl font-semibold text-[var(--accent-color)] mb-2">
-                <a
-                  href={adaptation.adaptationLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                >
-                  {adaptation.adaptationTitle}
-                </a>
-              </h2>
-            <div className="text-sm mt-1">
-              <div><strong className="font-medium">Year:</strong> {adaptation.year}</div>
-              <div><strong className="font-medium">Type:</strong> {adaptation.type}</div>
-              </div>
-              {adaptation.originalWorkTitle && (
-                <div className="mt-2 text-sm">
-                  <strong className="font-medium">Based on: </strong>
-                  {adaptation.originalWorkLink && adaptation.originalWorkLink.startsWith('http') ? (
-                    <a
-                      href={adaptation.originalWorkLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="italic text-[var(--link-color)] hover:underline"
-                    >
-                      {adaptation.originalWorkTitle}
-                    </a>
-                  ) : adaptation.originalWorkLink ? (
-                  <Link href={adaptation.originalWorkLink} legacyBehavior>
-                      <a className="italic text-[var(--link-color)] hover:underline">
-                        {adaptation.originalWorkTitle}
-                      </a>
-                    </Link>
-                  ) : (
-                    <span className="italic">{adaptation.originalWorkTitle}</span>
-                  )}
-                  {adaptation.originalWorkType && (
-                    <span className="text-gray-600 dark:text-gray-400"> ({adaptation.originalWorkType})</span>
-                  )}
-                </div>
-              )}
-              {adaptation.posterUrl && (
-                <div className="mt-4 max-w-xs mx-auto md:mx-0">
-                  <img
-                    src={adaptation.posterUrl}
-                    alt={`Poster for ${adaptation.adaptationTitle}`}
-                    className="rounded-lg shadow-lg object-contain w-full h-auto"
-                  />
-                </div>
-              )}
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p className="text-center text-[var(--text-color)] py-10">No adaptations found matching your criteria.</p>
+      {processedAdaptations.length === 0 && searchTerm && (
+        <p className="text-center text-[var(--text-color)] py-10">No adaptations found matching your search.</p>
+      )}
+       {processedAdaptations.length === 0 && !searchTerm && initialAdaptations.length > 0 && (
+        <p className="text-center text-[var(--text-color)] py-10">All adaptations have been filtered out.</p>
       )}
     </div>
   );
