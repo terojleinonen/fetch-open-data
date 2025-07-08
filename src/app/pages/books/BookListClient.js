@@ -136,74 +136,7 @@ export default function BookListClient({ initialBooks }) {
     <div className="py-12">
       <div className="flex flex-col md:flex-row gap-6 md:justify-center">
         {/* Left Sidebar for Filters */}
-        <div className="hidden md:block md:w-1/8 p-4 bg-[var(--background-color)] rounded-lg shadow self-start">
-          <h2 className="text-xl font-semibold text-[var(--text-color)] mb-4">Filters</h2>
-          {/* Year Filter */}
-          <div className="mb-4">
-            <label htmlFor="filter-year" className="block text-sm font-medium text-[var(--text-color)] mb-1">Year</label>
-            <select
-              id="filter-year"
-              value={selectedYear}
-              onChange={(e) => setSelectedYear(e.target.value)}
-              className="w-full p-2 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] outline-none"
-            >
-              <option value="">All Years</option>
-              {uniqueYears.map(year => (
-                <option key={year} value={year}>{year}</option>
-              ))}
-            </select>
-          </div>
-
-          {/* Publisher Filter */}
-          <div className="mb-4">
-            <label htmlFor="filter-publisher" className="block text-sm font-medium text-[var(--text-color)] mb-1">Publisher</label>
-            <select
-              id="filter-publisher"
-              value={selectedPublisher}
-              onChange={(e) => setSelectedPublisher(e.target.value)}
-              className="w-full p-2 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] outline-none"
-            >
-              <option value="">All Publishers</option>
-              {uniquePublishers.map(publisher => (
-                <option key={publisher} value={publisher}>{publisher}</option>
-              ))}
-            </select>
-          </div>
-
-          {/* Page Count Filter */}
-          <div className="mb-4">
-            <label className="block text-sm font-medium text-[var(--text-color)] mb-1">Page Count</label>
-            <div className="flex gap-2 mb-2">
-              <input
-                type="number"
-                id="filter-min-pages"
-                name="filter-min-pages"
-                placeholder="Min"
-                value={minPages}
-                onChange={(e) => setMinPages(e.target.value)}
-                className="w-full p-2 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] outline-none"
-                min="0"
-              />
-              <input
-                type="number"
-                id="filter-max-pages"
-                name="filter-max-pages"
-                placeholder="Max"
-                value={maxPages}
-                onChange={(e) => setMaxPages(e.target.value)}
-                className="w-full p-2 rounded bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--accent-color)] focus:border-[var(--hover-accent-color)] focus:ring-1 focus:ring-[var(--hover-accent-color)] outline-none"
-                min="0"
-              />
-            </div>
-          </div>
-          
-          <button
-            onClick={handleResetFilters}
-            className="w-full bg-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] text-[var(--text-color)] font-bold py-2 px-4 rounded"
-          >
-            Reset Filters
-          </button>
-        </div>
+        <div className="hidden md:block md:w-1/8"></div>
 
         {/* Main Content Area: Search, Sort, ViewSwitcher, and ContentDisplay */}
         <div className="w-full md:w-6/8 px-4 md:px-0">

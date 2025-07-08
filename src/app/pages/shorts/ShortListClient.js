@@ -81,20 +81,6 @@ export default function ShortListClient({ initialShorts }) {
     setSortConfig({ key, direction });
   };
 
-  const handleRandomShort = () => {
-    if (initialShorts && initialShorts.data && initialShorts.data.length > 0) {
-      const randomIndex = Math.floor(Math.random() * initialShorts.data.length);
-      const randomShort = initialShorts.data[randomIndex];
-      if (randomShort && randomShort.id) {
-        router.push(`/pages/shorts/${randomShort.id}`);
-      } else {
-        console.error("Failed to get random short story or ID is missing", randomShort);
-      }
-    } else {
-      console.error("No short stories available to select a random one from.");
-    }
-  };
-
   const sortOptions = [
     { key: 'title', label: 'Title' },
     { key: 'year', label: 'Year' }
@@ -103,22 +89,13 @@ export default function ShortListClient({ initialShorts }) {
   return (
     <div className="py-12">
       <div className="flex flex-col md:flex-row gap-6 md:justify-center">
-        <div className="hidden md:block md:w-1/8 p-4 bg-[var(--background-color)] rounded-lg shadow self-start">
+        <div className="">
           <TypeFilterMenu
             uniqueTypes={uniqueTypes}
             selectedType={selectedType}
             onSelectType={setSelectedType}
           />
-           <button
-            onClick={handleRandomShort}
-            className="mt-4 w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded transition-colors"
-            title="Go to a random short story"
-            aria-label="Go to a random short story"
-          >
-            Random Short
-          </button>
         </div>
-
         <div className="w-full md:w-6/8 px-4 md:px-0">
           <div className="mb-4">
             <SearchAndSortControls

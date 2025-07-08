@@ -12,8 +12,7 @@ import React from 'react';
  */
 export default function TypeFilterMenu({ uniqueTypes, selectedType, onSelectType }) {
   return (
-    <div className="mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow">
-      <h3 className="text-md font-semibold mb-3 text-[var(--accent-color)]">Filter by Type:</h3>
+    <div className="mb-4 p-4">
       <div className="flex flex-col items-start space-y-1">
         {uniqueTypes.map(type => (
           <button

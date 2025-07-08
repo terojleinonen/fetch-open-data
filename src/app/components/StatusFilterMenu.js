@@ -12,8 +12,7 @@ import React from 'react';
  */
 export default function StatusFilterMenu({ uniqueStatuses, selectedStatus, onSelectStatus }) {
   return (
-    <div className="mb-4 p-4 bg-[var(--background-color)] rounded-lg shadow w-max"> {/* Added w-max to make the container fit its content */}
-      <h3 className="text-md font-semibold mb-3 text-[var(--accent-color)]">Filter by Status:</h3>
+    <div className="mb-4 p-4"> {/* Added w-max to make the container fit its content */}
       <div className="flex flex-col items-start space-y-1">
         {uniqueStatuses.map(status => (
           <button

@@ -39,7 +39,7 @@ export default function SearchAndSortControls({
   };
 
   return (
-    <div className="mb-8 p-4 border border-[var(--border-color)] rounded-lg bg-[var(--background-start-rgb)] bg-opacity-30 backdrop-blur-sm">
+    <div className="">
       <div className="flex flex-col md:flex-row gap-4 items-center">
         <div className="relative flex-grow w-full md:w-auto">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
