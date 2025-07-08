@@ -9,10 +9,22 @@ const ContentDisplay = ({ items, view = 'list' }) => { // Default to 'list' view
 
   if (view === 'list') {
     return (
-      <div className="space-y-4">
-        {items.map((item) => (
-          <ListItem key={item.id || item.title} item={item} />
-        ))}
+      <div className="overflow-x-auto shadow-md sm:rounded-lg"> {/* Added for smaller screens and some styling */}
+        <table className="min-w-full w-full text-left text-sm text-gray-500 dark:text-gray-400">
+          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+              <th scope="col" className="px-6 py-3">Title</th>
+              <th scope="col" className="px-6 py-3">Authors</th>
+              <th scope="col" className="px-6 py-3">Year</th>
+            </tr>
+          </thead>
+          <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
+            {items.map((item) => (
+              // ListItem will be modified to render a <tr> element
+              <ListItem key={item.id || item.title} item={item} /> 
+            ))}
+          </tbody>
+        </table>
       </div>
     );
   }

@@ -91,13 +91,21 @@ export default function BookListClient({ initialBooks }) {
       });
     }
     
-    // Transform data for ContentDisplay
+    // Transform data for ContentDisplay (List and Grid views)
     return booksArray.map(book => ({
       id: book.id,
       title: book.Title,
+      // For GridView
       imageUrl: book.coverImageUrl && book.coverImageUrl !== "NO_COVER_AVAILABLE" ? book.coverImageUrl : null,
-      description: `${book.authors ? book.authors.join(', ') : 'Unknown Author'} - ${book.Year || 'Unknown Year'}`,
+      // For ListView (tabular)
+      authorsDisplay: book.authors ? book.authors.join(', ') : 'Unknown Author',
+      yearDisplay: book.Year ? String(book.Year) : 'Unknown Year',
+      // For general linking
       linkUrl: `/pages/books/${book.id}`,
+      // The 'description' field for ListItem (if it were still generic) is now split into authorsDisplay and yearDisplay for the table.
+      // If ImageItem needs a description, it would typically use the 'title' or we could add a specific one.
+      // For ListItem (if it were still the old version), it would need this combined description:
+      // description: `${book.authors ? book.authors.join(', ') : 'Unknown Author'} - ${book.Year || 'Unknown Year'}`,
     }));
   }, [initialBooks, searchTerm, sortConfig, selectedYear, selectedPublisher, minPages, maxPages]);
 
@@ -208,9 +216,9 @@ export default function BookListClient({ initialBooks }) {
             />
             <ViewSwitcher currentView={currentView} onViewChange={setCurrentView} />
           </div>
-
+          
           <ContentDisplay items={processedBooks} view={currentView} />
-
+          
           {processedBooks.length === 0 && searchTerm && (
             <p className="text-center text-[var(--text-color)] mt-4">No books found matching your search.</p>
           )}
