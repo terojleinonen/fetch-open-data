@@ -31,6 +31,12 @@ export default function BookListClient({ initialBooks }) {
   const [currentView, setCurrentView] = useState('grid'); // Added state for view, default to grid
   const router = useRouter();
 
+  const bookColumns = [
+    { key: 'title', label: 'Title', isLink: true },
+    { key: 'authorsDisplay', label: 'Authors' },
+    { key: 'yearDisplay', label: 'Year' }
+  ];
+
   // Memoized lists for dropdowns (moved from FilterPopup)
   const uniqueYears = useMemo(() => {
     if (!initialBooks?.data || !Array.isArray(initialBooks.data)) return [];
@@ -201,23 +207,26 @@ export default function BookListClient({ initialBooks }) {
 
         {/* Main Content Area: Search, Sort, ViewSwitcher, and ContentDisplay */}
         <div className="w-full md:w-6/8 px-4 md:px-0">
-          <div className="flex flex-col sm:flex-row justify-between items-center mb-4 gap-4">
-            <SearchAndSortControls
-              searchTerm={searchTerm}
-              sortConfig={sortConfig}
-              onSearchChange={(e) => setSearchTerm(e.target.value)}
-              onRequestSort={requestSort}
-              sortOptions={[
-                { key: 'Title', label: 'Title', title: 'Title' },
-                { key: 'Year', label: 'Year', year: 'Year' }
-              ]}
-              searchPlaceholder="Search by book title..."
-              className="flex-grow"
-            />
-            <ViewSwitcher currentView={currentView} onViewChange={setCurrentView} />
+          <div className="flex flex-col sm:flex-row items-center mb-4 sm:space-x-2">
+            <div className="flex-grow w-full sm:w-auto">
+              <SearchAndSortControls
+                searchTerm={searchTerm}
+                sortConfig={sortConfig}
+                onSearchChange={(e) => setSearchTerm(e.target.value)}
+                onRequestSort={requestSort}
+                sortOptions={[
+                  { key: 'Title', label: 'Title', title: 'Title' },
+                  { key: 'Year', label: 'Year', year: 'Year' }
+                ]}
+                searchPlaceholder="Search by book title..."
+              />
+            </div>
+            <div className="mt-2 sm:mt-0">
+                <ViewSwitcher currentView={currentView} onViewChange={setCurrentView} />
+            </div>
           </div>
           
-          <ContentDisplay items={processedBooks} view={currentView} />
+          <ContentDisplay items={processedBooks} view={currentView} columns={bookColumns} />
           
           {processedBooks.length === 0 && searchTerm && (
             <p className="text-center text-[var(--text-color)] mt-4">No books found matching your search.</p>
