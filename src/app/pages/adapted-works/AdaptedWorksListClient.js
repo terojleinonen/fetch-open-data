@@ -8,14 +8,14 @@ import ContentDisplay from '@/app/components/ContentDisplay';
 
 export default function AdaptedWorksListClient({ adaptations: initialAdaptations }) {
   const [searchTerm, setSearchTerm] = useState('');
-  const [sortConfig, setSortConfig] = useState({ key: 'title', direction: 'ascending' });
+  const [sortConfig, setSortConfig] = useState({ key: 'title', direction: 'ascending' }); 
   const [currentView, setCurrentView] = useState('grid');
 
   const adaptedWorksColumns = [
     { key: 'title', label: 'Title', isLink: true }, // This will use item.linkUrl for the main adaptation link
     { key: 'yearDisplay', label: 'Year' },
     { key: 'typeDisplay', label: 'Type' },
-    {
+    { 
       key: 'originalWorkInfo', // A key that represents the data unit for the column
       label: 'Based On',
       render: (item) => {
@@ -32,10 +32,10 @@ export default function AdaptedWorksListClient({ adaptations: initialAdaptations
             );
           } else if (item.originalWorkLink.startsWith('http')) {
             return (
-              <a
-                href={item.originalWorkLink}
-                target="_blank"
-                rel="noopener noreferrer"
+              <a 
+                href={item.originalWorkLink} 
+                target="_blank" 
+                rel="noopener noreferrer" 
                 className={commonLinkClasses}
               >
                 {item.originalWorkTitle}
@@ -44,7 +44,7 @@ export default function AdaptedWorksListClient({ adaptations: initialAdaptations
           }
         }
         return item.originalWorkTitle; // Just text if no valid link
-      }
+      } 
     }
   ];
 
@@ -56,37 +56,37 @@ export default function AdaptedWorksListClient({ adaptations: initialAdaptations
         adaptation.adaptationTitle?.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
-
+    
     let transformedItems = items.map((adaptation, index) => ({
-      id: `${adaptation.adaptationTitle}-${adaptation.year}-${index}`,
+      id: `${adaptation.adaptationTitle}-${adaptation.year}-${index}`, 
       title: adaptation.adaptationTitle || 'N/A',
       yearDisplay: String(adaptation.year) || 'N/A',
       typeDisplay: adaptation.type || 'N/A',
-      linkUrl: adaptation.adaptationLink,
+      linkUrl: adaptation.adaptationLink, 
       imageUrl: adaptation.posterUrl || null,
       originalYear: adaptation.year,
-      originalWorkTitle: adaptation.originalWorkTitle,
-      originalWorkLink: adaptation.originalWorkLink
+      originalWorkTitle: adaptation.originalWorkTitle, 
+      originalWorkLink: adaptation.originalWorkLink   
     }));
 
     if (sortConfig.key) {
       transformedItems.sort((a, b) => {
         let valA, valB;
-        if (sortConfig.key === 'year') {
+        if (sortConfig.key === 'year') { 
           valA = a.originalYear;
           valB = b.originalYear;
-        } else {
+        } else { 
           valA = a[sortConfig.key];
           valB = b[sortConfig.key];
         }
-
+        
         if (typeof valA === 'string') valA = valA.toLowerCase();
         if (typeof valB === 'string') valB = valB.toLowerCase();
-
+        
         if (sortConfig.key === 'year') {
             valA = Number(valA);
             valB = Number(valB);
-        } else if (typeof valA !== 'number' && typeof valB !== 'number') {
+        } else if (typeof valA !== 'number' && typeof valB !== 'number') { 
             valA = String(valA).toLowerCase();
             valB = String(valB).toLowerCase();
         }
@@ -112,8 +112,8 @@ export default function AdaptedWorksListClient({ adaptations: initialAdaptations
   }
 
   const sortOptions = [
-    { key: 'title', label: 'Title' },
-    { key: 'year', label: 'Year' }
+    { key: 'title', label: 'Title' }, 
+    { key: 'year', label: 'Year' } 
   ];
 
   return (
@@ -134,12 +134,12 @@ export default function AdaptedWorksListClient({ adaptations: initialAdaptations
         </div>
       </div>
 
-      <ContentDisplay
-        items={processedAdaptations}
-        view={currentView}
-        columns={adaptedWorksColumns}
+      <ContentDisplay 
+        items={processedAdaptations} 
+        view={currentView} 
+        columns={adaptedWorksColumns} 
       />
-
+      
       {processedAdaptations.length === 0 && searchTerm && (
         <p className="text-center text-[var(--text-color)] py-10">No adaptations found matching your search.</p>
       )}

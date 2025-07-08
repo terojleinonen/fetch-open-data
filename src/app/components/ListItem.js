@@ -16,8 +16,8 @@ const ListItem = ({ item, columns, rowIndex }) => {
   // Dark theme: even rows gray-800, odd rows gray-900.
   // Hover states are slightly darker than the non-hover state of the OTHER stripe color for better contrast.
   const rowClasses = `
-    ${isEvenRow ? 'bg-white dark:bg-gray-800' : 'bg-gray-50 dark:bg-gray-900'}
-    hover:bg-gray-200 dark:hover:bg-gray-700
+    ${isEvenRow ? 'bg-white dark:bg-gray-800' : 'bg-gray-50 dark:bg-gray-900'} 
+    hover:bg-gray-200 dark:hover:bg-gray-700 
     transition-colors duration-150
   `;
 

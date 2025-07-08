@@ -225,9 +225,9 @@ export default function BookListClient({ initialBooks }) {
                 <ViewSwitcher currentView={currentView} onViewChange={setCurrentView} />
             </div>
           </div>
-
+          
           <ContentDisplay items={processedBooks} view={currentView} columns={bookColumns} />
-
+          
           {processedBooks.length === 0 && searchTerm && (
             <p className="text-center text-[var(--text-color)] mt-4">No books found matching your search.</p>
           )}
