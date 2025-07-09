@@ -65,8 +65,8 @@ export default async function VillainDetailPage({ params }) {
 
         {/* Book Appearances and Back Link - Full Width Below */}
         <div className="mt-6"> {/* Added margin-top for spacing */}
-          <h2 className="text-2xl font-semibold mb-3">Book Appearances:</h2>
-          <VillainBookAppearances villainId={params.id} />
+          <h2 className="text-2xl font-semibold mb-3">Appearances:</h2>
+          <VillainBookAppearances books={villain.books || []} shorts={villain.shorts || []} />
         </div>
 
         <div className="mt-8 text-center md:text-left"> {/* Adjusted margin and text alignment for button */}          
