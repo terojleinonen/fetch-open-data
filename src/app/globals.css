@@ -38,8 +38,10 @@
   --nav-link-focus-ring-light: var(--sk-accent-light);
 
   /* Navigation Link Hover Background (using accent) */
-  --nav-link-hover-bg-dark: #FFFFFF; /* Changed to white */
-  --nav-link-hover-bg-light: #FFFFFF; /* Changed to white */
+  --nav-link-hover-bg-dark: var(--sk-accent-dark); /* Changed to red */
+  --nav-link-hover-bg-light: var(--sk-accent-light); /* Changed to red */
+  --nav-link-hover-text-dark: #FFFFFF; /* White text for dark theme hover */
+  --nav-link-hover-text-light: #FFFFFF; /* White text for light theme hover */
 
 
   /* Map Marker colors - can be adapted or kept generic if SK site doesn't have maps */
@@ -108,6 +110,7 @@ body {
 
   /* Navigation link hover */
   --nav-link-hover-bg: var(--nav-link-hover-bg-dark);
+  --nav-link-hover-text: var(--nav-link-hover-text-dark); /* Added for dark theme */
   --nav-link-focus-ring: var(--nav-link-focus-ring-dark);
 
   /* Details box colors for dark theme */
@@ -153,6 +156,7 @@ body {
 
   /* Navigation link hover */
   --nav-link-hover-bg: var(--nav-link-hover-bg-light);
+  --nav-link-hover-text: var(--nav-link-hover-text-light); /* Added for light theme */
   --nav-link-focus-ring: var(--nav-link-focus-ring-light);
 
     /* Details box colors for light theme */
@@ -341,11 +345,13 @@ body::before {
 
 .mobile-menu-link-hover:hover {
   background-color: var(--nav-link-hover-bg);
+  color: var(--nav-link-hover-text); /* Added text color for hover state */
 }
 
 /* Utility class for navigation link hover background */
 .nav-link-desktop-hover:hover {
   background-color: var(--nav-link-hover-bg);
+  color: var(--nav-link-hover-text); /* Added text color for hover state */
 }
 
 /* Styling for the search icon to ensure visibility */
