@@ -18,8 +18,7 @@ export default function VillainListClient({ initialVillains }) {
 
   const villainColumns = [
     { key: 'name', label: 'Name', isLink: true },
-    { key: 'statusDisplay', label: 'Status' },
-    { key: 'appearances', label: 'Book Appearances' }
+    { key: 'statusDisplay', label: 'Status' }
   ];
 
   const uniqueStatuses = useMemo(() => {
