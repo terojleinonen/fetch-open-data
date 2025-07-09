@@ -47,7 +47,7 @@ export default function VillainBookAppearances({ books = [], shorts = [] }) {
       <ul className="list-disc pl-5">
         {appearances.map(appearance => (
           <li key={appearance.id} className="mb-1">
-            <Link href={appearance.href} className="text-blue-600 hover:underline">
+            <Link href={appearance.href} className="">
               {appearance.title}
             </Link>
             {` (${appearance.type})`}

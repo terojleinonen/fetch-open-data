@@ -4,17 +4,17 @@ import ImageItem from './ImageItem';
 
 const ContentDisplay = ({ items, view = 'list', columns = [] }) => { // Added columns prop
   if (!items || items.length === 0) {
-    return <p className="text-gray-500 dark:text-gray-400 text-center py-8">No items to display.</p>;
+    return <p className="text-[var(--text-color)] opacity-70 text-center py-8">No items to display.</p>;
   }
 
   if (view === 'list') {
     if (columns.length === 0) {
-      return <p className="text-red-500 text-center py-8">List view selected, but no column definitions provided.</p>;
+      return <p className="text-[var(--accent-color)] text-center py-8">List view selected, but no column definitions provided.</p>;
     }
     return (
       <div className="overflow-x-auto shadow-md sm:rounded-lg">
-        <table className="min-w-full w-full text-left text-sm text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 border-b-2 border-red-500">
+        <table className="min-w-full w-full text-left text-sm text-[var(--text-color)] opacity-90">
+          <thead className="text-xs text-[var(--text-color)] uppercase bg-[var(--sk-row-bg-even-light)] dark:bg-[var(--sk-row-bg-even-dark)] border-b-2 border-[var(--accent-color)]">
             <tr>
               {columns.map((col) => (
                 <th scope="col" key={col.key} className="px-6 py-3">
@@ -23,7 +23,7 @@ const ContentDisplay = ({ items, view = 'list', columns = [] }) => { // Added co
               ))}
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+          <tbody className="divide-y divide-[var(--sk-shadow-light)] dark:divide-[var(--sk-shadow-dark)]">
             {items.map((item, index) => ( 
               <ListItem 
                 key={item.id || item.title || index} 
@@ -49,7 +49,7 @@ const ContentDisplay = ({ items, view = 'list', columns = [] }) => { // Added co
     );
   }
 
-  return <p className="text-red-500">Unknown view type selected.</p>;
+  return <p className="text-[var(--accent-color)]">Unknown view type selected.</p>;
 };
 
 export default ContentDisplay;

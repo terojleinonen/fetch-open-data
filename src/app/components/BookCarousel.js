@@ -46,7 +46,7 @@ const BookCarousel = () => {
   }
 
   if (error) {
-    return <div className="text-center p-10 text-red-500">Error loading books: {error}</div>;
+    return <div className="text-center p-10 text-[var(--accent-color)]">Error loading books: {error}</div>;
   }
 
   if (books.length === 0) {
@@ -73,8 +73,8 @@ const BookCarousel = () => {
                     className="object-contain rounded-lg shadow-lg"
                   />
                 ) : (
-                  <div className="w-32 h-48 bg-gray-200 flex items-center justify-center rounded-lg shadow-lg">
-                    <span className="text-xs text-gray-500">No Image</span>
+                   <div className="w-32 h-48 bg-[var(--sk-shadow-light)] dark:bg-[var(--sk-shadow-dark)] flex items-center justify-center rounded-lg shadow-lg">
+                     <span className="text-xs text-[var(--text-color)] opacity-70">No Image</span>
                   </div>
                 )}
                 <p className="mt-2 text-center text-sm font-semibold">{book.volumeInfo.title}</p>

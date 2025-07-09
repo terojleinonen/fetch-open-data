@@ -22,7 +22,7 @@ const AboutStephenKing = () => {
               height={375}
               className="rounded-lg shadow-lg mx-auto md:mx-0"
             />
-            <figcaption className="text-center text-sm mt-2 text-gray-600">
+            <figcaption className="text-center text-sm mt-2 text-[var(--text-color)] opacity-80">
               Stephen King in 2024. Image from Wikipedia.
             </figcaption>
           </figure>
@@ -40,14 +40,13 @@ const AboutStephenKing = () => {
         </div>
       </div>
       </div> {/* Closing details-box div */}
-      <div className="mt-8 pt-4 border-t border-gray-300 text-center">
+      <div className="mt-8 pt-4 border-t border-[var(--border-color)] text-center">
         <p className="text-md mb-2">
           For more information, visit the{' '}
           <a
             href="https://en.wikipedia.org/wiki/Stephen_King"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-500 hover:underline"
           >
             Stephen King Wikipedia page
           </a>
@@ -59,7 +58,6 @@ const AboutStephenKing = () => {
             href="https://stephenking.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-500 hover:underline"
           >
             StephenKing.com
           </a>

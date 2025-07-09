@@ -20,10 +20,10 @@ export default function AdaptedWorksListClient({ adaptations: initialAdaptations
       label: 'Based On',
       render: (item) => {
         if (!item.originalWorkTitle) {
-          return <span className="text-gray-500 dark:text-gray-400">-</span>;
+          return <span className="text-[var(--text-color)] opacity-70">-</span>;
         }
         if (item.originalWorkLink) {
-          const commonLinkClasses = "hover:underline text-sky-600 dark:text-sky-400";
+          const commonLinkClasses = "hover:underline"; // Link color will be inherited from global 'a'
           if (item.originalWorkLink.startsWith('/')) {
             return (
               <Link href={item.originalWorkLink} className={commonLinkClasses}>
@@ -32,10 +32,10 @@ export default function AdaptedWorksListClient({ adaptations: initialAdaptations
             );
           } else if (item.originalWorkLink.startsWith('http')) {
             return (
-              <a 
-                href={item.originalWorkLink} 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href={item.originalWorkLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={commonLinkClasses}
               >
                 {item.originalWorkTitle}
