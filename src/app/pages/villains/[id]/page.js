@@ -47,7 +47,6 @@ export default async function VillainDetailPage({ params }) {
           {/* Details (Right Column on MD+) */}
           <div className="md:w-2/3"> {/* Takes 2/3 width on medium screens, full on small */}
             <h1 className="text-3xl font-bold mb-4">{villain.name ? villain.name : 'Villain Detail'}</h1>
-            <p className="mb-2"><b>ID:</b> {params.id}</p>
             {villain.gender && <p className="mb-2"><b>Gender:</b> {villain.gender}</p>}
             {villain.status && <p className="mb-2"><b>Status:</b> {villain.status}</p>}
             {villain.notes && villain.notes.length > 0 && (
