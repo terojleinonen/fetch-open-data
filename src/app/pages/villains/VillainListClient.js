@@ -18,7 +18,8 @@ export default function VillainListClient({ initialVillains }) {
 
   const villainColumns = [
     { key: 'name', label: 'Name', isLink: true },
-    { key: 'statusDisplay', label: 'Status' }
+    { key: 'statusDisplay', label: 'Status' },
+    { key: 'appearances', label: 'Book Appearances' }
   ];
 
   const uniqueStatuses = useMemo(() => {
@@ -41,13 +42,23 @@ export default function VillainListClient({ initialVillains }) {
       items = items.filter(villain => villain.status === selectedStatus);
     }
 
-    let transformedItems = items.map(villain => ({
+    let transformedItems = items.map(villain => {
+      const bookTitles = villain.books?.map(book => book.title).join(', ') || '';
+      const shortTitles = villain.shorts?.map(short => short.title).join(', ') || '';
+      let appearances = [bookTitles, shortTitles].filter(Boolean).join(', ');
+      if (!appearances) {
+        appearances = 'N/A';
+      }
+
+      return {
         id: villain.id,
         // Use 'name' for the 'name' column key, and ensure it's what `isLink` uses
         name: villain.name || "Unnamed Villain",
         statusDisplay: villain.status || 'N/A',
+        appearances: appearances,
         linkUrl: `/pages/villains/${villain.id}`,
-    }));
+      };
+    });
 
     if (sortConfig.key) {
       transformedItems.sort((a, b) => {
