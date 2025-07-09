@@ -66,7 +66,6 @@ describe('NavigationBar', () => {
         expect(screen.getByRole('link', { name: /^shorts$/i })).toBeInTheDocument();
         expect(screen.getByRole('link', { name: /^villains$/i })).toBeInTheDocument();
         expect(screen.getByRole('link', { name: /google books/i })).toBeInTheDocument(); // Check for GOOGLE BOOKS
-        expect(screen.getByRole('link', { name: /about stephen king/i })).toBeInTheDocument(); // Check for ABOUT STEPHEN KING
     });
   });
 });

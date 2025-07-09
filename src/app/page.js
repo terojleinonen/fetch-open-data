@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import BookCarousel from './components/BookCarousel'; // Import the carousel component
+import AboutStephenKing from './pages/about-stephen-king/page'; // Import the Kinggraphy component
 
 // Data for the links and summaries
 const pageLinks = [
@@ -8,7 +9,7 @@ const pageLinks = [
   { href: "/pages/adapted-works", title: "ADAPTED WORKS", summary: "Explore adaptations of Stephen King's works." },
   { href: "/pages/villains", title: "VILLAINS", summary: "Delve into the dark world of Stephen King's most memorable villains." },
   { href: "/pages/google-books", title: "GOOGLE BOOKS", summary: "Search and browse Stephen King's works available on Google Books." },
-  { href: "/pages/about-stephen-king", title: "KINGGRAPHY", summary: "Learn more about the life and career of Stephen King." }, // Updated title and summary
+  // Removed Kinggraphy link as it will be displayed directly on the home page
   { href: "https://stephenking.com", title: "STEPHENKING.COM", summary: "Visit the official website for the latest news and updates.", isExternal: true },
 ];
 
@@ -21,6 +22,11 @@ export default function Page() {
     >
       {/* Book Carousel */}
       <BookCarousel />
+
+      {/* Kinggraphy Content */}
+      <div className="my-8 w-full max-w-4xl"> {/* Added margin for spacing and max-width */}
+        <AboutStephenKing />
+      </div>
 
       {/* Links Container */}
       <div className="w-full max-w-2xl mt-8"> {/* Added margin-top for spacing */}
