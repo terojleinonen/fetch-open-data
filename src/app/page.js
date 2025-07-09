@@ -1,16 +1,40 @@
-import Link from 'next/link';
 import BookCarousel from './components/BookCarousel'; // Import the carousel component
 import AboutStephenKing from './pages/about-stephen-king/page'; // Import the Kinggraphy component
+import PageLinks from './components/PageLinks'; // Import the new PageLinks component
 
 // Data for the links and summaries
 const pageLinks = [
-  { href: "/pages/books", title: "BOOKS", summary: "Explore a comprehensive list of Stephen King's novels." },
-  { href: "/pages/shorts", title: "SHORTS", summary: "Discover Stephen King's captivating short stories and novellas." },
-  { href: "/pages/adapted-works", title: "ADAPTED WORKS", summary: "Explore adaptations of Stephen King's works." },
-  { href: "/pages/villains", title: "VILLAINS", summary: "Delve into the dark world of Stephen King's most memorable villains." },
-  { href: "/pages/google-books", title: "GOOGLE BOOKS", summary: "Search and browse Stephen King's works available on Google Books." },
-  // Removed Kinggraphy link as it will be displayed directly on the home page
-  { href: "https://stephenking.com", title: "STEPHENKING.COM", summary: "Visit the official website for the latest news and updates.", isExternal: true },
+  {
+    href: "/pages/books",
+    title: "BOOKS",
+    summary: "This section presents a curated list of Stephen King's novels, sourced from various literary databases and fan wikis. The data is processed to provide you with a comprehensive overview of each novel, including publication dates and summaries. Here, you can explore King's extensive bibliography, filter books by genre or publication year, and find detailed information about each novel."
+  },
+  {
+    href: "/pages/shorts",
+    title: "SHORTS",
+    summary: "Discover Stephen King's captivating short stories and novellas. This information is compiled from official bibliographies and respected fan resources. Each entry is organized to help you easily find individual stories or collections. You can browse through a wide array of King's shorter fiction, search for specific titles, and learn more about the collections in which they appear."
+  },
+  {
+    href: "/pages/adapted-works",
+    title: "ADAPTED WORKS",
+    summary: "Explore adaptations of Stephen King's works across various media, including films, TV series, and comics. The information is gathered from film databases, official announcements, and entertainment news sites. It's categorized by media type for easy navigation. Users can discover the different ways King's stories have been brought to life, compare adaptations, and find details about their release and reception."
+  },
+  {
+    href: "/pages/villains",
+    title: "VILLAINS",
+    summary: "Delve into the dark world of Stephen King's most memorable villains. Information is drawn from analyses of his books and films, focusing on character studies and critical interpretations. The content is structured to provide insights into the motivations and impacts of these characters. You can learn about the antagonists that define King's horror, understand their roles in the narratives, and explore their cultural significance."
+  },
+  {
+    href: "/pages/google-books",
+    title: "GOOGLE BOOKS",
+    summary: "Search and browse Stephen King's works available on Google Books. This feature utilizes the Google Books API to fetch real-time data. The information is presented to allow for direct searching and exploration of available titles. Users can look up specific books, preview content where available, and access links to purchase or borrow from Google Books."
+  },
+  {
+    href: "https://stephenking.com",
+    title: "STEPHENKING.COM",
+    summary: "Visit the official Stephen King website for the latest news, tour dates, and exclusive content. This site is the primary source of official information directly from Stephen King and his team. It's regularly updated with fresh content. Users can find official announcements, read blog posts, and get information about upcoming projects straight from the source.",
+    isExternal: true
+  },
 ];
 
 // Page component - Renders the main page with title and navigation links with summaries.
@@ -28,35 +52,8 @@ export default function Page() {
         <AboutStephenKing />
       </div>
 
-      {/* Links Container */}
-      <div className="w-full max-w-2xl mt-8"> {/* Added margin-top for spacing */}
-        <div className="space-y-6"> {/* Vertical spacing between link items */}
-          {pageLinks.map((link) => (
-            <div key={link.title} className="flex flex-col items-start"> {/* Each link item: title + summary */}
-              {link.isExternal ? (
-                <a
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="home-link text-2xl font-semibold text-[var(--link-color)] hover:text-[var(--link-hover-color)] hover:underline"
-                >
-                  {link.title} <span className="text-sm opacity-75">(Official Site)</span>
-                </a>
-              ) : (
-                <Link
-                  href={link.href}
-                  className="home-link text-2xl font-semibold text-[var(--link-color)] hover:text-[var(--link-hover-color)] hover:underline"
-                >
-                  {link.title}
-                </Link>
-              )}
-              <p className="text-md text-gray-400 mt-1 ml-0.5"> {/* Summary text style, left-aligned */}
-                {link.summary}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
+      {/* PageLinks Component */}
+      <PageLinks pageLinks={pageLinks} />
     </div>
   );
 }
