@@ -1,5 +1,6 @@
 // src/app/components/ImageItem.js
 import Image from 'next/image'; // Using next/image for optimization
+import Link from 'next/link'; // Import Link from next/link
 
 const ImageItem = ({ item }) => {
   const { title, imageUrl, linkUrl } = item;
@@ -32,9 +33,9 @@ const ImageItem = ({ item }) => {
 
   if (linkUrl) {
     return (
-      <a href={linkUrl} target="_blank" rel="noopener noreferrer" className="block focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 rounded-lg">
+      <Link href={linkUrl} className="block focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 rounded-lg">
         {content}
-      </a>
+      </Link>
     );
   }
 
