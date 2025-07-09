@@ -31,7 +31,7 @@ export default async function ShortStoryDetailPage({ params }) {
 
   return (
     <div className="container mx-auto p-4">
-      <Link href="/pages/shorts" className="text-blue-500 hover:underline mb-6 inline-block">
+      <Link href="/pages/shorts" className="mb-6 inline-block">
         &larr; Back to Shorts List
       </Link>
       <div className="details-box">

@@ -35,7 +35,7 @@ export default async function BookDetailPage({ params }) {
       <div className="container mx-auto p-4 py-8 text-center">
         <h1 className="text-3xl font-bold text-[var(--accent-color)] mb-4">Book Not Found</h1>
         <p className="text-[var(--text-color)] mb-6">Sorry, we couldn&apos;t find the book you were looking for.</p>
-        <Link href="/pages/books" className="inline-block bg-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] text-white font-semibold py-2 px-4 rounded shadow transition-colors">
+        <Link href="/pages/books" className="inline-block bg-[var(--accent-color)] hover:bg-[var(--hover-accent-color)] text-[var(--sk-text-dark)] font-semibold py-2 px-4 rounded shadow transition-colors">
           Back to Books List
         </Link>
       </div>
@@ -56,7 +56,7 @@ export default async function BookDetailPage({ params }) {
 
   return (
     <div className="container mx-auto p-4 md:p-8">
-      <Link href="/pages/books" className="text-blue-500 hover:underline mb-6 inline-block">
+      <Link href="/pages/books" className="mb-6 inline-block">
           &larr; Back to Books List
         </Link>
       <div className="details-box">
@@ -73,7 +73,7 @@ export default async function BookDetailPage({ params }) {
                   priority
                 />
               ) : (
-                <div className="w-full h-full flex items-center justify-center bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400 rounded-lg shadow-md">
+                <div className="w-full h-full flex items-center justify-center bg-[var(--sk-shadow-light)] dark:bg-[var(--sk-shadow-dark)] text-[var(--text-color)] opacity-70 rounded-lg shadow-md">
                   No Cover Available
                 </div>
               )}
@@ -82,10 +82,10 @@ export default async function BookDetailPage({ params }) {
 
         <div className="md:w-2/3 md:pl-8">
           <h1 className="text-3xl md:text-4xl font-bold text-[var(--accent-color)] mb-2">{book.Title}</h1>
-          {book.subtitle && <p className="text-xl text-gray-600 dark:text-gray-400 mb-3">{book.subtitle}</p>}
+          {book.subtitle && <p className="text-xl text-[var(--text-color)] opacity-80 mb-3">{book.subtitle}</p>}
 
           {book.authors && book.authors.length > 0 && (
-            <p className="text-lg text-gray-700 dark:text-gray-300 mb-4">
+            <p className="text-lg text-[var(--text-color)] mb-4">
               By: <span className="font-medium">{book.authors.join(', ')}</span>
             </p>
           )}
@@ -139,7 +139,7 @@ export default async function BookDetailPage({ params }) {
       </div>
 
       {filteredNotes.length > 0 && (
-        <div className="mt-8 pt-6 border-t border-gray-300 dark:border-gray-600">
+        <div className="mt-8 pt-6 border-t border-[var(--border-color)]">
           <h2 className="text-2xl font-semibold text-[var(--accent-color)] mb-3">Notes</h2>
           <ul className="list-disc pl-5 space-y-1 text-sm">
             {filteredNotes.map((note, index) => (
@@ -150,7 +150,7 @@ export default async function BookDetailPage({ params }) {
       )}
 
       {book.villains && book.villains.length > 0 && (
-        <div className="mt-8 pt-6 border-t border-gray-300 dark:border-gray-600">
+        <div className="mt-8 pt-6 border-t border-[var(--border-color)]">
           <h2 className="text-2xl font-semibold text-[var(--accent-color)] mb-3">Villains in this Book</h2>
           <ul className="list-disc pl-5 space-y-1">
             {book.villains.map(villain => {
@@ -178,7 +178,7 @@ export default async function BookDetailPage({ params }) {
         </div>
       )}
       {(!book.villains || book.villains.length === 0) && bookData?.data && (
-        <div className="mt-8 pt-6 border-t border-gray-300 dark:border-gray-600">
+        <div className="mt-8 pt-6 border-t border-[var(--border-color)]">
           <h2 className="text-2xl font-semibold text-[var(--accent-color)] mb-3">Villains in this Book</h2>
           <p className="text-sm">No villains listed for this book.</p>
         </div>

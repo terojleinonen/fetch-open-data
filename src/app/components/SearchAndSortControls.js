@@ -58,7 +58,7 @@ export default function SearchAndSortControls({
             <button
               key={option.key}
               onClick={() => onRequestSort(option.key)}
-              className="flex items-center px-3 py-2 text-sm border border-[var(--button-border)] rounded-md hover:bg-[var(--button-hover-background)] text-[var(--button-text)] bg-[var(--button-background)] transition-colors"
+              className="flex items-center px-3 py-2 text-sm border border-[var(--button-border)] rounded-md hover:bg-[var(--button-hover-background)] hover:text-[var(--text-on-accent)] text-[var(--button-text)] bg-[var(--button-background)] transition-colors"
             >
               {option.label} {getSortLabel(option)}
               {getSortIcon(option.key)}

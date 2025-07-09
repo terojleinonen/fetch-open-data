@@ -20,14 +20,14 @@ export default async function VillainDetailPage({ params }) {
 
   return (
     <div className="container mx-auto p-4">
-      <Link href="/pages/villains" className="text-blue-500 hover:underline mb-6 inline-block">
+      <Link href="/pages/villains" className="mb-6 inline-block">
             &larr; Back to Villains List
           </Link>
       <div className="details-box">
         <div className="md:flex md:space-x-6"> {/* Flex container for medium screens and up */}
           {/* Image Placeholder (Left Column on MD+) */}
           <div className="md:w-1/3 mb-4 md:mb-0"> {/* Takes 1/3 width on medium screens, full on small */}
-            <div className="relative w-full aspect-[4/3] bg-neutral-700 overflow-hidden rounded-lg flex items-center justify-center">
+            <div className="relative w-full aspect-[4/3] bg-[var(--sk-shadow-light)] dark:bg-[var(--sk-shadow-dark)] overflow-hidden rounded-lg flex items-center justify-center">
               {villain.image_url ? (
                 <Image
                   src={villain.image_url}
@@ -37,7 +37,7 @@ export default async function VillainDetailPage({ params }) {
                   className="rounded-lg"
                 />
               ) : (
-                <div className="w-full h-full flex items-center justify-center text-neutral-500 text-sm">
+                <div className="w-full h-full flex items-center justify-center text-[var(--text-color)] opacity-70 text-sm">
                   No image available
                 </div>
               )}

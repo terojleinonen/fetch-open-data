@@ -38,8 +38,8 @@
   --nav-link-focus-ring-light: var(--sk-accent-light);
 
   /* Navigation Link Hover Background (using accent) */
-  --nav-link-hover-bg-dark: var(--sk-hover-accent-dark);
-  --nav-link-hover-bg-light: var(--sk-hover-accent-light);
+  --nav-link-hover-bg-dark: #FFFFFF; /* Changed to white */
+  --nav-link-hover-bg-light: #FFFFFF; /* Changed to white */
 
 
   /* Map Marker colors - can be adapted or kept generic if SK site doesn't have maps */
@@ -57,13 +57,34 @@
   --kitab-button-background-light: #FFFFFF; /* White background */
   --kitab-button-text-light: #000000;       /* Black text */
   --kitab-button-border-light: #000000;     /* Black border */
-  --kitab-button-hover-background-light: #f0f0f0; /* Light gray hover */
+  --kitab-button-hover-background-light: var(--sk-hover-accent-light); /* Changed to accent */
 
   /* Button specific styles for dark theme */
   --kitab-button-background-dark: #000000;  /* Black background */
   --kitab-button-text-dark: #FFFFFF;        /* White text */
   --kitab-button-border-dark: #FFFFFF;      /* White border */
-  --kitab-button-hover-background-dark: #333333;  /* Dark gray hover */
+  --kitab-button-hover-background-dark: var(--sk-hover-accent-dark);  /* Changed to accent */
+
+  /* Link colors */
+  --sk-link-dark: var(--sk-text-dark); /* White for dark theme */
+  --sk-link-light: var(--sk-text-light); /* Black for light theme */
+
+  /* Border color */
+  --sk-border-dark: var(--sk-shadow-dark); /* Using shadow color for borders */
+  --sk-border-light: var(--sk-shadow-light); /* Using shadow color for borders */
+
+  /* List Row Hover colors */
+  --sk-row-hover-light: var(--sk-hover-accent-light); /* Changed to accent */
+  --sk-row-hover-dark: var(--sk-hover-accent-dark);   /* Changed to accent */
+
+  /* Control Active State colors */
+  --sk-control-active-bg-light: #e0e7ff; /* Light Indigo */
+  --sk-control-active-text-light: #3730a3; /* Dark Indigo */
+  --sk-control-active-bg-dark: #4338ca; /* Indigo */
+  --sk-control-active-text-dark: #c7d2fe; /* Light Indigo */
+
+  /* Text color for on-accent backgrounds */
+  --text-on-accent: #FFFFFF;
 }
 
 /* Default to dark theme */
@@ -99,6 +120,11 @@ body {
   --kitab-button-text: var(--kitab-button-text-dark);
   --kitab-button-border: var(--kitab-button-border-dark);
   --kitab-button-hover-background: var(--kitab-button-hover-background-dark);
+  --link-color: var(--sk-link-dark);
+  --border-color: var(--sk-border-dark);
+  --row-hover-bg: var(--sk-row-hover-dark);
+  --control-active-bg: var(--sk-control-active-bg-dark);
+  --control-active-text: var(--sk-control-active-text-dark);
 
   color: var(--text-color);
   background: var(--background-color);
@@ -139,6 +165,11 @@ body {
     --kitab-button-text: var(--kitab-button-text-light);
     --kitab-button-border: var(--kitab-button-border-light);
     --kitab-button-hover-background: var(--kitab-button-hover-background-light);
+  --link-color: var(--sk-link-light);
+  --border-color: var(--sk-border-light);
+  --row-hover-bg: var(--sk-row-hover-light);
+  --control-active-bg: var(--sk-control-active-bg-light);
+  --control-active-text: var(--sk-control-active-text-light);
 
     color: var(--text-color);
     background: var(--background-color);
@@ -224,6 +255,18 @@ body {
   0% { opacity: 0.05; }
   50% { opacity: 0.15; }
   100% { opacity: 0.05; }
+}
+
+/* Generic link styling */
+a {
+  color: var(--link-color);
+  text-decoration: none; /* Optional: remove underline by default */
+  /* transition: color 0.2s ease-in-out; */ /* Optional: keep if only color changes */
+}
+
+a:hover {
+  color: var(--hover-accent-color);
+  text-decoration: underline;
 }
 
 /* Apply the animation to the body's pseudo-element */
