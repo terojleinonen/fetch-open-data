@@ -25,18 +25,16 @@ export default function BookDetailsPage() {
       setLoading(true);
       setError(null);
       try {
-        // Note: You might need an API key for more requests or specific features.
-        const response = await fetch(
-          `https://www.googleapis.com/books/v1/volumes/${id}`
-        );
+        const response = await fetch(`/api/google-books-proxy?volumeId=${id}`);
         if (!response.ok) {
+          const errorData = await response.json().catch(() => ({ error: `HTTP error! status: ${response.statusText}` }));
           if (response.status === 404) {
-            throw new Error(`Book with ID ${id} not found.`);
+            throw new Error(`Book with ID ${id} not found. ${errorData.error || ''}`);
           }
-          throw new Error(`HTTP error! status: ${response.status}`);
+          throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        console.log('Google Book API Response (Details):', data);
+        console.log('Proxy API Response (BookDetails):', data);
         setBook(data);
       } catch (err) {
         console.error("Failed to fetch book details:", err);
@@ -63,6 +61,16 @@ export default function BookDetailsPage() {
 
   const { volumeInfo } = book;
 
+  // Helper function to ensure HTTPS and optionally remove &edge=curl
+  const getSecureImageUrl = (url) => {
+    if (!url) return null;
+    let secureUrl = url.replace(/^http:\/\//i, 'https://');
+    // secureUrl = secureUrl.replace(/&edge=curl/gi, ''); // Optionally remove &edge=curl
+    return secureUrl;
+  };
+
+  const imageUrl = getSecureImageUrl(volumeInfo.imageLinks?.large || volumeInfo.imageLinks?.medium || volumeInfo.imageLinks?.thumbnail || volumeInfo.imageLinks?.smallThumbnail);
+
   return (
     <div className="container mx-auto p-4">
       <Link href="/pages/google-books" className="text-blue-500 hover:underline mb-6 inline-block">
@@ -71,9 +79,9 @@ export default function BookDetailsPage() {
 
       <div className="details-box shadow-xl rounded-lg overflow-hidden md:flex">
         <div className="relative w-full md:w-1/3 h-96 p-4"> {/* Added position: relative and defined height */}
-          {volumeInfo.imageLinks?.large || volumeInfo.imageLinks?.medium || volumeInfo.imageLinks?.thumbnail ? (
+          {imageUrl ? (
             <Image
-              src={volumeInfo.imageLinks?.large || volumeInfo.imageLinks?.medium || volumeInfo.imageLinks?.thumbnail}
+              src={imageUrl}
               alt={`Cover of ${volumeInfo.title}`}
               fill
               style={{ objectFit: "contain" }}

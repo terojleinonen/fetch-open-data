@@ -4,6 +4,7 @@ import { NextResponse } from 'next/server';
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const q = searchParams.get('q');
+  const volumeId = searchParams.get('volumeId'); // New parameter for specific volume ID
   const maxResults = searchParams.get('maxResults') || '20';
   const startIndex = searchParams.get('startIndex') || '0';
   const langRestrict = searchParams.get('langRestrict');
@@ -12,41 +13,46 @@ export async function GET(request) {
   const orderBy = searchParams.get('orderBy') || 'relevance';
 
   const apiKey = process.env.GOOGLE_BOOKS_API_KEY;
-  console.log("Attempting to use Google Books API Key. Is it present?", !!apiKey); // Log whether the API key is found
-
-  if (!q) {
-    console.error("Query parameter 'q' is missing from the request.");
-    return NextResponse.json({ error: 'Query parameter "q" is required' }, { status: 400 });
-  }
+  console.log("Attempting to use Google Books API Key. Is it present?", !!apiKey);
 
   if (!apiKey) {
-    console.error("Google Books API Key (GOOGLE_BOOKS_API_KEY) is not configured in environment variables. Please check Vercel deployment settings.");
+    console.error("Google Books API Key (GOOGLE_BOOKS_API_KEY) is not configured in environment variables.");
     return NextResponse.json({ error: 'Server configuration error. API key missing.' }, { status: 500 });
   }
 
-  // Construct the API URL without the key for logging purposes
-  let logApiUrl = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=${encodeURIComponent(maxResults)}&startIndex=${encodeURIComponent(startIndex)}&orderBy=${encodeURIComponent(orderBy)}`;
-  if (langRestrict) {
-    logApiUrl += `&langRestrict=${encodeURIComponent(langRestrict)}`;
-  }
-  if (filter) {
-    logApiUrl += `&filter=${encodeURIComponent(filter)}`;
-  }
-  if (printType) {
-    logApiUrl += `&printType=${encodeURIComponent(printType)}`;
-  }
-  console.log("Constructed Google Books API URL (excluding key for security):", logApiUrl);
+  let apiUrl;
+  let logApiUrl;
 
-  let apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=${encodeURIComponent(maxResults)}&startIndex=${encodeURIComponent(startIndex)}&key=${apiKey}&orderBy=${encodeURIComponent(orderBy)}`;
+  if (volumeId) {
+    // Fetching a specific volume by ID
+    if (volumeId.trim() === '') {
+      console.error("Query parameter 'volumeId' is present but empty.");
+      return NextResponse.json({ error: 'Query parameter "volumeId" cannot be empty' }, { status: 400 });
+    }
+    logApiUrl = `https://www.googleapis.com/books/v1/volumes/${encodeURIComponent(volumeId)}`;
+    apiUrl = `${logApiUrl}?key=${apiKey}`;
+    console.log("Constructed Google Books API URL for specific volume (excluding key for security):", logApiUrl);
+  } else if (q) {
+    // Performing a search query
+    logApiUrl = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=${encodeURIComponent(maxResults)}&startIndex=${encodeURIComponent(startIndex)}&orderBy=${encodeURIComponent(orderBy)}`;
+    if (langRestrict) logApiUrl += `&langRestrict=${encodeURIComponent(langRestrict)}`;
+    if (filter) logApiUrl += `&filter=${encodeURIComponent(filter)}`;
+    if (printType) logApiUrl += `&printType=${encodeURIComponent(printType)}`;
 
-  if (langRestrict) {
-    apiUrl += `&langRestrict=${encodeURIComponent(langRestrict)}`;
-  }
-  if (filter) {
-    apiUrl += `&filter=${encodeURIComponent(filter)}`;
-  }
-  if (printType) {
-    apiUrl += `&printType=${encodeURIComponent(printType)}`;
+    apiUrl = `${logApiUrl}&key=${apiKey}`; // Add API key to the actual request URL
+    // Note: logApiUrl for search already includes other params, so we form apiUrl by adding the key.
+    // For safety, ensure all params are part of logApiUrl before adding key to apiUrl.
+    // Rebuilding apiUrl for search to be certain:
+    apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=${encodeURIComponent(maxResults)}&startIndex=${encodeURIComponent(startIndex)}&orderBy=${encodeURIComponent(orderBy)}`;
+    if (langRestrict) apiUrl += `&langRestrict=${encodeURIComponent(langRestrict)}`;
+    if (filter) apiUrl += `&filter=${encodeURIComponent(filter)}`;
+    if (printType) apiUrl += `&printType=${encodeURIComponent(printType)}`;
+    apiUrl += `&key=${apiKey}`;
+
+    console.log("Constructed Google Books API URL for search (excluding key for security):", logApiUrl);
+  } else {
+    console.error("Query parameter 'q' or 'volumeId' is required.");
+    return NextResponse.json({ error: 'Query parameter "q" or "volumeId" is required' }, { status: 400 });
   }
 
   try {
