@@ -76,8 +76,9 @@
   --sk-border-light: var(--sk-shadow-light); /* Using shadow color for borders */
 
   /* List Row Hover colors */
-  --sk-row-hover-light: var(--sk-hover-accent-light); /* Changed to accent */
-  --sk-row-hover-dark: var(--sk-hover-accent-dark);   /* Changed to accent */
+  --sk-row-hover-neutral-gray: #808080; /* Neutral gray for row hover */
+  --sk-row-hover-light: var(--sk-row-hover-neutral-gray);
+  --sk-row-hover-dark: var(--sk-row-hover-neutral-gray);
 
   /* Control Active State colors */
   --sk-control-active-bg-light: #e0e7ff; /* Light Indigo */
