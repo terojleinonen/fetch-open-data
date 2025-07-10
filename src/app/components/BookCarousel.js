@@ -12,16 +12,15 @@ const BookCarousel = () => {
 
   useEffect(() => {
     const fetchBooks = async () => {
+      setLoading(true);
       try {
-        // Fetch books by Stephen King from the Google Books API proxy
-        const response = await fetch('/api/google-books-proxy?q=Stephen%20King');
+        const response = await fetch('/api/google-books-proxy?q=Stephen%20King&maxResults=10'); // Fetch 10 results
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        // Filter out items without imageLinks or title to avoid errors
-        const validBooks = data.items.filter(book => book.volumeInfo.imageLinks?.thumbnail && book.volumeInfo.title);
-        setBooks(validBooks.slice(0, 10)); // Limiting to 10 books for the carousel
+        const validBooks = data.items?.filter(book => book.volumeInfo?.title) || [];
+        setBooks(validBooks);
       } catch (e) {
         setError(e.message);
         console.error("Failed to fetch books:", e);
@@ -33,74 +32,64 @@ const BookCarousel = () => {
     fetchBooks();
   }, []);
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % books.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + books.length) % books.length);
-  };
+  useEffect(() => {
+    if (books.length > 1) {
+      const timer = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % books.length);
+      }, 5000); // Change slide every 5 seconds
+      return () => clearInterval(timer); // Cleanup interval on component unmount
+    }
+  }, [books.length]);
 
   if (loading) {
-    return <div className="text-center p-10">Loading books...</div>;
+    return <div className="home-carousel-status text-center p-10">Loading books...</div>;
   }
 
   if (error) {
-    return <div className="text-center p-10 text-[var(--accent-color)]">Error loading books: {error}</div>;
+    return <div className="home-carousel-status text-center p-10 text-[var(--accent-color)]">Error loading books: {error}</div>;
   }
 
   if (books.length === 0) {
-    return <div className="text-center p-10">No books found.</div>;
+    return <div className="home-carousel-status text-center p-10">No books found.</div>;
   }
 
+  // The main container will get the 'home-carousel' class for styling.
+  // It needs a fixed height to contain the absolutely positioned items.
+  // CSS for 'home-carousel' will need to be adjusted from flex-scroll to relative positioning.
   return (
-    <div className="relative w-full max-w-2xl mx-auto my-8">
-      <h2 className="text-3xl font-bold text-center mb-6">Stephen King Books</h2>
-      <div className="overflow-hidden relative h-96"> {/* Fixed height for carousel items */}
-        {books.map((book, index) => (
+    <div className="home-carousel">
+      {books.map((book, index) => {
+        const bookInfo = book.volumeInfo;
+        const thumbnailUrl = bookInfo.imageLinks?.thumbnail?.replace("http://", "https://");
+        const placeholderText = encodeURIComponent(bookInfo.title) || "Book+Cover";
+        const imageSrc = thumbnailUrl || `https://via.placeholder.com/200x300.png?text=${placeholderText}`;
+
+        return (
           <div
-            key={book.id}
-            className={`absolute inset-0 transition-opacity duration-500 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}
+            key={book.id || index}
+            className={`home-carousel-item slideshow-item ${index === currentIndex ? 'active' : ''}`}
           >
-            <Link href={`/pages/google-books/${book.id}`} legacyBehavior>
-              <a className="flex flex-col items-center justify-center h-full">
-                {book.volumeInfo.imageLinks?.thumbnail ? (
-                  <Image
-                    src={book.volumeInfo.imageLinks.thumbnail.replace("http://", "https://")} // Ensure HTTPS
-                    alt={book.volumeInfo.title}
-                    width={128} // Standardized width
-                    height={192} // Standardized height
-                    className="object-contain rounded-lg shadow-lg"
-                  />
-                ) : (
-                   <div className="w-32 h-48 bg-[var(--sk-shadow-light)] dark:bg-[var(--sk-shadow-dark)] flex items-center justify-center rounded-lg shadow-lg">
-                     <span className="text-xs text-[var(--text-color)] opacity-70">No Image</span>
-                  </div>
-                )}
-                <p className="mt-2 text-center text-sm font-semibold">{book.volumeInfo.title}</p>
+            <Link href={`/pages/google-books/${book.id}`} passHref legacyBehavior>
+              <a className="slideshow-link-content">
+                <Image
+                  src={imageSrc}
+                  alt={bookInfo.title || 'Book cover'}
+                  width={200}
+                  height={300}
+                  className="home-carousel-image"
+                  style={{ objectFit: 'contain' }} // Changed to 'contain' to ensure full title on placeholder is visible
+                  onError={(e) => {
+                    // Fallback if image loading fails (e.g. broken thumbnail URL)
+                    e.currentTarget.src = `https://via.placeholder.com/200x300.png?text=${placeholderText}+Error`;
+                  }}
+                />
+                <div className="home-carousel-caption">{bookInfo.title}</div>
               </a>
             </Link>
           </div>
-        ))}
-      </div>
-      {books.length > 1 && (
-        <>
-          <button
-            onClick={prevSlide}
-            className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 focus:outline-none"
-            aria-label="Previous book"
-          >
-            &#10094;
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 focus:outline-none"
-            aria-label="Next book"
-          >
-            &#10095;
-          </button>
-        </>
-      )}
+        );
+      })}
+      {/* Optional: Add manual controls or indicators if desired later */}
     </div>
   );
 };
