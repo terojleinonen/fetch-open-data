@@ -1,6 +1,6 @@
 import Image from 'next/image';
 // Link and PageTitle are not used in the new version based on the mockup for this specific component
-// import Link from 'next/link';
+// import Link from 'next/link'; 
 // import PageTitle from '@/app/components/PageTitle';
 
 const AboutStephenKing = () => {
