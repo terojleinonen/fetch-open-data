@@ -63,7 +63,7 @@ const BookCarousel = () => {
         const thumbnailUrl = bookInfo.imageLinks?.thumbnail?.replace("http://", "https://");
         const placeholderText = encodeURIComponent(bookInfo.title) || "Book+Cover";
         const imageSrc = thumbnailUrl || `https://via.placeholder.com/200x300.png?text=${placeholderText}`;
-
+        
         return (
           <div
             key={book.id || index}

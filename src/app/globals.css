@@ -546,8 +546,8 @@ body {
 @media (prefers-color-scheme: light) {
   /* Ensure body text color is correctly applied in light mode if sections don't override */
   body {
-    /* color: var(--sk-text-light);
-       background-color: var(--sk-background-light);
+    /* color: var(--sk-text-light); 
+       background-color: var(--sk-background-light); 
        These are already set by the general light theme.
     */
   }
@@ -584,7 +584,7 @@ body {
   .home-about-text h2 {
     border-bottom-color: var(--sk-accent-light, #FF0000);
   }
-
+  
   .home-pages-section {
     background-color: var(--sk-background-light, #FFFFFF);
     color: var(--sk-text-light, #000000);
