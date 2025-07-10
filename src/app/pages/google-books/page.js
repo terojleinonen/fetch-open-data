@@ -248,7 +248,7 @@ export default function GoogleBooksPage() {
                 <div className="relative w-full h-72 flex items-center justify-center bg-neutral-700 overflow-hidden">
                   {book.volumeInfo.imageLinks?.thumbnail ? (
                   <Image
-                    src={book.volumeInfo.imageLinks.thumbnail}
+                    src={book.volumeInfo.imageLinks.thumbnail.replace(/^http:\/\//i, 'https://')}
                     alt={book.volumeInfo.title}
                     fill
                     style={{ objectFit: "contain" }}
