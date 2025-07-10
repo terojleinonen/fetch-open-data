@@ -24,7 +24,7 @@ const AboutStephenKing = () => {
       <div className="home-about-text">
         <h2>About Stephen King</h2>
         {/* Using the text from the mockup */}
-        <p>Stephen King is an American author known for his prolific works in horror, supernatural fiction, suspense, and fantasy. With dozens of best-selling novels, he has earned the title "King of Horror." Many of his books have been adapted into acclaimed movies and television series, cementing his place in pop culture history.</p>
+        <p>Stephen King is an American author known for his prolific works in horror, supernatural fiction, suspense, and fantasy. With dozens of best-selling novels, he has earned the title &quot;King of Horror.&quot; Many of his books have been adapted into acclaimed movies and television series, cementing his place in pop culture history.</p>
       </div>
       {/* Links to Wikipedia and official site are removed as they are not in the mockup's "About" section design */}
     </section>
