@@ -37,13 +37,7 @@ const homePageCards = [
 ];
 
 export default function Page() {
-  // Carousel items data, updated with placeholder.com URLs
-  const carouselItemsData = [
-    { imgSrc: "https://via.placeholder.com/200x300.png?text=Carrie+(1974)", alt: "Carrie Book Cover", caption: "Carrie (1974)" },
-    { imgSrc: "https://via.placeholder.com/200x300.png?text=The+Shining+(1977)", alt: "The Shining Book Cover", caption: "The Shining (1977)" },
-    { imgSrc: "https://via.placeholder.com/200x300.png?text=It+(1986)", alt: "It Book Cover", caption: "It (1986)" },
-    { imgSrc: "https://via.placeholder.com/200x300.png?text=Misery+(1987)", alt: "Misery Book Cover", caption: "Misery (1987)" },
-  ];
+  // carouselItemsData is no longer needed here as BookCarousel fetches its own data.
 
   return (
     <>
@@ -51,7 +45,7 @@ export default function Page() {
         <h1>Stephen King Universe</h1>
       </header>
 
-      <BookCarousel items={carouselItemsData} />
+      <BookCarousel /> {/* items prop removed */}
       <AboutStephenKing />
       <PageLinks cards={homePageCards} />
 

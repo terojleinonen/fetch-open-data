@@ -390,23 +390,51 @@ body {
 }
 
 .home-carousel {
-  display: flex;
-  overflow-x: auto;
-  gap: 20px;
-  padding: 20px;
+  position: relative; /* For absolute positioning of items */
+  min-height: 380px; /* Accommodate image (300px) + caption + padding. Adjust as needed. */
+  padding: 20px;    /* Keep padding for overall section spacing */
   background-color: #181818; /* Dark theme */
-  scroll-snap-type: x mandatory;
+  display: flex; /* To center the status messages or a single item if not using absolute children */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Hide non-active items if they were to overflow */
 }
 
-.home-carousel-item {
-  flex: 0 0 auto;
-  width: 200px;
+.home-carousel-status { /* For loading/error messages */
+  color: #f5f5f5; /* Ensure text is visible in dark theme */
+}
+
+.home-carousel-item.slideshow-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px; /* Width of the item */
   border-radius: 8px;
-  overflow: hidden;
-  scroll-snap-align: start;
-  position: relative;
-  background-color: #222; /* Dark theme */
+  /* overflow: hidden; /* This is on the item, good. */
+  background-color: #222; /* Dark theme item background */
   color: #f5f5f5; /* Text color for caption */
+  opacity: 0;
+  transition: opacity 0.75s ease-in-out;
+  display: flex; /* Ensure it's not display:none which would break transitions */
+  flex-direction: column; /* To stack image and caption */
+  align-items: center; /* Center content like caption text if it's narrower */
+}
+
+.home-carousel-item.slideshow-item.active {
+  opacity: 1;
+  z-index: 1; /* Ensure active item is on top if needed */
+}
+
+.slideshow-link-content { /* Class for the <a> tag */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit; /* Inherit text color from parent */
+  padding: 10px; /* Padding inside the item, around image and caption */
+  box-sizing: border-box; /* Ensure padding doesn't add to width */
+  width: 100%;
 }
 
 .home-carousel-image { /* Applied to Next/Image component via className */
@@ -518,8 +546,8 @@ body {
 @media (prefers-color-scheme: light) {
   /* Ensure body text color is correctly applied in light mode if sections don't override */
   body {
-    /* color: var(--sk-text-light);
-       background-color: var(--sk-background-light);
+    /* color: var(--sk-text-light); 
+       background-color: var(--sk-background-light); 
        These are already set by the general light theme.
     */
   }
@@ -531,12 +559,19 @@ body {
 
   .home-carousel {
     background-color: #e0e0e0; /* Light theme: a bit darker grey for contrast */
+    /* Other properties like position, display, min-height, overflow are inherited */
   }
 
-  .home-carousel-item {
+  .home-carousel-status { /* For loading/error messages in light theme */
+    color: var(--sk-text-light, #000000);
+  }
+
+  .home-carousel-item.slideshow-item {
+    /* background-color and color are for the item itself */
     background-color: #fdfdfd; /* Light theme: almost white */
-    border: 1px solid var(--sk-shadow-light, #FFD1D1);
+    border: 1px solid var(--sk-shadow-light, #FFD1D1); /* Optional: add border for items in light mode */
     color: var(--sk-text-light, #000000); /* Text color for caption */
+    /* Positioning, opacity, transition, display properties are inherited */
   }
 
   .home-about {
@@ -549,7 +584,7 @@ body {
   .home-about-text h2 {
     border-bottom-color: var(--sk-accent-light, #FF0000);
   }
-
+  
   .home-pages-section {
     background-color: var(--sk-background-light, #FFFFFF);
     color: var(--sk-text-light, #000000);
