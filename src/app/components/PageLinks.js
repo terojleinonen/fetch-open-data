@@ -1,52 +1,32 @@
 import Link from 'next/link';
 
-export default function PageLinks({ pageLinks }) {
+// Receives 'cards' prop which is an array of objects:
+// { title, description, buttonText, link }
+export default function PageLinks({ cards }) {
+  if (!cards || cards.length === 0) {
+    return (
+      <section className="home-pages-section">
+        <h2>Explore the Universe</h2>
+        <p>No pages to display.</p>
+      </section>
+    );
+  }
+
   return (
-    <div className="w-full max-w-2xl mt-8">
-      <div className="space-y-8"> {/* Increased spacing for better readability */}
-        {pageLinks.map((link) => (
-          <div key={link.title} className="flex flex-col items-start p-4 rounded-lg shadow-lg bg-[var(--details-box-bg)] bg-opacity-80 hover:shadow-xl transition-shadow duration-300 ease-in-out">
-            {link.isExternal ? (
-              <a
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-3xl font-bold text-[var(--link-color)] hover:text-[var(--hover-accent-color)] no-underline hover:underline" // Title style
-              >
-                {link.title} <span className="text-lg opacity-75">(Official Site)</span>
-              </a>
-            ) : (
-              <Link
-                href={link.href}
-                className="text-3xl font-bold text-[var(--link-color)] hover:text-[var(--hover-accent-color)] no-underline hover:underline" // Title style
-              >
-                {link.title}
-              </Link>
-            )}
-            <p className="text-md text-[var(--text-color)] opacity-90 mt-2"> {/* Summary text style */}
-              {link.summary}
-            </p>
-            {/* "Visit page" link */}
-            {link.isExternal ? (
-              <a
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 text-lg text-[var(--link-color)] hover:text-[var(--hover-accent-color)] underline"
-              >
-                Visit Site
-              </a>
-            ) : (
-              <Link
-                href={link.href}
-                className="mt-4 text-lg text-[var(--link-color)] hover:text-[var(--hover-accent-color)] underline"
-              >
-                Visit Page
-              </Link>
-            )}
+    <section className="home-pages-section">
+      <h2>Explore the Universe</h2>
+      <div className="home-pages-grid">
+        {cards.map((card, index) => (
+          <div className="home-page-card" key={index}>
+            <h3>{card.title}</h3>
+            <p>{card.description}</p>
+            {/* Assuming all links are internal for now as per mockup structure */}
+            <Link href={card.link} passHref>
+              <button>{card.buttonText}</button>
+            </Link>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
