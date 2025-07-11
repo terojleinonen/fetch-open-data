@@ -34,7 +34,7 @@ export default function Page() {
   // carouselItemsData is no longer needed here as BookCarousel fetches its own data.
 
   return (
-    <>
+    <div className="w-full md:w-3/4 md:mx-auto px-4 md:px-0">
       <header className="home-header">
         <h1>Stephen King Universe</h1>
       </header>
@@ -46,6 +46,6 @@ export default function Page() {
       <footer className="home-footer">
         &copy; {new Date().getFullYear()} Stephen King Universe Fan Page. All rights reserved.
       </footer>
-    </>
+    </div>
   );
 }
