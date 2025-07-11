@@ -86,7 +86,10 @@ const BookCarousel = () => {
                   className="home-carousel-image"
                   style={{ objectFit: 'contain' }}
                   onError={(e) => {
-                    e.currentTarget.src = `https://via.placeholder.com/200x300.png?text=${encodeURIComponent(book.Title || "Book Cover")}+Error`;
+                    // Prevent infinite loop if placeholder itself fails
+                    if (!e.currentTarget.src.includes('via.placeholder.com')) {
+                      e.currentTarget.src = `https://via.placeholder.com/200x300.png?text=${encodeURIComponent(book.Title || "Book Cover")}+Error`;
+                    }
                   }}
                 />
                 <div className="home-carousel-caption">{book.Title}</div>
