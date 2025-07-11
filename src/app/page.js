@@ -6,25 +6,25 @@ import PageLinks from './components/PageLinks';
 const homePageCards = [
   {
     title: "BOOKS",
-    description: "This section presents a curated list of Stephen King's novels, sourced from various literary databases and fan wikis. The data is processed to provide you with a comprehensive overview of each novel, including publication dates and summaries. Here, you can explore King's extensive bibliography, filter books by genre or publication year, and find detailed information about each novel.",
+    description: "Explore Stephen King's extensive bibliography of novels. Filter by genre or publication year and find detailed information on each captivating story.",
     buttonText: "Visit Page",
     link: "/pages/books"
   },
   {
     title: "SHORTS",
-    description: "Discover Stephen King's captivating short stories and novellas. This information is compiled from official bibliographies and respected fan resources. Each entry is organized to help you easily find individual stories or collections. You can browse through a wide array of King's shorter fiction, search for specific titles, and learn more about the collections in which they appear.",
+    description: "Discover a wide array of Stephen King's shorter fiction, including gripping short stories and novellas. Search for specific titles and learn about their collections.",
     buttonText: "Visit Page",
     link: "/pages/shorts"
   },
   {
     title: "ADAPTED WORKS",
-    description: "Explore adaptations of Stephen King's works across various media, including films, TV series, and comics. The information is gathered from film databases, official announcements, and entertainment news sites. It's categorized by media type for easy navigation. Users can discover the different ways King's stories have been brought to life, compare adaptations, and find details about their release and reception.",
+    description: "Browse adaptations of King's works across films, TV series, and comics. Discover how his iconic stories have been brought to life in different media.",
     buttonText: "Visit Page",
     link: "/pages/adapted-works"
   },
   {
     title: "VILLAINS",
-    description: "Delve into the dark world of Stephen King's most memorable villains. Information is drawn from analyses of his books and films, focusing on character studies and critical interpretations. The content is structured to provide insights into the motivations and impacts of these characters. You can learn about the antagonists that define King's horror, understand their roles in the narratives, and explore their cultural significance.",
+    description: "Delve into the dark world of King's most memorable antagonists. Understand their motivations, roles in the narratives, and their cultural significance in horror.",
     buttonText: "Visit Page",
     link: "/pages/villains"
   }
