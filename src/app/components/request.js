@@ -36,8 +36,12 @@ export default async function Request(parameter, options = {}) {
       data = await response.json();
       // console.log(`[INFO] Request: Primary API data received for "${parameter}"`);
 
-      if (data && data.data && (parameter === 'books' || parameter.startsWith('book/'))) {
-        // console.log(`[INFO] Request: Starting Google Books API processing for "${parameter}". Items: ${Array.isArray(data.data) ? data.data.length : 1}`);
+      // Only process with Google Books API if it's a single book request (e.g., "book/:id")
+      // For 'books' list, we skip this step to prevent mass API calls.
+      // The augmentation for list items will be handled differently (e.g., on demand by the client).
+      if (data && data.data && parameter.startsWith('book/')) {
+        // console.log(`[INFO] Request: Starting Google Books API processing for single book: "${parameter}".`);
+        // Ensure booksToProcess is always an array, even for a single book object.
         const booksToProcess = Array.isArray(data.data) ? data.data : [data.data];
         let booksProcessedCount = 0;
 
@@ -60,7 +64,6 @@ export default async function Request(parameter, options = {}) {
           } else if (book.Title) {
             googleBooksApiUrl = `https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.Title)}+inauthor:Stephen%20King`;
           } else {
-            // This path should ideally not be reached due to the check above
             book.coverImageUrl = "NO_COVER_AVAILABLE";
             book.largeCoverImageUrl = "NO_COVER_AVAILABLE";
             book.googleBooksDataAvailable = false;
@@ -70,8 +73,7 @@ export default async function Request(parameter, options = {}) {
           if (googleBooksApiUrl && apiKey) {
             googleBooksApiUrl += `&key=${apiKey}`;
           } else if (googleBooksApiUrl && !apiKey) {
-            if (!apiKeyWarningLogged) { // Log only once using module-scoped flag
-              // Updated warning message to reflect the correct environment variable name
+            if (!apiKeyWarningLogged) {
               console.warn("[WARN] Request: Google Books API key (GOOGLE_BOOKS_API_KEY) is missing for server-side requests in request.js. Requests may be rate-limited or fail.");
               apiKeyWarningLogged = true;
             }
@@ -119,9 +121,6 @@ export default async function Request(parameter, options = {}) {
               book.averageRating = volumeInfo.averageRating || book.averageRating;
               book.ratingsCount = volumeInfo.ratingsCount || book.ratingsCount;
               book.language = volumeInfo.language || book.language;
-              // Do not use volumeInfo.infoLink or volumeInfo.previewLink directly
-              // book.infoLink = volumeInfo.infoLink || book.infoLink;
-              // book.previewLink = volumeInfo.previewLink || book.previewLink;
 
               if (volumeInfo.publisher) book.Publisher = volumeInfo.publisher;
               if (volumeInfo.pageCount) book.Pages = volumeInfo.pageCount;
@@ -130,7 +129,6 @@ export default async function Request(parameter, options = {}) {
                  if (!isNaN(gbYear)) book.Year = gbYear;
               }
             } else {
-              // console.log(`[INFO] Request: No Google Books items found for "${bookIdentifier}"`);
               book.googleBooksDataAvailable = false;
               if (!book.coverImageUrl) book.coverImageUrl = "NO_COVER_AVAILABLE";
               if (!book.largeCoverImageUrl) book.largeCoverImageUrl = "NO_COVER_AVAILABLE";
@@ -144,7 +142,8 @@ export default async function Request(parameter, options = {}) {
         };
 
         const processPromises = booksToProcess.map(async (item) => {
-            if (typeof item === 'object' && item !== null && (item.ISBN || item.Title || parameter.startsWith('book/'))) {
+            // Ensure we only process items that are actual book objects with necessary identifiers
+            if (typeof item === 'object' && item !== null && (item.ISBN || item.Title)) {
                 await fetchGoogleBookDetails(item);
                 booksProcessedCount++;
             }
