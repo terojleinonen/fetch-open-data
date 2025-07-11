@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest"
+    "test": "jest",
+    "backup-data": "node scripts/backupData.js"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.10",
