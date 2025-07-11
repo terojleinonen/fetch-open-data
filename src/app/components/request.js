@@ -1,3 +1,5 @@
+let apiKeyWarningLogged = false; // Module-scoped flag
+
 export default async function Request(parameter, options = {}) {
     // skipGoogleBooks option removed, we will always try to augment book data.
     // Use GOOGLE_BOOKS_API_KEY (server-side environment variable)
@@ -59,10 +61,10 @@ export default async function Request(parameter, options = {}) {
           if (googleBooksApiUrl && apiKey) {
             googleBooksApiUrl += `&key=${apiKey}`;
           } else if (googleBooksApiUrl && !apiKey) {
-            if (!global.apiKeyWarningLogged) { // Log only once
+            if (!apiKeyWarningLogged) { // Log only once using module-scoped flag
               // Updated warning message to reflect the correct environment variable name
               console.warn("[WARN] Request: Google Books API key (GOOGLE_BOOKS_API_KEY) is missing for server-side requests in request.js. Requests may be rate-limited or fail.");
-              global.apiKeyWarningLogged = true;
+              apiKeyWarningLogged = true;
             }
           }
           
