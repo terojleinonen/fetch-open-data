@@ -14,8 +14,6 @@ const PageTitle = () => {
     title = 'Short Stories';
   } else if (pathname === '/pages/villains') {
     title = 'Villains';
-  } else if (pathname === '/pages/google-books') {
-    title = 'Google Books Explorer';
   } else if (pathname === '/pages/about-stephen-king') {
     title = 'Kinggraphy'; // Updated title
   } else if (pathname === '/pages/adapted-works') {
@@ -39,9 +37,6 @@ const PageTitle = () => {
   // This component will render titles for other pages.
   // If this PageTitle component is used in a layout that also includes the Google Books page,
   // returning null for that specific path prevents duplicate titles.
-  if (pathname === '/pages/google-books') {
-    return null;
-  }
 
   return (
     <h1 className={titleStyle}>

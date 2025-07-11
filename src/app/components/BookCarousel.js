@@ -10,26 +10,41 @@ const BookCarousel = () => {
   const [error, setError] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+import Request from './request'; // Import the Request component
+
+const MAX_CAROUSEL_BOOKS = 10;
+
+const BookCarousel = () => {
+  const [books, setBooks] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   useEffect(() => {
-    const fetchBooks = async () => {
+    const fetchCarouselBooks = async () => {
       setLoading(true);
       try {
-        const response = await fetch('/api/google-books-proxy?q=Stephen%20King&maxResults=10'); // Fetch 10 results
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+        const response = await Request('books'); // Use Request component to fetch all books
+        if (response.error) {
+          throw new Error(response.error);
         }
-        const data = await response.json();
-        const validBooks = data.items?.filter(book => book.volumeInfo?.title) || [];
-        setBooks(validBooks);
+        if (response.data && Array.isArray(response.data)) {
+          // Select a subset of books for the carousel, e.g., the first MAX_CAROUSEL_BOOKS
+          // Optionally, add randomization or curation logic here
+          const carouselBooks = response.data.slice(0, MAX_CAROUSEL_BOOKS);
+          setBooks(carouselBooks);
+        } else {
+          setBooks([]); // Set to empty array if no data or data is not an array
+        }
       } catch (e) {
         setError(e.message);
-        console.error("Failed to fetch books:", e);
+        console.error("Failed to fetch books for carousel:", e);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchBooks();
+    fetchCarouselBooks();
   }, []);
 
   useEffect(() => {
@@ -50,46 +65,43 @@ const BookCarousel = () => {
   }
 
   if (books.length === 0) {
-    return <div className="home-carousel-status text-center p-10">No books found.</div>;
+    return <div className="home-carousel-status text-center p-10">No books found for carousel.</div>;
   }
 
-  // The main container will get the 'home-carousel' class for styling.
-  // It needs a fixed height to contain the absolutely positioned items.
-  // CSS for 'home-carousel' will need to be adjusted from flex-scroll to relative positioning.
   return (
     <div className="home-carousel">
       {books.map((book, index) => {
-        const bookInfo = book.volumeInfo;
-        const thumbnailUrl = bookInfo.imageLinks?.thumbnail?.replace("http://", "https://");
-        const placeholderText = encodeURIComponent(bookInfo.title) || "Book+Cover";
-        const imageSrc = thumbnailUrl || `https://via.placeholder.com/200x300.png?text=${placeholderText}`;
+        // Data from Stephen King API (augmented by Request.js)
+        // SK API uses 'id', 'Title', and `request.js` adds 'coverImageUrl'
+        const imageSrc = book.coverImageUrl && book.coverImageUrl !== "NO_COVER_AVAILABLE"
+          ? book.coverImageUrl
+          : `https://via.placeholder.com/200x300.png?text=${encodeURIComponent(book.Title || "Book Cover")}`;
         
         return (
           <div
-            key={book.id || index}
+            key={book.id || index} // SK API provides 'id'
             className={`home-carousel-item slideshow-item ${index === currentIndex ? 'active' : ''}`}
           >
-            <Link href={`/pages/google-books/${book.id}`} passHref legacyBehavior>
+            {/* Link to the standard book detail page */}
+            <Link href={`/pages/books/${book.id}`} passHref legacyBehavior>
               <a className="slideshow-link-content">
                 <Image
                   src={imageSrc}
-                  alt={bookInfo.title || 'Book cover'}
+                  alt={book.Title || 'Book cover'}
                   width={200}
                   height={300}
                   className="home-carousel-image"
-                  style={{ objectFit: 'contain' }} // Changed to 'contain' to ensure full title on placeholder is visible
+                  style={{ objectFit: 'contain' }}
                   onError={(e) => {
-                    // Fallback if image loading fails (e.g. broken thumbnail URL)
-                    e.currentTarget.src = `https://via.placeholder.com/200x300.png?text=${placeholderText}+Error`;
+                    e.currentTarget.src = `https://via.placeholder.com/200x300.png?text=${encodeURIComponent(book.Title || "Book Cover")}+Error`;
                   }}
                 />
-                <div className="home-carousel-caption">{bookInfo.title}</div>
+                <div className="home-carousel-caption">{book.Title}</div>
               </a>
             </Link>
           </div>
         );
       })}
-      {/* Optional: Add manual controls or indicators if desired later */}
     </div>
   );
 };

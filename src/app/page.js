@@ -27,12 +27,6 @@ const homePageCards = [
     description: "Delve into the dark world of Stephen King's most memorable villains. Information is drawn from analyses of his books and films, focusing on character studies and critical interpretations. The content is structured to provide insights into the motivations and impacts of these characters. You can learn about the antagonists that define King's horror, understand their roles in the narratives, and explore their cultural significance.",
     buttonText: "Visit Page",
     link: "/pages/villains"
-  },
-  {
-    title: "GOOGLE BOOKS",
-    description: "Search and browse Stephen King's works available on Google Books. This feature utilizes the Google Books API to fetch real-time data. The information is presented to allow for direct searching and exploration of available titles. Users can look up specific books, preview content where available, and access links to purchase or borrow from Google Books.",
-    buttonText: "Visit Page",
-    link: "/pages/google-books"
   }
 ];
 
