@@ -130,10 +130,11 @@ export default async function BookDetailPage({ params }) {
             </div>
           )}
 
-          <div className="space-y-1 mb-6">
+          {/* Google Books links removed */}
+          {/* <div className="space-y-1 mb-6">
             {book.infoLink && <p><a href={book.infoLink} target="_blank" rel="noopener noreferrer" className="text-[var(--accent-color)] hover:text-[var(--hover-accent-color)] hover:underline text-sm">More Info on Google Books</a></p>}
             {book.previewLink && <p><a href={book.previewLink} target="_blank" rel="noopener noreferrer" className="text-[var(--accent-color)] hover:text-[var(--hover-accent-color)] hover:underline text-sm">Preview on Google Books</a></p>}
-          </div>
+          </div> */}
 
         </div>
       </div>
