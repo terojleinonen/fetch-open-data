@@ -1,17 +1,12 @@
 "use client";
 
-import React, { useState, useMemo, Suspense } from 'react';
+import React, { useState, useMemo, useEffect } from 'react'; // Added useEffect
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-// import Image from 'next/image'; // No longer directly used here, ContentDisplay handles images
 import SearchAndSortControls from '@/app/components/SearchAndSortControls';
-import ViewSwitcher from '@/app/components/ViewSwitcher'; // Added
-import ContentDisplay from '@/app/components/ContentDisplay'; // Added
-
-
-// const FilterPopup = dynamic(() => import('./FilterPopup'), { // FilterPopup component removed
-//   suspense: true,
-// });
+import ViewSwitcher from '@/app/components/ViewSwitcher';
+import ContentDisplay from '@/app/components/ContentDisplay';
+import Request from '@/app/components/request'; // Import Request
 
 /**
  * BookListClient component for displaying and filtering a list of books.
@@ -20,16 +15,24 @@ import ContentDisplay from '@/app/components/ContentDisplay'; // Added
  * @returns {JSX.Element} The BookListClient component.
  */
 export default function BookListClient({ initialBooks }) {
-   // State variable for the search term
-   const [searchTerm, setSearchTerm] = useState('');
-   // New sortConfig state for SearchAndSortControls
-   const [sortConfig, setSortConfig] = useState({ key: 'Title', direction: 'ascending' });
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortConfig, setSortConfig] = useState({ key: 'Title', direction: 'ascending' });
   const [selectedYear, setSelectedYear] = useState('');
   const [selectedPublisher, setSelectedPublisher] = useState('');
   const [minPages, setMinPages] = useState('');
   const [maxPages, setMaxPages] = useState('');
-  const [currentView, setCurrentView] = useState('grid'); // Added state for view, default to grid
+  const [currentView, setCurrentView] = useState('grid');
   const router = useRouter();
+
+  // Log initialBooks once to inspect its structure, especially coverImageUrls
+  useEffect(() => {
+    if (initialBooks && initialBooks.data) {
+      console.log("[BookListClient] Initial books data (first 5):", initialBooks.data.slice(0, 5).map(b => ({ id: b.id, title: b.Title, initialCover: b.coverImageUrl })));
+    }
+  }, [initialBooks]);
+
+  // State to hold detailed book data fetched on demand
+  const [detailedBooksData, setDetailedBooksData] = useState({});
 
   const bookColumns = [
     { key: 'title', label: 'Title', isLink: true },
@@ -37,30 +40,52 @@ export default function BookListClient({ initialBooks }) {
     { key: 'yearDisplay', label: 'Year' }
   ];
 
-  // Memoized lists for dropdowns (moved from FilterPopup)
   const uniqueYears = useMemo(() => {
     if (!initialBooks?.data || !Array.isArray(initialBooks.data)) return [];
     const years = new Set(initialBooks.data.map(book => book.Year).filter(Boolean));
-    return Array.from(years).sort((a, b) => b - a); // Descending order
+    return Array.from(years).sort((a, b) => b - a);
   }, [initialBooks]);
 
   const uniquePublishers = useMemo(() => {
     if (!initialBooks?.data || !Array.isArray(initialBooks.data)) return [];
     const publishers = new Set(initialBooks.data.map(book => book.Publisher).filter(Boolean));
-    return Array.from(publishers).sort(); // Ascending order
+    return Array.from(publishers).sort();
   }, [initialBooks]);
 
-  // Handler for resetting filters (moved and adapted from FilterPopup)
   const handleResetFilters = () => {
     setSelectedYear('');
     setSelectedPublisher('');
     setMinPages('');
     setMaxPages('');
-    // setSearchTerm(''); // Optionally reset search term as well
-    // setSortOrder('alphabetical'); // Optionally reset sort order
   };
 
-  // Memoized variable for filtered and processed books
+  // Function to fetch detailed data for a single book
+  const fetchBookDetails = async (bookId) => {
+    if (detailedBooksData[bookId] && !detailedBooksData[bookId].isLoading) {
+      // console.log(`[INFO] BookListClient: Data for book ${bookId} already fetched or being fetched.`);
+      return; // Already fetched or currently fetching
+    }
+
+    // console.log(`[INFO] BookListClient: Fetching details for book ${bookId}...`);
+    setDetailedBooksData(prev => ({ ...prev, [bookId]: { isLoading: true } })); // Mark as loading
+
+    try {
+      console.log(`[BookListClient] fetchBookDetails called for bookId: ${bookId}`);
+      const result = await Request(`book/${bookId}`); // Use the Request utility
+      if (result && result.data) {
+        console.log(`[BookListClient] Successfully fetched details for book ${bookId}. Cover: ${result.data.coverImageUrl}`);
+        setDetailedBooksData(prev => ({ ...prev, [bookId]: result.data }));
+      } else {
+        console.warn(`[BookListClient] No data returned for book ${bookId}. Result:`, JSON.stringify(result));
+        setDetailedBooksData(prev => ({ ...prev, [bookId]: { error: true, isLoading: false, errorMessage: result?.error || 'No data' } }));
+      }
+    } catch (error) {
+      console.error(`[BookListClient] Error fetching details for book ${bookId}:`, error);
+      setDetailedBooksData(prev => ({ ...prev, [bookId]: { error: true, isLoading: false, errorMessage: error.message } }));
+    }
+  };
+
+
   const processedBooks = useMemo(() => {
     if (!initialBooks || !initialBooks.data || !Array.isArray(initialBooks.data)) return [];
 
@@ -97,23 +122,22 @@ export default function BookListClient({ initialBooks }) {
       });
     }
     
-    // Transform data for ContentDisplay (List and Grid views)
-    return booksArray.map(book => ({
-      id: book.id,
-      title: book.Title,
-      // For GridView
-      imageUrl: book.coverImageUrl && book.coverImageUrl !== "NO_COVER_AVAILABLE" ? book.coverImageUrl : null,
-      // For ListView (tabular)
-      authorsDisplay: book.authors ? book.authors.join(', ') : 'Unknown Author',
-      yearDisplay: book.Year ? String(book.Year) : 'Unknown Year',
-      // For general linking
-      linkUrl: `/pages/books/${book.id}`,
-      // The 'description' field for ListItem (if it were still generic) is now split into authorsDisplay and yearDisplay for the table.
-      // If ImageItem needs a description, it would typically use the 'title' or we could add a specific one.
-      // For ListItem (if it were still the old version), it would need this combined description:
-      // description: `${book.authors ? book.authors.join(', ') : 'Unknown Author'} - ${book.Year || 'Unknown Year'}`,
-    }));
-  }, [initialBooks, searchTerm, sortConfig, selectedYear, selectedPublisher, minPages, maxPages]);
+    return booksArray.map(book => {
+      const details = detailedBooksData[book.id];
+      return {
+        id: book.id,
+        title: book.Title,
+        // Use detailed image URL if available, otherwise the one from initialBooks (which might be null or basic)
+        imageUrl: (details && !details.isLoading && !details.error) ? (details.largeCoverImageUrl || details.coverImageUrl) : (book.coverImageUrl && book.coverImageUrl !== "NO_COVER_AVAILABLE" ? book.coverImageUrl : null),
+        authorsDisplay: book.authors ? book.authors.join(', ') : (details && details.authors ? details.authors.join(', ') : 'Unknown Author'),
+        yearDisplay: book.Year ? String(book.Year) : (details && details.Year ? String(details.Year) : 'Unknown Year'),
+        linkUrl: `/pages/books/${book.id}`,
+        // Pass through loading/error state if needed by ImageItem for more specific placeholders
+        isLoading: details?.isLoading,
+        hasError: details?.error,
+      };
+    });
+  }, [initialBooks, searchTerm, sortConfig, selectedYear, selectedPublisher, minPages, maxPages, detailedBooksData]);
 
   const requestSort = (key) => {
     let direction = 'ascending';
