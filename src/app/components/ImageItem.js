@@ -16,6 +16,8 @@ const ImageItem = ({ item, detailedData, onVisible }) => {
     // We only want to trigger onVisible *once* when it first becomes visible.
     if (hasBeenVisible) return;
 
+    const currentRef = placeholderRef.current; // Capture ref value
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -24,8 +26,10 @@ const ImageItem = ({ item, detailedData, onVisible }) => {
             onVisible();
             setHasBeenVisible(true); // Ensure onVisible is called only once
           }
-          // No need to unobserve if we only want to trigger once
-          // observer.unobserve(entry.target);
+           // Once visible and action triggered, we can unobserve
+          if (currentRef && entry.isIntersecting) {
+            observer.unobserve(currentRef);
+          }
         }
       },
       {
@@ -34,17 +38,17 @@ const ImageItem = ({ item, detailedData, onVisible }) => {
       }
     );
 
-    if (placeholderRef.current) {
-      observer.observe(placeholderRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (placeholderRef.current) {
-        observer.unobserve(placeholderRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
-      observer.disconnect();
+      observer.disconnect(); // Disconnects the observer entirely
     };
-  }, [onVisible, hasBeenVisible]);
+  }, [onVisible, hasBeenVisible]); // placeholderRef itself should not be a dependency if its .current is used
 
   // Determine the image URL to use
   // Prioritize detailedData if available, otherwise use item.imageUrl (initial)

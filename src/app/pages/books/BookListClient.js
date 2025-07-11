@@ -24,6 +24,13 @@ export default function BookListClient({ initialBooks }) {
   const [currentView, setCurrentView] = useState('grid');
   const router = useRouter();
 
+  // Log initialBooks once to inspect its structure, especially coverImageUrls
+  useEffect(() => {
+    if (initialBooks && initialBooks.data) {
+      console.log("[BookListClient] Initial books data (first 5):", initialBooks.data.slice(0, 5).map(b => ({ id: b.id, title: b.Title, initialCover: b.coverImageUrl })));
+    }
+  }, [initialBooks]);
+
   // State to hold detailed book data fetched on demand
   const [detailedBooksData, setDetailedBooksData] = useState({});
 
@@ -63,17 +70,18 @@ export default function BookListClient({ initialBooks }) {
     setDetailedBooksData(prev => ({ ...prev, [bookId]: { isLoading: true } })); // Mark as loading
 
     try {
+      console.log(`[BookListClient] fetchBookDetails called for bookId: ${bookId}`);
       const result = await Request(`book/${bookId}`); // Use the Request utility
       if (result && result.data) {
-        // console.log(`[INFO] BookListClient: Successfully fetched details for book ${bookId}.`);
+        console.log(`[BookListClient] Successfully fetched details for book ${bookId}. Cover: ${result.data.coverImageUrl}`);
         setDetailedBooksData(prev => ({ ...prev, [bookId]: result.data }));
       } else {
-        console.warn(`[WARN] BookListClient: No data returned for book ${bookId}. Result:`, result);
-        setDetailedBooksData(prev => ({ ...prev, [bookId]: { error: true, isLoading: false } }));
+        console.warn(`[BookListClient] No data returned for book ${bookId}. Result:`, JSON.stringify(result));
+        setDetailedBooksData(prev => ({ ...prev, [bookId]: { error: true, isLoading: false, errorMessage: result?.error || 'No data' } }));
       }
     } catch (error) {
-      console.error(`[ERROR] BookListClient: Error fetching details for book ${bookId}:`, error);
-      setDetailedBooksData(prev => ({ ...prev, [bookId]: { error: true, isLoading: false } }));
+      console.error(`[BookListClient] Error fetching details for book ${bookId}:`, error);
+      setDetailedBooksData(prev => ({ ...prev, [bookId]: { error: true, isLoading: false, errorMessage: error.message } }));
     }
   };
 
