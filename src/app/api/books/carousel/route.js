@@ -1,7 +1,5 @@
 import { NextResponse } from 'next/server';
-// Assuming request.js is located at src/app/components/request.js
-// Adjust the path if your components directory is elsewhere relative to app/api/
-import Request from '../../../../components/request';
+import Request from '@/app/components/request'; // Using path alias
 
 const MAX_CAROUSEL_BOOKS = 10;
 
