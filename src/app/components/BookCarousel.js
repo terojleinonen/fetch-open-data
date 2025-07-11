@@ -3,9 +3,10 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Request from './request'; // Import the Request component
+// Request component is no longer directly used here
 
-const MAX_CAROUSEL_BOOKS = 10;
+// MAX_CAROUSEL_BOOKS is handled by the API route, but can be kept for consistency if needed
+// const MAX_CAROUSEL_BOOKS = 10;
 
 const BookCarousel = () => {
   const [books, setBooks] = useState([]);
@@ -17,18 +18,22 @@ const BookCarousel = () => {
     const fetchCarouselBooks = async () => {
       setLoading(true);
       try {
-        const response = await Request('books'); // Use Request component to fetch all books
-        if (response.error) {
-          throw new Error(response.error);
+        // Fetch from the new API route
+        const response = await fetch('/api/books/carousel');
+        if (!response.ok) {
+          // Try to parse error message from response body if available
+          let errorMsg = `HTTP error ${response.status}`;
+          try {
+            const errorData = await response.json();
+            errorMsg = errorData.error || errorMsg;
+          } catch (parseError) {
+            // Ignore if response is not JSON or empty
+          }
+          throw new Error(errorMsg);
         }
-        if (response.data && Array.isArray(response.data)) {
-          // Select a subset of books for the carousel, e.g., the first MAX_CAROUSEL_BOOKS
-          // Optionally, add randomization or curation logic here
-          const carouselBooks = response.data.slice(0, MAX_CAROUSEL_BOOKS);
-          setBooks(carouselBooks);
-        } else {
-          setBooks([]); // Set to empty array if no data or data is not an array
-        }
+        const data = await response.json();
+        // The API route now returns the already sliced and processed books
+        setBooks(data);
       } catch (e) {
         setError(e.message);
         console.error("Failed to fetch books for carousel:", e);
