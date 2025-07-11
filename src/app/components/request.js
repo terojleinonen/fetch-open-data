@@ -1,6 +1,15 @@
 let apiKeyWarningLogged = false; // Module-scoped flag
+const cache = new Map(); // In-memory cache
 
 export default async function Request(parameter, options = {}) {
+    // Check cache first
+    if (cache.has(parameter)) {
+        // console.log(`[INFO] Request: Cache hit for parameter: "${parameter}"`);
+        return cache.get(parameter);
+    }
+
+    // console.log(`[INFO] Request: Cache miss for parameter: "${parameter}". Fetching from API.`);
+
     // skipGoogleBooks option removed, we will always try to augment book data.
     // Use GOOGLE_BOOKS_API_KEY (server-side environment variable)
     const apiKey = process.env.GOOGLE_BOOKS_API_KEY;
@@ -144,8 +153,12 @@ export default async function Request(parameter, options = {}) {
         await Promise.all(processPromises);
         // console.log(`[INFO] Request: Google Books API calls completed for "${parameter}". ${booksProcessedCount} items processed.`);
       }
+      // Store successful response in cache
+      // console.log(`[INFO] Request: Storing successful response for "${parameter}" in cache.`);
+      cache.set(parameter, data);
     } catch (err) {
       console.error(`[ERROR] Request: Top-level error for "${parameter}": ${err.message}`, err);
+      // Do not cache errors, return them directly
       return { data: null, error: err.message }; // Ensure a consistent error structure
     }
     // console.log(`[INFO] Request: Finished for "${parameter}"`);
