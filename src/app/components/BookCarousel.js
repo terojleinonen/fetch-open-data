@@ -3,13 +3,6 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-
-const BookCarousel = () => {
-  const [books, setBooks] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
 import Request from './request'; // Import the Request component
 
 const MAX_CAROUSEL_BOOKS = 10;
