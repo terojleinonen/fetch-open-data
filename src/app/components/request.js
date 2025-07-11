@@ -1,17 +1,20 @@
+import { kv } from '@vercel/kv'; // Import Vercel KV
+
 let apiKeyWarningLogged = false; // Module-scoped flag
-const cache = new Map(); // In-memory cache
+const memoryCache = new Map(); // In-memory cache for non-Google Books data primarily
+
+const GOOGLE_BOOKS_CACHE_PREFIX = 'gbcache:';
+const GOOGLE_BOOKS_CACHE_TTL_SECONDS = 60 * 60 * 24 * 7; // 7 days
 
 export default async function Request(parameter, options = {}) {
-    // Check cache first
-    if (cache.has(parameter)) {
-        // console.log(`[INFO] Request: Cache hit for parameter: "${parameter}"`);
-        return cache.get(parameter);
+    // Check in-memory cache first (mainly for non-Google Books list calls or very frequent single calls)
+    if (memoryCache.has(parameter)) {
+        // console.log(`[INFO] Request: Memory Cache hit for parameter: "${parameter}"`);
+        return memoryCache.get(parameter);
     }
 
-    // console.log(`[INFO] Request: Cache miss for parameter: "${parameter}". Fetching from API.`);
+    // console.log(`[INFO] Request: Memory Cache miss for parameter: "${parameter}". Fetching.`);
 
-    // skipGoogleBooks option removed, we will always try to augment book data.
-    // Use GOOGLE_BOOKS_API_KEY (server-side environment variable)
     const apiKey = process.env.GOOGLE_BOOKS_API_KEY;
     let baseUrl = 'https://stephen-king-api.onrender.com/api/';
     const headers = new Headers({
@@ -36,8 +39,12 @@ export default async function Request(parameter, options = {}) {
       data = await response.json();
       // console.log(`[INFO] Request: Primary API data received for "${parameter}"`);
 
-      if (data && data.data && (parameter === 'books' || parameter.startsWith('book/'))) {
-        // console.log(`[INFO] Request: Starting Google Books API processing for "${parameter}". Items: ${Array.isArray(data.data) ? data.data.length : 1}`);
+      // Only process with Google Books API if it's a single book request (e.g., "book/:id")
+      // For 'books' list, we skip this step to prevent mass API calls.
+      // The augmentation for list items will be handled differently (e.g., on demand by the client).
+      if (data && data.data && parameter.startsWith('book/')) {
+        // console.log(`[INFO] Request: Starting Google Books API processing for single book: "${parameter}".`);
+        // Ensure booksToProcess is always an array, even for a single book object.
         const booksToProcess = Array.isArray(data.data) ? data.data : [data.data];
         let booksProcessedCount = 0;
 
@@ -45,7 +52,6 @@ export default async function Request(parameter, options = {}) {
           const bookIdentifier = book.Title || book.ISBN || 'Unknown Book (in fetchGoogleBookDetails)';
           
           if (typeof book !== 'object' || book === null || (!book.ISBN && !book.Title)) {
-            // console.warn(`[WARN] Request: Insufficient data for Google Books lookup: ${bookIdentifier}`);
             if (book && typeof book === 'object') {
                 book.googleBooksDataAvailable = false;
                 book.coverImageUrl = book.coverImageUrl || "NO_COVER_AVAILABLE";
@@ -54,13 +60,58 @@ export default async function Request(parameter, options = {}) {
             return;
           }
 
+          // --- Vercel KV Cache Check ---
+          const cacheKey = `${GOOGLE_BOOKS_CACHE_PREFIX}${book.ISBN || book.Title.replace(/ /g, '_')}`;
+          try {
+            const cachedVolumeInfo = await kv.get(cacheKey);
+            if (cachedVolumeInfo) {
+              console.log(`[INFO] Request: Vercel KV Cache hit for Google Book: ${bookIdentifier} (Key: ${cacheKey})`);
+              // Apply cached data to the book object
+              book.googleBooksDataAvailable = true;
+              const imageLinks = cachedVolumeInfo.imageLinks;
+              let finalCoverImageUrl = "NO_COVER_AVAILABLE";
+              let finalLargeCoverImageUrl = "NO_COVER_AVAILABLE";
+              if (imageLinks) {
+                if (imageLinks.thumbnail) finalCoverImageUrl = imageLinks.thumbnail;
+                else if (imageLinks.smallThumbnail) finalCoverImageUrl = imageLinks.smallThumbnail;
+                if (imageLinks.medium) finalLargeCoverImageUrl = imageLinks.medium;
+                else if (imageLinks.large) finalLargeCoverImageUrl = imageLinks.large;
+                else if (imageLinks.small) finalLargeCoverImageUrl = imageLinks.small;
+                else finalLargeCoverImageUrl = finalCoverImageUrl;
+              }
+              book.coverImageUrl = finalCoverImageUrl.startsWith('http://') ? finalCoverImageUrl.replace(/^http:\/\//i, 'https://') : finalCoverImageUrl;
+              book.largeCoverImageUrl = finalLargeCoverImageUrl.startsWith('http://') ? finalLargeCoverImageUrl.replace(/^http:\/\//i, 'https://') : finalLargeCoverImageUrl;
+              book.subtitle = cachedVolumeInfo.subtitle || book.subtitle;
+              book.authors = cachedVolumeInfo.authors || book.authors;
+              book.publisher = cachedVolumeInfo.publisher || book.Publisher;
+              book.publishedDate = cachedVolumeInfo.publishedDate || book.Year;
+              book.description = cachedVolumeInfo.description || book.summary;
+              book.pageCount = cachedVolumeInfo.pageCount || book.Pages;
+              book.categories = cachedVolumeInfo.categories || book.categories;
+              book.averageRating = cachedVolumeInfo.averageRating || book.averageRating;
+              book.ratingsCount = cachedVolumeInfo.ratingsCount || book.ratingsCount;
+              book.language = cachedVolumeInfo.language || book.language;
+              if (cachedVolumeInfo.publisher) book.Publisher = cachedVolumeInfo.publisher;
+              if (cachedVolumeInfo.pageCount) book.Pages = cachedVolumeInfo.pageCount;
+              if (cachedVolumeInfo.publishedDate && typeof book.Year === 'number') {
+                 const gbYear = parseInt(cachedVolumeInfo.publishedDate.substring(0,4));
+                 if (!isNaN(gbYear)) book.Year = gbYear;
+              }
+              return; // Data populated from cache, skip API call
+            }
+            console.log(`[INFO] Request: Vercel KV Cache miss for Google Book: ${bookIdentifier} (Key: ${cacheKey})`);
+          } catch (kvError) {
+            console.warn(`[WARN] Request: Vercel KV get error for ${cacheKey}:`, kvError);
+            // Proceed to fetch from API if KV fails, do not return yet
+          }
+          // --- End Vercel KV Cache Check ---
+
           let googleBooksApiUrl;
           if (book.ISBN) {
             googleBooksApiUrl = `https://www.googleapis.com/books/v1/volumes?q=isbn:${book.ISBN}`;
           } else if (book.Title) {
             googleBooksApiUrl = `https://www.googleapis.com/books/v1/volumes?q=intitle:${encodeURIComponent(book.Title)}+inauthor:Stephen%20King`;
           } else {
-            // This path should ideally not be reached due to the check above
             book.coverImageUrl = "NO_COVER_AVAILABLE";
             book.largeCoverImageUrl = "NO_COVER_AVAILABLE";
             book.googleBooksDataAvailable = false;
@@ -70,8 +121,7 @@ export default async function Request(parameter, options = {}) {
           if (googleBooksApiUrl && apiKey) {
             googleBooksApiUrl += `&key=${apiKey}`;
           } else if (googleBooksApiUrl && !apiKey) {
-            if (!apiKeyWarningLogged) { // Log only once using module-scoped flag
-              // Updated warning message to reflect the correct environment variable name
+            if (!apiKeyWarningLogged) {
               console.warn("[WARN] Request: Google Books API key (GOOGLE_BOOKS_API_KEY) is missing for server-side requests in request.js. Requests may be rate-limited or fail.");
               apiKeyWarningLogged = true;
             }
@@ -79,19 +129,37 @@ export default async function Request(parameter, options = {}) {
           
           try {
             const googleBooksResponse = await fetch(googleBooksApiUrl);
+            // Handle 429 Rate Limit specifically - DO NOT CACHE AN ERROR RESPONSE
+            if (googleBooksResponse.status === 429) {
+              console.error(`[ERROR] Request: Google Books API rate limit hit (429) for "${bookIdentifier}", URL: ${googleBooksApiUrl.replace(apiKey, "REDACTED_API_KEY")}`);
+              book.googleBooksDataAvailable = false; // Mark as unavailable for this attempt
+              book.coverImageUrl = book.coverImageUrl || "NO_COVER_AVAILABLE"; // Preserve existing if any, else default
+              book.largeCoverImageUrl = book.largeCoverImageUrl || "NO_COVER_AVAILABLE";
+              return; // Important: Do not proceed to cache this error state
+            }
+
             if (!googleBooksResponse.ok) {
               console.error(`[ERROR] Request: Google Books API error for "${bookIdentifier}": Status ${googleBooksResponse.status}, URL: ${googleBooksApiUrl.replace(apiKey, "REDACTED_API_KEY")}`);
               book.googleBooksDataAvailable = false;
               book.coverImageUrl = book.coverImageUrl || "NO_COVER_AVAILABLE";
               book.largeCoverImageUrl = book.largeCoverImageUrl || "NO_COVER_AVAILABLE";
-              return;
+              return; // Do not cache other errors either for now, could be transient
             }
             const googleBooksData = await googleBooksResponse.json();
 
             if (googleBooksData.items && googleBooksData.items.length > 0) {
               const volumeInfo = googleBooksData.items[0].volumeInfo;
-              book.googleBooksDataAvailable = true;
 
+              // --- Vercel KV Cache Set ---
+              try {
+                await kv.set(cacheKey, volumeInfo, { ex: GOOGLE_BOOKS_CACHE_TTL_SECONDS });
+                console.log(`[INFO] Request: Stored Google Book data in Vercel KV for: ${bookIdentifier} (Key: ${cacheKey})`);
+              } catch (kvError) {
+                console.warn(`[WARN] Request: Vercel KV set error for ${cacheKey}:`, kvError);
+              }
+              // --- End Vercel KV Cache Set ---
+
+              book.googleBooksDataAvailable = true;
               const imageLinks = volumeInfo.imageLinks;
               let finalCoverImageUrl = "NO_COVER_AVAILABLE";
               let finalLargeCoverImageUrl = "NO_COVER_AVAILABLE";
@@ -119,9 +187,6 @@ export default async function Request(parameter, options = {}) {
               book.averageRating = volumeInfo.averageRating || book.averageRating;
               book.ratingsCount = volumeInfo.ratingsCount || book.ratingsCount;
               book.language = volumeInfo.language || book.language;
-              // Do not use volumeInfo.infoLink or volumeInfo.previewLink directly
-              // book.infoLink = volumeInfo.infoLink || book.infoLink;
-              // book.previewLink = volumeInfo.previewLink || book.previewLink;
 
               if (volumeInfo.publisher) book.Publisher = volumeInfo.publisher;
               if (volumeInfo.pageCount) book.Pages = volumeInfo.pageCount;
@@ -130,7 +195,6 @@ export default async function Request(parameter, options = {}) {
                  if (!isNaN(gbYear)) book.Year = gbYear;
               }
             } else {
-              // console.log(`[INFO] Request: No Google Books items found for "${bookIdentifier}"`);
               book.googleBooksDataAvailable = false;
               if (!book.coverImageUrl) book.coverImageUrl = "NO_COVER_AVAILABLE";
               if (!book.largeCoverImageUrl) book.largeCoverImageUrl = "NO_COVER_AVAILABLE";
@@ -144,7 +208,8 @@ export default async function Request(parameter, options = {}) {
         };
 
         const processPromises = booksToProcess.map(async (item) => {
-            if (typeof item === 'object' && item !== null && (item.ISBN || item.Title || parameter.startsWith('book/'))) {
+            // Ensure we only process items that are actual book objects with necessary identifiers
+            if (typeof item === 'object' && item !== null && (item.ISBN || item.Title)) {
                 await fetchGoogleBookDetails(item);
                 booksProcessedCount++;
             }
@@ -153,14 +218,15 @@ export default async function Request(parameter, options = {}) {
         await Promise.all(processPromises);
         // console.log(`[INFO] Request: Google Books API calls completed for "${parameter}". ${booksProcessedCount} items processed.`);
       }
-      // Store successful response in cache
-      // console.log(`[INFO] Request: Storing successful response for "${parameter}" in cache.`);
-      cache.set(parameter, data);
+      // Store successful non-Google Books API responses in memory cache
+      // Google Books data is handled by KV cache within fetchGoogleBookDetails
+      if (!parameter.startsWith('book/')) { // Avoid memory caching individual book data that's KV cached
+        // console.log(`[INFO] Request: Storing successful response for "${parameter}" in memory cache.`);
+        memoryCache.set(parameter, data);
+      }
     } catch (err) {
       console.error(`[ERROR] Request: Top-level error for "${parameter}": ${err.message}`, err);
-      // Do not cache errors, return them directly
-      return { data: null, error: err.message }; // Ensure a consistent error structure
+      return { data: null, error: err.message };
     }
-    // console.log(`[INFO] Request: Finished for "${parameter}"`);
     return data;
 }
