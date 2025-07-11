@@ -1,5 +1,7 @@
+let apiKeyWarningLogged = false; // Module-scoped flag
+
 export default async function Request(parameter, options = {}) {
-    const { skipGoogleBooks = false } = options;
+    // skipGoogleBooks option removed, we will always try to augment book data.
     // Use GOOGLE_BOOKS_API_KEY (server-side environment variable)
     const apiKey = process.env.GOOGLE_BOOKS_API_KEY;
     let baseUrl = 'https://stephen-king-api.onrender.com/api/';
@@ -25,7 +27,7 @@ export default async function Request(parameter, options = {}) {
       data = await response.json();
       // console.log(`[INFO] Request: Primary API data received for "${parameter}"`);
 
-      if (!skipGoogleBooks && data && data.data && (parameter === 'books' || parameter.startsWith('book/'))) {
+      if (data && data.data && (parameter === 'books' || parameter.startsWith('book/'))) {
         // console.log(`[INFO] Request: Starting Google Books API processing for "${parameter}". Items: ${Array.isArray(data.data) ? data.data.length : 1}`);
         const booksToProcess = Array.isArray(data.data) ? data.data : [data.data];
         let booksProcessedCount = 0;
@@ -59,10 +61,10 @@ export default async function Request(parameter, options = {}) {
           if (googleBooksApiUrl && apiKey) {
             googleBooksApiUrl += `&key=${apiKey}`;
           } else if (googleBooksApiUrl && !apiKey) {
-            if (!global.apiKeyWarningLogged) { // Log only once
+            if (!apiKeyWarningLogged) { // Log only once using module-scoped flag
               // Updated warning message to reflect the correct environment variable name
               console.warn("[WARN] Request: Google Books API key (GOOGLE_BOOKS_API_KEY) is missing for server-side requests in request.js. Requests may be rate-limited or fail.");
-              global.apiKeyWarningLogged = true;
+              apiKeyWarningLogged = true;
             }
           }
           
@@ -108,8 +110,9 @@ export default async function Request(parameter, options = {}) {
               book.averageRating = volumeInfo.averageRating || book.averageRating;
               book.ratingsCount = volumeInfo.ratingsCount || book.ratingsCount;
               book.language = volumeInfo.language || book.language;
-              book.infoLink = volumeInfo.infoLink || book.infoLink;
-              book.previewLink = volumeInfo.previewLink || book.previewLink;
+              // Do not use volumeInfo.infoLink or volumeInfo.previewLink directly
+              // book.infoLink = volumeInfo.infoLink || book.infoLink;
+              // book.previewLink = volumeInfo.previewLink || book.previewLink;
 
               if (volumeInfo.publisher) book.Publisher = volumeInfo.publisher;
               if (volumeInfo.pageCount) book.Pages = volumeInfo.pageCount;
