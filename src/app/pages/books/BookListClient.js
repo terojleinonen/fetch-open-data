@@ -49,52 +49,6 @@ export default function BookListClient({ initialBooks }) {
     setMaxPages('');
   };
 
-  const processedBooks = useMemo(() => {
-    if (!initialBooks || !initialBooks.data || !Array.isArray(initialBooks.data)) return [];
-
-    const minPagesNumeric = minPages !== '' ? parseInt(minPages, 10) : null;
-    const maxPagesNumeric = maxPages !== '' ? parseInt(maxPages, 10) : null;
-    const yearNumeric = selectedYear !== '' ? parseInt(selectedYear, 10) : null;
-
-    let booksArray = initialBooks.data.filter(book => {
-      const searchTermMatch = book.Title.toLowerCase().includes(searchTerm.toLowerCase());
-      if (!searchTermMatch) return false;
-      if (yearNumeric !== null && book.Year !== yearNumeric) return false;
-      if (selectedPublisher && book.Publisher && book.Publisher.toLowerCase() !== selectedPublisher.toLowerCase()) return false;
-      if (minPagesNumeric !== null && (!book.Pages || book.Pages < minPagesNumeric)) return false;
-      if (maxPagesNumeric !== null && (!book.Pages || book.Pages > maxPagesNumeric)) return false;
-      return true;
-    });
-
-    if (sortConfig.key) {
-      booksArray.sort((a, b) => {
-        let valA = a[sortConfig.key];
-        let valB = b[sortConfig.key];
-
-        if (sortConfig.key === 'Year') {
-          valA = parseInt(valA, 10) || 0;
-          valB = parseInt(valB, 10) || 0;
-        } else if (typeof valA === 'string') {
-          valA = valA.toLowerCase();
-          valB = valB.toLowerCase();
-        }
-
-        if (valA < valB) return sortConfig.direction === 'ascending' ? -1 : 1;
-        if (valA > valB) return sortConfig.direction === 'ascending' ? 1 : -1;
-        return 0;
-      });
-    }
-    
-    return booksArray.map(book => ({
-      id: book.id,
-      title: book.Title,
-      imageUrl: book.coverImageUrl,
-      publisherDisplay: book.Publisher || 'Unknown Publisher',
-      yearDisplay: book.Year ? String(book.Year) : 'Unknown Year',
-      linkUrl: `/pages/books/${book.id}`,
-    }));
-  }, [initialBooks, searchTerm, sortConfig, selectedYear, selectedPublisher, minPages, maxPages]);
-
   const requestSort = (key) => {
     let direction = 'ascending';
     if (sortConfig.key === key && sortConfig.direction === 'ascending') {
@@ -139,17 +93,17 @@ export default function BookListClient({ initialBooks }) {
             </div>
           </div>
           
-          <ContentDisplay items={processedBooks} view={currentView} columns={bookColumns} />
-          
-          {processedBooks.length === 0 && searchTerm && (
-            <p className="text-center text-[var(--text-color)] mt-4">No books found matching your search.</p>
-          )}
-          {processedBooks.length === 0 && !searchTerm && (selectedYear || selectedPublisher || minPages || maxPages) && (
-            <p className="text-center text-[var(--text-color)] mt-4">No books found matching your filter criteria.</p>
-          )}
-           {processedBooks.length === 0 && !searchTerm && !selectedYear && !selectedPublisher && !minPages && !maxPages && initialBooks?.data?.length > 0 && (
-            <p className="text-center text-[var(--text-color)] mt-4">No books to display with current filters. Try broadening your criteria.</p>
-          )}
+          <ContentDisplay
+            items={initialBooks}
+            view={currentView}
+            columns={bookColumns}
+            sortConfig={sortConfig}
+            searchTerm={searchTerm}
+            selectedYear={selectedYear}
+            selectedPublisher={selectedPublisher}
+            minPages={minPages}
+            maxPages={maxPages}
+          />
            {initialBooks?.data?.length === 0 && (
              <p className="text-center text-[var(--text-color)] mt-4">There are no books to display at the moment.</p>
            )}
