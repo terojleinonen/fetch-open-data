@@ -3,66 +3,19 @@ import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const ImageItem = ({ item, detailedData, onVisible }) => {
-  const { title, linkUrl } = item; // Initial imageUrl might be undefined or a placeholder
+const ImageItem = ({ item }) => {
+  const { title, linkUrl, imageUrl } = item;
   const placeholderRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-  const [hasBeenVisible, setHasBeenVisible] = useState(false);
-
-  useEffect(() => {
-    // If detailedData is already provided (e.g. from cache, or loaded very quickly),
-    // no need for observer for this item if it means it's already loaded.
-    // However, onVisible might still be used for other purposes by parent.
-    // We only want to trigger onVisible *once* when it first becomes visible.
-    if (hasBeenVisible) return;
-
-    const currentRef = placeholderRef.current; // Capture ref value
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          if (onVisible && !hasBeenVisible) {
-            onVisible();
-            setHasBeenVisible(true); // Ensure onVisible is called only once
-          }
-           // Once visible and action triggered, we can unobserve
-          if (currentRef && entry.isIntersecting) {
-            observer.unobserve(currentRef);
-          }
-        }
-      },
-      {
-        rootMargin: '0px',
-        threshold: 0.1, // Trigger when 10% of the item is visible
-      }
-    );
-
-    if (currentRef) {
-      observer.observe(currentRef);
-    }
-
-    return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
-      observer.disconnect(); // Disconnects the observer entirely
-    };
-  }, [onVisible, hasBeenVisible]); // placeholderRef itself should not be a dependency if its .current is used
-
-  // Determine the image URL to use
-  // Prioritize detailedData if available, otherwise use item.imageUrl (initial)
-  let displayImageUrl = detailedData?.largeCoverImageUrl || detailedData?.coverImageUrl || item.imageUrl;
 
   // Ensure displayImageUrl is a non-empty string before passing to Image component.
   // Also handle "NO_COVER_AVAILABLE" explicitly to render placeholder.
-  const isValidImageUrl = typeof displayImageUrl === 'string' && displayImageUrl.trim() !== '' && displayImageUrl !== "NO_COVER_AVAILABLE";
+  const isValidImageUrl = typeof imageUrl === 'string' && imageUrl.trim() !== '' && imageUrl !== "NO_COVER_AVAILABLE";
 
   const content = (
     <div ref={placeholderRef} className="group relative aspect-[3/4] w-full bg-[var(--background-color)] border border-[var(--border-color)] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
-      {(isVisible || isValidImageUrl) && isValidImageUrl ? (
+      {isValidImageUrl ? (
         <Image
-          src={displayImageUrl} // Now guaranteed to be a valid string if this branch is taken
+          src={imageUrl}
           alt={title || 'Item image'}
           layout="fill"
           objectFit="cover"
