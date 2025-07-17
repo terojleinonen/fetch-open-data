@@ -26,7 +26,7 @@ export default function BookListClient({ initialBooks }) {
 
   const bookColumns = [
     { key: 'title', label: 'Title', isLink: true },
-    { key: 'authorsDisplay', label: 'Authors' },
+    { key: 'publisherDisplay', label: 'Publisher' },
     { key: 'yearDisplay', label: 'Year' }
   ];
 
@@ -89,7 +89,7 @@ export default function BookListClient({ initialBooks }) {
       id: book.id,
       title: book.Title,
       imageUrl: book.coverImageUrl,
-      authorsDisplay: book.authors ? book.authors.join(', ') : 'Unknown Author',
+      publisherDisplay: book.Publisher || 'Unknown Publisher',
       yearDisplay: book.Year ? String(book.Year) : 'Unknown Year',
       linkUrl: `/pages/books/${book.id}`,
     }));
