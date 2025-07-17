@@ -53,7 +53,7 @@ const ContentDisplay = ({ items, view = 'list', columns = [], sortConfig, search
         return 0;
       });
     }
-
+    
     if (contentType === 'books') {
       return filteredItems.map(book => ({
         id: book.id,
@@ -71,7 +71,7 @@ const ContentDisplay = ({ items, view = 'list', columns = [], sortConfig, search
         if (!appearances) {
           appearances = 'N/A';
         }
-
+  
         return {
           id: villain.id,
           name: villain.name || "Unnamed Villain",
@@ -90,13 +90,13 @@ const ContentDisplay = ({ items, view = 'list', columns = [], sortConfig, search
         }));
     } else if (contentType === 'adaptations') {
         return filteredItems.map((adaptation, index) => ({
-            id: `${adaptation.adaptationTitle}-${adaptation.year}-${index}`,
+            id: `${adaptation.adaptationTitle}-${adaptation.year}-${index}`, 
             title: adaptation.adaptationTitle || 'N/A',
             yearDisplay: String(adaptation.year) || 'N/A',
             typeDisplay: adaptation.type || 'N/A',
-            linkUrl: adaptation.adaptationLink,
+            linkUrl: adaptation.adaptationLink, 
             imageUrl: adaptation.posterUrl || null,
-            originalWorkTitle: adaptation.originalWorkTitle,
+            originalWorkTitle: adaptation.originalWorkTitle, 
             originalWorkLink: adaptation.originalWorkLink,
             originalYear: adaptation.year,
           }));

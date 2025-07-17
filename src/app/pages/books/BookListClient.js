@@ -93,10 +93,10 @@ export default function BookListClient({ initialBooks }) {
             </div>
           </div>
           
-          <ContentDisplay
-            items={initialBooks}
-            view={currentView}
-            columns={bookColumns}
+          <ContentDisplay 
+            items={initialBooks} 
+            view={currentView} 
+            columns={bookColumns} 
             sortConfig={sortConfig}
             searchTerm={searchTerm}
             selectedYear={selectedYear}
