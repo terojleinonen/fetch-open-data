@@ -93,16 +93,17 @@ export default function BookListClient({ initialBooks }) {
             </div>
           </div>
           
-          <ContentDisplay
-            items={initialBooks}
-            view={currentView}
-            columns={bookColumns}
+          <ContentDisplay 
+            items={initialBooks} 
+            view={currentView} 
+            columns={bookColumns} 
             sortConfig={sortConfig}
             searchTerm={searchTerm}
             selectedYear={selectedYear}
             selectedPublisher={selectedPublisher}
             minPages={minPages}
             maxPages={maxPages}
+            contentType='books'
           />
            {initialBooks?.data?.length === 0 && (
              <p className="text-center text-[var(--text-color)] mt-4">There are no books to display at the moment.</p>
