@@ -27,52 +27,6 @@ export default function VillainListClient({ initialVillains }) {
     return ['All', ...Array.from(statuses)];
   }, [initialVillains]);
 
-  const processedVillains = useMemo(() => {
-    if (!initialVillains || !initialVillains.data) return [];
-    let items = [...initialVillains.data];
-
-    if (searchTerm) {
-      items = items.filter(villain =>
-        villain.name?.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    }
-
-    if (selectedStatus && selectedStatus !== 'All') {
-      items = items.filter(villain => villain.status === selectedStatus);
-    }
-
-    let transformedItems = items.map(villain => {
-      const bookTitles = villain.books?.map(book => book.title).join(', ') || '';
-      const shortTitles = villain.shorts?.map(short => short.title).join(', ') || '';
-      let appearances = [bookTitles, shortTitles].filter(Boolean).join(', ');
-      if (!appearances) {
-        appearances = 'N/A';
-      }
-
-      return {
-        id: villain.id,
-        // Use 'name' for the 'name' column key, and ensure it's what `isLink` uses
-        name: villain.name || "Unnamed Villain",
-        statusDisplay: villain.status || 'N/A',
-        appearances: appearances,
-        linkUrl: `/pages/villains/${villain.id}`,
-      };
-    });
-
-    if (sortConfig.key) {
-      transformedItems.sort((a, b) => {
-        // Assuming sortConfig.key will always be 'name' for villains as per sortOptions
-        const valA = a[sortConfig.key]?.toLowerCase() || '';
-        const valB = b[sortConfig.key]?.toLowerCase() || '';
-
-        if (valA < valB) return sortConfig.direction === 'ascending' ? -1 : 1;
-        if (valA > valB) return sortConfig.direction === 'ascending' ? 1 : -1;
-        return 0;
-      });
-    }
-    return transformedItems;
-  }, [initialVillains, searchTerm, sortConfig, selectedStatus]);
-
   const requestSort = (key) => {
     let direction = 'ascending';
     if (sortConfig.key === key && sortConfig.direction === 'ascending') {
@@ -107,20 +61,14 @@ export default function VillainListClient({ initialVillains }) {
           </div>
 
           <ContentDisplay
-            items={processedVillains}
+            items={initialVillains}
             view={'list'} // Hardcoded to list view
             columns={villainColumns}
+            sortConfig={sortConfig}
+            searchTerm={searchTerm}
+            selectedStatus={selectedStatus}
+            contentType='villains'
           />
-
-          {processedVillains.length === 0 && searchTerm && (
-              <p className="text-center text-[var(--text-color)] mt-4">No villains found matching your search.</p>
-          )}
-          {processedVillains.length === 0 && selectedStatus && selectedStatus !== 'All' && !searchTerm &&(
-            <p className="text-center text-[var(--text-color)] mt-4">No villains found for the status &apos;{selectedStatus}&apos;.</p>
-          )}
-          {processedVillains.length === 0 && !searchTerm && (!selectedStatus || selectedStatus === 'All') && initialVillains?.data?.length > 0 && (
-             <p className="text-center text-[var(--text-color)] mt-4">All villains have been filtered out.</p>
-           )}
            {initialVillains?.data?.length === 0 && (
              <p className="text-center text-[var(--text-color)] mt-4">No villains available at the moment.</p>
            )}

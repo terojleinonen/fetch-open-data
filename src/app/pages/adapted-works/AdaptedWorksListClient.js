@@ -48,57 +48,6 @@ export default function AdaptedWorksListClient({ adaptations: initialAdaptations
     }
   ];
 
-  const processedAdaptations = useMemo(() => {
-    let items = [...initialAdaptations];
-
-    if (searchTerm) {
-      items = items.filter(adaptation =>
-        adaptation.adaptationTitle?.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    }
-    
-    let transformedItems = items.map((adaptation, index) => ({
-      id: `${adaptation.adaptationTitle}-${adaptation.year}-${index}`, 
-      title: adaptation.adaptationTitle || 'N/A',
-      yearDisplay: String(adaptation.year) || 'N/A',
-      typeDisplay: adaptation.type || 'N/A',
-      linkUrl: adaptation.adaptationLink, 
-      imageUrl: adaptation.posterUrl || null,
-      originalYear: adaptation.year,
-      originalWorkTitle: adaptation.originalWorkTitle, 
-      originalWorkLink: adaptation.originalWorkLink   
-    }));
-
-    if (sortConfig.key) {
-      transformedItems.sort((a, b) => {
-        let valA, valB;
-        if (sortConfig.key === 'year') { 
-          valA = a.originalYear;
-          valB = b.originalYear;
-        } else { 
-          valA = a[sortConfig.key];
-          valB = b[sortConfig.key];
-        }
-        
-        if (typeof valA === 'string') valA = valA.toLowerCase();
-        if (typeof valB === 'string') valB = valB.toLowerCase();
-        
-        if (sortConfig.key === 'year') {
-            valA = Number(valA);
-            valB = Number(valB);
-        } else if (typeof valA !== 'number' && typeof valB !== 'number') { 
-            valA = String(valA).toLowerCase();
-            valB = String(valB).toLowerCase();
-        }
-
-        if (valA < valB) return sortConfig.direction === 'ascending' ? -1 : 1;
-        if (valA > valB) return sortConfig.direction === 'ascending' ? 1 : -1;
-        return 0;
-      });
-    }
-    return transformedItems;
-  }, [initialAdaptations, searchTerm, sortConfig]);
-
   const requestSort = (key) => {
     let direction = 'ascending';
     if (sortConfig.key === key && sortConfig.direction === 'ascending') {
@@ -135,17 +84,13 @@ export default function AdaptedWorksListClient({ adaptations: initialAdaptations
       </div>
 
       <ContentDisplay 
-        items={processedAdaptations} 
+        items={{data: initialAdaptations}}
         view={currentView} 
-        columns={adaptedWorksColumns} 
+        columns={adaptedWorksColumns}
+        sortConfig={sortConfig}
+        searchTerm={searchTerm}
+        contentType='adaptations'
       />
-      
-      {processedAdaptations.length === 0 && searchTerm && (
-        <p className="text-center text-[var(--text-color)] py-10">No adaptations found matching your search.</p>
-      )}
-       {processedAdaptations.length === 0 && !searchTerm && initialAdaptations.length > 0 && (
-        <p className="text-center text-[var(--text-color)] py-10">All adaptations have been filtered out.</p>
-      )}
     </div>
   );
 }

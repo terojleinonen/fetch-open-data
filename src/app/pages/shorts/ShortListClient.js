@@ -25,54 +25,6 @@ export default function ShortListClient({ initialShorts }) {
     return ['All', ...Array.from(types)];
   }, [initialShorts]);
 
-  const processedShorts = useMemo(() => {
-      if (!initialShorts || !initialShorts.data) return [];
-      let items = initialShorts.data.filter(short =>
-        short.title?.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-
-      if (selectedType && selectedType !== 'All') {
-        items = items.filter(short => short.type === selectedType);
-      }
-
-      let transformedItems = items.map(short => ({
-          id: short.id,
-          title: short.title || "Untitled Short",
-          typeDisplay: short.type || 'N/A',
-          yearDisplay: short.year ? String(short.year) : 'N/A',
-          linkUrl: `/pages/shorts/${short.id}`,
-          originalYear: short.year
-      }));
-
-      if (sortConfig.key) {
-        transformedItems.sort((a, b) => {
-          let valA, valB;
-          if (sortConfig.key === 'year') {
-            valA = a.originalYear;
-            valB = b.originalYear;
-          } else {
-            valA = a[sortConfig.key];
-            valB = b[sortConfig.key];
-          }
-
-          if (typeof valA === 'string') valA = valA.toLowerCase();
-          if (typeof valB === 'string') valB = valB.toLowerCase();
-          if (sortConfig.key === 'year') {
-              valA = Number(valA);
-              valB = Number(valB);
-          } else if (typeof valA !== 'number' && typeof valB !== 'number') {
-             valA = String(valA).toLowerCase();
-             valB = String(valB).toLowerCase();
-          }
-
-          if (valA < valB) return sortConfig.direction === 'ascending' ? -1 : 1;
-          if (valA > valB) return sortConfig.direction === 'ascending' ? 1 : -1;
-          return 0;
-        });
-      }
-      return transformedItems;
-    }, [initialShorts, searchTerm, sortConfig, selectedType]);
-
   const requestSort = (key) => {
     let direction = 'ascending';
     if (sortConfig.key === key && sortConfig.direction === 'ascending') {
@@ -109,20 +61,14 @@ export default function ShortListClient({ initialShorts }) {
           </div>
 
           <ContentDisplay
-            items={processedShorts}
+            items={initialShorts}
             view={'list'}
             columns={shortsColumns}
+            sortConfig={sortConfig}
+            searchTerm={searchTerm}
+            selectedType={selectedType}
+            contentType='shorts'
           />
-
-          {processedShorts.length === 0 && searchTerm && (
-              <p className="text-center text-[var(--text-color)] mt-4">No shorts found matching your search.</p>
-          )}
-          {processedShorts.length === 0 && selectedType && selectedType !== 'All' && !searchTerm && (
-            <p className="text-center text-[var(--text-color)] mt-4">No shorts found for the type &apos;{selectedType}&apos;.</p>
-          )}
-           {processedShorts.length === 0 && !searchTerm && (!selectedType || selectedType === 'All') && initialShorts?.data?.length > 0 && (
-             <p className="text-center text-[var(--text-color)] mt-4">All shorts have been filtered out.</p> // Changed message slightly
-           )}
             {initialShorts?.data?.length === 0 && (
              <p className="text-center text-[var(--text-color)] mt-4">No shorts available at the moment.</p>
            )}
