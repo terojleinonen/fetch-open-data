@@ -81,9 +81,10 @@
         "url": "https://stephen-king-api.onrender.com/api/villain/113"
       }
     ],
-    "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/9256043-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/9256043-L.jpg"
+    "googleBooksDataAvailable": true,
+    "description": "A repressed teenager uses her telekinetic powers to avenge the cruel jokes of her classmates",
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 2,
@@ -108,8 +109,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/14654118-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/14654118-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 3,
@@ -138,8 +139,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/12376585-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/12376585-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 4,
@@ -155,8 +156,8 @@
     "created_at": "2023-11-13T23:48:48.339Z",
     "villains": [],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/7083790-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/7083790-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 5,
@@ -198,8 +199,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/9255992-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/9255992-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 6,
@@ -224,8 +225,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/14653609-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/14653609-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 7,
@@ -266,8 +267,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/14653991-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/14653991-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 8,
@@ -297,8 +298,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/12015446-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/12015446-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 9,
@@ -314,8 +315,8 @@
     "created_at": "2023-11-13T23:48:49.005Z",
     "villains": [],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/14651941-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/14651941-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 10,
@@ -337,8 +338,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/8570003-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/8570003-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 11,
@@ -363,8 +364,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/14651762-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/14651762-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 12,
@@ -397,8 +398,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/8396638-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/8396638-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 13,
@@ -423,8 +424,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/14655985-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/14655985-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 14,
@@ -458,8 +459,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/12015500-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/12015500-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 15,
@@ -480,8 +481,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/14651552-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/14651552-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 16,
@@ -499,8 +500,8 @@
     "created_at": "2023-11-13T23:48:49.872Z",
     "villains": [],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/6923095-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/6923095-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 17,
@@ -521,8 +522,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/8524085-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/8524085-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 18,
@@ -538,8 +539,8 @@
     "created_at": "2023-11-13T23:48:50.102Z",
     "villains": [],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/8274288-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/8274288-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 19,
@@ -618,8 +619,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/8569284-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/8569284-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 20,
@@ -640,8 +641,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/14651245-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/14651245-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 21,
@@ -663,8 +664,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/8259296-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/8259296-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 22,
@@ -685,8 +686,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/6997458-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/6997458-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 23,
@@ -707,8 +708,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/8530409-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/8530409-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 24,
@@ -725,8 +726,8 @@
     "created_at": "2023-11-13T23:48:50.809Z",
     "villains": [],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/9255992-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/9255992-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 25,
@@ -752,8 +753,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/8443630-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/8443630-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 26,
@@ -775,8 +776,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/8404327-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/8404327-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 27,
@@ -803,8 +804,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/10705875-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/10705875-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 28,
@@ -825,8 +826,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/9255997-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/9255997-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 29,
@@ -852,8 +853,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/7886954-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/7886954-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 30,
@@ -878,8 +879,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/8578049-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/8578049-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 31,
@@ -905,8 +906,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/9334567-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/9334567-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 32,
@@ -923,8 +924,8 @@
     "created_at": "2023-11-13T23:48:51.784Z",
     "villains": [],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/8757374-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/8757374-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 33,
@@ -941,8 +942,8 @@
     "created_at": "2023-11-13T23:48:51.900Z",
     "villains": [],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/11505604-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/11505604-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 34,
@@ -984,8 +985,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/14657088-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/14657088-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 35,
@@ -1003,8 +1004,8 @@
     "created_at": "2023-11-13T23:48:52.137Z",
     "villains": [],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/14653458-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/14653458-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 36,
@@ -1018,8 +1019,8 @@
     "created_at": "2023-11-13T23:48:52.251Z",
     "villains": [],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/14653580-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/14653580-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 37,
@@ -1033,8 +1034,8 @@
     "created_at": "2023-11-13T23:48:52.368Z",
     "villains": [],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/14651654-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/14651654-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 38,
@@ -1058,8 +1059,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/926673-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/926673-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 39,
@@ -1080,8 +1081,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/6502777-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/6502777-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 40,
@@ -1098,8 +1099,8 @@
     "created_at": "2023-11-13T23:48:52.735Z",
     "villains": [],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/14652470-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/14652470-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 41,
@@ -1115,8 +1116,8 @@
     "created_at": "2023-11-13T23:48:52.856Z",
     "villains": [],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/8393691-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/8393691-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 42,
@@ -1150,8 +1151,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/14656148-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/14656148-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 43,
@@ -1165,8 +1166,8 @@
     "created_at": "2023-11-13T23:48:53.124Z",
     "villains": [],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/8380883-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/8380883-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 44,
@@ -1185,8 +1186,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/11653976-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/11653976-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 45,
@@ -1204,8 +1205,8 @@
     "created_at": "2023-11-13T23:48:53.382Z",
     "villains": [],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/8387657-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/8387657-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 46,
@@ -1221,8 +1222,8 @@
     "created_at": "2023-11-13T23:48:53.504Z",
     "villains": [],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/9246429-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/9246429-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 47,
@@ -1238,8 +1239,8 @@
     "created_at": "2023-11-13T23:48:53.622Z",
     "villains": [],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/14652203-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/14652203-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 48,
@@ -1269,8 +1270,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/14651549-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/14651549-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 49,
@@ -1288,8 +1289,8 @@
     "created_at": "2023-11-13T23:48:53.869Z",
     "villains": [],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/10713447-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/10713447-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 50,
@@ -1305,8 +1306,8 @@
     "created_at": "2023-11-13T23:48:53.984Z",
     "villains": [],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/14653576-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/14653576-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 51,
@@ -1328,8 +1329,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/9154939-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/9154939-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 52,
@@ -1352,8 +1353,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/14652972-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/14652972-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 53,
@@ -1375,8 +1376,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/14653120-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/14653120-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 54,
@@ -1397,8 +1398,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/7420215-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/7420215-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 55,
@@ -1419,8 +1420,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/8339525-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/8339525-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 56,
@@ -1441,8 +1442,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/12376085-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/12376085-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 57,
@@ -1458,8 +1459,8 @@
     "created_at": "2023-11-13T23:48:54.850Z",
     "villains": [],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/9325640-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/9325640-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 58,
@@ -1476,8 +1477,8 @@
     "created_at": "2023-11-13T23:48:54.973Z",
     "villains": [],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/8401484-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/8401484-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 59,
@@ -1499,8 +1500,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/7263662-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/7263662-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 60,
@@ -1514,8 +1515,8 @@
     "created_at": "2023-11-13T23:48:55.291Z",
     "villains": [],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/7893583-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/7893583-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 61,
@@ -1537,8 +1538,8 @@
       }
     ],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/11774455-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/11774455-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 62,
@@ -1552,8 +1553,8 @@
     "created_at": "2023-11-13T23:48:55.579Z",
     "villains": [],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/12501284-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/12501284-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   },
   {
     "id": 63,
@@ -1567,7 +1568,7 @@
     "created_at": "2023-11-13T23:48:55.753Z",
     "villains": [],
     "googleBooksDataAvailable": false,
-    "coverImageUrl": "https://covers.openlibrary.org/b/id/14654070-L.jpg",
-    "largeCoverImageUrl": "https://covers.openlibrary.org/b/id/14654070-L.jpg"
+    "coverImageUrl": "NO_COVER_AVAILABLE",
+    "largeCoverImageUrl": "NO_COVER_AVAILABLE"
   }
 ]
