@@ -151,6 +151,7 @@ export default async function Request(parameter, options = {}) {
         
         await Promise.all(processPromises);
         // console.log(`[INFO] Request: Google Books API calls completed for "${parameter}". ${booksProcessedCount} items processed.`);
+        console.log(JSON.stringify(data, null, 2));
       }
       // Store successful response in cache
       // console.log(`[INFO] Request: Storing successful response for "${parameter}" in cache.`);

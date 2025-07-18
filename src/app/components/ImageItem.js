@@ -7,9 +7,11 @@ const ImageItem = ({ item }) => {
   const { title, linkUrl, imageUrl } = item;
   const placeholderRef = useRef(null);
 
+  const displayImageUrl = imageUrl && imageUrl !== "NO_COVER_AVAILABLE" ? imageUrl : `https://covers.openlibrary.org/b/title/${title}-L.jpg`;
+
   // Ensure displayImageUrl is a non-empty string before passing to Image component.
   // Also handle "NO_COVER_AVAILABLE" explicitly to render placeholder.
-  const isValidImageUrl = typeof imageUrl === 'string' && imageUrl.trim() !== '' && imageUrl !== "NO_COVER_AVAILABLE";
+  const isValidImageUrl = typeof displayImageUrl === 'string' && displayImageUrl.trim() !== '';
 
   const content = (
     <div ref={placeholderRef} className="group relative aspect-[3/4] w-full bg-[var(--background-color)] border border-[var(--border-color)] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
