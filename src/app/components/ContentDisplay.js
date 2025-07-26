@@ -3,24 +3,17 @@ import React, { useMemo } from 'react';
 import ListItem from './ListItem';
 import ImageItem from './ImageItem';
 
-const ContentDisplay = ({ items, view = 'list', columns = [], sortConfig, searchTerm, selectedYear, selectedPublisher, minPages, maxPages, contentType, selectedStatus }) => {
+const ContentDisplay = ({ items, view = 'list', columns = [], sortConfig, searchTerm, contentType, selectedStatus }) => {
   const processedItems = useMemo(() => {
     if (!items || !items.data || !Array.isArray(items.data)) return [];
 
     let filteredItems = items.data;
 
     if (contentType === 'books') {
-      const minPagesNumeric = minPages !== '' ? parseInt(minPages, 10) : null;
-      const maxPagesNumeric = maxPages !== '' ? parseInt(maxPages, 10) : null;
-      const yearNumeric = selectedYear !== '' ? parseInt(selectedYear, 10) : null;
 
       filteredItems = items.data.filter(book => {
         const searchTermMatch = book.Title.toLowerCase().includes(searchTerm.toLowerCase());
         if (!searchTermMatch) return false;
-        if (yearNumeric !== null && book.Year !== yearNumeric) return false;
-        if (selectedPublisher && book.Publisher && book.Publisher.toLowerCase() !== selectedPublisher.toLowerCase()) return false;
-        if (minPagesNumeric !== null && (!book.Pages || book.Pages < minPagesNumeric)) return false;
-        if (maxPagesNumeric !== null && (!book.Pages || book.Pages > maxPagesNumeric)) return false;
         return true;
       });
     } else if (contentType === 'villains') {
@@ -102,7 +95,7 @@ const ContentDisplay = ({ items, view = 'list', columns = [], sortConfig, search
           }));
     }
     return [];
-  }, [items, searchTerm, sortConfig, selectedYear, selectedPublisher, minPages, maxPages, contentType, selectedStatus]);
+  }, [items, searchTerm, sortConfig, contentType, selectedStatus]);
 
   if (!processedItems || processedItems.length === 0) {
     return <p className="text-[var(--text-color)] opacity-70 text-center py-8">No items to display.</p>;

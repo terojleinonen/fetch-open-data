@@ -76,10 +76,6 @@ export default function BookListClient({ initialBooks }) {
             columns={bookColumns} 
             sortConfig={sortConfig}
             searchTerm={searchTerm}
-            selectedYear={selectedYear}
-            selectedPublisher={selectedPublisher}
-            minPages={minPages}
-            maxPages={maxPages}
             contentType='books'
           />
            {initialBooks?.data?.length === 0 && (
