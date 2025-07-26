@@ -25,6 +25,18 @@ const ContentDisplay = ({ items, view = 'list', columns = [], sortConfig, search
       if (selectedStatus && selectedStatus !== 'All') {
         filteredItems = filteredItems.filter(villain => villain.status === selectedStatus);
       }
+    } else if (contentType === 'shorts') {
+      if (searchTerm) {
+        filteredItems = filteredItems.filter(short =>
+          short.title?.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+      }
+    } else if (contentType === 'adaptations') {
+      if (searchTerm) {
+        filteredItems = filteredItems.filter(adaptation =>
+          adaptation.adaptationTitle?.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+      }
     }
 
     if (sortConfig.key) {
