@@ -1,4 +1,4 @@
-import BookCarousel from './components/BookCarousel';
+
 import AboutStephenKing from './pages/about-stephen-king/page';
 import PageLinks from './components/PageLinks';
 
@@ -38,11 +38,8 @@ export default function Page() {
       <header className="home-header">
         <h1>Stephen King Universe</h1>
       </header>
-
-      <BookCarousel /> {/* items prop removed */}
       <AboutStephenKing />
       <PageLinks cards={homePageCards} />
-
       <footer className="home-footer">
         &copy; {new Date().getFullYear()} Stephen King Universe Fan Page. All rights reserved.
       </footer>
