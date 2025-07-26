@@ -17,10 +17,6 @@ import Request from '@/app/components/request'; // Import Request
 export default function BookListClient({ initialBooks }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [sortConfig, setSortConfig] = useState({ key: 'Title', direction: 'ascending' });
-  const [selectedYear, setSelectedYear] = useState('');
-  const [selectedPublisher, setSelectedPublisher] = useState('');
-  const [minPages, setMinPages] = useState('');
-  const [maxPages, setMaxPages] = useState('');
   const [currentView, setCurrentView] = useState('grid');
   const router = useRouter();
 
@@ -29,26 +25,7 @@ export default function BookListClient({ initialBooks }) {
     { key: 'publisherDisplay', label: 'Publisher' },
     { key: 'yearDisplay', label: 'Year' }
   ];
-
-  const uniqueYears = useMemo(() => {
-    if (!initialBooks?.data || !Array.isArray(initialBooks.data)) return [];
-    const years = new Set(initialBooks.data.map(book => book.Year).filter(Boolean));
-    return Array.from(years).sort((a, b) => b - a);
-  }, [initialBooks]);
-
-  const uniquePublishers = useMemo(() => {
-    if (!initialBooks?.data || !Array.isArray(initialBooks.data)) return [];
-    const publishers = new Set(initialBooks.data.map(book => book.Publisher).filter(Boolean));
-    return Array.from(publishers).sort();
-  }, [initialBooks]);
-
-  const handleResetFilters = () => {
-    setSelectedYear('');
-    setSelectedPublisher('');
-    setMinPages('');
-    setMaxPages('');
-  };
-
+  
   const requestSort = (key) => {
     let direction = 'ascending';
     if (sortConfig.key === key && sortConfig.direction === 'ascending') {
