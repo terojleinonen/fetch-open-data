@@ -41,16 +41,24 @@ const ContentDisplay = ({ items, view = 'list', columns = [], sortConfig, search
 
     if (sortConfig.key) {
       filteredItems.sort((a, b) => {
-        let valA = a[sortConfig.key];
-        let valB = b[sortConfig.key];
+        let keyA = sortConfig.key;
+        let keyB = sortConfig.key;
+
+        if (contentType === 'adaptations' && sortConfig.key === 'title') {
+            keyA = 'adaptationTitle';
+            keyB = 'adaptationTitle';
+        }
+
+        let valA = a[keyA];
+        let valB = b[keyB];
 
         if (sortConfig.key === 'Year' || sortConfig.key === 'year') {
           valA = parseInt(valA, 10) || 0;
           valB = parseInt(valB, 10) || 0;
-        } else if (typeof valA === 'string') {
-          valA = valA.toLowerCase();
-        } else if (typeof valB === 'string') {
-            valB = valB.toLowerCase();
+        } else {
+          // Ensure values are strings and lowercase them for case-insensitive comparison
+          valA = typeof valA === 'string' ? valA.toLowerCase() : '';
+          valB = typeof valB === 'string' ? valB.toLowerCase() : '';
         }
 
         if (valA < valB) return sortConfig.direction === 'ascending' ? -1 : 1;
