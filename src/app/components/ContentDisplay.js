@@ -3,7 +3,7 @@ import React, { useMemo } from 'react';
 import ListItem from './ListItem';
 import ImageItem from './ImageItem';
 
-const ContentDisplay = ({ items, view = 'list', columns = [], sortConfig, searchTerm, contentType, selectedStatus }) => {
+const ContentDisplay = ({ items, view = 'list', columns = [], sortConfig, searchTerm, contentType, selectedStatus, selectedType }) => {
   const processedItems = useMemo(() => {
     if (!items || !items.data || !Array.isArray(items.data)) return [];
 
@@ -30,6 +30,9 @@ const ContentDisplay = ({ items, view = 'list', columns = [], sortConfig, search
         filteredItems = filteredItems.filter(short =>
           short.title?.toLowerCase().includes(searchTerm.toLowerCase())
         );
+      }
+      if (selectedType && selectedType !== 'All') {
+        filteredItems = filteredItems.filter(short => short.type === selectedType);
       }
     } else if (contentType === 'adaptations') {
       if (searchTerm) {
@@ -115,7 +118,7 @@ const ContentDisplay = ({ items, view = 'list', columns = [], sortConfig, search
           }));
     }
     return [];
-  }, [items, searchTerm, sortConfig, contentType, selectedStatus]);
+  }, [items, searchTerm, sortConfig, contentType, selectedStatus, selectedType]);
 
   if (!processedItems || processedItems.length === 0) {
     return <p className="text-[var(--text-color)] opacity-70 text-center py-8">No items to display.</p>;
