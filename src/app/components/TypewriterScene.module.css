@@ -1,0 +1,51 @@
+.sceneRoot {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  z-index: 10;
+  text-align: center;
+  color: #1c120c;
+  pointer-events: none;
+}
+
+.paperTitle {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: clamp(26px, 4.6vw, 56px);
+  color: #1c120c;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 8px 0;
+}
+
+.typewriterText {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', monospace;
+  color: #37261b;
+  font-size: clamp(14px, 1.8vw, 18px);
+}
+
+.scrollHint {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  color: rgba(255,235,210,0.95);
+}
+
+.dotLabel {
+  pointer-events: auto;
+}

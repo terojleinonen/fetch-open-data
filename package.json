@@ -18,7 +18,8 @@
     "node-fetch": "^3.3.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "requests": "^0.3.0"
+    "requests": "^0.3.0",
+    "three": "^0.154.0"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.27.1",
@@ -34,7 +35,10 @@
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.10"
   },
+
   "overrides": {
     "glob": "^10.4.5"
   }
 }
+
+
