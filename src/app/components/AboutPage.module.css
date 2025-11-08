@@ -1,0 +1,113 @@
+.aboutPage {
+  padding: 4rem 2rem;
+  min-height: 100vh; /* Ensure it takes at least full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* For noise texture positioning */
+  overflow: hidden; /* To prevent noise texture spill */
+
+  /* Initial state for fade-in animation */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+
+  /* Warm amber color palette - fallbacks/defaults */
+  --color-amber-light: #ffebcd; /* Blanched almond */
+  --color-amber-medium: #d48e00; /* Amber */
+  --color-amber-dark: #8b4513; /* Saddle brown */
+  --color-text: #2a1c0f; /* Dark brown */
+  --color-background: #fff8dc; /* Cornsilk */
+  --color-link: #d48e00; /* Amber */
+  --color-border: rgba(139, 69, 19, 0.4); /* Sienna */
+
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/* Dark theme adjustments */
+@media (prefers-color-scheme: dark) {
+  .aboutPage {
+    --color-amber-light: #5a2e1c; /* Darker amber */
+    --color-amber-medium: #8b4513; /* Saddle brown */
+    --color-amber-dark: #3a1d0d; /* Very dark brown */
+    --color-text: #f0e6d2; /* Light parchment */
+    --color-background: #1a0b0b; /* Dark reddish brown (cinematic base) */
+    --color-link: #ffebcd; /* Lighter amber */
+    --color-border: rgba(180, 90, 30, 0.4);
+    
+    background-color: var(--color-background);
+  }
+}
+
+/* Noise texture overlay */
+.aboutPage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Hl0AAAAKElEQVQImWNgYGD4TwWjgBjQWgAxGCQDqBwQC4gJGBmQFoAJGCjGAABb/gHNAeF+4wAAAABJRU5ErkJggg=='); /* Tiny repeating noise pattern */
+  background-size: 2px 2px;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 1; /* Above background, below content */
+}
+
+.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contentWrapper {
+  max-width: 800px; /* One-column layout constraint */
+  margin: 0 auto; /* Center the content */
+  display: grid;
+  grid-template-columns: 1fr; /* Single column */
+  gap: 1.5rem; /* Space between paragraphs/elements */
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.03); /* Subtle backdrop for content */
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 2; /* Ensure content is above noise */
+  position: relative; /* For z-index to work */
+}
+
+@media (prefers-color-scheme: dark) {
+  .contentWrapper {
+    background-color: rgba(0, 0, 0, 0.15); /* Darker backdrop */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.title {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 2.5rem;
+  color: var(--color-amber-medium);
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+@media (prefers-color-scheme: dark) {
+  .title {
+    color: var(--color-link); /* Use a lighter amber for dark theme */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.paragraph {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-block-end: 1em; /* Standard paragraph spacing */
+  color: var(--color-text);
+  text-align: justify;
+}
+
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
