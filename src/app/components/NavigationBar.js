@@ -2,25 +2,39 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import "./NavigationBar.css";
 
 const NavigationBar = () => {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const handleLinkClick = () => {
     setIsMobileMenuOpen(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    // On mobile (default): full width, flex-col for header and links.
-    // On desktop (md+): full width, flex-row, and padding for horizontal navbar.
-    <nav className="w-full p-4 md:flex md:items-center md:justify-between shadow-md bg-background z-50 relative">
-      {/* Header: Contains site title and hamburger menu toggle. Visible on all screen sizes. */}
-      <div className="flex items-center justify-between">
-        <div className="text-xl lg:text-2xl font-bold whitespace-nowrap">Stephen King Universe</div> {/* Updated title, reverted font size class */}
+    <nav className={`nav ${isScrolled ? 'scrolled' : ''}`}>
+      <div className="nav-header">
+        <Link href="/" className="nav-logo" onClick={handleLinkClick}>Stephen King Universe</Link>
         <button
-           className="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[var(--nav-link-focus-ring)]"
+           className="mobile-menu-button"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
           aria-expanded={isMobileMenuOpen}
@@ -42,30 +56,23 @@ const NavigationBar = () => {
         </button>
       </div>
 
-      {/* Navigation Links Container:
-          - Mobile: Toggles visibility, full width, specific background.
-          - Desktop (md+): Always visible (flex), flex-col, no special background needed (inherits from nav).
-      */}
       <div
         data-testid="nav-links-container"
-        className={`${
-          isMobileMenuOpen ? 'flex' : 'hidden'
-        } flex-col items-stretch space-y-2 mt-4 p-4 rounded-md shadow-lg mobile-menu-bg
-           md:flex md:flex-row md:items-center md:space-y-0 md:space-x-1 md:mt-0 md:p-0 md:shadow-none md:bg-transparent w-full md:w-auto`}
+        className={`nav-links ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}
       >
-        <Link href="/" className={`text-sm lg:text-base font-bold py-2 px-3 rounded-md mobile-menu-link-hover nav-link-desktop-hover ${pathname === '/' ? 'underline' : ''}`} onClick={handleLinkClick}>
-          HOME
+        <Link href="/pages/about-stephen-king" className={`nav-links-item ${pathname === '/pages/about-stephen-king' ? 'underline' : ''}`} onClick={handleLinkClick}>
+          ABOUT
         </Link>
-        <Link href="/pages/books" className={`text-sm lg:text-base font-bold py-2 px-3 rounded-md mobile-menu-link-hover nav-link-desktop-hover ${pathname === '/pages/books' ? 'underline' : ''}`} onClick={handleLinkClick}>
+        <Link href="/pages/books" className={`nav-links-item ${pathname === '/pages/books' ? 'underline' : ''}`} onClick={handleLinkClick}>
           BOOKS
         </Link>
-        <Link href="/pages/shorts" className={`text-sm lg:text-base font-bold py-2 px-3 rounded-md mobile-menu-link-hover nav-link-desktop-hover ${pathname === '/pages/shorts' ? 'underline' : ''}`} onClick={handleLinkClick}>
+        <Link href="/pages/shorts" className={`nav-links-item ${pathname === '/pages/shorts' ? 'underline' : ''}`} onClick={handleLinkClick}>
           SHORTS
         </Link>
-        <Link href="/pages/adapted-works" className={`text-sm lg:text-base font-bold py-2 px-3 rounded-md mobile-menu-link-hover nav-link-desktop-hover ${pathname === '/pages/adapted-works' ? 'underline' : ''}`} onClick={handleLinkClick}>
+        <Link href="/pages/adapted-works" className={`nav-links-item ${pathname === '/pages/adapted-works' ? 'underline' : ''}`} onClick={handleLinkClick}>
           ADAPTED WORKS
         </Link>
-        <Link href="/pages/villains" className={`text-sm lg:text-base font-bold py-2 px-3 rounded-md mobile-menu-link-hover nav-link-desktop-hover ${pathname === '/pages/villains' ? 'underline' : ''}`} onClick={handleLinkClick}>
+        <Link href="/pages/villains" className={`nav-links-item ${pathname === '/pages/villains' ? 'underline' : ''}`} onClick={handleLinkClick}>
           VILLAINS
         </Link>
       </div>

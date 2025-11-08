@@ -1,617 +1,210 @@
-
 @import "tailwindcss";
 
-:root {
-  /* Stephen King Inspired Dark Theme */
-  --sk-background-dark: #000000; /* Black */
-  --sk-text-dark: #FFFFFF;       /* White */
-  --sk-accent-dark: #FF0000;     /* Red */
-  --sk-hover-accent-dark: #CC0000; /* Darker Red for hover */
-  --sk-shadow-dark: #330000;      /* Dark Red for shadow/depth */
 
-  /* Alternating row colors for dark theme */
-  --sk-row-bg-odd-dark: var(--sk-background-dark);
-  --sk-row-bg-even-dark: #1a1a1a; /* Very dark grey, slightly lighter than black */
+/* =========================================================
+   STEPHEN KING UNIVERSE — GLOBAL THEME STYLES
+   Cinematic dark/light dual theme with foggy & parchment tones
+========================================================= */
 
-  /* Stephen King Inspired Light Theme */
-  --sk-background-light: #FFFFFF; /* White */
-  --sk-text-light: #000000;       /* Black */
-  --sk-accent-light: #FF0000;     /* Red */
-  --sk-hover-accent-light: #CC0000; /* Darker Red for hover */
-  --sk-shadow-light: #FFD1D1;     /* Light Red for shadow/depth */
+/* --- Font setup --- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-  /* Alternating row colors for light theme */
-  --sk-row-bg-odd-light: var(--sk-background-light);
-  --sk-row-bg-even-light: #f0f0f0; /* Very light grey */
-
-  /* Page Title Gradient Colors (using accent) */
-  --title-gradient-from-dark: var(--sk-accent-dark);
-  --title-gradient-via-dark: var(--sk-hover-accent-dark);
-  --title-gradient-to-dark: var(--sk-accent-dark);
-
-  --title-gradient-from-light: var(--sk-accent-light);
-  --title-gradient-via-light: var(--sk-hover-accent-light);
-  --title-gradient-to-light: var(--sk-accent-light);
-
-  /* Navigation Link Focus Ring */
-  --nav-link-focus-ring-dark: var(--sk-accent-dark);
-  --nav-link-focus-ring-light: var(--sk-accent-light);
-
-  /* Navigation Link Hover Background (using accent) */
-  --nav-link-hover-bg-dark: var(--sk-accent-dark); /* Changed to red */
-  --nav-link-hover-bg-light: var(--sk-accent-light); /* Changed to red */
-  --nav-link-hover-text-dark: #FFFFFF; /* White text for dark theme hover */
-  --nav-link-hover-text-light: #FFFFFF; /* White text for light theme hover */
-
-
-  /* Map Marker colors - can be adapted or kept generic if SK site doesn't have maps */
-  --map-marker-fill-dark: var(--sk-accent-dark);
-  --map-marker-stroke-dark: rgba(255, 255, 255, 0.3);
-  --map-marker-hover-fill-dark: var(--sk-hover-accent-dark);
-  --map-marker-hover-stroke-dark: rgba(255, 255, 255, 0.7);
-
-  --map-marker-fill-light: var(--sk-accent-light);
-  --map-marker-stroke-light: rgba(0, 0, 0, 0.3);
-  --map-marker-hover-fill-light: var(--sk-hover-accent-light);
-  --map-marker-hover-stroke-light: rgba(0, 0, 0, 0.7);
-
-  /* Button specific styles for light theme */
-  --kitab-button-background-light: #FFFFFF; /* White background */
-  --kitab-button-text-light: #000000;       /* Black text */
-  --kitab-button-border-light: #000000;     /* Black border */
-  --kitab-button-hover-background-light: var(--sk-hover-accent-light); /* Changed to accent */
-
-  /* Button specific styles for dark theme */
-  --kitab-button-background-dark: #000000;  /* Black background */
-  --kitab-button-text-dark: #FFFFFF;        /* White text */
-  --kitab-button-border-dark: #FFFFFF;      /* White border */
-  --kitab-button-hover-background-dark: var(--sk-hover-accent-dark);  /* Changed to accent */
-
-  /* Link colors */
-  --sk-link-dark: var(--sk-text-dark); /* White for dark theme */
-  --sk-link-light: var(--sk-text-light); /* Black for light theme */
-
-  /* Border color */
-  --sk-border-dark: var(--sk-shadow-dark); /* Using shadow color for borders */
-  --sk-border-light: var(--sk-shadow-light); /* Using shadow color for borders */
-
-  /* List Row Hover colors */
-  --sk-row-hover-neutral-gray: #808080; /* Neutral gray for row hover */
-  --sk-row-hover-light: var(--sk-row-hover-neutral-gray);
-  --sk-row-hover-dark: var(--sk-row-hover-neutral-gray);
-
-  /* Control Active State colors */
-  --sk-control-active-bg-light: #e0e7ff; /* Light Indigo */
-  --sk-control-active-text-light: #3730a3; /* Dark Indigo */
-  --sk-control-active-bg-dark: #4338ca; /* Indigo */
-  --sk-control-active-text-dark: #c7d2fe; /* Light Indigo */
-
-  /* Text color for on-accent backgrounds */
-  --text-on-accent: #FFFFFF;
-}
-
-/* Default to dark theme */
-body {
-  --background-color: var(--sk-background-dark);
-  --text-color: var(--sk-text-dark);
-  --accent-color: var(--sk-accent-dark);
-  --hover-accent-color: var(--sk-hover-accent-dark);
-  --shadow-color: var(--sk-shadow-dark);
-  --map-marker-fill: var(--map-marker-fill-dark);
-  --map-marker-stroke: var(--map-marker-stroke-dark);
-  --map-marker-hover-fill: var(--map-marker-hover-fill-dark);
-  --map-marker-hover-stroke: var(--map-marker-hover-stroke-dark);
-  --row-bg-odd: var(--sk-row-bg-odd-dark);
-  --row-bg-even: var(--sk-row-bg-even-dark);
-
-  /* Page title gradient */
-  --title-gradient-from: var(--title-gradient-from-dark);
-  --title-gradient-via: var(--title-gradient-via-dark);
-  --title-gradient-to: var(--title-gradient-to-dark);
-
-  /* Navigation link hover */
-  --nav-link-hover-bg: var(--nav-link-hover-bg-dark);
-  --nav-link-hover-text: var(--nav-link-hover-text-dark); /* Added for dark theme */
-  --nav-link-focus-ring: var(--nav-link-focus-ring-dark);
-
-  /* Details box colors for dark theme */
-  --details-box-bg: var(--sk-row-bg-even-dark);
-  --details-box-text: var(--sk-text-dark);
-  --details-box-shadow: rgba(255, 0, 0, 0.1); /* Subtle red shadow for dark mode */
-
-  /* Button styles for dark theme */
-  --kitab-button-background: var(--kitab-button-background-dark);
-  --kitab-button-text: var(--kitab-button-text-dark);
-  --kitab-button-border: var(--kitab-button-border-dark);
-  --kitab-button-hover-background: var(--kitab-button-hover-background-dark);
-  --link-color: var(--sk-link-dark);
-  --border-color: var(--sk-border-dark);
-  --row-hover-bg: var(--sk-row-hover-dark);
-  --control-active-bg: var(--sk-control-active-bg-dark);
-  --control-active-text: var(--sk-control-active-text-dark);
-
-  color: var(--text-color);
-  background: var(--background-color);
-  font-family: 'GeistMonoVF', 'GeistVF', Arial, Helvetica, sans-serif; /* Prioritize Geist fonts */
-}
-
-/* Light theme using prefers-color-scheme */
-@media (prefers-color-scheme: light) {
   body {
-    --background-color: var(--sk-background-light);
-    --text-color: var(--sk-text-light);
-    --accent-color: var(--sk-accent-light);
-    --hover-accent-color: var(--sk-hover-accent-light);
-    --shadow-color: var(--sk-shadow-light);
-    --map-marker-fill: var(--map-marker-fill-light);
-    --map-marker-stroke: var(--map-marker-stroke-light);
-    --map-marker-hover-fill: var(--map-marker-hover-fill-light);
-    --map-marker-hover-stroke: var(--map-marker-hover-stroke-light);
-    --row-bg-odd: var(--sk-row-bg-odd-light);
-    --row-bg-even: var(--sk-row-bg-even-light);
-
-    /* Page title gradient */
-    --title-gradient-from: var(--title-gradient-from-light);
-    --title-gradient-via: var(--title-gradient-via-light);
-    --title-gradient-to: var(--title-gradient-to-light);
-
-  /* Navigation link hover */
-  --nav-link-hover-bg: var(--nav-link-hover-bg-light);
-  --nav-link-hover-text: var(--nav-link-hover-text-light); /* Added for light theme */
-  --nav-link-focus-ring: var(--nav-link-focus-ring-light);
-
-    /* Details box colors for light theme */
-    --details-box-bg: var(--sk-row-bg-even-light); /* Use a slightly off-white for the box */
-    --details-box-text: var(--sk-text-light);
-    --details-box-shadow: rgba(255, 0, 0, 0.05); /* Subtle red shadow for light mode */
-
-    /* Button styles for light theme */
-    --kitab-button-background: var(--kitab-button-background-light);
-    --kitab-button-text: var(--kitab-button-text-light);
-    --kitab-button-border: var(--kitab-button-border-light);
-    --kitab-button-hover-background: var(--kitab-button-hover-background-light);
-  --link-color: var(--sk-link-light);
-  --border-color: var(--sk-border-light);
-  --row-hover-bg: var(--sk-row-hover-light);
-  --control-active-bg: var(--sk-control-active-bg-light);
-  --control-active-text: var(--sk-control-active-text-light);
-
-    color: var(--text-color);
-    background: var(--background-color);
+    font-family: 'Libre Baskerville', serif;
+    transition: background-color 0.8s ease, color 0.8s ease;
   }
 
-  /* Adjust background text color for light theme */
-  .page-background-text::before {
-    color: rgba(100, 100, 100, 0.05); /* Darker gray, low opacity for light backgrounds */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel Decorative', serif;
+    text-transform: none;
+    letter-spacing: 0.05em;
+  }
+
+  a {
+    transition: color 0.3s ease, text-shadow 0.3s ease;
   }
 }
 
-/* Generic background text style for pages */
-.page-background-text::before {
-  content: var(--page-background-text-content, ''); /* Use CSS variable for text */
-  position: fixed; /* Use fixed to ensure it stays in place even with scrolling */
-  left: 2%; /* Align to the left with a small offset */
-  top: 6rem; /* Reverted: Position below a typical navbar height (e.g., 96px) */
-  transform: none; /* No translation needed for left alignment */
-  font-size: 8vw; /* Responsive font size */
-  font-weight: bold;
-  /* Default for dark theme: lighter/more visible gray */
-  color: rgba(200, 200, 200, 0.08); 
-  white-space: normal; /* Allow text to wrap */
-  line-height: 1.2; /* Adjust line height for wrapped text */
-  z-index: -1; /* Ensure it's behind all other content */
-  pointer-events: none; /* Make sure it doesn't interfere with mouse events */
-  text-align: left; /* Align text to the left */
-  overflow: hidden; /* Hide any part of the text that might overflow */
-  width: 96%; /* Fill most of the width, leaving a small right offset */
-  word-break: break-word; /* Break words if necessary to prevent overflow */
-  white-space: nowrap; /* Ensure the title stays on one line */
-  overflow: hidden; /* Hide overflow */
-  text-overflow: ellipsis; /* Add ellipsis if text is too long */
-}
+/* =========================================================
+   LIGHT THEME — Aged parchment & warm daylight
+========================================================= */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-primary: #f9f3e7;          /* parchment */
+    --bg-secondary: #f0e6d2;        /* slightly darker parchment */
+    --text-primary: #2a1c0f;        /* ink brown */
+    --text-secondary: #4a2f1a;      /* muted brown */
+    --accent: #8b0000;              /* blood red accent */
+    --border-color: rgba(90, 60, 20, 0.4);
+  }
 
-/* Responsive font size for page-background-text */
-@media (max-width: 768px) {
-  .page-background-text::before {
-    font-size: 6vw; /* Smaller font size for smaller screens */
+  body {
+    background: radial-gradient(circle at 30% 20%, var(--bg-primary), var(--bg-secondary));
+    color: var(--text-primary);
+  }
+
+  a:hover {
+    color: var(--accent);
+    text-shadow: 0 0 4px rgba(139, 0, 0, 0.3);
+  }
+
+  header, nav {
+    background: rgba(245, 230, 204, 0.8);
+    color: var(--text-primary);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+  }
+
+  button, .btn {
+    background: var(--accent);
+    color: #fff;
+    border: 1px solid var(--border-color);
+    transition: background 0.3s ease;
+  }
+
+  button:hover, .btn:hover {
+    background: #a00000;
+  }
+
+  .section-title {
+    color: var(--text-secondary);
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+  }
+
+  hr {
+    border-color: var(--border-color);
   }
 }
 
-@media (max-width: 480px) {
-  .page-background-text::before {
-    font-size: 4vw; /* Even smaller font size for very small screens */
+/* =========================================================
+   DARK THEME — Fog, red shadows & candlelight glow
+========================================================= */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #0a0a0a;           /* deep black base */
+    --bg-secondary: #1b0d0d;         /* subtle red tint shadows */
+    --text-primary: #f5e6cc;         /* warm candlelight */
+    --text-secondary: #d8c7a4;       /* softer parchment tone */
+    --accent: #b00000;               /* blood red */
+    --accent-glow: #ff5555;
+    --border-color: rgba(139, 0, 0, 0.5);
+  }
+
+  body {
+    background: radial-gradient(circle at 50% 30%, var(--bg-secondary), var(--bg-primary));
+    color: var(--text-primary);
+  }
+
+  a:hover {
+    color: var(--accent-glow);
+    text-shadow: 0 0 8px rgba(255, 80, 80, 0.6);
+  }
+
+  header, nav {
+    background: rgba(10, 10, 10, 0.6);
+    color: var(--text-primary);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+  }
+
+  button, .btn {
+    background: var(--accent);
+    color: #fff;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 10px rgba(139, 0, 0, 0.4);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  button:hover, .btn:hover {
+    background: #ff0000;
+    box-shadow: 0 0 20px rgba(255, 50, 50, 0.6);
+  }
+
+  .section-title {
+    color: var(--text-primary);
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+  }
+
+  hr {
+    border-color: var(--border-color);
   }
 }
 
+/* =========================================================
+   Global reusable UI elements
+========================================================= */
 
-/* Update existing variables to use the new scheme or remove if redundant */
-/* These are used by Tailwind config */
-:root {
-  --background: var(--background-color);
-  --foreground: var(--text-color);
 
-  /* Details box specific variables - ensure they are updated by body theme */
-  /* No need to redefine --details-box-bg, etc. here if they are set in body and @media */
+.shadow-text {
+  text-shadow: 0 0 8px rgba(0,0,0,0.6);
 }
 
-/* White box style for details pages */
-.details-box {
-  background-color: var(--details-box-bg);
-  padding: 2rem; /* Adjust padding as needed */
-  border-radius: 0.5rem; /* Rounded corners */
-  box-shadow: 0 4px 6px var(--details-box-shadow); /* Subtle shadow */
-  color: var(--details-box-text);
+.text-accent {
+  color: var(--accent);
 }
 
-/* Link styles for the home page */
-.home-link {
-  color: var(--accent-color);
-  font-family: Georgia, serif;
-  text-decoration: none;
+.bg-accent {
+  background-color: var(--accent);
 }
 
-.home-link:hover {
-  color: var(--hover-accent-color);
-  text-decoration: underline;
-}
-
-/* Keyframes for subtle pulsing background animation */
-@keyframes subtlePulse {
-  0% { opacity: 0.05; }
-  50% { opacity: 0.15; }
-  100% { opacity: 0.05; }
-}
-
-/* Generic link styling */
-a {
-  color: var(--link-color);
-  text-decoration: none; /* Optional: remove underline by default */
-  /* transition: color 0.2s ease-in-out; */ /* Optional: keep if only color changes */
-}
-
-a:hover {
-  color: var(--hover-accent-color);
-  text-decoration: underline;
-}
-
-/* Apply the animation to the body's pseudo-element */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Place it behind the content */
-  background-color: var(--shadow-color); /* Use theme-aware shadow color */
-  animation: subtlePulse 15s infinite ease-in-out;
-  pointer-events: none; /* Ensure it doesn't interfere with interactions */
-}
-
-/* Styles for SVG map markers */
-.map-marker {
-  fill: var(--map-marker-fill);
-  stroke: var(--map-marker-stroke);
-  stroke-width: 1px;
-  cursor: pointer;
-  transition: fill 0.3s ease, stroke 0.3s ease;
-}
-
-.map-marker:hover {
-  fill: var(--map-marker-hover-fill);
-  stroke: var(--map-marker-hover-stroke);
-}
-
-/* Info Panel Styles */
-#info-panel-close {
-  transition: color 0.2s ease;
-}
-
-#info-panel-close:hover {
-  color: var(--accent-color);
-}
-
-/* Styles for search, sort, and filter controls */
-.controls-container > * {
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .controls-container {
-    display: flex;
-    justify-content: space-between;
-  }
-  .controls-container > * {
-    width: auto;
-    flex-grow: 1;
-  }
-  .controls-container > input[type="text"] {
-    flex-grow: 2;
-  }
-}
-
-/* Styles for the shorts list */
-.shorts-list-container .short-item:nth-child(odd) {
-  background-color: var(--row-bg-odd);
-}
-
-.shorts-list-container .short-item:nth-child(even) {
-  background-color: var(--row-bg-even);
-}
-
-/* Mobile navigation menu styles */
-.mobile-menu-bg {
-  background-color: var(--background-color); /* Use themed background */
-}
-
-.mobile-menu-link-hover:hover {
-  background-color: var(--nav-link-hover-bg);
-  color: var(--nav-link-hover-text); /* Added text color for hover state */
-}
-
-/* Utility class for navigation link hover background */
-.nav-link-desktop-hover:hover {
-  background-color: var(--nav-link-hover-bg);
-  color: var(--nav-link-hover-text); /* Added text color for hover state */
-}
-
-/* Styling for the search icon to ensure visibility */
-.search-icon {
-  color: var(--text-color); /* Default to text color, which is theme aware. SVG uses stroke="currentColor" */
-}
-
-/* Override for search icon when inside the input field if needed, e.g. to ensure it's not borderless */
-/* For now, relying on the SVG's inherent borderless nature */
-
-/* Styles for the new Home Page components */
-
-/* Base body colors from mockup (dark theme) */
-body {
-  /* These are already set up with CSS variables, but the mockup specified these for body:
-     background-color: #121212; -> var(--sk-background-dark) is #000000, close enough or can be adjusted
-     color: #f5f5f5;       -> var(--sk-text-dark) is #FFFFFF, close enough
-     The new sections will define their own backgrounds.
-     The general page background will be determined by the theme applied to body.
-  */
-  font-family: Arial, sans-serif; /* Mockup specified Arial, existing theme uses Geist. Reverting to mockup's for these components if necessary, or keeping theme font. */
-                                /* For now, existing theme font ('GeistMonoVF', 'GeistVF', Arial, Helvetica, sans-serif) will take precedence. */
-}
-
-.home-header {
-  background-color: #1e1e1e; /* Dark theme */
-  padding: 40px 20px;
-  text-align: center;
-  color: #f5f5f5; /* Explicitly set text color for header if different from body */
-}
-
-.home-header h1 {
-  font-size: 2.5em;
-  margin: 0;
-}
-
-.home-carousel {
-  position: relative; /* For absolute positioning of items */
-  min-height: 380px; /* Accommodate image (300px) + caption + padding. Adjust as needed. */
-  padding: 20px;    /* Keep padding for overall section spacing */
-  background-color: #181818; /* Dark theme */
-  display: flex; /* To center the status messages or a single item if not using absolute children */
-  justify-content: center;
-  align-items: center;
-  overflow: hidden; /* Hide non-active items if they were to overflow */
-}
-
-.home-carousel-status { /* For loading/error messages */
-  color: #f5f5f5; /* Ensure text is visible in dark theme */
-}
-
-.home-carousel-item.slideshow-item {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 200px; /* Width of the item */
+/* Card Item Styling */
+.card-item {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
-  /* overflow: hidden; /* This is on the item, good. */
-  background-color: #222; /* Dark theme item background */
-  color: #f5f5f5; /* Text color for caption */
-  opacity: 0;
-  transition: opacity 0.75s ease-in-out;
-  display: flex; /* Ensure it's not display:none which would break transitions */
-  flex-direction: column; /* To stack image and caption */
-  align-items: center; /* Center content like caption text if it's narrower */
-}
-
-.home-carousel-item.slideshow-item.active {
-  opacity: 1;
-  z-index: 1; /* Ensure active item is on top if needed */
-}
-
-.slideshow-link-content { /* Class for the <a> tag */
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 350px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  text-decoration: none;
-  color: inherit; /* Inherit text color from parent */
-  padding: 10px; /* Padding inside the item, around image and caption */
-  box-sizing: border-box; /* Ensure padding doesn't add to width */
-  width: 100%;
-}
-
-.home-carousel-image { /* Applied to Next/Image component via className */
-  width: 100%;
-  height: 300px; /* Height of the image itself */
-  display: block;
-  object-fit: cover; /* Ensure this is effective; Next/Image might need it via style prop too */
-}
-
-.home-carousel-caption {
-  padding: 10px;
   text-align: center;
 }
 
-.home-about {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 40px 20px;
-  border-top: 1px solid #333; /* Dark theme */
-  border-bottom: 1px solid #333; /* Dark theme */
-  background-color: #1a1a1a; /* Dark theme */
-  color: #f5f5f5;
+.card-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
-.home-about-image-container { /* Container for the image */
-  margin-right: 30px; /* As per mockup .about img */
-  flex-shrink: 0;
-}
-
-.home-about-img { /* Applied to Next/Image component via className */
-  width: 250px; /* Width of the image itself */
-  height: 350px; /* Height of the image itself */
-  border-radius: 8px;
-  object-fit: cover; /* Ensure this is effective */
-}
-
-.home-about-text {
-  max-width: 600px;
-}
-
-.home-about-text h2 {
-  border-bottom: 2px solid #f44336; /* Dark theme accent */
-  padding-bottom: 10px;
-  margin-bottom: 15px; /* Added for spacing */
-}
-
-.home-pages-section {
-  padding: 40px 20px;
-  background-color: #121212; /* Dark theme body color from mockup */
-  color: #f5f5f5;
-}
-
-.home-pages-section h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.home-pages-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.home-page-card {
-  background-color: #1e1e1e; /* Dark theme */
-  padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #333; /* Dark theme */
-  transition: background 0.3s ease;
-  color: #f5f5f5;
-}
-
-.home-page-card:hover {
-  background-color: #2a2a2a; /* Dark theme */
-}
-
-.home-page-card h3 {
-  margin-top: 0;
-  margin-bottom: 10px; /* Added for spacing */
-}
-.home-page-card p {
-  margin-bottom: 15px; /* Added for spacing */
-}
-
-.home-page-card button {
-  background-color: #f44336; /* Dark theme accent */
-  border: none;
-  padding: 10px 15px;
-  color: #fff;
-  border-radius: 4px;
+/* Primary Button Styling */
+.btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  text-decoration: none;
+  color: #fff; /* White text for contrast */
+  background-color: var(--accent);
+  border: 1px solid var(--accent);
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.home-page-card button:hover {
-  background-color: #d32f2f; /* Dark theme accent hover */
+.btn-primary:hover {
+  background-color: var(--accent-glow);
+  border-color: var(--accent-glow);
+  box-shadow: 0 0 15px rgba(255, 50, 50, 0.6);
 }
 
-.home-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #181818; /* Dark theme */
-  border-top: 1px solid #333; /* Dark theme */
-  color: #f5f5f5;
+
+/* =========================================================
+   Scrollbar customization (optional)
+========================================================= */
+::-webkit-scrollbar {
+  width: 10px;
 }
-
-/* Light Theme Overrides for Home Page Components */
-@media (prefers-color-scheme: light) {
-  /* Ensure body text color is correctly applied in light mode if sections don't override */
-  body {
-    /* color: var(--sk-text-light); 
-       background-color: var(--sk-background-light); 
-       These are already set by the general light theme.
-    */
-  }
-
-  .home-header {
-    background-color: var(--sk-row-bg-even-light, #f0f0f0);
-    color: var(--sk-text-light, #000000);
-  }
-
-  .home-carousel {
-    background-color: #e0e0e0; /* Light theme: a bit darker grey for contrast */
-    /* Other properties like position, display, min-height, overflow are inherited */
-  }
-
-  .home-carousel-status { /* For loading/error messages in light theme */
-    color: var(--sk-text-light, #000000);
-  }
-
-  .home-carousel-item.slideshow-item {
-    /* background-color and color are for the item itself */
-    background-color: #fdfdfd; /* Light theme: almost white */
-    border: 1px solid var(--sk-shadow-light, #FFD1D1); /* Optional: add border for items in light mode */
-    color: var(--sk-text-light, #000000); /* Text color for caption */
-    /* Positioning, opacity, transition, display properties are inherited */
-  }
-
-  .home-about {
-    background-color: #fafafa; /* Light theme: very light grey */
-    border-top: 1px solid var(--sk-shadow-light, #FFD1D1);
-    border-bottom: 1px solid var(--sk-shadow-light, #FFD1D1);
-    color: var(--sk-text-light, #000000);
-  }
-
-  .home-about-text h2 {
-    border-bottom-color: var(--sk-accent-light, #FF0000);
-  }
-  
-  .home-pages-section {
-    background-color: var(--sk-background-light, #FFFFFF);
-    color: var(--sk-text-light, #000000);
-  }
-
-  .home-page-card {
-    background-color: var(--sk-row-bg-even-light, #f0f0f0);
-    border: 1px solid var(--sk-shadow-light, #FFD1D1);
-    color: var(--sk-text-light, #000000);
-  }
-
-  .home-page-card:hover {
-    background-color: #e8e8e8; /* Light theme: slightly darker grey */
-  }
-
-  .home-page-card button {
-    background-color: var(--sk-accent-light, #FF0000);
-    color: var(--text-on-accent, #FFFFFF); /* Use existing var for text on accent */
-  }
-
-  .home-page-card button:hover {
-    background-color: var(--sk-hover-accent-light, #CC0000);
-  }
-
-  .home-footer {
-    background-color: #e0e0e0; /* Light theme: a bit darker grey for contrast */
-    border-top: 1px solid var(--sk-shadow-light, #FFD1D1);
-    color: var(--sk-text-light, #000000);
-  }
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-glow);
 }

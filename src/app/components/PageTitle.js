@@ -15,7 +15,7 @@ const PageTitle = () => {
   } else if (pathname === '/pages/villains') {
     title = 'Villains';
   } else if (pathname === '/pages/about-stephen-king') {
-    title = 'Kinggraphy'; // Updated title
+    title = 'About Stephen King'; // Updated title
   } else if (pathname === '/pages/adapted-works') {
     title = 'Adapted Works';
   }

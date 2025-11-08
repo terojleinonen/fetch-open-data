@@ -1,31 +1,18 @@
-
 // src/app/components/HomeAbout.js
 import React from 'react';
-import Image from 'next/image';
 
 const HomeAbout = () => {
   return (
     <section className="home-about">
-      <div className="home-about-image-container">
-        <Image
-          src="/stephen-king-2024.jpg" // Assuming this is the image path
-          alt="Stephen King"
-          width={250}
-          height={350}
-          className="home-about-img"
-        />
-      </div>
       <div className="home-about-text">
-        <h2>About the Author</h2>
-        <p>
-          Stephen King is one of the most renowned authors of our time, known for his gripping tales of horror, suspense, and the supernatural. With over 60 novels and 200 short stories, his work has captivated readers worldwide.
-        </p>
-        <p>
-          This website is a tribute to his vast literary universe, offering fans a place to explore his books, the adaptations they've inspired, and the sinister villains that haunt his pages.
-        </p>
+        <h2>About Stephen King</h2>
+        {/* Using the text from the mockup */}
+        <p>Stephen King, born September 21, 1947, in Portland, Maine, is one of the most prolific and widely recognized authors of our time. His journey into writing began at a young age, and he published his first professional short story in 1967. After graduating from the University of Maine, he worked as a teacher while continuing to write in his spare time. The breakthrough came with his first novel, &quot;Carrie,&quot; published in 1974, which quickly became a bestseller and was adapted into a successful film. This early success set the stage for a remarkable career spanning decades.</p>
+        <p style={{ marginTop: '1rem' }}>King is best known for his mastery of the horror genre, but his works also encompass supernatural fiction, suspense, crime, science-fiction, fantasy, and even non-fiction. His storytelling often explores themes of good versus evil, the complexities of human nature, and the supernatural lurking beneath the surface of ordinary life, frequently set in his home state of Maine. Over the years, he has penned over 60 novels and hundreds of short stories, many of which have become cultural touchstones. His ability to create vivid characters and terrifying scenarios has earned him numerous accolades, including the National Medal of Arts and multiple Bram Stoker Awards.</p>
+        <p style={{ marginTop: '1rem' }}>Beyond his novels, King&apos;s influence extends deeply into popular culture through the numerous adaptations of his work. Films like &quot;The Shining,&quot; &quot;The Shawshank Redemption,&quot; and &quot;It&quot; have become classics, introducing his narratives to even wider audiences. He continues to write and publish regularly, maintaining his status as a literary icon whose works are read and beloved by millions around the globe. His enduring legacy is not just in the sheer volume of his output, but in his profound impact on contemporary literature and genre fiction.</p>
+        <p style={{ marginTop: '1rem' }}>For more information, visit the <a href="https://en.wikipedia.org/wiki/Stephen_King" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>Stephen King Wikipedia page</a>.</p>
       </div>
     </section>
   );
 };
-
 export default HomeAbout;

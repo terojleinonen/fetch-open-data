@@ -1,31 +1,47 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}", // If using Next.js App Router
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
-      colors: {
-        'off-white': '#F8F8F8',
-        'dark-gray': '#333333',
-        'medium-gray': '#A0A0A0',
-        'classic-red': '#A93226',
-        'red-700': '#922B21', // Darker shade for hover
-        'kitab-button-background': 'var(--kitab-button-background)',
-        'kitab-button-text': 'var(--kitab-button-text)',
-        'kitab-button-border': 'var(--kitab-button-border)',
-        'kitab-button-hover-background': 'var(--kitab-button-hover-background)',
-      },
       fontFamily: {
-        // Using Tailwind's defaults is fine, but you can customize like so:
-        // sans: ['Inter', 'sans-serif'],
-        // serif: ['Lora', 'serif'],
+        serif: ["Libre Baskerville", "serif"],
+        title: ["Cinzel Decorative", "serif"],
+      },
+      colors: {
+        light: {
+          bg: "#f9f3e7",
+          paper: "#f0e6d2",
+          text: "#2a1c0f",
+          accent: "#8b0000",
+        },
+        dark: {
+          bg: "#0a0a0a",
+          paper: "#1b0d0d",
+          text: "#f5e6cc",
+          accent: "#b00000",
+        },
+        blood: "#8b0000",
+        fog: "#d8c7a4",
+      },
+      boxShadow: {
+        glow: "0 0 20px rgba(255, 80, 80, 0.4)",
+        innerFog: "inset 0 0 50px rgba(255,255,255,0.05)",
+      },
+      backgroundImage: {
+        "radial-fog":
+          "radial-gradient(circle at 50% 30%, rgba(27,13,13,1), rgba(10,10,10,1))",
+        "radial-parchment":
+          "radial-gradient(circle at 30% 20%, #f9f3e7, #f0e6d2)",
+      },
+      transitionDuration: {
+        fast: "200ms",
+        slow: "800ms",
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
+  plugins: [],
 };

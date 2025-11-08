@@ -1,0 +1,120 @@
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem; /* Default padding for mobile */
+  background: rgba(10, 10, 10, 0.4);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  color: #f5e6cc;
+  font-family: "Cinzel Decorative", serif;
+  z-index: 10;
+  transition: background 0.5s ease, box-shadow 0.5s ease;
+}
+
+.nav.scrolled {
+  background: rgba(10, 10, 10, 0.8);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 768px) { /* Desktop styles for nav */
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem; /* Desktop padding */
+  }
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* No padding here, it's handled by the main nav on desktop and implicitly by nav-links on mobile */
+}
+
+.nav-logo {
+  font-size: 1.25rem; /* text-xl */
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+  font-weight: bold;
+  white-space: nowrap;
+}
+@media (min-width: 1024px) { /* lg:text-2xl */
+  .nav-logo {
+    font-size: 1.5rem;
+  }
+}
+
+.mobile-menu-button {
+  display: block; /* Visible on mobile */
+  padding: 0.5rem;
+  border-radius: 0.375rem; /* rounded-md */
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  --tw-ring-inset: inset;
+  --nav-link-focus-ring: rgba(255, 80, 80, 0.5); /* Defined here */
+  --tw-ring-color: var(--nav-link-focus-ring);
+  box-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+}
+@media (min-width: 768px) { /* md:hidden */
+  .mobile-menu-button {
+    display: none; /* Hidden on desktop */
+  }
+}
+
+.nav-links {
+  display: none; /* hidden by default on mobile */
+  position: absolute; /* Take out of flow for mobile menu */
+  top: 100%; /* Position below nav-header */
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem; /* space-y-2 */
+  padding: 1rem; /* p-4 */
+  border-radius: 0.375rem; /* rounded-md */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-lg */
+  --mobile-menu-bg: rgba(10, 10, 10, 0.7); /* Defined here */
+  background-color: var(--mobile-menu-bg);
+  width: 100%;
+}
+.nav-links.mobile-menu-open {
+  display: flex; /* flex when open */
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+  .nav-links {
+    position: static; /* Back to normal flow on desktop */
+    display: flex; /* Always visible */
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem; /* space-x-1 */
+    margin-top: 0;
+    padding: 0;
+    box-shadow: none;
+    background-color: transparent;
+    width: auto;
+  }
+}
+
+.nav-links-item {
+  font-size: 0.875rem; /* text-sm */
+  font-weight: bold;
+  padding: 0.5rem 0.75rem; /* py-2 px-3 */
+  border-radius: 0.375rem; /* rounded-md */
+  text-decoration: none; /* Ensure no default underline */
+  color: inherit; /* Inherit color from parent nav-links */
+  transition: color 0.3s ease, background-color 0.3s ease; /* For hover effects */
+}
+@media (min-width: 1024px) { /* lg:text-base */
+  .nav-links-item {
+    font-size: 1rem;
+  }
+}
+.nav-links-item:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Example hover background */
+}
+.nav-links-item.underline {
+  text-decoration: underline;
+}
