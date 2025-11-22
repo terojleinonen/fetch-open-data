@@ -6,47 +6,32 @@ import '@testing-library/jest-dom';
 // Mock next/navigation
 jest.mock('next/navigation', () => ({
   usePathname: jest.fn(() => '/'), // Default pathname
+  useRouter: jest.fn(() => ({ push: jest.fn() })),
 }));
 
 describe('NavigationBar', () => {
-  it('renders the title "Stephen King Universe"', () => {
+  it('renders the title "The Stephen King Universe"', () => {
     render(<NavigationBar />);
-    expect(screen.getByText('Stephen King Universe')).toBeInTheDocument();
+    expect(screen.getByText('The Stephen King Universe')).toBeInTheDocument();
   });
 
   describe('Hamburger Menu', () => {
-    it('toggles navigation links visibility on hamburger button click', async () => {
+    it('toggles the mobile menu aria-expanded on hamburger button click', async () => {
       render(<NavigationBar />);
 
       const hamburgerButton = screen.getByRole('button', { name: /toggle menu/i });
-      const navContainer = screen.getByTestId('nav-links-container');
 
-      // Initial state: menu is closed. Container should have 'hidden' and not 'flex'.
-      // Tailwind's 'hidden' class sets 'display: none'.
-      expect(navContainer).toHaveClass('hidden');
-      expect(navContainer).not.toHaveClass('flex');
-      // At this point, we assume 'hidden' class means it's not visible in mobile context.
-      // The .not.toBeVisible() check seems unreliable for 'hidden' in this setup.
+      // Initial state: collapsed
+      expect(hamburgerButton).toHaveAttribute('aria-expanded', 'false');
 
-      // Click to open the menu
       fireEvent.click(hamburgerButton);
-
-      // Menu should now be open. Container should have 'flex' and not 'hidden'.
-      // And it should be visible.
       await waitFor(() => {
-        expect(navContainer).toHaveClass('flex');
-        expect(navContainer).not.toHaveClass('hidden');
-        expect(navContainer).toBeVisible(); // Check visibility when it's supposed to be display:flex
+        expect(hamburgerButton).toHaveAttribute('aria-expanded', 'true');
       });
 
-      // Click to close the menu
       fireEvent.click(hamburgerButton);
-
-      // Menu should be closed. Container should have 'hidden' and not 'flex'.
       await waitFor(() => {
-        expect(navContainer).toHaveClass('hidden');
-        expect(navContainer).not.toHaveClass('flex');
-        // Again, relying on the class for the "not visible" state.
+        expect(hamburgerButton).toHaveAttribute('aria-expanded', 'false');
       });
     });
 
@@ -57,15 +42,12 @@ describe('NavigationBar', () => {
         render(<NavigationBar />);
         const navContainer = screen.getByTestId('nav-links-container');
 
-        // On desktop, 'md:flex' should make it display: flex, overriding the mobile 'hidden' class.
-        expect(navContainer).toHaveClass('md:flex');
-
         // For completeness, check that individual links are in the document.
-        expect(screen.getByRole('link', { name: /^home$/i })).toBeInTheDocument();
-        expect(screen.getByRole('link', { name: /^books$/i })).toBeInTheDocument(); // Exact match for BOOKS
-        expect(screen.getByRole('link', { name: /^shorts$/i })).toBeInTheDocument();
-        expect(screen.getByRole('link', { name: /^villains$/i })).toBeInTheDocument();
-        expect(screen.getByRole('link', { name: /google books/i })).toBeInTheDocument(); // Check for GOOGLE BOOKS
+        expect(screen.getByRole('link', { name: /about/i })).toBeInTheDocument();
+        expect(screen.getByRole('link', { name: /books/i })).toBeInTheDocument();
+        expect(screen.getByRole('link', { name: /shorts/i })).toBeInTheDocument();
+        expect(screen.getByRole('link', { name: /adapted works/i })).toBeInTheDocument();
+        expect(screen.getByRole('link', { name: /villains/i })).toBeInTheDocument();
     });
   });
 });

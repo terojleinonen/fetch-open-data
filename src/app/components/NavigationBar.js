@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import "./NavigationBar.css";
 
@@ -12,6 +12,28 @@ const NavigationBar = () => {
 
   const handleLinkClick = () => {
     setIsMobileMenuOpen(false);
+  };
+
+  const router = useRouter();
+
+  const scrollToSection = (e, id, fallbackHref) => {
+    // If click originates from a Link element, prevent default navigation
+    if (e && e.preventDefault) e.preventDefault();
+    // If we're on the homepage, smooth-scroll to the element
+    if (pathname === '/' || pathname === '') {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setIsMobileMenuOpen(false);
+        return;
+      }
+    }
+
+    // Otherwise navigate to the homepage with a hash
+    if (fallbackHref) {
+      router.push(fallbackHref);
+      setIsMobileMenuOpen(false);
+    }
   };
 
   useEffect(() => {

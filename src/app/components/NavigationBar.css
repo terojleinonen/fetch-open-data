@@ -3,20 +3,21 @@
   top: 0;
   width: 100%;
   padding: 1rem; /* Default padding for mobile */
-  background: rgba(10, 10, 10, 0.1); /* More transparent initially */
-  -webkit-backdrop-filter: blur(3px); /* Slightly less blur initially */
-  backdrop-filter: blur(3px); /* Slightly less blur initially */
+  background: rgba(0, 0, 0, 0.12); /* subtle transparent overlay */
+  -webkit-backdrop-filter: blur(4px); /* slightly blurred glass effect */
+  backdrop-filter: blur(4px);
   color: var(--text-primary); /* Golden-beige color */
   font-family: "Cinzel Decorative", serif;
-  z-index: 10;
-  transition: background 0.5s ease, box-shadow 0.5s ease, backdrop-filter 0.5s ease;
+  z-index: 50;
+  transition: background 0.45s ease, box-shadow 0.45s ease, backdrop-filter 0.45s ease, transform 0.35s ease;
 }
 
 .nav.scrolled {
-  background: rgba(10, 10, 10, 0.8); /* Darkens on scroll */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-  -webkit-backdrop-filter: blur(6px); /* Adds more blur on scroll */
-  backdrop-filter: blur(6px); /* Adds more blur on scroll */
+  background: rgba(6, 6, 6, 0.88); /* Darkens on scroll for cinematic feel */
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(8px); /* Adds more blur on scroll */
+  backdrop-filter: blur(8px); /* Adds more blur on scroll */
+  transform: translateY(0);
 }
 
 @media (min-width: 768px) { /* Desktop styles for nav */
@@ -37,7 +38,7 @@
 .nav-logo {
   font-size: 1.25rem; /* text-xl */
   letter-spacing: 1px;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Subtle drop shadow */
+  text-shadow: 0 4px 12px rgba(0,0,0,0.6), 0 0 8px rgba(255, 238, 200, 0.05); /* Subtle drop shadow */
   font-weight: bold;
   white-space: nowrap;
   color: var(--text-primary); /* Ensure golden-beige color */
@@ -109,8 +110,8 @@
   border-radius: 0.375rem; /* rounded-md */
   text-decoration: none; /* Ensure no default underline */
   color: var(--text-primary); /* Golden-beige color */
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Subtle drop shadow */
-  transition: color 0.3s ease, text-shadow 0.3s ease; /* For hover effects */
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6); /* Subtle drop shadow */
+  transition: color 0.28s ease, text-shadow 0.28s ease; /* For hover effects */
   position: relative; /* For typewriter effect */
   overflow: hidden; /* For typewriter effect */
 }
@@ -133,7 +134,7 @@
   width: 0;
   height: 2px;
   background-color: var(--accent-glow);
-  transition: width 0.3s ease-out;
+  transition: width 0.6s steps(16, end);
 }
 
 .nav-links-item:hover::after {
