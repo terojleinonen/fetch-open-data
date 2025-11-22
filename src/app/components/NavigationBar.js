@@ -32,7 +32,7 @@ const NavigationBar = () => {
   return (
     <nav className={`nav ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-header">
-        <Link href="/" className="nav-logo" onClick={handleLinkClick}>Stephen King Universe</Link>
+        <Link href="/" className="nav-logo" onClick={(e) => { handleLinkClick(); scrollToSection(e, 'top', '/'); }}>The Stephen King Universe</Link>
         <button
            className="mobile-menu-button"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
