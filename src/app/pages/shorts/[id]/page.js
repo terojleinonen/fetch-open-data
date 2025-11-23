@@ -15,7 +15,10 @@ const normalizeTitleForMatch = (title) => {
 };
 
 export default async function ShortStoryDetailPage({ params }) {
-  const shortData = await Request(`short/${params.id}`);
+  // `params` may be a thenable; await it before reading properties
+  const awaitedParams = await params;
+  const id = awaitedParams?.id;
+  const shortData = await Request(`short/${id}`);
 
   if (!shortData || !shortData.data) {
     return (

@@ -156,7 +156,9 @@ const ContentDisplay = ({ items, view = 'list', columns = [], sortConfig, search
   }
 
   if (view === 'grid') {
-    return (
+    const useHorrorStyling = contentType === 'books' || contentType === 'adaptations';
+
+    const gridInner = (
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6">
         {processedItems.map((item) => (
           <ImageItem
@@ -166,6 +168,16 @@ const ContentDisplay = ({ items, view = 'list', columns = [], sortConfig, search
         ))}
       </div>
     );
+
+    if (useHorrorStyling) {
+      return (
+        <div className="horror-grid smoky-background">
+          {gridInner}
+        </div>
+      );
+    }
+
+    return gridInner;
   }
 
   return <p className="text-[var(--accent-color)]">Unknown view type selected.</p>;

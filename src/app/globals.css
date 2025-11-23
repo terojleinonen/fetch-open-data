@@ -172,6 +172,103 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
+/* =========================================================
+   Horror / Grid Enhancements
+   - Glassmorphic grid wrapper
+   - Card vignette, smoky texture, torn-edge hint, subtle flicker
+========================================================= */
+
+.horror-grid {
+  padding: 1rem;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(10,10,10,0.45), rgba(20,8,8,0.3));
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(139, 0, 0, 0.18);
+  box-shadow: inset 0 30px 60px rgba(0,0,0,0.6), 0 8px 30px rgba(0,0,0,0.6);
+}
+
+.horror-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7), inset 0 -4px 40px rgba(139,0,0,0.06);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  will-change: transform;
+}
+
+.horror-card:before {
+  content: "";
+  position: absolute;
+  inset: -40% -10% -40% -10%;
+  background: radial-gradient(closest-side at 10% 10%, rgba(255,80,80,0.06), transparent 10%), radial-gradient(closest-side at 90% 90%, rgba(0,0,0,0.6), transparent 25%);
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.horror-card .card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1rem;
+  background: linear-gradient(180deg, transparent 30%, rgba(0,0,0,0.6) 60%);
+  color: var(--text-primary);
+}
+
+.horror-card .card-content {
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(139,0,0,0.06));
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  width: 100%;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.5);
+  transform: translateY(12px);
+  opacity: 0;
+  transition: transform 0.28s ease, opacity 0.28s ease;
+}
+
+.horror-card:hover .card-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* subtle flicker animation for titles or highlights */
+@keyframes flicker {
+  0%, 100% { opacity: 1; filter: drop-shadow(0 0 6px rgba(176,0,0,0.45)); }
+  4% { opacity: 0.85; }
+  6% { opacity: 0.95; }
+  8% { opacity: 0.8; }
+  10% { opacity: 1; }
+  20% { opacity: 0.9; }
+}
+
+.flicker { animation: flicker 3.6s infinite; }
+
+/* headline style used for Books / Adapted Works */
+.horror-headline {
+  color: var(--accent);
+  font-family: 'Cinzel Decorative', serif;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 0 12px rgba(176,0,0,0.4), 0 6px 24px rgba(0,0,0,0.6);
+}
+
+/* smoky vignette for page background */
+.smoky-background {
+  position: relative;
+}
+.smoky-background:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle at 20% 10%, rgba(255,255,255,0.02), transparent 10%), radial-gradient(circle at 80% 80%, rgba(0,0,0,0.55), transparent 30%);
+  mix-blend-mode: multiply;
+}
+
 /* Primary Button Styling */
 .btn-primary {
   display: inline-block;

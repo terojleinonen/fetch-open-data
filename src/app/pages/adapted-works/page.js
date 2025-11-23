@@ -8,10 +8,7 @@ export default async function AdaptedWorksPage() {
   // For now, we'll pass the existing data.
 
   return (
-    <div
-      className="page-background-text"
-      style={{ '--page-background-text-content': "'ADAPTED WORKS'" }}
-    >
+    <div>
       <AdaptedWorksListClient adaptations={adaptations} />
     </div>
   );

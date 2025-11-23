@@ -1,11 +1,14 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image'; // Import Next.js Image component
+import SafeImage from '@/app/components/SafeImage';
 import Request from '@/app/components/request';
 import VillainBookAppearances from './VillainBookAppearances';
 
 export default async function VillainDetailPage({ params }) {
-  const villainData = await Request(`villain/${params.id}`);
+  // await params because it may be a thenable in streaming/server contexts
+  const awaitedParams = await params;
+  const id = awaitedParams?.id;
+  const villainData = await Request(`villain/${id}`);
 
   if (!villainData || !villainData.data) {
     return (
@@ -29,12 +32,13 @@ export default async function VillainDetailPage({ params }) {
           <div className="md:w-1/3 mb-4 md:mb-0"> {/* Takes 1/3 width on medium screens, full on small */}
             <div className="relative w-full aspect-[4/3] bg-[var(--sk-shadow-light)] dark:bg-[var(--sk-shadow-dark)] overflow-hidden rounded-lg flex items-center justify-center">
               {villain.image_url ? (
-                <Image
+                <SafeImage
                   src={villain.image_url}
                   alt={`Image of ${villain.name}`}
                   fill
-                  style={{ objectFit: "contain" }}
+                  style={{ objectFit: 'contain' }}
                   className="rounded-lg"
+                  fallbackText="No image available"
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-[var(--text-color)] opacity-70 text-sm">

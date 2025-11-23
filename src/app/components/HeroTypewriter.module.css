@@ -13,7 +13,7 @@
 .bg {
   position: absolute;
   inset: 0;
-  background-image: url('/stephen-king-2024.jpg');
+  /*background-image: url('/stephen-king-2024.jpg');*/
   background-size: cover;
   background-position: center center;
   filter: brightness(0.35) contrast(1.05) saturate(0.8);

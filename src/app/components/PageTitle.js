@@ -24,22 +24,17 @@ const PageTitle = () => {
   if (!title) {
     return null; // Don't render anything if no title is matched
   }
+  // Determine if this page should use the horror-style headline
+  const isHorror = pathname === '/pages/books' || pathname === '/pages/adapted-works';
 
-  // Styling consistent with the previous static title in RootLayout, and responsive behavior
-  // For "Google Books Explorer", the original page has a more complex, centered, gradient style.
-  // We'll use a consistent style for all layout titles for now.
-  // If specific pages need their own unique title styling like the original Google Books page,
-  // that title should be part of the page's content itself rather than this layout component.
-  // Applying consistent style for all titles, using theme-aware CSS variables for the gradient.
-  const titleStyle = "text-4xl md:text-5xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-[var(--title-gradient-from)] via-[var(--title-gradient-via)] to-[var(--title-gradient-to)] py-2 hidden md:block";
+  const baseClasses = 'mb-8 py-2 text-center pt-8';
 
-  // The Google Books Explorer page has its own title.
-  // This component will render titles for other pages.
-  // If this PageTitle component is used in a layout that also includes the Google Books page,
-  // returning null for that specific path prevents duplicate titles.
+  const normalTitle = `${baseClasses} text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[var(--title-gradient-from)] via-[var(--title-gradient-via)] to-[var(--title-gradient-to)]`;
+
+  const horrorTitle = `${baseClasses} text-4xl md:text-6xl horror-headline`;
 
   return (
-    <h1 className={titleStyle}>
+    <h1 className={isHorror ? horrorTitle : normalTitle}>
       {title}
     </h1>
   );

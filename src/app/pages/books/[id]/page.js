@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import SafeImage from '@/app/components/SafeImage';
 import Request from '@/app/components/request';
 import AdaptationList from '@/app/components/AdaptationList';
 import allAdaptationsData from '@/app/data/adaptations.json';
@@ -16,18 +16,22 @@ const normalizeTitleForMatch = (title) => {
 };
 
 export default async function BookDetailPage({ params }) {
-  console.log(`[INFO] /pages/books/${params.id}: Fetching book data...`);
+  // `params` can be a thenable in some Next.js streaming scenarios — await it
+  const awaitedParams = await params;
+  const id = awaitedParams?.id;
+
+  console.log(`[INFO] /pages/books/${id}: Fetching book data...`);
   let bookData;
   try {
-    bookData = await Request(`book/${params.id}`);
+    bookData = await Request(`book/${id}`);
     if (!bookData || !bookData.data) {
-      console.warn(`[WARN] /pages/books/${params.id}: No bookData or bookData.data found.`);
+      console.warn(`[WARN] /pages/books/${id}: No bookData or bookData.data found.`);
     } else {
-      console.log(`[INFO] /pages/books/${params.id}: Successfully fetched data for "${bookData.data.Title}".`);
+      console.log(`[INFO] /pages/books/${id}: Successfully fetched data for "${bookData.data.Title}".`);
     }
   } catch (error) {
-    console.error(`[ERROR] /pages/books/${params.id}: Error fetching book data:`, error);
-    bookData = { error: `Failed to load book data for ID ${params.id} due to an error.`, data: null };
+    console.error(`[ERROR] /pages/books/${id}: Error fetching book data:`, error);
+    bookData = { error: `Failed to load book data for ID ${id} due to an error.`, data: null };
   }
 
   if (!bookData || !bookData.data) {
@@ -56,7 +60,7 @@ export default async function BookDetailPage({ params }) {
 
   return (
     <div className="container mx-auto p-4 md:p-8">
-      <Link href="/pages/books" className="mb-6 inline-block">
+      <Link href="/pages/books" className="mb-6 inline-block pt-8">
           &larr; Back to Books List
         </Link>
       <div className="details-box">
@@ -64,13 +68,14 @@ export default async function BookDetailPage({ params }) {
           <div className="md:w-1/3 mb-6 md:mb-0 flex justify-center">
             <div className="relative w-full max-w-xs md:max-w-sm h-auto aspect-[2/3]">
               {book.largeCoverImageUrl && book.largeCoverImageUrl !== "NO_COVER_AVAILABLE" ? (
-                <Image
+                <SafeImage
                   src={book.largeCoverImageUrl}
                   alt={`Cover of ${book.Title}`}
                   fill
                   sizes="(max-width: 768px) 80vw, (max-width: 1200px) 40vw, 30vw"
                   className="rounded-lg shadow-lg object-contain"
                   priority
+                  fallbackText="No Cover Available"
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center bg-[var(--sk-shadow-light)] dark:bg-[var(--sk-shadow-dark)] text-[var(--text-color)] opacity-70 rounded-lg shadow-md">
@@ -129,13 +134,6 @@ export default async function BookDetailPage({ params }) {
               <p className="whitespace-pre-line text-sm leading-relaxed">{book.summary}</p>
             </div>
           )}
-
-          {/* Google Books links removed */}
-          {/* <div className="space-y-1 mb-6">
-            {book.infoLink && <p><a href={book.infoLink} target="_blank" rel="noopener noreferrer" className="text-[var(--accent-color)] hover:text-[var(--hover-accent-color)] hover:underline text-sm">More Info on Google Books</a></p>}
-            {book.previewLink && <p><a href={book.previewLink} target="_blank" rel="noopener noreferrer" className="text-[var(--accent-color)] hover:text-[var(--hover-accent-color)] hover:underline text-sm">Preview on Google Books</a></p>}
-          </div> */}
-
         </div>
       </div>
 

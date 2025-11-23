@@ -61,7 +61,7 @@
 }
 
 .contentWrapper {
-  max-width: 800px; /* One-column layout constraint */
+  max-width: 1200px; /* One-column layout constraint */
   margin: 0 auto; /* Center the content */
   display: grid;
   grid-template-columns: 1fr; /* Single column */
