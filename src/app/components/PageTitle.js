@@ -25,7 +25,7 @@ const PageTitle = () => {
     return null; // Don't render anything if no title is matched
   }
   // Determine if this page should use the horror-style headline
-  const isHorror = pathname === '/pages/books' || pathname === '/pages/adapted-works';
+  const isHorror = pathname === '/pages/books' || pathname === '/pages/adapted-works' || pathname === '/pages/shorts' || pathname === '/pages/villains';
 
   const baseClasses = 'mb-8 py-2 text-center pt-8';
 
