@@ -33,8 +33,8 @@ export default async function ShortStoryDetailPage({ params }) {
   const filteredNotes = story.notes ? story.notes.filter(note => note && note.trim() !== '') : [];
 
   return (
-    <div className="container mx-auto p-4">
-      <Link href="/pages/shorts" className="mb-6 inline-block">
+    <div className="container mx-auto p-4 pt-8">
+      <Link href="/pages/shorts" className="mb-6 inline-block pt-8">
         &larr; Back to Shorts List
       </Link>
       <div className="details-box">

@@ -59,7 +59,7 @@ export default async function BookDetailPage({ params }) {
   };
 
   return (
-    <div className="container mx-auto p-4 md:p-8">
+    <div className="container mx-auto p-4 pt-8">
       <Link href="/pages/books" className="mb-6 inline-block pt-8">
           &larr; Back to Books List
         </Link>

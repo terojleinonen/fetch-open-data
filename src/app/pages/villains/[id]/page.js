@@ -22,8 +22,8 @@ export default async function VillainDetailPage({ params }) {
   const villain = villainData.data;
 
   return (
-    <div className="container mx-auto p-4">
-      <Link href="/pages/villains" className="mb-6 inline-block">
+    <div className="container mx-auto p-4 pt-8">
+      <Link href="/pages/villains" className="mb-6 inline-block pt-8">
             &larr; Back to Villains List
           </Link>
       <div className="details-box">
