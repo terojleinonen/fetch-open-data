@@ -24,20 +24,12 @@ const PageTitle = () => {
   if (!title) {
     return null; // Don't render anything if no title is matched
   }
-  // Determine if this page should use the horror-style headline
-  const isHorror = pathname === '/pages/books' || pathname === '/pages/adapted-works' || pathname === '/pages/shorts' || pathname === '/pages/villains';
-
-  const baseClasses = 'mb-8 py-2 text-center pt-8';
-
-  const normalTitle = `${baseClasses} text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[var(--title-gradient-from)] via-[var(--title-gradient-via)] to-[var(--title-gradient-to)]`;
-
-  const horrorTitle = `${baseClasses} text-4xl md:text-6xl horror-headline`;
-
   return (
-    <h1 className={isHorror ? horrorTitle : normalTitle}>
-      {title}
-    </h1>
+    <div className="pt-8">
+      <h1 className="text-4xl md:text-6xl horror-headline pt-8">
+        {title}
+      </h1>
+    </div>
   );
 };
-
 export default PageTitle;
