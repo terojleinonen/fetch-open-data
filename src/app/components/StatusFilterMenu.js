@@ -11,13 +11,33 @@ import React from 'react';
  * @returns {JSX.Element} The StatusFilterMenu component.
  */
 export default function StatusFilterMenu({ uniqueStatuses, selectedStatus, onSelectStatus }) {
+  const handleSelection = (status) => {
+    onSelectStatus(status === 'All' ? '' : status);
+  };
+
   return (
-    <div className="mb-4 p-4"> {/* Added w-max to make the container fit its content */}
-      <div className="flex flex-col items-start space-y-1">
+    <div className="mb-4 p-4">
+      {/* Dropdown for mobile view */}
+      <div className="md:hidden">
+        <select
+          value={selectedStatus || 'All'}
+          onChange={(e) => handleSelection(e.target.value)}
+          className="w-full px-3 py-2 rounded text-sm bg-[var(--background-color)] text-[var(--text-color)] border border-[var(--border-color)] focus:outline-none focus:border-[var(--hover-accent-color)]"
+        >
+          {uniqueStatuses.map(status => (
+            <option key={status} value={status}>
+              {status.charAt(0).toUpperCase() + status.slice(1)}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* List for desktop view */}
+      <div className="hidden md:flex md:flex-col md:items-start md:space-y-1">
         {uniqueStatuses.map(status => (
           <button
             key={status}
-            onClick={() => onSelectStatus(status === 'All' ? '' : status)}
+            onClick={() => handleSelection(status)}
             className={`
               text-left px-1 py-1 rounded text-sm
               ${(selectedStatus === status || (status === 'All' && !selectedStatus)) ? 'font-bold text-[var(--hover-accent-color)]' : 'text-[var(--text-color)]'}
