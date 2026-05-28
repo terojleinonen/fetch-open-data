@@ -1,0 +1,74 @@
+.wrapper {
+  margin-bottom: 24px;
+}
+
+/* SEARCH */
+.searchWrapper {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 14px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: transparent;
+  caret-color: white;
+  font-family: monospace;
+}
+
+.overlay {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  pointer-events: none;
+  color: #fff;
+  font-family: monospace;
+}
+
+.cursor {
+  margin-left: 2px;
+}
+
+/* COUNT */
+.count {
+  margin-top: 10px;
+  opacity: 0.7;
+  font-size: 0.85rem;
+}
+
+/* FILTERS */
+.filters {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.group {
+  display: flex;
+  gap: 6px;
+}
+
+.pill {
+  padding: 6px 10px;
+  font-size: 0.7rem;
+  background: #2a2522;
+  border: 1px solid rgba(255,255,255,0.1);
+  cursor: pointer;
+}
+
+.active {
+  background: #6f1717;
+  color: white;
+}
+
+/* RANDOM */
+.random {
+  margin-top: 12px;
+  font-size: 0.7rem;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 6px 10px;
+  cursor: pointer;
+}

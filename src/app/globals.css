@@ -1,307 +1,415 @@
-@import "tailwindcss";
-
-
 /* =========================================================
-   STEPHEN KING UNIVERSE — GLOBAL THEME STYLES
-   Cinematic dark/light dual theme with foggy & parchment tones
+   STEPHEN KING UNIVERSE — GLOBALS.CSS
+   Cinematic Archive System
 ========================================================= */
 
-/* --- Font setup --- */
-@layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    font-family: 'Libre Baskerville', serif;
-    transition: background-color 0.8s ease, color 0.8s ease;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cinzel Decorative', serif;
-    text-transform: none;
-    letter-spacing: 0.05em;
-  }
-
-  a {
-    transition: color 0.3s ease, text-shadow 0.3s ease;
-  }
-}
-
 /* =========================================================
-   LIGHT THEME — Aged parchment & warm daylight
-========================================================= */
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg-primary: #f9f3e7;          /* parchment */
-    --bg-secondary: #f0e6d2;        /* slightly darker parchment */
-    --text-primary: #2a1c0f;        /* ink brown */
-    --text-secondary: #4a2f1a;      /* muted brown */
-    --accent: #8b0000;              /* blood red accent */
-    --border-color: rgba(90, 60, 20, 0.4);
-  }
-
-  body {
-    background: radial-gradient(circle at 30% 20%, var(--bg-primary), var(--bg-secondary));
-    color: var(--text-primary);
-  }
-
-  a:hover {
-    color: var(--accent);
-    text-shadow: 0 0 4px rgba(139, 0, 0, 0.3);
-  }
-
-  header, nav {
-    background: rgba(245, 230, 204, 0.8);
-    color: var(--text-primary);
-    -webkit-backdrop-filter: blur(6px);
-    backdrop-filter: blur(6px);
-  }
-
-  button, .btn {
-    background: var(--accent);
-    color: #fff;
-    border: 1px solid var(--border-color);
-    transition: background 0.3s ease;
-  }
-
-  button:hover, .btn:hover {
-    background: #a00000;
-  }
-
-  .section-title {
-    color: var(--text-secondary);
-    text-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
-  }
-
-  hr {
-    border-color: var(--border-color);
-  }
-}
-
-/* =========================================================
-   DARK THEME — Fog, red shadows & candlelight glow
-========================================================= */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-primary: #0a0a0a;           /* deep black base */
-    --bg-secondary: #1b0d0d;         /* subtle red tint shadows */
-    --text-primary: #f5e6cc;         /* warm candlelight */
-    --text-secondary: #d8c7a4;       /* softer parchment tone */
-    --accent: #b00000;               /* blood red */
-    --accent-glow: #ff5555;
-    --border-color: rgba(139, 0, 0, 0.5);
-  }
-
-  body {
-    background: radial-gradient(circle at 50% 30%, var(--bg-secondary), var(--bg-primary));
-    color: var(--text-primary);
-  }
-
-  a:hover {
-    color: var(--accent-glow);
-    text-shadow: 0 0 8px rgba(255, 80, 80, 0.6);
-  }
-
-  header, nav {
-    background: rgba(10, 10, 10, 0.6);
-    color: var(--text-primary);
-    -webkit-backdrop-filter: blur(6px);
-    backdrop-filter: blur(6px);
-  }
-
-  button, .btn {
-    background: var(--accent);
-    color: #fff;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 0 10px rgba(139, 0, 0, 0.4);
-    transition: background 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  button:hover, .btn:hover {
-    background: #ff0000;
-    box-shadow: 0 0 20px rgba(255, 50, 50, 0.6);
-  }
-
-  .section-title {
-    color: var(--text-primary);
-    text-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
-  }
-
-  hr {
-    border-color: var(--border-color);
-  }
-}
-
-/* =========================================================
-   Global reusable UI elements
+   RESET
 ========================================================= */
 
-
-.shadow-text {
-  text-shadow: 0 0 8px rgba(0,0,0,0.6);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.text-accent {
-  color: var(--accent);
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.bg-accent {
-  background-color: var(--accent);
-}
-
-/* Card Item Styling */
-.card-item {
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 2rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+html,
+body {
   width: 100%;
-  max-width: 350px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
+  min-height: 100%;
 }
 
-.card-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+
+  background: #050504;
+  color: #efe7d6;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  position: relative;
+}
+
+#__next {
+  min-height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
 }
 
 /* =========================================================
-   Horror / Grid Enhancements
-   - Glassmorphic grid wrapper
-   - Card vignette, smoky texture, torn-edge hint, subtle flicker
+   DESIGN TOKENS
 ========================================================= */
 
-.horror-grid {
-  padding: 1rem;
-  border-radius: 12px;
-  background: linear-gradient(180deg, rgba(10,10,10,0.45), rgba(20,8,8,0.3));
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(139, 0, 0, 0.18);
-  box-shadow: inset 0 30px 60px rgba(0,0,0,0.6), 0 8px 30px rgba(0,0,0,0.6);
+:root {
+  /* COLORS */
+
+  --bg-primary: #050504;
+  --bg-secondary: #0b0a09;
+  --bg-tertiary: #13110f;
+
+  --surface-1: rgba(255, 255, 255, 0.03);
+  --surface-2: rgba(255, 255, 255, 0.05);
+  --surface-3: rgba(255, 255, 255, 0.08);
+
+  --text-primary: #efe7d6;
+  --text-secondary: rgba(239, 231, 214, 0.72);
+  --text-muted: rgba(239, 231, 214, 0.46);
+
+  --accent-gold: #c9953f;
+  --accent-rust: #b84a32;
+  --accent-blood: #7a1d17;
+
+  --border-subtle: rgba(201, 149, 63, 0.12);
+  --border-strong: rgba(201, 149, 63, 0.24);
+
+  --shadow-soft:
+    0 12px 32px rgba(0, 0, 0, 0.32);
+
+  --shadow-large:
+    0 24px 80px rgba(0, 0, 0, 0.52);
+
+  /* TYPOGRAPHY */
+
+  --font-body:
+    Inter,
+    system-ui,
+    sans-serif;
+
+  --font-display:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  /* LAYOUT */
+
+  --nav-width: 240px;
+
+  /* TRANSITIONS */
+
+  --transition-fast: 160ms ease;
+  --transition-medium: 320ms ease;
+  --transition-slow: 640ms ease;
 }
 
-.horror-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.7), inset 0 -4px 40px rgba(139,0,0,0.06);
-  transition: transform 0.28s ease, box-shadow 0.28s ease;
-  will-change: transform;
+/* =========================================================
+   BODY ATMOSPHERE
+========================================================= */
+
+body {
+  background:
+    radial-gradient(
+      circle at 72% 12%,
+      rgba(184, 74, 50, 0.06),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at 18% 82%,
+      rgba(201, 149, 63, 0.05),
+      transparent 28%
+    ),
+    linear-gradient(
+      to bottom,
+      #050504,
+      #0a0908
+    );
+
+  background-attachment: fixed;
+
+  transition:
+    background var(--transition-slow),
+    color var(--transition-medium);
 }
 
-.horror-card:before {
+/* =========================================================
+   FILM GRAIN
+========================================================= */
+
+body::before {
   content: "";
-  position: absolute;
-  inset: -40% -10% -40% -10%;
-  background: radial-gradient(closest-side at 10% 10%, rgba(255,80,80,0.06), transparent 10%), radial-gradient(closest-side at 90% 90%, rgba(0,0,0,0.6), transparent 25%);
-  mix-blend-mode: overlay;
+
+  position: fixed;
+  inset: 0;
+
   pointer-events: none;
+
+  z-index: -1;
+
+  opacity: 0.045;
+
+  background-image:
+    repeating-radial-gradient(
+      circle at 0 0,
+      rgba(255, 255, 255, 0.05),
+      transparent 2px
+    );
+
+  mix-blend-mode: soft-light;
 }
 
-.horror-card .card-overlay {
-  position: absolute;
+/* =========================================================
+   LIGHT LEAK
+========================================================= */
+
+body::after {
+  content: "";
+
+  position: fixed;
   inset: 0;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 1rem;
-  background: linear-gradient(180deg, transparent 30%, rgba(0,0,0,0.6) 60%);
+
+  pointer-events: none;
+
+  z-index: -1;
+
+  background:
+    radial-gradient(
+      circle at 82% 12%,
+      rgba(201, 149, 63, 0.04),
+      transparent 18%
+    );
+
+  opacity: 0.7;
+}
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+p {
+  line-height: 1.8;
+}
+
+/* =========================================================
+   GENERIC PAGE TITLE SYSTEM
+========================================================= */
+
+.pageTitle {
+  font-size: clamp(3.2rem, 7vw, 6rem);
+  line-height: 0.88;
+
+  text-transform: uppercase;
+
   color: var(--text-primary);
 }
 
-.horror-card .card-content {
-  -webkit-backdrop-filter: blur(6px);
-  backdrop-filter: blur(6px);
-  background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(139,0,0,0.06));
-  padding: 0.75rem 1rem;
-  border-radius: 6px;
-  width: 100%;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.5);
-  transform: translateY(12px);
-  opacity: 0;
-  transition: transform 0.28s ease, opacity 0.28s ease;
-}
+.pageKicker {
+  color: var(--accent-rust);
 
-.horror-card:hover .card-content {
-  transform: translateY(0);
-  opacity: 1;
-}
+  font-size: 0.72rem;
 
-/* subtle flicker animation for titles or highlights */
-@keyframes flicker {
-  0%, 100% { opacity: 1; filter: drop-shadow(0 0 6px rgba(176,0,0,0.45)); }
-  4% { opacity: 0.85; }
-  6% { opacity: 0.95; }
-  8% { opacity: 0.8; }
-  10% { opacity: 1; }
-  20% { opacity: 0.9; }
-}
-
-.flicker { animation: flicker 3.6s infinite; }
-
-/* headline style used for Books / Adapted Works */
-.horror-headline {
-  color: var(--accent);
-  font-family: 'Cinzel Decorative', serif;
-  font-weight: 700;
-  text-align: center;
-  text-shadow: 0 0 12px rgba(176,0,0,0.4), 0 6px 24px rgba(0,0,0,0.6);
-}
-
-/* smoky vignette for page background */
-.smoky-background {
-  position: relative;
-}
-.smoky-background:after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image: radial-gradient(circle at 20% 10%, rgba(255,255,255,0.02), transparent 10%), radial-gradient(circle at 80% 80%, rgba(0,0,0,0.55), transparent 30%);
-  mix-blend-mode: multiply;
-}
-
-/* Primary Button Styling */
-.btn-primary {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: bold;
+  letter-spacing: 0.34em;
   text-transform: uppercase;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  color: #fff; /* White text for contrast */
-  background-color: var(--accent);
-  border: 1px solid var(--accent);
-  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.btn-primary:hover {
-  background-color: var(--accent-glow);
-  border-color: var(--accent-glow);
-  box-shadow: 0 0 15px rgba(255, 50, 50, 0.6);
-}
+.pageSubtitle {
+  max-width: 720px;
 
+  color: var(--text-secondary);
+
+  line-height: 1.75;
+}
 
 /* =========================================================
-   Scrollbar customization (optional)
+   SURFACE SYSTEM
 ========================================================= */
+
+.surface {
+  background: var(--surface-1);
+
+  border: 1px solid var(--border-subtle);
+
+  backdrop-filter: blur(12px);
+
+  box-shadow: var(--shadow-soft);
+}
+
+/* =========================================================
+   BUTTON SYSTEM
+========================================================= */
+
+.buttonPrimary,
+.buttonSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 48px;
+
+  padding: 0 22px;
+
+  cursor: pointer;
+
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.buttonPrimary {
+  border: 1px solid
+    rgba(201, 149, 63, 0.34);
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(201, 149, 63, 0.22),
+      rgba(201, 149, 63, 0.08)
+    );
+
+  color: var(--text-primary);
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+.buttonPrimary:hover {
+  transform: translateY(-1px);
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(201, 149, 63, 0.32),
+      rgba(201, 149, 63, 0.12)
+    );
+}
+
+.buttonSecondary {
+  border: 1px solid var(--border-subtle);
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: var(--text-secondary);
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+.buttonSecondary:hover {
+  border-color: var(--border-strong);
+
+  background: rgba(255, 255, 255, 0.045);
+}
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
 ::-webkit-scrollbar {
   width: 10px;
 }
-::-webkit-scrollbar-thumb {
-  background: var(--accent);
-  border-radius: 5px;
+
+::-webkit-scrollbar-track {
+  background: transparent;
 }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+
+  background:
+    rgba(201, 149, 63, 0.18);
+}
+
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-glow);
+  background:
+    rgba(201, 149, 63, 0.32);
+}
+
+/* =========================================================
+   SELECTION
+========================================================= */
+
+::selection {
+  background:
+    rgba(184, 74, 50, 0.28);
+
+  color: #fff;
+}
+
+/* =========================================================
+   MOBILE OPTIMIZATION
+========================================================= */
+
+@media (max-width: 1024px) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 840px) {
+  .pageTitle {
+    font-size: 3rem;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+  .pageTitle {
+    font-size: 2.5rem;
+  }
+
+  body {
+    font-size: 15px;
+  }
 }
