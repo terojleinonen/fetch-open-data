@@ -1,0 +1,878 @@
+/* =========================================================
+   ABOUT PAGE
+========================================================= */
+
+.page {
+  --bg: #0d0c0a;
+  --bg-elevated: rgba(255,255,255,0.03);
+  --text: #eee3cf;
+  --muted: rgba(238,227,207,0.72);
+  --soft: rgba(238,227,207,0.44);
+
+  --gold: #c89a4f;
+  --border: rgba(216,172,91,0.16);
+
+  min-height: 100vh;
+
+  background: var(--bg);
+  color: var(--text);
+
+  padding-left: 240px;
+
+  overflow-x: hidden;
+
+  transition:
+    background 0.4s ease,
+    color 0.4s ease;
+}
+
+/* =========================================================
+   LIGHT MODE = THE LIE
+========================================================= */
+
+[data-theme="light"] .page {
+  --bg: #ebe4d7;
+  --bg-elevated: rgba(255,255,255,0.74);
+
+  --text: #1e1b17;
+  --muted: rgba(30,27,23,0.74);
+  --soft: rgba(30,27,23,0.44);
+
+  --gold: #8e6840;
+
+  --border: rgba(80,60,30,0.14);
+
+  background:
+    linear-gradient(
+      180deg,
+      #f4eee3,
+      #ddd3c2
+    );
+}
+
+/* =========================================================
+   ATMOSPHERE
+========================================================= */
+
+.page::before {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.05;
+
+  background-image:
+    url("/textures/paper-noise.jpeg");
+
+  mix-blend-mode: overlay;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  position: relative;
+
+  min-height: 560px;
+
+  overflow: hidden;
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    url("/backgrounds/about-archive-room.jpeg");
+
+  background-size: cover;
+  background-position: center;
+
+  filter:
+    brightness(0.58)
+    contrast(1.08)
+    saturate(0.78);
+
+  transform: scale(1.03);
+}
+
+[data-theme="light"] .heroImage {
+  filter:
+    brightness(0.92)
+    contrast(0.95)
+    saturate(0.62);
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10,9,8,0.96) 0%,
+      rgba(10,9,8,0.74) 38%,
+      rgba(10,9,8,0.22) 100%
+    ),
+
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0.4),
+      rgba(0,0,0,0.82)
+    );
+}
+
+[data-theme="light"] .heroOverlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(244,238,227,0.92) 0%,
+      rgba(244,238,227,0.72) 38%,
+      rgba(244,238,227,0.24) 100%
+    );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+
+  max-width: 760px;
+
+  padding:
+    92px
+    72px;
+}
+
+/* =========================================================
+   LABELS
+========================================================= */
+
+.eyebrow,
+.sectionKicker,
+.sourceLabel {
+  display: inline-block;
+
+  font-size: 0.72rem;
+
+  letter-spacing: 0.32em;
+
+  text-transform: uppercase;
+
+  color: var(--gold);
+
+  opacity: 0.92;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.title {
+  position: relative;
+
+  margin-top: 18px;
+
+  display: inline-block;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(4rem, 8vw, 6.7rem);
+
+  line-height: 0.86;
+
+  letter-spacing: 0.02em;
+
+  text-transform: uppercase;
+
+  color: transparent;
+
+  background-image:
+    url("/textures/paper-noise.jpeg");
+
+  background-size: cover;
+  background-position: center;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  filter:
+    contrast(1.1)
+    brightness(1.08);
+
+  opacity: 0.96;
+
+  text-shadow:
+    0 0 1px rgba(255,255,255,0.04),
+    0 0 20px rgba(0,0,0,0.32);
+}
+
+.title::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.22;
+
+  background:
+    radial-gradient(
+      circle at 14% 22%,
+      rgba(0,0,0,0.28),
+      transparent 28%
+    );
+}
+
+[data-theme="light"] .title {
+  filter:
+    contrast(1.35)
+    brightness(0.42)
+    saturate(0.7);
+
+  opacity: 0.92;
+
+  text-shadow:
+    0 1px 0 rgba(255,255,255,0.2),
+    0 8px 24px rgba(70,50,30,0.12);
+}
+
+[data-theme="light"] .title::after {
+  background:
+    radial-gradient(
+      circle at 14% 22%,
+      rgba(255,255,255,0.18),
+      transparent 28%
+    );
+}
+
+.lead {
+  max-width: 620px;
+
+  margin-top: 30px;
+
+  font-size: 1.08rem;
+
+  line-height: 1.95;
+
+  color: var(--muted);
+}
+
+.smallRule {
+  width: 78px;
+  height: 1px;
+
+  margin:
+    34px 0 22px;
+
+  background: var(--gold);
+}
+
+.command {
+  font-size: 0.74rem;
+
+  letter-spacing: 0.36em;
+
+  text-transform: uppercase;
+
+  color: var(--gold);
+}
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.projectSection,
+.kingSection,
+.flowSection,
+.sourcesSection,
+.creatorSection,
+.lockedSection,
+.disclaimer {
+  position: relative;
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+/* =========================================================
+   PROJECT SECTION
+========================================================= */
+
+.projectSection {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    1fr
+    420px;
+}
+
+.sectionImage {
+  background-image:
+    url("/backgrounds/about-archive-corridor.jpeg");
+
+  background-size: cover;
+  background-position: center;
+
+  filter:
+    brightness(0.56)
+    contrast(1.08);
+}
+
+.sectionCopy,
+.moduleList,
+.kingCopy,
+.connectionPanel,
+.flowCopy,
+.sourcesSection,
+.creatorSection,
+.lockedSection,
+.disclaimer {
+  padding:
+    52px;
+}
+
+.sectionNumber {
+  margin-right: 12px;
+
+  color: var(--gold);
+}
+
+.sectionCopy h2,
+.kingCopy h2,
+.sectionHeading h2,
+.creatorSection h2,
+.lockedSection h2 {
+  margin-top: 18px;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(2rem, 4vw, 3.6rem);
+
+  line-height: 0.95;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.02em;
+}
+
+.sectionCopy p,
+.kingCopy p,
+.flowCopy p,
+.creatorSection p,
+.disclaimer p {
+  max-width: 620px;
+
+  margin-top: 24px;
+
+  font-size: 0.96rem;
+
+  line-height: 1.92;
+
+  color: var(--muted);
+}
+
+/* =========================================================
+   MODULE LIST
+========================================================= */
+
+.moduleList {
+  border-left:
+    1px solid var(--border);
+}
+
+.moduleItem {
+  display: grid;
+
+  grid-template-columns:
+    34px 1fr;
+
+  gap: 18px;
+
+  padding:
+    22px 0;
+
+  border-bottom:
+    1px solid rgba(216,172,91,0.1);
+}
+
+.moduleItem h3 {
+  margin: 0;
+
+  font-size: 0.86rem;
+
+  letter-spacing: 0.24em;
+
+  text-transform: uppercase;
+
+  color: var(--gold);
+}
+
+.moduleItem p {
+  margin-top: 8px;
+
+  font-size: 0.8rem;
+
+  line-height: 1.72;
+
+  color: var(--soft);
+}
+
+/* =========================================================
+   KING SECTION
+========================================================= */
+
+.kingSection {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1.4fr;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(216,172,91,0.06),
+      transparent 42%
+    ),
+    var(--bg);
+}
+
+.connectionPanel {
+  border-left:
+    1px solid var(--border);
+}
+
+.connectionGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 18px;
+
+  margin-top: 34px;
+}
+
+.connectionGrid div {
+  min-height: 90px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 18px;
+
+  text-align: center;
+
+  border:
+    1px solid var(--border);
+
+  background:
+    rgba(255,255,255,0.02);
+
+  font-size: 0.72rem;
+
+  letter-spacing: 0.22em;
+
+  text-transform: uppercase;
+
+  color: var(--gold);
+}
+
+.connectionPanel blockquote {
+  margin-top: 42px;
+
+  max-width: 620px;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 1.55rem;
+
+  line-height: 1.5;
+
+  color: var(--muted);
+}
+
+/* =========================================================
+   FLOW
+========================================================= */
+
+.flowSection {
+  display: grid;
+
+  grid-template-columns:
+    340px 1fr;
+}
+
+.flow {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, 1fr);
+
+  gap: 22px;
+
+  padding:
+    52px;
+}
+
+.flowItem {
+  min-height: 180px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 22px;
+
+  border:
+    1px solid var(--border);
+
+  background:
+    rgba(255,255,255,0.025);
+
+  backdrop-filter: blur(10px);
+}
+
+.flowItem strong {
+  font-size: 0.82rem;
+
+  letter-spacing: 0.22em;
+
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   SOURCES
+========================================================= */
+
+.sourceGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 22px;
+
+  margin-top: 34px;
+}
+
+.sourceCard {
+  position: relative;
+
+  min-height: 260px;
+
+  padding: 26px;
+
+  overflow: hidden;
+
+  text-decoration: none;
+
+  color: inherit;
+
+  background:
+    linear-gradient(
+      180deg,
+      #c7ad81,
+      #9d8056
+    );
+
+  border:
+    1px solid rgba(0,0,0,0.25);
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.35);
+
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+.sourceCard:hover {
+  transform:
+    translateY(-4px)
+    rotate(-0.4deg);
+
+  box-shadow:
+    0 28px 60px rgba(0,0,0,0.42);
+}
+
+.sourceCard::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.08;
+
+  background-image:
+    url("/textures/paper-noise.jpeg");
+
+  mix-blend-mode: multiply;
+}
+
+.sourceCard h3 {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 18px;
+
+  color: #17120d;
+
+  font-size: 1rem;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+.sourceCard p {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 18px;
+
+  color:
+    rgba(20,14,10,0.78);
+
+  font-size: 0.86rem;
+
+  line-height: 1.75;
+}
+
+/* =========================================================
+   CREATOR
+========================================================= */
+
+.creatorSection {
+  display: grid;
+
+  grid-template-columns:
+    1fr 420px;
+
+  gap: 44px;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(13,12,10,0.96),
+      rgba(13,12,10,0.7)
+    ),
+    url("/backgrounds/about-creator-desk.jpeg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.creatorPanel {
+  padding: 28px;
+
+  border:
+    1px solid var(--border);
+
+  background:
+    rgba(0,0,0,0.32);
+
+  backdrop-filter: blur(12px);
+}
+
+/* =========================================================
+   LOCKED
+========================================================= */
+
+.lockedGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(6, 1fr);
+
+  gap: 18px;
+
+  margin-top: 32px;
+}
+
+.lockedCard {
+  min-height: 160px;
+
+  display: grid;
+  place-items: center;
+
+  text-align: center;
+
+  padding: 22px;
+
+  border:
+    1px solid var(--border);
+
+  background:
+    rgba(255,255,255,0.025);
+}
+
+/* =========================================================
+   DISCLAIMER
+========================================================= */
+
+.disclaimer {
+  display: grid;
+
+  grid-template-columns:
+    280px 1fr 340px;
+
+  gap: 40px;
+
+  align-items: center;
+}
+
+.stamp {
+  padding: 26px;
+
+  border:
+    2px solid rgba(216,172,91,0.5);
+
+  color: var(--gold);
+
+  text-align: center;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.18em;
+
+  transform: rotate(-2deg);
+}
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1400px) {
+  .projectSection,
+  .kingSection,
+  .flowSection,
+  .creatorSection,
+  .disclaimer {
+    grid-template-columns: 1fr;
+  }
+
+  .flow,
+  .sourceGrid,
+  .lockedGrid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .moduleList,
+  .connectionPanel {
+    border-left: 0;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .page {
+    padding-left: 0;
+    padding-top: 72px;
+  }
+
+  .heroContent,
+  .sectionCopy,
+  .moduleList,
+  .kingCopy,
+  .connectionPanel,
+  .flowCopy,
+  .sourcesSection,
+  .creatorSection,
+  .lockedSection,
+  .disclaimer,
+  .flow {
+    padding:
+      42px
+      32px;
+  }
+
+  .connectionGrid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 720px) {
+  .hero {
+    min-height: 480px;
+  }
+
+  .heroContent {
+    padding:
+      38px
+      22px;
+  }
+
+  .title {
+    font-size:
+      clamp(3.4rem, 14vw, 5rem);
+  }
+
+  .flow,
+  .sourceGrid,
+  .lockedGrid,
+  .connectionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .flow,
+  .sourcesSection,
+  .lockedSection {
+    padding:
+      32px
+      22px;
+  }
+
+  .sectionCopy,
+  .moduleList,
+  .kingCopy,
+  .connectionPanel,
+  .creatorSection,
+  .disclaimer {
+    padding:
+      34px
+      22px;
+  }
+
+  .sectionCopy h2,
+  .kingCopy h2,
+  .sectionHeading h2,
+  .creatorSection h2,
+  .lockedSection h2 {
+    font-size:
+      clamp(2rem, 10vw, 3rem);
+  }
+
+  .connectionPanel blockquote {
+    font-size: 1.2rem;
+  }
+
+  .disclaimer {
+    gap: 24px;
+  }
+}

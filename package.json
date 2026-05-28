@@ -1,44 +1,28 @@
 {
-  "name": "fetch-open-data",
-  "version": "0.1.0",
+  "name": "stephen-king-universe",
+  "version": "1.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest",
-    "backup-data": "node scripts/backupData.js"
+    "clean": "rm -rf .next node_modules"
   },
   "dependencies": {
-    "@tailwindcss/postcss": "^4.1.10",
-    "cheerio": "^1.1.0",
-    "next": "^15.1.0",
-    "node-fetch": "^3.3.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "requests": "^0.3.0",
-    "three": "^0.154.0"
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.16.0",
+    "next": "^16.2.4",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-force-graph-3d": "^1.29.1"
   },
   "devDependencies": {
-    "@babel/preset-react": "^7.27.1",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.3.0",
-    "@types/jest": "^30.0.0",
-    "babel-jest": "^30.0.2",
-    "eslint": "^9.29.0",
-    "eslint-config-next": "^15.3.4",
-    "identity-obj-proxy": "^3.0.0",
-    "jest": "^30.0.2",
-    "jest-environment-jsdom": "^30.0.5",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.10"
-  },
-
-  "overrides": {
-    "glob": "^10.4.5"
+    "@types/node": "25.5.2",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "15.5.14"
   }
 }
-
-
