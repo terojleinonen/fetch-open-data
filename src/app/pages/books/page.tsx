@@ -1,144 +1,53 @@
 // src/app/pages/books/page.tsx
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence } from "framer-motion";
-
 import styles from "./Books.module.css";
-
 import ArchiveTable from "./ArchiveTable";
 import CaseFilePanel from "./CaseFilePanel";
-
 type Book = any;
 
-const ITEMS_PER_PAGE = 12;
-
 export default function BooksPage() {
-  const [books, setBooks] = useState<Book[]>([]);
-
-  const [selectedBook, setSelectedBook] =
-    useState<Book | null>(null);
-
-  /**
-   * Prevent reopening first book
-   * after user manually closes panel
-   */
-
-  const [hasUserClosedPanel, setHasUserClosedPanel] =
-    useState(false);
-
-  const [query, setQuery] = useState("");
-
-  const [sort, setSort] =
-    useState("TITLE_ASC");
-
-  const [view, setView] =
-    useState<"GRID" | "LIST">("GRID");
-
   const [page, setPage] = useState(1);
+  const [books, setBooks] = useState<Book[]>([]);
+  const [selectedBook, setSelectedBook] = useState<Book | null>(null);
+  const [query, setQuery] = useState("");
+  const [sort, setSort] = useState("TITLE_ASC");
+  const [view, setView] = useState<"GRID" | "LIST">("GRID");
+  const [totalBooks, setTotalBooks] = useState(0);
+  const [totalPages, setTotalPages] = useState(1);
+  const startRecord = totalBooks === 0 ? 0 : (page - 1) * 12 + 1; 
+  const endRecord = Math.min(page * 12, totalBooks);
+  const [loading, setLoading] =  useState(true);
 
   /* =========================================================
      FETCH
   ========================================================= */
 
   useEffect(() => {
-    fetch("/api/books")
+    setLoading(true);
+    fetch(`/api/books?page=${page}&limit=12&q=${encodeURIComponent(query)}&sort=${sort}`)
       .then((r) => r.json())
       .then((data) => {
-        const normalized = (
-          data.books || []
-        ).map(
-          (
-            book: any,
-            index: number
-          ) => ({
-            ...book,
-
-            stableId:
-              book.id ||
-              book.isbn ||
-              `${book.title}-${book.year}-${index}`,
-          })
-        );
-
+        const normalized =
+          (data.books || []).map(
+            (book: any, index: number) => ({
+              ...book,
+              stableId:
+                book.id ||
+                book.isbn ||
+                `${book.title}-${book.year}-${index}`,
+            })
+        ) ;
         setBooks(normalized);
+        setTotalBooks(data.pagination.total);
+        setTotalPages(data.pagination.totalPages);    
+      })
+      .finally(() => {
+        setLoading(false);
       });
-  }, []);
-
-  /* =========================================================
-     FILTER + SORT
-  ========================================================= */
-
-  const filteredBooks = useMemo(() => {
-    const q = query
-      .trim()
-      .toLowerCase();
-
-    let result = books.filter((book) =>
-      String(book.title || "")
-        .toLowerCase()
-        .includes(q)
-    );
-
-    switch (sort) {
-      case "TITLE_ASC":
-        result.sort((a, b) =>
-          String(a.title).localeCompare(
-            String(b.title)
-          )
-        );
-        break;
-
-      case "TITLE_DESC":
-        result.sort((a, b) =>
-          String(b.title).localeCompare(
-            String(a.title)
-          )
-        );
-        break;
-
-      case "YEAR_ASC":
-        result.sort(
-          (a, b) =>
-            Number(a.year || 0) -
-            Number(b.year || 0)
-        );
-        break;
-
-      case "YEAR_DESC":
-        result.sort(
-          (a, b) =>
-            Number(b.year || 0) -
-            Number(a.year || 0)
-        );
-        break;
-    }
-
-    return result;
-  }, [books, query, sort]);
-
-  /* =========================================================
-     PAGINATION
-  ========================================================= */
-
-  const totalPages = Math.max(
-    1,
-    Math.ceil(
-      filteredBooks.length /
-        ITEMS_PER_PAGE
-    )
-  );
-
-  const paginatedBooks = useMemo(() => {
-    const start =
-      (page - 1) *
-      ITEMS_PER_PAGE;
-
-    return filteredBooks.slice(
-      start,
-      start + ITEMS_PER_PAGE
-    );
-  }, [filteredBooks, page]);
+  }, [page, query, sort]);  
 
   /* =========================================================
      RESET PAGE ON FILTERING
@@ -146,13 +55,6 @@ export default function BooksPage() {
 
   useEffect(() => {
     setPage(1);
-
-    /**
-     * Re-enable auto-open
-     * after changing filters
-     */
-
-    setHasUserClosedPanel(false);
   }, [query, sort]);
 
   /* =========================================================
@@ -166,26 +68,6 @@ export default function BooksPage() {
   }, [page, totalPages]);
 
   /* =========================================================
-     AUTO SELECT FIRST BOOK
-  ========================================================= */
-
-  useEffect(() => {
-    if (
-      paginatedBooks.length &&
-      !selectedBook &&
-      !hasUserClosedPanel
-    ) {
-      setSelectedBook(
-        paginatedBooks[0]
-      );
-    }
-  }, [
-    paginatedBooks,
-    selectedBook,
-    hasUserClosedPanel,
-  ]);
-
-  /* =========================================================
      CLEAR INVALID SELECTION
   ========================================================= */
 
@@ -193,7 +75,7 @@ export default function BooksPage() {
     if (!selectedBook) return;
 
     const stillExists =
-      filteredBooks.find(
+      books.find(
         (book) =>
           book.stableId ===
           selectedBook.stableId
@@ -203,7 +85,7 @@ export default function BooksPage() {
       setSelectedBook(null);
     }
   }, [
-    filteredBooks,
+    books,
     selectedBook,
   ]);
 
@@ -392,24 +274,22 @@ export default function BooksPage() {
 
           {/* RESULTS */}
 
-          <div
-            className={
-              styles.resultCount
-            }
-          >
-            {
-              filteredBooks.length
-            }{" "}
-            TITLES FOUND
+          <div className={styles.resultCount}>
+            ARCHIVE CONTAINS {totalBooks} RECORDS ·
+            VIEWING {startRecord} – {endRecord}
           </div>
 
           {/* GRID */}
-
-          <ArchiveTable
-            books={
-              paginatedBooks
-            }
-            selectedBook={
+          {loading ? (
+            <div className={styles.loading}>
+              Loading...
+            </div>
+          ) : (
+            <ArchiveTable
+              books={
+                books
+              }
+              selectedBook={
               selectedBook
             }
             view={view}
@@ -419,17 +299,9 @@ export default function BooksPage() {
               setSelectedBook(
                 book
               );
-
-              /**
-               * Re-enable
-               * panel state
-               */
-
-              setHasUserClosedPanel(
-                false
-              );
             }}
           />
+          )}
 
           {/* PAGINATION */}
 
@@ -565,16 +437,6 @@ export default function BooksPage() {
                 onClose={() => {
                   setSelectedBook(
                     null
-                  );
-
-                  /**
-                   * Prevent
-                   * immediate
-                   * reopen
-                   */
-
-                  setHasUserClosedPanel(
-                    true
                   );
                 }}
               />
