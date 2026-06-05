@@ -1,9 +1,11 @@
 import { NextResponse } from "next/server";
+const API_ROOT =  process.env.STEPHEN_KING_API?.replace(/\/$/, "");
+const SK_API = `${API_ROOT}/api`;
 
 export async function GET() {
   try {
     const res = await fetch(
-      "https://stephen-king-api.onrender.com/api/shorts"
+      `${SK_API}/shorts`
     );
 
     if (!res.ok) {
