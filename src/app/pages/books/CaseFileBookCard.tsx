@@ -1,12 +1,12 @@
-
 "use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from "./CaseFileBookCard.module.css";
+import { Book } from "../../../lib/types";
 
 type Props = {
-  book: any;
+  book: Book;
   view?: "GRID" | "LIST";
 };
 
@@ -19,7 +19,6 @@ export default function CaseFileBookCard({ book, view = "GRID" }: Props) {
     "/fallback-cover/fallback-cover.jpeg";
 
   const category = book.categories?.[0] || "Fiction";
-  const id = book.id || book.title;
 
   return (
     <motion.article

@@ -2,9 +2,10 @@
 
 import styles from "./VillainPanel.module.css";
 import Image from "next/image";
+import { Villain } from "../../../lib/types";
 
 type Props = {
-  villain: any;
+  villain: Villain;
 };
 
 export default function VillainPanel({ villain }: Props) {
@@ -80,7 +81,7 @@ export default function VillainPanel({ villain }: Props) {
         <section className={styles.section}>
           <h3>Notes</h3>
           <div className={styles.tags}>
-          {villain.notes?.slice(0, 8).map((note: any, index: number) => (
+          {villain.notes?.slice(0, 8).map((note: string, index: number) => (
             <span
               key={`${note}-${index}`}
             >

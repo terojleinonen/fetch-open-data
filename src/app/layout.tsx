@@ -13,6 +13,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  const saved = localStorage.getItem('theme') || 'dark';
+                  document.documentElement.setAttribute('data-theme', saved);
+                } catch (e) {}
+              })()
+            `,
+          }}
+        />
+      </head>
       <body>
         <div className="appShell">
 
@@ -26,7 +40,6 @@ export default function RootLayout({
             {children}
           </main>
 
-          {/* RIGHT SIDEBAR */}
         </div>
       </body>
     </html>

@@ -1,12 +1,14 @@
 // src/app/pages/books/page.tsx
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { AnimatePresence } from "framer-motion";
 import styles from "./Books.module.css";
 import ArchiveTable from "./ArchiveTable";
 import CaseFilePanel from "./CaseFilePanel";
-type Book = any;
+import ArchiveControls from "../../components/archive/ArchiveControls";
+import { getPagination } from "../../../lib/getPagination";
+import { Book } from "../../../lib/types";
 
 export default function BooksPage() {
   const [page, setPage] = useState(1);
@@ -17,9 +19,10 @@ export default function BooksPage() {
   const [view, setView] = useState<"GRID" | "LIST">("GRID");
   const [totalBooks, setTotalBooks] = useState(0);
   const [totalPages, setTotalPages] = useState(1);
+  const [loading, setLoading] = useState(true);
+
   const startRecord = totalBooks === 0 ? 0 : (page - 1) * 12 + 1; 
   const endRecord = Math.min(page * 12, totalBooks);
-  const [loading, setLoading] =  useState(true);
 
   /* =========================================================
      FETCH
@@ -30,130 +33,85 @@ export default function BooksPage() {
     fetch(`/api/books?page=${page}&limit=12&q=${encodeURIComponent(query)}&sort=${sort}`)
       .then((r) => r.json())
       .then((data) => {
-        const normalized =
-          (data.books || []).map(
-            (book: any, index: number) => ({
-              ...book,
-              stableId:
-                book.id ||
-                book.isbn ||
-                `${book.title}-${book.year}-${index}`,
-            })
-        ) ;
+        const normalized: Book[] = (data.books || []).map(
+          (book: any, index: number) => ({
+            ...book,
+            stableId: String(
+              book.id ||
+              book.isbn ||
+              `${book.title}-${book.year}-${index}`
+            ),
+          })
+        );
         setBooks(normalized);
-        setTotalBooks(data.pagination.total);
-        setTotalPages(data.pagination.totalPages);    
+        setTotalBooks(data.pagination.total || 0);
+
+        const tPages = data.pagination.totalPages || 1;
+        setTotalPages(tPages);
+
+        // Keep page valid if it exceeds total pages after a search
+        if (page > tPages) {
+          setPage(tPages);
+        }
+
+        // Clear selection if selected book is no longer in the list
+        if (selectedBook) {
+          const stillExists = normalized.find(
+            (b) => b.stableId === selectedBook.stableId
+          );
+          if (!stillExists) {
+            setSelectedBook(null);
+          }
+        }
+      })
+      .catch((err) => {
+        console.error("Failed to fetch books", err);
       })
       .finally(() => {
         setLoading(false);
       });
-  }, [page, query, sort]);  
+  }, [page, query, sort]);
 
   /* =========================================================
-     RESET PAGE ON FILTERING
+     SEARCH & FILTER HANDLERS
   ========================================================= */
 
-  useEffect(() => {
+  const handleQueryChange = (q: string) => {
+    setQuery(q);
     setPage(1);
-  }, [query, sort]);
+  };
 
-  /* =========================================================
-     KEEP PAGE VALID
-  ========================================================= */
+  const handleSortChange = (s: string) => {
+    setSort(s);
+    setPage(1);
+  };
 
-  useEffect(() => {
-    if (page > totalPages) {
-      setPage(totalPages);
+  const filters = [
+    {
+      key: "sort",
+      options: [
+        { label: "TITLE A–Z", value: "TITLE_ASC" },
+        { label: "TITLE Z–A", value: "TITLE_DESC" },
+        { label: "YEAR (ASC)", value: "YEAR_ASC" },
+        { label: "YEAR (DESC)", value: "YEAR_DESC" },
+      ],
+      value: sort,
+      onChange: handleSortChange,
+    },
+  ];
+
+  const handleRandom = () => {
+    if (books.length > 0) {
+      const randIndex = Math.floor(Math.random() * books.length);
+      setSelectedBook(books[randIndex]);
     }
-  }, [page, totalPages]);
-
-  /* =========================================================
-     CLEAR INVALID SELECTION
-  ========================================================= */
-
-  useEffect(() => {
-    if (!selectedBook) return;
-
-    const stillExists =
-      books.find(
-        (book) =>
-          book.stableId ===
-          selectedBook.stableId
-      );
-
-    if (!stillExists) {
-      setSelectedBook(null);
-    }
-  }, [
-    books,
-    selectedBook,
-  ]);
-
-  /* =========================================================
-     PAGINATION UI
-  ========================================================= */
-
-  const getPagination = () => {
-    const pages: (
-      | number
-      | string
-    )[] = [];
-
-    const start = Math.max(
-      1,
-      page - 2
-    );
-
-    const end = Math.min(
-      totalPages,
-      page + 2
-    );
-
-    if (page > 1) {
-      pages.push("prev");
-    }
-
-    if (start > 1) {
-      pages.push(1);
-
-      if (start > 2) {
-        pages.push(
-          "dots-start"
-        );
-      }
-    }
-
-    for (
-      let i = start;
-      i <= end;
-      i++
-    ) {
-      pages.push(i);
-    }
-
-    if (end < totalPages) {
-      if (
-        end <
-        totalPages - 1
-      ) {
-        pages.push(
-          "dots-end"
-        );
-      }
-
-      pages.push(totalPages);
-    }
-
-    if (page < totalPages) {
-      pages.push("next");
-    }
-
-    return pages;
   };
 
   /* =========================================================
      RENDER
   ========================================================= */
+
+  const visiblePages = getPagination(page, totalPages);
 
   return (
     <main className={styles.page}>
@@ -201,79 +159,40 @@ export default function BooksPage() {
           </header>
 
           {/* CONTROLS */}
-          <section  className={styles.controls}>
-            <label  className={styles.searchBox}>
-              <input
-                placeholder="Search the archive..."
-                value={query}
-                onChange={(e) =>
-                  setQuery(
-                    e.target.value
-                  )
-                }
+          <section className={styles.controlsSection}>
+            <Suspense fallback={<div className={styles.loading}>Loading archive controls...</div>}>
+              <ArchiveControls
+                query={query}
+                onQueryChange={handleQueryChange}
+                resultCount={totalBooks}
+                totalCount={totalBooks}
+                filters={filters}
+                onRandom={handleRandom}
               />
+            </Suspense>
 
-              <span>⌕</span>
-            </label>
+            <div className={styles.viewToggleRow}>
+              <div className={styles.viewButtons}>
+                <button
+                  className={view === "GRID" ? styles.viewActive : ""}
+                  onClick={() => setView("GRID")}
+                  aria-label="Switch to grid view"
+                >
+                  ▣
+                </button>
 
-            <button className={styles.controlButton}
-              onClick={() =>
-                setSort(
-                  (
-                    prev
-                  ) =>
-                    prev ===
-                    "TITLE_ASC"
-                      ? "TITLE_DESC"
-                      : "TITLE_ASC"
-                )
-              }
-            >
-              SORT:{" "}
-              {sort ===
-              "TITLE_ASC"
-                ? "TITLE A–Z"
-                : "TITLE Z–A"}
-            </button>
-
-            <div className={styles.viewButtons}
-            >
-              <button
-                className={
-                  view ===
-                  "GRID"
-                    ? styles.viewActive
-                    : ""
-                }
-                onClick={() =>
-                  setView(
-                    "GRID"
-                  )
-                }
-              >
-                ▣
-              </button>
-
-              <button
-                className={
-                  view ===
-                  "LIST"
-                    ? styles.viewActive
-                    : ""
-                }
-                onClick={() =>
-                  setView(
-                    "LIST"
-                  )
-                }
-              >
-                ☰
-              </button>
+                <button
+                  className={view === "LIST" ? styles.viewActive : ""}
+                  onClick={() => setView("LIST")}
+                  aria-label="Switch to list view"
+                >
+                  ☰
+                </button>
+              </div>
             </div>
           </section>
 
           {/* RESULTS */}
-
           <div className={styles.resultCount}>
             ARCHIVE CONTAINS {totalBooks} RECORDS ·
             VIEWING {startRecord} – {endRecord}
@@ -286,133 +205,58 @@ export default function BooksPage() {
             </div>
           ) : (
             <ArchiveTable
-              books={
-                books
-              }
-              selectedBook={
-              selectedBook
-            }
-            view={view}
-            onSelect={(
-              book
-            ) => {
-              setSelectedBook(
-                book
-              );
-            }}
-          />
+              books={books}
+              selectedBook={selectedBook}
+              view={view}
+              onSelect={(book) => setSelectedBook(book)}
+            />
           )}
 
           {/* PAGINATION */}
+          <div className={styles.pagination}>
+            <button
+              className={styles.paginationBtn}
+              onClick={() => setPage((p) => Math.max(1, p - 1))}
+              disabled={page === 1}
+              aria-label="Previous page"
+            >
+              ←
+            </button>
 
-          <div
-            className={
-              styles.pagination
-            }
-          >
-            {getPagination().map(
-              (
-                item,
-                index
-              ) => {
-                if (
-                  item ===
-                    "dots-start" ||
-                  item ===
-                    "dots-end"
-                ) {
-                  return (
-                    <span
-                      key={`${item}-${index}`}
-                      className={
-                        styles.paginationDots
-                      }
-                    >
-                      —
-                    </span>
-                  );
-                }
-
-                if (
-                  item ===
-                  "prev"
-                ) {
-                  return (
-                    <button
-                      key="prev"
-                      className={
-                        styles.paginationBtn
-                      }
-                      onClick={() =>
-                        setPage(
-                          (
-                            p
-                          ) =>
-                            Math.max(
-                              1,
-                              p -
-                                1
-                            )
-                        )
-                      }
-                    >
-                      ←
-                    </button>
-                  );
-                }
-
-                if (
-                  item ===
-                  "next"
-                ) {
-                  return (
-                    <button
-                      key="next"
-                      className={
-                        styles.paginationBtn
-                      }
-                      onClick={() =>
-                        setPage(
-                          (
-                            p
-                          ) =>
-                            Math.min(
-                              totalPages,
-                              p +
-                                1
-                            )
-                        )
-                      }
-                    >
-                      →
-                    </button>
-                  );
-                }
-
+            {visiblePages.map((item, index) => {
+              if (item === "...") {
                 return (
-                  <button
-                    key={
-                      item
-                    }
-                    className={`${styles.paginationBtn} ${
-                      page ===
-                      item
-                        ? styles.paginationActive
-                        : ""
-                    }`}
-                    onClick={() =>
-                      setPage(
-                        Number(
-                          item
-                        )
-                      )
-                    }
+                  <span
+                    key={`dots-${index}`}
+                    className={styles.paginationDots}
                   >
-                    {item}
-                  </button>
+                    —
+                  </span>
                 );
               }
-            )}
+
+              return (
+                <button
+                  key={item}
+                  className={`${styles.paginationBtn} ${
+                    page === item ? styles.paginationActive : ""
+                  }`}
+                  onClick={() => setPage(Number(item))}
+                  aria-label={`Go to page ${item}`}
+                >
+                  {item}
+                </button>
+              );
+            })}
+
+            <button
+              className={styles.paginationBtn}
+              onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+              disabled={page === totalPages}
+              aria-label="Next page"
+            >
+              →
+            </button>
           </div>
         </section>
 
@@ -420,25 +264,13 @@ export default function BooksPage() {
             PANEL
         ========================================================= */}
 
-        <div
-          className={
-            styles.panelColumn
-          }
-        >
+        <div className={styles.panelColumn}>
           <AnimatePresence mode="wait">
             {selectedBook && (
               <CaseFilePanel
-                key={
-                  selectedBook.stableId
-                }
-                book={
-                  selectedBook
-                }
-                onClose={() => {
-                  setSelectedBook(
-                    null
-                  );
-                }}
+                key={selectedBook.stableId}
+                book={selectedBook}
+                onClose={() => setSelectedBook(null)}
               />
             )}
           </AnimatePresence>

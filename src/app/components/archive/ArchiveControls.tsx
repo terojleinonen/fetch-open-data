@@ -117,6 +117,7 @@ export default function ArchiveControls({
           value={query}
           onChange={(event) => handleQueryChange(event.target.value)}
           placeholder="Search archive..."
+          aria-label="Search archive"
         />
 
         <div className={styles.overlay}>
@@ -136,7 +137,7 @@ export default function ArchiveControls({
       {filters.length > 0 && (
         <div className={styles.filters}>
           {filters.map((group) => (
-            <div key={group.key} className={styles.group}>
+            <div key={group.key} className={styles.group} role="group" aria-label={`Filter by ${group.key}`}>
               {group.options.map((option) => (
                 <button
                   key={option.value}
@@ -145,6 +146,7 @@ export default function ArchiveControls({
                     group.value === option.value ? styles.active : ""
                   }`}
                   onClick={() => handleFilterChange(group, option.value)}
+                  aria-pressed={group.value === option.value}
                 >
                   {option.label}
                 </button>
@@ -155,7 +157,12 @@ export default function ArchiveControls({
       )}
 
       {onRandom && (
-        <button type="button" className={styles.random} onClick={onRandom}>
+        <button
+          type="button"
+          className={styles.random}
+          onClick={onRandom}
+          aria-label="Open a random case file dossier"
+        >
           OPEN RANDOM FILE
         </button>
       )}
