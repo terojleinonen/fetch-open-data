@@ -2,12 +2,19 @@
 "use client";
 
 import styles from "./ShortCard.module.css";
+import { Short } from "../../../lib/types";
+
+type Props = {
+  story: Short;
+  variant?: number;
+  view?: "GRID" | "LIST";
+};
 
 export default function ShortCard({
   story,
   variant = 0,
   view = "GRID",
-}: any) {
+}: Props) {
   const variants = [
     styles.manuscript,
     styles.blackCard,

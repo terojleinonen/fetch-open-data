@@ -1,42 +1,21 @@
 // src/app/pages/shorts/page.tsx
 "use client";
 
-import {
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
-
+import { useEffect, useMemo, useState, Suspense } from "react";
 import styles from "./Shorts.module.css";
-
 import ShortTable from "./ShortTable";
 import ShortPanel from "./ShortPanel";
-
-type ShortStory = any;
+import ArchiveControls from "../../components/archive/ArchiveControls";
+import { Short } from "../../../lib/types";
 
 export default function ShortsPage() {
-  const [stories, setStories] = useState<
-    ShortStory[]
-  >([]);
-
-  const [selected, setSelected] =
-    useState<ShortStory | null>(null);
-
-  const [query, setQuery] =
-    useState("");
-
-  const [sort, setSort] =
-    useState("DATE");
-
-  const [view, setView] = useState<
-    "GRID" | "LIST"
-  >("GRID");
-
-  const [mobilePanelOpen, setMobilePanelOpen] =
-    useState(false);
-
-  const [isCompact, setIsCompact] =
-    useState(false);
+  const [stories, setStories] = useState<Short[]>([]);
+  const [selected, setSelected] = useState<Short | null>(null);
+  const [query, setQuery] = useState("");
+  const [sort, setSort] = useState("DATE");
+  const [view, setView] = useState<"GRID" | "LIST">("GRID");
+  const [mobilePanelOpen, setMobilePanelOpen] = useState(false);
+  const [isCompact, setIsCompact] = useState(false);
 
   /* ======================================
      RESPONSIVE DETECTION
@@ -71,15 +50,13 @@ export default function ShortsPage() {
     fetch("/api/shorts")
       .then((r) => r.json())
       .then((d) => {
-        const records =
-          d.shorts || [];
-
+        const records = d.shorts || [];
         setStories(records);
-
         if (records.length > 0) {
           setSelected(records[0]);
         }
-      });
+      })
+      .catch((err) => console.error("Failed to fetch shorts", err));
   }, []);
 
   /* ======================================
@@ -120,15 +97,40 @@ export default function ShortsPage() {
      SELECT
   ====================================== */
 
-  const handleSelect = (
-    story: ShortStory
-  ) => {
+  const handleSelect = (story: Short) => {
     setSelected(story);
 
     if (isCompact) {
       setMobilePanelOpen(true);
     }
   };
+
+  const handleQueryChange = (q: string) => {
+    setQuery(q);
+  };
+
+  const handleSortChange = (s: string) => {
+    setSort(s);
+  };
+
+  const handleRandom = () => {
+    if (filtered.length > 0) {
+      const randIndex = Math.floor(Math.random() * filtered.length);
+      handleSelect(filtered[randIndex]);
+    }
+  };
+
+  const filters = [
+    {
+      key: "sort",
+      options: [
+        { label: "DATE FOUND", value: "DATE" },
+        { label: "TITLE", value: "TITLE" },
+      ],
+      value: sort,
+      onChange: handleSortChange,
+    },
+  ];
 
   return (
     <main className={styles.page}>
@@ -178,73 +180,44 @@ export default function ShortsPage() {
 
           {/* CONTROLS */}
 
-          <section
-            className={styles.controls}
-          >
-            <label
-              className={styles.search}
-            >
-              <input
-                placeholder="Search fragments..."
-                value={query}
-                onChange={(e) =>
-                  setQuery(
-                    e.target.value
-                  )
-                }
+          <section className={styles.controlsSection || styles.controls}>
+            <Suspense fallback={<div className={styles.loading}>Loading archive controls...</div>}>
+              <ArchiveControls
+                query={query}
+                onQueryChange={handleQueryChange}
+                resultCount={filtered.length}
+                totalCount={stories.length}
+                filters={filters}
+                onRandom={handleRandom}
               />
+            </Suspense>
 
-              <span>⌕</span>
-            </label>
+            <div className={styles.viewToggleRow || ""}>
+              <div className={styles.viewSwitch || styles.viewButtons}>
+                <button
+                  className={
+                    view === "GRID"
+                      ? styles.viewActive
+                      : ""
+                  }
+                  onClick={() => setView("GRID")}
+                  aria-label="Switch to grid view"
+                >
+                  ▦
+                </button>
 
-            <button
-              className={
-                styles.controlBtn
-              }
-              onClick={() =>
-                setSort((prev) =>
-                  prev === "DATE"
-                    ? "TITLE"
-                    : "DATE"
-                )
-              }
-            >
-              Sort:{" "}
-              {sort === "DATE"
-                ? "Date Found"
-                : "Title"}
-            </button>
-
-            <div
-              className={
-                styles.viewSwitch
-              }
-            >
-              <button
-                className={
-                  view === "GRID"
-                    ? styles.viewActive
-                    : ""
-                }
-                onClick={() =>
-                  setView("GRID")
-                }
-              >
-                ▦
-              </button>
-
-              <button
-                className={
-                  view === "LIST"
-                    ? styles.viewActive
-                    : ""
-                }
-                onClick={() =>
-                  setView("LIST")
-                }
-              >
-                ☰
-              </button>
+                <button
+                  className={
+                    view === "LIST"
+                      ? styles.viewActive
+                      : ""
+                  }
+                  onClick={() => setView("LIST")}
+                  aria-label="Switch to list view"
+                >
+                  ☰
+                </button>
+              </div>
             </div>
           </section>
 
@@ -253,8 +226,7 @@ export default function ShortsPage() {
               styles.resultCount
             }
           >
-            {filtered.length} fragments
-            found
+            {filtered.length} fragments found
           </div>
 
           {/* GRID */}
@@ -312,6 +284,7 @@ export default function ShortsPage() {
                     false
                   )
                 }
+                aria-label="Close selected fragment dossier"
               >
                 ← Close dossier
               </button>

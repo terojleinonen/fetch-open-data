@@ -1,6 +1,7 @@
 export type EntityRef = {
+  id?: number;
   name : string;
-  title: string;
+  title?: string;
   url?: string;
 };
 
@@ -8,36 +9,42 @@ export type Book = {
   id: number;
   year: number;
   title: string;
-  handle: string;
+  handle?: string;
   publisher: string;
   isbn: string;
-  pages: number;
+  pages?: number;
+  pageCount?: number;
   notes?: string[];
   description: string;
   cover: any;
   categories: string[];
   villains?: EntityRef[];
+  stableId?: string;
 };
 
 export type Villain = {
   id: number;
   name: string;
   gender: string;
-  status: "UNKNOWN" | "ALIVE" | "DECEASED" | "MISSING" | "UNDEAD" | "OTHER" | "DEAD" | string; // can evolve later
+  status: "UNKNOWN" | "ALIVE" | "DECEASED" | "MISSING" | "UNDEAD" | "OTHER" | "DEAD" | string;
   types_id: number;
   notes?: string[];
   created_at: string;
   books?: EntityRef[];
   shorts?: EntityRef[];
+  image?: string;
+  location?: string;
+  type?: string;
+  category?: string;
 };
 
 export type Short = {
   id: number;
   title: string;
-  type: "Short Story" | "Novella" | "Novelette" | "Poem";
-  originallyPublishedIn: string;
-  collectedIn: string;
+  type: "Short Story" | "Novella" | "Novelette" | "Poem" | string;
+  originallyPublishedIn: string | null;
+  collectedIn: string | null;
   notes?: string[];
-  year: number;
-  villains?: EntityRef[]; // villains
+  year: number | null;
+  villains?: EntityRef[];
 };

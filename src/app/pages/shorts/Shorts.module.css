@@ -259,6 +259,26 @@
    CONTROLS
 ========================================================= */
 
+.controlsSection {
+  padding: 22px 28px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(7,7,6,0.82);
+  backdrop-filter: blur(14px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+[data-theme="light"] .controlsSection {
+  background: rgba(255,252,244,0.42);
+}
+
+.viewToggleRow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .controls {
   display: flex;
   flex-wrap: wrap;

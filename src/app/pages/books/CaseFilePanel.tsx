@@ -4,8 +4,14 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import styles from "./CaseFilePanel.module.css";
+import { Book } from "../../../lib/types";
 
-export default function CaseFilePanel({ book, onClose }: any) {
+type Props = {
+  book: Book;
+  onClose?: () => void;
+};
+
+export default function CaseFilePanel({ book, onClose }: Props) {
   const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
@@ -19,6 +25,7 @@ export default function CaseFilePanel({ book, onClose }: any) {
 
   return (
     <motion.aside
+      className={styles.panel}
       initial={{
         opacity: 0,
         x: 40,
@@ -44,7 +51,13 @@ export default function CaseFilePanel({ book, onClose }: any) {
         </div>
 
         <section className={styles.top}>
-          <img src={cover} alt={book.title}/>
+          <Image
+            src={cover}
+            alt={book.title}
+            width={300}
+            height={417}
+            priority
+          />
 
           <div>
             <h2>{book.title}</h2>
@@ -103,7 +116,7 @@ export default function CaseFilePanel({ book, onClose }: any) {
           </div>
         </section>
 
-        {book.villains?.length > 0 && (
+        {book.villains && book.villains.length > 0 && (
           <section className={styles.section}>
             <h3>Related Entities</h3>
 

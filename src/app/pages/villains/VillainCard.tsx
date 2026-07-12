@@ -3,9 +3,10 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from "./VillainCard.module.css";
+import { Villain } from "../../../lib/types";
 
 type Props = {
-  villain: any;
+  villain: Villain;
   index?: number;
   view?: "GRID" | "LIST";
 };
@@ -23,6 +24,7 @@ const evidenceImages = [
 
 export default function VillainCard({ villain, index = 0, view = "GRID" }: Props) {
   const status = String(villain.status || "Unknown").toUpperCase();
+  // Using the villain image if present, falling back to one of the placeholder evidence images
   const image = villain.image || evidenceImages[index % evidenceImages.length];
 
   return (

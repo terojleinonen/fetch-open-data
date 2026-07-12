@@ -4,11 +4,12 @@
 import { motion } from "framer-motion";
 import styles from "./Books.module.css";
 import CaseFileBookCard from "./CaseFileBookCard";
+import { Book } from "../../../lib/types";
 
 type Props = {
-  books: any[];
-  selectedBook: any;
-  onSelect: (book: any) => void;
+  books: Book[];
+  selectedBook: Book | null;
+  onSelect: (book: Book) => void;
   view?: "GRID" | "LIST";
 };
 
@@ -57,9 +58,9 @@ export default function ArchiveTable({
           book.isbn ||
           `${book.title}-${book.year}-${index}`;
 
-        const normalizedBook = {
+        const normalizedBook: Book = {
           ...book,
-          stableId,
+          stableId: String(stableId),
         };
 
         return (
@@ -85,8 +86,17 @@ export default function ArchiveTable({
             }
           >
             <div
+              role="button"
+              tabIndex={0}
               className={styles.cardButton}
               onClick={() => onSelect(normalizedBook)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  onSelect(normalizedBook);
+                }
+              }}
+              aria-label={`Open case file for ${book.title}`}
             >
               <CaseFileBookCard
                 book={normalizedBook}

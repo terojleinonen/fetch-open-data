@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, Suspense } from "react";
 import VillainsTable from "./VillainsTable";
 import VillainPanel from "./VillainPanel";
 import styles from "./Villains.module.css";
-
-type Villain = any;
+import ArchiveControls from "../../components/archive/ArchiveControls";
+import { getPagination } from "../../../lib/getPagination";
+import { Villain } from "../../../lib/types";
 
 const PAGE_SIZE = 8;
 
@@ -15,15 +16,9 @@ export default function VillainsPage() {
 
   const [query, setQuery] = useState("");
   const [status, setStatus] = useState("ALL");
-
-  const [sort, setSort] =
-    useState<"NAME" | "THREAT">("NAME");
-
-  const [view, setView] =
-    useState<"GRID" | "LIST">("GRID");
-
+  const [sort, setSort] = useState<"NAME" | "THREAT">("NAME");
+  const [view, setView] = useState<"GRID" | "LIST">("GRID");
   const [page, setPage] = useState(1);
-
   const [loading, setLoading] = useState(true);
 
   /* =========================================================
@@ -35,18 +30,17 @@ export default function VillainsPage() {
       .then((r) => r.json())
       .then((d) => {
         const records = d.villains || [];
-
         setVillains(records);
-
         if (records.length > 0) {
           setSelected(records[0]);
         }
       })
+      .catch((err) => console.error("Failed to fetch villains", err))
       .finally(() => setLoading(false));
   }, []);
 
   /* =========================================================
-     FILTERING
+     FILTERING & SORTING
   ========================================================= */
 
   const filtered = useMemo(() => {
@@ -54,7 +48,6 @@ export default function VillainsPage() {
 
     if (query.trim()) {
       const q = query.toLowerCase();
-
       result = result.filter((v) =>
         v.name?.toLowerCase().includes(q)
       );
@@ -72,7 +65,6 @@ export default function VillainsPage() {
       if (sort === "THREAT") {
         return getThreatScore(b) - getThreatScore(a);
       }
-
       return String(a.name || "").localeCompare(
         String(b.name || "")
       );
@@ -90,19 +82,30 @@ export default function VillainsPage() {
     Math.ceil(filtered.length / PAGE_SIZE)
   );
 
+  // Keep page valid after search/filter changes
   useEffect(() => {
     if (page > totalPages) {
       setPage(totalPages);
     }
   }, [page, totalPages]);
 
-  useEffect(() => {
+  const handleQueryChange = (q: string) => {
+    setQuery(q);
     setPage(1);
-  }, [query, status, sort]);
+  };
+
+  const handleStatusChange = (st: string) => {
+    setStatus(st);
+    setPage(1);
+  };
+
+  const handleSortChange = (so: string) => {
+    setSort(so as "NAME" | "THREAT");
+    setPage(1);
+  };
 
   const paginated = useMemo(() => {
     const start = (page - 1) * PAGE_SIZE;
-
     return filtered.slice(
       start,
       start + PAGE_SIZE
@@ -141,13 +144,40 @@ export default function VillainsPage() {
   }
 
   /* =========================================================
-     PAGINATION BUTTONS
+     HANDLERS FOR CONTROLS
   ========================================================= */
 
-  const visiblePages = getVisiblePages(
-    page,
-    totalPages
-  );
+  const filters = [
+    {
+      key: "status",
+      options: [
+        { label: "ALL STATUS", value: "ALL" },
+        { label: "ALIVE", value: "ALIVE" },
+        { label: "DECEASED", value: "DECEASED" },
+        { label: "UNKNOWN", value: "UNKNOWN" },
+      ],
+      value: status,
+      onChange: handleStatusChange,
+    },
+    {
+      key: "sort",
+      options: [
+        { label: "SORT BY NAME", value: "NAME" },
+        { label: "SORT BY THREAT", value: "THREAT" },
+      ],
+      value: sort,
+      onChange: handleSortChange,
+    },
+  ];
+
+  const handleRandom = () => {
+    if (filtered.length > 0) {
+      const randIndex = Math.floor(Math.random() * filtered.length);
+      setSelected(filtered[randIndex]);
+    }
+  };
+
+  const visiblePages = getPagination(page, totalPages);
 
   return (
     <main className={styles.page}>
@@ -186,86 +216,36 @@ export default function VillainsPage() {
           </header>
 
           {/* CONTROLS */}
-
-          <section className={styles.controls}>
-            <label className={styles.searchBox}>
-              <input
-                value={query}
-                onChange={(e) =>
-                  setQuery(e.target.value)
-                }
-                placeholder="Search entities..."
+          <section className={styles.controlsSection || styles.controls}>
+            <Suspense fallback={<div className={styles.loading}>Loading archive controls...</div>}>
+              <ArchiveControls
+                query={query}
+                onQueryChange={handleQueryChange}
+                resultCount={filtered.length}
+                totalCount={villains.length}
+                filters={filters}
+                onRandom={handleRandom}
               />
+            </Suspense>
 
-              <span>⌕</span>
-            </label>
+            <div className={styles.viewToggleRow || ""}>
+              <div className={styles.viewButtons}>
+                <button
+                  className={view === "GRID" ? styles.viewActive : ""}
+                  onClick={() => setView("GRID")}
+                  aria-label="Switch to grid view"
+                >
+                  ▦
+                </button>
 
-            <select
-              value={status}
-              onChange={(e) =>
-                setStatus(e.target.value)
-              }
-              className={styles.controlSelect}
-            >
-              <option value="ALL">
-                All Status
-              </option>
-
-              <option value="ALIVE">
-                Alive
-              </option>
-
-              <option value="DECEASED">
-                Deceased
-              </option>
-
-              <option value="UNKNOWN">
-                Unknown
-              </option>
-            </select>
-
-            <button
-              className={styles.controlButton}
-              onClick={() =>
-                setSort((prev) =>
-                  prev === "NAME"
-                    ? "THREAT"
-                    : "NAME"
-                )
-              }
-            >
-              Sort:{" "}
-              {sort === "NAME"
-                ? "Name"
-                : "Threat"}
-            </button>
-
-            <div className={styles.viewButtons}>
-              <button
-                className={
-                  view === "GRID"
-                    ? styles.viewActive
-                    : ""
-                }
-                onClick={() =>
-                  setView("GRID")
-                }
-              >
-                ▦
-              </button>
-
-              <button
-                className={
-                  view === "LIST"
-                    ? styles.viewActive
-                    : ""
-                }
-                onClick={() =>
-                  setView("LIST")
-                }
-              >
-                ☰
-              </button>
+                <button
+                  className={view === "LIST" ? styles.viewActive : ""}
+                  onClick={() => setView("LIST")}
+                  aria-label="Switch to list view"
+                >
+                  ☰
+                </button>
+              </div>
             </div>
           </section>
 
@@ -291,20 +271,16 @@ export default function VillainsPage() {
           <nav className={styles.pagination}>
             <button
               disabled={page === 1}
-              onClick={() =>
-                setPage(1)
-              }
+              onClick={() => setPage(1)}
+              aria-label="First page"
             >
               «
             </button>
 
             <button
               disabled={page === 1}
-              onClick={() =>
-                setPage((p) =>
-                  Math.max(1, p - 1)
-                )
-              }
+              onClick={() => setPage((p) => Math.max(1, p - 1))}
+              aria-label="Previous page"
             >
               ‹
             </button>
@@ -324,14 +300,9 @@ export default function VillainsPage() {
               return (
                 <button
                   key={item}
-                  onClick={() =>
-                    setPage(Number(item))
-                  }
-                  className={
-                    page === item
-                      ? styles.pageActive
-                      : ""
-                  }
+                  onClick={() => setPage(Number(item))}
+                  className={page === item ? styles.pageActive : ""}
+                  aria-label={`Go to page ${item}`}
                 >
                   {item}
                 </button>
@@ -340,23 +311,16 @@ export default function VillainsPage() {
 
             <button
               disabled={page === totalPages}
-              onClick={() =>
-                setPage((p) =>
-                  Math.min(
-                    totalPages,
-                    p + 1
-                  )
-                )
-              }
+              onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+              aria-label="Next page"
             >
               ›
             </button>
 
             <button
               disabled={page === totalPages}
-              onClick={() =>
-                setPage(totalPages)
-              }
+              onClick={() => setPage(totalPages)}
+              aria-label="Last page"
             >
               »
             </button>
@@ -383,7 +347,7 @@ export default function VillainsPage() {
    THREAT SCORE
 ========================================================= */
 
-function getThreatScore(villain: any) {
+function getThreatScore(villain: Villain) {
   const status = String(
     villain.status || ""
   ).toUpperCase();
@@ -394,46 +358,4 @@ function getThreatScore(villain: any) {
   if (status === "UNKNOWN") return 2;
 
   return 1;
-}
-
-/* =========================================================
-   DYNAMIC PAGINATION
-========================================================= */
-
-function getVisiblePages(
-  current: number,
-  total: number
-) {
-  const pages: (number | string)[] = [];
-
-  if (total <= 7) {
-    return Array.from(
-      { length: total },
-      (_, i) => i + 1
-    );
-  }
-
-  pages.push(1);
-
-  if (current > 3) {
-    pages.push("...");
-  }
-
-  const start = Math.max(2, current - 1);
-  const end = Math.min(
-    total - 1,
-    current + 1
-  );
-
-  for (let i = start; i <= end; i++) {
-    pages.push(i);
-  }
-
-  if (current < total - 2) {
-    pages.push("...");
-  }
-
-  pages.push(total);
-
-  return pages;
 }

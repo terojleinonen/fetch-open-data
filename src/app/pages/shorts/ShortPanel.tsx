@@ -2,10 +2,15 @@
 "use client";
 
 import styles from "./ShortPanel.module.css";
+import { Short } from "../../../lib/types";
+
+type Props = {
+  story: Short;
+};
 
 export default function ShortPanel({
   story,
-}: any) {
+}: Props) {
   return (
     <aside className={styles.panel}>
       <div className={styles.inner}>
@@ -49,7 +54,7 @@ export default function ShortPanel({
 
           <div>
             <span>Collected In</span>
-            <strong>{story.collectedIn}</strong>
+            <strong>{story.collectedIn || "—"}</strong>
           </div>
 
           <div>
@@ -65,23 +70,24 @@ export default function ShortPanel({
           </div>
         </section>
         <section className={styles.iconGrid}>
-          <p>
+          <div>
             <span>Notes</span>
-            {story.notes ||
-              "Recovered archive fragment discovered among handwritten manuscripts."}
-          </p>
-          <p>
+            <strong>
+              {story.notes && story.notes.length > 0
+                ? story.notes.join(" ")
+                : "Recovered archive fragment discovered among handwritten manuscripts."}
+            </strong>
+          </div>
+          <div>
             <span>Entities</span>
-              {story.villains?.length > 0 && (
-                <section className={styles.section}>
-                  <div className={styles.tags}>
-                    {story.villains.slice(0, 8).map((v: any, index: number) => (
-                      <span key={v.id || `${v.name}-${index}`}>{v.name}</span>
-                    ))}
-                  </div>
-                </section>
+              {story.villains && story.villains.length > 0 && (
+                <div className={styles.tags}>
+                  {story.villains.slice(0, 8).map((v: any, index: number) => (
+                    <span key={v.id || `${v.name}-${index}`}>{v.name}</span>
+                  ))}
+                </div>
              )}
-          </p>
+          </div>
         </section>
       </div>
     </aside>

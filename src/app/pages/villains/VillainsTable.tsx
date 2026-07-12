@@ -2,11 +2,12 @@
 
 import VillainCard from "./VillainCard";
 import styles from "./Villains.module.css";
+import { Villain } from "../../../lib/types";
 
 type Props = {
-  villains: any[];
-  selected: any;
-  onSelect: (villain: any) => void;
+  villains: Villain[];
+  selected: Villain | null;
+  onSelect: (villain: Villain) => void;
   view: "GRID" | "LIST";
 };
 
@@ -30,10 +31,20 @@ export default function VillainsTable({
       {villains.map((villain, index) => (
         <div
           key={villain.id || `${villain.name}-${index}`}
+          role="button"
+          tabIndex={0}
           className={
             selected?.id === villain.id ? styles.selectedCard : undefined
           }
           onClick={() => onSelect(villain)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              onSelect(villain);
+            }
+          }}
+          aria-label={`Open dossier for ${villain.name}`}
+          style={{ cursor: "pointer" }}
         >
           <VillainCard villain={villain} index={index} view={view} />
         </div>
