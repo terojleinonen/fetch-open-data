@@ -149,13 +149,22 @@ export async function GET(request: Request) {
           const gJson = await gRes.json();
           const info = gJson.items?.[0]?.volumeInfo;
 
+          let coverUrl: string | null = null;
+          if (info?.imageLinks?.thumbnail) {
+            const volumeId = gJson.items?.[0]?.id;
+            if (volumeId) {
+              coverUrl = `https://books.google.com/books/publisher/content/images/frontcover/${volumeId}?fife=w400-h600&source=gbs_api`;
+            } else {
+              coverUrl = info.imageLinks.thumbnail
+                .replace("http://", "https://")
+                .replace("zoom=1", "zoom=0");
+            }
+          }
+
           const enriched = {
             ...fallback,
             description: info?.description ?? fallback.description,
-            cover:
-              info?.imageLinks?.thumbnail
-                ?.replace("http://", "https://")
-                ?.replace("zoom=1", "zoom=3") ?? null,
+            cover: coverUrl,
             categories: info?.categories || [],
           };
 
