@@ -1,1 +1,1582 @@
-[]
+[
+  {
+    "id": 37,
+    "title": "Dreamcatcher",
+    "year": 2001,
+    "publisher": "Scribner",
+    "isbn": "978-0-743-21138-3",
+    "pageCount": 620,
+    "notes": [],
+    "villains": [],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/vn80lAEACAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "The author of Bag of Bones presents a story about how men experience memories and find their courage, in a tale of stark survival and heroism in the face of a haunted past."
+  },
+  {
+    "id": 19,
+    "title": "It",
+    "year": 1986,
+    "publisher": "Viking",
+    "isbn": "978-0-670-81302-5",
+    "pageCount": 1138,
+    "notes": [
+      "Winner, British Fantasy Award’s August Derleth Award, 1987",
+      "Nominee, World Fantasy Award, 1987",
+      "Runner-up (3rd place), Locus Award for Best Fantasy Novel, 1987[2]"
+    ],
+    "villains": [
+      {
+        "name": "Henry Bowers",
+        "url": "https://stephen-king-api.onrender.com/api/villain/7"
+      },
+      {
+        "name": "Butch Bowers",
+        "url": "https://stephen-king-api.onrender.com/api/villain/8"
+      },
+      {
+        "name": "Greta Bowie",
+        "url": "https://stephen-king-api.onrender.com/api/villain/9"
+      },
+      {
+        "name": "Victor Criss",
+        "url": "https://stephen-king-api.onrender.com/api/villain/18"
+      },
+      {
+        "name": "Marcia Fadden",
+        "url": "https://stephen-king-api.onrender.com/api/villain/35"
+      },
+      {
+        "name": "John Garton",
+        "url": "https://stephen-king-api.onrender.com/api/villain/39"
+      },
+      {
+        "name": "Peter Gordon",
+        "url": "https://stephen-king-api.onrender.com/api/villain/43"
+      },
+      {
+        "name": "Patrick Hockstetter",
+        "url": "https://stephen-king-api.onrender.com/api/villain/53"
+      },
+      {
+        "name": "Belch Huggins",
+        "url": "https://stephen-king-api.onrender.com/api/villain/55"
+      },
+      {
+        "name": "It (Creature)",
+        "url": "https://stephen-king-api.onrender.com/api/villain/57"
+      },
+      {
+        "name": "Richard P. Macklin",
+        "url": "https://stephen-king-api.onrender.com/api/villain/69"
+      },
+      {
+        "name": "Alvin Marsh",
+        "url": "https://stephen-king-api.onrender.com/api/villain/72"
+      },
+      {
+        "name": "Sally Mueller",
+        "url": "https://stephen-king-api.onrender.com/api/villain/79"
+      },
+      {
+        "name": "Tom Rogan",
+        "url": "https://stephen-king-api.onrender.com/api/villain/91"
+      },
+      {
+        "name": "Christopher Unwin",
+        "url": "https://stephen-king-api.onrender.com/api/villain/107"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/4e5BYgEACAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "Seven men and women return to their hometown to face the horror they fled from when they were teenagers. Copyright © Libri GmbH. All rights reserved."
+  },
+  {
+    "id": 4,
+    "title": "Rage",
+    "year": 1977,
+    "publisher": "Signet Books",
+    "isbn": "978-0-451-07645-8",
+    "pageCount": 211,
+    "notes": [
+      "Published under pseudonym Richard Bachman"
+    ],
+    "villains": [],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/Msd0zwEACAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "No description available"
+  },
+  {
+    "id": 30,
+    "title": "Rose Madder",
+    "year": 1995,
+    "publisher": "Viking",
+    "isbn": "978-0-670-85869-9",
+    "pageCount": 420,
+    "notes": [
+      "Runner-up (3rd place), Locus Award for Best Horror/Dark Fantasy Novel, 1995[2]"
+    ],
+    "villains": [
+      {
+        "name": "Norman Daniels",
+        "url": "https://stephen-king-api.onrender.com/api/villain/22"
+      },
+      {
+        "name": "Susan Day",
+        "url": "https://stephen-king-api.onrender.com/api/villain/23"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/ePRaAAAAMAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "Rose Daniels saw the single drop of blood on the bed sheet--and knew she must escape from her macabre marriage before it was too late."
+  },
+  {
+    "id": 43,
+    "title": "The Colorado Kid",
+    "year": 2005,
+    "publisher": "Hard Case Crime",
+    "isbn": "978-0-843-95584-2",
+    "pageCount": 184,
+    "notes": [],
+    "villains": [],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/x9BlAAAAMAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "A novice newspaperwoman gains insight into the nature of mystery itself when her mentors tell her about a 25-year-old unsolved investigation involving a dead man found on a Maine beach."
+  },
+  {
+    "id": 22,
+    "title": "The Tommyknockers",
+    "year": 1987,
+    "publisher": "Putnam",
+    "isbn": "978-0-399-13314-5",
+    "pageCount": 558,
+    "notes": [
+      "Runner-up (16th place), Locus Award for Best Science Fiction Novel, 1988[2]"
+    ],
+    "villains": [
+      {
+        "name": "Tommyknockers",
+        "url": "https://stephen-king-api.onrender.com/api/villain/104"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/b76wAAAAIAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "Science fiction-roman."
+  },
+  {
+    "id": 9,
+    "title": "Roadwork",
+    "year": 1981,
+    "publisher": "Signet Books",
+    "isbn": "978-0-451-09668-5",
+    "pageCount": 274,
+    "notes": [
+      "Published under pseudonym Richard Bachman"
+    ],
+    "villains": [],
+    "cover": null,
+    "categories": [
+      "Fiction"
+    ],
+    "description": "When a highway project leaves him unemployed and threatens to destroy his home, one man takes on the forces of progress as he embarks on a vengeful showdown of epic proportions. Reissue."
+  },
+  {
+    "id": 18,
+    "title": "Thinner",
+    "year": 1984,
+    "publisher": "NAL",
+    "isbn": "978-0-453-00468-8",
+    "pageCount": 309,
+    "notes": [
+      "Published under pseudonym Richard Bachman"
+    ],
+    "villains": [],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/M2xLDQEACAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "For use in schools and libraries only. After an old gypsy woman is killed by his car, lawyer Billy Halleck is stricken with a flesh-wasting malady and must undertake a nightmarish journey to confront the forces of death."
+  },
+  {
+    "id": 33,
+    "title": "The Regulators",
+    "year": 1996,
+    "publisher": "Dutton",
+    "isbn": "978-0-525-94190-3",
+    "pageCount": 480,
+    "notes": [
+      "Published under pseudonym Richard Bachman",
+      "Twin novel of Desperation"
+    ],
+    "villains": [],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/FAusVbMFdiIC?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "Stephen King writing as Richard Bachman."
+  },
+  {
+    "id": 31,
+    "title": "The Green Mile",
+    "year": 1996,
+    "publisher": "Signet Books",
+    "isbn": "978-0-451-19049-9978-0-451-19052-9978-0-451-19054-3978-0-451-19055-0978-0-451-19056-7978-0-451-19057-4",
+    "pageCount": 400,
+    "notes": [
+      "Winner, Bram Stoker Award, 1997",
+      "Runner-up (8th place), Locus Award for Best Horror/Dark Fantasy Novel, 1997[2]"
+    ],
+    "villains": [
+      {
+        "name": "Percy Wetmore",
+        "url": "https://stephen-king-api.onrender.com/api/villain/111"
+      },
+      {
+        "name": "William Wharton",
+        "url": "https://stephen-king-api.onrender.com/api/villain/112"
+      }
+    ],
+    "cover": null,
+    "categories": [],
+    "description": "No description available"
+  },
+  {
+    "id": 11,
+    "title": "The Running Man",
+    "year": 1982,
+    "publisher": "Signet Books",
+    "isbn": "978-0-451-11508-9",
+    "pageCount": 219,
+    "notes": [
+      "Published under pseudonym Richard Bachman"
+    ],
+    "villains": [
+      {
+        "name": "The Gladiators",
+        "url": "https://stephen-king-api.onrender.com/api/villain/42"
+      },
+      {
+        "name": "Damon Killian",
+        "url": "https://stephen-king-api.onrender.com/api/villain/63"
+      }
+    ],
+    "cover": null,
+    "categories": [
+      "Game shows"
+    ],
+    "description": "A macabre tale of future America's favorite TV game show, where contestants risk death atthe hands of hunter's to win a billion-dollar jackpot."
+  },
+  {
+    "id": 1,
+    "title": "Carrie",
+    "year": 1974,
+    "publisher": "Doubleday",
+    "isbn": "978-0-385-08695-0",
+    "pageCount": 199,
+    "notes": [
+      ""
+    ],
+    "villains": [
+      {
+        "name": "Tina Blake",
+        "url": "https://stephen-king-api.onrender.com/api/villain/4"
+      },
+      {
+        "name": "Cindi",
+        "url": "https://stephen-king-api.onrender.com/api/villain/14"
+      },
+      {
+        "name": "Myra Crewes",
+        "url": "https://stephen-king-api.onrender.com/api/villain/16"
+      },
+      {
+        "name": "Billy deLois",
+        "url": "https://stephen-king-api.onrender.com/api/villain/25"
+      },
+      {
+        "name": "Kenny Garson",
+        "url": "https://stephen-king-api.onrender.com/api/villain/38"
+      },
+      {
+        "name": "Mary Lila Grace",
+        "url": "https://stephen-king-api.onrender.com/api/villain/44"
+      },
+      {
+        "name": "Christine Hargensen",
+        "url": "https://stephen-king-api.onrender.com/api/villain/49"
+      },
+      {
+        "name": "Vic Mooney",
+        "url": "https://stephen-king-api.onrender.com/api/villain/75"
+      },
+      {
+        "name": "The Mortimer Snerds",
+        "url": "https://stephen-king-api.onrender.com/api/villain/77"
+      },
+      {
+        "name": "Billy Nolan",
+        "url": "https://stephen-king-api.onrender.com/api/villain/80"
+      },
+      {
+        "name": "Elenor Richmond",
+        "url": "https://stephen-king-api.onrender.com/api/villain/90"
+      },
+      {
+        "name": "Rachel Spies",
+        "url": "https://stephen-king-api.onrender.com/api/villain/94"
+      },
+      {
+        "name": "Jackie Talbot",
+        "url": "https://stephen-king-api.onrender.com/api/villain/99"
+      },
+      {
+        "name": "Donna and Mary Lila Grace Thibodeau",
+        "url": "https://stephen-king-api.onrender.com/api/villain/102"
+      },
+      {
+        "name": "Jessica Upshaw",
+        "url": "https://stephen-king-api.onrender.com/api/villain/108"
+      },
+      {
+        "name": "Norma Watson",
+        "url": "https://stephen-king-api.onrender.com/api/villain/109"
+      },
+      {
+        "name": "Margaret White",
+        "url": "https://stephen-king-api.onrender.com/api/villain/113"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/dRDJlSMYQxoC?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "A repressed teenager uses her telekinetic powers to avenge the cruel jokes of her classmates"
+  },
+  {
+    "id": 44,
+    "title": "Cell",
+    "year": 2006,
+    "publisher": "Scribner",
+    "isbn": "978-0-743-29233-7",
+    "pageCount": 351,
+    "notes": [],
+    "villains": [
+      {
+        "name": "The Raggedy Man",
+        "url": "https://stephen-king-api.onrender.com/api/villain/85"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/QtdlAAAAMAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "From international bestseller Stephen King, a high-concept, ingenious and terrifying story about the mayhem unleashed when a pulse from a mysterious source transforms all cell phone users into homicidal maniacs. There’s a reason cell rhymes with hell. On October 1, God is in His heaven, the stock market stands at 10,140, most of the planes are on time, and Clayton Riddell, an artist from Maine, is almost bouncing up Boylston Street in Boston. He’s just landed a comic book deal that might finally enable him to support his family by making art instead of teaching it. He’s already picked up a small (but expensive!) gift for his long-suffering wife, and he knows just what he’ll get for his boy Johnny. Why not a little treat for himself? Clay’s feeling good about the future. That changes in a hurry. The cause of the devastation is a phenomenon that will come to be known as The Pulse, and the delivery method is a cell phone. Everyone’s cell phone. Clay and the few desperate survivors who join him suddenly find themselves in the pitch-black night of civilization’s darkest age, surrounded by chaos, carnage, and a human horde that has been reduced to its basest nature...and then begins to evolve. There’s really no escaping this nightmare. But for Clay, an arrow points home to Maine, and as he and his fellow refugees make their harrowing journey north they begin to see crude signs confirming their direction. A promise, perhaps. Or a threat... There are 193 million cell phones in the United States alone. Who doesn’t have one? Stephen King’s utterly gripping, gory, and fascinating novel doesn’t just ask the question “Can you hear me now?” It answers it with a vengeance."
+  },
+  {
+    "id": 60,
+    "title": "Elevation",
+    "year": 2018,
+    "publisher": "Scribner",
+    "isbn": "978-1-98210-231-9",
+    "pageCount": 144,
+    "notes": [],
+    "villains": [],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/Luv2yQEACAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "#1 NEW YORK TIMES BESTSELLER The latest from legendary master storyteller Stephen King, a riveting, extraordinarily eerie, and moving story about a man whose mysterious affliction brings a small town together—a timely, upbeat tale about finding common ground despite deep-rooted differences. Although Scott Carey doesn’t look any different, he’s been steadily losing weight. There are a couple of other odd things, too. He weighs the same in his clothes and out of them, no matter how heavy they are. Scott doesn’t want to be poked and prodded. He mostly just wants someone else to know, and he trusts Doctor Bob Ellis. In the small town of Castle Rock, the setting of many of King’s most iconic stories, Scott is engaged in a low grade—but escalating—battle with the lesbians next door whose dog regularly drops his business on Scott’s lawn. One of the women is friendly; the other, cold as ice. Both are trying to launch a new restaurant, but the people of Castle Rock want no part of a gay married couple, and the place is in trouble. When Scott finally understands the prejudices they face–including his own—he tries to help. Unlikely alliances, the annual foot race, and the mystery of Scott’s affliction bring out the best in people who have indulged the worst in themselves and others. From Stephen King, our “most precious renewable resource, like Shakespeare in the malleability of his work” (The Guardian), Elevation is an antidote to our divisive culture, as gloriously joyful (with a twinge of deep sadness) as “It’s a Wonderful Life.”"
+  },
+  {
+    "id": 39,
+    "title": "From a Buick 8",
+    "year": 2002,
+    "publisher": "Scribner",
+    "isbn": "978-0-743-21137-6",
+    "pageCount": 368,
+    "notes": [
+      "Nominee, Bram Stoker Award, 2003"
+    ],
+    "villains": [
+      {
+        "name": "Brian Lippy",
+        "url": "https://stephen-king-api.onrender.com/api/villain/66"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/y1sI3oGggQUC?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "The #1 New York Times bestselling suspense thriller from Stephen King—a novel about the fascination deadly things have for us and about our insistence on answers when there are none… Since 1979, the state police of Troop D in rural Pennsylvania have kept a secret in the shed out behind the barracks. Ennis Rafferty and Curtis Wilcox had answered a strange call just down the road and came back with an abandoned 1953 Buick Roadmaster. Curt Wilcox knew old cars, and this one was…just wrong. As it turned out, the Buick 8 was worse than dangerous—and the members of Troop D decided that it would be better if the public never found out about it. Now, more than twenty years later, Curt’s son Ned starts hanging around the barracks and is allowed into the Troop D family. And one day he discovers the family secret—a mystery that begins to stir once more, not only in the minds and hearts of these veteran troopers, but out in the shed as well, for there’s more power under the hood than anyone can handle…"
+  },
+  {
+    "id": 53,
+    "title": "Mr. Mercedes",
+    "year": 2014,
+    "publisher": "Scribner",
+    "isbn": "978-1-476-75445-1",
+    "pageCount": 436,
+    "notes": [
+      "First novel in the Bill Hodges Trilogy",
+      "Winner, Edgar Award for Best Novel, 2015[3]"
+    ],
+    "villains": [
+      {
+        "name": "Brady Hartsfield",
+        "url": "https://stephen-king-api.onrender.com/api/villain/50"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/mX-mAwAAQBAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "Now an AT&T Audience Original Series WINNER OF THE EDGAR AWARD FOR BEST NOVEL #1 New York Times bestseller In a mega-stakes, high-suspense race against time, three of the most unlikely and winning heroes Stephen King has ever created try to stop a lone killer from blowing up thousands. In the frigid pre-dawn hours, in a distressed Midwestern city, hundreds of desperate unemployed folks are lined up for a spot at a job fair. Without warning, a lone driver plows through the crowd in a stolen Mercedes, running over the innocent, backing up, and charging again. Eight people are killed; fifteen are wounded. The killer escapes. In another part of town, months later, a retired cop named Bill Hodges is still haunted by the unsolved crime. When he gets a crazed letter from someone who self-identifies as the \"perk\" and threatens an even more diabolical attack, Hodges wakes up from his depressed and vacant retirement, hell-bent on preventing another tragedy. Brady Hartsfield lives with his alcoholic mother in the house where he was born. He loved the feel of death under the wheels of the Mercedes, and he wants that rush again. Only Bill Hodges, with a couple of highly unlikely allies, can apprehend the killer before he strikes again. And they have no time to lose, because Brady's next mission, if it succeeds, will kill or maim thousands. Mr. Mercedes is a war between good and evil, from the master of suspense whose insight into the mind of this obsessed, insane killer is chilling and unforgettable."
+  },
+  {
+    "id": 59,
+    "title": "The Outsider",
+    "year": 2018,
+    "publisher": "Scribner",
+    "isbn": "978-1-50118-098-9",
+    "pageCount": 576,
+    "notes": [
+      "First novel in the Holly Gibney Series",
+      "Runner-up (2nd place), Locus Award for Best Horror Novel, 2019[2]"
+    ],
+    "villains": [
+      {
+        "name": "The Outsider (Creature)",
+        "url": "https://stephen-king-api.onrender.com/api/villain/82"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/yK_iyQEACAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "Now an HBO limited series starring Ben Mendelsohn!​ Evil has many faces…maybe even yours in this #1 New York Times bestseller from master storyteller Stephen King. An eleven-year-old boy’s violated corpse is discovered in a town park. Eyewitnesses and fingerprints point unmistakably to one of Flint City’s most popular citizens—Terry Maitland, Little League coach, English teacher, husband, and father of two girls. Detective Ralph Anderson, whose son Maitland once coached, orders a quick and very public arrest. Maitland has an alibi, but Anderson and the district attorney soon have DNA evidence to go with the fingerprints and witnesses. Their case seems ironclad. As the investigation expands and horrifying details begin to emerge, King’s story kicks into high gear, generating strong tension and almost unbearable suspense. Terry Maitland seems like a nice guy, but is he wearing another face? When the answer comes, it will shock you as only Stephen King can."
+  },
+  {
+    "id": 38,
+    "title": "Black House",
+    "year": 2001,
+    "publisher": "Random House",
+    "isbn": "978-0-375-50439-6",
+    "pageCount": 625,
+    "notes": [
+      "Sequel to The Talisman",
+      "Written with Peter Straub",
+      "Nominee, Bram Stoker Award, 2002",
+      "Runner-up (7th place), Locus Award for Best Fantasy Novel, 2002[2]"
+    ],
+    "villains": [
+      {
+        "name": "Crimson King",
+        "url": "https://stephen-king-api.onrender.com/api/villain/17"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/D_BaAAAAMAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "Twenty years ago, a boy named Jack Sawyer travelled to a parallel universe called The Territories to save his mother and her Territories \"twinner\" from a premature and agonizing death that would have brought cataclysm to the other world. Now Jack is a retired Los Angeles homicide detective living in the nearly nonexistent hamlet of Tamarack, WI. He has no recollection of his adventures in the Territories and was compelled to leave the police force when an odd, happenstance event threatened to awaken those memories. When a series of gruesome murders occur in western Wisconsin that are reminiscent of those committed several decades earlier by a real-life madman named Albert Fish, the killer is dubbed \"The Fisherman\" and Jack's buddy, the local chief of police, begs Jack to help his inexperienced force find him. But is this merely the work of a disturbed individual, or has a mysterious and malignant force been unleashed in this quiet town? What causes Jack's inexplicable waking dreams, if that is what they are, of robins' eggs and red feathers? It's almost as if someone is trying to tell him something. As that message becomes increasingly impossible to ignore, Jack is drawn back to the Territories and to his own hidden past, where he may find the soul-strength to enter a terrifying house at the end of a deserted track of forest, there to encounter the obscene and ferocious evils sheltered within it."
+  },
+  {
+    "id": 20,
+    "title": "The Dark Tower II: The Drawing of the Three",
+    "year": 1987,
+    "publisher": "Grant",
+    "isbn": "978-0-937986-90-5",
+    "pageCount": 400,
+    "notes": [
+      "Runner-up (16th place), Locus Award for Best Fantasy Novel, 1988[2]"
+    ],
+    "villains": [
+      {
+        "name": "Jack Mort",
+        "url": "https://stephen-king-api.onrender.com/api/villain/76"
+      }
+    ],
+    "cover": null,
+    "categories": [
+      "Fantasy fiction, American"
+    ],
+    "description": "After his confrontation with the man in black at the end of The Gunslinger , Roland awakes to find three doors on the beach of Mid-World's Western Sea-each leading to New York City but at three different moments in time. Through these doors, Roland must \"draw\" three figures crucial to his quest for the Dark Tower. In 1987, he finds Eddie Dean, The Prisoner, a heroin addict. In 1964, he meets Odetta Holmes, the Lady of Shadows, a young African-American heiress who lost her lower legs in a subway accident and gained a second personality that rages within her. And in 1977, he encounters Jack mort, Death, a pusher responsible for cruelties beyond imagining. Has Roland found new companions to form the ka-tet of his quest? Or has he unleashed something else entirely?"
+  },
+  {
+    "id": 25,
+    "title": "The Dark Tower III: The Waste Lands",
+    "year": 1991,
+    "publisher": "Grant",
+    "isbn": "978-0-937986-17-2",
+    "pageCount": 512,
+    "notes": [
+      "Nominee, Bram Stoker Award, 1992",
+      "Runner-up (3rd place), Locus Award for Best Horror/Dark Fantasy Novel, 1992[2]"
+    ],
+    "villains": [
+      {
+        "name": "Blaine the Mono",
+        "url": "https://stephen-king-api.onrender.com/api/villain/3"
+      },
+      {
+        "name": "Randall Flagg",
+        "url": "https://stephen-king-api.onrender.com/api/villain/37"
+      }
+    ],
+    "cover": null,
+    "categories": [
+      "Authors, American"
+    ],
+    "description": "Roland, the Last Gunslinger, and his companions--Eddie Dean and Susannah--cross the desert of damnation, drawing ever closer to the Dark Tower, a legion of fiendish foes, and revelations that could alter the world."
+  },
+  {
+    "id": 50,
+    "title": "The Dark Tower: The Wind Through the Keyhole",
+    "year": 2012,
+    "publisher": "Grant",
+    "isbn": "978-1-880-41876-5",
+    "pageCount": 336,
+    "notes": [
+      "The eighth Dark Tower novel, but chronologically set between the fourth and fifth volumes."
+    ],
+    "villains": [],
+    "cover": null,
+    "categories": [],
+    "description": "No description available"
+  },
+  {
+    "id": 7,
+    "title": "The Dead Zone",
+    "year": 1979,
+    "publisher": "Viking Press",
+    "isbn": "978-0-670-26077-5",
+    "pageCount": 428,
+    "notes": [
+      "Runner-up (2nd place), Locus Award for Best Fantasy Novel, 1980[2]"
+    ],
+    "villains": [
+      {
+        "name": "Frank Dodd",
+        "url": "https://stephen-king-api.onrender.com/api/villain/29"
+      },
+      {
+        "name": "Henrietta Dodd",
+        "url": "https://stephen-king-api.onrender.com/api/villain/30"
+      },
+      {
+        "name": "Malcolm Janus",
+        "url": "https://stephen-king-api.onrender.com/api/villain/71"
+      },
+      {
+        "name": "Sonny Elliman",
+        "url": "https://stephen-king-api.onrender.com/api/villain/93"
+      },
+      {
+        "name": "Greg Stillson",
+        "url": "https://stephen-king-api.onrender.com/api/villain/97"
+      },
+      {
+        "name": "The Devil's Dozen",
+        "url": "https://stephen-king-api.onrender.com/api/villain/100"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/01N88IPrDnYC?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "A supernatural thriller that plunges the reader into the fate awaiting all mankind -- The Dead Zone. Copyright © Libri GmbH. All rights reserved."
+  },
+  {
+    "id": 36,
+    "title": "The Girl Who Loved Tom Gordon",
+    "year": 1999,
+    "publisher": "Scribner",
+    "isbn": "978-0-684-86762-5",
+    "pageCount": 224,
+    "notes": [],
+    "villains": [],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/mvpaAAAAMAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "A story of a nine year old who wanders off in a wilderness area and hew spirit to survive."
+  },
+  {
+    "id": 62,
+    "title": "Later",
+    "year": 2021,
+    "publisher": "Hard Case Crime",
+    "isbn": "978-1-78909-649-1",
+    "pageCount": 256,
+    "notes": [],
+    "villains": [],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/8vlOEAAAQBAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "“Part detective tale, part thriller…touching and genuine.” —The New York Times #1 bestselling author Stephen King returns with a brand-new novel about the secrets we keep buried and the cost of unearthing them. #1 NEW YORK TIMES BESTSELLER THE SUNDAY TIMES BESTSELLER SOMETIMES GROWING UP MEANS FACING YOUR DEMONS The son of a struggling single mother, Jamie Conklin just wants an ordinary childhood. But Jamie is no ordinary child. Born with an unnatural ability his mom urges him to keep secret, Jamie can see what no one else can see and learn what no one else can learn. But the cost of using this ability is higher than Jamie can imagine – as he discovers when an NYPD detective draws him into the pursuit of a killer who has threatened to strike from beyond the grave. LATER is Stephen King at his finest, a terrifying and touching story of innocence lost and the trials that test our sense of right and wrong. With echoes of King’s classic novel It, LATER is a powerful, haunting, unforgettable exploration of what it takes to stand up to evil in all the faces it wears."
+  },
+  {
+    "id": 63,
+    "title": "Billy Summers",
+    "year": 2021,
+    "publisher": "Scribner",
+    "isbn": "978-1-982-17361-6",
+    "pageCount": 528,
+    "notes": [],
+    "villains": [],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/7wwtzgEACAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "From legendary storyteller and #1 bestseller Stephen King, whose “restless imagination is a power that cannot be contained,” (The New York Times Book Review) comes a thrilling new novel about a good guy in a bad job. Billy Summers is a man in a room with a gun. He’s a killer for hire and the best in the business. But he’ll do the job only if the target is a truly bad guy. And now Billy wants out. But first there is one last hit. Billy is among the best snipers in the world, a decorated Iraq war vet, a Houdini when it comes to vanishing after the job is done. So what could possibly go wrong? How about everything. This spectacular can’t-put-it-down novel is part war story, part love letter to small town America and the people who live there, and it features one of the most compelling and surprising duos in King fiction, who set out to avenge the crimes of an extraordinarily evil man. It’s about love, luck, fate, and a complex hero with one last shot at redemption. You won’t put this story down, and you won’t forget Billy."
+  },
+  {
+    "id": 2,
+    "title": "Salem's Lot",
+    "year": 1975,
+    "publisher": "Doubleday",
+    "isbn": "978-0-385-00751-1",
+    "pageCount": 439,
+    "notes": [
+      "Nominee, World Fantasy Award, 1976[2]"
+    ],
+    "villains": [
+      {
+        "name": "Kurt Barlow",
+        "url": "https://stephen-king-api.onrender.com/api/villain/2"
+      },
+      {
+        "name": "Richard Straker",
+        "url": "https://stephen-king-api.onrender.com/api/villain/98"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/rTGNEAAAQBAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "#1 BESTSELLER • Ben Mears has returned to Jerusalem’s Lot in hopes that exploring the history of the Marsten House, an old mansion long the subject of rumor and speculation, will help him cast out his personal devils and provide inspiration for his new book. But when two young boys venture into the woods, and only one returns alive, Mears begins to realize that something sinister is at work. In fact, his hometown is under siege from forces of darkness far beyond his imagination. And only he, with a small group of allies, can hope to contain the evil that is growing within the borders of this small New England town. With this, his second novel, Stephen King established himself as an indisputable master of American horror, able to transform the old conceits of the genre into something fresh and all the more frightening for taking place in a familiar, idyllic locale."
+  },
+  {
+    "id": 5,
+    "title": "The Stand",
+    "year": 1978,
+    "publisher": "Doubleday",
+    "isbn": "978-0-385-12168-2",
+    "pageCount": 823,
+    "notes": [
+      "Nominee, World Fantasy Award, 1979",
+      "Runner-up (15th place), Locus Award, 1979[2]"
+    ],
+    "villains": [
+      {
+        "name": "Donald Merwin Elbert",
+        "url": "https://stephen-king-api.onrender.com/api/villain/34"
+      },
+      {
+        "name": "Randall Flagg",
+        "url": "https://stephen-king-api.onrender.com/api/villain/37"
+      },
+      {
+        "name": "Lloyd Henreid",
+        "url": "https://stephen-king-api.onrender.com/api/villain/51"
+      },
+      {
+        "name": "The Kid",
+        "url": "https://stephen-king-api.onrender.com/api/villain/62"
+      },
+      {
+        "name": "Harold Lauder",
+        "url": "https://stephen-king-api.onrender.com/api/villain/64"
+      },
+      {
+        "name": "Rat Man",
+        "url": "https://stephen-king-api.onrender.com/api/villain/87"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/zy7uAAAAMAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "For use in schools and libraries only. A monumentally devastating plague leaves only a few survivors who, in a desert world, experience dreams of good and evil in confrontation and, through their choices, move toward an actual confrontation."
+  },
+  {
+    "id": 32,
+    "title": "Desperation",
+    "year": 1996,
+    "publisher": "Viking",
+    "isbn": "978-0-670-86836-0",
+    "pageCount": 704,
+    "notes": [
+      "Twin novel of The Regulators",
+      "Winner, Locus Award for Best Horror/Dark Fantasy Novel, 1997[2]"
+    ],
+    "villains": [],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/-vFaAAAAMAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "This is knock-out classic horror about the loneliest town off Nevada's Interstate 50-and the scariest."
+  },
+  {
+    "id": 41,
+    "title": "The Dark Tower VI: Song of Susannah",
+    "year": 2004,
+    "publisher": "Grant",
+    "isbn": "978-1-880-41859-8",
+    "pageCount": 432,
+    "notes": [
+      "Runner-up (4th place), Locus Award for Best Fantasy Novel, 2005"
+    ],
+    "villains": [],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/OGlYwgEACAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "While Jake, Father Callahan, and Oy struggle to free Susannah Dean, whose body is possessed by a demon-mother named Mia, Roland and Eddie find themselves swept by magic to East Stoneham, Maine, in the summer of 1977, where they encounter a terrifying and dangerous world."
+  },
+  {
+    "id": 13,
+    "title": "Christine",
+    "year": 1983,
+    "publisher": "Viking",
+    "isbn": "978-0-670-22026-7",
+    "pageCount": 526,
+    "notes": [
+      "Runner-up (6th place), Locus Award for Best Fantasy Novel, 1984[2]"
+    ],
+    "villains": [
+      {
+        "name": "Christine (car)",
+        "url": "https://stephen-king-api.onrender.com/api/villain/11"
+      },
+      {
+        "name": "Arnie Cunningham",
+        "url": "https://stephen-king-api.onrender.com/api/villain/20"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/Z7uwAAAAIAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "Arnie Cunningham is in love with his car. Christine, the car, is in complete control. \"Vintage King . . . breathtaking, awesome. Carries such momentum the reader must force himself to slow down.\"--\"New York Times Book Review\" Copyright © Libri GmbH. All rights reserved."
+  },
+  {
+    "id": 29,
+    "title": "Insomnia",
+    "year": 1994,
+    "publisher": "Viking",
+    "isbn": "978-0-670-85503-2",
+    "pageCount": 787,
+    "notes": [
+      "Nominee, Bram Stoker Award, 1995",
+      "Runner-up (3rd place), Locus Award for Best Fantasy/Horror Novel, 1995[2]"
+    ],
+    "villains": [
+      {
+        "name": "Crimson King",
+        "url": "https://stephen-king-api.onrender.com/api/villain/17"
+      },
+      {
+        "name": "Susan Day",
+        "url": "https://stephen-king-api.onrender.com/api/villain/23"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/lhUmmcwQEgMC?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "A man starts to notice a strangeness in his surroundings and starts to experience visual phenomena."
+  },
+  {
+    "id": 52,
+    "title": "Doctor Sleep",
+    "year": 2013,
+    "publisher": "Scribner",
+    "isbn": "978-1-476-72765-3",
+    "pageCount": 531,
+    "notes": [
+      "Sequel to The Shining",
+      "Winner, Bram Stoker Award, 2014",
+      "Runner-up (5th place), Locus Award for Best Fantasy Novel, 2014[2]"
+    ],
+    "villains": [
+      {
+        "name": "Rose the Hat",
+        "url": "https://stephen-king-api.onrender.com/api/villain/31"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/DQTgAAAAQBAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "After decades as an itinerant alcoholic, middle-aged Dan Torrance uses his remnant powers to assist the dying before coming to the aid of a twelve-year-old girl being tortured by a tribe of murderous paranormals."
+  },
+  {
+    "id": 72,
+    "title": "The Roopak Zone",
+    "year": 1979,
+    "publisher": "Viking Press",
+    "isbn": "978-0-670-26069697-5",
+    "pageCount": 428,
+    "notes": [
+      "Runner-up (2nd place), Locus Award for Best Fantasy Novel, 1980[2]"
+    ],
+    "villains": [],
+    "cover": null,
+    "categories": [],
+    "description": "No description available"
+  },
+  {
+    "id": 23,
+    "title": "The Dark Half",
+    "year": 1989,
+    "publisher": "Viking",
+    "isbn": "978-0-670-82982-8",
+    "pageCount": 431,
+    "notes": [
+      "Runner-up (2nd place), Locus Award for Best Horror Novel, 1990[2]"
+    ],
+    "villains": [
+      {
+        "name": "George Stark",
+        "url": "https://stephen-king-api.onrender.com/api/villain/96"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/J7ywAAAAIAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "Evidence indicates that Thad Beaumont whose novels seem to be the product of a twisted imagination, may just be quilty of a series of monstrous murders. Copyright © Libri GmbH. All rights reserved."
+  },
+  {
+    "id": 14,
+    "title": "Pet Sematary",
+    "year": 1983,
+    "publisher": "Doubleday",
+    "isbn": "978-0-385-18244-7",
+    "pageCount": 374,
+    "notes": [
+      "Nominee, World Fantasy Award, 1984",
+      "Runner-up (7th place), Locus Award for Best Fantasy Novel, 1984[2]"
+    ],
+    "villains": [
+      {
+        "name": "Winston Church",
+        "url": "https://stephen-king-api.onrender.com/api/villain/13"
+      },
+      {
+        "name": "Gage Creed",
+        "url": "https://stephen-king-api.onrender.com/api/villain/15"
+      },
+      {
+        "name": "Victor Pascow",
+        "url": "https://stephen-king-api.onrender.com/api/villain/83"
+      },
+      {
+        "name": "Wendigo",
+        "url": "https://stephen-king-api.onrender.com/api/villain/110"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/UIsb8ppiZF4C?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "\"\"Sometimes dead is better....\"\" When the Creeds move into a beautiful old house in rural Maine, it all seems too good to be true: physician father, beautiful wife, charming little daughter, adorable infant son -- and now an idyllic home. As a family, they've got it all...right down to the friendly cat. But the nearby woods hide a blood-chilling truth -- more terrifying than death itself...and hideously more powerful."
+  },
+  {
+    "id": 21,
+    "title": "Misery",
+    "year": 1987,
+    "publisher": "Viking",
+    "isbn": "978-0-670-81364-3",
+    "pageCount": 310,
+    "notes": [
+      "Winner, Bram Stoker Award, 1988",
+      "Nominee, World Fantasy Award, 1988[2]"
+    ],
+    "villains": [
+      {
+        "name": "Annie Wilkes",
+        "url": "https://stephen-king-api.onrender.com/api/villain/114"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/KbMhAQAAIAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "After an almost fatal car crash, novelist Paul Sheldon finds himself being nursed by a deranged fan who holds him captive"
+  },
+  {
+    "id": 17,
+    "title": "The Eyes of the Dragon",
+    "year": 1984,
+    "publisher": "Philtrum Press (1984)Viking (1987)",
+    "isbn": "978-0-670-81458-9",
+    "pageCount": 326,
+    "notes": [
+      "First published as a limited edition in 1984, then for the mass market in 1987"
+    ],
+    "villains": [
+      {
+        "name": "Randall Flagg",
+        "url": "https://stephen-king-api.onrender.com/api/villain/37"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/KKcOAQAAMAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "A kingdom is in turmoil as the old king dies and his successor must do battle for the throne. Pitted against an evil wizard and a would-be rival, Prince Peter makes a daring escape and rallies the forces of Good to fight for what is rightfully his."
+  },
+  {
+    "id": 48,
+    "title": "Under the Dome",
+    "year": 2009,
+    "publisher": "Scribner",
+    "isbn": "978-1-439-14850-1",
+    "pageCount": 1074,
+    "notes": [
+      "Nominee, British Fantasy Award's August Derleth Award, 2010",
+      "Runner-up (7th place), Locus Award for Best Science Fiction Novel, 2010[2]"
+    ],
+    "villains": [
+      {
+        "name": "Jim Rennie, Jr.",
+        "url": "https://stephen-king-api.onrender.com/api/villain/88"
+      },
+      {
+        "name": "Jim Rennie",
+        "url": "https://stephen-king-api.onrender.com/api/villain/89"
+      },
+      {
+        "name": "Carter Thibodeau",
+        "url": "https://stephen-king-api.onrender.com/api/villain/101"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/0g1PdX4pdFkC?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "On a beautiful fall day, the town of Chester's Mill, Maine, is inexplicably and suddenly sealed off from the rest of the world by an invisible force field. No one knows what this barrier is and when--or if--it will go away."
+  },
+  {
+    "id": 6,
+    "title": "The Long Walk",
+    "year": 1979,
+    "publisher": "Signet Books",
+    "isbn": "978-0-451-08754-6",
+    "pageCount": 384,
+    "notes": [
+      "Published under pseudonym Richard Bachman"
+    ],
+    "villains": [
+      {
+        "name": "Randall Flagg",
+        "url": "https://stephen-king-api.onrender.com/api/villain/37"
+      },
+      {
+        "name": "The Major",
+        "url": "https://stephen-king-api.onrender.com/api/villain/70"
+      }
+    ],
+    "cover": null,
+    "categories": [
+      "Fascism"
+    ],
+    "description": "No description available"
+  },
+  {
+    "id": 40,
+    "title": "The Dark Tower V: Wolves of the Calla",
+    "year": 2003,
+    "publisher": "Grant",
+    "isbn": "978-1-880-41856-7",
+    "pageCount": 714,
+    "notes": [
+      "Nominee, Bram Stoker Award, 2004",
+      "Runner-up (4th place), Locus Award for Best Fantasy Novel, 2004[2]"
+    ],
+    "villains": [],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/0PdaAAAAMAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "Here is the fifth installment, \"one of the strongest entries yet in what will surely be a master storyteller's magnum opus\" (Locus)."
+  },
+  {
+    "id": 47,
+    "title": "Duma Key",
+    "year": 2008,
+    "publisher": "Scribner",
+    "isbn": "978-1-416-55251-2",
+    "pageCount": 607,
+    "notes": [
+      "Winner, Bram Stoker Award,  2009[2]"
+    ],
+    "villains": [],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/EzJFPz4qVOoC?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Family & Relationships"
+    ],
+    "description": "Master storyteller Stephen King’s classic, terrifying #1 New York Times bestseller of what happens when the barrier between our world and that of the supernatural is breached. After a terrible construction site accident severs Edgar Freemantle’s right arm, scrambles his mind, and implodes his marriage, the wealthy Minnesota builder faces the ordeal of rehabilitation, all alone and full of rage. Renting a house on Duma Key—a stunningly beautiful and eerily undeveloped splinter off the Florida coast—Edgar slowly emerges from his prison of pain to bond with Elizabeth Eastlake, a sick, elderly woman whose roots are tangled deep in this place. And as he heals, he paints—feverishly, compulsively, his exploding talent both a wonder and a weapon. For Edgar’s creations are not just paintings, but portals for the ghosts of Elizabeth’s past…and their power cannot be controlled…"
+  },
+  {
+    "id": 55,
+    "title": "Finders Keepers",
+    "year": 2015,
+    "publisher": "Scribner",
+    "isbn": "978-1-501-10007-9",
+    "pageCount": 434,
+    "notes": [
+      "Second novel in the Bill Hodges Trilogy."
+    ],
+    "villains": [
+      {
+        "name": "Brady Hartsfield",
+        "url": "https://stephen-king-api.onrender.com/api/villain/50"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/PrWrCQAAQBAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "Morris Bellamy is a fan of author John Rothstein and his beloved character Jimmy Gold, but livid that Rothstein hasn't published in decades and now has sold the character rights to Jimmy Gold to an advertising firm, Bellamy kills Rothstein, robs him, and finds notebooks containing the notes for another Jimmy Gold novel in the process. He is sent to jail for another crime, however, and the notebooks remain hidden for decades until they are found by thirteen-year-old Pete Saubers. Now, Pete and his family are in Bellamy's crosshairs when the psychopath is released after thirty-five years in prison."
+  },
+  {
+    "id": 51,
+    "title": "Joyland",
+    "year": 2013,
+    "publisher": "Hard Case Crime",
+    "isbn": "978-1-781-16264-4",
+    "pageCount": 288,
+    "notes": [
+      "Nominee, Edgar Award for Best Paperback Original, 2014[3]",
+      "Runner-up (11th place), Locus Award for Best Fantasy Novel, 2014[2]"
+    ],
+    "villains": [
+      {
+        "name": "Lane Hardy",
+        "url": "https://stephen-king-api.onrender.com/api/villain/48"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/EO9OEAAAQBAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "A STUNNING NEW NOVEL FROM ONE OF THE BEST-SELLING AUTHORS OF ALL TIME! The #1 NEW YORK TIMES BESTSELLER! Set in a small-town North Carolina amusement park in 1973, Joyland tells the story of the summer in which college student Devin Jones comes to work as a carny and confronts the legacy of a vicious murder, the fate of a dying child, and the ways both will change his life forever. \"I love crime, I love mysteries, and I love ghosts. That combo made Hard Case Crime the perfect venue for this book, which is one of my favorites. I also loved the paperbacks I grew up with as a kid, and for that reason, we’re going to hold off on e-publishing this one for the time being. Joyland will be coming out in paperback, and folks who want to read it will have to buy the actual book.\" – Stephen King"
+  },
+  {
+    "id": 16,
+    "title": "The Talisman",
+    "year": 1984,
+    "publisher": "Viking",
+    "isbn": "978-0-670-69199-9",
+    "pageCount": 646,
+    "notes": [
+      "Written with Peter Straub",
+      "Nominee, World Fantasy Award, 1985",
+      "Runner-up (4th place), Locus Award for Best Fantasy Novel, 1985[2]"
+    ],
+    "villains": [],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/qFXhAAAAMAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "To coincide with the publication of Stephen King and Peter Straub's extraordinary new thriller, BLACK HOUSE, here is the story that started it all. On a brisk autumn day, a twelve-year-old boy stands on the shores of the gray Atlantic, near a silent amusement park and a fading ocean resort called the Alhambra. The past has driven Jack Sawyer here: his father is gone, his mother is dying, and the world no longer makes sense. But for Jack everything is about to change. For he has been chosen to make a journey back across America--and into another realm. One of the most influential and heralded works of fantasy ever written, The Talisman is an extraordinary novel of loyalty, awakening, terror, and mystery. Jack Sawyer, on a desperate quest to save his mother's life, must search for a prize across an epic landscape of innocents and monsters, of incredible dangers and even more incredible truths. The prize is essential, but the journey means even more. Let the quest begin. . . ."
+  },
+  {
+    "id": 61,
+    "title": "The Institute",
+    "year": 2019,
+    "publisher": "Scribner",
+    "isbn": "978-1-98211-056-7",
+    "pageCount": 576,
+    "notes": [
+      "Nominee, British Fantasy Award's August Derleth Award, 2020",
+      "Runner-up (3rd place), Locus Award for Best Horror Novel, 2020[2]"
+    ],
+    "villains": [
+      {
+        "name": "Gladys Hickson",
+        "url": "https://stephen-king-api.onrender.com/api/villain/52"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/RriuDwAAQBAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "A NEW YORK TIMES 100 NOTABLE BOOKS OF 2019 SELECTION From #1 New York Times bestselling author Stephen King, the most riveting and unforgettable story of kids confronting evil since It. In the middle of the night, in a house on a quiet street in suburban Minneapolis, intruders silently murder Luke Ellis’s parents and load him into a black SUV. The operation takes less than two minutes. Luke will wake up at The Institute, in a room that looks just like his own, except there’s no window. And outside his door are other doors, behind which are other kids with special talents—telekinesis and telepathy—who got to this place the same way Luke did: Kalisha, Nick, George, Iris, and ten-year-old Avery Dixon. They are all in Front Half. Others, Luke learns, graduated to Back Half, “like the roach motel,” Kalisha says. “You check in, but you don’t check out.” In this most sinister of institutions, the director, Mrs. Sigsby, and her staff are ruthlessly dedicated to extracting from these children the force of their extranormal gifts. There are no scruples here. If you go along, you get tokens for the vending machines. If you don’t, punishment is brutal. As each new victim disappears to Back Half, Luke becomes more and more desperate to get out and get help. But no one has ever escaped from the Institute. As psychically terrifying as Firestarter, and with the spectacular kid power of It, The Institute is Stephen King’s gut-wrenchingly dramatic story of good vs. evil in a world where the good guys don’t always win."
+  },
+  {
+    "id": 49,
+    "title": "11/22/63",
+    "year": 2011,
+    "publisher": "Scribner",
+    "isbn": "978-1-451-62728-2",
+    "pageCount": 849,
+    "notes": [
+      "Nominee, British Fantasy Award, 2012",
+      "Nominee, World Fantasy Award, 2012",
+      "Runner-up (2nd place), Locus Award for Best Science Fiction Novel, 2012[2]"
+    ],
+    "villains": [],
+    "cover": null,
+    "categories": [
+      "Fiction"
+    ],
+    "description": "Stephen King’s #1 bestselling time-travel novel—now a limited series on Hulu starring James Franco! On November 22, 1963, three shots rang out in Dallas, President Kennedy died, and the world changed. What if you could change it back? In this brilliantly conceived tour de force, Stephen King—who has absorbed the social, political, and popular culture of his generation more imaginatively and thoroughly than any other writer—takes readers on an incredible journey into the past and the possibility of altering it. It begins with Jake Epping, a thirty-five-year-old English teacher in Lisbon Falls, Maine, who makes extra money teaching GED classes. He asks his students to write about an event that changed their lives, and one essay blows him away—a gruesome, harrowing story about the night more than fifty years ago when Harry Dunning’s father came home and killed his mother, his sister, and his brother with a sledgehammer. Reading the essay is a watershed moment for Jake, his life—like Harry’s, like America’s in 1963—turning on a dime. Not much later his friend Al, who owns the local diner, divulges a secret: his storeroom is a portal to the past, a particular day in 1958. And Al enlists Jake to take over the mission that has become his obsession—to prevent the Kennedy assassination. So begins Jake’s new life as George Amberson, in a different world of Ike and JFK and Elvis, of big American cars and sock hops and cigarette smoke everywhere. From the dank little city of Derry, Maine (where there’s Dunning business to conduct), to the warmhearted small town of Jodie, Texas, where Jake falls dangerously in love, every turn is leading eventually, of course, to a troubled loner named Lee Harvey Oswald and to Dallas, where the past becomes heart-stoppingly suspenseful, and where history might not be history anymore. Time-travel has never been so believable. Or so terrifying."
+  },
+  {
+    "id": 57,
+    "title": "Gwendy's Button Box",
+    "year": 2017,
+    "publisher": "Cemetery Dance Publications",
+    "isbn": "978-1-58767-610-9",
+    "pageCount": 175,
+    "notes": [
+      "Written with Richard Chizmar"
+    ],
+    "villains": [],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/_IaqAQAACAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "Journey back to Castle Rock again in this chilling new novella by Stephen King, bestselling author of The Bazaar of Bad Dreams, and Richard Chizmar, award-winning author of A Long December. This book will be a Cemetery Dance Publications exclusive with no other editions currently planned anywhere in the world!"
+  },
+  {
+    "id": 15,
+    "title": "Cycle of the Werewolf",
+    "year": 1983,
+    "publisher": "Land of Enchantment",
+    "isbn": "978-0-960-38282-8",
+    "pageCount": 127,
+    "notes": [
+      "Illustrated by Bernie Wrightson"
+    ],
+    "villains": [
+      {
+        "name": "Lester Lowe",
+        "url": "https://stephen-king-api.onrender.com/api/villain/68"
+      }
+    ],
+    "cover": null,
+    "categories": [
+      "Werewolves"
+    ],
+    "description": "No description available"
+  },
+  {
+    "id": 46,
+    "title": "Blaze",
+    "year": 2007,
+    "publisher": "Scribner",
+    "isbn": "978-1-416-55484-4",
+    "pageCount": 304,
+    "notes": [
+      "Published under pseudonym Richard Bachman"
+    ],
+    "villains": [],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/s1ai88XU3XIC?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "The last of the Richard Bachman novels, recently recovered and published for the first time. Stephen King's \"dark half\" may have saved the best for last. A fellow named Richard Bachman wrote Blaze in 1973 on an Olivetti typewriter, then turned the machine over to Stephen King, who used it to write Carrie. Bachman died in 1985 (\"cancer of the pseudonym\"), but in late 2006 King found the original typescript of Blaze among his papers at the University of Maine's Fogler Library (\"How did this get here?!\"), and decided that with a little revision it ought to be published. Blaze is the story of Clayton Blaisdell, Jr. -- of the crimes committed against him and the crimes he commits, including his last, the kidnapping of a baby heir worth millions. Blaze has been a slow thinker since childhood, when his father threw him down the stairs -- and then threw him down again. After escaping an abusive institution for boys when he was a teenager, Blaze hooks up with George, a seasoned criminal who thinks he has all the answers. But then George is killed, and Blaze, though haunted by his partner, is on his own. He becomes one of the most sympathetic criminals in all of literature. This is a crime story of surprising strength and sadness, with a suspenseful current sustained by the classic workings of fate and character -- as taut and riveting as Stephen King's The Girl Who Loved Tom Gordon."
+  },
+  {
+    "id": 10,
+    "title": "Cujo",
+    "year": 1981,
+    "publisher": "Viking Press",
+    "isbn": "978-0-670-45193-7",
+    "pageCount": 319,
+    "notes": [
+      "Winner, British Fantasy Award’s August Derleth Award, 1982",
+      "Runner-up (21st place), Locus Award for Best Fantasy Novel, 1982[2]"
+    ],
+    "villains": [
+      {
+        "name": "Cujo",
+        "url": "https://stephen-king-api.onrender.com/api/villain/19"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/sbuwAAAAIAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "The story that is as grisly as Carrie and as ominous as the Shining. Copyright © Libri GmbH. All rights reserved."
+  },
+  {
+    "id": 24,
+    "title": "The Stand Uncut",
+    "year": 1990,
+    "publisher": "Doubleday",
+    "isbn": "978-0-385-19957-5",
+    "pageCount": 1152,
+    "notes": [
+      "The Complete & Uncut Edition",
+      "Runner-up (2nd place), Locus Award's Best Horror/Dark Fantasy Novel, 1991[2]"
+    ],
+    "villains": [],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/arUhAQAAIAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "#1 BESTSELLER • Stephen King’s apocalyptic vision of a world blasted by plague and tangled in an elemental struggle between good and evil remains as riveting—and eerily plausible—as when it was first published. A patient escapes from a biological testing facility, unknowingly carrying a deadly weapon: a mutated strain of super-flu that will wipe out 99 percent of the world’s population within a few weeks. Those who remain are scared, bewildered, and in need of a leader. Two emerge—Mother Abagail, the benevolent 108-year-old woman who urges them to build a peaceful community in Boulder, Colorado; and Randall Flagg, the nefarious “Dark Man,” who delights in chaos and violence. As the dark man and the peaceful woman gather power, the survivors will have to choose between them—and ultimately decide the fate of all humanity."
+  },
+  {
+    "id": 35,
+    "title": "Bag of Bones",
+    "year": 1998,
+    "publisher": "Scribner",
+    "isbn": "978-0-684-85350-5",
+    "pageCount": 529,
+    "notes": [
+      "Winner, Bram Stoker Award, 1999",
+      "Winner, British Fantasy Award’s August Derleth Award, 1999",
+      "Winner, Locus Award for Best Dark Fantasy/Horror Novel, 1999[2]"
+    ],
+    "villains": [],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/oO9aAAAAMAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "Now his nights are plagued by vivid nightmares of the house by the lake. Despite these dreams, or perhaps because of them, Mike finally returns to Sara Laughs, the Noonans' isolated summer home."
+  },
+  {
+    "id": 8,
+    "title": "Firestarter",
+    "year": 1980,
+    "publisher": "Viking Press",
+    "isbn": "978-0-670-31541-3",
+    "pageCount": 426,
+    "notes": [
+      "Nominee, British Fantasy Award’s August Derleth Award, 1981",
+      "Runner-up (8th place), Locus Award for Best Science Fiction Novel, 1981[2]"
+    ],
+    "villains": [
+      {
+        "name": "James Hollister",
+        "url": "https://stephen-king-api.onrender.com/api/villain/54"
+      },
+      {
+        "name": "Charlie McGee",
+        "url": "https://stephen-king-api.onrender.com/api/villain/73"
+      },
+      {
+        "name": "John Rainbird",
+        "url": "https://stephen-king-api.onrender.com/api/villain/86"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/ckLvh7x4h2IC?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "Eight-year-old Charlie was born with the most destructive personality power a human being has ever commanded."
+  },
+  {
+    "id": 45,
+    "title": "Lisey's Story",
+    "year": 2006,
+    "publisher": "Scribner",
+    "isbn": "978-0-743-28941-2",
+    "pageCount": 528,
+    "notes": [
+      "Winner, Bram Stoker Award, 2007",
+      "Nominee, World Fantasy Award, 2007",
+      "Runner-up (10th place), Locus Award for Best Fantasy Novel, 2007[2]"
+    ],
+    "villains": [],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/QF82jtAaC4MC?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "Every marriage has two hearts, one light and one dark, and Lisey Landon must confront both. King's most personal and powerful book to date is about the wellsprings of creativity, the temptations of madness, and the secret language of love."
+  },
+  {
+    "id": 28,
+    "title": "Dolores Claiborne",
+    "year": 1992,
+    "publisher": "Viking",
+    "isbn": "978-0-670-84452-4",
+    "pageCount": 305,
+    "notes": [
+      "Runner-up (14th place), Locus Award for Best Horror/Dark Fantasy Novel, 1993[2]"
+    ],
+    "villains": [
+      {
+        "name": "Joe St. George",
+        "url": "https://stephen-king-api.onrender.com/api/villain/95"
+      }
+    ],
+    "cover": null,
+    "categories": [
+      "Maine"
+    ],
+    "description": "Suspected of killing Vera Donovan, her wealthy employer, Dolores Claiborne tells police the story of her life, harkening back to her violent husband, disintegrating marriage and the suspicious death of Joe Claiborne thirty years earlier. Dolores also tells of Vera's physical and mental decline and of her loyalty to an employer who has become emotionally demanding in recent years."
+  },
+  {
+    "id": 12,
+    "title": "The Dark Tower: The Gunslinger",
+    "year": 1982,
+    "publisher": "Grant",
+    "isbn": "978-0-937986-50-9",
+    "pageCount": 224,
+    "notes": [
+      ""
+    ],
+    "villains": [
+      {
+        "name": "Marten Broadcloak",
+        "url": "https://stephen-king-api.onrender.com/api/villain/10"
+      },
+      {
+        "name": "Crimson King",
+        "url": "https://stephen-king-api.onrender.com/api/villain/17"
+      },
+      {
+        "name": "Randall Flagg",
+        "url": "https://stephen-king-api.onrender.com/api/villain/37"
+      },
+      {
+        "name": "Sylvia Pittston",
+        "url": "https://stephen-king-api.onrender.com/api/villain/84"
+      }
+    ],
+    "cover": null,
+    "categories": [
+      "Adventure stories"
+    ],
+    "description": "Eerie, dreamlike, set in a world that is weirdly related to our own, The Gunslinger introduces Roland Deschain of Gilead, of In-World that was, as he pursues his enigmatic antagonist to the mountains that separate the desert from the Western Sea. Roland is a solitary figure, perhaps accursed, who with a strange singlemindedness traverses an exhausted, almost timeless landscape. The people he encounters are left behind, or worse-left dead. At a way station, however, he meets Jake, a boy from a particular time (1977) and a particular place (New York City), and soon the two are joined-khef, ka, and ka-tet. The mountains lie before them. So does the man in black and, somewhere far beyond...the Dark Tower."
+  },
+  {
+    "id": 34,
+    "title": "The Dark Tower IV: Wizard and Glass",
+    "year": 1997,
+    "publisher": "Grant",
+    "isbn": "978-1-880418-38-3",
+    "pageCount": 787,
+    "notes": [
+      "Runner-up (4th place), Locus Award for Best Fantasy Novel, 1998",
+      "Runner-up (6th place), Locus Award for Best Art Book, 1998[2]"
+    ],
+    "villains": [
+      {
+        "name": "Blaine the Mono",
+        "url": "https://stephen-king-api.onrender.com/api/villain/3"
+      },
+      {
+        "name": "Cordelia Delgado",
+        "url": "https://stephen-king-api.onrender.com/api/villain/24"
+      },
+      {
+        "name": "Rhea Dubativo",
+        "url": "https://stephen-king-api.onrender.com/api/villain/32"
+      },
+      {
+        "name": "John Farson",
+        "url": "https://stephen-king-api.onrender.com/api/villain/36"
+      },
+      {
+        "name": "Randall Flagg",
+        "url": "https://stephen-king-api.onrender.com/api/villain/37"
+      },
+      {
+        "name": "Eldred Jonas",
+        "url": "https://stephen-king-api.onrender.com/api/villain/60"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/wnbZAAAAMAAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "In this fourth installment of the Dark Tower series, Roland temporarily halts the gunslingers' journey in order to tell a story from his past."
+  },
+  {
+    "id": 27,
+    "title": "Gerald's Game",
+    "year": 1992,
+    "publisher": "Viking",
+    "isbn": "978-0-670-84650-4",
+    "pageCount": 352,
+    "notes": [],
+    "villains": [
+      {
+        "name": "Gerald Burlingame",
+        "url": "https://stephen-king-api.onrender.com/api/villain/41"
+      },
+      {
+        "name": "Raymond Andrew Joubert",
+        "url": "https://stephen-king-api.onrender.com/api/villain/61"
+      },
+      {
+        "name": "Tom Mahout",
+        "url": "https://stephen-king-api.onrender.com/api/villain/103"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/DCFwjt-FbAEC?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "A different kind of bedtime story from Stephen King, as a game of seduction between a husband and wife ends in death. But the nightmare has only just begun..."
+  },
+  {
+    "id": 58,
+    "title": "Sleeping Beauties",
+    "year": 2017,
+    "publisher": "Scribner",
+    "isbn": "978-1-50116-340-1",
+    "pageCount": 702,
+    "notes": [
+      "Written with Owen King",
+      "Nominee, Bram Stoker Award, 2018[2]"
+    ],
+    "villains": [],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/G4Q2DwAAQBAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "In this father-son collaboration, the authors tell the story of what might happen if women disappeared from the world of men. Set in a small Appalachian town whose primary employer is a women's prison, in a future so real and near it might be now, something happens when women go to sleep. They become shrouded in a cocoon-like gauze. If they are awakened, if the gauze wrapping their bodies is disturbed or violated, the women become feral and spectacularly violent. While they sleep they go to another place. The men of our world are abandoned, left to their increasingly primal devices. One woman, however, the mysterious Evie, is immune to the blessing or curse of the sleeping disease. Is Evie a medical anomaly to be studied, or is she a demon who must be slain?"
+  },
+  {
+    "id": 42,
+    "title": "The Dark Tower VII: The Dark Tower",
+    "year": 2004,
+    "publisher": "978-1-880-41862-8",
+    "isbn": "Grant",
+    "pageCount": 845,
+    "notes": [
+      "Winner, British Fantasy Award's August Derleth Award, 2005",
+      "Nominee, Bram Stoker Award, 2005[2]"
+    ],
+    "villains": [
+      {
+        "name": "Crimson King",
+        "url": "https://stephen-king-api.onrender.com/api/villain/17"
+      },
+      {
+        "name": "Dandelo",
+        "url": "https://stephen-king-api.onrender.com/api/villain/21"
+      },
+      {
+        "name": "Mordred Deschain",
+        "url": "https://stephen-king-api.onrender.com/api/villain/27"
+      },
+      {
+        "name": "Randall Flagg",
+        "url": "https://stephen-king-api.onrender.com/api/villain/37"
+      }
+    ],
+    "cover": null,
+    "categories": [],
+    "description": "No description available"
+  },
+  {
+    "id": 54,
+    "title": "Revival",
+    "year": 2014,
+    "publisher": "Scribner",
+    "isbn": "978-1-476-77038-3",
+    "pageCount": 403,
+    "notes": [
+      "Runner-up (8th place), Locus Award for Best Fantasy Novel, 2015[2]"
+    ],
+    "villains": [
+      {
+        "name": "Mother of the Null",
+        "url": "https://stephen-king-api.onrender.com/api/villain/78"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/ZU0uBQAAQBAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "Years after a charismatic minister is banished in the wake of a faith-shattering tragedy, a heroin-addicted rock-and-roll guitarist from the same hometown reconnects with the man and forges a terrible pact."
+  },
+  {
+    "id": 3,
+    "title": "The Shining",
+    "year": 1977,
+    "publisher": "Doubleday",
+    "isbn": "978-0-385-12167-5",
+    "pageCount": 447,
+    "notes": [
+      "Runner-up (4th place), Locus Award for Best Fantasy Novel, 1978[2]"
+    ],
+    "villains": [
+      {
+        "name": "Horace M. Derwent",
+        "url": "https://stephen-king-api.onrender.com/api/villain/26"
+      },
+      {
+        "name": "Delbert Grady",
+        "url": "https://stephen-king-api.onrender.com/api/villain/45"
+      },
+      {
+        "name": "Jack Torrance",
+        "url": "https://stephen-king-api.onrender.com/api/villain/106"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/Wv9Rs7uC-mQC?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "Terrible events occur at an isolated hotel in the off season, when a small boy with psychic powers struggles to hold his own against the forces of evil that are driving his father insane. Reissue."
+  },
+  {
+    "id": 56,
+    "title": "End of Watch",
+    "year": 2016,
+    "publisher": "Scribner",
+    "isbn": "978-1-501-12974-2",
+    "pageCount": 496,
+    "notes": [
+      "Third novel in the Bill Hodges Trilogy."
+    ],
+    "villains": [
+      {
+        "name": "Brady Hartsfield",
+        "url": "https://stephen-king-api.onrender.com/api/villain/50"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/j_JEDAAAQBAJ?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "\"A ... suspenseful closing volume--Brady Hartsfield, the Mercedes killer, ... returns to diabolically drive his victims to suicide in this last, ... installment starring the ever more winning Bill Hodges and Holly Gibney\"--"
+  },
+  {
+    "id": 26,
+    "title": "Needful Things",
+    "year": 1991,
+    "publisher": "Viking",
+    "isbn": "978-0-670-83953-7",
+    "pageCount": 690,
+    "notes": [
+      "Nominee, Bram Stoker Award, 1992",
+      "Runner-up (13th place), Locus Award for Best Horror/Dark Fantasy Novel, 1992[2]"
+    ],
+    "villains": [
+      {
+        "name": "Leland Gaunt",
+        "url": "https://stephen-king-api.onrender.com/api/villain/40"
+      }
+    ],
+    "cover": "https://books.google.com/books/publisher/content/images/frontcover/ylLoGsee8YcC?fife=w400-h600&source=gbs_api",
+    "categories": [
+      "Fiction"
+    ],
+    "description": "In King's #1 bestselling book, the master of the horror genre takes readers to his famous fictional town for one final visit. A wonderful new store has opened in Castle Rock, Maine. It's a place where you can get anything your heart desires--sexual pleasure, wealth, power . . . but for a nerve-shattering price. \"Ranks with King's best!\"--Publishers Weekly. Copyright © Libri GmbH. All rights reserved."
+  }
+]

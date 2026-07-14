@@ -1,47 +1,5 @@
-import "./globals.css"
-import Navigation from "./components/navigation/Navigation"
-
-export const metadata = {
-  title: "Stephen King Universe",
-  description: "A cinematic archival interface exploring the Stephen King universe",
-}
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang="en">
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  const saved = localStorage.getItem('theme') || 'dark';
-                  document.documentElement.setAttribute('data-theme', saved);
-                } catch (e) {}
-              })()
-            `,
-          }}
-        />
-      </head>
-      <body>
-        <div className="appShell">
-
-          {/* LEFT NAVIGATION */}
-          <aside className="leftNav">
-            <Navigation />
-          </aside>
-
-          {/* MAIN CONTENT */}
-          <main className="mainContent">
-            {children}
-          </main>
-
-        </div>
-      </body>
-    </html>
-  )
-}
+import type { Metadata } from "next";
+import "./globals.css";
+import Shell from "./components/Shell";
+export const metadata:Metadata={title:{default:"Stephen King Universe",template:"%s · Stephen King Universe"},description:"An interactive archive of works, stories and entities drawn from public data sources."};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en" data-theme="recovered" suppressHydrationWarning><body><Shell>{children}</Shell></body></html>}

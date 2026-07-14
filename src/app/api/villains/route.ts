@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { NextResponse } from "next/server";
 
 const API_ROOT =  process.env.STEPHEN_KING_API?.replace(/\/$/, "");

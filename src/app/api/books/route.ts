@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 
+export const dynamic = "force-dynamic";
 export const revalidate = 86400;
 
 const API_ROOT = process.env.STEPHEN_KING_API?.replace(/\/$/, "");
@@ -44,6 +46,110 @@ function saveCache(cache: any[]) {
   }
 }
 
+async function fetchGoogleBookData(queryStr: string) {
+  if (!GOOGLE_API) {
+    return null;
+  }
+
+  try {
+    const params = new URLSearchParams({
+      q: queryStr,
+      maxResults: "1",
+    });
+
+    if (GOOGLE_KEY) {
+      params.set("key", GOOGLE_KEY);
+    }
+
+    const gRes = await fetch(`${GOOGLE_API}?${params.toString()}`);
+    if (!gRes.ok) {
+      console.warn(`Google Books ${gRes.status} for ${queryStr}`);
+      return null;
+    }
+
+    const gJson = await gRes.json();
+    const info = gJson.items?.[0]?.volumeInfo;
+    if (!info) {
+      return null;
+    }
+
+    let coverUrl: string | null = null;
+    if (info.imageLinks?.thumbnail) {
+      const volumeId = gJson.items?.[0]?.id;
+      coverUrl = volumeId
+        ? `https://books.google.com/books/publisher/content/images/frontcover/${volumeId}?fife=w400-h600&source=gbs_api`
+        : info.imageLinks.thumbnail
+            .replace("http://", "https://")
+            .replace("zoom=1", "zoom=0");
+    }
+
+    return { info, coverUrl };
+  } catch (err) {
+    console.warn("Google Books fetch failed:", err);
+    return null;
+  }
+}
+
+async function fetchOpenLibraryData(book: any) {
+  try {
+    const params = new URLSearchParams({ limit: "1" });
+
+    if (book.ISBN) {
+      params.set("isbn", book.ISBN);
+    } else {
+      params.set("title", book.Title || "");
+      params.set("author", "Stephen King");
+    }
+
+    const olRes = await fetch(`https://openlibrary.org/search.json?${params.toString()}`);
+    if (!olRes.ok) {
+      console.warn(`Open Library ${olRes.status} for ${book.Title}`);
+      return null;
+    }
+
+    const olJson = await olRes.json();
+    const doc = olJson.docs?.[0];
+    if (!doc) {
+      return null;
+    }
+
+    const coverUrl = doc.cover_i
+      ? `https://covers.openlibrary.org/b/id/${doc.cover_i}-M.jpg`
+      : null;
+
+    const description = typeof doc.first_sentence === "string"
+      ? doc.first_sentence
+      : Array.isArray(doc.first_sentence)
+        ? doc.first_sentence[0]
+        : doc.subtitle || null;
+
+    return {
+      description,
+      coverUrl,
+      categories: Array.isArray(doc.subject) ? doc.subject.slice(0, 5) : [],
+    };
+  } catch (err) {
+    console.warn("Open Library fetch failed:", err);
+    return null;
+  }
+}
+
+function buildBookFallback(book: any) {
+  return {
+    id: book.id,
+    title: book.Title,
+    year: book.Year,
+    publisher: book.Publisher,
+    isbn: book.ISBN,
+    pageCount: book.Pages,
+    notes: book.Notes || [],
+    villains: book.villains || [],
+    cover: null,
+    categories: [],
+    description: "No description available",
+  };
+}
+
 export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
@@ -55,10 +161,6 @@ export async function GET(request: Request) {
 
     if (!res.ok) {
       throw new Error(`Stephen King API ${res.status}`);
-    }
-
-    if (!GOOGLE_API) {
-      throw new Error("Missing GOOGLE_API");
     }
 
     const data = await res.json();
@@ -112,69 +214,30 @@ export async function GET(request: Request) {
           return cached;
         }
 
-        const fallback = {
-          id: book.id,
-          title: book.Title,
-          year: book.Year,
-          publisher: book.Publisher,
-          isbn: book.ISBN,
-          pageCount: book.Pages,
-          notes: book.Notes || [],
-          villains: book.villains || [],
-          cover: null,
-          categories: [],
-          description: "No description available",
-        };
-
+        const fallback = buildBookFallback(book);
         const queryStr = book.ISBN
           ? `isbn:${book.ISBN}`
           : `intitle:${book.Title} inauthor:Stephen King`;
 
-        try {
-          const params = new URLSearchParams({
-            q: queryStr,
-            maxResults: "1",
-          });
+        const googleResult = await fetchGoogleBookData(queryStr);
+        const openLibraryResult = googleResult ? null : await fetchOpenLibraryData(book);
 
-          if (GOOGLE_KEY) {
-            params.set("key", GOOGLE_KEY);
-          }
+        const enriched = {
+          ...fallback,
+          description:
+            googleResult?.info?.description ??
+            openLibraryResult?.description ??
+            fallback.description,
+          cover: googleResult?.coverUrl ?? openLibraryResult?.coverUrl ?? fallback.cover,
+          categories: googleResult?.info?.categories || openLibraryResult?.categories || fallback.categories,
+        };
 
-          const gRes = await fetch(`${GOOGLE_API}?${params.toString()}`);
-
-          if (!gRes.ok) {
-            throw new Error(`Google Books ${gRes.status}`);
-          }
-
-          const gJson = await gRes.json();
-          const info = gJson.items?.[0]?.volumeInfo;
-
-          let coverUrl: string | null = null;
-          if (info?.imageLinks?.thumbnail) {
-            const volumeId = gJson.items?.[0]?.id;
-            if (volumeId) {
-              coverUrl = `https://books.google.com/books/publisher/content/images/frontcover/${volumeId}?fife=w400-h600&source=gbs_api`;
-            } else {
-              coverUrl = info.imageLinks.thumbnail
-                .replace("http://", "https://")
-                .replace("zoom=1", "zoom=0");
-            }
-          }
-
-          const enriched = {
-            ...fallback,
-            description: info?.description ?? fallback.description,
-            cover: coverUrl,
-            categories: info?.categories || [],
-          };
-
+        if (googleResult || openLibraryResult) {
           cache.push(enriched);
           cacheUpdated = true;
-          return enriched;
-        } catch (err) {
-          console.error("GOOGLE BOOK FAILED:", book.Title, err);
-          return fallback;
         }
+
+        return enriched;
       })
     );
 
