@@ -1,0 +1,5456 @@
+[
+  {
+    "id": "entity:6c1e363ba648481dd216de50",
+    "name": "Alvin Marsh",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.543Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.429Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.544Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.544Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.544Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.544Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:ee44f48a19d98d20c4ff7247",
+    "name": "Annie Wilkes",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.545Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.430Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.557Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.555Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.545Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.545Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:e2ddf8655047cea93b4402a7",
+    "name": "Arnie Cunningham",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.558Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.430Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.559Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.559Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.558Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.558Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:96ddc74d598aa6bc02656dfa",
+    "name": "Belch Huggins",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.559Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.430Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.560Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.560Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.560Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.560Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.394Z"
+  },
+  {
+    "id": "entity:13e6b023c4ce6afd6715b33c",
+    "name": "Billy Nolan",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.561Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.430Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.569Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.565Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.564Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.565Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:bdd2f67e6126e30af27b8ee9",
+    "name": "Billy deLois",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.575Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.430Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.581Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.580Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.575Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.575Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:24391d911db9ef2d040a2b34",
+    "name": "Blaine the Mono",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.581Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.430Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.582Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.582Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.581Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:52814e642d415f8837a816bd",
+    "name": "Bob Anderson",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.583Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.430Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.583Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.583Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.584Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.583Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.389Z"
+  },
+  {
+    "id": "entity:e6b35c37fe8ae05efad06ef5",
+    "name": "Bogs Diamond",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.584Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.431Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.584Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.584Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.585Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.584Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:361ed2e677fc23825b4e2b40",
+    "name": "Brady Hartsfield",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.585Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.431Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.588Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.587Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.587Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.587Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.394Z"
+  },
+  {
+    "id": "entity:839e8e7742575cb4e927e80d",
+    "name": "Brian Lippy",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.588Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.431Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.589Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.588Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.588Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.588Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:72cbfbc5ac3575662effc10f",
+    "name": "Butch Bowers",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.589Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.431Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.590Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.590Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.589Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.589Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:f355eb4133f8498369c8228d",
+    "name": "Byron Hadley",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.590Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.431Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.591Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.590Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.591Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.591Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.394Z"
+  },
+  {
+    "id": "entity:65a21b896bccaac0c4f9162c",
+    "name": "Carter Thibodeau",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.591Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.431Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.592Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.592Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.592Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.592Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:448e8df95f466b650f992b72",
+    "name": "Charlie McGee",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.592Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.431Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.593Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.593Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.593Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.593Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:da695d87487c557a80d91297",
+    "name": "Christine (car)",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.594Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.432Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.595Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.594Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.594Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.594Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:511ba82fd29fb16adbfdcb03",
+    "name": "Christine Hargensen",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.595Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.432Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.596Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.596Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.595Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.595Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.394Z"
+  },
+  {
+    "id": "entity:bb1038e95ea9b153c6ffdbf5",
+    "name": "Christopher Unwin",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.596Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.432Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.615Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.615Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.596Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.615Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:0d813b27839bbda6d6c40a9b",
+    "name": "Cindi",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.615Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.432Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.616Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.616Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.616Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.616Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:471f21b4f48901029da4a23b",
+    "name": "Cordelia Delgado",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.616Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.432Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.617Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.617Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.616Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.617Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:c88f380a17410eb06f2da052",
+    "name": "Craig Toomey",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.617Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.432Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.618Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.617Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.618Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.617Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:9f41e8ea862f3d69d819acc6",
+    "name": "Crimson King",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.618Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.432Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.619Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.618Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.618Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.618Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:4ad5d0f9232e6d674cdc2b78",
+    "name": "Cujo",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.619Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.433Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.620Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.619Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.619Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:b14b7577a61aedeaa1f1c94f",
+    "name": "Damon Killian",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.620Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.433Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.620Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.620Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.620Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.620Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:e6f3d1c7541a84b3addd1260",
+    "name": "Dandelo",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.621Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.433Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.621Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.621Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.621Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.621Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:5c1bfcc8f84e9bd880d1985a",
+    "name": "Delbert Grady",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.622Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.433Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.624Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.623Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.623Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.623Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.394Z"
+  },
+  {
+    "id": "entity:927ee981314d51aede6d903f",
+    "name": "Donald Merwin Elbert",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.624Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.433Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.624Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.624Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.624Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.624Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:4e33cd55c2b84854a6e1cbf6",
+    "name": "Donna and Mary Lila Grace Thibodeau",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.625Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.433Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.625Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.625Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.625Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.625Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:5957bf75495cbfe93b234abc",
+    "name": "Eldred Jonas",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.626Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.433Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.626Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.626Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.626Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.626Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.394Z"
+  },
+  {
+    "id": "entity:84920cdc0282e7d076c940ed",
+    "name": "Elenor Richmond",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.626Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.433Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.627Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.627Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.627Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.627Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:6293f1291654600735eda0d7",
+    "name": "Frank Dodd",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.627Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.434Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.636Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.636Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.627Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.636Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:74f81b5bacc337900df9529c",
+    "name": "Gage Creed",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.637Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.434Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.637Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.637Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.637Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.637Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:b15e115952ce1f54fec4c661",
+    "name": "George Stark",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.638Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.434Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.638Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.638Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.638Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.638Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:2fd6ce0e336a3a100a4ed7d8",
+    "name": "Gerald Burlingame",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.639Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.434Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.639Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.639Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.639Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.639Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.391Z"
+  },
+  {
+    "id": "entity:aa67efd4b5ca90255e0d38f2",
+    "name": "Gladys Hickson",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.639Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.434Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.640Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.640Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.640Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.640Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.394Z"
+  },
+  {
+    "id": "entity:b8949dee59be2fdf5f76789d",
+    "name": "Greg Stillson",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.640Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.434Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.641Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.641Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.640Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.641Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:8efe50ed1392bc927f14ea64",
+    "name": "Greta Bowie",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.641Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.434Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.642Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.642Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.641Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.641Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:38dc25736e903394578f0ec8",
+    "name": "Harold Lauder",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.642Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.435Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.643Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.642Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.642Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.642Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:89ef3eddcf6090cc04406601",
+    "name": "Henrietta Dodd",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.643Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.435Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.643Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.643Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.643Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.643Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:c111b54362b8f2b974da7795",
+    "name": "Henry Bowers",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.644Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.435Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.645Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.645Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.644Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.645Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:5828c0d8f87b21e05ca932a6",
+    "name": "Henry James",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.645Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.435Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.651Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.645Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.651Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.646Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.394Z"
+  },
+  {
+    "id": "entity:5d8e1fbfedf7802db85eea99",
+    "name": "Horace M. Derwent",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.651Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.435Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.652Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.652Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.651Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.651Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:c7660de20165b7e39873cafe",
+    "name": "Isaac Chroner",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.652Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.435Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.652Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.652Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.652Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:332c6cbe970edaeff5714a1f",
+    "name": "It (Creature)",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.653Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.435Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.653Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.653Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.653Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.653Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.394Z"
+  },
+  {
+    "id": "entity:c1a8f545346022612a147ffd",
+    "name": "Jack Mort",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.655Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.435Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.656Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.655Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.655Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.655Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:c2207be2b2f85289fccee6f9",
+    "name": "Jack Torrance",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.656Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.436Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.656Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.656Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.656Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.656Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:afe7c11c95217f459e362631",
+    "name": "Jackie Talbot",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.657Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.436Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.657Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.657Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.657Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.657Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:194ae882fd86cf9b3087c826",
+    "name": "James Boon",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.658Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.436Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.658Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.658Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.658Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.658Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:fbafc28db1f2fb8a9c975f81",
+    "name": "James Hollister",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.658Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.436Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.659Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.659Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.659Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.659Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.394Z"
+  },
+  {
+    "id": "entity:0b05cef050c5df4b0940207a",
+    "name": "Jessica Upshaw",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.659Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.436Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.660Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.660Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.660Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.660Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:1a32bf9ab89253ff76dec603",
+    "name": "Jim Rennie",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.660Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.436Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.661Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.661Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.660Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.660Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:a3e37f64dbf736864aaef721",
+    "name": "Jim Rennie, Jr.",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.661Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.436Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.662Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.662Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.661Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.661Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:96031f4d781e338769704bf2",
+    "name": "Joe St. George",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.662Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.437Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.663Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.662Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.662Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.662Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:5205c3c688beacc03adaa937",
+    "name": "John \"Ace\" Merrill",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.663Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.437Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.663Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.663Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.663Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.663Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:f8d2dd07e65b15226e7f651a",
+    "name": "John Farson",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.664Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.437Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.664Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.664Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.664Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.664Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.391Z"
+  },
+  {
+    "id": "entity:641b5e7b9956f67613739a5c",
+    "name": "John Garton",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.665Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.437Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.665Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.665Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.665Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.665Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.391Z"
+  },
+  {
+    "id": "entity:0f560982fd969ee1cddd146a",
+    "name": "John Halston",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.666Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.437Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.666Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.666Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.666Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.666Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.394Z"
+  },
+  {
+    "id": "entity:bbe3fc65592caf3d0bbbe6cb",
+    "name": "John Rainbird",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.666Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.437Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.667Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.667Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.667Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.667Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:555a3be7219b38acb77d0c58",
+    "name": "Kenny Garson",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.667Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.437Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.668Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.668Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.667Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.668Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.391Z"
+  },
+  {
+    "id": "entity:82e95a42f4c947a865a3a3ac",
+    "name": "Kurt Barlow",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.668Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.438Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.669Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.669Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.668Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.668Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.389Z"
+  },
+  {
+    "id": "entity:f2006abd417d6b636d2f1b91",
+    "name": "Kurt Dussander",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.669Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.438Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.670Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.669Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.670Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.669Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:290ad42f75f5c849e932530e",
+    "name": "Lane Hardy",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.670Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.438Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.671Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.671Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.670Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.670Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.394Z"
+  },
+  {
+    "id": "entity:308c88bded6407213e8fcd49",
+    "name": "Leland Gaunt",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.671Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.438Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.672Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.672Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.671Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.671Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.391Z"
+  },
+  {
+    "id": "entity:2aa243915d26244f552e331d",
+    "name": "Lester Lowe",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.672Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.438Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.673Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.672Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.672Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.673Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.672Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:2cd98100d4dedcc075ce9306",
+    "name": "Little Sisters",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.673Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.438Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.673Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.673Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.673Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:93193a26095efba738e2bcd7",
+    "name": "Lloyd Henreid",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.674Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.438Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.674Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.674Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.674Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.674Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.394Z"
+  },
+  {
+    "id": "entity:97fed30e492b7442f4fabb5c",
+    "name": "Malachai Boardman",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.674Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.438Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.675Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.675Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.675Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.675Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:602af21c1055142e8fbc6d45",
+    "name": "Malcolm Janus",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.675Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.439Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.676Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.676Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.675Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.676Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:f1a3a62c57bd42ce4ff85c56",
+    "name": "Marcia Fadden",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.676Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.439Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.677Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.677Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.676Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.677Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.391Z"
+  },
+  {
+    "id": "entity:305e93580348fbe247b9efe3",
+    "name": "Margaret White",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.677Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.439Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.678Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.678Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.677Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.677Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:b10917ac34fa1f282c8d1718",
+    "name": "Marten Broadcloak",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.678Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.439Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.679Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.678Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.678Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.678Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:0f424d105c64c2f0a30426dc",
+    "name": "Mary Lila Grace",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.679Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.439Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.679Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.679Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.679Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.679Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.393Z"
+  },
+  {
+    "id": "entity:c86036116a23c5a0eb7de62b",
+    "name": "Mordred Deschain",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.680Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.439Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.680Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.680Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.680Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.680Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:b29bd2e777fda1b484de9f5e",
+    "name": "Mother of the Null",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.680Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.439Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.681Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.681Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.681Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:5144f6c1424532426ddeb612",
+    "name": "Myra Crewes",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.681Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.440Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.682Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.682Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.681Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.681Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:e2630b0a3ca9ef33c0ba1b0b",
+    "name": "Norma Watson",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.682Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.440Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.683Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.682Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.682Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.682Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:e5d1193588cf2ff02703c212",
+    "name": "Norman Daniels",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.683Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.440Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.683Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.683Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.683Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.683Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:0c8cbe8fe5f668b8fbaa075b",
+    "name": "Patrick Hockstetter",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.684Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.440Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.684Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.684Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.684Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.684Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.394Z"
+  },
+  {
+    "id": "entity:dc8bea15a92132950ca1974b",
+    "name": "Percy Wetmore",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.684Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.440Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.685Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.685Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.685Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.685Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:d8dc18a55140486f6f9a7672",
+    "name": "Peter Gordon",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.685Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.440Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.686Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.686Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.685Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.686Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.393Z"
+  },
+  {
+    "id": "entity:1403b6e14c544b942906a8cc",
+    "name": "Rachel Spies",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.686Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.440Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.687Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.687Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.687Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.687Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:91566c3682a7b1a7deb9e241",
+    "name": "Randall Flagg",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.687Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.441Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.688Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.688Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.687Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.688Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.391Z"
+  },
+  {
+    "id": "entity:de0917012ecfaf5dc8c93a06",
+    "name": "Rat Man",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.688Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.441Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.689Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.689Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.688Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.688Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:80eb5af68775e97becf2020a",
+    "name": "Raymond Andrew Joubert",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.689Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.441Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.690Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.689Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.689Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.689Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.394Z"
+  },
+  {
+    "id": "entity:d6cbd5c0527190c4dc4dcbac",
+    "name": "Rhea Dubativo",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.690Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.441Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.690Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.690Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.690Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.690Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:6b2749500def82455456fd1e",
+    "name": "Richard Lawson",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.691Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.441Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.691Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.691Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.691Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:2fd1f2a17a9341436ae091d7",
+    "name": "Richard P. Macklin",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.691Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.441Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.692Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.692Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.691Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.692Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:dc769ae56da63fcc6cf32997",
+    "name": "Richard Straker",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.692Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.441Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.693Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.693Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.692Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.692Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:c75196d06cec0b68c295b647",
+    "name": "Rose the Hat",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.693Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.441Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.694Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.693Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.693Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.693Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:b2774a619c7f17a388d5fb53",
+    "name": "Ross Humboldt",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.694Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.442Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.694Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.694Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.694Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.694Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.394Z"
+  },
+  {
+    "id": "entity:e52f5e7852ef498a21ae47e6",
+    "name": "Sally Mueller",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.695Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.442Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.695Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.695Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.695Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.695Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:6ec881d0ab5179195007ba1e",
+    "name": "Sam (cat)",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.695Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.442Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.696Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.696Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.696Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:54eef1008d77161620b446c7",
+    "name": "Samuel Norton",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.696Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.442Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.697Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.696Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.697Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.696Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:bc03dab6fe83fd3b5aa9246e",
+    "name": "Sonny Elliman",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.697Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.442Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.698Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.697Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.697Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.697Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:4e3afb0407f09b4850d098c8",
+    "name": "Susan Day",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.698Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.442Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.698Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.698Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.698Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.698Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:fe2ffb931a3c3f50ba765814",
+    "name": "Sylvia Pittston",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.699Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.442Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.699Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.699Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.699Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.699Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:d930017c2ba0b83b2bfee2c0",
+    "name": "The Devil's Dozen",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.700Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.442Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.700Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.700Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.700Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:2e0cca1b847c5b079e725176",
+    "name": "The Gladiators",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.700Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.443Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.701Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.701Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.700Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.701Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.393Z"
+  },
+  {
+    "id": "entity:31617027fb2e03d1b468ded6",
+    "name": "The Kid",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.701Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.443Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.702Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.702Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.701Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.701Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.394Z"
+  },
+  {
+    "id": "entity:7e263afdd2c89a46b213fb2a",
+    "name": "The Major",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.702Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.443Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.703Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.702Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.702Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.702Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:dce310851087d2a49885e90c",
+    "name": "The Mortimer Snerds",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.703Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.443Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.704Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.703Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.703Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:9dd6e399c0cc82449333dc47",
+    "name": "The Outsider (Creature)",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.704Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.443Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.704Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.704Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.704Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:4de95e834cb38e6a11aff720",
+    "name": "The Raggedy Man",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.704Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.443Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.705Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.705Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.705Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.705Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:23234e1cc3bb682e135e2fb4",
+    "name": "Tim Youngblood",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.705Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.443Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.706Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.706Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.706Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.706Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:16b063fa507c0d2fab561a15",
+    "name": "Tina Blake",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.706Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.444Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.707Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.707Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.706Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.707Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:18ba420d7fc1e63ce473a966",
+    "name": "Tom Mahout",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.707Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.444Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.708Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.708Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.707Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.708Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:0b7cce41fbb49a88fc3a4467",
+    "name": "Tom Rogan",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.708Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.444Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.709Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.709Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.708Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.709Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:ff21f2bcd0dd44defc4d5bcc",
+    "name": "Tommyknockers",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.709Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.444Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.710Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.709Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.709Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:37a5ca4a19f6ee7a55c7e4ba",
+    "name": "Vic Mooney",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.710Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.444Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.711Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.710Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.710Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.710Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:c6fc6922611f29aaae186e8d",
+    "name": "Victor Criss",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.711Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.444Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.711Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.711Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.711Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.711Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  },
+  {
+    "id": "entity:8c37a04cbf6c72d94e13c977",
+    "name": "Victor Pascow",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.712Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.444Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.712Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.712Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.712Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.712Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.395Z"
+  },
+  {
+    "id": "entity:f3635fb522646eb2323e9ede",
+    "name": "Wendigo",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.713Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.445Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.713Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.713Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.713Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.713Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:6c1c0f3866ff40447a5ef3cf",
+    "name": "Wilfred James",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.714Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.445Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.714Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.714Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.714Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.714Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.394Z"
+  },
+  {
+    "id": "entity:4f2639b1b847df2244bc43d6",
+    "name": "William Wharton",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.714Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.445Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.715Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.715Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.715Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.715Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.396Z"
+  },
+  {
+    "id": "entity:5f7e40669883c2a5d2f29407",
+    "name": "Winston Church",
+    "status": "needs-review",
+    "characterType": "unknown",
+    "continuity": "literary-canon",
+    "spoilerLevel": "none",
+    "sources": [
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.715Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.445Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.716Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.716Z"
+      },
+      {
+        "name": "Legacy import",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.716Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.390Z"
+  }
+]

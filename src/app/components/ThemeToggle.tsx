@@ -1,4 +1,0 @@
-"use client";
-import { Moon, Sun } from "lucide-react";
-import { useEffect, useState } from "react";
-export default function ThemeToggle(){const [mode,setMode]=useState<"public"|"recovered">("recovered");useEffect(()=>{const saved=localStorage.getItem("archive-mode")==="public"?"public":"recovered";setMode(saved);document.documentElement.dataset.theme=saved},[]);function change(next:"public"|"recovered"){setMode(next);localStorage.setItem("archive-mode",next);document.documentElement.dataset.theme=next}return <div className="modeSwitch" aria-label="Archive mode"><button className={mode==="public"?"active":""} onClick={()=>change("public")}><Sun size={15}/> <span>Public archive</span></button><button className={mode==="recovered"?"active":""} onClick={()=>change("recovered")}><Moon size={15}/> <span>Recovered archive</span></button></div>}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 3,
+  "packageType": "curated-database",
+  "domainPackId": "stephen-king",
+  "exportedAt": "2026-08-09T19:13:26.139Z",
+  "policy": {
+    "seedDataRetained": true,
+    "observedFactsIncluded": true,
+    "statusIncluded": true,
+    "attributionIncluded": true,
+    "openLibraryCoversOnly": true,
+    "googleBooksCoversExcluded": true,
+    "protectedEditorialTextExcluded": true
+  },
+  "counts": {
+    "works": 275,
+    "editions": 63,
+    "characters": 115,
+    "adaptations": 96,
+    "character-names": 115,
+    "character-appearances": 127,
+    "character-roles": 127,
+    "sources": 9
+  },
+  "files": [
+    "data/works.json",
+    "data/editions.json",
+    "data/characters.json",
+    "data/adaptations.json",
+    "data/character-names.json",
+    "data/character-appearances.json",
+    "data/character-roles.json",
+    "data/sources.json"
+  ]
+}

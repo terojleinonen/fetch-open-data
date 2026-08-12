@@ -1,0 +1,2612 @@
+[
+  {
+    "id": "entity:7295e78097bc2177100b5e13",
+    "workId": "entity:474dad31704eff3b96a725b5",
+    "title": "11/22/63 — legacy edition",
+    "status": "needs-review",
+    "publisher": "Scribner",
+    "isbn13": "9781451627282",
+    "pageCount": 849,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.449Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9781451627282-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9781451627282",
+      "isbn13": "9781451627282",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:ec3988fa63d9858a727956ec",
+    "workId": "entity:eac7b5ca7c3d38aa1f4e572b",
+    "title": "Bag of Bones — legacy edition",
+    "status": "needs-review",
+    "publisher": "Scribner",
+    "isbn13": "9780684853505",
+    "pageCount": 529,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.449Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780684853505-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780684853505",
+      "isbn13": "9780684853505",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:7453078cc68ab63a45b8dedd",
+    "workId": "entity:ec8ae25cb37297ebaa18a98b",
+    "title": "Billy Summers — legacy edition",
+    "status": "needs-review",
+    "publisher": "Scribner",
+    "isbn13": "9781982173616",
+    "pageCount": 528,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.449Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9781982173616-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9781982173616",
+      "isbn13": "9781982173616",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:7a1654df9afe8800c42ccf01",
+    "workId": "entity:dfc74cf2cce61063f95cd262",
+    "title": "Black House — legacy edition",
+    "status": "needs-review",
+    "publisher": "Random House",
+    "isbn13": "9780375504396",
+    "pageCount": 625,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.449Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780375504396-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780375504396",
+      "isbn13": "9780375504396",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:fd440393b14dcbdeb3b813dc",
+    "workId": "entity:bb985166e62749c9183d907b",
+    "title": "Blaze — legacy edition",
+    "status": "needs-review",
+    "publisher": "Scribner",
+    "isbn13": "9781416554844",
+    "pageCount": 304,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.449Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9781416554844-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9781416554844",
+      "isbn13": "9781416554844",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:66b2c0e92fee21d1263e2f3a",
+    "workId": "entity:ff4a17faeb9e2ea7202ee802",
+    "title": "Carrie — legacy edition",
+    "status": "needs-review",
+    "publisher": "Doubleday",
+    "isbn13": "9780385086950",
+    "pageCount": 199,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.449Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780385086950-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780385086950",
+      "isbn13": "9780385086950",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:5a77d444465560ccb9afa551",
+    "workId": "entity:f0f6cd515c7afd43e39f419c",
+    "title": "Cell — legacy edition",
+    "status": "needs-review",
+    "publisher": "Scribner",
+    "isbn13": "9780743292337",
+    "pageCount": 351,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.449Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780743292337-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780743292337",
+      "isbn13": "9780743292337",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:f4fc0f93d7d7b94dfd081295",
+    "workId": "entity:6734f2aa1ec9d51c1cf693c7",
+    "title": "Christine — legacy edition",
+    "status": "needs-review",
+    "publisher": "Viking",
+    "isbn13": "9780670220267",
+    "pageCount": 526,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.449Z"
+      }
+    ],
+    "cover": null
+  },
+  {
+    "id": "entity:727d93b9c374b5d73138af9c",
+    "workId": "entity:26aba612488889cc99914659",
+    "title": "Cujo — legacy edition",
+    "status": "needs-review",
+    "publisher": "Viking Press",
+    "isbn13": "9780670451937",
+    "pageCount": 319,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.450Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780670451937-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780670451937",
+      "isbn13": "9780670451937",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:fe5ec6803b7a27f412eccd8f",
+    "workId": "entity:4fa5338eac3c8eb485c84041",
+    "title": "Cycle of the Werewolf — legacy edition",
+    "status": "needs-review",
+    "publisher": "Land of Enchantment",
+    "isbn13": "9780960382828",
+    "pageCount": 127,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.450Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780960382828-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780960382828",
+      "isbn13": "9780960382828",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:dbc170181030a216e80d9f78",
+    "workId": "entity:996f7ea1497bb6c495a15456",
+    "title": "Desperation — legacy edition",
+    "status": "needs-review",
+    "publisher": "Viking",
+    "isbn13": "9780670868360",
+    "pageCount": 704,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.450Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780670868360-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780670868360",
+      "isbn13": "9780670868360",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:419261eaed8a62674971e5a4",
+    "workId": "entity:3748c07e9fd6e70d855e7047",
+    "title": "Doctor Sleep — legacy edition",
+    "status": "needs-review",
+    "publisher": "Scribner",
+    "isbn13": "9781476727653",
+    "pageCount": 531,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.450Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9781476727653-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9781476727653",
+      "isbn13": "9781476727653",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:8aa003dc21b457a9f52b07fc",
+    "workId": "entity:67f6cbfc9d32f0b89532297f",
+    "title": "Dolores Claiborne — legacy edition",
+    "status": "needs-review",
+    "publisher": "Viking",
+    "isbn13": "9780670844524",
+    "pageCount": 305,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.450Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780670844524-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780670844524",
+      "isbn13": "9780670844524",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:ebe27583cc903b02e7711fec",
+    "workId": "entity:3e6fdce4a0d66357a04096d8",
+    "title": "Dreamcatcher — legacy edition",
+    "status": "needs-review",
+    "publisher": "Scribner",
+    "isbn13": "9780743211383",
+    "pageCount": 620,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.450Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780743211383-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780743211383",
+      "isbn13": "9780743211383",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:cbe42c7fd05e880e1d01eaee",
+    "workId": "entity:14a52b9bfb178a8f2532b472",
+    "title": "Duma Key — legacy edition",
+    "status": "needs-review",
+    "publisher": "Scribner",
+    "isbn13": "9781416552512",
+    "pageCount": 607,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.450Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9781416552512-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9781416552512",
+      "isbn13": "9781416552512",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:4bf4bb101c43997bc750d617",
+    "workId": "entity:0482b43732a50c83066cc998",
+    "title": "Elevation — legacy edition",
+    "status": "needs-review",
+    "publisher": "Scribner",
+    "isbn13": "9781982102319",
+    "pageCount": 144,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.450Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9781982102319-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9781982102319",
+      "isbn13": "9781982102319",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:6af9b64d81e5738bc2027127",
+    "workId": "entity:04924cd6b0868f3247e33dd2",
+    "title": "End of Watch — legacy edition",
+    "status": "needs-review",
+    "publisher": "Scribner",
+    "isbn13": "9781501129742",
+    "pageCount": 496,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.451Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9781501129742-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9781501129742",
+      "isbn13": "9781501129742",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:10a7c5782fe841adb9704dea",
+    "workId": "entity:2aab2e47cf8f43bac037bb51",
+    "title": "Finders Keepers — legacy edition",
+    "status": "needs-review",
+    "publisher": "Scribner",
+    "isbn13": "9781501100079",
+    "pageCount": 434,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.451Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9781501100079-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9781501100079",
+      "isbn13": "9781501100079",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:2049d4933ddea861ccf6f5ab",
+    "workId": "entity:fd575488b8a3cab3a867de08",
+    "title": "Firestarter — legacy edition",
+    "status": "needs-review",
+    "publisher": "Viking Press",
+    "isbn13": "9780670315413",
+    "pageCount": 426,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.451Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780670315413-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780670315413",
+      "isbn13": "9780670315413",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:c038658002d3c56b7b0a926e",
+    "workId": "entity:82665f19c44e3a426305b0a7",
+    "title": "From a Buick 8 — legacy edition",
+    "status": "needs-review",
+    "publisher": "Scribner",
+    "isbn13": "9780743211376",
+    "pageCount": 368,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.451Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780743211376-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780743211376",
+      "isbn13": "9780743211376",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:0eaea6e4f62cf7e135c59ee5",
+    "workId": "entity:e9ac75ead8ed1fbd3b578d30",
+    "title": "Gerald's Game — legacy edition",
+    "status": "needs-review",
+    "publisher": "Viking",
+    "isbn13": "9780670846504",
+    "pageCount": 352,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.451Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780670846504-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780670846504",
+      "isbn13": "9780670846504",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:2504bf3bfcbc1ef9ccd39a8e",
+    "workId": "entity:2f178a63b2c324e4dbfd1d8d",
+    "title": "Gwendy's Button Box — legacy edition",
+    "status": "needs-review",
+    "publisher": "Cemetery Dance Publications",
+    "isbn13": "9781587676109",
+    "pageCount": 175,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.451Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9781587676109-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9781587676109",
+      "isbn13": "9781587676109",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:47c16d3655155d86732b9ee5",
+    "workId": "entity:8f9180b5d314e6c8ea96ec15",
+    "title": "Insomnia — legacy edition",
+    "status": "needs-review",
+    "publisher": "Viking",
+    "isbn13": "9780670855032",
+    "pageCount": 787,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.451Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780670855032-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780670855032",
+      "isbn13": "9780670855032",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:6693f7877e71242290977eda",
+    "workId": "entity:d4ad48e35f3cd14d4b64f643",
+    "title": "It — legacy edition",
+    "status": "needs-review",
+    "publisher": "Viking",
+    "isbn13": "9780670813025",
+    "pageCount": 1138,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.451Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780670813025-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780670813025",
+      "isbn13": "9780670813025",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:af937b3ba36327b48b5142cb",
+    "workId": "entity:d966fcd3523247e798dfff44",
+    "title": "Joyland — legacy edition",
+    "status": "needs-review",
+    "publisher": "Hard Case Crime",
+    "isbn13": "9781781162644",
+    "pageCount": 288,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.451Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9781781162644-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9781781162644",
+      "isbn13": "9781781162644",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:0c91c18582535495fbff1833",
+    "workId": "entity:c0b9a12ebe0446a0468032d5",
+    "title": "Later — legacy edition",
+    "status": "needs-review",
+    "publisher": "Hard Case Crime",
+    "isbn13": "9781789096491",
+    "pageCount": 256,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.452Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9781789096491-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9781789096491",
+      "isbn13": "9781789096491",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:73a3e7b4569ef4e367de8603",
+    "workId": "entity:96233227dee9da01e2b8a534",
+    "title": "Lisey's Story — legacy edition",
+    "status": "needs-review",
+    "publisher": "Scribner",
+    "isbn13": "9780743289412",
+    "pageCount": 528,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.452Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780743289412-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780743289412",
+      "isbn13": "9780743289412",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:c82b747a93f2bc2e60069926",
+    "workId": "entity:eeca473c4868f6207fdd1c97",
+    "title": "Misery — legacy edition",
+    "status": "needs-review",
+    "publisher": "Viking",
+    "isbn13": "9780670813643",
+    "pageCount": 310,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.452Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780670813643-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780670813643",
+      "isbn13": "9780670813643",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:ac80ba5ccfca6005e51a34de",
+    "workId": "entity:a4dc69348f5e0a93561e038e",
+    "title": "Mr. Mercedes — legacy edition",
+    "status": "needs-review",
+    "publisher": "Scribner",
+    "isbn13": "9781476754451",
+    "pageCount": 436,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.452Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9781476754451-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9781476754451",
+      "isbn13": "9781476754451",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:1e9121d8187f53d47d8af3cd",
+    "workId": "entity:ca3c2a40dcb7956f8702e494",
+    "title": "Needful Things — legacy edition",
+    "status": "needs-review",
+    "publisher": "Viking",
+    "isbn13": "9780670839537",
+    "pageCount": 690,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.452Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780670839537-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780670839537",
+      "isbn13": "9780670839537",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:1db9b714a41a212aa0fbacaa",
+    "workId": "entity:0dffd3a90a4bdbffa5633a46",
+    "title": "Pet Sematary — legacy edition",
+    "status": "needs-review",
+    "publisher": "Doubleday",
+    "isbn13": "9780385182447",
+    "pageCount": 374,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.452Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780385182447-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780385182447",
+      "isbn13": "9780385182447",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:f52710bbdbc966d2b9521f6e",
+    "workId": "entity:d0bec9aaa8c85d8e7cb04b0a",
+    "title": "Rage — legacy edition",
+    "status": "needs-review",
+    "publisher": "Signet Books",
+    "isbn13": "9780451076458",
+    "pageCount": 211,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.452Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780451076458-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780451076458",
+      "isbn13": "9780451076458",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:3b666b3cf810092ef6bd0d85",
+    "workId": "entity:d188df69a0d33363b0c6539c",
+    "title": "Revival — legacy edition",
+    "status": "needs-review",
+    "publisher": "Scribner",
+    "isbn13": "9781476770383",
+    "pageCount": 403,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.452Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9781476770383-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9781476770383",
+      "isbn13": "9781476770383",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:a603077e94c12ed1a59addeb",
+    "workId": "entity:a40484f1999d0407132a5a0d",
+    "title": "Roadwork — legacy edition",
+    "status": "needs-review",
+    "publisher": "Signet Books",
+    "isbn13": "9780451096685",
+    "pageCount": 274,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.453Z"
+      }
+    ],
+    "cover": null
+  },
+  {
+    "id": "entity:2dbc45659a4e0f4d1a304978",
+    "workId": "entity:d9280b62e6b58291b3f217f5",
+    "title": "Rose Madder — legacy edition",
+    "status": "needs-review",
+    "publisher": "Viking",
+    "isbn13": "9780670858699",
+    "pageCount": 420,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.453Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780670858699-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780670858699",
+      "isbn13": "9780670858699",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:1f919d4cdc2336ca1fcd6e6d",
+    "workId": "entity:1672dac0f86aecdf77e5199c",
+    "title": "Salem's Lot — legacy edition",
+    "status": "needs-review",
+    "publisher": "Doubleday",
+    "isbn13": "9780385007511",
+    "pageCount": 439,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.453Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780385007511-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780385007511",
+      "isbn13": "9780385007511",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:e90743e421788cbacdfd5228",
+    "workId": "entity:cfdcf1914c0ca733fdc8f5c6",
+    "title": "Sleeping Beauties — legacy edition",
+    "status": "needs-review",
+    "publisher": "Scribner",
+    "isbn13": "9781501163401",
+    "pageCount": 702,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.453Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9781501163401-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9781501163401",
+      "isbn13": "9781501163401",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:81517a9b19c0b4ed07427210",
+    "workId": "entity:6a6b5d17cacf696e7567c53c",
+    "title": "The Colorado Kid — legacy edition",
+    "status": "needs-review",
+    "publisher": "Hard Case Crime",
+    "isbn13": "9780843955842",
+    "pageCount": 184,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.453Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780843955842-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780843955842",
+      "isbn13": "9780843955842",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:7cebc70780d2f554cc4a4a53",
+    "workId": "entity:6e02d1fa61455aaeefe3bc39",
+    "title": "The Dark Half — legacy edition",
+    "status": "needs-review",
+    "publisher": "Viking",
+    "isbn13": "9780670829828",
+    "pageCount": 431,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.453Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780670829828-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780670829828",
+      "isbn13": "9780670829828",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:f6d2cc1ed4c3608bd02d9d2d",
+    "workId": "entity:bc5d8aba9880322715c840c8",
+    "title": "The Dark Tower II: The Drawing of the Three — legacy edition",
+    "status": "needs-review",
+    "publisher": "Grant",
+    "isbn13": "9780937986905",
+    "pageCount": 400,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.453Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780937986905-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780937986905",
+      "isbn13": "9780937986905",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:b2927e1d88f48a0f2521d68d",
+    "workId": "entity:e7f36b93215b6bb5b32b0bbb",
+    "title": "The Dark Tower III: The Waste Lands — legacy edition",
+    "status": "needs-review",
+    "publisher": "Grant",
+    "isbn13": "9780937986172",
+    "pageCount": 512,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.453Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780937986172-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780937986172",
+      "isbn13": "9780937986172",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:8a53ef3c0df2396cde5ca027",
+    "workId": "entity:2b153b7e6e224a9c36299ad5",
+    "title": "The Dark Tower IV: Wizard and Glass — legacy edition",
+    "status": "needs-review",
+    "publisher": "Grant",
+    "isbn13": "9781880418383",
+    "pageCount": 787,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.454Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9781880418383-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9781880418383",
+      "isbn13": "9781880418383",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:617e16933a268097ad0fa2b2",
+    "workId": "entity:40f7e88663c2f960e7e00cbd",
+    "title": "The Dark Tower V: Wolves of the Calla — legacy edition",
+    "status": "needs-review",
+    "publisher": "Grant",
+    "isbn13": "9781880418567",
+    "pageCount": 714,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.454Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9781880418567-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9781880418567",
+      "isbn13": "9781880418567",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:fe5e8916131837ca65ee4c9e",
+    "workId": "entity:6f99b507ca7ef0f6e1b5b2d8",
+    "title": "The Dark Tower VI: Song of Susannah — legacy edition",
+    "status": "needs-review",
+    "publisher": "Grant",
+    "isbn13": "9781880418598",
+    "pageCount": 432,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.454Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9781880418598-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9781880418598",
+      "isbn13": "9781880418598",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:af8410f2f628654cff588bbd",
+    "workId": "entity:5967a6baaac6098775c92a44",
+    "title": "The Dark Tower VII: The Dark Tower — legacy edition",
+    "status": "needs-review",
+    "publisher": "978-1-880-41862-8",
+    "pageCount": 845,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.454Z"
+      }
+    ]
+  },
+  {
+    "id": "entity:36ce89fc8ef9c445fa03fced",
+    "workId": "entity:62f3a76e0b2c3a35377a1892",
+    "title": "The Dark Tower: The Gunslinger — legacy edition",
+    "status": "needs-review",
+    "publisher": "Grant",
+    "isbn13": "9780937986509",
+    "pageCount": 224,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.454Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780937986509-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780937986509",
+      "isbn13": "9780937986509",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:264824e897876b8bbfb6876e",
+    "workId": "entity:f08c9fa9c5a549df26e404aa",
+    "title": "The Dark Tower: The Wind Through the Keyhole — legacy edition",
+    "status": "needs-review",
+    "publisher": "Grant",
+    "isbn13": "9781880418765",
+    "pageCount": 336,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.454Z"
+      }
+    ],
+    "cover": null
+  },
+  {
+    "id": "entity:6e3f6911dfe149336e955dc5",
+    "workId": "entity:305df4a70bae219f6b575ebd",
+    "title": "The Dead Zone — legacy edition",
+    "status": "needs-review",
+    "publisher": "Viking Press",
+    "isbn13": "9780670260775",
+    "pageCount": 428,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.454Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780670260775-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780670260775",
+      "isbn13": "9780670260775",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:f6b33348966e0569e79221a9",
+    "workId": "entity:002e51e4bff4b913b7f1b52d",
+    "title": "The Eyes of the Dragon — legacy edition",
+    "status": "needs-review",
+    "publisher": "Philtrum Press (1984)Viking (1987)",
+    "isbn13": "9780670814589",
+    "pageCount": 326,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.454Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780670814589-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780670814589",
+      "isbn13": "9780670814589",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:15852063eea6ca0e73d7b5e6",
+    "workId": "entity:c2dab3225355085c58ab9ca5",
+    "title": "The Girl Who Loved Tom Gordon — legacy edition",
+    "status": "needs-review",
+    "publisher": "Scribner",
+    "isbn13": "9780684867625",
+    "pageCount": 224,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.454Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780684867625-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780684867625",
+      "isbn13": "9780684867625",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:43a91669a6ec4b3c4e338e1f",
+    "workId": "entity:f102c68c58c16ff01197f8bd",
+    "title": "The Green Mile — legacy edition",
+    "status": "needs-review",
+    "publisher": "Signet Books",
+    "pageCount": 400,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.455Z"
+      }
+    ]
+  },
+  {
+    "id": "entity:ee61cd9561ed21fb5eac8d72",
+    "workId": "entity:d87e4cf89fc9ab995b2199d0",
+    "title": "The Institute — legacy edition",
+    "status": "needs-review",
+    "publisher": "Scribner",
+    "isbn13": "9781982110567",
+    "pageCount": 576,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.455Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9781982110567-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9781982110567",
+      "isbn13": "9781982110567",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:eb4b21edd5ba486c11d13f4e",
+    "workId": "entity:9161ba0b6c7b4c3fc685bcc1",
+    "title": "The Long Walk — legacy edition",
+    "status": "needs-review",
+    "publisher": "Signet Books",
+    "isbn13": "9780451087546",
+    "pageCount": 384,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.455Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780451087546-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780451087546",
+      "isbn13": "9780451087546",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:0b6670c48b2ce2c6420b32ac",
+    "workId": "entity:4c91c9954f2d6c0fb69811bd",
+    "title": "The Outsider — legacy edition",
+    "status": "needs-review",
+    "publisher": "Scribner",
+    "isbn13": "9781501180989",
+    "pageCount": 576,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.455Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9781501180989-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9781501180989",
+      "isbn13": "9781501180989",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:9f677bfc6acd0b58347644ba",
+    "workId": "entity:492354e750edaf618ba53c88",
+    "title": "The Regulators — legacy edition",
+    "status": "needs-review",
+    "publisher": "Dutton",
+    "isbn13": "9780525941903",
+    "pageCount": 480,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.455Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780525941903-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780525941903",
+      "isbn13": "9780525941903",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:aa116a4111cd45689e839fc7",
+    "workId": "entity:43333d41545188a3e7642160",
+    "title": "The Running Man — legacy edition",
+    "status": "needs-review",
+    "publisher": "Signet Books",
+    "isbn13": "9780451115089",
+    "pageCount": 219,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.455Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780451115089-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780451115089",
+      "isbn13": "9780451115089",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:2fc2bfc8f2b67c39df10ec46",
+    "workId": "entity:e5545015bc81065c5a27a217",
+    "title": "The Shining — legacy edition",
+    "status": "needs-review",
+    "publisher": "Doubleday",
+    "isbn13": "9780385121675",
+    "pageCount": 447,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.455Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780385121675-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780385121675",
+      "isbn13": "9780385121675",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:b3f6f77660b8d38ecfd2853e",
+    "workId": "entity:63332c185d1d6d31a15e26a8",
+    "title": "The Stand Uncut — legacy edition",
+    "status": "needs-review",
+    "publisher": "Doubleday",
+    "isbn13": "9780385199575",
+    "pageCount": 1152,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.455Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780385199575-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780385199575",
+      "isbn13": "9780385199575",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:cefc772deb14de2e9d58e69d",
+    "workId": "entity:1100a512833a0a8b4c72a25f",
+    "title": "The Stand — legacy edition",
+    "status": "needs-review",
+    "publisher": "Doubleday",
+    "isbn13": "9780385121682",
+    "pageCount": 823,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.455Z"
+      }
+    ],
+    "cover": null
+  },
+  {
+    "id": "entity:ff7cc255856a1353457b2ce6",
+    "workId": "entity:c085abd4a3b578da27ea33a2",
+    "title": "The Talisman — legacy edition",
+    "status": "needs-review",
+    "publisher": "Viking",
+    "isbn13": "9780670691999",
+    "pageCount": 646,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.456Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780670691999-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780670691999",
+      "isbn13": "9780670691999",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:a07e9e94428d25e95c0915db",
+    "workId": "entity:0b6894e0260ebc8da8d96602",
+    "title": "The Tommyknockers — legacy edition",
+    "status": "needs-review",
+    "publisher": "Putnam",
+    "isbn13": "9780399133145",
+    "pageCount": 558,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.456Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780399133145-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780399133145",
+      "isbn13": "9780399133145",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:1afebf28d81eb85938e96d9e",
+    "workId": "entity:fe729f4bb84070c8be44e63d",
+    "title": "Thinner — legacy edition",
+    "status": "needs-review",
+    "publisher": "NAL",
+    "isbn13": "9780453004688",
+    "pageCount": 309,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.456Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780453004688-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9780453004688",
+      "isbn13": "9780453004688",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "entity:933837205fea0cb6cbe04c0c",
+    "workId": "entity:8c9f4a6a904988ac1785eac8",
+    "title": "Under the Dome — legacy edition",
+    "status": "needs-review",
+    "publisher": "Scribner",
+    "isbn13": "9781439148501",
+    "pageCount": 1074,
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.456Z"
+      }
+    ],
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/isbn/9781439148501-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/isbn/9781439148501",
+      "isbn13": "9781439148501",
+      "attribution": "Cover image via Open Library Covers API"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:d4bb1b97b1b423f9059db3c7",
+    "workId": "entity:d4bb1b97b1b423f9059db3c7",
+    "title": "1922 — Open Library cover record",
+    "publisher": "Scribner",
+    "isbn13": "9781982136079",
+    "pageCount": 195,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/14655282-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL19781625W",
+      "isbn13": "9781982136079",
+      "attribution": "Cover image via Open Library",
+      "coverId": 14655282,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:6f3850e9fed4585aafaa03e2",
+    "workId": "entity:6f3850e9fed4585aafaa03e2",
+    "title": "1408 — Open Library cover record",
+    "publisher": "Heyne",
+    "isbn13": "9783641193539",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8586090-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL19779432W",
+      "isbn13": "9783641193539",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8586090,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:b5b7ef0c8bcddd504f02e1c9",
+    "workId": "entity:b5b7ef0c8bcddd504f02e1c9",
+    "title": "A Good Marriage — Open Library cover record",
+    "publisher": "Simon & Schuster Audio",
+    "isbn13": "9781501104428",
+    "pageCount": 216,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8588024-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL19781665W",
+      "isbn13": "9781501104428",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8588024,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:cc240f920a745be8d628da2d",
+    "workId": "entity:cc240f920a745be8d628da2d",
+    "title": "All That You Love Will Be Carried Away — Open Library cover record",
+    "publisher": "Recorded Books",
+    "isbn13": "9781456116309",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8586183-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL19779523W",
+      "isbn13": "9781456116309",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8586183,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:92685f661c8a2b6e546f9498",
+    "workId": "entity:92685f661c8a2b6e546f9498",
+    "title": "Autopsy Room Four — Open Library cover record",
+    "publisher": "Recorded Books",
+    "isbn13": "9781461818755",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8586835-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL19780171W",
+      "isbn13": "9781461818755",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8586835,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:11e73e679052edc02c320de0",
+    "workId": "entity:11e73e679052edc02c320de0",
+    "title": "Apt Pupil — Open Library cover record",
+    "publisher": "Scribner",
+    "isbn13": "9784444408172",
+    "pageCount": 224,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/14655189-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL149093W",
+      "isbn13": "9784444408172",
+      "attribution": "Cover image via Open Library",
+      "coverId": 14655189,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:c5dea91578f769407fcd7de5",
+    "workId": "entity:c5dea91578f769407fcd7de5",
+    "title": "Big Driver — Open Library cover record",
+    "publisher": "Simon & Schuster Audio",
+    "isbn13": "9781442383746",
+    "pageCount": 148,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8588032-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL19781688W",
+      "isbn13": "9781442383746",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8588032,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:1865c7e2a0ed928bfd9f2a46",
+    "workId": "entity:1865c7e2a0ed928bfd9f2a46",
+    "title": "Blockade Billy — Open Library cover record",
+    "publisher": "Storyville, LLC",
+    "isbn13": "9781451608212",
+    "pageCount": 132,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/9324873-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL15165826W",
+      "isbn13": "9781451608212",
+      "attribution": "Cover image via Open Library",
+      "coverId": 9324873,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:6734f2aa1ec9d51c1cf693c7",
+    "workId": "entity:6734f2aa1ec9d51c1cf693c7",
+    "title": "Christine — Open Library cover record",
+    "publisher": "Viking Press",
+    "isbn13": "9780812407082",
+    "pageCount": 503,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/14655985-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL81619W",
+      "isbn13": "9780812407082",
+      "attribution": "Cover image via Open Library",
+      "coverId": 14655985,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:3f4dd0cf4bb2cd54b68b7de5",
+    "workId": "entity:3f4dd0cf4bb2cd54b68b7de5",
+    "title": "Children of the Corn — Open Library cover record",
+    "publisher": "Vintage Books",
+    "isbn13": "9781101974049",
+    "pageCount": 16,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8595626-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL19791056W",
+      "isbn13": "9781101974049",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8595626,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:99120bab8e650a0cf9387320",
+    "workId": "entity:99120bab8e650a0cf9387320",
+    "title": "Crouch End — Open Library cover record",
+    "publisher": "Heyne",
+    "isbn13": "9783641193232",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8566413-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL19650699W",
+      "isbn13": "9783641193232",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8566413,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:3270e1eaa91592e2c35a6786",
+    "workId": "entity:3270e1eaa91592e2c35a6786",
+    "title": "Cycle of the Werewolf — Open Library cover record",
+    "publisher": "Planeta",
+    "isbn13": "9788499081281",
+    "pageCount": 150,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/14651552-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL81583W",
+      "isbn13": "9788499081281",
+      "attribution": "Cover image via Open Library",
+      "coverId": 14651552,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:0b8cf368f990c7fa38fd44de",
+    "workId": "entity:0b8cf368f990c7fa38fd44de",
+    "title": "Dedication — Open Library cover record",
+    "publisher": "Heyne",
+    "isbn13": "9783641193300",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8566425-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL19650711W",
+      "isbn13": "9783641193300",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8566425,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:f28f012f4444cbfd9b31bbce",
+    "workId": "entity:f28f012f4444cbfd9b31bbce",
+    "title": "Dolan's Cadillac — Open Library cover record",
+    "publisher": "Lord John Press",
+    "isbn13": "9789070066970",
+    "pageCount": 102,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/10710279-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL9942554W",
+      "isbn13": "9789070066970",
+      "attribution": "Cover image via Open Library",
+      "coverId": 10710279,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:b5dfafd4d928f9790ea6ea26",
+    "workId": "entity:b5dfafd4d928f9790ea6ea26",
+    "title": "Elevation — Open Library cover record",
+    "publisher": "Hodder",
+    "isbn13": "9781432858070",
+    "pageCount": 160,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/12376066-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL18021898W",
+      "isbn13": "9781432858070",
+      "attribution": "Cover image via Open Library",
+      "coverId": 12376066,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:887baf82654aa88b42c732d0",
+    "workId": "entity:887baf82654aa88b42c732d0",
+    "title": "Drunken Fireworks — Open Library cover record",
+    "publisher": "Simon & Schuster Audio",
+    "isbn13": "9781473622128",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/10531247-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL24135049W",
+      "isbn13": "9781473622128",
+      "attribution": "Cover image via Open Library",
+      "coverId": 10531247,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:833a52d6cd5750643c4c628f",
+    "workId": "entity:833a52d6cd5750643c4c628f",
+    "title": "Gramma — Open Library cover record",
+    "publisher": "Random House Audio",
+    "isbn13": "9780394297798",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/13299906-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL149131W",
+      "isbn13": "9780394297798",
+      "attribution": "Cover image via Open Library",
+      "coverId": 13299906,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:774e19cbe3adb80b77b91b24",
+    "workId": "entity:774e19cbe3adb80b77b91b24",
+    "title": "Gwendy's Button Box — Open Library cover record",
+    "publisher": "Simon & Schuster Audio",
+    "isbn13": "9781501188305",
+    "pageCount": 176,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/9325640-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL18092161W",
+      "isbn13": "9781501188305",
+      "attribution": "Cover image via Open Library",
+      "coverId": 9325640,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:d9bc8cb3015873a018e8c8d6",
+    "workId": "entity:d9bc8cb3015873a018e8c8d6",
+    "title": "Hearts in Atlantis — Open Library cover record",
+    "publisher": "Plaza & Janes Editores, S.A.",
+    "isbn13": "9780671024246",
+    "pageCount": 598,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8536326-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL81624W",
+      "isbn13": "9780671024246",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8536326,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:9e8d1440bd902746ac92ca83",
+    "workId": "entity:9e8d1440bd902746ac92ca83",
+    "title": "If It Bleeds — Open Library cover record",
+    "publisher": "Altın Kitaplar",
+    "isbn13": "9781982137977",
+    "pageCount": 457,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/14654512-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL20663157W",
+      "isbn13": "9781982137977",
+      "attribution": "Cover image via Open Library",
+      "coverId": 14654512,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:1e384e13b5bc270b642a7807",
+    "workId": "entity:1e384e13b5bc270b642a7807",
+    "title": "In the Deathroom — Open Library cover record",
+    "publisher": "Recorded Books",
+    "isbn13": "9781449813901",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8587450-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL19780775W",
+      "isbn13": "9781449813901",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8587450,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:3f443e31a7b0e709c9a1b49e",
+    "workId": "entity:3f443e31a7b0e709c9a1b49e",
+    "title": "In the Tall Grass — Open Library cover record",
+    "publisher": "Simon & Schuster Audio",
+    "isbn13": "9781476710822",
+    "pageCount": 31,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/10460598-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL21781214W",
+      "isbn13": "9781476710822",
+      "attribution": "Cover image via Open Library",
+      "coverId": 10460598,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:c474f5751aa9cd6a55dd6972",
+    "workId": "entity:c474f5751aa9cd6a55dd6972",
+    "title": "Jerusalem's Lot — Open Library cover record",
+    "publisher": "Lübbe",
+    "isbn13": "9783785710418",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/3256644-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL14916772W",
+      "isbn13": "9783785710418",
+      "attribution": "Cover image via Open Library",
+      "coverId": 3256644,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:0a73e17b615dd73de4503d9c",
+    "workId": "entity:0a73e17b615dd73de4503d9c",
+    "title": "L. T.'s Theory of Pets — Open Library cover record",
+    "publisher": "Simon & Schuster Audio",
+    "isbn13": "9781840324174",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/480143-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL149185W",
+      "isbn13": "9781840324174",
+      "attribution": "Cover image via Open Library",
+      "coverId": 480143,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:c1c275469f583e884e4d3750",
+    "workId": "entity:c1c275469f583e884e4d3750",
+    "title": "Laurie — Open Library cover record",
+    "publisher": "Penguin Random House",
+    "isbn13": "9788416628629",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/15135339-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL44276940W",
+      "isbn13": "9788416628629",
+      "attribution": "Cover image via Open Library",
+      "coverId": 15135339,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:feadd355e68012b2ddd56d0a",
+    "workId": "entity:feadd355e68012b2ddd56d0a",
+    "title": "Lunch at the Gotham Café — Open Library cover record",
+    "publisher": "Nórdica Libros",
+    "isbn13": "9783641193522",
+    "pageCount": 96,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8587757-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL19781075W",
+      "isbn13": "9783641193522",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8587757,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:560f10d209d9dcf96280161b",
+    "workId": "entity:560f10d209d9dcf96280161b",
+    "title": "Mile 81 — Open Library cover record",
+    "publisher": "Hodder & Stoughton",
+    "isbn13": "9781444758535",
+    "pageCount": 65,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/6941729-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL16486243W",
+      "isbn13": "9781444758535",
+      "attribution": "Cover image via Open Library",
+      "coverId": 6941729,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:561e4e7f5ece5141c825b29b",
+    "workId": "entity:561e4e7f5ece5141c825b29b",
+    "title": "Mrs. Todd's Shortcut — Open Library cover record",
+    "publisher": "Random House Audio",
+    "isbn13": "9780394298689",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/9330664-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL149148W",
+      "isbn13": "9780394298689",
+      "attribution": "Cover image via Open Library",
+      "coverId": 9330664,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:8d82ca57c2d53c3643c90a10",
+    "workId": "entity:8d82ca57c2d53c3643c90a10",
+    "title": "My Pretty Pony — Open Library cover record",
+    "publisher": "Library Fellows of the Whitney Museum of American Art",
+    "isbn13": "9780394580371",
+    "pageCount": 100,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8406193-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL81590W",
+      "isbn13": "9780394580371",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8406193,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:a993fab32bde775560b45346",
+    "workId": "entity:a993fab32bde775560b45346",
+    "title": "N. — Open Library cover record",
+    "publisher": "Darkside",
+    "isbn13": "9788566636185",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8567073-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL19651691W",
+      "isbn13": "9788566636185",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8567073,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:53c8ecc0bba38d4c3600f75a",
+    "workId": "entity:53c8ecc0bba38d4c3600f75a",
+    "title": "Nona — Open Library cover record",
+    "publisher": "Heyne",
+    "isbn13": "9783641193416",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/9334019-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL20666488W",
+      "isbn13": "9783641193416",
+      "attribution": "Cover image via Open Library",
+      "coverId": 9334019,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:71d725cbcc196e4e1670a493",
+    "workId": "entity:71d725cbcc196e4e1670a493",
+    "title": "One for the Road — Open Library cover record",
+    "publisher": "PS Publishing",
+    "isbn13": "9781848630529",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8595641-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL19791071W",
+      "isbn13": "9781848630529",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8595641,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:b5d8a1192f367926b28d764f",
+    "workId": "entity:b5d8a1192f367926b28d764f",
+    "title": "Quitters, Inc. — Open Library cover record",
+    "publisher": "Phoenix Audio",
+    "isbn13": "9781597770774",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/1480217-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL149153W",
+      "isbn13": "9781597770774",
+      "attribution": "Cover image via Open Library",
+      "coverId": 1480217,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:e4efaa6b0213ff4c7ef7b44f",
+    "workId": "entity:e4efaa6b0213ff4c7ef7b44f",
+    "title": "Riding the Bullet — Open Library cover record",
+    "publisher": "Luitingh - Sijthoff",
+    "isbn13": "9780743204675",
+    "pageCount": 94,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/10713065-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL149155W",
+      "isbn13": "9780743204675",
+      "attribution": "Cover image via Open Library",
+      "coverId": 10713065,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:0dfab0d0f1dcc43fb957fd39",
+    "workId": "entity:0dfab0d0f1dcc43fb957fd39",
+    "title": "Rita Hayworth and Shawshank Redemption — Open Library cover record",
+    "publisher": "BBC",
+    "isbn13": "9781982155759",
+    "pageCount": 181,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/14653969-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL14917451W",
+      "isbn13": "9781982155759",
+      "attribution": "Cover image via Open Library",
+      "coverId": 14653969,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:a40484f1999d0407132a5a0d",
+    "workId": "entity:a40484f1999d0407132a5a0d",
+    "title": "Roadwork — Open Library cover record",
+    "publisher": "AST",
+    "isbn13": "9781101137932",
+    "pageCount": 362,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/14651941-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL149102W",
+      "isbn13": "9781101137932",
+      "attribution": "Cover image via Open Library",
+      "coverId": 14651941,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:b81b787f2f4d9c07a974efa4",
+    "workId": "entity:b81b787f2f4d9c07a974efa4",
+    "title": "Secret Window, Secret Garden — Open Library cover record",
+    "publisher": "BBC Audiobooks",
+    "isbn13": "9781508218609",
+    "pageCount": 4,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/297589-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL14917476W",
+      "isbn13": "9781508218609",
+      "attribution": "Cover image via Open Library",
+      "coverId": 297589,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:3b47c9f20b7bfbc1d7a3fd6e",
+    "workId": "entity:3b47c9f20b7bfbc1d7a3fd6e",
+    "title": "Stationary Bike — Open Library cover record",
+    "publisher": "Recorded Books",
+    "isbn13": "9781428135543",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/481253-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL149163W",
+      "isbn13": "9781428135543",
+      "attribution": "Cover image via Open Library",
+      "coverId": 481253,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:0194ce7d888c6109a8573fb7",
+    "workId": "entity:0194ce7d888c6109a8573fb7",
+    "title": "The Body — Open Library cover record",
+    "publisher": "Pickwick",
+    "isbn13": "9789502800288",
+    "pageCount": 294,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/14655703-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL149108W",
+      "isbn13": "9789502800288",
+      "attribution": "Cover image via Open Library",
+      "coverId": 14655703,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:2ee68d4ab51536901418dfc7",
+    "workId": "entity:2ee68d4ab51536901418dfc7",
+    "title": "The Breathing Method — Open Library cover record",
+    "publisher": "John Curley & Assoc",
+    "isbn13": "9780140869446",
+    "pageCount": 106,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/14655051-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL149169W",
+      "isbn13": "9780140869446",
+      "attribution": "Cover image via Open Library",
+      "coverId": 14655051,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:837bfc0402066bb52669be42",
+    "workId": "entity:837bfc0402066bb52669be42",
+    "title": "The Doctor's Case — Open Library cover record",
+    "publisher": "Heyne",
+    "isbn13": "9783641193270",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8566387-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL19650676W",
+      "isbn13": "9783641193270",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8566387,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:a34163a2432c0051422d86a4",
+    "workId": "entity:a34163a2432c0051422d86a4",
+    "title": "The Gingerbread Girl — Open Library cover record",
+    "publisher": "Sperling & Kupfer",
+    "isbn13": "9788860612342",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8289065-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL14917109W",
+      "isbn13": "9788860612342",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8289065,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:f102c68c58c16ff01197f8bd",
+    "workId": "entity:f102c68c58c16ff01197f8bd",
+    "title": "The Green Mile — Open Library cover record",
+    "publisher": "FollettBound",
+    "isbn13": "9789024534067",
+    "pageCount": 465,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/9334567-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL81629W",
+      "isbn13": "9789024534067",
+      "attribution": "Cover image via Open Library",
+      "coverId": 9334567,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:a450f6ed4275837bfeab583e",
+    "workId": "entity:a450f6ed4275837bfeab583e",
+    "title": "The Gunslinger — Open Library cover record",
+    "publisher": "HODDER",
+    "isbn13": "9780140867169",
+    "pageCount": 256,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8396638-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL81628W",
+      "isbn13": "9780140867169",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8396638,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:fa50c4c59f229ec5473cc3ec",
+    "workId": "entity:fa50c4c59f229ec5473cc3ec",
+    "title": "The House on Maple Street — Open Library cover record",
+    "publisher": "Heyne",
+    "isbn13": "9783641193263",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8566519-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL19650797W",
+      "isbn13": "9783641193263",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8566519,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:30bf0e26b1dd8f082e77acb3",
+    "workId": "entity:30bf0e26b1dd8f082e77acb3",
+    "title": "The Jaunt — Open Library cover record",
+    "publisher": "PONS",
+    "isbn13": "9783125615557",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/9330670-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL20663554W",
+      "isbn13": "9783125615557",
+      "attribution": "Cover image via Open Library",
+      "coverId": 9330670,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:3ef87309ee844f37eb6f50f3",
+    "workId": "entity:3ef87309ee844f37eb6f50f3",
+    "title": "The Langoliers — Open Library cover record",
+    "publisher": "Audio Literature",
+    "isbn13": "9780453007443",
+    "pageCount": 311,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8565901-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL149138W",
+      "isbn13": "9780453007443",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8565901,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:97c61981859be8c5885acbdc",
+    "workId": "entity:97c61981859be8c5885acbdc",
+    "title": "The Library Policeman — Open Library cover record",
+    "publisher": "Signet",
+    "isbn13": "9780453007481",
+    "pageCount": 137,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/297590-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL14917299W",
+      "isbn13": "9780453007481",
+      "attribution": "Cover image via Open Library",
+      "coverId": 297590,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:32bf79d6039471ce2d41651e",
+    "workId": "entity:32bf79d6039471ce2d41651e",
+    "title": "The Life of Chuck — Open Library cover record",
+    "publisher": "Hodder & Stoughton",
+    "isbn13": "9781399753425",
+    "pageCount": 128,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/15138572-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL44330205W",
+      "isbn13": "9781399753425",
+      "attribution": "Cover image via Open Library",
+      "coverId": 15138572,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:0e849ce60fe48c8b6ade1137",
+    "workId": "entity:0e849ce60fe48c8b6ade1137",
+    "title": "The Little Sisters of Eluria — Open Library cover record",
+    "publisher": "Donald M. Grant, Publishers",
+    "isbn13": "9781880418734",
+    "pageCount": 312,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/7029831-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL16502946W",
+      "isbn13": "9781880418734",
+      "attribution": "Cover image via Open Library",
+      "coverId": 7029831,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:f85d8cefa8276b7d47c5372d",
+    "workId": "entity:f85d8cefa8276b7d47c5372d",
+    "title": "The Man in the Black Suit — Open Library cover record",
+    "publisher": "Simon & Schuster Audio",
+    "isbn13": "9780743525855",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/480345-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL149140W",
+      "isbn13": "9780743525855",
+      "attribution": "Cover image via Open Library",
+      "coverId": 480345,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:17f726621b52c5d5e926e0ab",
+    "workId": "entity:17f726621b52c5d5e926e0ab",
+    "title": "The Mist — Open Library cover record",
+    "publisher": "Signet",
+    "isbn13": "9788440220707",
+    "pageCount": 272,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/9330636-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL149144W",
+      "isbn13": "9788440220707",
+      "attribution": "Cover image via Open Library",
+      "coverId": 9330636,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:92a75528ac6a88c5e0b17459",
+    "workId": "entity:92a75528ac6a88c5e0b17459",
+    "title": "The Moving Finger — Open Library cover record",
+    "publisher": "Heyne",
+    "isbn13": "9783641193287",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8566505-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL19650782W",
+      "isbn13": "9783641193287",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8566505,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:c32d3fb77f01d159fd130ab5",
+    "workId": "entity:c32d3fb77f01d159fd130ab5",
+    "title": "The Night Flier — Open Library cover record",
+    "publisher": "Heyne",
+    "isbn13": "9783641193294",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8566466-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL19650747W",
+      "isbn13": "9783641193294",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8566466,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:f9367c1364f286e6777182b7",
+    "workId": "entity:f9367c1364f286e6777182b7",
+    "title": "The Road Virus Heads North — Open Library cover record",
+    "publisher": "Simon & Schuster Audio",
+    "isbn13": "9780743563864",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8587761-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL19781079W",
+      "isbn13": "9780743563864",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8587761,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:1100a512833a0a8b4c72a25f",
+    "workId": "entity:1100a512833a0a8b4c72a25f",
+    "title": "The Stand — Open Library cover record",
+    "publisher": "Plaza & Janes Editores, S.A.",
+    "isbn13": "9781529356540",
+    "pageCount": 1153,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/9255992-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL81618W",
+      "isbn13": "9781529356540",
+      "attribution": "Cover image via Open Library",
+      "coverId": 9255992,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:df14c64beecb6f0c70849652",
+    "workId": "entity:df14c64beecb6f0c70849652",
+    "title": "The Sun Dog — Open Library cover record",
+    "publisher": "Audio Literature",
+    "isbn13": "9780453007573",
+    "pageCount": 209,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/14655214-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL14916850W",
+      "isbn13": "9780453007573",
+      "attribution": "Cover image via Open Library",
+      "coverId": 14655214,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:82d5cd95eb6ff440e7c219e3",
+    "workId": "entity:82d5cd95eb6ff440e7c219e3",
+    "title": "The Things They Left Behind — Open Library cover record",
+    "publisher": "Heyne",
+    "isbn13": "9783641193584",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8567090-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL15645456W",
+      "isbn13": "9783641193584",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8567090,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:c546d7c94e2b98a60ca667c2",
+    "workId": "entity:c546d7c94e2b98a60ca667c2",
+    "title": "The Ten O'Clock People — Open Library cover record",
+    "publisher": "Heyne",
+    "isbn13": "9783641193355",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8566437-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL19650723W",
+      "isbn13": "9783641193355",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8566437,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:43df7edf15d545d8c76955b1",
+    "workId": "entity:43df7edf15d545d8c76955b1",
+    "title": "The Way Station — Open Library cover record",
+    "publisher": "Marvel",
+    "isbn13": "9781982109905",
+    "pageCount": 128,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8459657-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL19347844W",
+      "isbn13": "9781982109905",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8459657,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:0df3f004b15dca496988e8b9",
+    "workId": "entity:0df3f004b15dca496988e8b9",
+    "title": "Throttle — Open Library cover record",
+    "publisher": "J'ai Lu",
+    "isbn13": "9780062215956",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/14655558-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL27440138W",
+      "isbn13": "9780062215956",
+      "attribution": "Cover image via Open Library",
+      "coverId": 14655558,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:a68977442eaa6915f553ba04",
+    "workId": "entity:a68977442eaa6915f553ba04",
+    "title": "Umney's Last Case — Open Library cover record",
+    "publisher": "Penguin Books",
+    "isbn13": "9780146000744",
+    "pageCount": 92,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/14651352-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL14917659W",
+      "isbn13": "9780146000744",
+      "attribution": "Cover image via Open Library",
+      "coverId": 14651352,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:caa64bfc9deec277786406d3",
+    "workId": "entity:caa64bfc9deec277786406d3",
+    "title": "Ur — Open Library cover record",
+    "publisher": "Simon & Schuster Audio",
+    "isbn13": "9781442303096",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8536417-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL19622930W",
+      "isbn13": "9781442303096",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8536417,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:53ca289bf6459ef518a413e1",
+    "workId": "entity:53ca289bf6459ef518a413e1",
+    "title": "Word Processor of the Gods — Open Library cover record",
+    "publisher": "LANGUES POUR TO",
+    "isbn13": "9782266258548",
+    "pageCount": 105,
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/9333895-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL20666372W",
+      "isbn13": "9782266258548",
+      "attribution": "Cover image via Open Library",
+      "coverId": 9333895,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  },
+  {
+    "id": "edition:openlibrary-cover:8a06824f488936b87f30a546",
+    "workId": "entity:8a06824f488936b87f30a546",
+    "title": "You Know They Got a Hell of a Band — Open Library cover record",
+    "publisher": "Heyne",
+    "isbn13": "9783641193317",
+    "cover": {
+      "provider": "Open Library",
+      "imageUrl": "https://covers.openlibrary.org/b/id/8566527-L.jpg?default=false",
+      "recordUrl": "https://openlibrary.org/works/OL19650807W",
+      "isbn13": "9783641193317",
+      "attribution": "Cover image via Open Library",
+      "coverId": 8566527,
+      "retrievedAt": "2026-08-11T20:01:32.851Z"
+    }
+  }
+]

@@ -1,66 +1,62 @@
-# Stephen King Universe 2.0
+# Stephen King Universe
 
-A responsive, CSS/SVG-first digital archive built with Next.js 15. The interface treats the light and dark modes as two narrative realities:
+An English-language scholarly and editorial guide to Stephen King's works,
+characters, screen adaptations, places, timeline, and source evidence.
 
-- **Public Archive** — orderly, official and incomplete.
-- **Recovered Archive** — fragmented, relational and closer to the truth.
+## Requirements
 
-## Included
+- Node.js `>=22.13.0`
+- pnpm `11.12.0`
 
-- Responsive navigation: full rail, compact laptop rail and mobile drawer
-- Exhibition landing page
-- Shared archive engine for books, short stories and villains
-- Grid/list views, search, sorting, random records and pagination
-- Desktop overlay inspectors and mobile full-screen case files
-- Procedural CSS surfaces and custom SVG evidence glyphs
-- Clean public routes: `/books`, `/short-stories`, `/villains`, `/about`
-- Redirects from the previous `/pages/*` URLs
-- API error states that explain missing configuration
-- Next 15 / React 19 / ESLint 9 dependency alignment
-
-## Setup
-
-Copy the environment template:
+## Local development
 
 ```bash
-cp .env.example .env.local
+pnpm install --frozen-lockfile
+pnpm run dev
 ```
 
-Install with pnpm:
+Open `http://localhost:3000`.
+
+## Release checks
 
 ```bash
-corepack enable
-pnpm install
-pnpm dev
+pnpm run lint
+pnpm test
 ```
 
-npm also works:
+`pnpm test` creates the same standard Next.js production build used by Vercel
+and runs release checks against the generated browser assets.
 
-```bash
-npm install
-npm run dev
-```
+## Vercel
 
-Open http://localhost:3000.
+Import the GitHub repository into Vercel. The framework preset should be
+detected as Next.js. Use these settings if manual configuration is necessary:
 
-## Environment variables
+- Install command: `pnpm install --frozen-lockfile`
+- Build command: `pnpm run build`
+- Output directory: leave empty (Next.js default)
+- Node.js: 22.x or newer
+
+No database is used by the application. Site records live in versioned JSON
+under `data/` and are rendered as public website content.
+
+## Local enrichment credentials
+
+Copy `.env.example` to `.env.local` and set only the credentials you use:
 
 ```env
-STEPHEN_KING_API=https://stephen-king-api.onrender.com
-GOOGLE_API=https://www.googleapis.com/books/v1/volumes
+TMDB_READ_ACCESS_TOKEN=
 GOOGLE_BOOKS_API_KEY=
 ```
 
-`STEPHEN_KING_API` must be the server root. Do not include `/api`, because the routes append it.
+Environment files are ignored by Git. Do not add `NEXT_PUBLIC_` or `VITE_`
+prefixes to either credential.
 
-## Verification
+Google Books requests are made only by the local enrichment script. Every
+request requires and includes `GOOGLE_BOOKS_API_KEY`; the key is never written
+to generated JSON or included in browser assets.
 
 ```bash
-npm run typecheck
-npm run lint
-npm run build
+pnpm run enrich:google-books
+pnpm run enrich:tmdb
 ```
-
-## Data and rights
-
-This is an unofficial portfolio project. Stephen King names and titles belong to their respective rights holders. External API data may be incomplete. The UI deliberately avoids reproducing character or villain artwork and uses metadata, typography, CSS and SVG as its primary visual language.

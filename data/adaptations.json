@@ -1,0 +1,2463 @@
+[
+  {
+    "id": "entity:c6a8717926654cb34b2516ed",
+    "type": "movie",
+    "title": "'Salem's Lot (2024 film)",
+    "year": 2024,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "'Salem's Lot",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/%27Salem%27s_Lot_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.357Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:46a94337fd98d5d6f68b7e59",
+    "type": "television",
+    "title": "11.22.63 (miniseries)",
+    "year": 2016,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "11/22/63",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/11.22.63"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.352Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.425Z"
+  },
+  {
+    "id": "entity:fd470e74a509cd69e9b82993",
+    "type": "movie",
+    "title": "1408 (film)",
+    "year": 2007,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "1408",
+      "originalWorkType": "Short story",
+      "wikipedia": "https://en.wikipedia.org/wiki/1408_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.352Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:967d615256cdb3a23fe4301f",
+    "type": "movie",
+    "title": "1922 (2017 film)",
+    "year": 2017,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "1922",
+      "originalWorkType": "Novella",
+      "wikipedia": "https://en.wikipedia.org/wiki/1922_(2017_film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.352Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:2864b392a2a5911cc64408e7",
+    "type": "movie",
+    "title": "A Good Marriage (film)",
+    "year": 2014,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "A Good Marriage",
+      "originalWorkType": "Novella",
+      "wikipedia": "https://en.wikipedia.org/wiki/A_Good_Marriage_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.352Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.422Z"
+  },
+  {
+    "id": "entity:2891f4e6aedd88616979f288",
+    "type": "movie",
+    "title": "Apt Pupil (film)",
+    "year": 1998,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Apt Pupil",
+      "originalWorkType": "Novella",
+      "wikipedia": "https://en.wikipedia.org/wiki/Apt_Pupil_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.352Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:367f89449ed270d8cb1b85aa",
+    "type": "television",
+    "title": "Bag of Bones (miniseries)",
+    "year": 2011,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "Bag of Bones",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Bag_of_Bones_(miniseries)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.352Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.425Z"
+  },
+  {
+    "id": "entity:bb5b486f20fac9e3fd5334ef",
+    "type": "television",
+    "title": "Big Driver (TV film)",
+    "year": 2014,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "Big Driver",
+      "originalWorkType": "Novella",
+      "wikipedia": "https://en.wikipedia.org/wiki/Big_Driver_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.352Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.425Z"
+  },
+  {
+    "id": "entity:fa66db90fdb93a9defce46a6",
+    "type": "movie",
+    "title": "Billy Summers (film)",
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Billy Summers",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Billy_Summers#Film_adaptation"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.352Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.424Z"
+  },
+  {
+    "id": "entity:329d25fa9b56f3f78208d123",
+    "type": "movie",
+    "title": "Carrie (1976 film)",
+    "year": 1976,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Carrie",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Carrie_(1976_film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.352Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.422Z"
+  },
+  {
+    "id": "entity:f35ea54b5b2097e06e787f6e",
+    "type": "television",
+    "title": "Carrie (2002 TV film)",
+    "year": 2002,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "Carrie",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Carrie_(2002_film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.353Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.424Z"
+  },
+  {
+    "id": "entity:2114a35618a3f59d18c7380e",
+    "type": "movie",
+    "title": "Carrie (2013 film)",
+    "year": 2013,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Carrie",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Carrie_(2013_film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.353Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:0f0a58f4b747eaa8cd579fa1",
+    "type": "television",
+    "title": "Carrie (upcoming TV series)",
+    "year": 2025,
+    "status": "approved",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "Carrie",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Carrie_(miniseries)",
+      "categories": [
+        "Fiction"
+      ]
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.353Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:19:21.759Z"
+  },
+  {
+    "id": "entity:169e5caaa9bc935372390d0a",
+    "type": "movie",
+    "title": "Cat's Eye",
+    "year": 1985,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Quitters, Inc. and The Ledge",
+      "originalWorkType": "Short story",
+      "wikipedia": "https://en.wikipedia.org/wiki/Cat%27s_Eye_(1985_film)"
+    },
+    "sources": [
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/cats-eye.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/cats-eye.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/cats-eye.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.353Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.422Z"
+  },
+  {
+    "id": "entity:fbe35b560aaf46423a2f9e72",
+    "type": "movie",
+    "title": "Cell (film)",
+    "year": 2016,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Cell",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Cell_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.353Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.422Z"
+  },
+  {
+    "id": "entity:5fbd510abae7f32c61f74a86",
+    "type": "television",
+    "title": "Chapelwaite",
+    "year": 2021,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "Jerusalem's Lot",
+      "originalWorkType": "Short story",
+      "wikipedia": "https://en.wikipedia.org/wiki/Chapelwaite"
+    },
+    "sources": [
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/television/chapelwaite.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/television/chapelwaite.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/television/chapelwaite.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.353Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.426Z"
+  },
+  {
+    "id": "entity:37d2482aa8476578b35e0c00",
+    "type": "movie",
+    "title": "Children of the Corn (1984 film)",
+    "year": 1984,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Children of the Corn",
+      "originalWorkType": "Short story",
+      "wikipedia": "https://en.wikipedia.org/wiki/Children_of_the_Corn_(1984_film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.353Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.422Z"
+  },
+  {
+    "id": "entity:a0046927680f3da7f9c56f03",
+    "type": "television",
+    "title": "Children of the Corn (2009 TV film)",
+    "year": 2009,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "Children of the Corn",
+      "originalWorkType": "Short story",
+      "wikipedia": "https://en.wikipedia.org/wiki/Children_of_the_Corn_(2009_film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.353Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.425Z"
+  },
+  {
+    "id": "entity:1bc499500b0b6862c7432307",
+    "type": "movie",
+    "title": "Children of the Corn (2020 film)",
+    "year": 2020,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Children of the Corn",
+      "originalWorkType": "Short story",
+      "wikipedia": "https://en.wikipedia.org/wiki/Children_of_the_Corn_(2020_film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.353Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:30cc68ab8a830dd3ec3f6428",
+    "type": "movie",
+    "title": "Christine (1983 film)",
+    "year": 1983,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Christine",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Christine_(1983_film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.353Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.422Z"
+  },
+  {
+    "id": "entity:538e26f774bd6f782223ded5",
+    "type": "movie",
+    "title": "Creepshow",
+    "year": 1982,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Weeds and The Crate",
+      "originalWorkType": "Short story",
+      "wikipedia": "https://en.wikipedia.org/wiki/Creepshow"
+    },
+    "sources": [
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/creepshow.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/creepshow.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/creepshow.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.354Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.422Z"
+  },
+  {
+    "id": "entity:f32852f7ec553afd78b21921",
+    "type": "television",
+    "title": "Creepshow (TV series)",
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "Gray Matter and Survivor Type",
+      "originalWorkType": "Short story",
+      "wikipedia": "https://en.wikipedia.org/wiki/Creepshow_(TV_series)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.354Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.426Z"
+  },
+  {
+    "id": "entity:4d6cc985adcc08506eb42d5d",
+    "type": "movie",
+    "title": "Creepshow 2",
+    "year": 1987,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "The Raft",
+      "originalWorkType": "Short story",
+      "wikipedia": "https://en.wikipedia.org/wiki/Creepshow_2"
+    },
+    "sources": [
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/creepshow-2.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/creepshow-2.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/creepshow-2.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.354Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.422Z"
+  },
+  {
+    "id": "entity:2dba93037a4d9c4f76c5aff0",
+    "type": "movie",
+    "title": "Cujo (film)",
+    "year": 1983,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Cujo",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Cujo_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.354Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.422Z"
+  },
+  {
+    "id": "entity:90978abd3fd67ad02e988869",
+    "type": "television",
+    "title": "Desperation (TV film)",
+    "year": 2006,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "Desperation",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Stephen_King%27s_Desperation"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.354Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.424Z"
+  },
+  {
+    "id": "entity:e3ef2259ee3eb49d83650094",
+    "type": "movie",
+    "title": "Doctor Sleep (2019 film)",
+    "year": 2019,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Doctor Sleep",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Doctor_Sleep_(2019_film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.354Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:ba0dd71fa59de62d33ef1a5e",
+    "type": "movie",
+    "title": "Dolan's Cadillac (film)",
+    "year": 2009,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Dolan's Cadillac",
+      "originalWorkType": "Novella",
+      "wikipedia": "https://en.wikipedia.org/wiki/Dolan%27s_Cadillac_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.354Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:a0072ca89c26da28335531f4",
+    "type": "movie",
+    "title": "Dolores Claiborne (film)",
+    "year": 1995,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Dolores Claiborne",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Dolores_Claiborne_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.354Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:d0166aeeff00f5ef6af3792f",
+    "type": "movie",
+    "title": "Dreamcatcher (2003 film)",
+    "year": 2003,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Dreamcatcher",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Dreamcatcher_(2003_film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.354Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:eca4b72aab86e7f93fc321f3",
+    "type": "television",
+    "title": "Fairy Tale (TV series)",
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "Fairy Tale",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Fairy_Tale_(novel)#TV_series_adaptation"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.354Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.426Z"
+  },
+  {
+    "id": "entity:7063a99dc83b51c57cbade44",
+    "type": "movie",
+    "title": "Firestarter (1984 film)",
+    "year": 1984,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Firestarter",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Firestarter_(1984_film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.354Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.422Z"
+  },
+  {
+    "id": "entity:9ae10284f8e39acc8c0c8ada",
+    "type": "movie",
+    "title": "Firestarter (2022 film)",
+    "year": 2022,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Firestarter",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Firestarter_(2022_film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.355Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:2194d12fc4c9d0494aa12ca4",
+    "type": "movie",
+    "title": "Gerald's Game (film)",
+    "year": 2017,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Gerald's Game",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Gerald%27s_Game_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.355Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:0728fa45f896f7294d87406c",
+    "type": "television",
+    "title": "Gramma (The Twilight Zone episode)",
+    "year": 1986,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "Gramma",
+      "originalWorkType": "Short story",
+      "wikipedia": "https://en.wikipedia.org/wiki/Gramma_(The_Twilight_Zone)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.355Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.424Z"
+  },
+  {
+    "id": "entity:42bd9fe601af1402179fa310",
+    "type": "movie",
+    "title": "Graveyard Shift (1990 film)",
+    "year": 1990,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Graveyard Shift",
+      "originalWorkType": "Short story",
+      "wikipedia": "https://en.wikipedia.org/wiki/Graveyard_Shift_(1990_film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.355Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.422Z"
+  },
+  {
+    "id": "entity:223f303af85fab42c7c4c2b8",
+    "type": "television",
+    "title": "Haven (TV series)",
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "The Colorado Kid",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Haven_(TV_series)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.355Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.425Z"
+  },
+  {
+    "id": "entity:8fef310657ff93fb0f76bb3e",
+    "type": "television",
+    "title": "Heads Will Roll (Under the Dome episode)",
+    "year": 2014,
+    "status": "approved",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "Under the Dome",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Heads_Will_Roll_(Under_the_Dome)",
+      "categories": [
+        "Fiction"
+      ]
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.355Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:18:55.679Z"
+  },
+  {
+    "id": "entity:b42290f74152c39c562ebfca",
+    "type": "movie",
+    "title": "Hearts in Atlantis (film)",
+    "year": 2001,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Low Men in Yellow Coats",
+      "originalWorkType": "Novella",
+      "wikipedia": "https://en.wikipedia.org/wiki/Hearts_in_Atlantis_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.355Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:666fb39ce0c6ea150541fdf2",
+    "type": "movie",
+    "title": "In the Tall Grass (film)",
+    "year": 2019,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "In the Tall Grass",
+      "originalWorkType": "Novella",
+      "wikipedia": "https://en.wikipedia.org/wiki/In_the_Tall_Grass_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.355Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:2c76840eb9ba2478b7b16630",
+    "type": "movie",
+    "title": "It (2017 film)",
+    "year": 2017,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "It",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/It_(2017_film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.355Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:48d2e4e8c08ac5830dadb34b",
+    "type": "television",
+    "title": "It (miniseries)",
+    "year": 1990,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "It",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/It_(miniseries)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.355Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.424Z"
+  },
+  {
+    "id": "entity:c18e9817a7f7bcb7ff714381",
+    "type": "movie",
+    "title": "It Chapter Two",
+    "year": 2019,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "It",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/It_Chapter_Two"
+    },
+    "sources": [
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/it-chapter-two.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/it-chapter-two.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/it-chapter-two.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.355Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.422Z"
+  },
+  {
+    "id": "entity:9a503316f4ae9067525775b7",
+    "type": "television",
+    "title": "Lisey's Story (miniseries)",
+    "year": 2021,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "Lisey's Story",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Lisey%27s_Story_(miniseries)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.355Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.424Z"
+  },
+  {
+    "id": "entity:626cd46da564ab06877cd427",
+    "type": "movie",
+    "title": "Maximum Overdrive",
+    "year": 1986,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Trucks",
+      "originalWorkType": "Short story",
+      "wikipedia": "https://en.wikipedia.org/wiki/Maximum_Overdrive"
+    },
+    "sources": [
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/maximum-overdrive.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/maximum-overdrive.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/maximum-overdrive.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.356Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.422Z"
+  },
+  {
+    "id": "entity:86444e0048dc1f04985957b5",
+    "type": "movie",
+    "title": "Mercy (2014 film)",
+    "year": 2014,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Gramma",
+      "originalWorkType": "Short story",
+      "wikipedia": "https://en.wikipedia.org/wiki/Mercy_(2014_film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.356Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:e4e5f2ac3fa98dbc6a838080",
+    "type": "movie",
+    "title": "Misery (film)",
+    "year": 1990,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Misery",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Misery_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.356Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.422Z"
+  },
+  {
+    "id": "entity:729d1c606e0abb8bd9bfd229",
+    "type": "movie",
+    "title": "Mr. Harrigan's Phone (film)",
+    "year": 2022,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Mr. Harrigan's Phone",
+      "originalWorkType": "Novella",
+      "wikipedia": "https://en.wikipedia.org/wiki/Mr._Harrigan%27s_Phone_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.356Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:c721c8708f4964a0b68170bc",
+    "type": "television",
+    "title": "Mr. Mercedes (TV series)",
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "Mr. Mercedes, Finders Keepers and End of Watch",
+      "originalWorkType": "Novel series",
+      "wikipedia": "https://en.wikipedia.org/wiki/Mr._Mercedes_(TV_series)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.356Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.425Z"
+  },
+  {
+    "id": "entity:4b7d9873b2eddeff53e8d10f",
+    "type": "movie",
+    "title": "Needful Things (film)",
+    "year": 1993,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Needful Things",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Needful_Things_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.356Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.422Z"
+  },
+  {
+    "id": "entity:a9f8f7fe927a3592f5603a57",
+    "type": "television",
+    "title": "Nightmares & Dreamscapes: From the Stories of Stephen King",
+    "year": 2006,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "Nightmares & Dreamscapes, Everything's Eventual, and Night Shift",
+      "originalWorkType": "Short story collection",
+      "wikipedia": "https://en.wikipedia.org/wiki/Nightmares_%26_Dreamscapes:_From_the_Stories_of_Stephen_King"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.356Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.425Z"
+  },
+  {
+    "id": "entity:3ac1eb588f8ad5dc75049d23",
+    "type": "movie",
+    "title": "No Smoking (2007 film)",
+    "year": 2007,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Quitters, Inc.",
+      "originalWorkType": "Short story",
+      "wikipedia": "https://en.wikipedia.org/wiki/No_Smoking_(2007_film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.356Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:d9a0679059542742500f4ba9",
+    "type": "television",
+    "title": "People in the Rain (Mr. Mercedes episode)",
+    "year": 2017,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "Mr. Mercedes",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Mr._Mercedes_(TV_series)#Episodes"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.356Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.424Z"
+  },
+  {
+    "id": "entity:d90531aadb5655747b74f9cd",
+    "type": "movie",
+    "title": "Pet Sematary (1989 film)",
+    "year": 1989,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Pet Sematary",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Pet_Sematary_(1989_film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.356Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.422Z"
+  },
+  {
+    "id": "entity:d0b6c2bdbbc76d32ebd4de70",
+    "type": "movie",
+    "title": "Pet Sematary (2019 film)",
+    "year": 2019,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Pet Sematary",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Pet_Sematary_(2019_film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.357Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:ecd3c6b761596d608bf09fd9",
+    "type": "television",
+    "title": "Quicksilver Highway",
+    "year": 1997,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "Chattery Teeth",
+      "originalWorkType": "Short story",
+      "wikipedia": "https://en.wikipedia.org/wiki/Quicksilver_Highway"
+    },
+    "sources": [
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/television/quicksilver-highway.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/television/quicksilver-highway.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/television/quicksilver-highway.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.357Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.424Z"
+  },
+  {
+    "id": "entity:e7cac0484450a73adb7d7090",
+    "type": "movie",
+    "title": "Riding the Bullet (film)",
+    "year": 2004,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Riding the Bullet",
+      "originalWorkType": "Novella",
+      "wikipedia": "https://en.wikipedia.org/wiki/Riding_the_Bullet_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.357Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:cfa16d31bb68978825cd225d",
+    "type": "television",
+    "title": "Salem's Lot (1979 miniseries)",
+    "year": 1979,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "'Salem's Lot",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Salem%27s_Lot_(1979_miniseries)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.357Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.424Z"
+  },
+  {
+    "id": "entity:1c159fb5840e106f16ef6cea",
+    "type": "television",
+    "title": "Salem's Lot (2004 miniseries)",
+    "year": 2004,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "'Salem's Lot",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Salem%27s_Lot_(2004_miniseries)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.357Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.425Z"
+  },
+  {
+    "id": "entity:dd861ffba5338aadfb181815",
+    "type": "movie",
+    "title": "Secret Window",
+    "year": 2004,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Secret Window, Secret Garden",
+      "originalWorkType": "Novella",
+      "wikipedia": "https://en.wikipedia.org/wiki/Secret_Window"
+    },
+    "sources": [
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/secret-window.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/secret-window.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/secret-window.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.357Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:a6af6cb180a8488e069032f7",
+    "type": "movie",
+    "title": "Silver Bullet",
+    "year": 1985,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Cycle of the Werewolf",
+      "originalWorkType": "Novella",
+      "wikipedia": "https://en.wikipedia.org/wiki/Silver_Bullet_(film)"
+    },
+    "sources": [
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/silver-bullet.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/silver-bullet.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/silver-bullet.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.357Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.422Z"
+  },
+  {
+    "id": "entity:e500f38cb9341fa0f8eb6c0a",
+    "type": "television",
+    "title": "Sometimes They Come Back (TV film)",
+    "year": 1991,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "Sometimes They Come Back",
+      "originalWorkType": "Short story",
+      "wikipedia": "https://en.wikipedia.org/wiki/Sometimes_They_Come_Back_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.357Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.424Z"
+  },
+  {
+    "id": "entity:6feac12f7f5c718a509a08f1",
+    "type": "movie",
+    "title": "Stand by Me (film)",
+    "year": 1986,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "The Body",
+      "originalWorkType": "Novella",
+      "wikipedia": "https://en.wikipedia.org/wiki/Stand_by_Me_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.357Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.422Z"
+  },
+  {
+    "id": "entity:b9f53dcaa040d2d953f0a785",
+    "type": "movie",
+    "title": "Tales from the Darkside: The Movie",
+    "year": 1990,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "The Cat from Hell",
+      "originalWorkType": "Short story",
+      "wikipedia": "https://en.wikipedia.org/wiki/Tales_from_the_Darkside:_The_Movie"
+    },
+    "sources": [
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/tales-from-the-darkside-the-movie.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/tales-from-the-darkside-the-movie.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/tales-from-the-darkside-the-movie.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.357Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.422Z"
+  },
+  {
+    "id": "entity:7c0c1c635efd104525941e67",
+    "type": "movie",
+    "title": "The Boogeyman (2023 film)",
+    "year": 2023,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "The Boogeyman",
+      "originalWorkType": "Short story",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Boogeyman_(2023_film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.358Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:fdd91db82c61e5b7bbe3bf20",
+    "type": "television",
+    "title": "The Circle Closes (The Stand episode)",
+    "year": 2021,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "The Stand",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Stand_(2020_miniseries)#Episodes"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.358Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.424Z"
+  },
+  {
+    "id": "entity:bc2b137c312c25a309252440",
+    "type": "movie",
+    "title": "The Dark Half (film)",
+    "year": 1993,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "The Dark Half",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Dark_Half_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.358Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.422Z"
+  },
+  {
+    "id": "entity:d1279698df03e018b79388ba",
+    "type": "movie",
+    "title": "The Dark Tower (2017 film)",
+    "year": 2017,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "The Dark Tower",
+      "originalWorkType": "Series",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Dark_Tower_(2017_film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.358Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:30a96e07d8effc8ba47d107a",
+    "type": "television",
+    "title": "The Dead Zone (TV series)",
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "The Dead Zone",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Dead_Zone_(TV_series)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.358Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.425Z"
+  },
+  {
+    "id": "entity:3a644b1e41ffd5b50b9deec9",
+    "type": "movie",
+    "title": "The Dead Zone (film)",
+    "year": 1983,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "The Dead Zone",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Dead_Zone_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.358Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.422Z"
+  },
+  {
+    "id": "entity:75ab077adcf31ca444c8eb92",
+    "type": "movie",
+    "title": "The Green Mile (film)",
+    "year": 1999,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "The Green Mile",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Green_Mile_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.358Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:d7c8189e8bd32bb0726aa25e",
+    "type": "television",
+    "title": "The House of the Dead (The Stand episode)",
+    "year": 2021,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "The Stand",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Stand_(2020_miniseries)#Episodes"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.358Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.424Z"
+  },
+  {
+    "id": "entity:78ea3e56a3346f0e1094078b",
+    "type": "television",
+    "title": "The Institute (TV series)",
+    "year": 2025,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "The Institute",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Institute_(TV_series)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.358Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.426Z"
+  },
+  {
+    "id": "entity:54c8d969c79eb6671a7f8457",
+    "type": "television",
+    "title": "The Langoliers (miniseries)",
+    "year": 1995,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "The Langoliers",
+      "originalWorkType": "Novella",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Langoliers_(miniseries)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.358Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.424Z"
+  },
+  {
+    "id": "entity:fb2219c1033aec3029953224",
+    "type": "movie",
+    "title": "The Life of Chuck (film)",
+    "year": 2024,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "The Life of Chuck",
+      "originalWorkType": "Novella",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Life_of_Chuck_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.358Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:f4ec3f0c70eb6a7403ce5115",
+    "type": "movie",
+    "title": "The Long Walk (2025 film)",
+    "year": 2025,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "The Long Walk",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Long_Walk_(2025_film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.359Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.424Z"
+  },
+  {
+    "id": "entity:ac42b52ea87df89fe5fa953a",
+    "type": "movie",
+    "title": "The Mangler (film)",
+    "year": 1995,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "The Mangler",
+      "originalWorkType": "Short story",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Mangler_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.359Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:f944d2ef8feff90826c08ed1",
+    "type": "television",
+    "title": "The Mist (TV series)",
+    "year": 2017,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "The Mist",
+      "originalWorkType": "Novella",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Mist_(TV_series)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.359Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.425Z"
+  },
+  {
+    "id": "entity:4ca685df2316a93d36080c0b",
+    "type": "movie",
+    "title": "The Mist (film)",
+    "year": 2007,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "The Mist",
+      "originalWorkType": "Novella",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Mist_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.359Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:0e53fdb37e65e751e5d68a59",
+    "type": "movie",
+    "title": "The Monkey (film)",
+    "year": 2025,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "The Monkey",
+      "originalWorkType": "Short story",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Monkey_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.359Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.424Z"
+  },
+  {
+    "id": "entity:f0938c0a5381525ae4a1553e",
+    "type": "television",
+    "title": "The Moving Finger (Monsters episode)",
+    "year": 1991,
+    "status": "approved",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "The Moving Finger",
+      "originalWorkType": "Short story",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Moving_Finger_(short_story)#Adaptations"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.359Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T16:46:06.709Z"
+  },
+  {
+    "id": "entity:61b0dedc26ccad3d5cfb53cf",
+    "type": "movie",
+    "title": "The Night Flier (film)",
+    "year": 1997,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "The Night Flier",
+      "originalWorkType": "Short story",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Night_Flier_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.359Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:47956a8953957d353e484ab5",
+    "type": "television",
+    "title": "The Outsider (miniseries)",
+    "year": 2020,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "The Outsider",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Outsider_(miniseries)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.359Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.426Z"
+  },
+  {
+    "id": "entity:e7e72762d130625ae6a533e3",
+    "type": "television",
+    "title": "The Revelations of 'Becka Paulson (The Outer Limits episode)",
+    "year": 1997,
+    "status": "approved",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "The Revelations of 'Becka Paulson",
+      "originalWorkType": "Short story",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Revelations_of_%27Becka_Paulson_(The_Outer_Limits)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.359Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T16:57:21.321Z"
+  },
+  {
+    "id": "entity:265e1c1665512d5629d2c031",
+    "type": "movie",
+    "title": "The Running Man (1987 film)",
+    "year": 1987,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "The Running Man",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Running_Man_(1987_film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.359Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.422Z"
+  },
+  {
+    "id": "entity:a4600aa6525934818bc1583e",
+    "type": "movie",
+    "title": "The Running Man (2025 film)",
+    "year": 2025,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "The Running Man",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Running_Man_(2025_film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.359Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.424Z"
+  },
+  {
+    "id": "entity:9d26f42b725b29d217c11bf4",
+    "type": "movie",
+    "title": "The Shawshank Redemption",
+    "year": 1994,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Rita Hayworth and Shawshank Redemption",
+      "originalWorkType": "Novella",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Shawshank_Redemption"
+    },
+    "sources": [
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/shawshank-redemption.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/shawshank-redemption.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/shawshank-redemption.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.359Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.423Z"
+  },
+  {
+    "id": "entity:fde0d2a7e3d5f0e934951c18",
+    "type": "movie",
+    "title": "The Shining (film)",
+    "year": 1980,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "The Shining",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Shining_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.360Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.422Z"
+  },
+  {
+    "id": "entity:8c8af270f39e1262f7248cfd",
+    "type": "television",
+    "title": "The Shining (miniseries)",
+    "year": 1997,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "The Shining",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Shining_(miniseries)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.360Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.424Z"
+  },
+  {
+    "id": "entity:926ef4a7a7b75100e0687bf9",
+    "type": "television",
+    "title": "The Stand (1994 miniseries)",
+    "year": 1994,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "The Stand",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Stand_(1994_miniseries)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.360Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.424Z"
+  },
+  {
+    "id": "entity:dff8181ae58b2b73149807e6",
+    "type": "television",
+    "title": "The Stand (2020 miniseries)",
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "The Stand",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Stand_(2020_miniseries)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.360Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.426Z"
+  },
+  {
+    "id": "entity:5a9ee1f2b82033416a1462d0",
+    "type": "television",
+    "title": "The Tommyknockers (miniseries)",
+    "year": 1993,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "The Tommyknockers",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/The_Tommyknockers_(miniseries)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.360Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.424Z"
+  },
+  {
+    "id": "entity:99a636bbf4c8bc6b1d49aa25",
+    "type": "television",
+    "title": "The Word Processor of the Gods (Tales from the Darkside episode)",
+    "year": 1998,
+    "status": "approved",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "Word Processor of the Gods",
+      "originalWorkType": "Short story",
+      "wikipedia": "https://en.wikipedia.org/wiki/List_of_Tales_from_the_Darkside_episodes#Season_1_(1984%E2%80%9385)",
+      "categories": [
+        "Fiction"
+      ]
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.360Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:17:49.665Z"
+  },
+  {
+    "id": "entity:c842cad85d0e611ee77e615e",
+    "type": "movie",
+    "title": "Thinner",
+    "year": 1996,
+    "status": "ready",
+    "facts": {
+      "type": "Film",
+      "originalWorkTitle": "Thinner",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Thinner_(film)"
+    },
+    "sources": [
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/thinner.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/thinner.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "StephenKing.com",
+        "url": "https://stephenking.com/works/movie/thinner.html",
+        "status": "verified",
+        "confidence": 1,
+        "retrievedAt": "2026-08-09T19:01:09.357Z"
+      },
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.360Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.422Z"
+  },
+  {
+    "id": "entity:f686e62182c92db0bc24e391",
+    "type": "television",
+    "title": "Trucks (TV film)",
+    "year": 1997,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "Trucks",
+      "originalWorkType": "Short story",
+      "wikipedia": "https://en.wikipedia.org/wiki/Trucks_(film)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.360Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.424Z"
+  },
+  {
+    "id": "entity:93c27883c7f374906ac7d22f",
+    "type": "television",
+    "title": "Under the Dome (TV series)",
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "Under the Dome",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Under_the_Dome_(TV_series)"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.360Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.425Z"
+  },
+  {
+    "id": "entity:47edea271567741a1c52cda2",
+    "type": "television",
+    "title": "Woh",
+    "year": 1998,
+    "status": "ready",
+    "facts": {
+      "type": "Television",
+      "originalWorkTitle": "It",
+      "originalWorkType": "Novel",
+      "wikipedia": "https://en.wikipedia.org/wiki/Woh"
+    },
+    "sources": [
+      {
+        "name": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api",
+        "status": "observed",
+        "confidence": 0.4,
+        "retrievedAt": "2026-08-09T19:00:15.360Z"
+      }
+    ],
+    "updatedAt": "2026-07-15T15:15:09.424Z"
+  }
+]

@@ -1,0 +1,6 @@
+import Link from "next/link";
+import {ThemeToggle} from "@/components/ThemeToggle";
+
+const navigation=[['01','Entrance','/'],['02','Literary works','/works'],['03','Characters','/characters'],['04','Antagonists','/antagonists'],['05','Places','/places'],['06','Screen','/adaptations'],['07','Timeline','/timeline'],['08','Research archive','/sources']];
+export function Header(){return <><header className="mobile-header"><Link className="logo" href="/"><span>SK</span><b>STEPHEN KING<br/>UNIVERSE</b></Link><ThemeToggle/></header><aside className="scholar-sidebar"><Link className="scholar-mark" href="/"><span>S</span><i>K</i></Link><div className="scholar-name">STEPHEN KING<br/>UNIVERSE<small>SCHOLAR&apos;S EDITION</small></div><nav>{navigation.map(([number,label,href])=><Link href={href} key={href}><small>{number}</small><span>{label}</span></Link>)}</nav><blockquote>“The place exists before the story. The story explains the place.”</blockquote><ThemeToggle/></aside></>}
+export function Footer(){return <footer><div className="footer-mark">SK<span>U</span></div><p>An independent structured reference experience.<br/>Open and licensed material is attributed at claim level.</p><div><Link href="/works">Works</Link><Link href="/characters">Characters</Link><Link href="/adaptations">Adaptations</Link><Link href="/sources">Sources & licenses</Link></div></footer>}
