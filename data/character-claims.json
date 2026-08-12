@@ -1,0 +1,3942 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-11T19:19:07.786Z",
+  "methodology": {
+    "levels": {
+      "primary-verified": "Checked against a named edition of Stephen King's text with a chapter or page locator.",
+      "secondary-verified": "Supported by a directly matched reference source, but not yet checked against the primary text.",
+      "provisional": "Imported from a community dataset whose original record-level sources are undocumented."
+    },
+    "aiPolicy": "Automated tools may locate and structure evidence, but are not treated as a source. No unsourced generated biography is published.",
+    "fandomPolicy": "Adapted Fandom text is attributed, linked, marked as modified, and distributed under CC BY-SA 3.0. Images are excluded unless separately licensed."
+  },
+  "characters": {
+    "entity:9f41e8ea862f3d69d819acc6": {
+      "characterId": "entity:9f41e8ea862f3d69d819acc6",
+      "displayName": "Crimson King",
+      "editorialStatus": "secondary-verified",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Crimson King",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Dark Tower VII: The Dark Tower",
+          "workId": "entity:5967a6baaac6098775c92a44",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Dark Tower: The Gunslinger",
+          "workId": "entity:62f3a76e0b2c3a35377a1892",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Insomnia",
+          "workId": "entity:8f9180b5d314e6c8ea96ec15",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Black House",
+          "workId": "entity:dfc74cf2cce61063f95cd262",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "description",
+          "value": "The Crimson King, known to some as Los', Dis, or Ram Abbalah, is a fictional character created by Stephen King and the main antagonist of King's eight-volume Dark Tower series, as well as the novels Insomnia (1994) and Black House (2001). Described as \"Gan's crazy side\", the Crimson King is the ultimate ruler of the Red (also called the Random and the Outer Dark), and the archetypal embodiment of evil in Stephen King's fictional multiverse. His goal is to topple the Dark Tower which serves as the linchpin of time and space, destroying the multitude of universes which revolve around it so that he can rule in the primordial chaos which follows.",
+          "provider": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Crimson_King",
+          "sourceTitle": "Crimson King",
+          "revisionId": 1368677497,
+          "license": "CC BY-SA 4.0",
+          "sourceClass": "secondary-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "Direct character article matched by character name and Stephen King context; primary-text verification remains desirable."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:332c6cbe970edaeff5714a1f": {
+      "characterId": "entity:332c6cbe970edaeff5714a1f",
+      "displayName": "It (Creature)",
+      "editorialStatus": "secondary-verified",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "It (Creature)",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "It",
+          "workId": "entity:d4ad48e35f3cd14d4b64f643",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "description",
+          "value": "It, commonly known as Pennywise the Dancing Clown, is the titular main antagonist of Stephen King's 1986 horror novel It, and its adaptations. The character is an ancient, trans-dimensional malevolent entity who preys upon the children (and sometimes adults) of the fictional town of Derry, Maine, roughly every 27 years, using a variety of supernatural powers that include the abilities to shapeshift and manipulate reality. Over the course of the story, the character primarily appears in the form of Pennywise the Dancing Clown.",
+          "provider": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Pennywise",
+          "sourceTitle": "Pennywise",
+          "revisionId": 1367550764,
+          "license": "CC BY-SA 4.0",
+          "sourceClass": "secondary-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "Direct character article matched by character name and Stephen King context; primary-text verification remains desirable."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:305e93580348fbe247b9efe3": {
+      "characterId": "entity:305e93580348fbe247b9efe3",
+      "displayName": "Margaret White",
+      "editorialStatus": "secondary-verified",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Margaret White",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Carrie",
+          "workId": "entity:ff4a17faeb9e2ea7202ee802",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "description",
+          "value": "Margaret White (née Brigham) is a fictional character created by American author Stephen King in his first published horror novel, Carrie (1974), where she is the main antagonist. Margaret is an abusive mother to her daughter Carrie, who eventually pushes Carrie beyond her limits. She is a delusional and mentally unstable religious fanatic, who believes almost everything is a sin to God, especially when related to female anatomy or sexual intercourse.",
+          "provider": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Margaret_White_(Carrie)",
+          "sourceTitle": "Margaret White (Carrie)",
+          "revisionId": 1366066747,
+          "license": "CC BY-SA 4.0",
+          "sourceClass": "secondary-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "Direct character article matched by character name and Stephen King context; primary-text verification remains desirable."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:c2207be2b2f85289fccee6f9": {
+      "characterId": "entity:c2207be2b2f85289fccee6f9",
+      "displayName": "Jack Torrance",
+      "editorialStatus": "secondary-verified",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Jack Torrance",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Shining",
+          "workId": "entity:e5545015bc81065c5a27a217",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "description",
+          "value": "John Daniel Edward \"Jack\" Torrance is a fictional character and the main protagonist of Stephen King's horror novel The Shining (1977). He was portrayed by Jack Nicholson in the novel's 1980 film adaptation, by Steven Weber in the 1997 miniseries, and by Henry Thomas in the 2019 film adaptation of Doctor Sleep. The American Film Institute rated the character (as played by Nicholson) the 25th-greatest film villain of all time.",
+          "provider": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Jack_Torrance",
+          "sourceTitle": "Jack Torrance",
+          "revisionId": 1364019617,
+          "license": "CC BY-SA 4.0",
+          "sourceClass": "secondary-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "Direct character article matched by character name and Stephen King context; primary-text verification remains desirable."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:ee44f48a19d98d20c4ff7247": {
+      "characterId": "entity:ee44f48a19d98d20c4ff7247",
+      "displayName": "Annie Wilkes",
+      "editorialStatus": "secondary-verified",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Annie Wilkes",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Misery",
+          "workId": "entity:eeca473c4868f6207fdd1c97",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "description",
+          "value": "Annie Wilkes is a fictional character from Stephen King's 1987 novel Misery, in which she acts as one of the two central characters and main antagonist. In 2022, King picked her as his personal favorite character among all those he created in his literary career. A nurse by training, Annie is a devoted fan of the works of romance author Paul Sheldon, whom she rescues after a car accident and brings back to her home.",
+          "provider": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Annie_Wilkes",
+          "sourceTitle": "Annie Wilkes",
+          "revisionId": 1367454545,
+          "license": "CC BY-SA 4.0",
+          "sourceClass": "secondary-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "Direct character article matched by character name and Stephen King context; primary-text verification remains desirable."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:c75196d06cec0b68c295b647": {
+      "characterId": "entity:c75196d06cec0b68c295b647",
+      "displayName": "Rose the Hat",
+      "editorialStatus": "secondary-verified",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Rose the Hat",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Doctor Sleep",
+          "workId": "entity:3748c07e9fd6e70d855e7047",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "description",
+          "value": "Rose the Hat is a fictional character created by American writer Stephen King. She is the primary antagonist in his 2013 novel Doctor Sleep and in the 2019 film of the same name, in which she is played by Swedish actress Rebecca Ferguson.",
+          "provider": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Rose_the_Hat",
+          "sourceTitle": "Rose the Hat",
+          "revisionId": 1368188838,
+          "license": "CC BY-SA 4.0",
+          "sourceClass": "secondary-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "Direct character article matched by character name and Stephen King context; primary-text verification remains desirable."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:91566c3682a7b1a7deb9e241": {
+      "characterId": "entity:91566c3682a7b1a7deb9e241",
+      "displayName": "Randall Flagg",
+      "editorialStatus": "secondary-verified",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Randall Flagg",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Eyes of the Dragon",
+          "workId": "entity:002e51e4bff4b913b7f1b52d",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Stand",
+          "workId": "entity:1100a512833a0a8b4c72a25f",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Dark Tower IV: Wizard and Glass",
+          "workId": "entity:2b153b7e6e224a9c36299ad5",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Dark Tower VII: The Dark Tower",
+          "workId": "entity:5967a6baaac6098775c92a44",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Dark Tower: The Gunslinger",
+          "workId": "entity:62f3a76e0b2c3a35377a1892",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Long Walk",
+          "workId": "entity:9161ba0b6c7b4c3fc685bcc1",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Dark Tower III: The Waste Lands",
+          "workId": "entity:e7f36b93215b6bb5b32b0bbb",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "description",
+          "value": "Randall Flagg is a fictional character created by American author Stephen King, who has appeared in at least nine of his novels. Described as \"an accomplished sorcerer and a devoted servant of the Outer Dark\", he has supernatural abilities involving necromancy, prophecy, and influence over animal and human behavior. His goals typically center on bringing down civilizations through destruction and conflict.",
+          "provider": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Randall_Flagg",
+          "sourceTitle": "Randall Flagg",
+          "revisionId": 1366480373,
+          "license": "CC BY-SA 4.0",
+          "sourceClass": "secondary-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "Direct character article matched by character name and Stephen King context; primary-text verification remains desirable."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:e2ddf8655047cea93b4402a7": {
+      "characterId": "entity:e2ddf8655047cea93b4402a7",
+      "displayName": "Arnie Cunningham",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Arnie Cunningham",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Christine",
+          "workId": "entity:6734f2aa1ec9d51c1cf693c7",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:6c1e363ba648481dd216de50": {
+      "characterId": "entity:6c1e363ba648481dd216de50",
+      "displayName": "Alvin Marsh",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Alvin Marsh",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "It",
+          "workId": "entity:d4ad48e35f3cd14d4b64f643",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:96ddc74d598aa6bc02656dfa": {
+      "characterId": "entity:96ddc74d598aa6bc02656dfa",
+      "displayName": "Belch Huggins",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Belch Huggins",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "It",
+          "workId": "entity:d4ad48e35f3cd14d4b64f643",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:13e6b023c4ce6afd6715b33c": {
+      "characterId": "entity:13e6b023c4ce6afd6715b33c",
+      "displayName": "Billy Nolan",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Billy Nolan",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Carrie",
+          "workId": "entity:ff4a17faeb9e2ea7202ee802",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:bdd2f67e6126e30af27b8ee9": {
+      "characterId": "entity:bdd2f67e6126e30af27b8ee9",
+      "displayName": "Billy deLois",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Billy deLois",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Carrie",
+          "workId": "entity:ff4a17faeb9e2ea7202ee802",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:24391d911db9ef2d040a2b34": {
+      "characterId": "entity:24391d911db9ef2d040a2b34",
+      "displayName": "Blaine the Mono",
+      "editorialStatus": "secondary-verified",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Blaine the Mono",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Dark Tower IV: Wizard and Glass",
+          "workId": "entity:2b153b7e6e224a9c36299ad5",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Dark Tower III: The Waste Lands",
+          "workId": "entity:e7f36b93215b6bb5b32b0bbb",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "description",
+          "value": "Blaine is an artificial-intelligence monorail operating between Lud and Topeka in All-World. The surviving Imperium machine serves as an antagonist in The Waste Lands and at the opening of Wizard and Glass.",
+          "provider": "Stephen King Wiki / Fandom",
+          "url": "https://stephenking.fandom.com/wiki/Blaine_the_Mono",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceClass": "community-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T19:19:07.786Z",
+          "attribution": "Adapted from “Blaine the Mono” on Stephen King Wiki (Fandom).",
+          "changes": "Condensed, paraphrased and edited for this site.",
+          "sourceNote": "Community-authored reference text; useful corroboration, but primary-text verification remains required."
+        },
+        {
+          "predicate": "narrativeRole",
+          "value": "Antagonist",
+          "provider": "Stephen King Wiki / Fandom",
+          "url": "https://stephenking.fandom.com/wiki/Blaine_the_Mono",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceClass": "community-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T19:19:07.786Z",
+          "attribution": "Adapted from “Blaine the Mono” on Stephen King Wiki (Fandom).",
+          "changes": "Condensed, paraphrased and edited for this site.",
+          "sourceNote": "Community-authored reference text; useful corroboration, but primary-text verification remains required."
+        },
+        {
+          "predicate": "subjects",
+          "value": [
+            "Artificial intelligence",
+            "Monorail",
+            "The Dark Tower"
+          ],
+          "provider": "Stephen King Wiki / Fandom",
+          "url": "https://stephenking.fandom.com/wiki/Blaine_the_Mono",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceClass": "community-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T19:19:07.786Z",
+          "attribution": "Adapted from “Blaine the Mono” on Stephen King Wiki (Fandom).",
+          "changes": "Condensed, paraphrased and edited for this site.",
+          "sourceNote": "Community-authored reference text; useful corroboration, but primary-text verification remains required."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:52814e642d415f8837a816bd": {
+      "characterId": "entity:52814e642d415f8837a816bd",
+      "displayName": "Bob Anderson",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Bob Anderson",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "A Good Marriage",
+          "workId": "entity:b5b7ef0c8bcddd504f02e1c9",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:e6b35c37fe8ae05efad06ef5": {
+      "characterId": "entity:e6b35c37fe8ae05efad06ef5",
+      "displayName": "Bogs Diamond",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Bogs Diamond",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Rita Hayworth and Shawshank Redemption",
+          "workId": "entity:0dfab0d0f1dcc43fb957fd39",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:361ed2e677fc23825b4e2b40": {
+      "characterId": "entity:361ed2e677fc23825b4e2b40",
+      "displayName": "Brady Hartsfield",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Brady Hartsfield",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "End of Watch",
+          "workId": "entity:04924cd6b0868f3247e33dd2",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Finders Keepers",
+          "workId": "entity:2aab2e47cf8f43bac037bb51",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Mr. Mercedes",
+          "workId": "entity:a4dc69348f5e0a93561e038e",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:839e8e7742575cb4e927e80d": {
+      "characterId": "entity:839e8e7742575cb4e927e80d",
+      "displayName": "Brian Lippy",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Brian Lippy",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "From a Buick 8",
+          "workId": "entity:82665f19c44e3a426305b0a7",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:72cbfbc5ac3575662effc10f": {
+      "characterId": "entity:72cbfbc5ac3575662effc10f",
+      "displayName": "Butch Bowers",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Butch Bowers",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "It",
+          "workId": "entity:d4ad48e35f3cd14d4b64f643",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:f355eb4133f8498369c8228d": {
+      "characterId": "entity:f355eb4133f8498369c8228d",
+      "displayName": "Byron Hadley",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Byron Hadley",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Rita Hayworth and Shawshank Redemption",
+          "workId": "entity:0dfab0d0f1dcc43fb957fd39",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:65a21b896bccaac0c4f9162c": {
+      "characterId": "entity:65a21b896bccaac0c4f9162c",
+      "displayName": "Carter Thibodeau",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Carter Thibodeau",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Under the Dome",
+          "workId": "entity:8c9f4a6a904988ac1785eac8",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:448e8df95f466b650f992b72": {
+      "characterId": "entity:448e8df95f466b650f992b72",
+      "displayName": "Charlie McGee",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Charlie McGee",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Firestarter",
+          "workId": "entity:fd575488b8a3cab3a867de08",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:da695d87487c557a80d91297": {
+      "characterId": "entity:da695d87487c557a80d91297",
+      "displayName": "Christine (car)",
+      "editorialStatus": "secondary-verified",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Christine (car)",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Christine",
+          "workId": "entity:6734f2aa1ec9d51c1cf693c7",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "description",
+          "value": "Christine is the possessed 1958 Plymouth Fury bought and restored by Arnie Cunningham. The car exerts an obsessive influence over its owner and is capable of acting and repairing itself independently.",
+          "provider": "Stephen King Wiki / Fandom",
+          "url": "https://stephenking.fandom.com/wiki/Christine_%28car%29",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceClass": "community-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T19:19:07.786Z",
+          "attribution": "Adapted from “Christine (car)” on Stephen King Wiki (Fandom).",
+          "changes": "Condensed, paraphrased and edited for this site.",
+          "sourceNote": "Community-authored reference text; useful corroboration, but primary-text verification remains required."
+        },
+        {
+          "predicate": "narrativeRole",
+          "value": "Antagonist",
+          "provider": "Stephen King Wiki / Fandom",
+          "url": "https://stephenking.fandom.com/wiki/Christine_%28car%29",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceClass": "community-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T19:19:07.786Z",
+          "attribution": "Adapted from “Christine (car)” on Stephen King Wiki (Fandom).",
+          "changes": "Condensed, paraphrased and edited for this site.",
+          "sourceNote": "Community-authored reference text; useful corroboration, but primary-text verification remains required."
+        },
+        {
+          "predicate": "subjects",
+          "value": [
+            "Possessed vehicle",
+            "Christine"
+          ],
+          "provider": "Stephen King Wiki / Fandom",
+          "url": "https://stephenking.fandom.com/wiki/Christine_%28car%29",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceClass": "community-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T19:19:07.786Z",
+          "attribution": "Adapted from “Christine (car)” on Stephen King Wiki (Fandom).",
+          "changes": "Condensed, paraphrased and edited for this site.",
+          "sourceNote": "Community-authored reference text; useful corroboration, but primary-text verification remains required."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:511ba82fd29fb16adbfdcb03": {
+      "characterId": "entity:511ba82fd29fb16adbfdcb03",
+      "displayName": "Christine Hargensen",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Christine Hargensen",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Carrie",
+          "workId": "entity:ff4a17faeb9e2ea7202ee802",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:bb1038e95ea9b153c6ffdbf5": {
+      "characterId": "entity:bb1038e95ea9b153c6ffdbf5",
+      "displayName": "Christopher Unwin",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Christopher Unwin",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "It",
+          "workId": "entity:d4ad48e35f3cd14d4b64f643",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:0d813b27839bbda6d6c40a9b": {
+      "characterId": "entity:0d813b27839bbda6d6c40a9b",
+      "displayName": "Cindi",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Cindi",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Carrie",
+          "workId": "entity:ff4a17faeb9e2ea7202ee802",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:471f21b4f48901029da4a23b": {
+      "characterId": "entity:471f21b4f48901029da4a23b",
+      "displayName": "Cordelia Delgado",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Cordelia Delgado",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Dark Tower IV: Wizard and Glass",
+          "workId": "entity:2b153b7e6e224a9c36299ad5",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:c88f380a17410eb06f2da052": {
+      "characterId": "entity:c88f380a17410eb06f2da052",
+      "displayName": "Craig Toomey",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Craig Toomey",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Langoliers",
+          "workId": "entity:3ef87309ee844f37eb6f50f3",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:4ad5d0f9232e6d674cdc2b78": {
+      "characterId": "entity:4ad5d0f9232e6d674cdc2b78",
+      "displayName": "Cujo",
+      "editorialStatus": "secondary-verified",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Cujo",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Cujo",
+          "workId": "entity:26aba612488889cc99914659",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "description",
+          "value": "Cujo is the Camber family's Saint Bernard and the title character of Cujo. After contracting rabies, the formerly friendly dog becomes the central physical threat of the story.",
+          "provider": "Stephen King Wiki / Fandom",
+          "url": "https://stephenking.fandom.com/wiki/Cujo",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceClass": "community-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T19:19:07.786Z",
+          "attribution": "Adapted from “Cujo” on Stephen King Wiki (Fandom).",
+          "changes": "Condensed, paraphrased and edited for this site.",
+          "sourceNote": "Community-authored reference text; useful corroboration, but primary-text verification remains required."
+        },
+        {
+          "predicate": "narrativeRole",
+          "value": "Tragic antagonist",
+          "provider": "Stephen King Wiki / Fandom",
+          "url": "https://stephenking.fandom.com/wiki/Cujo",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceClass": "community-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T19:19:07.786Z",
+          "attribution": "Adapted from “Cujo” on Stephen King Wiki (Fandom).",
+          "changes": "Condensed, paraphrased and edited for this site.",
+          "sourceNote": "Community-authored reference text; useful corroboration, but primary-text verification remains required."
+        },
+        {
+          "predicate": "subjects",
+          "value": [
+            "Dog",
+            "Rabies",
+            "Castle Rock"
+          ],
+          "provider": "Stephen King Wiki / Fandom",
+          "url": "https://stephenking.fandom.com/wiki/Cujo",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceClass": "community-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T19:19:07.786Z",
+          "attribution": "Adapted from “Cujo” on Stephen King Wiki (Fandom).",
+          "changes": "Condensed, paraphrased and edited for this site.",
+          "sourceNote": "Community-authored reference text; useful corroboration, but primary-text verification remains required."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:b14b7577a61aedeaa1f1c94f": {
+      "characterId": "entity:b14b7577a61aedeaa1f1c94f",
+      "displayName": "Damon Killian",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Damon Killian",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Running Man",
+          "workId": "entity:43333d41545188a3e7642160",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:e6f3d1c7541a84b3addd1260": {
+      "characterId": "entity:e6f3d1c7541a84b3addd1260",
+      "displayName": "Dandelo",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Dandelo",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Dark Tower VII: The Dark Tower",
+          "workId": "entity:5967a6baaac6098775c92a44",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:5c1bfcc8f84e9bd880d1985a": {
+      "characterId": "entity:5c1bfcc8f84e9bd880d1985a",
+      "displayName": "Delbert Grady",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Delbert Grady",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Shining",
+          "workId": "entity:e5545015bc81065c5a27a217",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:927ee981314d51aede6d903f": {
+      "characterId": "entity:927ee981314d51aede6d903f",
+      "displayName": "Donald Merwin Elbert",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Donald Merwin Elbert",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Stand",
+          "workId": "entity:1100a512833a0a8b4c72a25f",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:4e33cd55c2b84854a6e1cbf6": {
+      "characterId": "entity:4e33cd55c2b84854a6e1cbf6",
+      "displayName": "Donna and Mary Lila Grace Thibodeau",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Donna and Mary Lila Grace Thibodeau",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Carrie",
+          "workId": "entity:ff4a17faeb9e2ea7202ee802",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:5957bf75495cbfe93b234abc": {
+      "characterId": "entity:5957bf75495cbfe93b234abc",
+      "displayName": "Eldred Jonas",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Eldred Jonas",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Dark Tower IV: Wizard and Glass",
+          "workId": "entity:2b153b7e6e224a9c36299ad5",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:84920cdc0282e7d076c940ed": {
+      "characterId": "entity:84920cdc0282e7d076c940ed",
+      "displayName": "Elenor Richmond",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Elenor Richmond",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Carrie",
+          "workId": "entity:ff4a17faeb9e2ea7202ee802",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:6293f1291654600735eda0d7": {
+      "characterId": "entity:6293f1291654600735eda0d7",
+      "displayName": "Frank Dodd",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Frank Dodd",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Dead Zone",
+          "workId": "entity:305df4a70bae219f6b575ebd",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:74f81b5bacc337900df9529c": {
+      "characterId": "entity:74f81b5bacc337900df9529c",
+      "displayName": "Gage Creed",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Gage Creed",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Pet Sematary",
+          "workId": "entity:0dffd3a90a4bdbffa5633a46",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:b15e115952ce1f54fec4c661": {
+      "characterId": "entity:b15e115952ce1f54fec4c661",
+      "displayName": "George Stark",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "George Stark",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Dark Half",
+          "workId": "entity:6e02d1fa61455aaeefe3bc39",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:2fd6ce0e336a3a100a4ed7d8": {
+      "characterId": "entity:2fd6ce0e336a3a100a4ed7d8",
+      "displayName": "Gerald Burlingame",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Gerald Burlingame",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Gerald's Game",
+          "workId": "entity:e9ac75ead8ed1fbd3b578d30",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:aa67efd4b5ca90255e0d38f2": {
+      "characterId": "entity:aa67efd4b5ca90255e0d38f2",
+      "displayName": "Gladys Hickson",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Gladys Hickson",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Institute",
+          "workId": "entity:d87e4cf89fc9ab995b2199d0",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:b8949dee59be2fdf5f76789d": {
+      "characterId": "entity:b8949dee59be2fdf5f76789d",
+      "displayName": "Greg Stillson",
+      "editorialStatus": "secondary-verified",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Greg Stillson",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Dead Zone",
+          "workId": "entity:305df4a70bae219f6b575ebd",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "description",
+          "value": "Greg Stillson is a politician and the principal antagonist of The Dead Zone. Johnny Smith's vision connects Stillson's future rise to the presidency with a catastrophic nuclear conflict.",
+          "provider": "Stephen King Wiki / Fandom",
+          "url": "https://stephenking.fandom.com/wiki/Greg_Stillson",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceClass": "community-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T19:19:07.786Z",
+          "attribution": "Adapted from “Greg Stillson” on Stephen King Wiki (Fandom).",
+          "changes": "Condensed, paraphrased and edited for this site.",
+          "sourceNote": "Community-authored reference text; useful corroboration, but primary-text verification remains required."
+        },
+        {
+          "predicate": "narrativeRole",
+          "value": "Main antagonist",
+          "provider": "Stephen King Wiki / Fandom",
+          "url": "https://stephenking.fandom.com/wiki/Greg_Stillson",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceClass": "community-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T19:19:07.786Z",
+          "attribution": "Adapted from “Greg Stillson” on Stephen King Wiki (Fandom).",
+          "changes": "Condensed, paraphrased and edited for this site.",
+          "sourceNote": "Community-authored reference text; useful corroboration, but primary-text verification remains required."
+        },
+        {
+          "predicate": "subjects",
+          "value": [
+            "Politician",
+            "The Dead Zone"
+          ],
+          "provider": "Stephen King Wiki / Fandom",
+          "url": "https://stephenking.fandom.com/wiki/Greg_Stillson",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceClass": "community-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T19:19:07.786Z",
+          "attribution": "Adapted from “Greg Stillson” on Stephen King Wiki (Fandom).",
+          "changes": "Condensed, paraphrased and edited for this site.",
+          "sourceNote": "Community-authored reference text; useful corroboration, but primary-text verification remains required."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:8efe50ed1392bc927f14ea64": {
+      "characterId": "entity:8efe50ed1392bc927f14ea64",
+      "displayName": "Greta Bowie",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Greta Bowie",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "It",
+          "workId": "entity:d4ad48e35f3cd14d4b64f643",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:38dc25736e903394578f0ec8": {
+      "characterId": "entity:38dc25736e903394578f0ec8",
+      "displayName": "Harold Lauder",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Harold Lauder",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Stand",
+          "workId": "entity:1100a512833a0a8b4c72a25f",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:89ef3eddcf6090cc04406601": {
+      "characterId": "entity:89ef3eddcf6090cc04406601",
+      "displayName": "Henrietta Dodd",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Henrietta Dodd",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Dead Zone",
+          "workId": "entity:305df4a70bae219f6b575ebd",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:c111b54362b8f2b974da7795": {
+      "characterId": "entity:c111b54362b8f2b974da7795",
+      "displayName": "Henry Bowers",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Henry Bowers",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "It",
+          "workId": "entity:d4ad48e35f3cd14d4b64f643",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:5828c0d8f87b21e05ca932a6": {
+      "characterId": "entity:5828c0d8f87b21e05ca932a6",
+      "displayName": "Henry James",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Henry James",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "1922",
+          "workId": "entity:d4bb1b97b1b423f9059db3c7",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:5d8e1fbfedf7802db85eea99": {
+      "characterId": "entity:5d8e1fbfedf7802db85eea99",
+      "displayName": "Horace M. Derwent",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Horace M. Derwent",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Shining",
+          "workId": "entity:e5545015bc81065c5a27a217",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:c1a8f545346022612a147ffd": {
+      "characterId": "entity:c1a8f545346022612a147ffd",
+      "displayName": "Jack Mort",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Jack Mort",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Dark Tower II: The Drawing of the Three",
+          "workId": "entity:bc5d8aba9880322715c840c8",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:c7660de20165b7e39873cafe": {
+      "characterId": "entity:c7660de20165b7e39873cafe",
+      "displayName": "Isaac Chroner",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Isaac Chroner",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Children of the Corn",
+          "workId": "entity:3f4dd0cf4bb2cd54b68b7de5",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:afe7c11c95217f459e362631": {
+      "characterId": "entity:afe7c11c95217f459e362631",
+      "displayName": "Jackie Talbot",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Jackie Talbot",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Carrie",
+          "workId": "entity:ff4a17faeb9e2ea7202ee802",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:194ae882fd86cf9b3087c826": {
+      "characterId": "entity:194ae882fd86cf9b3087c826",
+      "displayName": "James Boon",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "James Boon",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Jerusalem's Lot",
+          "workId": "entity:c474f5751aa9cd6a55dd6972",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:fbafc28db1f2fb8a9c975f81": {
+      "characterId": "entity:fbafc28db1f2fb8a9c975f81",
+      "displayName": "James Hollister",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "James Hollister",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Firestarter",
+          "workId": "entity:fd575488b8a3cab3a867de08",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:0b05cef050c5df4b0940207a": {
+      "characterId": "entity:0b05cef050c5df4b0940207a",
+      "displayName": "Jessica Upshaw",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Jessica Upshaw",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Carrie",
+          "workId": "entity:ff4a17faeb9e2ea7202ee802",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:1a32bf9ab89253ff76dec603": {
+      "characterId": "entity:1a32bf9ab89253ff76dec603",
+      "displayName": "Jim Rennie",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Jim Rennie",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Under the Dome",
+          "workId": "entity:8c9f4a6a904988ac1785eac8",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:a3e37f64dbf736864aaef721": {
+      "characterId": "entity:a3e37f64dbf736864aaef721",
+      "displayName": "Jim Rennie, Jr.",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Jim Rennie, Jr.",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Under the Dome",
+          "workId": "entity:8c9f4a6a904988ac1785eac8",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:96031f4d781e338769704bf2": {
+      "characterId": "entity:96031f4d781e338769704bf2",
+      "displayName": "Joe St. George",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Joe St. George",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Dolores Claiborne",
+          "workId": "entity:67f6cbfc9d32f0b89532297f",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:5205c3c688beacc03adaa937": {
+      "characterId": "entity:5205c3c688beacc03adaa937",
+      "displayName": "John \"Ace\" Merrill",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "John \"Ace\" Merrill",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Body",
+          "workId": "entity:0194ce7d888c6109a8573fb7",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:f8d2dd07e65b15226e7f651a": {
+      "characterId": "entity:f8d2dd07e65b15226e7f651a",
+      "displayName": "John Farson",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "John Farson",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Dark Tower IV: Wizard and Glass",
+          "workId": "entity:2b153b7e6e224a9c36299ad5",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:641b5e7b9956f67613739a5c": {
+      "characterId": "entity:641b5e7b9956f67613739a5c",
+      "displayName": "John Garton",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "John Garton",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "It",
+          "workId": "entity:d4ad48e35f3cd14d4b64f643",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:0f560982fd969ee1cddd146a": {
+      "characterId": "entity:0f560982fd969ee1cddd146a",
+      "displayName": "John Halston",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "John Halston",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Cat from Hell",
+          "workId": "entity:4b100e4946dcff1546982d5a",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:bbe3fc65592caf3d0bbbe6cb": {
+      "characterId": "entity:bbe3fc65592caf3d0bbbe6cb",
+      "displayName": "John Rainbird",
+      "editorialStatus": "secondary-verified",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "John Rainbird",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Firestarter",
+          "workId": "entity:fd575488b8a3cab3a867de08",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "description",
+          "value": "John Rainbird is an operative and assassin employed by the Shop in Firestarter. A scarred Vietnam veteran, he becomes fixated on Charlie McGee while participating in her captivity.",
+          "provider": "Stephen King Wiki / Fandom",
+          "url": "https://stephenking.fandom.com/wiki/John_Rainbird",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceClass": "community-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T19:19:07.786Z",
+          "attribution": "Adapted from “John Rainbird” on Stephen King Wiki (Fandom).",
+          "changes": "Condensed, paraphrased and edited for this site.",
+          "sourceNote": "Community-authored reference text; useful corroboration, but primary-text verification remains required."
+        },
+        {
+          "predicate": "narrativeRole",
+          "value": "Antagonist",
+          "provider": "Stephen King Wiki / Fandom",
+          "url": "https://stephenking.fandom.com/wiki/John_Rainbird",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceClass": "community-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T19:19:07.786Z",
+          "attribution": "Adapted from “John Rainbird” on Stephen King Wiki (Fandom).",
+          "changes": "Condensed, paraphrased and edited for this site.",
+          "sourceNote": "Community-authored reference text; useful corroboration, but primary-text verification remains required."
+        },
+        {
+          "predicate": "subjects",
+          "value": [
+            "The Shop",
+            "Firestarter"
+          ],
+          "provider": "Stephen King Wiki / Fandom",
+          "url": "https://stephenking.fandom.com/wiki/John_Rainbird",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceClass": "community-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T19:19:07.786Z",
+          "attribution": "Adapted from “John Rainbird” on Stephen King Wiki (Fandom).",
+          "changes": "Condensed, paraphrased and edited for this site.",
+          "sourceNote": "Community-authored reference text; useful corroboration, but primary-text verification remains required."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:555a3be7219b38acb77d0c58": {
+      "characterId": "entity:555a3be7219b38acb77d0c58",
+      "displayName": "Kenny Garson",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Kenny Garson",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Carrie",
+          "workId": "entity:ff4a17faeb9e2ea7202ee802",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:82e95a42f4c947a865a3a3ac": {
+      "characterId": "entity:82e95a42f4c947a865a3a3ac",
+      "displayName": "Kurt Barlow",
+      "editorialStatus": "secondary-verified",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Kurt Barlow",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Salem's Lot",
+          "workId": "entity:1672dac0f86aecdf77e5199c",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "description",
+          "value": "Kurt Barlow is the vampire antagonist of 'Salem's Lot. He comes to Jerusalem's Lot with Richard Straker and begins turning the town's residents into vampires.",
+          "provider": "Stephen King Wiki / Fandom",
+          "url": "https://stephenking.fandom.com/wiki/Kurt_Barlow",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceClass": "community-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T19:19:07.786Z",
+          "attribution": "Adapted from “Kurt Barlow” on Stephen King Wiki (Fandom).",
+          "changes": "Condensed, paraphrased and edited for this site.",
+          "sourceNote": "Community-authored reference text; useful corroboration, but primary-text verification remains required."
+        },
+        {
+          "predicate": "narrativeRole",
+          "value": "Main antagonist",
+          "provider": "Stephen King Wiki / Fandom",
+          "url": "https://stephenking.fandom.com/wiki/Kurt_Barlow",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceClass": "community-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T19:19:07.786Z",
+          "attribution": "Adapted from “Kurt Barlow” on Stephen King Wiki (Fandom).",
+          "changes": "Condensed, paraphrased and edited for this site.",
+          "sourceNote": "Community-authored reference text; useful corroboration, but primary-text verification remains required."
+        },
+        {
+          "predicate": "subjects",
+          "value": [
+            "Vampire",
+            "Jerusalem's Lot"
+          ],
+          "provider": "Stephen King Wiki / Fandom",
+          "url": "https://stephenking.fandom.com/wiki/Kurt_Barlow",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceClass": "community-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T19:19:07.786Z",
+          "attribution": "Adapted from “Kurt Barlow” on Stephen King Wiki (Fandom).",
+          "changes": "Condensed, paraphrased and edited for this site.",
+          "sourceNote": "Community-authored reference text; useful corroboration, but primary-text verification remains required."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:f2006abd417d6b636d2f1b91": {
+      "characterId": "entity:f2006abd417d6b636d2f1b91",
+      "displayName": "Kurt Dussander",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Kurt Dussander",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Apt Pupil",
+          "workId": "entity:11e73e679052edc02c320de0",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:290ad42f75f5c849e932530e": {
+      "characterId": "entity:290ad42f75f5c849e932530e",
+      "displayName": "Lane Hardy",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Lane Hardy",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Joyland",
+          "workId": "entity:d966fcd3523247e798dfff44",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:308c88bded6407213e8fcd49": {
+      "characterId": "entity:308c88bded6407213e8fcd49",
+      "displayName": "Leland Gaunt",
+      "editorialStatus": "secondary-verified",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Leland Gaunt",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Needful Things",
+          "workId": "entity:ca3c2a40dcb7956f8702e494",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "description",
+          "value": "Leland Gaunt is the supernatural proprietor of the shop Needful Things and the novel's principal antagonist. He offers customers objects they intensely desire while manipulating them into acts that spread violence through Castle Rock.",
+          "provider": "Stephen King Wiki / Fandom",
+          "url": "https://stephenking.fandom.com/wiki/Leland_Gaunt",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceClass": "community-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T19:19:07.786Z",
+          "attribution": "Adapted from “Leland Gaunt” on Stephen King Wiki (Fandom).",
+          "changes": "Condensed, paraphrased and edited for this site.",
+          "sourceNote": "Community-authored reference text; useful corroboration, but primary-text verification remains required."
+        },
+        {
+          "predicate": "narrativeRole",
+          "value": "Main antagonist",
+          "provider": "Stephen King Wiki / Fandom",
+          "url": "https://stephenking.fandom.com/wiki/Leland_Gaunt",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceClass": "community-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T19:19:07.786Z",
+          "attribution": "Adapted from “Leland Gaunt” on Stephen King Wiki (Fandom).",
+          "changes": "Condensed, paraphrased and edited for this site.",
+          "sourceNote": "Community-authored reference text; useful corroboration, but primary-text verification remains required."
+        },
+        {
+          "predicate": "subjects",
+          "value": [
+            "Demon",
+            "Shopkeeper",
+            "Castle Rock"
+          ],
+          "provider": "Stephen King Wiki / Fandom",
+          "url": "https://stephenking.fandom.com/wiki/Leland_Gaunt",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceClass": "community-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T19:19:07.786Z",
+          "attribution": "Adapted from “Leland Gaunt” on Stephen King Wiki (Fandom).",
+          "changes": "Condensed, paraphrased and edited for this site.",
+          "sourceNote": "Community-authored reference text; useful corroboration, but primary-text verification remains required."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:2aa243915d26244f552e331d": {
+      "characterId": "entity:2aa243915d26244f552e331d",
+      "displayName": "Lester Lowe",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Lester Lowe",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {"predicate":"gender","value":"Male","provider":"Free Stephen King API","url":"https://stephen-king-api.onrender.com/api/villains/11","sourceClass":"community-dataset","verification":"provisional","retrievedAt":"2026-08-12T04:00:00.000Z","sourceNote":"Imported from API record 11; no record-level original citation supplied."},
+        {"predicate":"lifeStatus","value":"Deceased","provider":"Free Stephen King API","url":"https://stephen-king-api.onrender.com/api/villains/11","sourceClass":"community-dataset","verification":"provisional","retrievedAt":"2026-08-12T04:00:00.000Z","sourceNote":"Imported from API record 11; no record-level original citation supplied."},
+        {"predicate":"narrativeRole","value":"The API identifies Reverend Lester Lowe as the main antagonist in Cycle of the Werewolf and its film adaptation Silver Bullet.","provider":"Free Stephen King API","url":"https://stephen-king-api.onrender.com/api/villains/11","sourceClass":"community-dataset","verification":"provisional","retrievedAt":"2026-08-12T04:00:00.000Z","sourceNote":"API notes field, retained as a provisional attributed claim rather than an independently verified description."},
+        {"predicate":"appearsIn","value":"Cycle of the Werewolf","workId":"entity:4fa5338eac3c8eb485c84041","provider":"Free Stephen King API","url":"https://stephen-king-api.onrender.com/api/villains/11","sourceClass":"community-dataset","verification":"provisional","retrievedAt":"2026-08-12T04:00:00.000Z","sourceNote":"Imported from the API books relationship; no record-level original citation supplied."}
+        ,{"predicate":"description","value":"Reverend Lester Lowe serves in the fictional Maine town of Tarker's Mills while concealing that he is the werewolf responsible for a series of killings. He is identified as the principal antagonist of Cycle of the Werewolf and its film adaptation, Silver Bullet.","provider":"Stephen King Wiki / Fandom","url":"https://stephenking.fandom.com/wiki/Lester_Lowe","sourceTitle":"Lester Lowe","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/","sourceClass":"community-reference","verification":"secondary-verified","retrievedAt":"2026-08-12T05:10:00.000Z","attribution":"Adapted from “Lester Lowe” on Stephen King Wiki (Fandom).","changes":"Condensed, paraphrased and edited into an English editorial summary.","sourceNote":"Community-authored reference article; useful corroboration, but primary-text verification remains required."}
+        ,{"predicate":"subjects","value":["Reverend","Werewolf","Full Moon Killer","Tarker's Mills, Maine"],"provider":"Stephen King Wiki / Fandom","url":"https://stephenking.fandom.com/wiki/Lester_Lowe","sourceTitle":"Lester Lowe","license":"CC BY-SA 3.0","licenseUrl":"https://creativecommons.org/licenses/by-sa/3.0/","sourceClass":"community-reference","verification":"secondary-verified","retrievedAt":"2026-08-12T05:10:00.000Z","attribution":"Adapted from “Lester Lowe” on Stephen King Wiki (Fandom).","changes":"Infobox fields normalized into subject terms.","sourceNote":"Community-authored reference article; primary-text verification remains required."}
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:2cd98100d4dedcc075ce9306": {
+      "characterId": "entity:2cd98100d4dedcc075ce9306",
+      "displayName": "Little Sisters",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Little Sisters",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Little Sisters of Eluria",
+          "workId": "entity:0e849ce60fe48c8b6ade1137",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:93193a26095efba738e2bcd7": {
+      "characterId": "entity:93193a26095efba738e2bcd7",
+      "displayName": "Lloyd Henreid",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Lloyd Henreid",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Stand",
+          "workId": "entity:1100a512833a0a8b4c72a25f",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:97fed30e492b7442f4fabb5c": {
+      "characterId": "entity:97fed30e492b7442f4fabb5c",
+      "displayName": "Malachai Boardman",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Malachai Boardman",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Children of the Corn",
+          "workId": "entity:3f4dd0cf4bb2cd54b68b7de5",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:602af21c1055142e8fbc6d45": {
+      "characterId": "entity:602af21c1055142e8fbc6d45",
+      "displayName": "Malcolm Janus",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Malcolm Janus",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Dead Zone",
+          "workId": "entity:305df4a70bae219f6b575ebd",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:f1a3a62c57bd42ce4ff85c56": {
+      "characterId": "entity:f1a3a62c57bd42ce4ff85c56",
+      "displayName": "Marcia Fadden",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Marcia Fadden",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "It",
+          "workId": "entity:d4ad48e35f3cd14d4b64f643",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:b10917ac34fa1f282c8d1718": {
+      "characterId": "entity:b10917ac34fa1f282c8d1718",
+      "displayName": "Marten Broadcloak",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Marten Broadcloak",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Dark Tower: The Gunslinger",
+          "workId": "entity:62f3a76e0b2c3a35377a1892",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:0f424d105c64c2f0a30426dc": {
+      "characterId": "entity:0f424d105c64c2f0a30426dc",
+      "displayName": "Mary Lila Grace",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Mary Lila Grace",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Carrie",
+          "workId": "entity:ff4a17faeb9e2ea7202ee802",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:c86036116a23c5a0eb7de62b": {
+      "characterId": "entity:c86036116a23c5a0eb7de62b",
+      "displayName": "Mordred Deschain",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Mordred Deschain",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Dark Tower VII: The Dark Tower",
+          "workId": "entity:5967a6baaac6098775c92a44",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:b29bd2e777fda1b484de9f5e": {
+      "characterId": "entity:b29bd2e777fda1b484de9f5e",
+      "displayName": "Mother of the Null",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Mother of the Null",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Revival",
+          "workId": "entity:d188df69a0d33363b0c6539c",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:5144f6c1424532426ddeb612": {
+      "characterId": "entity:5144f6c1424532426ddeb612",
+      "displayName": "Myra Crewes",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Myra Crewes",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Carrie",
+          "workId": "entity:ff4a17faeb9e2ea7202ee802",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:e2630b0a3ca9ef33c0ba1b0b": {
+      "characterId": "entity:e2630b0a3ca9ef33c0ba1b0b",
+      "displayName": "Norma Watson",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Norma Watson",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Carrie",
+          "workId": "entity:ff4a17faeb9e2ea7202ee802",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:e5d1193588cf2ff02703c212": {
+      "characterId": "entity:e5d1193588cf2ff02703c212",
+      "displayName": "Norman Daniels",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Norman Daniels",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Rose Madder",
+          "workId": "entity:d9280b62e6b58291b3f217f5",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:0c8cbe8fe5f668b8fbaa075b": {
+      "characterId": "entity:0c8cbe8fe5f668b8fbaa075b",
+      "displayName": "Patrick Hockstetter",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Patrick Hockstetter",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "It",
+          "workId": "entity:d4ad48e35f3cd14d4b64f643",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:dc8bea15a92132950ca1974b": {
+      "characterId": "entity:dc8bea15a92132950ca1974b",
+      "displayName": "Percy Wetmore",
+      "editorialStatus": "secondary-verified",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Percy Wetmore",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Green Mile",
+          "workId": "entity:f102c68c58c16ff01197f8bd",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "description",
+          "value": "Percy Wetmore is a prison guard and supporting antagonist in The Green Mile. His political connections protect him at Cold Mountain Penitentiary despite his cruelty toward prisoners and conflict with the other guards.",
+          "provider": "Stephen King Wiki / Fandom",
+          "url": "https://stephenking.fandom.com/wiki/Percy_Wetmore",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceClass": "community-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T19:19:07.786Z",
+          "attribution": "Adapted from “Percy Wetmore” on Stephen King Wiki (Fandom).",
+          "changes": "Condensed, paraphrased and edited for this site.",
+          "sourceNote": "Community-authored reference text; useful corroboration, but primary-text verification remains required."
+        },
+        {
+          "predicate": "narrativeRole",
+          "value": "Supporting antagonist",
+          "provider": "Stephen King Wiki / Fandom",
+          "url": "https://stephenking.fandom.com/wiki/Percy_Wetmore",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceClass": "community-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T19:19:07.786Z",
+          "attribution": "Adapted from “Percy Wetmore” on Stephen King Wiki (Fandom).",
+          "changes": "Condensed, paraphrased and edited for this site.",
+          "sourceNote": "Community-authored reference text; useful corroboration, but primary-text verification remains required."
+        },
+        {
+          "predicate": "subjects",
+          "value": [
+            "Prison guard",
+            "The Green Mile"
+          ],
+          "provider": "Stephen King Wiki / Fandom",
+          "url": "https://stephenking.fandom.com/wiki/Percy_Wetmore",
+          "license": "CC BY-SA 3.0",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sourceClass": "community-reference",
+          "verification": "secondary-verified",
+          "retrievedAt": "2026-08-11T19:19:07.786Z",
+          "attribution": "Adapted from “Percy Wetmore” on Stephen King Wiki (Fandom).",
+          "changes": "Condensed, paraphrased and edited for this site.",
+          "sourceNote": "Community-authored reference text; useful corroboration, but primary-text verification remains required."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:d8dc18a55140486f6f9a7672": {
+      "characterId": "entity:d8dc18a55140486f6f9a7672",
+      "displayName": "Peter Gordon",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Peter Gordon",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "It",
+          "workId": "entity:d4ad48e35f3cd14d4b64f643",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:1403b6e14c544b942906a8cc": {
+      "characterId": "entity:1403b6e14c544b942906a8cc",
+      "displayName": "Rachel Spies",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Rachel Spies",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Carrie",
+          "workId": "entity:ff4a17faeb9e2ea7202ee802",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:de0917012ecfaf5dc8c93a06": {
+      "characterId": "entity:de0917012ecfaf5dc8c93a06",
+      "displayName": "Rat Man",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Rat Man",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Stand",
+          "workId": "entity:1100a512833a0a8b4c72a25f",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:80eb5af68775e97becf2020a": {
+      "characterId": "entity:80eb5af68775e97becf2020a",
+      "displayName": "Raymond Andrew Joubert",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Raymond Andrew Joubert",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Gerald's Game",
+          "workId": "entity:e9ac75ead8ed1fbd3b578d30",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:d6cbd5c0527190c4dc4dcbac": {
+      "characterId": "entity:d6cbd5c0527190c4dc4dcbac",
+      "displayName": "Rhea Dubativo",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Rhea Dubativo",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Dark Tower IV: Wizard and Glass",
+          "workId": "entity:2b153b7e6e224a9c36299ad5",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:6b2749500def82455456fd1e": {
+      "characterId": "entity:6b2749500def82455456fd1e",
+      "displayName": "Richard Lawson",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Richard Lawson",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Sometimes They Come Back",
+          "workId": "entity:172e414713384d83367aa0a5",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:2fd1f2a17a9341436ae091d7": {
+      "characterId": "entity:2fd1f2a17a9341436ae091d7",
+      "displayName": "Richard P. Macklin",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Richard P. Macklin",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "It",
+          "workId": "entity:d4ad48e35f3cd14d4b64f643",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:dc769ae56da63fcc6cf32997": {
+      "characterId": "entity:dc769ae56da63fcc6cf32997",
+      "displayName": "Richard Straker",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Richard Straker",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Salem's Lot",
+          "workId": "entity:1672dac0f86aecdf77e5199c",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:b2774a619c7f17a388d5fb53": {
+      "characterId": "entity:b2774a619c7f17a388d5fb53",
+      "displayName": "Ross Humboldt",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Ross Humboldt",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "In the Tall Grass",
+          "workId": "entity:3f443e31a7b0e709c9a1b49e",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:e52f5e7852ef498a21ae47e6": {
+      "characterId": "entity:e52f5e7852ef498a21ae47e6",
+      "displayName": "Sally Mueller",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Sally Mueller",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "It",
+          "workId": "entity:d4ad48e35f3cd14d4b64f643",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:6ec881d0ab5179195007ba1e": {
+      "characterId": "entity:6ec881d0ab5179195007ba1e",
+      "displayName": "Sam (cat)",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Sam (cat)",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Cat from Hell",
+          "workId": "entity:4b100e4946dcff1546982d5a",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:54eef1008d77161620b446c7": {
+      "characterId": "entity:54eef1008d77161620b446c7",
+      "displayName": "Samuel Norton",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Samuel Norton",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Rita Hayworth and Shawshank Redemption",
+          "workId": "entity:0dfab0d0f1dcc43fb957fd39",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:bc03dab6fe83fd3b5aa9246e": {
+      "characterId": "entity:bc03dab6fe83fd3b5aa9246e",
+      "displayName": "Sonny Elliman",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Sonny Elliman",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Dead Zone",
+          "workId": "entity:305df4a70bae219f6b575ebd",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:4e3afb0407f09b4850d098c8": {
+      "characterId": "entity:4e3afb0407f09b4850d098c8",
+      "displayName": "Susan Day",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Susan Day",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Insomnia",
+          "workId": "entity:8f9180b5d314e6c8ea96ec15",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Rose Madder",
+          "workId": "entity:d9280b62e6b58291b3f217f5",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:fe2ffb931a3c3f50ba765814": {
+      "characterId": "entity:fe2ffb931a3c3f50ba765814",
+      "displayName": "Sylvia Pittston",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Sylvia Pittston",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Dark Tower: The Gunslinger",
+          "workId": "entity:62f3a76e0b2c3a35377a1892",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:2e0cca1b847c5b079e725176": {
+      "characterId": "entity:2e0cca1b847c5b079e725176",
+      "displayName": "The Gladiators",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "The Gladiators",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Running Man",
+          "workId": "entity:43333d41545188a3e7642160",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:31617027fb2e03d1b468ded6": {
+      "characterId": "entity:31617027fb2e03d1b468ded6",
+      "displayName": "The Kid",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "The Kid",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Stand",
+          "workId": "entity:1100a512833a0a8b4c72a25f",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:7e263afdd2c89a46b213fb2a": {
+      "characterId": "entity:7e263afdd2c89a46b213fb2a",
+      "displayName": "The Major",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "The Major",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Long Walk",
+          "workId": "entity:9161ba0b6c7b4c3fc685bcc1",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:d930017c2ba0b83b2bfee2c0": {
+      "characterId": "entity:d930017c2ba0b83b2bfee2c0",
+      "displayName": "The Devil's Dozen",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "The Devil's Dozen",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Dead Zone",
+          "workId": "entity:305df4a70bae219f6b575ebd",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:dce310851087d2a49885e90c": {
+      "characterId": "entity:dce310851087d2a49885e90c",
+      "displayName": "The Mortimer Snerds",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "The Mortimer Snerds",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Carrie",
+          "workId": "entity:ff4a17faeb9e2ea7202ee802",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:9dd6e399c0cc82449333dc47": {
+      "characterId": "entity:9dd6e399c0cc82449333dc47",
+      "displayName": "The Outsider (Creature)",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "The Outsider (Creature)",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Outsider",
+          "workId": "entity:4c91c9954f2d6c0fb69811bd",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:4de95e834cb38e6a11aff720": {
+      "characterId": "entity:4de95e834cb38e6a11aff720",
+      "displayName": "The Raggedy Man",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "The Raggedy Man",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Cell",
+          "workId": "entity:f0f6cd515c7afd43e39f419c",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:23234e1cc3bb682e135e2fb4": {
+      "characterId": "entity:23234e1cc3bb682e135e2fb4",
+      "displayName": "Tim Youngblood",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Tim Youngblood",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Rita Hayworth and Shawshank Redemption",
+          "workId": "entity:0dfab0d0f1dcc43fb957fd39",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:16b063fa507c0d2fab561a15": {
+      "characterId": "entity:16b063fa507c0d2fab561a15",
+      "displayName": "Tina Blake",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Tina Blake",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Carrie",
+          "workId": "entity:ff4a17faeb9e2ea7202ee802",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:18ba420d7fc1e63ce473a966": {
+      "characterId": "entity:18ba420d7fc1e63ce473a966",
+      "displayName": "Tom Mahout",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Tom Mahout",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Gerald's Game",
+          "workId": "entity:e9ac75ead8ed1fbd3b578d30",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:0b7cce41fbb49a88fc3a4467": {
+      "characterId": "entity:0b7cce41fbb49a88fc3a4467",
+      "displayName": "Tom Rogan",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Tom Rogan",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "It",
+          "workId": "entity:d4ad48e35f3cd14d4b64f643",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:ff21f2bcd0dd44defc4d5bcc": {
+      "characterId": "entity:ff21f2bcd0dd44defc4d5bcc",
+      "displayName": "Tommyknockers",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Tommyknockers",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Tommyknockers",
+          "workId": "entity:0b6894e0260ebc8da8d96602",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:37a5ca4a19f6ee7a55c7e4ba": {
+      "characterId": "entity:37a5ca4a19f6ee7a55c7e4ba",
+      "displayName": "Vic Mooney",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Vic Mooney",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Carrie",
+          "workId": "entity:ff4a17faeb9e2ea7202ee802",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:c6fc6922611f29aaae186e8d": {
+      "characterId": "entity:c6fc6922611f29aaae186e8d",
+      "displayName": "Victor Criss",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Victor Criss",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "It",
+          "workId": "entity:d4ad48e35f3cd14d4b64f643",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:8c37a04cbf6c72d94e13c977": {
+      "characterId": "entity:8c37a04cbf6c72d94e13c977",
+      "displayName": "Victor Pascow",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Victor Pascow",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Pet Sematary",
+          "workId": "entity:0dffd3a90a4bdbffa5633a46",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:f3635fb522646eb2323e9ede": {
+      "characterId": "entity:f3635fb522646eb2323e9ede",
+      "displayName": "Wendigo",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Wendigo",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Pet Sematary",
+          "workId": "entity:0dffd3a90a4bdbffa5633a46",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:6c1c0f3866ff40447a5ef3cf": {
+      "characterId": "entity:6c1c0f3866ff40447a5ef3cf",
+      "displayName": "Wilfred James",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Wilfred James",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "1922",
+          "workId": "entity:d4bb1b97b1b423f9059db3c7",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:4f2639b1b847df2244bc43d6": {
+      "characterId": "entity:4f2639b1b847df2244bc43d6",
+      "displayName": "William Wharton",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "William Wharton",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "The Green Mile",
+          "workId": "entity:f102c68c58c16ff01197f8bd",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    },
+    "entity:5f7e40669883c2a5d2f29407": {
+      "characterId": "entity:5f7e40669883c2a5d2f29407",
+      "displayName": "Winston Church",
+      "editorialStatus": "provisional",
+      "claims": [
+        {
+          "predicate": "identity",
+          "value": "Winston Church",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        },
+        {
+          "predicate": "appearsIn",
+          "value": "Pet Sematary",
+          "workId": "entity:0dffd3a90a4bdbffa5633a46",
+          "provider": "Free Stephen King API",
+          "url": "https://stephen-king-api.onrender.com/api/villains",
+          "sourceClass": "community-dataset",
+          "verification": "provisional",
+          "retrievedAt": "2026-08-11T18:57:13.081Z",
+          "sourceNote": "The API describes its data only as publicly sourced and provides no record-level original citations."
+        }
+      ],
+      "primaryVerificationNeeded": true
+    }
+  }
+}

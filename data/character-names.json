@@ -1,0 +1,1152 @@
+[
+  {
+    "id": "character-name:bb2fc95a5b8bce88e681d2a3",
+    "characterId": "entity:0b05cef050c5df4b0940207a",
+    "name": "Jessica Upshaw",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:60c205d471394b8aacb72c3d",
+    "characterId": "entity:0b7cce41fbb49a88fc3a4467",
+    "name": "Tom Rogan",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:7b7a2102942e5da9ca62dee4",
+    "characterId": "entity:0c8cbe8fe5f668b8fbaa075b",
+    "name": "Patrick Hockstetter",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:e4e5008b74b1b1924445dce7",
+    "characterId": "entity:0d813b27839bbda6d6c40a9b",
+    "name": "Cindi",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:97d8ee84573848a1582a5f1e",
+    "characterId": "entity:0f424d105c64c2f0a30426dc",
+    "name": "Mary Lila Grace",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:c588526f5cfe00e49441afa6",
+    "characterId": "entity:0f560982fd969ee1cddd146a",
+    "name": "John Halston",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:8741e23ffb5199a4499cd6b3",
+    "characterId": "entity:13e6b023c4ce6afd6715b33c",
+    "name": "Billy Nolan",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:8d83540f7af2fdab998c010a",
+    "characterId": "entity:1403b6e14c544b942906a8cc",
+    "name": "Rachel Spies",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:e4c74eec5ae7b29ad776a66a",
+    "characterId": "entity:16b063fa507c0d2fab561a15",
+    "name": "Tina Blake",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:2e44550fa873f5fb15067f93",
+    "characterId": "entity:18ba420d7fc1e63ce473a966",
+    "name": "Tom Mahout",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:8d3697ab424ed1fea7b8b91d",
+    "characterId": "entity:194ae882fd86cf9b3087c826",
+    "name": "James Boon",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:6936c8082eb98e38f23aee34",
+    "characterId": "entity:1a32bf9ab89253ff76dec603",
+    "name": "Jim Rennie",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:d9a266536fcc3004e987ff7a",
+    "characterId": "entity:23234e1cc3bb682e135e2fb4",
+    "name": "Tim Youngblood",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:8404d42e9d9dbfb9b354369b",
+    "characterId": "entity:24391d911db9ef2d040a2b34",
+    "name": "Blaine the Mono",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:88a97948dc9955531d2bc350",
+    "characterId": "entity:290ad42f75f5c849e932530e",
+    "name": "Lane Hardy",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:125ffc764958a51dd10aef8e",
+    "characterId": "entity:2aa243915d26244f552e331d",
+    "name": "Lester Lowe",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:d973e4ba3ecba27f962da30a",
+    "characterId": "entity:2cd98100d4dedcc075ce9306",
+    "name": "Little Sisters",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:43d835f2cf576b20f7497ac8",
+    "characterId": "entity:2e0cca1b847c5b079e725176",
+    "name": "The Gladiators",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:30bdcb4c5755ed2dbcbacae7",
+    "characterId": "entity:2fd1f2a17a9341436ae091d7",
+    "name": "Richard P. Macklin",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:ec8c4a566fa48d22af6883d6",
+    "characterId": "entity:2fd6ce0e336a3a100a4ed7d8",
+    "name": "Gerald Burlingame",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:3d950ab7f1df8b79eeec825e",
+    "characterId": "entity:305e93580348fbe247b9efe3",
+    "name": "Margaret White",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:85556ce32b8a4c6093a1c26b",
+    "characterId": "entity:308c88bded6407213e8fcd49",
+    "name": "Leland Gaunt",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:0a9ef643dbe8ee426d51fd78",
+    "characterId": "entity:31617027fb2e03d1b468ded6",
+    "name": "The Kid",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:9469baca4e695dbf25b55984",
+    "characterId": "entity:332c6cbe970edaeff5714a1f",
+    "name": "It (Creature)",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:f132e948e8db6c6317a7e4e2",
+    "characterId": "entity:361ed2e677fc23825b4e2b40",
+    "name": "Brady Hartsfield",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:4ba11a3626ca8b0d4673b279",
+    "characterId": "entity:37a5ca4a19f6ee7a55c7e4ba",
+    "name": "Vic Mooney",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:479e1817b1761d7497fc469c",
+    "characterId": "entity:38dc25736e903394578f0ec8",
+    "name": "Harold Lauder",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:f21f3927c0b0b9beff58ebc7",
+    "characterId": "entity:448e8df95f466b650f992b72",
+    "name": "Charlie McGee",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:77d3ed537f3fa1c92c655bc6",
+    "characterId": "entity:471f21b4f48901029da4a23b",
+    "name": "Cordelia Delgado",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:518474f892ee2f3e269bc8be",
+    "characterId": "entity:4ad5d0f9232e6d674cdc2b78",
+    "name": "Cujo",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:9c0d1aaacf8d0cfffc6f2d1b",
+    "characterId": "entity:4de95e834cb38e6a11aff720",
+    "name": "The Raggedy Man",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:c1d9e077c0742eae9a11e443",
+    "characterId": "entity:4e33cd55c2b84854a6e1cbf6",
+    "name": "Donna and Mary Lila Grace Thibodeau",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:f0a93a8a69612b89e91055a1",
+    "characterId": "entity:4e3afb0407f09b4850d098c8",
+    "name": "Susan Day",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:3dc584a7359b0df6e2aa65f8",
+    "characterId": "entity:4f2639b1b847df2244bc43d6",
+    "name": "William Wharton",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:36a9e4c2874a7978c8191ba3",
+    "characterId": "entity:511ba82fd29fb16adbfdcb03",
+    "name": "Christine Hargensen",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:3c7225e13e700a34aeb536a1",
+    "characterId": "entity:5144f6c1424532426ddeb612",
+    "name": "Myra Crewes",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:216e8650438fc30a930a1126",
+    "characterId": "entity:5205c3c688beacc03adaa937",
+    "name": "John \"Ace\" Merrill",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:b271ce5fba033dfaf06049e0",
+    "characterId": "entity:52814e642d415f8837a816bd",
+    "name": "Bob Anderson",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:eee635e914cf2df4479754bf",
+    "characterId": "entity:54eef1008d77161620b446c7",
+    "name": "Samuel Norton",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:3e00a0229f06ee2f845d2180",
+    "characterId": "entity:555a3be7219b38acb77d0c58",
+    "name": "Kenny Garson",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:e959f9c8e0c1bf41eaddeba0",
+    "characterId": "entity:5828c0d8f87b21e05ca932a6",
+    "name": "Henry James",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:f2ed8e09548be8ee796e1880",
+    "characterId": "entity:5957bf75495cbfe93b234abc",
+    "name": "Eldred Jonas",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:c09b9c49fe32f8812d0a5c03",
+    "characterId": "entity:5c1bfcc8f84e9bd880d1985a",
+    "name": "Delbert Grady",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:5e189ca4b6c99627c6ca3273",
+    "characterId": "entity:5d8e1fbfedf7802db85eea99",
+    "name": "Horace M. Derwent",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:86d527a343ecee321c0dedac",
+    "characterId": "entity:5f7e40669883c2a5d2f29407",
+    "name": "Winston Church",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:08f40266cac457992962826d",
+    "characterId": "entity:602af21c1055142e8fbc6d45",
+    "name": "Malcolm Janus",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:0ad38f43290a883f9f85d204",
+    "characterId": "entity:6293f1291654600735eda0d7",
+    "name": "Frank Dodd",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:27b6b88b82c0a310ee63d0fa",
+    "characterId": "entity:641b5e7b9956f67613739a5c",
+    "name": "John Garton",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:e0f7c408858525fe0c0ab28b",
+    "characterId": "entity:65a21b896bccaac0c4f9162c",
+    "name": "Carter Thibodeau",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:38b5cb57291bcd05712f0a2a",
+    "characterId": "entity:6b2749500def82455456fd1e",
+    "name": "Richard Lawson",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:7371fd8b6a149e8c3d09f273",
+    "characterId": "entity:6c1c0f3866ff40447a5ef3cf",
+    "name": "Wilfred James",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:27b04e82944413928377bb02",
+    "characterId": "entity:6c1e363ba648481dd216de50",
+    "name": "Alvin Marsh",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:7b20f97c9920ea4027466c64",
+    "characterId": "entity:6ec881d0ab5179195007ba1e",
+    "name": "Sam (cat)",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:2748adf88067dc3b0a9b806e",
+    "characterId": "entity:72cbfbc5ac3575662effc10f",
+    "name": "Butch Bowers",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:8bb107a92592d0e40b3dd2ef",
+    "characterId": "entity:74f81b5bacc337900df9529c",
+    "name": "Gage Creed",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:e76b6073631a0d3d9af90ba9",
+    "characterId": "entity:7e263afdd2c89a46b213fb2a",
+    "name": "The Major",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:d9cfd9e4541d70e9f83295c2",
+    "characterId": "entity:80eb5af68775e97becf2020a",
+    "name": "Raymond Andrew Joubert",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:0926ef55eff2c8ed5485ca9c",
+    "characterId": "entity:82e95a42f4c947a865a3a3ac",
+    "name": "Kurt Barlow",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:5b97272aef9ed924ba4894a6",
+    "characterId": "entity:839e8e7742575cb4e927e80d",
+    "name": "Brian Lippy",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:4ce2c22b229da9108fee1eaf",
+    "characterId": "entity:84920cdc0282e7d076c940ed",
+    "name": "Elenor Richmond",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:ee343008010090596b8efdd9",
+    "characterId": "entity:89ef3eddcf6090cc04406601",
+    "name": "Henrietta Dodd",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:f99b574840975cd2336b1530",
+    "characterId": "entity:8c37a04cbf6c72d94e13c977",
+    "name": "Victor Pascow",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:01ee70962792d25de8f91abc",
+    "characterId": "entity:8efe50ed1392bc927f14ea64",
+    "name": "Greta Bowie",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:69dcea2e4d15dbb6aeb8e6eb",
+    "characterId": "entity:91566c3682a7b1a7deb9e241",
+    "name": "Randall Flagg",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:2f4a3f10e2e4cf8f0b6043ca",
+    "characterId": "entity:927ee981314d51aede6d903f",
+    "name": "Donald Merwin Elbert",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:e689f5d434d6c42e227685fd",
+    "characterId": "entity:93193a26095efba738e2bcd7",
+    "name": "Lloyd Henreid",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:da0c9529ba2070280ab35920",
+    "characterId": "entity:96031f4d781e338769704bf2",
+    "name": "Joe St. George",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:c29a049b10fdf613da858cee",
+    "characterId": "entity:96ddc74d598aa6bc02656dfa",
+    "name": "Belch Huggins",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:f61305c3a7371040a6ad6d9f",
+    "characterId": "entity:97fed30e492b7442f4fabb5c",
+    "name": "Malachai Boardman",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:df5cd7b8d6697ad4921ba442",
+    "characterId": "entity:9dd6e399c0cc82449333dc47",
+    "name": "The Outsider (Creature)",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:86a24f91c374bc99785e75b9",
+    "characterId": "entity:9f41e8ea862f3d69d819acc6",
+    "name": "Crimson King",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:d6d3b4f6eca6f2aab4f7db4c",
+    "characterId": "entity:a3e37f64dbf736864aaef721",
+    "name": "Jim Rennie, Jr.",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:c60d0ba183fe407e77b2bfa4",
+    "characterId": "entity:aa67efd4b5ca90255e0d38f2",
+    "name": "Gladys Hickson",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:eece580d838b7646668fd84d",
+    "characterId": "entity:afe7c11c95217f459e362631",
+    "name": "Jackie Talbot",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:fdd8093e24f98259b4a09485",
+    "characterId": "entity:b10917ac34fa1f282c8d1718",
+    "name": "Marten Broadcloak",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:bd1ccaf60945c71751970072",
+    "characterId": "entity:b14b7577a61aedeaa1f1c94f",
+    "name": "Damon Killian",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:a7c6d2cbe0dc43a9a365f974",
+    "characterId": "entity:b15e115952ce1f54fec4c661",
+    "name": "George Stark",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:0df5102d2f513ef949dad04d",
+    "characterId": "entity:b2774a619c7f17a388d5fb53",
+    "name": "Ross Humboldt",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:03f90bb5f5499a85943546c9",
+    "characterId": "entity:b29bd2e777fda1b484de9f5e",
+    "name": "Mother of the Null",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:355c88d6a356d5b3b2412ce4",
+    "characterId": "entity:b8949dee59be2fdf5f76789d",
+    "name": "Greg Stillson",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:1b766cc783eb90ccc065e7e4",
+    "characterId": "entity:bb1038e95ea9b153c6ffdbf5",
+    "name": "Christopher Unwin",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:86f558a27991c1e03e59207e",
+    "characterId": "entity:bbe3fc65592caf3d0bbbe6cb",
+    "name": "John Rainbird",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:9d19feadf4d2191eca0fbf8e",
+    "characterId": "entity:bc03dab6fe83fd3b5aa9246e",
+    "name": "Sonny Elliman",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:c58948cdd176cc304327f235",
+    "characterId": "entity:bdd2f67e6126e30af27b8ee9",
+    "name": "Billy deLois",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:ca6b9c4c3af7583bcc963dbc",
+    "characterId": "entity:c111b54362b8f2b974da7795",
+    "name": "Henry Bowers",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:4666324fa84883ac2ce09ea5",
+    "characterId": "entity:c1a8f545346022612a147ffd",
+    "name": "Jack Mort",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:0dff965c898995d63655abd8",
+    "characterId": "entity:c2207be2b2f85289fccee6f9",
+    "name": "Jack Torrance",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:a088e4aad89f045435f59a0d",
+    "characterId": "entity:c6fc6922611f29aaae186e8d",
+    "name": "Victor Criss",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:a2ffab1b2112cc0364af712f",
+    "characterId": "entity:c75196d06cec0b68c295b647",
+    "name": "Rose the Hat",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:e3afeb5621f987df1c5da28a",
+    "characterId": "entity:c7660de20165b7e39873cafe",
+    "name": "Isaac Chroner",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:b9360ff2290762f07b402d9b",
+    "characterId": "entity:c86036116a23c5a0eb7de62b",
+    "name": "Mordred Deschain",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:e21665ee6447610cc1526d10",
+    "characterId": "entity:c88f380a17410eb06f2da052",
+    "name": "Craig Toomey",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:cfe1e064ca70539439c37135",
+    "characterId": "entity:d6cbd5c0527190c4dc4dcbac",
+    "name": "Rhea Dubativo",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:02a036269fb55404f1d627d5",
+    "characterId": "entity:d8dc18a55140486f6f9a7672",
+    "name": "Peter Gordon",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:eab2f85f226b48bea59b5945",
+    "characterId": "entity:d930017c2ba0b83b2bfee2c0",
+    "name": "The Devil's Dozen",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:d03dc496fa7276c9dd171b31",
+    "characterId": "entity:da695d87487c557a80d91297",
+    "name": "Christine (car)",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:0d99300b28a9dc1b356fea33",
+    "characterId": "entity:dc769ae56da63fcc6cf32997",
+    "name": "Richard Straker",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:15ddb06c7bc54c551504d367",
+    "characterId": "entity:dc8bea15a92132950ca1974b",
+    "name": "Percy Wetmore",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:2e86e293bfefa19f883e7c33",
+    "characterId": "entity:dce310851087d2a49885e90c",
+    "name": "The Mortimer Snerds",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:97e4be910323f46016d5a199",
+    "characterId": "entity:de0917012ecfaf5dc8c93a06",
+    "name": "Rat Man",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:3d9b4f507e5d448a7f2ccfe1",
+    "characterId": "entity:e2630b0a3ca9ef33c0ba1b0b",
+    "name": "Norma Watson",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:c47d3aa1b44d7dac7d06737e",
+    "characterId": "entity:e2ddf8655047cea93b4402a7",
+    "name": "Arnie Cunningham",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:640a3cbeb0ee7c006b0c41b7",
+    "characterId": "entity:e52f5e7852ef498a21ae47e6",
+    "name": "Sally Mueller",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:eedf9342ddfb74d5e46a23ae",
+    "characterId": "entity:e5d1193588cf2ff02703c212",
+    "name": "Norman Daniels",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:2ce8199d70fe29d863e3729e",
+    "characterId": "entity:e6b35c37fe8ae05efad06ef5",
+    "name": "Bogs Diamond",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:a81ee92ec23d234ea5465940",
+    "characterId": "entity:e6f3d1c7541a84b3addd1260",
+    "name": "Dandelo",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:f0f728169f9bfe88def6c87e",
+    "characterId": "entity:ee44f48a19d98d20c4ff7247",
+    "name": "Annie Wilkes",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:670a6aabb67ee9da41fb5376",
+    "characterId": "entity:f1a3a62c57bd42ce4ff85c56",
+    "name": "Marcia Fadden",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:0c022d9e5af7c71ee6794a9a",
+    "characterId": "entity:f2006abd417d6b636d2f1b91",
+    "name": "Kurt Dussander",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:22a658bb008188d730ab33d4",
+    "characterId": "entity:f355eb4133f8498369c8228d",
+    "name": "Byron Hadley",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:57ce86524361670a67e423a5",
+    "characterId": "entity:f3635fb522646eb2323e9ede",
+    "name": "Wendigo",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:edc5d2d73b4ae7d047d24f60",
+    "characterId": "entity:f8d2dd07e65b15226e7f651a",
+    "name": "John Farson",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:a4bda8711cca564c7371c64b",
+    "characterId": "entity:fbafc28db1f2fb8a9c975f81",
+    "name": "James Hollister",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:44e027fdfe438c512eb9f0cb",
+    "characterId": "entity:fe2ffb931a3c3f50ba765814",
+    "name": "Sylvia Pittston",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  },
+  {
+    "id": "character-name:31df7a95508527f0e1303d6a",
+    "characterId": "entity:ff21f2bcd0dd44defc4d5bcc",
+    "name": "Tommyknockers",
+    "nameType": "canonical",
+    "status": "observed",
+    "confidence": 0.4,
+    "continuity": "literary-canon",
+    "spoilerLevel": "none"
+  }
+]

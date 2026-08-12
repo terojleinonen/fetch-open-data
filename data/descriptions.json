@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-11T18:32:19.367Z",
+  "policy": {
+    "editorialTextExcluded": true,
+    "openDescriptionsOnly": true,
+    "licenses": [
+      "CC0 1.0",
+      "CC BY-SA 4.0",
+      "CC BY-SA"
+    ]
+  },
+  "works": {
+    "entity:0dc3c8a33057b449ff263e24": {
+      "text": "A Very Tight Place is a novella by Stephen King, originally published in the May 2008 issue of McSweeney's, and collected in King's 2008 collection Just After Sunset.",
+      "provider": "Wikipedia",
+      "license": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/A_Very_Tight_Place",
+      "sourceTitle": "A Very Tight Place",
+      "revisionId": 1354608245,
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:61e8a81f0a587543f0c430d1": {
+      "text": "A Face in the Crowd is a novella by Stephen King and Stewart O'Nan, originally published as an e-book on August 21, 2012, as well as an audiobook, read by Craig Wasson.  A hardcover edition was published in July 2023 in an omnibus edition, paired with Richard Chizmar's The Longest December.",
+      "provider": "Wikipedia",
+      "license": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/A_Face_in_the_Crowd_(novella)",
+      "sourceTitle": "A Face in the Crowd (novella)",
+      "revisionId": 1354580415,
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:5073c99db126ec81ff95c7ba": {
+      "text": "\"Afterlife\" is a short story by Stephen King, first published in the June 2013 edition of Tin House, an American literary magazine and publisher.  The story was later collected and re-introduced in the November 3, 2015 anthology The Bazaar of Bad Dreams, in which King revealed that the idea came from his own musings on mortality as he grew older.",
+      "provider": "Wikipedia",
+      "license": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Afterlife_(short_story)",
+      "sourceTitle": "Afterlife (short story)",
+      "revisionId": 1362575089,
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:cc240f920a745be8d628da2d": {
+      "text": "\"All That You Love Will Be Carried Away\" is a short story by Stephen King.  It was originally published in the January 29, 2001 issue of The New Yorker.",
+      "provider": "Wikipedia",
+      "license": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/All_That_You_Love_Will_Be_Carried_Away",
+      "sourceTitle": "All That You Love Will Be Carried Away",
+      "revisionId": 1366349389,
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:d966fcd3523247e798dfff44": {
+      "text": "Joyland is a novel by American writer Stephen King, published in 2013 by Hard Case Crime.  It is King's second book for the imprint, following The Colorado Kid (2005).",
+      "provider": "Wikipedia",
+      "license": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Joyland_(King_novel)",
+      "sourceTitle": "Joyland (King novel)",
+      "revisionId": 1354697945,
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:2915598af126f40c9bd056b5": {
+      "text": "\"Rainy Season\" is a short horror story by Stephen King, first published in Midnight Graffiti in 1989, and later collected in King's book Nightmares & Dreamscapes in 1993.",
+      "provider": "Wikipedia",
+      "license": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Rainy_Season_(short_story)",
+      "sourceTitle": "Rainy Season (short story)",
+      "revisionId": 1362572567,
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:96233227dee9da01e2b8a534": {
+      "text": "Lisey's Story is a psychological horror romance novel by American writer Stephen King.  The novel was released on October 24, 2006.",
+      "provider": "Wikipedia",
+      "license": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Lisey%27s_Story",
+      "sourceTitle": "Lisey's Story",
+      "revisionId": 1354707240,
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:794b1a9efda25dac3e6692b0": {
+      "text": "\"Rest Stop\" is a short story by the American writer Stephen King, originally published in the December 2003 issue of Esquire and collected in King's 2008 collection Just After Sunset.  In 2004, \"Rest Stop\" won the National Magazine Award for Fiction.",
+      "provider": "Wikipedia",
+      "license": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Rest_Stop_(short_story)",
+      "sourceTitle": "Rest Stop (short story)",
+      "revisionId": 1362574911,
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:0dfab0d0f1dcc43fb957fd39": {
+      "text": "Rita Hayworth and Shawshank Redemption is a realist novella by Stephen King.  It was first published in 1982 by Viking Press in his collection Different Seasons.",
+      "provider": "Wikipedia",
+      "license": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Rita_Hayworth_and_Shawshank_Redemption",
+      "sourceTitle": "Rita Hayworth and Shawshank Redemption",
+      "revisionId": 1359339236,
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:eeca473c4868f6207fdd1c97": {
+      "text": "Misery is a psychological horror novel by U. S.",
+      "provider": "Wikipedia",
+      "license": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Misery_(novel)",
+      "sourceTitle": "Misery (novel)",
+      "revisionId": 1357273018,
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:170caec878230d2240dfd3ac": {
+      "text": "\"Rush Call\" is a short story by Stephen King.  Originally published in his brother's self-published newspaper Dave's Rag in 1960, it was later collected in the 2000 work Secret Windows.",
+      "provider": "Wikipedia",
+      "license": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Rush_Call",
+      "sourceTitle": "Rush Call",
+      "revisionId": 1362579978,
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    }
+  },
+  "characters": {
+    "entity:ee44f48a19d98d20c4ff7247": {
+      "text": "Annie Wilkes is a fictional character from Stephen King's 1987 novel Misery, in which she acts as one of the two central characters and main antagonist.  In 2022, King picked her as his personal favorite character among all those he created in his literary career.",
+      "provider": "Wikipedia",
+      "license": "CC BY-SA 4.0",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Annie_Wilkes",
+      "sourceTitle": "Annie Wilkes",
+      "revisionId": 1367454545,
+      "retrievedAt": "2026-08-11T18:29:07.201Z",
+      "adapted": false
+    }
+  },
+  "adaptations": {
+    "entity:367f89449ed270d8cb1b85aa": {
+      "text": "Bag of Bones is a ghost story of grief and lost love's enduring bonds, about an innocent child caught in a terrible crossfire and a new love haunted by past secrets.",
+      "provider": "TVmaze",
+      "license": "CC BY-SA",
+      "sourceUrl": "https://www.tvmaze.com/shows/1001/bag-of-bones",
+      "sourceTitle": "Bag of Bones",
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:46a94337fd98d5d6f68b7e59": {
+      "text": "Imagine having the power to change history.  Would you journey down the \"rabbit hole\"?",
+      "provider": "TVmaze",
+      "license": "CC BY-SA",
+      "sourceUrl": "https://www.tvmaze.com/shows/5529/112263",
+      "sourceTitle": "11.22.63",
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:0f0a58f4b747eaa8cd579fa1": {
+      "text": "Based on Stephen King's iconic debut novel, Carrie is a bold, timely, and surprising reinvention of this classic coming of age story, adapted for television for the first time by visionary showrunner Mike Flanagan.  Misfit high schooler Carrie White has spent her life hidden away inside the walls of her home with her fiercely protective mother, Margaret.",
+      "provider": "TVmaze",
+      "license": "CC BY-SA",
+      "sourceUrl": "https://www.tvmaze.com/shows/45562/carrie",
+      "sourceTitle": "Carrie",
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:5fbd510abae7f32c61f74a86": {
+      "text": "Chapelwaite follows Captain Charles Boone, who relocates his family of three children to his ancestral home in the small, seemingly sleepy town of Preacher's Corners, Maine after his wife dies at sea.  However, Charles will soon have to confront the secrets of his family's sordid history, and fight to end the darkness that has plagued the Boones for generations.",
+      "provider": "TVmaze",
+      "license": "CC BY-SA",
+      "sourceUrl": "https://www.tvmaze.com/shows/45496/chapelwaite",
+      "sourceTitle": "Chapelwaite",
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:f32852f7ec553afd78b21921": {
+      "text": "Creepshow , the anthology series based on the 1982 horror comedy classic, is still the most fun you'll ever have being scared!  A comic book comes to life in a series of twelve vignettes over six episodes, exploring terrors from murder to the supernatural and unexplainable.",
+      "provider": "TVmaze",
+      "license": "CC BY-SA",
+      "sourceUrl": "https://www.tvmaze.com/shows/37790/creepshow",
+      "sourceTitle": "Creepshow",
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:223f303af85fab42c7c4c2b8": {
+      "text": "When FBI Special Agent Audrey Parker is dispatched to the small town of Haven , Maine, on a routine case, she soon finds herself increasingly involved in the return of \"The Troubles\", a plague of supernatural afflictions that have occurred in the town at least twice before.  With an openness to the possibility of the paranormal, she also finds a more personal link in Haven that may lead her to the mother she has never known.",
+      "provider": "TVmaze",
+      "license": "CC BY-SA",
+      "sourceUrl": "https://www.tvmaze.com/shows/90/haven",
+      "sourceTitle": "Haven",
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:9a503316f4ae9067525775b7": {
+      "text": "Lisey's Story is a deeply personal thriller that follows Lisey two years after the death of her husband.  A series of events causes Lisey to begin facing amazing realities about him that she had repressed and forgotten.",
+      "provider": "TVmaze",
+      "license": "CC BY-SA",
+      "sourceUrl": "https://www.tvmaze.com/shows/41694/liseys-story",
+      "sourceTitle": "Lisey's Story",
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:c721c8708f4964a0b68170bc": {
+      "text": "A demented serial killer taunts a retired police detective with a series of lurid letters and emails, forcing the ex-cop to undertake a private, and potentially felonious, crusade to bring the killer to justice before he can strike again.  Based on the bestselling novel by Stephen King.",
+      "provider": "TVmaze",
+      "license": "CC BY-SA",
+      "sourceUrl": "https://www.tvmaze.com/shows/24784/mr-mercedes",
+      "sourceTitle": "Mr. Mercedes",
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:cfa16d31bb68978825cd225d": {
+      "text": "Salem's Lot is a TV mini-series based on the book of the same name by Stephen King.",
+      "provider": "TVmaze",
+      "license": "CC BY-SA",
+      "sourceUrl": "https://www.tvmaze.com/shows/14111/salems-lot",
+      "sourceTitle": "Salem's Lot",
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:1c159fb5840e106f16ef6cea": {
+      "text": "Salem's Lot is a TV mini-series based on the book of the same name by Stephen King.",
+      "provider": "TVmaze",
+      "license": "CC BY-SA",
+      "sourceUrl": "https://www.tvmaze.com/shows/14112/salems-lot",
+      "sourceTitle": "Salem's Lot",
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:30a96e07d8effc8ba47d107a": {
+      "text": "Based on the characters and story from the best-selling novel by Stephen King, The Dead Zone is a unique psychological thriller that combines a rich mix of the paranormal, action, and a continuing quest for justice.",
+      "provider": "TVmaze",
+      "license": "CC BY-SA",
+      "sourceUrl": "https://www.tvmaze.com/shows/940/the-dead-zone",
+      "sourceTitle": "The Dead Zone",
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:78ea3e56a3346f0e1094078b": {
+      "text": "When 12-year-old genius Luke Ellis is kidnapped, he awakens at The Institute, a facility full of children who all got there the same way he did, and who are all possessed of unusual abilities.  In a nearby town, haunted former police officer Tim Jamieson has come looking to start a new life, but the peace and quiet won't last, as his story and Luke's are destined to collide.",
+      "provider": "TVmaze",
+      "license": "CC BY-SA",
+      "sourceUrl": "https://www.tvmaze.com/shows/77778/the-institute",
+      "sourceTitle": "The Institute",
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:54c8d969c79eb6671a7f8457": {
+      "text": "On a red eye flight to Boston from LA 10 people wake up to a shock.  All the other passengers and crew have vanished but all sorts of personal possessions remain.",
+      "provider": "TVmaze",
+      "license": "CC BY-SA",
+      "sourceUrl": "https://www.tvmaze.com/shows/23236/the-langoliers",
+      "sourceTitle": "The Langoliers",
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:f944d2ef8feff90826c08ed1": {
+      "text": "Based on a story by Stephen King, The Mist centers around a small town family that is torn apart by a brutal crime.  As they deal with the fallout an eerie mist rolls in, suddenly cutting them off from the rest of the world, and in some cases, each other.",
+      "provider": "TVmaze",
+      "license": "CC BY-SA",
+      "sourceUrl": "https://www.tvmaze.com/shows/3728/the-mist",
+      "sourceTitle": "The Mist",
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:47956a8953957d353e484ab5": {
+      "text": "The Outsider follows police detective Ralph Anderson, as he sets out to investigate the mutilated body of 11-year-old Frankie Peterson found in the Georgia woods.  The mysterious circumstances surrounding this horrifying crime leads Ralph, still grieving the recent death of his own son, to bring in unorthodox private investigator Holly Gibney, whose uncanny abilities he hopes will help explain the unexplainable.",
+      "provider": "TVmaze",
+      "license": "CC BY-SA",
+      "sourceUrl": "https://www.tvmaze.com/shows/39956/the-outsider",
+      "sourceTitle": "The Outsider",
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:8c8af270f39e1262f7248cfd": {
+      "text": "The Shining is a television adaptation of a Stephen King novel that follows a recovering alcoholic professor.  He ends up taking a job as a winter caretaker for a remote Colorado hotel which he seeks as an opportunity to finish a piece of work.",
+      "provider": "TVmaze",
+      "license": "CC BY-SA",
+      "sourceUrl": "https://www.tvmaze.com/shows/1786/the-shining",
+      "sourceTitle": "The Shining",
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:926ef4a7a7b75100e0687bf9": {
+      "text": "When a government-run lab accidentally lets loose a deadly virus, the population of the world is decimated.  Survivors begin having dreams about two figures: a mystical old woman, or a foreboding, scary man.",
+      "provider": "TVmaze",
+      "license": "CC BY-SA",
+      "sourceUrl": "https://www.tvmaze.com/shows/1785/stephen-kings-the-stand",
+      "sourceTitle": "Stephen King's The Stand",
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:dff8181ae58b2b73149807e6": {
+      "text": "The Stand explores an apocalyptic world ravaged by a mass outbreak of Influenza that wipes out 99% of the population in a matter of weeks.  The fate of mankind rests on the frail shoulders of the 108-year-old Mother Abagail and a handful of survivors.",
+      "provider": "TVmaze",
+      "license": "CC BY-SA",
+      "sourceUrl": "https://www.tvmaze.com/shows/35790/the-stand",
+      "sourceTitle": "The Stand",
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:5a9ee1f2b82033416a1462d0": {
+      "text": "The small town of Haven becomes a hot-bed of inventions all run by a strange green power device.  The whole town is digging something up in the woods, and only an alcoholic poet can discover the secret of The Tommyknockers .",
+      "provider": "TVmaze",
+      "license": "CC BY-SA",
+      "sourceUrl": "https://www.tvmaze.com/shows/24009/the-tommyknockers",
+      "sourceTitle": "The Tommyknockers",
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:93c27883c7f374906ac7d22f": {
+      "text": "Under the Dome is the story of a small town that is suddenly and inexplicably sealed off from the rest of the world by an enormous transparent dome.  The town's inhabitants must deal with surviving the post-apocalyptic conditions while searching for answers about the dome, where it came from and if and when it will go away.",
+      "provider": "TVmaze",
+      "license": "CC BY-SA",
+      "sourceUrl": "https://www.tvmaze.com/shows/1/under-the-dome",
+      "sourceTitle": "Under the Dome",
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    },
+    "entity:47edea271567741a1c52cda2": {
+      "text": "Seven young teenagers battle an evil force called Woh, who kidnaps children.  They attempt to help the city of Panchgani get rid of his menace.",
+      "provider": "TVmaze",
+      "license": "CC BY-SA",
+      "sourceUrl": "https://www.tvmaze.com/shows/45269/woh",
+      "sourceTitle": "Woh",
+      "retrievedAt": "2026-08-11T18:20:21.433Z",
+      "adapted": false
+    }
+  }
+}

@@ -1,0 +1,6 @@
+.cover-placeholder{display:grid;place-content:center;text-align:center;background:radial-gradient(circle at 50% 38%,#31201d 0,#121414 58%)}
+.cover-placeholder:before,.cover-placeholder:after{content:"";position:absolute;border:1px solid #61342e;inset:22% 18%}
+.cover-placeholder:after{inset:31% 29%;transform:rotate(45deg)}
+.cover-placeholder i{width:8px;height:8px;border-radius:50%;background:var(--blood);box-shadow:0 0 20px var(--blood);margin:auto}
+.cover-placeholder b{margin-top:18px;font:7px var(--font-mono),monospace;color:#8d857a;text-transform:uppercase;letter-spacing:.12em}
+.cover-placeholder span{left:50%;transform:translateX(-50%);white-space:nowrap}

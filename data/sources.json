@@ -1,0 +1,102 @@
+[
+  {
+    "id": "source-registry:c62d137b5dd20ae558d5dd15",
+    "name": "Library of Congress",
+    "sourceType": "institutional",
+    "baseUrl": "https://loc.gov",
+    "tier": 1,
+    "weight": 1,
+    "contentPolicy": "bibliographic-facts",
+    "licensePolicy": "verify item-level rights"
+  },
+  {
+    "id": "source-registry:4f03a060b7eb032972dcb327",
+    "name": "Publisher",
+    "sourceType": "official",
+    "baseUrl": null,
+    "tier": 1,
+    "weight": 0.98,
+    "contentPolicy": "edition-facts",
+    "licensePolicy": "publisher-specific"
+  },
+  {
+    "id": "source-registry:91ec6f3f14335cf37c6fdc80",
+    "name": "StephenKing.com",
+    "sourceType": "official",
+    "baseUrl": "https://stephenking.com",
+    "tier": 1,
+    "weight": 1,
+    "contentPolicy": "facts-only",
+    "licensePolicy": "link-and-cite; no protected editorial content"
+  },
+  {
+    "id": "source-registry:d8e69d52dd62fecf5a34daa1",
+    "name": "Google Books",
+    "sourceType": "bibliographic",
+    "baseUrl": "https://books.google.com",
+    "tier": 2,
+    "weight": 0.88,
+    "contentPolicy": "edition-facts",
+    "licensePolicy": "metadata and link only"
+  },
+  {
+    "id": "source-registry:f97ef214757e8c454511895b",
+    "name": "Open Library",
+    "sourceType": "bibliographic",
+    "baseUrl": "https://openlibrary.org",
+    "tier": 2,
+    "weight": 0.9,
+    "contentPolicy": "bibliographic-facts",
+    "licensePolicy": "cite source record"
+  },
+  {
+    "id": "source-registry:f8cae837478163a75ee9fb44",
+    "name": "Free Stephen King API",
+    "sourceType": "community",
+    "baseUrl": "https://stephen-king-api.onrender.com",
+    "tier": 3,
+    "weight": 0.76,
+    "contentPolicy": "seed-dataset; facts require enrichment",
+    "licensePolicy": "API metadata; retain attribution"
+  },
+  {
+    "id": "source-registry:93768342590ec46a7c28b220",
+    "name": "Wikidata",
+    "sourceType": "community",
+    "baseUrl": "https://www.wikidata.org",
+    "tier": 3,
+    "weight": 0.78,
+    "contentPolicy": "structured-facts",
+    "licensePolicy": "CC0 structured data"
+  },
+  {
+    "id": "source-registry:bf11ba3f487c384138273c17",
+    "name": "Wikipedia",
+    "sourceType": "community",
+    "baseUrl": "https://wikipedia.org",
+    "tier": 3,
+    "weight": 0.7,
+    "contentPolicy": "research-input",
+    "licensePolicy": "original summary; attribute research source"
+  },
+  {
+    "id": "source-registry:7c307e95ae1f657f5f9a4cb8",
+    "name": "Legacy import",
+    "sourceType": "legacy",
+    "baseUrl": null,
+    "tier": 5,
+    "weight": 0.4,
+    "contentPolicy": "legacy-observation",
+    "licensePolicy": "internal migration provenance"
+  },
+  {
+    "id": "source-registry:stephen-king-wiki-fandom",
+    "name": "Stephen King Wiki / Fandom",
+    "sourceType": "community",
+    "baseUrl": "https://stephenking.fandom.com",
+    "tier": 3,
+    "weight": 0.7,
+    "contentPolicy": "secondary reference; adapted text remains separately attributed",
+    "licensePolicy": "CC BY-SA 3.0; link article and license; disclose modifications; exclude images without item-level license"
+  }
+]
