@@ -1,11 +1,93 @@
-export const metadata={title:"Sources & Licenses"};
-const sources=[
-  {name:"StephenKing.com",className:"Official factual source",use:"Publication dates, formats, bibliography and awards. Promotional copy is not republished wholesale.",license:"Facts cited; editorial text excluded",url:"https://stephenking.com"},
-  {name:"Stephen King Wiki / Fandom",className:"Community reference",use:"Selected character summaries are condensed and edited only where an exact article match exists. Every derivative identifies its article and changes.",license:"CC BY-SA 3.0 text; images excluded unless separately licensed",url:"https://www.fandom.com/licensing"},
-  {name:"Wikipedia",className:"Secondary reference",use:"Directly matched work and character abstracts with article links and revision identifiers.",license:"CC BY-SA 4.0",url:"https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use"},
-  {name:"Open Library",className:"Bibliographic source",use:"Edition metadata, identifiers, record links and cover delivery. Descriptions are used only when rights are sufficiently clear.",license:"Item-level rights may vary",url:"https://openlibrary.org/developers/licensing"},
-  {name:"Google Books",className:"Bibliographic cross-check",use:"Identifiers and edition facts only. Publisher descriptions are not copied or translated for publication.",license:"Google Books API terms",url:"https://developers.google.com/books/terms"},
-  {name:"TMDB",className:"Screen metadata and imagery",use:"Matched film and television release data, credits, principal cast, poster delivery and English-language overviews. Uncertain matches are excluded.",license:"Non-commercial developer API with required attribution",url:"https://developer.themoviedb.org/docs/faq"},
-  {name:"Free Stephen King API",className:"Provisional seed dataset",use:"Candidate identities, categories, status and work links. The API does not provide original record-level citations.",license:"Always marked provisional until corroborated",url:"https://stephen-king-api.onrender.com"},
+export const metadata = { title: "Sources & Licenses" };
+const sources = [
+  {
+    name: "StephenKing.com",
+    className: "Official factual source",
+    use: "Publication dates, formats, bibliography and awards. Promotional copy is not republished wholesale.",
+    license: "Facts cited; editorial text excluded",
+    url: "https://stephenking.com",
+  },
+  {
+    name: "Stephen King Wiki / Fandom",
+    className: "Community reference",
+    use: "Selected character summaries are condensed and edited only where an exact article match exists. Every derivative identifies its article and changes.",
+    license: "CC BY-SA 3.0 text; images excluded unless separately licensed",
+    url: "https://www.fandom.com/licensing",
+  },
+  {
+    name: "Wikipedia",
+    className: "Secondary reference",
+    use: "Directly matched work and character abstracts with article links and revision identifiers.",
+    license: "CC BY-SA 4.0",
+    url: "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use",
+  },
+  {
+    name: "Open Library",
+    className: "Bibliographic source",
+    use: "Edition metadata, identifiers, record links and cover delivery. Descriptions are used only when rights are sufficiently clear.",
+    license: "Item-level rights may vary",
+    url: "https://openlibrary.org/developers/licensing",
+  },
+  {
+    name: "Google Books",
+    className: "Bibliographic cross-check",
+    use: "Identifiers and edition facts only. Publisher descriptions are not copied or translated for publication.",
+    license: "Google Books API terms",
+    url: "https://developers.google.com/books/terms",
+  },
+  {
+    name: "TMDB",
+    className: "Screen metadata and imagery",
+    use: "Matched film and television release data, credits, principal cast, poster delivery and English-language overviews. Uncertain matches are excluded.",
+    license: "Non-commercial developer API with required attribution",
+    url: "https://developer.themoviedb.org/docs/faq",
+  },
+  {
+    name: "Free Stephen King API",
+    className: "Provisional seed dataset",
+    use: "Candidate identities, categories, status and work links. The API does not provide original record-level citations.",
+    license: "Always marked provisional until corroborated",
+    url: "https://stephen-king-api.onrender.com",
+  },
 ];
-export default function Sources(){return <main className="page"><section className="page-title"><span className="chapter">EDITORIAL APPARATUS</span><h1>SOURCES<br/>& LICENSES</h1><p>This edition separates facts, copyrighted prose and openly licensed community text. Automated tools may locate evidence, but never count as a source.</p></section><section className="source-policy"><div className="policy-callout"><span>CORE RULE</span><h2>No citation, no assertion.</h2><p>Unverified records remain visible as research leads, never as established canon. Primary verification requires a named edition plus an ISBN and page or chapter locator.</p></div>{sources.map((source)=><article key={source.name}><div><span>{source.className}</span><h2>{source.name}</h2></div><p>{source.use}</p><a href={source.url} target="_blank" rel="noreferrer">{source.license} ↗</a></article>)}</section></main>}
+export default function Sources() {
+  return (
+    <main className="page">
+      <section className="page-title">
+        <span className="chapter">EDITORIAL APPARATUS</span>
+        <h1>
+          SOURCES
+          <br />& LICENSES
+        </h1>
+        <p>
+          This edition separates facts, copyrighted prose and openly licensed
+          community text. Automated tools may locate evidence, but never count
+          as a source.
+        </p>
+      </section>
+      <section className="source-policy">
+        <div className="policy-callout">
+          <span>CORE RULE</span>
+          <h2>No citation, no assertion.</h2>
+          <p>
+            Unverified records remain visible as research leads, never as
+            established canon. Primary verification requires a named edition
+            plus an ISBN and page or chapter locator.
+          </p>
+        </div>
+        {sources.map((source) => (
+          <article key={source.name}>
+            <div>
+              <span>{source.className}</span>
+              <h2>{source.name}</h2>
+            </div>
+            <p>{source.use}</p>
+            <a href={source.url} target="_blank" rel="noreferrer">
+              {source.license} ↗
+            </a>
+          </article>
+        ))}
+      </section>
+    </main>
+  );
+}

@@ -1,30 +1,1624 @@
-.atlas{display:grid;grid-template-columns:380px minmax(0,1fr);min-height:760px;border-bottom:1px solid var(--line);padding:65px 0}.atlas-copy{padding-top:50px;position:relative;z-index:2}.atlas-copy>span{font:8px var(--font-mono),monospace;letter-spacing:.16em;color:var(--blood)}.atlas-copy h2{font:58px/.88 Georgia,serif;font-weight:400;margin:24px 0}.atlas-copy h2 i{font-style:normal;color:var(--blood)}.atlas-copy>p{font:14px/1.6 Georgia,serif;color:var(--ash)}.map-legend{display:flex;gap:15px;margin:28px 0}.map-legend b{font:7px var(--font-mono),monospace;text-transform:uppercase;color:var(--ash)}.map-legend i{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px;background:var(--blood)}.map-legend i.real{background:var(--paper)}.map-legend i.inspired{background:#c59b55}.map-selection{display:block;border-left:2px solid var(--rust);padding:15px 18px;background:#131111}.map-selection small,.map-selection>b{display:block;font:7px var(--font-mono),monospace;text-transform:uppercase;color:var(--blood)}.map-selection strong{display:block;font:28px Georgia,serif;font-weight:400;margin-top:8px}.map-selection p{font:11px/1.45 var(--font-mono),monospace;color:var(--ash)}.maine-map{height:740px;position:relative}.maine-map svg{width:100%;height:100%;overflow:visible}.maine-shape{fill:#171918;stroke:#57534c;stroke-width:1}.map-marker{cursor:pointer;outline:none}.map-marker circle:first-child{fill:var(--blood);stroke:#090a0a;stroke-width:2}.map-marker.real circle:first-child{fill:var(--paper)}.map-marker.inspired circle:first-child,.map-marker.real.inspired circle:first-child{fill:#c59b55}.map-marker circle:nth-child(2){fill:none;stroke:var(--blood);stroke-width:1;stroke-dasharray:3 3;opacity:.4}.map-marker.exact circle:nth-child(2){display:none}.map-marker text{font:8px var(--font-mono),monospace;fill:#8f8b83;paint-order:stroke;stroke:#0b0c0c;stroke-width:3px}.map-marker:hover text,.map-marker.active text{fill:var(--paper)}.map-marker.active circle:nth-child(2){opacity:1}.maine-map>small{position:absolute;right:0;bottom:12px;font:6px var(--font-mono),monospace;color:#666}.places-directory{padding:70px 0 120px}.places-tools{display:grid;grid-template-columns:1fr auto;gap:25px;align-items:end}.places-tools label span{display:block;margin-bottom:8px;font:8px var(--font-mono),monospace;color:var(--ash)}.places-tools input{width:100%;height:52px;border:1px solid #514b44;background:#0e1010;color:var(--paper);padding:0 16px;font:16px Georgia,serif}.places-tools>div{display:flex}.places-tools button{height:52px;border:1px solid var(--line);margin-left:-1px;background:transparent;color:var(--ash);padding:0 14px;font:8px var(--font-mono),monospace;text-transform:uppercase}.places-tools button.active{background:#261512;border-color:var(--rust);color:var(--paper)}.places-count{text-align:right;font:8px var(--font-mono),monospace;color:var(--ash);text-transform:uppercase}.places-count b{font-size:15px;color:var(--blood)}.places-list{border-bottom:1px solid var(--line)}.place-row{display:grid;grid-template-columns:90px 1.2fr 1fr 120px 110px;align-items:center;gap:18px;min-height:68px;border-top:1px solid var(--line);padding:10px 14px}.place-row:hover{background:#171918}.place-kind{font:7px var(--font-mono),monospace;text-transform:uppercase;color:var(--blood)}.place-kind.real{color:var(--paper)}.place-row h3{font:23px Georgia,serif;font-weight:400;margin:0}.place-row p,.place-row small,.place-row>b{font:8px var(--font-mono),monospace;color:var(--ash);text-transform:uppercase}.place-row>b{color:var(--blood);text-align:right}.place-lead{max-width:680px;font:20px/1.5 Georgia,serif;color:#bcb5a9}.location-caveat{margin-top:38px;padding:22px;border:1px solid #5b3a34;background:#141110}.location-caveat b{font:8px var(--font-mono),monospace;color:var(--blood)}.location-caveat p{font:14px/1.5 Georgia,serif;color:#aaa49a}.place-detail .source-note b{font:8px var(--font-mono),monospace;color:var(--blood)}
+.atlas {
+    display: grid;
+    grid-template-columns: 380px minmax(0, 1fr);
+    min-height: 760px;
+    border-bottom: 1px solid var(--line);
+    padding: 65px 0
+}
+
+.atlas-copy {
+    padding-top: 50px;
+    position: relative;
+    z-index: 2
+}
+
+.atlas-copy>span {
+    font: 8px var(--font-mono), monospace;
+    letter-spacing: .16em;
+    color: var(--blood)
+}
+
+.atlas-copy h2 {
+    font: 58px/.88 Georgia, serif;
+    font-weight: 400;
+    margin: 24px 0
+}
+
+.atlas-copy h2 i {
+    font-style: normal;
+    color: var(--blood)
+}
+
+.atlas-copy>p {
+    font: 14px/1.6 Georgia, serif;
+    color: var(--ash)
+}
+
+.map-legend {
+    display: flex;
+    gap: 15px;
+    margin: 28px 0
+}
+
+.map-legend b {
+    font: 7px var(--font-mono), monospace;
+    text-transform: uppercase;
+    color: var(--ash)
+}
+
+.map-legend i {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin-right: 5px;
+    background: var(--blood)
+}
+
+.map-legend i.real {
+    background: var(--paper)
+}
+
+.map-legend i.inspired {
+    background: #c59b55
+}
+
+.map-selection {
+    display: block;
+    border-left: 2px solid var(--rust);
+    padding: 15px 18px;
+    background: #131111
+}
+
+.map-selection small,
+.map-selection>b {
+    display: block;
+    font: 7px var(--font-mono), monospace;
+    text-transform: uppercase;
+    color: var(--blood)
+}
+
+.map-selection strong {
+    display: block;
+    font: 28px Georgia, serif;
+    font-weight: 400;
+    margin-top: 8px
+}
+
+.map-selection p {
+    font: 11px/1.45 var(--font-mono), monospace;
+    color: var(--ash)
+}
+
+.maine-map {
+    height: 740px;
+    position: relative
+}
+
+.maine-map svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible
+}
+
+.maine-shape {
+    fill: #171918;
+    stroke: #57534c;
+    stroke-width: 1
+}
+
+.map-marker {
+    cursor: pointer;
+    outline: none
+}
+
+.map-marker circle:first-child {
+    fill: var(--blood);
+    stroke: #090a0a;
+    stroke-width: 2
+}
+
+.map-marker.real circle:first-child {
+    fill: var(--paper)
+}
+
+.map-marker.inspired circle:first-child,
+.map-marker.real.inspired circle:first-child {
+    fill: #c59b55
+}
+
+.map-marker circle:nth-child(2) {
+    fill: none;
+    stroke: var(--blood);
+    stroke-width: 1;
+    stroke-dasharray: 3 3;
+    opacity: .4
+}
+
+.map-marker.exact circle:nth-child(2) {
+    display: none
+}
+
+.map-marker text {
+    font: 8px var(--font-mono), monospace;
+    fill: #8f8b83;
+    paint-order: stroke;
+    stroke: #0b0c0c;
+    stroke-width: 3px
+}
+
+.map-marker:hover text,
+.map-marker.active text {
+    fill: var(--paper)
+}
+
+.map-marker.active circle:nth-child(2) {
+    opacity: 1
+}
+
+.maine-map>small {
+    position: absolute;
+    right: 0;
+    bottom: 12px;
+    font: 6px var(--font-mono), monospace;
+    color: #666
+}
+
+.places-directory {
+    padding: 70px 0 120px
+}
+
+.places-tools {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 25px;
+    align-items: end
+}
+
+.places-tools label span {
+    display: block;
+    margin-bottom: 8px;
+    font: 8px var(--font-mono), monospace;
+    color: var(--ash)
+}
+
+.places-tools input {
+    width: 100%;
+    height: 52px;
+    border: 1px solid #514b44;
+    background: #0e1010;
+    color: var(--paper);
+    padding: 0 16px;
+    font: 16px Georgia, serif
+}
+
+.places-tools>div {
+    display: flex
+}
+
+.places-tools button {
+    height: 52px;
+    border: 1px solid var(--line);
+    margin-left: -1px;
+    background: transparent;
+    color: var(--ash);
+    padding: 0 14px;
+    font: 8px var(--font-mono), monospace;
+    text-transform: uppercase
+}
+
+.places-tools button.active {
+    background: #261512;
+    border-color: var(--rust);
+    color: var(--paper)
+}
+
+.places-count {
+    text-align: right;
+    font: 8px var(--font-mono), monospace;
+    color: var(--ash);
+    text-transform: uppercase
+}
+
+.places-count b {
+    font-size: 15px;
+    color: var(--blood)
+}
+
+.places-list {
+    border-bottom: 1px solid var(--line)
+}
+
+.place-row {
+    display: grid;
+    grid-template-columns: 90px 1.2fr 1fr 120px 110px;
+    align-items: center;
+    gap: 18px;
+    min-height: 68px;
+    border-top: 1px solid var(--line);
+    padding: 10px 14px
+}
+
+.place-row:hover {
+    background: #171918
+}
+
+.place-kind {
+    font: 7px var(--font-mono), monospace;
+    text-transform: uppercase;
+    color: var(--blood)
+}
+
+.place-kind.real {
+    color: var(--paper)
+}
+
+.place-row h3 {
+    font: 23px Georgia, serif;
+    font-weight: 400;
+    margin: 0
+}
+
+.place-row p,
+.place-row small,
+.place-row>b {
+    font: 8px var(--font-mono), monospace;
+    color: var(--ash);
+    text-transform: uppercase
+}
+
+.place-row>b {
+    color: var(--blood);
+    text-align: right
+}
+
+.place-lead {
+    max-width: 680px;
+    font: 20px/1.5 Georgia, serif;
+    color: #bcb5a9
+}
+
+.location-caveat {
+    margin-top: 38px;
+    padding: 22px;
+    border: 1px solid #5b3a34;
+    background: #141110
+}
+
+.location-caveat b {
+    font: 8px var(--font-mono), monospace;
+    color: var(--blood)
+}
+
+.location-caveat p {
+    font: 14px/1.5 Georgia, serif;
+    color: #aaa49a
+}
+
+.place-detail .source-note b {
+    font: 8px var(--font-mono), monospace;
+    color: var(--blood)
+}
 
 /* Places editorial chapter */
-.places-page{width:auto;margin-left:var(--rail);overflow:hidden}.places-hero{height:min(810px,88vh);min-height:680px;position:relative;border-bottom:1px solid var(--line);isolation:isolate;background:#06161a}.places-hero-image{position:absolute;inset:0;background:url('/art/maine-noir-hero-v2.png') 58% 52%/cover no-repeat;filter:saturate(.62) contrast(1.14) brightness(.63)}.places-hero-image:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#06161af2 0%,#06161aa8 36%,transparent 70%),linear-gradient(0deg,#06161ad9 0%,transparent 35%),url('/textures/film-map-patina-v1.webp') center/cover;mix-blend-mode:screen;opacity:.48}.places-hero-copy{position:absolute;z-index:2;left:max(6vw,72px);top:10%;width:min(820px,70vw)}.places-hero-copy h1{margin:36px 0 27px;font-family:var(--display);font-weight:500;text-transform:uppercase;line-height:.71;letter-spacing:-.065em;transform:rotate(-2.4deg);transform-origin:left center;text-shadow:0 5px 24px #0009}.places-hero-copy h1 span,.places-hero-copy h1 i{display:block}.places-hero-copy h1 span:first-child{font-size:clamp(48px,6vw,96px);letter-spacing:.02em;margin-left:1.5vw}.places-hero-copy h1 span:nth-child(2){font-size:clamp(88px,12vw,184px);color:var(--hero-title)}.places-hero-copy h1 i{font-size:clamp(82px,11vw,170px);font-style:normal;color:var(--hero-accent);margin-left:9vw}.places-hero-copy>p{max-width:440px;margin-left:2vw;font:14px/1.65 var(--font-mono),monospace;color:#c1bbb0}.places-coordinates{position:absolute;z-index:3;right:4vw;top:7%;display:grid;text-align:right;font:8px/1.7 var(--font-mono),monospace;letter-spacing:.12em;color:#c0b9aa}.places-coordinates b{margin-top:9px;color:var(--hero-accent)}.places-field-note{position:absolute;z-index:4;right:7%;bottom:11%;width:235px;padding:21px 24px;background:var(--paper-panel);color:var(--paper-ink);transform:rotate(4deg);box-shadow:0 18px 45px #0009}.places-field-note small,.places-field-note b{font:7px var(--font-mono),monospace;color:#9d241b;letter-spacing:.12em}.places-field-note p{font:20px/1.25 var(--reading);margin:13px 0}.places-hero-register{position:absolute;z-index:3;bottom:0;left:0;right:0;min-height:48px;padding:0 4vw;display:flex;align-items:center;justify-content:space-between;border-top:1px solid #ffffff26;background:#06161ac7;color:#aaa79e;font:7px var(--font-mono),monospace;letter-spacing:.13em}.places-page>.atlas,.places-page>.places-directory{width:min(1180px,calc(100% - 64px));margin:auto}.atlas{position:relative}.atlas:before{content:"STORY";position:absolute;right:-5vw;top:70px;font:180px/.8 var(--display);color:var(--hero-accent);opacity:.045;transform:rotate(90deg);pointer-events:none}.atlas-copy h2{font-family:var(--display);font-size:68px;text-transform:uppercase;letter-spacing:-.035em}.maine-shape{fill:color-mix(in srgb,var(--panel) 84%,#173c41);stroke:color-mix(in srgb,var(--ink) 34%,transparent)}.map-selection{background:color-mix(in srgb,var(--panel) 90%,transparent)}
-html[data-theme="ivory"] .places-hero{background:#e7e0d4}.places-hero-image{filter:saturate(.55) contrast(1.13) brightness(.58)}html[data-theme="ivory"] .places-hero-image{filter:grayscale(.7) sepia(.12) saturate(.55) contrast(.88) brightness(1.14);opacity:.8}html[data-theme="ivory"] .places-hero-image:after{background:linear-gradient(90deg,#eee8ddf5 0%,#eee8ddaf 37%,transparent 70%),linear-gradient(0deg,#eee8ddd9 0%,transparent 35%),url('/textures/film-map-patina-v1.webp') center/cover;mix-blend-mode:multiply;opacity:.42}html[data-theme="ivory"] .places-hero-copy>p,html[data-theme="ivory"] .places-coordinates{color:#244047}html[data-theme="ivory"] .places-hero-copy h1{text-shadow:none}html[data-theme="ivory"] .places-hero-register{background:#eee8dddc;color:#405055;border-color:#17323838}
-@media(max-width:850px){.places-page{margin-left:0}.places-hero{height:720px;min-height:0}.places-hero-copy{left:24px;top:13%;width:calc(100% - 48px)}.places-hero-copy h1{line-height:.76}.places-hero-copy h1 i{margin-left:4vw}.places-hero-copy>p{margin-left:0;max-width:330px}.places-coordinates{right:22px;top:4%}.places-field-note{right:25px;bottom:13%;width:205px}.places-hero-register{padding:0 22px}.places-hero-register span:nth-child(2){display:none}.places-page>.atlas,.places-page>.places-directory{width:calc(100% - 40px)}.atlas{grid-template-columns:1fr;padding-top:25px}.atlas-copy{padding-top:25px}.atlas-copy h2{font-size:48px}.maine-map{height:590px}.places-tools{grid-template-columns:1fr}.places-tools>div{overflow-x:auto}.place-row{grid-template-columns:70px 1fr 72px}.place-row p,.place-row small{display:none}.map-marker text{font-size:7px}}
-.connection-groups.four{grid-template-columns:repeat(4,1fr)}@media(max-width:850px){.connection-groups.four{grid-template-columns:1fr}}
+.places-page {
+    width: auto;
+    margin-left: var(--rail);
+    overflow: hidden
+}
+
+.places-hero {
+    height: min(810px, 88vh);
+    min-height: 680px;
+    position: relative;
+    border-bottom: 1px solid var(--line);
+    isolation: isolate;
+    background: #06161a
+}
+
+.places-hero-image {
+    position: absolute;
+    inset: 0;
+    background: url('/art/maine-noir-hero-v2.jpeg') 58% 52%/cover no-repeat;
+    filter: saturate(.62) contrast(1.14) brightness(.63)
+}
+
+.places-hero-image:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #06161af2 0%, #06161aa8 36%, transparent 70%), linear-gradient(0deg, #06161ad9 0%, transparent 35%), url('/textures/film-map-patina-v1.webp') center/cover;
+    mix-blend-mode: screen;
+    opacity: .48
+}
+
+.places-hero-copy {
+    position: absolute;
+    z-index: 2;
+    left: max(6vw, 72px);
+    top: 10%;
+    width: min(820px, 70vw)
+}
+
+.places-hero-copy h1 {
+    margin: 36px 0 27px;
+    font-family: var(--display);
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: .71;
+    letter-spacing: -.065em;
+    transform: rotate(-2.4deg);
+    transform-origin: left center;
+    text-shadow: 0 5px 24px #0009
+}
+
+.places-hero-copy h1 span,
+.places-hero-copy h1 i {
+    display: block
+}
+
+.places-hero-copy h1 span:first-child {
+    font-size: clamp(48px, 6vw, 96px);
+    letter-spacing: .02em;
+    margin-left: 1.5vw
+}
+
+.places-hero-copy h1 span:nth-child(2) {
+    font-size: clamp(88px, 12vw, 184px);
+    color: var(--hero-title)
+}
+
+.places-hero-copy h1 i {
+    font-size: clamp(82px, 11vw, 170px);
+    font-style: normal;
+    color: var(--hero-accent);
+    margin-left: 9vw
+}
+
+.places-hero-copy>p {
+    max-width: 440px;
+    margin-left: 2vw;
+    font: 14px/1.65 var(--font-mono), monospace;
+    color: #c1bbb0
+}
+
+.places-coordinates {
+    position: absolute;
+    z-index: 3;
+    right: 4vw;
+    top: 7%;
+    display: grid;
+    text-align: right;
+    font: 8px/1.7 var(--font-mono), monospace;
+    letter-spacing: .12em;
+    color: #c0b9aa
+}
+
+.places-coordinates b {
+    margin-top: 9px;
+    color: var(--hero-accent)
+}
+
+.places-field-note {
+    position: absolute;
+    z-index: 4;
+    right: 7%;
+    bottom: 11%;
+    width: 235px;
+    padding: 21px 24px;
+    background: var(--paper-panel);
+    color: var(--paper-ink);
+    transform: rotate(4deg);
+    box-shadow: 0 18px 45px #0009
+}
+
+.places-field-note small,
+.places-field-note b {
+    font: 7px var(--font-mono), monospace;
+    color: #9d241b;
+    letter-spacing: .12em
+}
+
+.places-field-note p {
+    font: 20px/1.25 var(--reading);
+    margin: 13px 0
+}
+
+.places-hero-register {
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-height: 48px;
+    padding: 0 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #ffffff26;
+    background: #06161ac7;
+    color: #aaa79e;
+    font: 7px var(--font-mono), monospace;
+    letter-spacing: .13em
+}
+
+.places-page>.atlas,
+.places-page>.places-directory {
+    width: min(1180px, calc(100% - 64px));
+    margin: auto
+}
+
+.atlas {
+    position: relative
+}
+
+.atlas:before {
+    content: "STORY";
+    position: absolute;
+    right: -5vw;
+    top: 70px;
+    font: 180px/.8 var(--display);
+    color: var(--hero-accent);
+    opacity: .045;
+    transform: rotate(90deg);
+    pointer-events: none
+}
+
+.atlas-copy h2 {
+    font-family: var(--display);
+    font-size: 68px;
+    text-transform: uppercase;
+    letter-spacing: -.035em
+}
+
+.maine-shape {
+    fill: color-mix(in srgb, var(--panel) 84%, #173c41);
+    stroke: color-mix(in srgb, var(--ink) 34%, transparent)
+}
+
+.map-selection {
+    background: color-mix(in srgb, var(--panel) 90%, transparent)
+}
+
+html[data-theme="ivory"] .places-hero {
+    background: #e7e0d4
+}
+
+.places-hero-image {
+    filter: saturate(.55) contrast(1.13) brightness(.58)
+}
+
+html[data-theme="ivory"] .places-hero-image {
+    filter: grayscale(.7) sepia(.12) saturate(.55) contrast(.88) brightness(1.14);
+    opacity: .8
+}
+
+html[data-theme="ivory"] .places-hero-image:after {
+    background: linear-gradient(90deg, #eee8ddf5 0%, #eee8ddaf 37%, transparent 70%), linear-gradient(0deg, #eee8ddd9 0%, transparent 35%), url('/textures/film-map-patina-v1.webp') center/cover;
+    mix-blend-mode: multiply;
+    opacity: .42
+}
+
+html[data-theme="ivory"] .places-hero-copy>p,
+html[data-theme="ivory"] .places-coordinates {
+    color: #244047
+}
+
+html[data-theme="ivory"] .places-hero-copy h1 {
+    text-shadow: none
+}
+
+html[data-theme="ivory"] .places-hero-register {
+    background: #eee8dddc;
+    color: #405055;
+    border-color: #17323838
+}
+
+@media(max-width:850px) {
+    .places-page {
+        margin-left: 0
+    }
+
+    .places-hero {
+        height: 720px;
+        min-height: 0
+    }
+
+    .places-hero-copy {
+        left: 24px;
+        top: 13%;
+        width: calc(100% - 48px)
+    }
+
+    .places-hero-copy h1 {
+        line-height: .76
+    }
+
+    .places-hero-copy h1 i {
+        margin-left: 4vw
+    }
+
+    .places-hero-copy>p {
+        margin-left: 0;
+        max-width: 330px
+    }
+
+    .places-coordinates {
+        right: 22px;
+        top: 4%
+    }
+
+    .places-field-note {
+        right: 25px;
+        bottom: 13%;
+        width: 205px
+    }
+
+    .places-hero-register {
+        padding: 0 22px
+    }
+
+    .places-hero-register span:nth-child(2) {
+        display: none
+    }
+
+    .places-page>.atlas,
+    .places-page>.places-directory {
+        width: calc(100% - 40px)
+    }
+
+    .atlas {
+        grid-template-columns: 1fr;
+        padding-top: 25px
+    }
+
+    .atlas-copy {
+        padding-top: 25px
+    }
+
+    .atlas-copy h2 {
+        font-size: 48px
+    }
+
+    .maine-map {
+        height: 590px
+    }
+
+    .places-tools {
+        grid-template-columns: 1fr
+    }
+
+    .places-tools>div {
+        overflow-x: auto
+    }
+
+    .place-row {
+        grid-template-columns: 70px 1fr 72px
+    }
+
+    .place-row p,
+    .place-row small {
+        display: none
+    }
+
+    .map-marker text {
+        font-size: 7px
+    }
+}
+
+.connection-groups.four {
+    grid-template-columns: repeat(4, 1fr)
+}
+
+@media(max-width:850px) {
+    .connection-groups.four {
+        grid-template-columns: 1fr
+    }
+}
 
 /* Curated atlas directory */
-.places-directory{position:relative;padding-top:80px}.directory-mast{position:relative;min-height:300px;padding:35px 4vw 30px;border-top:1px solid var(--line);overflow:hidden;background:linear-gradient(90deg,color-mix(in srgb,var(--panel) 94%,transparent) 0 52%,transparent 52%),url('/textures/film-map-patina-v1.webp') center/cover}.directory-mast:after{content:"25";position:absolute;right:3%;top:-55px;font:260px/.9 var(--display);color:var(--accent);opacity:.12}.directory-mast>span{font:7px var(--font-mono),monospace;color:var(--accent);letter-spacing:.17em}.directory-mast h2{position:relative;z-index:2;margin:25px 0 0;font:500 clamp(72px,9vw,135px)/.69 var(--display);text-transform:uppercase;letter-spacing:-.06em;transform:rotate(-1.7deg)}.directory-mast h2 i{font-style:normal;color:var(--accent);margin-left:7vw}.directory-mast p{position:absolute;right:8%;bottom:42px;font:11px/1.65 var(--font-mono),monospace;color:var(--muted)}.places-tools{position:relative;z-index:4;grid-template-columns:minmax(0,1.6fr) minmax(390px,.9fr);gap:0;margin:-32px 2vw 0;align-items:stretch}.places-tools label{position:relative;z-index:2;transform:rotate(-1.2deg)}.places-tools label>span{margin:0 0 9px 18px;color:var(--accent);letter-spacing:.12em}.search-paper{min-height:112px;display:grid;grid-template-columns:62px 1fr auto;align-items:center;padding:0 28px 0 16px;background:var(--paper-panel);color:var(--paper-ink);box-shadow:0 18px 45px #0005;background-image:linear-gradient(color-mix(in srgb,var(--paper-panel) 89%,transparent),color-mix(in srgb,var(--paper-panel) 89%,transparent)),url('/textures/ivory-light-paper-v1.webp');background-size:auto,600px}.search-paper>b{font:48px var(--display);font-weight:400;color:#a92b21;transform:rotate(-15deg)}.places-tools .search-paper input{height:74px;border:0;border-bottom:1px solid color-mix(in srgb,var(--paper-ink) 38%,transparent);background:transparent!important;color:var(--paper-ink)!important;font:30px var(--reading);outline:0}.places-tools .search-paper input::placeholder{color:color-mix(in srgb,var(--paper-ink) 55%,transparent);opacity:1}.search-paper small{margin-left:22px;font:7px var(--font-mono),monospace;color:#a92b21;letter-spacing:.12em}.filter-index{display:grid!important;grid-template-columns:repeat(4,1fr);position:relative;padding-top:25px;transform:translateY(14px)}.filter-index>span{position:absolute;top:2px;left:16px;font:7px var(--font-mono),monospace;color:var(--muted);letter-spacing:.12em}.places-tools .filter-index button{position:relative;height:auto;min-height:96px;margin:0;padding:24px 12px 13px;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;background:var(--panel);color:var(--ink);border-color:var(--line)}.places-tools .filter-index button small{font-size:6px;color:var(--muted)}.places-tools .filter-index button b{align-self:flex-end;font:24px var(--display);font-weight:400;color:var(--muted)}.places-tools .filter-index button.active{z-index:2;background:var(--accent);border-color:var(--accent);color:#f3e4ce;transform:translateY(-9px)}.places-tools .filter-index button.active small,.places-tools .filter-index button.active b{color:#f3e4ce}.directory-register{margin:65px 0 12px;padding:0 16px;display:flex;justify-content:space-between;align-items:end}.directory-register p,.directory-register span{margin:0;font:7px var(--font-mono),monospace;text-transform:uppercase;color:var(--muted);letter-spacing:.1em}.directory-register p b{font:42px/.8 var(--display);font-weight:400;color:var(--accent);vertical-align:middle;margin-right:8px}.places-list{display:grid;grid-template-columns:repeat(12,1fr);gap:8px;border:0}.place-row{position:relative;grid-column:span 6;display:grid;grid-template-columns:38px 72px 1fr 80px;grid-template-rows:auto auto;min-height:128px;padding:20px;border:1px solid var(--line);background:var(--panel);overflow:hidden}.place-row:hover{transform:translateY(-3px);background:color-mix(in srgb,var(--panel) 82%,var(--accent));border-color:var(--accent)}.place-number{grid-column:1;grid-row:1/3;font:28px var(--display);color:var(--accent)}.place-kind{grid-column:2;grid-row:1;font-size:6px}.place-row h3{grid-column:2/4;grid-row:2;font:36px/.9 var(--display);text-transform:uppercase;letter-spacing:-.025em}.place-row p{grid-column:4;grid-row:1}.place-row small{grid-column:4;grid-row:2;align-self:end}.place-row>b{position:absolute;right:17px;top:17px}.place-row>i{display:none}.place-row-feature{grid-column:span 8;min-height:245px;grid-template-columns:50px 85px 1fr 110px;background:linear-gradient(90deg,color-mix(in srgb,var(--page-surface) 92%,transparent),color-mix(in srgb,var(--page-surface) 25%,transparent)),url('/art/maine-noir-hero-v2.png') 66% center/cover}.place-row-feature h3{font-size:clamp(54px,6vw,88px);color:var(--hero-title)}.place-row-feature>i{display:block;position:absolute;right:23px;bottom:18px;font:7px/1.5 var(--font-mono),monospace;color:var(--accent);font-style:normal}.place-row-feature+.place-row{grid-column:span 4;min-height:245px}.place-row-feature+.place-row h3{font-size:42px}.place-row:nth-child(5n){transform:translateY(13px)}.place-row:nth-child(5n):hover{transform:translateY(8px)}
-html[data-theme="ivory"] .directory-mast{background:linear-gradient(90deg,#e6dfd4f2 0 52%,transparent 52%),url('/textures/film-map-patina-v1.webp') center/cover}html[data-theme="ivory"] .place-row-feature{background:linear-gradient(90deg,#eee9dff4,#eee9df4d),url('/art/maine-noir-hero-v2.png') 66% center/cover}html[data-theme="ivory"] .places-tools .filter-index button{background:#e3ddd2;color:#173238}html[data-theme="ivory"] .places-tools .filter-index button.active{background:#b42a20;color:#f4e9da}html[data-theme="ivory"] .places-tools input{-webkit-text-fill-color:var(--paper-ink);caret-color:#a92b21}html[data-theme="ivory"] .places-count{color:#5d5a55}
-.place-record-heading.name-short{max-width:min(1120px,78vw)}.place-record-heading.name-short h1{font-size:clamp(120px,16vw,245px)}.place-record-heading.name-medium{max-width:min(1080px,78vw)}.place-record-heading.name-medium h1{font-size:clamp(94px,12.5vw,190px)}.place-record-heading.name-long{max-width:min(1020px,78vw)}.place-record-heading.name-long h1{font-size:clamp(72px,9vw,138px);line-height:.78}
-@media(max-width:1050px){.places-tools{grid-template-columns:1fr;margin-top:-22px}.filter-index{margin-left:8vw}.place-row{grid-column:span 6}.place-row-feature{grid-column:span 8}.place-row-feature+.place-row{grid-column:span 4}}
-@media(max-width:850px){.directory-mast{min-height:260px;padding-left:15px}.directory-mast h2{font-size:15vw}.directory-mast p{display:none}.places-tools{margin:-20px 0 0}.search-paper{grid-template-columns:45px 1fr;padding-right:14px}.search-paper small{display:none}.places-tools .search-paper input{font-size:21px}.filter-index{margin-left:0;overflow:visible!important}.places-tools .filter-index button{min-width:0;padding:20px 7px 10px}.directory-register span{display:none}.places-list{display:block}.place-row,.place-row-feature,.place-row-feature+.place-row{min-height:125px;margin-bottom:8px;transform:none;grid-template-columns:35px 62px 1fr 70px}.place-row:nth-child(5n){transform:none}.place-row-feature{min-height:220px}.place-row-feature h3{font-size:52px}.place-record-heading.name-short h1{font-size:clamp(90px,24vw,135px)}.place-record-heading.name-medium h1{font-size:clamp(68px,18vw,105px)}.place-record-heading.name-long h1{font-size:clamp(52px,14vw,80px)}}
+.places-directory {
+    position: relative;
+    padding-top: 80px
+}
+
+.directory-mast {
+    position: relative;
+    min-height: 300px;
+    padding: 35px 4vw 30px;
+    border-top: 1px solid var(--line);
+    overflow: hidden;
+    background: linear-gradient(90deg, color-mix(in srgb, var(--panel) 94%, transparent) 0 52%, transparent 52%), url('/textures/film-map-patina-v1.webp') center/cover
+}
+
+.directory-mast:after {
+    content: "25";
+    position: absolute;
+    right: 3%;
+    top: -55px;
+    font: 260px/.9 var(--display);
+    color: var(--accent);
+    opacity: .12
+}
+
+.directory-mast>span {
+    font: 7px var(--font-mono), monospace;
+    color: var(--accent);
+    letter-spacing: .17em
+}
+
+.directory-mast h2 {
+    position: relative;
+    z-index: 2;
+    margin: 25px 0 0;
+    font: 500 clamp(72px, 9vw, 135px)/.69 var(--display);
+    text-transform: uppercase;
+    letter-spacing: -.06em;
+    transform: rotate(-1.7deg)
+}
+
+.directory-mast h2 i {
+    font-style: normal;
+    color: var(--accent);
+    margin-left: 7vw
+}
+
+.directory-mast p {
+    position: absolute;
+    right: 8%;
+    bottom: 42px;
+    font: 11px/1.65 var(--font-mono), monospace;
+    color: var(--muted)
+}
+
+.places-tools {
+    position: relative;
+    z-index: 4;
+    grid-template-columns: minmax(0, 1.6fr) minmax(390px, .9fr);
+    gap: 0;
+    margin: -32px 2vw 0;
+    align-items: stretch
+}
+
+.places-tools label {
+    position: relative;
+    z-index: 2;
+    transform: rotate(-1.2deg)
+}
+
+.places-tools label>span {
+    margin: 0 0 9px 18px;
+    color: var(--accent);
+    letter-spacing: .12em
+}
+
+.search-paper {
+    min-height: 112px;
+    display: grid;
+    grid-template-columns: 62px 1fr auto;
+    align-items: center;
+    padding: 0 28px 0 16px;
+    background: var(--paper-panel);
+    color: var(--paper-ink);
+    box-shadow: 0 18px 45px #0005;
+    background-image: linear-gradient(color-mix(in srgb, var(--paper-panel) 89%, transparent), color-mix(in srgb, var(--paper-panel) 89%, transparent)), url('/textures/ivory-light-paper-v1.webp');
+    background-size: auto, 600px
+}
+
+.search-paper>b {
+    font: 48px var(--display);
+    font-weight: 400;
+    color: #a92b21;
+    transform: rotate(-15deg)
+}
+
+.places-tools .search-paper input {
+    height: 74px;
+    border: 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--paper-ink) 38%, transparent);
+    background: transparent !important;
+    color: var(--paper-ink) !important;
+    font: 30px var(--reading);
+    outline: 0
+}
+
+.places-tools .search-paper input::placeholder {
+    color: color-mix(in srgb, var(--paper-ink) 55%, transparent);
+    opacity: 1
+}
+
+.search-paper small {
+    margin-left: 22px;
+    font: 7px var(--font-mono), monospace;
+    color: #a92b21;
+    letter-spacing: .12em
+}
+
+.filter-index {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+    padding-top: 25px;
+    transform: translateY(14px)
+}
+
+.filter-index>span {
+    position: absolute;
+    top: 2px;
+    left: 16px;
+    font: 7px var(--font-mono), monospace;
+    color: var(--muted);
+    letter-spacing: .12em
+}
+
+.places-tools .filter-index button {
+    position: relative;
+    height: auto;
+    min-height: 96px;
+    margin: 0;
+    padding: 24px 12px 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    background: var(--panel);
+    color: var(--ink);
+    border-color: var(--line)
+}
+
+.places-tools .filter-index button small {
+    font-size: 6px;
+    color: var(--muted)
+}
+
+.places-tools .filter-index button b {
+    align-self: flex-end;
+    font: 24px var(--display);
+    font-weight: 400;
+    color: var(--muted)
+}
+
+.places-tools .filter-index button.active {
+    z-index: 2;
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #f3e4ce;
+    transform: translateY(-9px)
+}
+
+.places-tools .filter-index button.active small,
+.places-tools .filter-index button.active b {
+    color: #f3e4ce
+}
+
+.directory-register {
+    margin: 65px 0 12px;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end
+}
+
+.directory-register p,
+.directory-register span {
+    margin: 0;
+    font: 7px var(--font-mono), monospace;
+    text-transform: uppercase;
+    color: var(--muted);
+    letter-spacing: .1em
+}
+
+.directory-register p b {
+    font: 42px/.8 var(--display);
+    font-weight: 400;
+    color: var(--accent);
+    vertical-align: middle;
+    margin-right: 8px
+}
+
+.places-list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 8px;
+    border: 0
+}
+
+.place-row {
+    position: relative;
+    grid-column: span 6;
+    display: grid;
+    grid-template-columns: 38px 72px 1fr 80px;
+    grid-template-rows: auto auto;
+    min-height: 128px;
+    padding: 20px;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    overflow: hidden
+}
+
+.place-row:hover {
+    transform: translateY(-3px);
+    background: color-mix(in srgb, var(--panel) 82%, var(--accent));
+    border-color: var(--accent)
+}
+
+.place-number {
+    grid-column: 1;
+    grid-row: 1/3;
+    font: 28px var(--display);
+    color: var(--accent)
+}
+
+.place-kind {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 6px
+}
+
+.place-row h3 {
+    grid-column: 2/4;
+    grid-row: 2;
+    font: 36px/.9 var(--display);
+    text-transform: uppercase;
+    letter-spacing: -.025em
+}
+
+.place-row p {
+    grid-column: 4;
+    grid-row: 1
+}
+
+.place-row small {
+    grid-column: 4;
+    grid-row: 2;
+    align-self: end
+}
+
+.place-row>b {
+    position: absolute;
+    right: 17px;
+    top: 17px
+}
+
+.place-row>i {
+    display: none
+}
+
+.place-row-feature {
+    grid-column: span 8;
+    min-height: 245px;
+    grid-template-columns: 50px 85px 1fr 110px;
+    background: linear-gradient(90deg, color-mix(in srgb, var(--page-surface) 92%, transparent), color-mix(in srgb, var(--page-surface) 25%, transparent)), url('/art/maine-noir-hero-v2.jpeg') 66% center/cover
+}
+
+.place-row-feature h3 {
+    font-size: clamp(54px, 6vw, 88px);
+    color: var(--hero-title)
+}
+
+.place-row-feature>i {
+    display: block;
+    position: absolute;
+    right: 23px;
+    bottom: 18px;
+    font: 7px/1.5 var(--font-mono), monospace;
+    color: var(--accent);
+    font-style: normal
+}
+
+.place-row-feature+.place-row {
+    grid-column: span 4;
+    min-height: 245px
+}
+
+.place-row-feature+.place-row h3 {
+    font-size: 42px
+}
+
+.place-row:nth-child(5n) {
+    transform: translateY(13px)
+}
+
+.place-row:nth-child(5n):hover {
+    transform: translateY(8px)
+}
+
+html[data-theme="ivory"] .directory-mast {
+    background: linear-gradient(90deg, #e6dfd4f2 0 52%, transparent 52%), url('/textures/film-map-patina-v1.webp') center/cover
+}
+
+html[data-theme="ivory"] .place-row-feature {
+    background: linear-gradient(90deg, #eee9dff4, #eee9df4d), url('/art/maine-noir-hero-v2.jpeg') 66% center/cover
+}
+
+html[data-theme="ivory"] .places-tools .filter-index button {
+    background: #e3ddd2;
+    color: #173238
+}
+
+html[data-theme="ivory"] .places-tools .filter-index button.active {
+    background: #b42a20;
+    color: #f4e9da
+}
+
+html[data-theme="ivory"] .places-tools input {
+    -webkit-text-fill-color: var(--paper-ink);
+    caret-color: #a92b21
+}
+
+html[data-theme="ivory"] .places-count {
+    color: #5d5a55
+}
+
+.place-record-heading.name-short {
+    max-width: min(1120px, 78vw)
+}
+
+.place-record-heading.name-short h1 {
+    font-size: clamp(120px, 16vw, 245px)
+}
+
+.place-record-heading.name-medium {
+    max-width: min(1080px, 78vw)
+}
+
+.place-record-heading.name-medium h1 {
+    font-size: clamp(94px, 12.5vw, 190px)
+}
+
+.place-record-heading.name-long {
+    max-width: min(1020px, 78vw)
+}
+
+.place-record-heading.name-long h1 {
+    font-size: clamp(72px, 9vw, 138px);
+    line-height: .78
+}
+
+@media(max-width:1050px) {
+    .places-tools {
+        grid-template-columns: 1fr;
+        margin-top: -22px
+    }
+
+    .filter-index {
+        margin-left: 8vw
+    }
+
+    .place-row {
+        grid-column: span 6
+    }
+
+    .place-row-feature {
+        grid-column: span 8
+    }
+
+    .place-row-feature+.place-row {
+        grid-column: span 4
+    }
+}
+
+@media(max-width:850px) {
+    .directory-mast {
+        min-height: 260px;
+        padding-left: 15px
+    }
+
+    .directory-mast h2 {
+        font-size: 15vw
+    }
+
+    .directory-mast p {
+        display: none
+    }
+
+    .places-tools {
+        margin: -20px 0 0
+    }
+
+    .search-paper {
+        grid-template-columns: 45px 1fr;
+        padding-right: 14px
+    }
+
+    .search-paper small {
+        display: none
+    }
+
+    .places-tools .search-paper input {
+        font-size: 21px
+    }
+
+    .filter-index {
+        margin-left: 0;
+        overflow: visible !important
+    }
+
+    .places-tools .filter-index button {
+        min-width: 0;
+        padding: 20px 7px 10px
+    }
+
+    .directory-register span {
+        display: none
+    }
+
+    .places-list {
+        display: block
+    }
+
+    .place-row,
+    .place-row-feature,
+    .place-row-feature+.place-row {
+        min-height: 125px;
+        margin-bottom: 8px;
+        transform: none;
+        grid-template-columns: 35px 62px 1fr 70px
+    }
+
+    .place-row:nth-child(5n) {
+        transform: none
+    }
+
+    .place-row-feature {
+        min-height: 220px
+    }
+
+    .place-row-feature h3 {
+        font-size: 52px
+    }
+
+    .place-record-heading.name-short h1 {
+        font-size: clamp(90px, 24vw, 135px)
+    }
+
+    .place-record-heading.name-medium h1 {
+        font-size: clamp(68px, 18vw, 105px)
+    }
+
+    .place-record-heading.name-long h1 {
+        font-size: clamp(52px, 14vw, 80px)
+    }
+}
 
 /* Optical correction: the rotated display title needs more room than its box. */
-@media(min-width:1051px){.places-hero-copy{left:max(10vw,150px);width:min(850px,68vw)}}
-@media(min-width:851px) and (max-width:1050px){.places-hero-copy{left:92px;width:min(790px,72vw)}}
+@media(min-width:1051px) {
+    .places-hero-copy {
+        left: max(10vw, 150px);
+        width: min(850px, 68vw)
+    }
+}
+
+@media(min-width:851px) and (max-width:1050px) {
+    .places-hero-copy {
+        left: 92px;
+        width: min(790px, 72vw)
+    }
+}
 
 /* Stable cartographic frame */
-.maine-map{height:auto;min-height:0;aspect-ratio:556/716;max-height:760px;align-self:center;justify-self:center;width:min(100%,590px)}
-.maine-map svg{display:block;width:100%;height:auto;aspect-ratio:556/716}
-.map-marker circle{vector-effect:non-scaling-stroke}.map-marker text{font-size:8px;vector-effect:non-scaling-stroke}
-.marker-bangor text{transform:translate(0,15px)}.marker-derry text{transform:translate(0,-5px)}.marker-durham text{transform:translate(0,-5px)}.marker-portland text{transform:translate(0,7px)}
+.maine-map {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 556/716;
+    max-height: 760px;
+    align-self: center;
+    justify-self: center;
+    width: min(100%, 590px)
+}
+
+.maine-map svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 556/716
+}
+
+.map-marker circle {
+    vector-effect: non-scaling-stroke
+}
+
+.map-marker text {
+    font-size: 8px;
+    vector-effect: non-scaling-stroke
+}
+
+.marker-bangor text {
+    transform: translate(0, 15px)
+}
+
+.marker-derry text {
+    transform: translate(0, -5px)
+}
+
+.marker-durham text {
+    transform: translate(0, -5px)
+}
+
+.marker-portland text {
+    transform: translate(0, 7px)
+}
 
 /* Cartographic case file */
-.place-record{margin-left:154px;overflow:hidden}.place-record-hero{position:relative;min-height:680px;border-bottom:1px solid var(--line);isolation:isolate;background:#06161a}.place-record-image{position:absolute;inset:0;background:linear-gradient(90deg,#06161af2 0%,#06161a8c 48%,transparent 78%),linear-gradient(0deg,#06161ad9,transparent 45%),url('/art/maine-noir-hero-v2.png') 58% center/cover;filter:saturate(.55) contrast(1.12)}.place-record-image:after{content:"";position:absolute;inset:0;background:url('/textures/film-map-patina-v1.webp') center/cover;mix-blend-mode:screen;opacity:.35}.place-record-back{position:absolute;z-index:3;left:max(5vw,58px);top:48px;font:8px var(--font-mono),monospace;color:var(--hero-accent);letter-spacing:.13em}.place-record-index{position:absolute;z-index:3;right:5vw;top:45px;text-align:right}.place-record-index span,.place-record-index b{display:block;font:8px var(--font-mono),monospace;letter-spacing:.13em}.place-record-index span{color:#b0aaa0}.place-record-index b{margin-top:7px;color:var(--hero-accent)}.place-record-heading{position:absolute;z-index:3;left:max(6vw,68px);top:23%;max-width:min(900px,72vw)}.place-record-heading small{font:8px var(--font-mono),monospace;text-transform:uppercase;letter-spacing:.18em;color:var(--hero-accent)}.place-record-heading h1{max-width:900px;margin:32px 0 25px;font:500 clamp(82px,12vw,180px)/.72 var(--display);letter-spacing:-.065em;text-transform:uppercase;color:var(--hero-title);transform:rotate(-2deg);transform-origin:left center;text-shadow:0 8px 35px #0009}.place-record-heading p{max-width:520px;margin-left:3vw;font:15px/1.65 var(--font-mono),monospace;color:#c3bdb2}.place-record-stamp{position:absolute;z-index:4;right:8%;bottom:19%;width:145px;height:145px;border:2px solid var(--hero-accent);border-radius:50%;display:grid;place-content:center;text-align:center;font:10px/1.6 var(--font-mono),monospace;text-transform:uppercase;color:var(--hero-accent);transform:rotate(11deg);opacity:.88}.place-record-stamp:after{content:"VERIFIED / EDITORIAL";position:absolute;inset:8px;border:1px dashed currentColor;border-radius:50%;display:grid;place-items:end center;padding-bottom:16px;font-size:5px}.place-record-stamp.approximate,.place-record-stamp.unmapped{border-style:dashed}.place-record-rule{position:absolute;z-index:3;left:0;right:0;bottom:0;padding:17px 5vw;display:flex;justify-content:space-between;border-top:1px solid #ffffff2b;background:#06161ac9;font:7px var(--font-mono),monospace;color:#aaa59c;letter-spacing:.12em}.place-record-body{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(300px,.8fr);background:var(--page-surface);border-bottom:1px solid var(--line)}.place-dossier{position:relative;padding:80px 6vw 90px;border-right:1px solid var(--line)}.place-dossier-label span{display:block;font:7px var(--font-mono),monospace;color:var(--accent);letter-spacing:.14em}.place-dossier-label b{display:block;margin-top:15px;font:54px/.9 var(--display);font-weight:500;text-transform:uppercase}.place-facts{display:grid;grid-template-columns:repeat(2,1fr);margin-top:55px;border-top:1px solid var(--line)}.place-facts>div{min-height:105px;padding:18px 18px 18px 0;border-bottom:1px solid var(--line)}.place-facts>div:nth-child(odd){border-right:1px solid var(--line)}.place-facts>div:nth-child(even){padding-left:20px}.place-facts span{display:block;font:7px var(--font-mono),monospace;text-transform:uppercase;color:var(--muted)}.place-facts b{display:block;margin-top:12px;font:24px/1.1 var(--reading);font-weight:400;text-transform:capitalize}.place-dossier blockquote{max-width:540px;margin:72px 0 0 8vw;font:italic 29px/1.2 var(--reading);color:var(--ink);transform:rotate(-2deg)}.place-dossier blockquote:before{content:"“";position:absolute;margin-left:-52px;margin-top:-24px;font:90px var(--display);color:var(--accent)}.place-reading{padding:80px 3.5vw;background:color-mix(in srgb,var(--panel) 86%,transparent)}.place-reading>span{font:7px var(--font-mono),monospace;color:var(--accent);letter-spacing:.14em}.place-reading>p{font:21px/1.45 var(--reading);margin:30px 0 60px}.place-reading .source-note{transform:rotate(2deg);background:var(--paper-panel);color:var(--paper-ink);border:0;box-shadow:0 18px 38px #0005}.place-reading .source-note a{color:#96291f}.place-works{padding:90px max(5vw,55px) 130px;background:var(--page-surface)}.place-works header{display:flex;align-items:end;justify-content:space-between;margin-bottom:30px}.place-works header span{font:10px var(--font-mono),monospace;color:var(--accent);letter-spacing:.16em}.place-works header b{font:72px/.7 var(--display);font-weight:400;color:var(--accent)}.place-works>div{border-bottom:1px solid var(--line)}.place-works a{display:grid;grid-template-columns:60px 1fr 100px 150px;align-items:center;min-height:88px;border-top:1px solid var(--line);transition:.2s}.place-works a:hover{padding-left:16px;background:var(--panel)}.place-works a small,.place-works a span,.place-works a>b{font:8px var(--font-mono),monospace;color:var(--muted)}.place-works a strong{font:32px var(--display);font-weight:400;text-transform:uppercase}.place-works a>b{text-align:right;color:var(--accent)}
-html[data-theme="ivory"] .place-record-hero{background:#e7e0d4}html[data-theme="ivory"] .place-record-image{background:linear-gradient(90deg,#eee8ddf2 0%,#eee8dd91 48%,transparent 78%),linear-gradient(0deg,#eee8dddb,transparent 45%),url('/art/maine-noir-hero-v2.png') 58% center/cover;filter:grayscale(.75) sepia(.1) saturate(.55) contrast(.9) brightness(1.08)}html[data-theme="ivory"] .place-record-image:after{mix-blend-mode:multiply;opacity:.3}html[data-theme="ivory"] .place-record-heading h1{text-shadow:none}html[data-theme="ivory"] .place-record-heading p{color:#274248}html[data-theme="ivory"] .place-record-rule{background:#eee8dddc;color:#405055;border-color:#17323838}
-@media(max-width:1050px){.place-record{margin-left:128px}.place-record-heading{left:50px;max-width:75vw}.place-record-body{grid-template-columns:1fr}.place-dossier{border-right:0}.place-reading{padding:60px 6vw}.place-reading .source-note{max-width:520px}.place-record-stamp{width:120px;height:120px;right:5%}}
-@media(max-width:850px){.maine-map{width:min(100%,500px);max-height:none}.atlas{align-items:start}.place-record{margin-left:0}.place-record-hero{min-height:660px}.place-record-heading{left:24px;top:22%;max-width:calc(100% - 48px)}.place-record-heading h1{font-size:clamp(65px,20vw,115px)}.place-record-heading p{margin-left:0;max-width:82%}.place-record-back{left:24px;top:28px}.place-record-index{right:24px;top:28px}.place-record-stamp{width:92px;height:92px;right:25px;bottom:14%;font-size:7px}.place-record-rule{padding:15px 22px}.place-record-rule span:last-child{display:none}.place-dossier{padding:62px 24px}.place-dossier-label b{font-size:42px}.place-facts{grid-template-columns:1fr}.place-facts>div,.place-facts>div:nth-child(odd),.place-facts>div:nth-child(even){border-right:0;padding-left:0}.place-dossier blockquote{margin-left:42px;font-size:24px}.place-reading{padding:55px 24px}.place-works{padding:70px 24px 100px}.place-works a{grid-template-columns:40px 1fr 65px}.place-works a>b{display:none}.place-works a strong{font-size:25px}}
+.place-record {
+    margin-left: 154px;
+    overflow: hidden
+}
+
+.place-record-hero {
+    position: relative;
+    min-height: 680px;
+    border-bottom: 1px solid var(--line);
+    isolation: isolate;
+    background: #06161a
+}
+
+.place-record-image {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #06161af2 0%, #06161a8c 48%, transparent 78%), linear-gradient(0deg, #06161ad9, transparent 45%), url('/art/maine-noir-hero-v2.jpeg') 58% center/cover;
+    filter: saturate(.55) contrast(1.12)
+}
+
+.place-record-image:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('/textures/film-map-patina-v1.webp') center/cover;
+    mix-blend-mode: screen;
+    opacity: .35
+}
+
+.place-record-back {
+    position: absolute;
+    z-index: 3;
+    left: max(5vw, 58px);
+    top: 48px;
+    font: 8px var(--font-mono), monospace;
+    color: var(--hero-accent);
+    letter-spacing: .13em
+}
+
+.place-record-index {
+    position: absolute;
+    z-index: 3;
+    right: 5vw;
+    top: 45px;
+    text-align: right
+}
+
+.place-record-index span,
+.place-record-index b {
+    display: block;
+    font: 8px var(--font-mono), monospace;
+    letter-spacing: .13em
+}
+
+.place-record-index span {
+    color: #b0aaa0
+}
+
+.place-record-index b {
+    margin-top: 7px;
+    color: var(--hero-accent)
+}
+
+.place-record-heading {
+    position: absolute;
+    z-index: 3;
+    left: max(6vw, 68px);
+    top: 23%;
+    max-width: min(900px, 72vw)
+}
+
+.place-record-heading small {
+    font: 8px var(--font-mono), monospace;
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    color: var(--hero-accent)
+}
+
+.place-record-heading h1 {
+    max-width: 900px;
+    margin: 32px 0 25px;
+    font: 500 clamp(82px, 12vw, 180px)/.72 var(--display);
+    letter-spacing: -.065em;
+    text-transform: uppercase;
+    color: var(--hero-title);
+    transform: rotate(-2deg);
+    transform-origin: left center;
+    text-shadow: 0 8px 35px #0009
+}
+
+.place-record-heading p {
+    max-width: 520px;
+    margin-left: 3vw;
+    font: 15px/1.65 var(--font-mono), monospace;
+    color: #c3bdb2
+}
+
+.place-record-stamp {
+    position: absolute;
+    z-index: 4;
+    right: 8%;
+    bottom: 19%;
+    width: 145px;
+    height: 145px;
+    border: 2px solid var(--hero-accent);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    font: 10px/1.6 var(--font-mono), monospace;
+    text-transform: uppercase;
+    color: var(--hero-accent);
+    transform: rotate(11deg);
+    opacity: .88
+}
+
+.place-record-stamp:after {
+    content: "VERIFIED / EDITORIAL";
+    position: absolute;
+    inset: 8px;
+    border: 1px dashed currentColor;
+    border-radius: 50%;
+    display: grid;
+    place-items: end center;
+    padding-bottom: 16px;
+    font-size: 5px
+}
+
+.place-record-stamp.approximate,
+.place-record-stamp.unmapped {
+    border-style: dashed
+}
+
+.place-record-rule {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 17px 5vw;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ffffff2b;
+    background: #06161ac9;
+    font: 7px var(--font-mono), monospace;
+    color: #aaa59c;
+    letter-spacing: .12em
+}
+
+.place-record-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1.8fr) minmax(300px, .8fr);
+    background: var(--page-surface);
+    border-bottom: 1px solid var(--line)
+}
+
+.place-dossier {
+    position: relative;
+    padding: 80px 6vw 90px;
+    border-right: 1px solid var(--line)
+}
+
+.place-dossier-label span {
+    display: block;
+    font: 7px var(--font-mono), monospace;
+    color: var(--accent);
+    letter-spacing: .14em
+}
+
+.place-dossier-label b {
+    display: block;
+    margin-top: 15px;
+    font: 54px/.9 var(--display);
+    font-weight: 500;
+    text-transform: uppercase
+}
+
+.place-facts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 55px;
+    border-top: 1px solid var(--line)
+}
+
+.place-facts>div {
+    min-height: 105px;
+    padding: 18px 18px 18px 0;
+    border-bottom: 1px solid var(--line)
+}
+
+.place-facts>div:nth-child(odd) {
+    border-right: 1px solid var(--line)
+}
+
+.place-facts>div:nth-child(even) {
+    padding-left: 20px
+}
+
+.place-facts span {
+    display: block;
+    font: 7px var(--font-mono), monospace;
+    text-transform: uppercase;
+    color: var(--muted)
+}
+
+.place-facts b {
+    display: block;
+    margin-top: 12px;
+    font: 24px/1.1 var(--reading);
+    font-weight: 400;
+    text-transform: capitalize
+}
+
+.place-dossier blockquote {
+    max-width: 540px;
+    margin: 72px 0 0 8vw;
+    font: italic 29px/1.2 var(--reading);
+    color: var(--ink);
+    transform: rotate(-2deg)
+}
+
+.place-dossier blockquote:before {
+    content: "“";
+    position: absolute;
+    margin-left: -52px;
+    margin-top: -24px;
+    font: 90px var(--display);
+    color: var(--accent)
+}
+
+.place-reading {
+    padding: 80px 3.5vw;
+    background: color-mix(in srgb, var(--panel) 86%, transparent)
+}
+
+.place-reading>span {
+    font: 7px var(--font-mono), monospace;
+    color: var(--accent);
+    letter-spacing: .14em
+}
+
+.place-reading>p {
+    font: 21px/1.45 var(--reading);
+    margin: 30px 0 60px
+}
+
+.place-reading .source-note {
+    transform: rotate(2deg);
+    background: var(--paper-panel);
+    color: var(--paper-ink);
+    border: 0;
+    box-shadow: 0 18px 38px #0005
+}
+
+.place-reading .source-note a {
+    color: #96291f
+}
+
+.place-works {
+    padding: 90px max(5vw, 55px) 130px;
+    background: var(--page-surface)
+}
+
+.place-works header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 30px
+}
+
+.place-works header span {
+    font: 10px var(--font-mono), monospace;
+    color: var(--accent);
+    letter-spacing: .16em
+}
+
+.place-works header b {
+    font: 72px/.7 var(--display);
+    font-weight: 400;
+    color: var(--accent)
+}
+
+.place-works>div {
+    border-bottom: 1px solid var(--line)
+}
+
+.place-works a {
+    display: grid;
+    grid-template-columns: 60px 1fr 100px 150px;
+    align-items: center;
+    min-height: 88px;
+    border-top: 1px solid var(--line);
+    transition: .2s
+}
+
+.place-works a:hover {
+    padding-left: 16px;
+    background: var(--panel)
+}
+
+.place-works a small,
+.place-works a span,
+.place-works a>b {
+    font: 8px var(--font-mono), monospace;
+    color: var(--muted)
+}
+
+.place-works a strong {
+    font: 32px var(--display);
+    font-weight: 400;
+    text-transform: uppercase
+}
+
+.place-works a>b {
+    text-align: right;
+    color: var(--accent)
+}
+
+html[data-theme="ivory"] .place-record-hero {
+    background: #e7e0d4
+}
+
+html[data-theme="ivory"] .place-record-image {
+    background: linear-gradient(90deg, #eee8ddf2 0%, #eee8dd91 48%, transparent 78%), linear-gradient(0deg, #eee8dddb, transparent 45%), url('/art/maine-noir-hero-v2.jpeg') 58% center/cover;
+    filter: grayscale(.75) sepia(.1) saturate(.55) contrast(.9) brightness(1.08)
+}
+
+html[data-theme="ivory"] .place-record-image:after {
+    mix-blend-mode: multiply;
+    opacity: .3
+}
+
+html[data-theme="ivory"] .place-record-heading h1 {
+    text-shadow: none
+}
+
+html[data-theme="ivory"] .place-record-heading p {
+    color: #274248
+}
+
+html[data-theme="ivory"] .place-record-rule {
+    background: #eee8dddc;
+    color: #405055;
+    border-color: #17323838
+}
+
+@media(max-width:1050px) {
+    .place-record {
+        margin-left: 128px
+    }
+
+    .place-record-heading {
+        left: 50px;
+        max-width: 75vw
+    }
+
+    .place-record-body {
+        grid-template-columns: 1fr
+    }
+
+    .place-dossier {
+        border-right: 0
+    }
+
+    .place-reading {
+        padding: 60px 6vw
+    }
+
+    .place-reading .source-note {
+        max-width: 520px
+    }
+
+    .place-record-stamp {
+        width: 120px;
+        height: 120px;
+        right: 5%
+    }
+}
+
+@media(max-width:850px) {
+    .maine-map {
+        width: min(100%, 500px);
+        max-height: none
+    }
+
+    .atlas {
+        align-items: start
+    }
+
+    .place-record {
+        margin-left: 0
+    }
+
+    .place-record-hero {
+        min-height: 660px
+    }
+
+    .place-record-heading {
+        left: 24px;
+        top: 22%;
+        max-width: calc(100% - 48px)
+    }
+
+    .place-record-heading h1 {
+        font-size: clamp(65px, 20vw, 115px)
+    }
+
+    .place-record-heading p {
+        margin-left: 0;
+        max-width: 82%
+    }
+
+    .place-record-back {
+        left: 24px;
+        top: 28px
+    }
+
+    .place-record-index {
+        right: 24px;
+        top: 28px
+    }
+
+    .place-record-stamp {
+        width: 92px;
+        height: 92px;
+        right: 25px;
+        bottom: 14%;
+        font-size: 7px
+    }
+
+    .place-record-rule {
+        padding: 15px 22px
+    }
+
+    .place-record-rule span:last-child {
+        display: none
+    }
+
+    .place-dossier {
+        padding: 62px 24px
+    }
+
+    .place-dossier-label b {
+        font-size: 42px
+    }
+
+    .place-facts {
+        grid-template-columns: 1fr
+    }
+
+    .place-facts>div,
+    .place-facts>div:nth-child(odd),
+    .place-facts>div:nth-child(even) {
+        border-right: 0;
+        padding-left: 0
+    }
+
+    .place-dossier blockquote {
+        margin-left: 42px;
+        font-size: 24px
+    }
+
+    .place-reading {
+        padding: 55px 24px
+    }
+
+    .place-works {
+        padding: 70px 24px 100px
+    }
+
+    .place-works a {
+        grid-template-columns: 40px 1fr 65px
+    }
+
+    .place-works a>b {
+        display: none
+    }
+
+    .place-works a strong {
+        font-size: 25px
+    }
+}
