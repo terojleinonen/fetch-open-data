@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import {ReliableCover} from "@/components/ReliableCover";
+import {EditorialWorkPlate} from "@/components/EditorialWorkPlate";
 
 export type ArchiveExplorerItem = {
   id: string;
@@ -56,11 +58,13 @@ export function ArchiveExplorer({items, filterLabel = "Type", dateLabel = "publi
 }
 
 function ArchiveListResult({item}: {item: ArchiveExplorerItem}) {
-  return <Link className="archive-list-row" href={item.href} role="listitem"><div className={`archive-list-thumb ${item.imageUrl ? "has-image" : ""}`}>{item.imageUrl ? <img src={item.imageUrl} alt=""/> : <span>{item.variant === "character" ? item.title.charAt(0) : "◆"}</span>}</div><small>{item.typeLabel}</small><h2>{item.title}</h2><p>{item.meta}</p><time>{item.year || "—"}</time><b aria-hidden="true">↗</b></Link>;
+  const fallback=<span>{item.variant === "character" ? item.title.charAt(0) : "◆"}</span>;
+  return <Link className="archive-list-row" href={item.href} role="listitem"><div className={`archive-list-thumb ${item.imageUrl ? "has-image" : ""}`}>{item.imageUrl ? <ReliableCover src={item.imageUrl} alt="" width={76} height={96} sizes="38px" fallback={fallback}/> : fallback}</div><small>{item.typeLabel}</small><h2>{item.title}</h2><p>{item.meta}</p><time>{item.year || "—"}</time><b aria-hidden="true">↗</b></Link>;
 }
 
 function ArchiveResult({item}: {item: ArchiveExplorerItem}) {
-  if (item.variant === "work") return <Link className="archive-card has-cover" href={item.href}>{item.imageUrl ? <div className="archive-cover"><img src={item.imageUrl} alt={`Cover of ${item.title}`}/><span>{item.imageCredit}</span></div> : <div className="archive-cover cover-placeholder" aria-label="No standalone cover record"><i/><b>{item.typeLabel}</b><span>No standalone cover</span></div>}<div className="archive-copy"><small>{item.eyebrow}</small><h2>{item.title}</h2><p>{item.meta}</p></div></Link>;
+  const workFallback=<EditorialWorkPlate id={item.id} title={item.title} type={item.type} year={item.year}/>;
+  if (item.variant === "work") return <Link className="archive-card has-cover" href={item.href}>{item.imageUrl ? <div className="archive-cover"><ReliableCover src={item.imageUrl} alt={`Cover of ${item.title}`} width={420} height={630} sizes="(max-width: 850px) 50vw, (max-width: 1300px) 22vw, 280px" fallback={workFallback}/><span>{item.imageCredit}</span></div> : <div className="archive-cover">{workFallback}</div>}<div className="archive-copy"><small>{item.eyebrow}</small><h2>{item.title}</h2><p>{item.meta}</p></div></Link>;
   if (item.variant === "screen") return <Link className={item.imageUrl ? "archive-card screen-card has-poster" : "archive-card screen-card"} href={item.href}>{item.imageUrl && <div className="screen-poster"><img src={item.imageUrl} alt={`Poster for ${item.title}`}/><span>{item.imageCredit}</span></div>}<div className="screen-copy"><small>{item.eyebrow}</small><h2>{item.title}</h2>{item.description && <p className="card-abstract">{item.description}</p>}<div><p>{item.meta}</p><b>{item.footer || "OPEN DOSSIER ↗"}</b></div></div></Link>;
-  return <Link className="archive-card character-card" href={item.href}><small className={`status ${item.status}`}>{item.eyebrow}</small><h2>{item.title}</h2><p>{item.meta}</p></Link>;
+  return <Link className={`archive-card character-card ${item.imageUrl?"has-character-art":""}`} href={item.href} style={item.imageUrl?{"--character-art":`url('${item.imageUrl}')`} as React.CSSProperties:undefined}>{item.imageUrl&&<span className="character-card-art" aria-hidden="true"/>}<small className={`status ${item.status}`}>{item.eyebrow}</small><h2>{item.title}</h2><p>{item.meta}</p>{item.imageCredit&&<i>{item.imageCredit}</i>}</Link>;
 }

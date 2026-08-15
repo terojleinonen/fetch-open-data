@@ -1,0 +1,1387 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-13T18:55:31.206Z",
+  "methodology": "A sourced description or role claim must explicitly identify an antagonistic role. API-only records remain candidates.",
+  "characters": {
+    "entity:6c1e363ba648481dd216de50": {
+      "characterId": "entity:6c1e363ba648481dd216de50",
+      "displayName": "Alvin Marsh",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:ee44f48a19d98d20c4ff7247": {
+      "characterId": "entity:ee44f48a19d98d20c4ff7247",
+      "displayName": "Annie Wilkes",
+      "status": "secondary-verified",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Annie_Wilkes",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:96ddc74d598aa6bc02656dfa": {
+      "characterId": "entity:96ddc74d598aa6bc02656dfa",
+      "displayName": "Belch Huggins",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Belch_Huggins",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:e2ddf8655047cea93b4402a7": {
+      "characterId": "entity:e2ddf8655047cea93b4402a7",
+      "displayName": "Arnie Cunningham",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Arnie_Cunningham",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:13e6b023c4ce6afd6715b33c": {
+      "characterId": "entity:13e6b023c4ce6afd6715b33c",
+      "displayName": "Billy Nolan",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Billy_Nolan",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:bdd2f67e6126e30af27b8ee9": {
+      "characterId": "entity:bdd2f67e6126e30af27b8ee9",
+      "displayName": "Billy deLois",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:24391d911db9ef2d040a2b34": {
+      "characterId": "entity:24391d911db9ef2d040a2b34",
+      "displayName": "Blaine the Mono",
+      "status": "secondary-verified",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Blaine_the_Mono",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:52814e642d415f8837a816bd": {
+      "characterId": "entity:52814e642d415f8837a816bd",
+      "displayName": "Bob Anderson",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:e6b35c37fe8ae05efad06ef5": {
+      "characterId": "entity:e6b35c37fe8ae05efad06ef5",
+      "displayName": "Bogs Diamond",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Bogs_Diamond",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:361ed2e677fc23825b4e2b40": {
+      "characterId": "entity:361ed2e677fc23825b4e2b40",
+      "displayName": "Brady Hartsfield",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Brady_Hartsfield",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:839e8e7742575cb4e927e80d": {
+      "characterId": "entity:839e8e7742575cb4e927e80d",
+      "displayName": "Brian Lippy",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:72cbfbc5ac3575662effc10f": {
+      "characterId": "entity:72cbfbc5ac3575662effc10f",
+      "displayName": "Butch Bowers",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Butch_Bowers",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:f355eb4133f8498369c8228d": {
+      "characterId": "entity:f355eb4133f8498369c8228d",
+      "displayName": "Byron Hadley",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Byron_Hadley",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:65a21b896bccaac0c4f9162c": {
+      "characterId": "entity:65a21b896bccaac0c4f9162c",
+      "displayName": "Carter Thibodeau",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:da695d87487c557a80d91297": {
+      "characterId": "entity:da695d87487c557a80d91297",
+      "displayName": "Christine (car)",
+      "status": "secondary-verified",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Christine_%28car%29",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:448e8df95f466b650f992b72": {
+      "characterId": "entity:448e8df95f466b650f992b72",
+      "displayName": "Charlie McGee",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:511ba82fd29fb16adbfdcb03": {
+      "characterId": "entity:511ba82fd29fb16adbfdcb03",
+      "displayName": "Christine Hargensen",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Christine_Hargensen",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:bb1038e95ea9b153c6ffdbf5": {
+      "characterId": "entity:bb1038e95ea9b153c6ffdbf5",
+      "displayName": "Christopher Unwin",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:471f21b4f48901029da4a23b": {
+      "characterId": "entity:471f21b4f48901029da4a23b",
+      "displayName": "Cordelia Delgado",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:0d813b27839bbda6d6c40a9b": {
+      "characterId": "entity:0d813b27839bbda6d6c40a9b",
+      "displayName": "Cindi",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:c88f380a17410eb06f2da052": {
+      "characterId": "entity:c88f380a17410eb06f2da052",
+      "displayName": "Craig Toomey",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Craig_Toomey",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:9f41e8ea862f3d69d819acc6": {
+      "characterId": "entity:9f41e8ea862f3d69d819acc6",
+      "displayName": "Crimson King",
+      "status": "secondary-verified",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Crimson_King",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:4ad5d0f9232e6d674cdc2b78": {
+      "characterId": "entity:4ad5d0f9232e6d674cdc2b78",
+      "displayName": "Cujo",
+      "status": "secondary-verified",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Cujo",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:b14b7577a61aedeaa1f1c94f": {
+      "characterId": "entity:b14b7577a61aedeaa1f1c94f",
+      "displayName": "Damon Killian",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Damon_Killian",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:5c1bfcc8f84e9bd880d1985a": {
+      "characterId": "entity:5c1bfcc8f84e9bd880d1985a",
+      "displayName": "Delbert Grady",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:e6f3d1c7541a84b3addd1260": {
+      "characterId": "entity:e6f3d1c7541a84b3addd1260",
+      "displayName": "Dandelo",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:927ee981314d51aede6d903f": {
+      "characterId": "entity:927ee981314d51aede6d903f",
+      "displayName": "Donald Merwin Elbert",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:4e33cd55c2b84854a6e1cbf6": {
+      "characterId": "entity:4e33cd55c2b84854a6e1cbf6",
+      "displayName": "Donna and Mary Lila Grace Thibodeau",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:5957bf75495cbfe93b234abc": {
+      "characterId": "entity:5957bf75495cbfe93b234abc",
+      "displayName": "Eldred Jonas",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Eldred_Jonas",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:84920cdc0282e7d076c940ed": {
+      "characterId": "entity:84920cdc0282e7d076c940ed",
+      "displayName": "Elenor Richmond",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:6293f1291654600735eda0d7": {
+      "characterId": "entity:6293f1291654600735eda0d7",
+      "displayName": "Frank Dodd",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:74f81b5bacc337900df9529c": {
+      "characterId": "entity:74f81b5bacc337900df9529c",
+      "displayName": "Gage Creed",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Gage_Creed",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:b15e115952ce1f54fec4c661": {
+      "characterId": "entity:b15e115952ce1f54fec4c661",
+      "displayName": "George Stark",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:2fd6ce0e336a3a100a4ed7d8": {
+      "characterId": "entity:2fd6ce0e336a3a100a4ed7d8",
+      "displayName": "Gerald Burlingame",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Gerald_Burlingame",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:aa67efd4b5ca90255e0d38f2": {
+      "characterId": "entity:aa67efd4b5ca90255e0d38f2",
+      "displayName": "Gladys Hickson",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:b8949dee59be2fdf5f76789d": {
+      "characterId": "entity:b8949dee59be2fdf5f76789d",
+      "displayName": "Greg Stillson",
+      "status": "secondary-verified",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Greg_Stillson",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:8efe50ed1392bc927f14ea64": {
+      "characterId": "entity:8efe50ed1392bc927f14ea64",
+      "displayName": "Greta Bowie",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:38dc25736e903394578f0ec8": {
+      "characterId": "entity:38dc25736e903394578f0ec8",
+      "displayName": "Harold Lauder",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Harold_Lauder",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:89ef3eddcf6090cc04406601": {
+      "characterId": "entity:89ef3eddcf6090cc04406601",
+      "displayName": "Henrietta Dodd",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:c111b54362b8f2b974da7795": {
+      "characterId": "entity:c111b54362b8f2b974da7795",
+      "displayName": "Henry Bowers",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Henry_Bowers",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:5828c0d8f87b21e05ca932a6": {
+      "characterId": "entity:5828c0d8f87b21e05ca932a6",
+      "displayName": "Henry James",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Henry_James",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:5d8e1fbfedf7802db85eea99": {
+      "characterId": "entity:5d8e1fbfedf7802db85eea99",
+      "displayName": "Horace M. Derwent",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Horace_M._Derwent",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:c7660de20165b7e39873cafe": {
+      "characterId": "entity:c7660de20165b7e39873cafe",
+      "displayName": "Isaac Chroner",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:c1a8f545346022612a147ffd": {
+      "characterId": "entity:c1a8f545346022612a147ffd",
+      "displayName": "Jack Mort",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:332c6cbe970edaeff5714a1f": {
+      "characterId": "entity:332c6cbe970edaeff5714a1f",
+      "displayName": "It (Creature)",
+      "status": "secondary-verified",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Pennywise",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:c2207be2b2f85289fccee6f9": {
+      "characterId": "entity:c2207be2b2f85289fccee6f9",
+      "displayName": "Jack Torrance",
+      "status": "secondary-verified",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Jack_Torrance",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:afe7c11c95217f459e362631": {
+      "characterId": "entity:afe7c11c95217f459e362631",
+      "displayName": "Jackie Talbot",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:194ae882fd86cf9b3087c826": {
+      "characterId": "entity:194ae882fd86cf9b3087c826",
+      "displayName": "James Boon",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:fbafc28db1f2fb8a9c975f81": {
+      "characterId": "entity:fbafc28db1f2fb8a9c975f81",
+      "displayName": "James Hollister",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/James_Hollister",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:0b05cef050c5df4b0940207a": {
+      "characterId": "entity:0b05cef050c5df4b0940207a",
+      "displayName": "Jessica Upshaw",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:1a32bf9ab89253ff76dec603": {
+      "characterId": "entity:1a32bf9ab89253ff76dec603",
+      "displayName": "Jim Rennie",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:a3e37f64dbf736864aaef721": {
+      "characterId": "entity:a3e37f64dbf736864aaef721",
+      "displayName": "Jim Rennie, Jr.",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:96031f4d781e338769704bf2": {
+      "characterId": "entity:96031f4d781e338769704bf2",
+      "displayName": "Joe St. George",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:f8d2dd07e65b15226e7f651a": {
+      "characterId": "entity:f8d2dd07e65b15226e7f651a",
+      "displayName": "John Farson",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/John_Farson",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:5205c3c688beacc03adaa937": {
+      "characterId": "entity:5205c3c688beacc03adaa937",
+      "displayName": "John \"Ace\" Merrill",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/John_%22Ace%22_Merrill",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:0f560982fd969ee1cddd146a": {
+      "characterId": "entity:0f560982fd969ee1cddd146a",
+      "displayName": "John Halston",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:641b5e7b9956f67613739a5c": {
+      "characterId": "entity:641b5e7b9956f67613739a5c",
+      "displayName": "John Garton",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:bbe3fc65592caf3d0bbbe6cb": {
+      "characterId": "entity:bbe3fc65592caf3d0bbbe6cb",
+      "displayName": "John Rainbird",
+      "status": "secondary-verified",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/John_Rainbird",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:555a3be7219b38acb77d0c58": {
+      "characterId": "entity:555a3be7219b38acb77d0c58",
+      "displayName": "Kenny Garson",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:82e95a42f4c947a865a3a3ac": {
+      "characterId": "entity:82e95a42f4c947a865a3a3ac",
+      "displayName": "Kurt Barlow",
+      "status": "secondary-verified",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Kurt_Barlow",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:f2006abd417d6b636d2f1b91": {
+      "characterId": "entity:f2006abd417d6b636d2f1b91",
+      "displayName": "Kurt Dussander",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Kurt_Dussander",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:290ad42f75f5c849e932530e": {
+      "characterId": "entity:290ad42f75f5c849e932530e",
+      "displayName": "Lane Hardy",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Lane_Hardy",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:308c88bded6407213e8fcd49": {
+      "characterId": "entity:308c88bded6407213e8fcd49",
+      "displayName": "Leland Gaunt",
+      "status": "secondary-verified",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Leland_Gaunt",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:2aa243915d26244f552e331d": {
+      "characterId": "entity:2aa243915d26244f552e331d",
+      "displayName": "Lester Lowe",
+      "status": "secondary-verified",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains/11",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:2cd98100d4dedcc075ce9306": {
+      "characterId": "entity:2cd98100d4dedcc075ce9306",
+      "displayName": "Little Sisters",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:93193a26095efba738e2bcd7": {
+      "characterId": "entity:93193a26095efba738e2bcd7",
+      "displayName": "Lloyd Henreid",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Lloyd_Henreid",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:97fed30e492b7442f4fabb5c": {
+      "characterId": "entity:97fed30e492b7442f4fabb5c",
+      "displayName": "Malachai Boardman",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:602af21c1055142e8fbc6d45": {
+      "characterId": "entity:602af21c1055142e8fbc6d45",
+      "displayName": "Malcolm Janus",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:f1a3a62c57bd42ce4ff85c56": {
+      "characterId": "entity:f1a3a62c57bd42ce4ff85c56",
+      "displayName": "Marcia Fadden",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:305e93580348fbe247b9efe3": {
+      "characterId": "entity:305e93580348fbe247b9efe3",
+      "displayName": "Margaret White",
+      "status": "secondary-verified",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Margaret_White_(Carrie)",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:b10917ac34fa1f282c8d1718": {
+      "characterId": "entity:b10917ac34fa1f282c8d1718",
+      "displayName": "Marten Broadcloak",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:c86036116a23c5a0eb7de62b": {
+      "characterId": "entity:c86036116a23c5a0eb7de62b",
+      "displayName": "Mordred Deschain",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:0f424d105c64c2f0a30426dc": {
+      "characterId": "entity:0f424d105c64c2f0a30426dc",
+      "displayName": "Mary Lila Grace",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:b29bd2e777fda1b484de9f5e": {
+      "characterId": "entity:b29bd2e777fda1b484de9f5e",
+      "displayName": "Mother of the Null",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Mother_of_the_Null",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:5144f6c1424532426ddeb612": {
+      "characterId": "entity:5144f6c1424532426ddeb612",
+      "displayName": "Myra Crewes",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:e2630b0a3ca9ef33c0ba1b0b": {
+      "characterId": "entity:e2630b0a3ca9ef33c0ba1b0b",
+      "displayName": "Norma Watson",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:e5d1193588cf2ff02703c212": {
+      "characterId": "entity:e5d1193588cf2ff02703c212",
+      "displayName": "Norman Daniels",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:0c8cbe8fe5f668b8fbaa075b": {
+      "characterId": "entity:0c8cbe8fe5f668b8fbaa075b",
+      "displayName": "Patrick Hockstetter",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Patrick_Hockstetter",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:dc8bea15a92132950ca1974b": {
+      "characterId": "entity:dc8bea15a92132950ca1974b",
+      "displayName": "Percy Wetmore",
+      "status": "secondary-verified",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Percy_Wetmore",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:d8dc18a55140486f6f9a7672": {
+      "characterId": "entity:d8dc18a55140486f6f9a7672",
+      "displayName": "Peter Gordon",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:1403b6e14c544b942906a8cc": {
+      "characterId": "entity:1403b6e14c544b942906a8cc",
+      "displayName": "Rachel Spies",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:91566c3682a7b1a7deb9e241": {
+      "characterId": "entity:91566c3682a7b1a7deb9e241",
+      "displayName": "Randall Flagg",
+      "status": "secondary-verified",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Randall_Flagg",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:de0917012ecfaf5dc8c93a06": {
+      "characterId": "entity:de0917012ecfaf5dc8c93a06",
+      "displayName": "Rat Man",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:80eb5af68775e97becf2020a": {
+      "characterId": "entity:80eb5af68775e97becf2020a",
+      "displayName": "Raymond Andrew Joubert",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Raymond_Andrew_Joubert",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:d6cbd5c0527190c4dc4dcbac": {
+      "characterId": "entity:d6cbd5c0527190c4dc4dcbac",
+      "displayName": "Rhea Dubativo",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:6b2749500def82455456fd1e": {
+      "characterId": "entity:6b2749500def82455456fd1e",
+      "displayName": "Richard Lawson",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Richard_Lawson",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:2fd1f2a17a9341436ae091d7": {
+      "characterId": "entity:2fd1f2a17a9341436ae091d7",
+      "displayName": "Richard P. Macklin",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:dc769ae56da63fcc6cf32997": {
+      "characterId": "entity:dc769ae56da63fcc6cf32997",
+      "displayName": "Richard Straker",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Richard_Straker",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:c75196d06cec0b68c295b647": {
+      "characterId": "entity:c75196d06cec0b68c295b647",
+      "displayName": "Rose the Hat",
+      "status": "secondary-verified",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Rose_the_Hat",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:b2774a619c7f17a388d5fb53": {
+      "characterId": "entity:b2774a619c7f17a388d5fb53",
+      "displayName": "Ross Humboldt",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:6ec881d0ab5179195007ba1e": {
+      "characterId": "entity:6ec881d0ab5179195007ba1e",
+      "displayName": "Sam (cat)",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:e52f5e7852ef498a21ae47e6": {
+      "characterId": "entity:e52f5e7852ef498a21ae47e6",
+      "displayName": "Sally Mueller",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:54eef1008d77161620b446c7": {
+      "characterId": "entity:54eef1008d77161620b446c7",
+      "displayName": "Samuel Norton",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Samuel_Norton",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:bc03dab6fe83fd3b5aa9246e": {
+      "characterId": "entity:bc03dab6fe83fd3b5aa9246e",
+      "displayName": "Sonny Elliman",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:4e3afb0407f09b4850d098c8": {
+      "characterId": "entity:4e3afb0407f09b4850d098c8",
+      "displayName": "Susan Day",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:fe2ffb931a3c3f50ba765814": {
+      "characterId": "entity:fe2ffb931a3c3f50ba765814",
+      "displayName": "Sylvia Pittston",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:d930017c2ba0b83b2bfee2c0": {
+      "characterId": "entity:d930017c2ba0b83b2bfee2c0",
+      "displayName": "The Devil's Dozen",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:2e0cca1b847c5b079e725176": {
+      "characterId": "entity:2e0cca1b847c5b079e725176",
+      "displayName": "The Gladiators",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:31617027fb2e03d1b468ded6": {
+      "characterId": "entity:31617027fb2e03d1b468ded6",
+      "displayName": "The Kid",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/The_Kid",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:7e263afdd2c89a46b213fb2a": {
+      "characterId": "entity:7e263afdd2c89a46b213fb2a",
+      "displayName": "The Major",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/The_Major",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:dce310851087d2a49885e90c": {
+      "characterId": "entity:dce310851087d2a49885e90c",
+      "displayName": "The Mortimer Snerds",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:9dd6e399c0cc82449333dc47": {
+      "characterId": "entity:9dd6e399c0cc82449333dc47",
+      "displayName": "The Outsider (Creature)",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/The_Outsider_(Creature)",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:4de95e834cb38e6a11aff720": {
+      "characterId": "entity:4de95e834cb38e6a11aff720",
+      "displayName": "The Raggedy Man",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/The_Raggedy_Man",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:23234e1cc3bb682e135e2fb4": {
+      "characterId": "entity:23234e1cc3bb682e135e2fb4",
+      "displayName": "Tim Youngblood",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:18ba420d7fc1e63ce473a966": {
+      "characterId": "entity:18ba420d7fc1e63ce473a966",
+      "displayName": "Tom Mahout",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Tom_Mahout",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:16b063fa507c0d2fab561a15": {
+      "characterId": "entity:16b063fa507c0d2fab561a15",
+      "displayName": "Tina Blake",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:0b7cce41fbb49a88fc3a4467": {
+      "characterId": "entity:0b7cce41fbb49a88fc3a4467",
+      "displayName": "Tom Rogan",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Tom_Rogan",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:ff21f2bcd0dd44defc4d5bcc": {
+      "characterId": "entity:ff21f2bcd0dd44defc4d5bcc",
+      "displayName": "Tommyknockers",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:37a5ca4a19f6ee7a55c7e4ba": {
+      "characterId": "entity:37a5ca4a19f6ee7a55c7e4ba",
+      "displayName": "Vic Mooney",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:c6fc6922611f29aaae186e8d": {
+      "characterId": "entity:c6fc6922611f29aaae186e8d",
+      "displayName": "Victor Criss",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/Victor_Criss",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:8c37a04cbf6c72d94e13c977": {
+      "characterId": "entity:8c37a04cbf6c72d94e13c977",
+      "displayName": "Victor Pascow",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:f3635fb522646eb2323e9ede": {
+      "characterId": "entity:f3635fb522646eb2323e9ede",
+      "displayName": "Wendigo",
+      "status": "official-index",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "StephenKing.com",
+        "url": "https://stephenking.com/works/novel/pet-sematary.html",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:6c1c0f3866ff40447a5ef3cf": {
+      "characterId": "entity:6c1c0f3866ff40447a5ef3cf",
+      "displayName": "Wilfred James",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:4f2639b1b847df2244bc43d6": {
+      "characterId": "entity:4f2639b1b847df2244bc43d6",
+      "displayName": "William Wharton",
+      "status": "fan-documented",
+      "isAntagonist": true,
+      "evidence": {
+        "provider": "Stephen King Wiki / Fandom",
+        "url": "https://stephenking.fandom.com/wiki/William_Wharton",
+        "note": "Narrative role is explicitly identified in the linked description or role claim."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    },
+    "entity:5f7e40669883c2a5d2f29407": {
+      "characterId": "entity:5f7e40669883c2a5d2f29407",
+      "displayName": "Winston Church",
+      "status": "candidate",
+      "isAntagonist": false,
+      "evidence": {
+        "provider": "Free Stephen King API",
+        "url": "https://stephen-king-api.onrender.com/api/villains",
+        "note": "Candidate only; the API provides no record-level original citation."
+      },
+      "retrievedAt": "2026-08-13T18:55:31.206Z"
+    }
+  }
+}

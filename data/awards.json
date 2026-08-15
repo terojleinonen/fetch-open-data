@@ -1,101 +1,13 @@
 [
-  {
-    "workTitle": "Just After Sunset",
-    "organization": "American Library Association",
-    "award": "Alex Awards — Fiction",
-    "result": "Winner",
-    "year": 2009,
-    "sourceUrl": "https://stephenking.com/the-author/",
-    "source": "StephenKing.com"
-  },
-  {
-    "workTitle": "Rest Stop",
-    "organization": "American Society of Magazine Editors",
-    "award": "National Magazine Award — Fiction",
-    "result": "Winner",
-    "year": 2004,
-    "sourceUrl": "https://stephenking.com/the-author/",
-    "source": "StephenKing.com"
-  },
-  {
-    "workTitle": "Batman and Robin Have an Altercation",
-    "organization": "American Society of Magazine Editors",
-    "award": "National Magazine Award — Fiction",
-    "result": "Winner",
-    "year": 2013,
-    "sourceUrl": "https://stephenking.com/the-author/",
-    "source": "StephenKing.com"
-  },
-  {
-    "workTitle": "The Talisman",
-    "organization": "American Audio Publishers Association",
-    "award": "Audie Award — Fiction, Unabridged",
-    "result": "Winner",
-    "year": 2002,
-    "sourceUrl": "https://stephenking.com/the-author/",
-    "source": "StephenKing.com"
-  },
-  {
-    "workTitle": "Duma Key",
-    "organization": "American Audio Publishers Association",
-    "award": "Audie Award — Fiction",
-    "result": "Winner",
-    "year": 2009,
-    "sourceUrl": "https://stephenking.com/the-author/",
-    "source": "StephenKing.com"
-  },
-  {
-    "workTitle": "Doctor Sleep",
-    "organization": "American Audio Publishers Association",
-    "award": "Audie Award — Fiction",
-    "result": "Winner",
-    "year": 2014,
-    "sourceUrl": "https://stephenking.com/the-author/",
-    "source": "StephenKing.com"
-  },
-  {
-    "workTitle": "The Institute",
-    "organization": "American Audio Publishers Association",
-    "award": "Audie Award — Thriller/Suspense",
-    "result": "Winner",
-    "year": 2020,
-    "sourceUrl": "https://stephenking.com/the-author/",
-    "source": "StephenKing.com"
-  },
-  {
-    "workTitle": "'Salem's Lot",
-    "organization": "American Library Association",
-    "award": "Best Books for Young Adults",
-    "result": "Recipient",
-    "year": 1978,
-    "sourceUrl": "https://stephenking.com/the-author/",
-    "source": "StephenKing.com"
-  },
-  {
-    "workTitle": "Firestarter",
-    "organization": "American Library Association",
-    "award": "Best Books for Young Adults",
-    "result": "Recipient",
-    "year": 1981,
-    "sourceUrl": "https://stephenking.com/the-author/",
-    "source": "StephenKing.com"
-  },
-  {
-    "workTitle": "Night Shift",
-    "organization": "Balrog Awards",
-    "award": "Collection/Anthology",
-    "result": "Winner",
-    "year": 1980,
-    "sourceUrl": "https://stephenking.com/the-author/",
-    "source": "StephenKing.com"
-  },
-  {
-    "workTitle": "Cujo",
-    "organization": "British Fantasy Society",
-    "award": "Best Novel",
-    "result": "Winner",
-    "year": 1982,
-    "sourceUrl": "https://stephenking.com/the-author/",
-    "source": "StephenKing.com"
-  }
+  {"workTitle":"Just After Sunset","organization":"American Library Association","award":"Alex Awards — Fiction","result":"Winner","year":2009,"sourceUrl":"https://stephenking.com/the-author/","source":"StephenKing.com"},
+  {"workTitle":"Rest Stop","organization":"American Society of Magazine Editors","award":"National Magazine Award — Fiction","result":"Winner","year":2004,"sourceUrl":"https://stephenking.com/the-author/","source":"StephenKing.com"},
+  {"workTitle":"Batman and Robin Have an Altercation","organization":"American Society of Magazine Editors","award":"National Magazine Award — Fiction","result":"Winner","year":2013,"sourceUrl":"https://stephenking.com/the-author/","source":"StephenKing.com"},
+  {"workTitle":"The Talisman","organization":"American Audio Publishers Association","award":"Audie Award — Fiction, Unabridged","result":"Winner","year":2002,"sourceUrl":"https://stephenking.com/the-author/","source":"StephenKing.com"},
+  {"workTitle":"Duma Key","organization":"American Audio Publishers Association","award":"Audie Award — Fiction","result":"Winner","year":2009,"sourceUrl":"https://stephenking.com/the-author/","source":"StephenKing.com"},
+  {"workTitle":"Doctor Sleep","organization":"American Audio Publishers Association","award":"Audie Award — Fiction","result":"Winner","year":2014,"sourceUrl":"https://stephenking.com/the-author/","source":"StephenKing.com"},
+  {"workTitle":"The Institute","organization":"American Audio Publishers Association","award":"Audie Award — Thriller/Suspense","result":"Winner","year":2020,"sourceUrl":"https://stephenking.com/the-author/","source":"StephenKing.com"},
+  {"workTitle":"'Salem's Lot","organization":"American Library Association","award":"Best Books for Young Adults","result":"Recipient","year":1978,"sourceUrl":"https://stephenking.com/the-author/","source":"StephenKing.com"},
+  {"workTitle":"Firestarter","organization":"American Library Association","award":"Best Books for Young Adults","result":"Recipient","year":1981,"sourceUrl":"https://stephenking.com/the-author/","source":"StephenKing.com"},
+  {"workTitle":"Night Shift","organization":"Balrog Awards","award":"Collection/Anthology","result":"Winner","year":1980,"sourceUrl":"https://stephenking.com/the-author/","source":"StephenKing.com"},
+  {"workTitle":"Cujo","organization":"British Fantasy Society","award":"Best Novel","result":"Winner","year":1982,"sourceUrl":"https://stephenking.com/the-author/","source":"StephenKing.com"}
 ]
