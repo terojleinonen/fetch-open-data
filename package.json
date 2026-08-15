@@ -14,6 +14,8 @@
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "enrich:google-books": "node --env-file=.env.local scripts/enrich-google-books.mjs",
     "enrich:tmdb": "node --env-file=.env.local scripts/enrich-screen-tmdb.mjs"
+    ,"research:index": "node scripts/build-research-index.mjs",
+    "audit:covers": "node scripts/audit-openlibrary-covers.mjs"
   },
   "dependencies": {
     "next": "16.3.0",

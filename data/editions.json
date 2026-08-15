@@ -143,7 +143,7 @@
     ],
     "cover": {
       "provider": "Open Library",
-      "imageUrl": "https://covers.openlibrary.org/b/isbn/9780385086950-L.jpg?default=false",
+      "imageUrl": "https://covers.openlibrary.org/b/id/238186-L.jpg?default=false",
       "recordUrl": "https://openlibrary.org/isbn/9780385086950",
       "isbn13": "9780385086950",
       "attribution": "Cover image via Open Library Covers API"
