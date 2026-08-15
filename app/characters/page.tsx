@@ -1,20 +1,172 @@
-import {antagonistStatus,characterDisplayArt,characterResearch,characterWorks,characters,classifyThreatVisual,slugify} from "@/lib/data";
-import {ArchiveExplorer,type ArchiveExplorerItem} from "@/components/ArchiveExplorer";
-import type {CSSProperties} from "react";
-export const metadata={title:"Characters"};
-const displayArt=(name:string,id:string,characterType:string)=>{
-  const isAntagonist=Boolean(antagonistStatus.characters[id]?.isAntagonist),research=characterResearch(id),description=research?.claims.find(claim=>claim.predicate==="description");
-  const visualClass=isAntagonist?classifyThreatVisual([name,characterType,typeof description?.value==="string"?description.value:""].join(" ")):undefined;
-  return characterDisplayArt(name,isAntagonist,visualClass);
+import {
+  antagonistStatus,
+  characterDisplayArt,
+  characterResearch,
+  characterWorks,
+  characters,
+  classifyThreatVisual,
+  slugify,
+} from "@/lib/data";
+import {
+  ArchiveExplorer,
+  type ArchiveExplorerItem,
+} from "@/components/ArchiveExplorer";
+import type { CSSProperties } from "react";
+export const metadata = { title: "Characters" };
+const displayArt = (name: string, id: string, characterType: string) => {
+  const isAntagonist = Boolean(antagonistStatus.characters[id]?.isAntagonist),
+    research = characterResearch(id),
+    description = research?.claims.find(
+      (claim) => claim.predicate === "description",
+    );
+  const visualClass = isAntagonist
+    ? classifyThreatVisual(
+        [
+          name,
+          characterType,
+          typeof description?.value === "string" ? description.value : "",
+        ].join(" "),
+      )
+    : undefined;
+  return characterDisplayArt(name, isAntagonist, visualClass);
 };
 
-export default function Characters(){
-  const verified=characters.filter(character=>characterResearch(character.id)?.editorialStatus==="secondary-verified").length;
-  const items:ArchiveExplorerItem[]=characters.map(character=>{const research=characterResearch(character.id),secondary=research?.editorialStatus==="secondary-verified",linked=characterWorks(character.id),years=linked.map(work=>work.year).filter((year):year is number=>Boolean(year)),art=displayArt(character.name,character.id,character.characterType);return{id:character.id,href:`/characters/${slugify(character.name)}`,title:character.name,type:secondary?"secondary":"provisional",typeLabel:secondary?"Secondary verified":"Provisional",year:years.length?Math.min(...years):undefined,eyebrow:secondary?"Secondary verified":"Provisional",meta:`${linked.length} linked work${linked.length===1?"":"s"}${years.length?` · first seen ${Math.min(...years)}`:""}`,searchText:[character.characterType,character.status,...linked.flatMap(work=>[work.title,work.type,work.year]),...(research?.claims.flatMap(claim=>[claim.predicate,Array.isArray(claim.value)?claim.value.join(" "):claim.value,claim.provider])||[])].filter(Boolean).join(" "),imageUrl:art.url,imageCredit:art.credit,status:secondary?"secondary":"provisional",variant:"character"}});
-  const names=characters.slice(0,38);
-  return <main className="population-page">
-    <section className="population-hero"><div className="population-cloud" aria-hidden="true">{names.map((character,index)=><span style={{"--i":index} as CSSProperties} key={character.id}>{character.name}</span>)}</div><div className="population-figure" aria-hidden="true"><i/><i/><i/></div><div className="population-heading"><span>03 / CHARACTER RECORDS</span><h1>THE<br/><i>POPULATION</i></h1><p>Who walks between the pages?</p></div><div className="population-count"><b>{characters.length}</b><span>IDENTITIES<br/>IN THE RECORD</span></div><aside><small>FIELD OBSERVATION / PEOPLE</small><p>A name is evidence.<br/>A biography is a claim.</p></aside><div className="population-rule"><span>KNOWN / RECURRING / PROVISIONAL / VERIFIED</span><span>ENTER THE INDEX ↓</span></div></section>
-    <section className="population-spectrum"><div><span>SOURCE CONFIDENCE</span><h2>THE RECORD<br/><i>HAS DEPTH.</i></h2></div><div className="confidence-graphic"><i style={{"--value":verified} as CSSProperties}/><b>{verified}</b><span>SECONDARY VERIFIED</span></div><div className="confidence-graphic provisional"><i style={{"--value":characters.length-verified} as CSSProperties}/><b>{characters.length-verified}</b><span>PROVISIONAL RECORDS</span></div><p>Confidence describes the evidence behind a claim—not the importance of a character.</p></section>
-    <section className="population-archive"><header><span>IDENTITY FILES / 001—{characters.length}</span><h2>WHO<br/><i>IS THERE?</i></h2><p>Search names, roles, works and sourced claims.</p></header><ArchiveExplorer items={items} filterLabel="Verification" dateLabel="first linked work" placeholder="Carrie, sheriff, Derry…"/><div className="verification-legend"><span className="status primary">PRIMARY VERIFIED</span><p>Checked against a named edition and locator.</p><span className="status secondary">SECONDARY VERIFIED</span><p>Directly matched reference source.</p><span className="status provisional">PROVISIONAL</span><p>Original record-level citation undocumented.</p></div></section>
-  </main>;
+export default function Characters() {
+  const verified = characters.filter(
+    (character) =>
+      characterResearch(character.id)?.editorialStatus === "secondary-verified",
+  ).length;
+  const items: ArchiveExplorerItem[] = characters.map((character) => {
+    const research = characterResearch(character.id),
+      secondary = research?.editorialStatus === "secondary-verified",
+      linked = characterWorks(character.id),
+      years = linked
+        .map((work) => work.year)
+        .filter((year): year is number => Boolean(year)),
+      art = displayArt(character.name, character.id, character.characterType);
+    return {
+      id: character.id,
+      href: `/characters/${slugify(character.name)}`,
+      title: character.name,
+      type: secondary ? "secondary" : "provisional",
+      typeLabel: secondary ? "Secondary verified" : "Provisional",
+      year: years.length ? Math.min(...years) : undefined,
+      eyebrow: secondary ? "Secondary verified" : "Provisional",
+      meta: `${linked.length} linked work${linked.length === 1 ? "" : "s"}${years.length ? ` · first seen ${Math.min(...years)}` : ""}`,
+      searchText: [
+        character.characterType,
+        character.status,
+        ...linked.flatMap((work) => [work.title, work.type, work.year]),
+        ...(research?.claims.flatMap((claim) => [
+          claim.predicate,
+          Array.isArray(claim.value) ? claim.value.join(" ") : claim.value,
+          claim.provider,
+        ]) || []),
+      ]
+        .filter(Boolean)
+        .join(" "),
+      imageUrl: art.url,
+      imageCredit: art.credit,
+      status: secondary ? "secondary" : "provisional",
+      variant: "character",
+    };
+  });
+  const names = characters.slice(0, 38);
+  return (
+    <main className="population-page">
+      <section className="population-hero">
+        <div className="population-cloud" aria-hidden="true">
+          {names.map((character, index) => (
+            <span style={{ "--i": index } as CSSProperties} key={character.id}>
+              {character.name}
+            </span>
+          ))}
+        </div>
+        <div className="population-figure" aria-hidden="true">
+          <i />
+          <i />
+          <i />
+        </div>
+        <div className="population-heading">
+          <span>03 / CHARACTER RECORDS</span>
+          <h1>
+            THE
+            <br />
+            <i>POPULATION</i>
+          </h1>
+          <p>Who walks between the pages?</p>
+        </div>
+        <div className="population-count">
+          <b>{characters.length}</b>
+          <span>
+            IDENTITIES
+            <br />
+            IN THE RECORD
+          </span>
+        </div>
+        <aside>
+          <small>FIELD OBSERVATION / PEOPLE</small>
+          <p>
+            A name is evidence.
+            <br />A biography is a claim.
+          </p>
+        </aside>
+        <div className="population-rule">
+          <span>KNOWN / RECURRING / PROVISIONAL / VERIFIED</span>
+          <span>ENTER THE INDEX ↓</span>
+        </div>
+      </section>
+      <section className="population-spectrum">
+        <div>
+          <span>SOURCE CONFIDENCE</span>
+          <h2>
+            THE RECORD
+            <br />
+            <i>HAS DEPTH.</i>
+          </h2>
+        </div>
+        <div className="confidence-graphic">
+          <i style={{ "--value": verified } as CSSProperties} />
+          <b>{verified}</b>
+          <span>SECONDARY VERIFIED</span>
+        </div>
+        <div className="confidence-graphic provisional">
+          <i
+            style={{ "--value": characters.length - verified } as CSSProperties}
+          />
+          <b>{characters.length - verified}</b>
+          <span>PROVISIONAL RECORDS</span>
+        </div>
+        <p>
+          Confidence describes the evidence behind a claim—not the importance of
+          a character.
+        </p>
+      </section>
+      <section className="population-archive">
+        <header>
+          <span>IDENTITY FILES / 001—{characters.length}</span>
+          <h2>
+            WHO
+            <br />
+            <i>IS THERE?</i>
+          </h2>
+          <p>Search names, roles, works and sourced claims.</p>
+        </header>
+        <ArchiveExplorer
+          items={items}
+          filterLabel="Verification"
+          dateLabel="first linked work"
+          placeholder="Carrie, sheriff, Derry…"
+        />
+        <div className="verification-legend">
+          <span className="status primary">PRIMARY VERIFIED</span>
+          <p>Checked against a named edition and locator.</p>
+          <span className="status secondary">SECONDARY VERIFIED</span>
+          <p>Directly matched reference source.</p>
+          <span className="status provisional">PROVISIONAL</span>
+          <p>Original record-level citation undocumented.</p>
+        </div>
+      </section>
+    </main>
+  );
 }
